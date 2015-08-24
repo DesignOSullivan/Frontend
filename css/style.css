@@ -1,0 +1,60 @@
+/*Empty CSS file for your own CSS*/
+
+body{background: #f9f9fb; font-size: 15px; padding-top: 60px; padding-bottom: 60px;}
+
+.container{}
+.container-border{ background: #fff; box-shadow: 0px 1px 2px rgba(43, 59, 93, .29); padding-top: 15px; padding-bottom: 15px; margin-bottom: 30px;}
+
+.form-control:focus{border: 1px solid green;}
+
+.navbar-default{background: #001b3d;box-shadow: 0px 1px 4px rgba(43, 59, 93, .6); border-radius: 0;}
+
+.btn{box-shadow: 0px 1px 2px rgba(43, 59, 93, .29);}
+
+#footer{width: 100%; position: fixed; bottom: 0; padding-top: 60px; padding-bottom: 15px; border: 0px !important; 
+background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 20%, rgba(255,255,255,0.8) 40%, rgba(255,255,255,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(20%,rgba(255,255,255,0.6)), color-stop(40%,rgba(255,255,255,0.8)), color-stop(100%,rgba(255,255,255,1)));
+background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.6) 20%,rgba(255,255,255,0.8) 40%,rgba(255,255,255,1) 100%);
+background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.6) 20%,rgba(255,255,255,0.8) 40%,rgba(255,255,255,1) 100%);
+background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.6) 20%,rgba(255,255,255,0.8) 40%,rgba(255,255,255,1) 100%);
+background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.6) 20%,rgba(255,255,255,0.8) 40%,rgba(255,255,255,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+}
+
+
+/* --- Classes --- */
+.clear { clear:both;  overflow:hidden; }
+.entry{margin-bottom: 15px; border-bottom: 1px solid #dedede; padding-bottom: 15px;}
+
+
+.shadow{box-shadow: 0px 1px 2px rgba(43, 59, 93, .29);}
+
+.displayNone{display: none;}
+
+.alignLeft { float:left; margin:0 15px 15px 0; }
+.alignRight { float:right; margin:0 0 15px 15px; }
+
+.textCenter, .center{text-align: center; margin: 0 auto;}
+.textRight{text-align: right;}
+
+.bold{font-weight: bold;}
+.italic{font-style: italic;}
+.caps{text-transform: capitalize;}
+.lowercase{text-transform: lowercase;}
+.uppercase{text-transform: uppercase;}
+
+.noBull{list-style-type: none;}
+.noBorder{border: none;}
+
+.error { color: #ff0000; }
+
+.pad0{padding: 0;}
+
+
+.bottom60{margin-bottom:60px;}
+.bottom45{margin-bottom:45px;}
+.bottom30{margin-bottom:30px;}
+.bottom15{margin-bottom:15px;}
+.bottom10{margin-bottom:10px;}
+.bottom5{margin-bottom:5px;}
+.bottom0{margin-bottom:0;}

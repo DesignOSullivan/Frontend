@@ -11,11 +11,13 @@
 .checkbox-inline .toggle {
 	margin-left: -20px;
 	margin-right: 5px;
+    
 }
 
 .toggle {
 	position: relative;
 	overflow: hidden;
+    
 }
 .toggle input[type="checkbox"] {
 	display: none;
@@ -30,6 +32,7 @@
 	-webkit-transition: left 0.35s;
 	-moz-user-select: none;
 	-webkit-user-select: none;
+    
 }
 .toggle.off .toggle-group {
 	left: -100%;
@@ -43,6 +46,7 @@
 	margin: 0;
 	border: 0;
 	border-radius: 0;
+    
 }
 .toggle-off {
 	position: absolute;
@@ -53,6 +57,7 @@
 	margin: 0;
 	border: 0;
 	border-radius: 0;
+    
 }
 .toggle-handle {
 	position: relative;
@@ -64,6 +69,7 @@
 	border-width: 0 1px;
 	color: #fff;
 	background: #fff;
+    
 }
 
 .toggle.btn { min-width: 59px; min-height: 34px; }

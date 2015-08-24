@@ -1,197 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>OUI</title>
-
-
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-toggle.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-
-  </head>
-  <body>
-  
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-		<div class="navbar-header">
-			 
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-				 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-			</button> <a class="navbar-brand" href="#">Brand</a>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OUI</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-toggle.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </button>
+		<a class="navbar-brand" href="#">Brand</a>
+	</div>
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		<ul class="nav navbar-nav">
+			<li class="active"> <a href="#">Link</a> </li>
+			<li> <a href="#">Link</a> </li>
+			<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+				<ul class="dropdown-menu">
+					<li> <a href="#">Action</a> </li>
+					<li> <a href="#">Another action</a> </li>
+					<li> <a href="#">Something else here</a> </li>
+					<li class="divider"> </li>
+					<li> <a href="#">Separated link</a> </li>
+					<li class="divider"> </li>
+					<li> <a href="#">One more separated link</a> </li>
+				</ul>
+			</li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li> <a href="#">Link</a> </li>
+			<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+				<ul class="dropdown-menu">
+					<li> <a href="#">Action</a> </li>
+					<li> <a href="#">Another action</a> </li>
+					<li> <a href="#">Something else here</a> </li>
+					<li class="divider"> </li>
+					<li> <a href="#">Separated link</a> </li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</nav>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<h2> Tour Name </h2>
 		</div>
-		
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav">
-				<li class="active">
-					<a href="#">Link</a>
-				</li>
-				<li>
-					<a href="#">Link</a>
-				</li>
-				<li class="dropdown">
-					 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
-					<ul class="dropdown-menu">
-						<li>
-							<a href="#">Action</a>
-						</li>
-						<li>
-							<a href="#">Another action</a>
-						</li>
-						<li>
-							<a href="#">Something else here</a>
-						</li>
-						<li class="divider">
-						</li>
-						<li>
-							<a href="#">Separated link</a>
-						</li>
-						<li class="divider">
-						</li>
-						<li>
-							<a href="#">One more separated link</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li>
-					<a href="#">Link</a>
-				</li>
-				<li class="dropdown">
-					 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
-					<ul class="dropdown-menu">
-						<li>
-							<a href="#">Action</a>
-						</li>
-						<li>
-							<a href="#">Another action</a>
-						</li>
-						<li>
-							<a href="#">Something else here</a>
-						</li>
-						<li class="divider">
-						</li>
-						<li>
-							<a href="#">Separated link</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-	</nav>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<h2>
-					Tour Name
-				</h2>
-			</div>
-			<div class="col-md-6 textRight">
-				<h2 class="textRight">
-					Tour Code
-				</h2>
-			</div>
-		</div>
-		
-		<div class="clear bottom15"></div>
-		
-		<div class="row">
-			<div class="col-md-12 center">
-				  <ul class="nav nav-tabs" role="tablist">
-					<li role="presentation" class="active"><a href="#tour-info" aria-controls="home" role="tab" data-toggle="tab">Base Tour</a></li>
-					<li role="presentation"><a href="#tour-extension" role="tab" data-toggle="tab">Post-Tour Extension</a></li>
-					<li role="presentation"><a href="#add-tour-extension" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-plus-sign"></span></a></li>
-				  </ul>
-			</div>
+		<div class="col-md-6 textRight">
+			<h2 class="textRight"> Tour Code </h2>
 		</div>
 	</div>
-	
-	
-	
+	<div class="clear bottom15">
+	</div>
+	<div class="row">
+		<div class="col-md-12 center">
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" id="base-tour-tab-link" class="active"><a href="#base-tour-content" role="tab" data-toggle="tab">Base Tour</a></li>
+				<li role="presentation" id="pre-tour-tab-link"><a href="#pre-tour-content" role="tab" data-toggle="tab">Pre-Tour Option</a></li>
+				<li role="presentation" id="post-tour-tab-link"><a href="#post-tour-content" role="tab" data-toggle="tab">Post-Tour Extension</a></li>
+				<li role="presentation"><a href="#add-tour-extension"><span class="glyphicon glyphicon-plus-sign"></span></a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<form role="form">
+<div class="tab-content">
+<div id="base-tour-content" role="tabpanel" class="tab-pane fade in active" >
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h3>
-					Tour Information
-				</h3>
+				<h3> Tour Information </h3>
 			</div>
 		</div>
 	</div>
 	<div class="container container-border">
-	
 		<div class="row">
 			<div class="col-md-6">
-				<form role="form">
-					<div class="container-fluid pad0">
-						<div class="row">
-						
-							<div class="form-group col-md-8">
-								<label for="exampleInputEmail1">Tour Name</label>
-								<input class="form-control" id="exampleInputEmail1" type="text" placeholder="Tour Name">
-							</div>
-							<div class="form-group col-md-4">
-								<label for="exampleInputEmail1">Tour Code</label>
-								<input class="form-control" id="exampleInputEmail1" type="text" placeholder="XXX-123">
-							</div>
+				<div class="container-fluid pad0">
+					<div class="row">
+						<div class="form-group col-md-8">
+							<label for="exampleInputEmail1">Tour Name</label>
+							<input class="form-control" id="exampleInputEmail1" type="text" placeholder="Tour Name">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="exampleInputEmail1">Tour Code</label>
+							<input class="form-control" id="exampleInputEmail1" type="text" placeholder="XXX-123">
 						</div>
 					</div>
-					
-					<div class="form-group">
-						<label for="exampleInputPassword1">Tour Description</label>
-						<textarea class="form-control" id="exampleInputPassword1" placeholder="Tour Decription"></textarea>
-					</div>
-					
-					
-					<div class="container-fluid pad0">
-						<div class="row">
-						
-							<div class="form-group col-md-4">
-								<label for="exampleInputPassword1">Final Payment Due</label>
-								<div class="input-group">
+				</div>
+				<div class="form-group">
+					<label for="exampleInputPassword1">Tour Description</label>
+					<textarea class="form-control" id="exampleInputPassword1" placeholder="Tour Decription"></textarea>
+				</div>
+				<div class="container-fluid pad0">
+					<div class="row">
+						<div class="form-group col-md-4">
+							<label for="exampleInputPassword1">Final Payment Due</label>
+							<div class="input-group">
 								<span class="input-group-addon">Days Out:</span>
 								<input class="form-control textCenter" id="exampleInputPassword1" type="text" placeholder="95">
-								</div>
 							</div>
-							<div class="form-group col-md-3">
-								<label for="exampleInputPassword1">Deposit Amount</label>
-								<div class="input-group">
-  								<span class="input-group-addon">$</span>
+						</div>
+						<div class="form-group col-md-3">
+							<label for="exampleInputPassword1">Deposit Amount</label>
+							<div class="input-group">
+								<span class="input-group-addon">$</span>
 								<input class="form-control textRight" id="exampleInputPassword1" type="text" placeholder="395">
-								</div>
 							</div>
 						</div>
 					</div>
-					
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" data-toggle="toggle" data-height="30" data-onstyle="info"> Pre-Tour Option
-						</label>
-					</div> 
-					<div class="clear bottom15"></div>
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" data-toggle="toggle" data-height="30" data-onstyle="info"> Post-Tour Option
-						</label>
-					</div> 
-				</form>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" data-toggle="toggle" data-height="30" data-onstyle="info" id="pre-tour-toggle">
+						Pre-Tour Option </label>
+				</div>
+				<div class="clear bottom15">
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" data-toggle="toggle" data-height="30" data-onstyle="info" id="post-tour-toggle">
+						Post-Tour Option </label>
+				</div>
 			</div>
 			<div class="col-md-6">
-			
 				<div class="form-group">
 					<label for="exampleInputEmail1">Product Manager</label>
 					<select class="form-control">
-					  <option selected>Please Select...</option>
-					  <option>2</option>
-					  <option>3</option>
-					  <option>4</option>
-					  <option>5</option>
+						<option selected>Please Select...</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
 					</select>
 				</div>
-				<div class="clear"></div>
-				
+				<div class="clear">
+				</div>
+				<div class="form-group">
+					<label for="exampleInputEmail1">Tour Image</label>
+					<img alt="" src="file-drop-placeholder.png" class="img-responsive" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3> Location </h3>
+			</div>
+		</div>
+	</div>
+	<div class="container container-border">
+		<div class="row">
+			<div class="col-md-3 col-xs-6">
+				<label>OUI World Region</label>
+				<select class="form-control">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+			</div>
+			<div class="col-md-3 col-xs-6">
+				<label>Country </label>
+				<select class="form-control">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+			</div>
+			<div class="col-md-1">
+				<br /><br />
+				<a href=""><span class="glyphicon glyphicon-plus-sign"></span></a>
+			</div>
+			<div class="col-md-5">
+			</div>
+		</div>
+	</div>
+</div><!-- /base tour content -->
+
+
+<div id="pre-tour-content" role="tabpanel" class="tab-pane fade in" >
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Pre-Tour Information </h3>
+			</div>
+		</div>
+	</div>
+	<div class="container container-border">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="container-fluid pad0">
+					<div class="row">
+						<div class="form-group col-md-8">
+							<label for="exampleInputEmail1">Pre-Tour Name</label>
+							<input class="form-control" id="exampleInputEmail1" type="text" placeholder="Tour Name">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="exampleInputEmail1">Pre-Tour Code</label>
+							<input class="form-control" id="exampleInputEmail1" type="text" placeholder="XXX-123">
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="exampleInputPassword1">Pre-Tour Description</label>
+					<textarea class="form-control" id="exampleInputPassword1" placeholder="Tour Decription"></textarea>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="exampleInputEmail1">Tour Image</label>
+					<img alt="" src="file-drop-placeholder.png" class="img-responsive" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- -->
+	
+<div id="post-tour-content" role="tabpanel" class="tab-pane fade in" >
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Post-Tour Information </h3>
+			</div>
+		</div>
+	</div>
+	<div class="container container-border">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="container-fluid pad0">
+					<div class="row">
+						<div class="form-group col-md-8">
+							<label for="exampleInputEmail1">Post-Tour Name</label>
+							<input class="form-control" id="exampleInputEmail1" type="text" placeholder="Tour Name">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="exampleInputEmail1">Post-Tour Code</label>
+							<input class="form-control" id="exampleInputEmail1" type="text" placeholder="XXX-123">
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="exampleInputPassword1">Post-Tour Description</label>
+					<textarea class="form-control" id="exampleInputPassword1" placeholder="Tour Decription"></textarea>
+				</div>
+			</div>
+			<div class="col-md-6">
 				<div class="form-group">
 					<label for="exampleInputEmail1">Tour Image</label>
 					<img alt="" src="file-drop-placeholder.png" class="img-responsive" />
@@ -203,9 +267,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h3>
-					Location
-				</h3>
+				<h3> Location </h3>
 			</div>
 		</div>
 	</div>
@@ -213,93 +275,50 @@
 		<div class="row">
 			<div class="col-md-3 col-xs-6">
 				<label>OUI World Region</label>
-				<select class="form-control">
-				  <option>1</option>
-				  <option>2</option>
-				  <option>3</option>
-				  <option>4</option>
-				  <option>5</option>
-				</select>
+				<input class="form-control" id="exampleInputEmail1" type="text" disabled placeholder="Base Tour Region">
 			</div>
 			<div class="col-md-3 col-xs-6">
-				<label>Country </label> 
+				<label>Country </label>
 				<select class="form-control">
-				  <option>1</option>
-				  <option>2</option>
-				  <option>3</option>
-				  <option>4</option>
-				  <option>5</option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
 				</select>
-				
 			</div>
 			<div class="col-md-1">
-				<br /><Br />
+				<br /><br />
 				<a href=""><span class="glyphicon glyphicon-plus-sign"></span></a>
 			</div>
 			<div class="col-md-5">
 			</div>
 		</div>
 	</div>
-    <!-- -->
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<h3>
-					Flight Information
-				</h3>
-			</div>
-		</div>
-	</div>
-	<div class="container container-border">
-		<div class="row">
-			<div class="col-md-3 col-xs-6">
-				<label>Arrival Country</label>
-				<input class="form-control">
-				</input>
-			</div>
-			<div class="col-md-3 col-xs-6">
-				<label>Arrival City </label> 
-				<input class="form-control">
-				</input>
-            </div>
-			<div class="col-md-3 col-xs-6">
-				<label>Arrival City </label> 
-				<input class="form-control">
-				</input>
-            </div>
-			<div class="col-md-3 col-xs-6">
-				<label>Arrival City </label> 
-				<input class="form-control">
-				</input>
-            </div>
-        </div>
-    </div>
+</div>	<!-- /post tour content -->
 	
+</div> <!-- closes .tab-content wrapper -->
 
 
 <div id="footer">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-2" >
-				<button type="submit" class="btn btn-default btn-sm">
-					Cancel
-				</button>
+				<button type="submit" class="btn btn-default btn-sm"> Cancel </button>
 			</div>
 			<div class="col-md-8">
 				&nbsp;
 			</div>
 			<div class="col-md-2" >
-				<button type="submit" class="btn btn-success btn-sm">
-					Submit
-				</button>
+				<button type="submit" class="btn btn-success btn-sm"> Submit </button>
 			</div>
 		</div>
 	</div>
-</div>		
-			
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap-toggle.min.js"></script>
-    <script src="js/scripts.js"></script>
-  </body>
+</div>
+</form>
+<script src="js/jquery.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/bootstrap-toggle.min.js"></script> 
+<script src="js/scripts.js"></script>
+</body>
 </html>

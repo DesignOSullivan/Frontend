@@ -10,7 +10,7 @@
 <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background: red;">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<div class="navbar-header">
 		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </button>
 		<a class="navbar-brand" href="#">Brand</a>
@@ -60,9 +60,9 @@
 		<div class="col-md-12 center">
 			<ul class="nav nav-tabs" role="tablist">
 				<li role="presentation" id="base-tour-tab-link" class="active"><a href="#base-tour-content" role="tab" data-toggle="tab">Base Tour</a></li>
-				<li role="presentation" id="pre-tour-tab-link"><a href="#pre-tour-content" role="tab" data-toggle="tab">Pre-Tour Option</a></li>
-				<li role="presentation" id="post-tour-tab-link"><a href="#post-tour-content" role="tab" data-toggle="tab">Post-Tour Extension</a></li>
-				<li role="presentation"><a href="#add-tour-extension"><span class="glyphicon glyphicon-plus-sign"></span></a></li>
+				<li role="presentation" id="pre-tour-tab-link" class="displayNone"><a href="#pre-tour-content" role="tab" data-toggle="tab">Pre-Tour Option</a></li>
+				<li role="presentation" id="post-tour-tab-link" class="displayNone"><a href="#post-tour-content" role="tab" data-toggle="tab">Post-Tour Extension</a></li>
+				<!--<li role="presentation"><a href="#add-tour-extension"><span class="glyphicon glyphicon-plus-sign"></span></a></li>-->
 			</ul>
 		</div>
 	</div>
@@ -85,6 +85,8 @@
 				<div class="container-fluid pad0">
 					<div class="row">
 						<div class="form-group col-md-8">
+						
+						
 							<label for="exampleInputEmail1">Tour Name</label>
 							<input class="form-control" id="exampleInputEmail1" type="text" placeholder="Tour Name">
 						</div>
@@ -118,7 +120,7 @@
 				</div>
 				<div class="checkbox">
 					<label>
-						<input type="checkbox" data-toggle="toggle" data-height="30" data-onstyle="info" id="pre-tour-toggle">
+						<input type="checkbox" data-toggle="toggle" data-height="30" data-onstyle="info" data-offstyle="default" id="pre-tour-toggle">
 						Pre-Tour Option </label>
 				</div>
 				<div class="clear bottom15">

@@ -1,10 +1,23 @@
 $(document).ready(function() {
 	
-    $('a[rel*=external]').click( function() {
-        window.open(this.href);
-        return false;
-    });
+	$('#tourName').bind("change paste keyup", function() {
+	   if($(this).val() !== ''){
+	   	$('#tourNameHeader').html($(this).val()); 
+	   }
+	   else{
+		   $('#tourNameHeader').html('Tour Name');    
+	   }
+	});
 	
+	$('#tourCode').bind("change paste keyup", function() {
+	   if($(this).val() !== ''){
+	   	$('#tourCodeHeader').html($(this).val()); 
+	   }
+	   else{
+		   $('#tourCodeHeader').html('Tour Code');    
+	   }
+	
+	});
 
 	$('#pre-tour-toggle').change(function(){
 		if ($('#pre-tour-tab-link').hasClass('displayNone')) {
@@ -13,7 +26,6 @@ $(document).ready(function() {
 		else { 
 		  	$('#pre-tour-tab-link').addClass('displayNone');
 		}
-		
 	});
 	
 	$('#post-tour-toggle').change(function(){
@@ -23,6 +35,8 @@ $(document).ready(function() {
 		else { 
 		  	$('#post-tour-tab-link').addClass('displayNone');
 		}
-		
 	});
+	
+	
+	
 });

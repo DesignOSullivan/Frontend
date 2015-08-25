@@ -13,7 +13,6 @@ $(document).ready(function() {
 		else { 
 		  	$('#pre-tour-tab-link').addClass('displayNone');
 		}
-		
 	});
 	
 	$('#post-tour-toggle').change(function(){
@@ -23,6 +22,8 @@ $(document).ready(function() {
 		else { 
 		  	$('#post-tour-tab-link').addClass('displayNone');
 		}
-		
 	});
+	
+	
+	
 });

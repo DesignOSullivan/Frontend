@@ -7,6 +7,9 @@ body{background: #f9f9fb; font-size: 15px; padding-top: 60px; padding-bottom: 60
 
 #pageHeader{background: #fff;padding-top: 30px;}
 
+.navimg{
+    max-height: 60px; padding: 10px ;
+}
 
 .navbar-default{background: #001b3d;box-shadow: 0px 1px 4px rgba(43, 59, 93, .6); border-radius: 0;}
 

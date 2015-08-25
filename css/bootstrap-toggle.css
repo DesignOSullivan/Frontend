@@ -70,10 +70,12 @@
 	width: 0px;
 	border-width: 0 1px;
 	color: #fff;
-	background: #fff;
-    
-}
-
+	background: #fff;}
+	
+	
+	
+	
+	
 .toggle.btn { min-width: 59px; min-height: 34px; }
 .toggle-on.btn { padding-right: 24px; }
 .toggle-off.btn { padding-left: 24px; }

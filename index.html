@@ -171,19 +171,21 @@
 					<option>Asia & Far East</option>
 				</select>
 			</div>
-			<div class="col-md-3 col-xs-6">
-				<label>Country </label>
-				<select class="form-control">
-					<option>France</option>
-					<option>Greece</option>
-					<option>Germany</option>
-					<option>Ireland</option>
-					<option>Italy</option>
-				</select>
+			<div class="col-md-3 col-xs-6 locationCountryHolder">
+				<div class="locationCountry">
+					<label>Country </label>
+					<select class="form-control" id="locationCountry1">
+						<option>France</option>
+						<option>Greece</option>
+						<option>Germany</option>
+						<option>Ireland</option>
+						<option>Italy</option>
+					</select>
+				</div>
 			</div>
 			<div class="col-md-1">
 				<br /><br />
-				<a href=""><span class="glyphicon glyphicon-plus-sign"></span></a>
+				<a href="" id="addLocationCountry"><span class="glyphicon glyphicon-plus-sign"></span></a>
 			</div>
 			<div class="col-md-5">
 			</div>
@@ -203,7 +205,7 @@
 	<div class="container container-border">
 		<div class="row">
 			<div class="col-md-2 col-xs-6">
-				<label for="exampleInputPassword1"><h4>Capacity</h4></label>
+				<label for="exampleInputPassword1"></label><h4>Capacity</h4></label>
                 <div class="clear"></div>
                     <div class="input-group">
 				        <span class="input-group-addon">Max</span>
@@ -211,36 +213,36 @@
 				    </div>
 			</div>
 			<div class="col-md-2 col-xs-6">
-				<label for="exampleInputPassword1"><h4>&nbsp;</h4></label>
+				<label for="exampleInputPassword1"></label><h4>&nbsp;</h4></label>
                     <div class="input-group">
 				        <span class="input-group-addon">Single</span>
 				        <input class="form-control textRight" id="exampleInputPassword1" type="text" placeholder="0">
                     </div>
             </div>
 			<div class="col-md-2 col-xs-6">
-				<label for="exampleInputPassword1"><h4>Room Type</h4></label>
+				<label for="exampleInputPassword1"></label><h4>Room Type</h4></label>
                 <div class="clear"></div>
                     <div class="input-group">
 				        <span class="input-group-addon">Twin</span>
-				        <input class="form-control textRight" id="exampleInputPassword1" type="text">
+				        <input class="form-control textRight" id="exampleInputPassword1" type="text" placeholder="0">
 				    </div>
 			</div>
             <div class="col-md-2 col-xs-6">
-				<label for="exampleInputPassword1"><h4>&nbsp;</h4></label>
+				<label for="exampleInputPassword1"></label><h4>&nbsp;</h4></label>
                     <div class="input-group">
 				        <span class="input-group-addon">Single</span>
 				        <input class="form-control textRight" id="exampleInputPassword1" type="text" placeholder="0">
                     </div>
             </div>
             <div class="col-md-2 col-xs-6">
-				<label for="exampleInputPassword1"><h4>&nbsp;</h4></label>
+				<label for="exampleInputPassword1"></label><h4>&nbsp;</h4></label>
                     <div class="input-group">
 				        <span class="input-group-addon">Twin Int.</span>
 				        <input class="form-control textRight" id="exampleInputPassword1" type="text" placeholder="0">
                     </div>
             </div>
             <div class="col-md-2 col-xs-6">
-				<label for="exampleInputPassword1"><h4>&nbsp;</h4></label>
+				<label for="exampleInputPassword1"></label><h4>&nbsp;</h4></label>
                     <div class="input-group">
 				        <span class="input-group-addon">Double</span>
 				        <input class="form-control textRight" id="exampleInputPassword1" type="text" placeholder="0">
@@ -371,12 +373,12 @@
 				</input>
             </div>
 			<div class="col-md-3 col-xs-6">
-				<label>Arrival City </label> 
+				<label>Departure City </label> 
 				<input class="form-control">
 				</input>
             </div>
 			<div class="col-md-3 col-xs-6">
-				<label>Arrival City </label> 
+				<label>Departure City </label> 
 				<input class="form-control">
 				</input>
             </div>
@@ -496,7 +498,6 @@
 </div>	<!-- /post tour content -->
 	
 </div> <!-- closes .tab-content wrapper -->
-
 
 <div id="footer">
 	<div class="container">

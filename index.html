@@ -45,10 +45,12 @@
 		</ul>
 	</div>
 </nav>
+<div id="pageHeader">
 <div class="container pad0 bottom0">
 	<div class="row">
 		<div class="col-md-12">
-			<h2>AAA | Tour Name</h2>
+			<h2 id="tourCodeHeader" class="alignLeft">Tour Code</h2><h2 class="alignLeft">|</h2><h2 id="tourNameHeader" class="alignLeft">Tour Name</h2>
+			<div class="clear"></div>
 		</div>
 	</div>
 	<div class="clear bottom15">
@@ -64,7 +66,7 @@
 		</div>
 	</div>
 </div>
-
+</div>
 
 <form role="form">
 <div class="tab-content">
@@ -81,15 +83,13 @@
 			<div class="col-md-6">
 				<div class="container-fluid pad0">
 					<div class="row">
-						<div class="form-group col-md-8">
-						
-						
-							<label for="exampleInputEmail1">Tour Name</label>
-							<input class="form-control" id="exampleInputEmail1" type="text" placeholder="Tour Name">
-						</div>
 						<div class="form-group col-md-4">
 							<label for="exampleInputEmail1">Tour Code</label>
-							<input class="form-control" id="exampleInputEmail1" type="text" placeholder="XXX-123">
+							<input class="form-control" id="tourCode" type="text" placeholder="XXX-99">
+						</div>
+						<div class="form-group col-md-8">
+							<label for="exampleInputEmail1">Tour Name</label>
+							<input class="form-control" id="tourName" type="text" placeholder="Tour Name">
 						</div>
 					</div>
 				</div>
@@ -160,21 +160,21 @@
 			<div class="col-md-3 col-xs-6">
 				<label>OUI World Region</label>
 				<select class="form-control">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
+					<option>Europe</option>
+					<option>Africa & Middle East</option>
+					<option>Americas</option>
+					<option>Australia & South Pacific</option>
+					<option>Asia & Far East</option>
 				</select>
 			</div>
 			<div class="col-md-3 col-xs-6">
 				<label>Country </label>
 				<select class="form-control">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
+					<option>France</option>
+					<option>Greece</option>
+					<option>Germany</option>
+					<option>Ireland</option>
+					<option>Italy</option>
 				</select>
 			</div>
 			<div class="col-md-1">

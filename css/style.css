@@ -77,13 +77,15 @@ body{background: #f9f9fb; font-size: 15px; padding-top: 60px; padding-bottom: 60
 .bottom5{margin-bottom:5px;}
 .bottom0{margin-bottom:0;}
 
-.navbar-default .navbar-text {
+.navbar-center {
     color: #ffffff;
     text-transform: uppercase;
     margin-top: 10px;
     margin-bottom: 0px;
     margin-left: 50%;
     position:fixed
-    
-    
+}
+
+.navbar-right{
+    margin-right: 10px;
 }

@@ -91,7 +91,6 @@ body{background: #f9f9fb; font-size: 15px; padding-top: 60px; padding-bottom: 60
 
 
 
-.switch {margin-bottom: 25px;}
 .onoffswitch {
     position: relative; width: 40px; margin-left: 10px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;

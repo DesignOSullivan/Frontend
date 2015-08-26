@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OUI</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-toggle.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="js/pickadate/lib/themes/default.css">
+<link rel="stylesheet" href="js/pickadate/lib/themes/default.date.css">
+
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </button>
+		<a class="navbar-brand" href="#">Odysseys Unlimited</a>
+	</div>
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		
+        <ul class="nav navbar-center">
+                <li><h4>DEPARTURE DATES</h4></li>
+        </ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li> <img src="http://lorempixel.com/output/people-q-c-100-100-9.jpg" class="navimg"> </li>
+            <li class="nav  navbar-toggle navbar-link">Daniel O'Sullivan</li>
+			<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span><strong class="caret"></strong></a>
+				<ul class="dropdown-menu">
+					<li> <a href="#">Action</a> </li>
+					<li> <a href="#">Another action</a> </li>
+					<li> <a href="#">Something else here</a> </li>
+					<li class="divider"> </li>
+					<li> <a href="#">Separated link</a> </li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</nav>
+<div id="pageHeader">
+<div class="container pad0 bottom0">
+	<div class="row">
+		<div class="col-md-12">
+			<h2 id="tourCodeHeader" class="alignLeft">GRV-16</h2><h2 class="alignLeft">|</h2><h2 id="tourNameHeader" class="alignLeft">Classic Greek Isles</h2>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="clear bottom30"></div>
+<form role="form">
+    <style>
+		table td{text-align: center; vertical-align: middle !important; font-size: 12px;}
+		table th{text-align: center; font-size: 12px;vertical-align: bottom !important; }
+		table .spacer{width: 45px; background: #fff;}
+		table tr{border-bottom: 1px solid #ccc;}
+		table td .form-group{margin-top: 5px;}
+  
+		
+	</style>
+    <div class="container container-border">
+		<div class="row">
+			<div class="col-md-12 table-responsive">
+				<table class="table table-hover table-striped">
+					<tr style="background: #ccc; border: none;">
+						<td colspan="9" style="background: #ddd;"><h3>Base Tour</h3></td>
+						<td class="spacer"></td>
+						<td colspan="5" style="background: #ddd;"><h4>Post-Tour Extension</h4></td>
+					</tr>
+					<tr style="border: none; background: #ccc;">
+						<th>Depart USA</th>
+						<th colspan="2">Athens<br />3 nights</th>
+						<th colspan="2">Greek Isles Cruise<br />7 nights</th>
+						<th colspan="2">Athens<br /> 1 night</th>
+						<th>Return USA</th>
+						<th>Arrive USA</th>
+						<th class="spacer"></th>
+						<th colspan="2">Istanbul<br />3 nights</th>
+						<th>Return USA</th>
+						<th>Arrive USA</th>
+					</tr>
+					<tr style="background: #ccc;border-bottom: 0;">
+						<td>Date & Day</td>
+						<td>Arrive</td>
+						<td>Depart</td>
+						<td>Arrive</td>
+						<td>Depart</td>
+						<td>Arrive</td>
+						<td>Depart</td>
+						<td>Date, Day</td>
+						<td>Date, Day</td>
+						<td class="spacer"></td>
+						<td>Arrive</td>
+						<td>Depart</td>
+						<td>Date, Day</td>
+						<td>Date, Day</td>
+					</tr>
+					<tr>
+						<td style="width: 160px;">
+							<div class="form-group">
+								<div class="input-group input-group-sm">
+									<span class="input-group-addon "><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></span>
+									 <input id="input_01" class="form-control datepicker" name="date" type="text" placeholder="Choose Date">
+								</div>
+							</div>
+						</td>
+						<td>29-Aug</td>
+						<td>29-Aug</td>
+						<td>29-Aug</td>
+						<td>29-Aug</td>
+						<td>29-Aug</td>
+						<td>29-Aug</td>
+						<td>29-Aug</td>
+						<td style="background: #ccc;">29-Aug, Sat</td>
+						<td class="spacer"></td>
+						<td>29-Aug</td>
+						<td>29-Aug</td>
+						<td>29-Aug, Sat</td>
+						<td style="background: #ccc;">29-Aug, Sat</td>
+					</tr>
+					<tr>
+						<td style="width: 160px;">
+							<div class="form-group">
+								<div class="input-group input-group-sm">
+									<span class="input-group-addon "><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></span>
+									 <input id="input_01" class="form-control datepicker" name="date" type="text" placeholder="Choose Date">
+								</div>
+							</div>
+						</td>
+						<td>29-Aug</td>
+						<td>29-Aug</td>
+						<td>29-Aug</td>
+						<td>29-Aug</td>
+						<td>29-Aug</td>
+						<td>29-Aug</td>
+						<td>29-Aug</td>
+						<td style="background: #ccc;">29-Aug, Sat</td>
+						<td class="spacer"></td>
+						<td>29-Aug</td>
+						<td>29-Aug</td>
+						<td>29-Aug, Sat</td>
+						<td style="background: #ccc;">29-Aug, Sat</td>
+					</tr>
+					<tr>
+						<td style="width: 160px;">
+							<div class="form-group">
+								<div class="input-group input-group-sm">
+									<span class="input-group-addon "><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></span>
+									 <input id="input_01" class="form-control datepicker" name="date" type="text" placeholder="Choose Date">
+								</div>
+							</div>
+						</td>
+						<td>29-Aug</td>
+						<td>29-Aug</td>
+						<td>29-Aug</td>
+						<td>29-Aug</td>
+						<td>29-Aug</td>
+						<td>29-Aug</td>
+						<td>29-Aug</td>
+						<td style="background: #ccc;">29-Aug, Sat</td>
+						<td class="spacer"></td>
+						<td>29-Aug</td>
+						<td>29-Aug</td>
+						<td>29-Aug, Sat</td>
+						<td style="background: #ccc;">29-Aug, Sat</td>
+					</tr>
+					
+				</table>
+				
+			</div>
+		</div>
+	</div>
+	
+    
+   
+    
+<div id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2" >
+				<button type="submit" class="btn btn-default btn-sm"> Cancel </button>
+			</div>
+			<div class="col-md-8">
+				<p><a href="#location">Summary</a></p>
+			</div>
+			<div class="col-md-2" >
+				<button type="submit" class="btn btn-success btn-sm"> Submit </button>
+			</div>
+		</div>
+	</div>
+</div>
+</form>
+<script src="js/jquery.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/bootstrap-toggle.min.js"></script> 
+<script src="js/pickadate/lib/picker.js"></script>
+<script src="js/pickadate/lib/picker.date.js"></script>
+
+<script src="js/scripts.js"></script>
+
+
+	<script>
+	$(document).ready(function() {
+		$('.datepicker').pickadate({
+			format: 'dd-mmm-yy ddd',
+		});
+	
+	});
+	</script>
+	
+</body>
+</html>

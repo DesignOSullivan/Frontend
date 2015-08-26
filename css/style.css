@@ -91,8 +91,9 @@ body{background: #f9f9fb; font-size: 15px; padding-top: 60px; padding-bottom: 60
 
 
 
+.switch {margin-bottom: 25px;}
 .onoffswitch {
-    position: relative; width: 40px;
+    position: relative; width: 40px; margin-left: 10px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
 }
 .onoffswitch-checkbox {
@@ -100,15 +101,14 @@ body{background: #f9f9fb; font-size: 15px; padding-top: 60px; padding-bottom: 60
 }
 .onoffswitch-label {
     display: block; overflow: hidden; cursor: pointer;
-    border-radius: 50px;
 }
 .onoffswitch-inner {
-    display: block; width: 200%; margin-left: -100%;
+    display: block; width: 200%; margin-left: -100%; margin-top: 5px;
     transition: margin 0.3s ease-in 0s;
 }
 .onoffswitch-inner:before, .onoffswitch-inner:after {
-    display: block; float: left; width: 50%; height: 10px; padding: 0; line-height: 10px;
-    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    display: block; float: left; width: 50%; height: 7px; padding: 0; line-height: 10px;
+    font-size: 14x; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
     box-sizing: border-box;
 }
 .onoffswitch-inner:before {
@@ -123,15 +123,17 @@ body{background: #f9f9fb; font-size: 15px; padding-top: 60px; padding-bottom: 60
     text-align: right;
 }
 .onoffswitch-switch {
-    display: block; width: 25px; margin: -6px;
-    background: #A1A1A1;
+    display: block; width: 25px; margin: -5px;
+    background: #DDDDDD;
     position: absolute; top: 0; bottom: 0;
-    right: 32px;
+    right: 30px;
     border-radius: 50px;
     transition: all 0.3s ease-in 0s; 
     padding: 6px;
-    color: dodgerblue;
+    color: #999;
     font-size: 10px;
+    text-align: center;
+    ;
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
     margin-left: 0;
@@ -141,4 +143,5 @@ body{background: #f9f9fb; font-size: 15px; padding-top: 60px; padding-bottom: 60
     background-color: white; 
     border-color: dodgerblue;
     box-shadow: 1px 1px 1px 1px rgba(0,0,0,.29);
+    color: dodgerblue;
 }

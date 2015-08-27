@@ -93,7 +93,9 @@ body{background: #f9f9fb; font-size: 15px; padding-top: 60px; padding-bottom: 60
 .noBull{list-style-type: none;}
 .noBorder{border: none;}
 
-.error { color: #ff0000; }
+.error{ color: #ff0000; }
+
+.remove{ color: #ccc; }
 
 .pad0{padding: 0;}
 .pad15{padding: 0px 15px;}

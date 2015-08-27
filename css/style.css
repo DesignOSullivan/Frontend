@@ -64,9 +64,8 @@ body{background: #f9f9fb; font-size: 15px; padding-top: 60px; padding-bottom: 60
 .btn-default, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default{color:#555; background: #ecf0f1; border-color: #dce4ec;}
 .btn-default:active:hover, .btn-default.active:hover, .open > .dropdown-toggle.btn-default:hover, .btn-default:active:focus, .btn-default.active:focus, .open > .dropdown-toggle.btn-default:focus, .btn-default.focus:active, .btn-default.active.focus, .open > .dropdown-toggle.btn-default.focus{background: #dedede; color: #555;}
 
-.catalogSpan{display: inline;}
-.catalogLabel{display: inline; margin-right: 15px;}
-.catalogInput{display: inline-table; top: 15px; position: relative}
+
+.catalogLabel{margin-top: 10px;}
 .catalogInput .input-group{width: 120px;}
 
 .hite{min-height: 45px;}

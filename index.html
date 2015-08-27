@@ -17,9 +17,9 @@
 		<a class="navbar-brand" href="#">Odysseys Unlimited</a>
 	</div>
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-center">
-                <li><h4>Tour</h4></li>
-        </ul>
+        <div class="navbar-center">
+                <h4 id="tourCodeHeader">New</h4><h4 id="tourPipeHeader">|</h4><h4 id="tourNameHeader">Tour</h4>
+        </div>
 		<ul class="nav navbar-nav navbar-right">
 			<li> <img src="http://lorempixel.com/output/people-q-c-100-100-9.jpg" class="navimg"> </li>
             <li class="nav  navbar-toggle navbar-link">Danielle O'Sullivan</li>
@@ -41,7 +41,7 @@
 <div class="container pad0 bottom0 fixedtop">
 	<div class="row">
 		<div class="col-md-12">
-			<h3 id="tourCodeHeader" class="alignLeft">Tour Code</h3><h3 class="alignLeft">|</h3><h3 id="tourNameHeader" class="alignLeft">Tour Name</h3>
+			
 			<div class="clear"></div>
 		</div>
 	</div>
@@ -89,7 +89,7 @@
 				</div>
 				<div class="form-group">
 					<label for="exampleInputPassword1">Tour Description</label>
-					<textarea class="form-control" id="exampleInputPassword1" placeholder="Tour Decription"></textarea>
+					<textarea class="form-control" id="exampleInputPassword1" placeholder="Tour Description"></textarea>
 				</div>
 				<div class="container-fluid pad0">
 					<div class="row">
@@ -220,14 +220,14 @@
 				    </div>
 			</div>
 			<div class="col-md-2 col-xs-6">
-				<label for="exampleInputPassword1"></label><h4>&nbsp;</h4></label>
+				<label for="exampleInputPassword1"></label><h4>&nbsp;</h4>
                     <div class="input-group">
 				        <span class="input-group-addon">Single</span>
 				        <input class="form-control textRight" id="exampleInputPassword1" type="text" placeholder="0">
                     </div>
             </div>
 			<div class="col-md-2 col-xs-6">
-				<label for="exampleInputPassword1"></label><h4>Room Type</h4></label>
+				<label for="exampleInputPassword1"></label><h4>Room Type</h4>
                 <div class="clear"></div>
                     <div class="input-group">
 				        <span class="input-group-addon">Twin</span>
@@ -235,21 +235,21 @@
 				    </div>
 			</div>
             <div class="col-md-2 col-xs-6">
-				<label for="exampleInputPassword1"></label><h4>&nbsp;</h4></label>
+				<label for="exampleInputPassword1"></label><h4>&nbsp;</h4>
                     <div class="input-group">
 				        <span class="input-group-addon">Single</span>
 				        <input class="form-control textRight" id="exampleInputPassword1" type="text" placeholder="0">
                     </div>
             </div>
             <div class="col-md-2 col-xs-6">
-				<label for="exampleInputPassword1"></label><h4>&nbsp;</h4></label>
+				<label for="exampleInputPassword1"></label><h4>&nbsp;</h4>
                     <div class="input-group">
 				        <span class="input-group-addon">Twin Int.</span>
 				        <input class="form-control textRight" id="exampleInputPassword1" type="text" placeholder="0">
                     </div>
             </div>
             <div class="col-md-2 col-xs-6">
-				<label for="exampleInputPassword1"></label><h4>&nbsp;</h4></label>
+				<label for="exampleInputPassword1"></label><h4>&nbsp;</h4>
                     <div class="input-group">
 				        <span class="input-group-addon">Double</span>
 				        <input class="form-control textRight" id="exampleInputPassword1" type="text" placeholder="0">
@@ -273,7 +273,7 @@
 			<div class="col-md-6">
                 <div class="row">
                     <div class="col-md-12">
-                         <label for="exampleInputPassword1"></label><h4>Booking Rules</h4></label>
+                         <label for="exampleInputPassword1"></label><h4>Booking Rules</h4>
                     </div>
                 </div>
                 <div class="pad15">
@@ -356,7 +356,7 @@
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-md-12">
-                         <label for="exampleInputPassword1"></label><h4>Cancellation Rules</h4></label>
+                         <label for="exampleInputPassword1"></label><h4>Cancellation Rules</h4>
                     </div>
                 </div>
                 <div class="pad15 bottom15">
@@ -578,9 +578,18 @@
 					<div class="container pad0">
 						<div class="row">
 							<div class="col-md-12">
-								<label for="exampleInputPassword1">Alternate Return May Be Requested</label>
+				                <div class="form-group bottom30">
+                                    <div class="onoffswitch alignLeft">
+                                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="aux 12" checked>
+                                        <label class="onoffswitch-label" for="aux 12">
+                                            <span class="onoffswitch-inner"></span>
+                                            <span class="onoffswitch-switch">yes</span>
+                                        </label>
+                                    </div>                           
+                    <label class="onoffswitch-label">Allow Alternate Return Date</label>
+                </div>
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-12">
 								<div class="input-group input-group-sm col-md-6">
 									<span class="input-group-addon">Days After Departure:</span>
 									<input class="form-control textCenter" id="exampleInputPassword1" type="text" placeholder="0">
@@ -593,8 +602,8 @@
 				
 				<div class="form-group bottom30">
                     <div class="onoffswitch alignLeft">
-                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="aux 12" checked>
-                        <label class="onoffswitch-label" for="aux 12">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="aux 13" checked>
+                        <label class="onoffswitch-label" for="aux 13">
                             <span class="onoffswitch-inner"></span>
                             <span class="onoffswitch-switch">yes</span>
                         </label>
@@ -643,6 +652,48 @@
         </div>
     </div>
 
+        <!-- Catalog Pricing -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3>
+					Catalog Pricing
+				</h3>
+			</div>
+		</div>
+	</div>
+	<div class="container container-border">
+		<div class="row">
+			<div class="col-md-4 col-xs-6">
+                <ul class="noBull catalogCityList">
+                    <li class="catalogSpan"><a href="" id="catalogAtlanta"><span class="glyphicon glyphicon-plus-sign"></span></a></li>                    
+                    <li class="catalogLabel"><label>Atlanta, GA | ATL</label></li>
+                    <li class="catalogInput">
+                        <div class="input-group">
+								<span class="input-group-addon">$</span>
+								<input class="form-control textRight" id="exampleInputPassword1" type="text" placeholder="0">
+				        </div>
+                    </li>
+                </ul>
+			
+            
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <a href="" id="catalogAtlanta"><span class="glyphicon glyphicon-plus-sign"></span></a>
+                    <label>Atlanta, GA | ATL</label>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group">
+								<span class="input-group-addon">$</span>
+								<input class="form-control textRight" id="exampleInputPassword1" type="text" placeholder="0">
+				    </div>
+                </div>
+            </div>    
+        </div>
+                </div>
+    </div>
+    </div>
 </div>
 
 <!-- /base tour content -->

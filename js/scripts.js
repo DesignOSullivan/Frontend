@@ -19,6 +19,7 @@ $(document).ready(function() {
 	
 	});
 
+
 	$('#pre-tour-toggle').change(function(){
 		if ($('#pre-tour-tab-link').hasClass('displayNone')) {
 		  	$('#pre-tour-tab-link').removeClass('displayNone');
@@ -38,5 +39,16 @@ $(document).ready(function() {
 	});
 	
 	
+
+	//$($('.onoffswitch-switch').html() === 'yes' ? 'no' : 'yes');
+
+	$('.onoffswitch-checkbox').click(function() {
+		
+		  if ($(this).is(':checked')) {
+			$(this).siblings('.onoffswitch-switch').html('yes');
+		  } else {
+			$(this).siblings('.onoffswitch-switch').html('no');
+		  }
+	});
 	
 });

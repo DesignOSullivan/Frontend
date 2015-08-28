@@ -68,6 +68,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
+				<a name="tourinfoSection"></a>
 				<h3> Tour Information </h3>
 			</div>
 		</div>
@@ -162,6 +163,7 @@
     <div id="location" class="container">
 		<div class="row">
 			<div class="col-md-12">
+				<a name="locationSection"></a>
 				<h3> Location </h3>
 			</div>
 		</div>
@@ -204,6 +206,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<h3>
+					<a name="inventorySection"></a>
 					Inventory Rules
 				</h3>
 			</div>
@@ -263,6 +266,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<h3>
+					<a name="bookingSection"></a>
 					Booking and Cancellation Rules
 				</h3>
 			</div>
@@ -435,6 +439,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<h3>
+					<a name="auxiliaryrulesSection"></a>
 					Auxiliary Rules
 				</h3>
 			</div>
@@ -622,6 +627,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<h3>
+					<a name="flightinfoSection"></a>
 					Flight Information
 				</h3>
 			</div>
@@ -657,6 +663,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<h3>
+					<a name="itinerarySection"></a>
 					Itinerary
 				</h3>
 			</div>
@@ -763,6 +770,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<h3>
+					<a name="aircomponentSection"></a>
 					Internal Air Component
 				</h3>
 			</div>
@@ -819,6 +827,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<h3>
+					<a name="tourdirectorSection"></a>
 					Tour Director
 				</h3>
 			</div>
@@ -863,6 +872,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<h3>
+					<a name="tourpricingSection"></a>
 					Tour Pricing
 				</h3>
 			</div>
@@ -1010,6 +1020,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<h3>
+					<a name="catalogcitiesSection"></a>
 					Catalog Pricing
 				</h3>
 			</div>
@@ -1253,6 +1264,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<h3>
+					<a name="zonefaresSection"></a>
 					Zone Fares
 				</h3>
 			</div>
@@ -1342,13 +1354,10 @@
 	</div>
 	
 </div>	<!-- /post tour content -->
-	
+
 </div> <!-- closes .tab-content wrapper -->
 
 <div class="clear" style="margin-bottom: 120px;"></div>
-
-<div id="illusion"></div>
-
 
 <div id="illusion">
     <div id="footer">
@@ -1369,6 +1378,38 @@
 </div>
 
 </form>
+<style>
+	#flyoutNav{position: fixed; left: 0; top: 20%; background: #ecf0f1; width: 200px; padding: 15px 15px 0px 15px; border-radius:0  3px 3px 0 ;}
+		#flyoutNav h4{color: #333; margin: 0; padding: 0; line-height: 1em; }
+		#flyoutNav ul{padding: 10px; margin: 0;}
+		#flyoutNav li{ padding:0 0 8px 5px; margin-bottom: 8px; border-bottom: 1px solid #ccc;}
+		#flyoutNav li:last-child{border: none; margin-bottom: 0; padding-bottom: 0;}
+		#flyoutNav a, #flyoutNav a .glyphicon{color: #2c3e50 !important; cursor: pointer;}
+		
+</style>
+
+<div id="flyoutNav">
+	<a id="flyoutNavTrigger">
+		<h4 class="alignLeft">Quick Links:</h4>
+		<span class="glyphicon glyphicon-chevron-up alignRight" aria-hidden="true"></span>
+	</a>
+	<div class="clear"></div>
+	<ul class="noBull displayNone" id="flyoutList">
+	<li><a href="#tourinfoSection">Tour Information</a></li>
+	<li><a href="#locationSection">Location</a></li>
+	<li><a href="#inventorySection">Inventory Rules</a></li>
+	<li><a href="#bookingSection">Booking & Cancellation</a></li>
+	<li><a href="#auxiliaryrulesSection">Auxiliary Rules</a></li>
+	<li><a href="#flightinfoSection">Flight Information</a></li>
+	<li><a href="#itinerarySection">Itinerary</a></li>
+	<li><a href="#aircomponentSection">Internal Air Component</a></li>
+	<li><a href="#tourdirectorSection">Tour Director</a></li>
+	<li><a href="#tourpricingSection">Tour Pricing</a></li>
+	<li><a href="#catalogcitiesSection">Catalog Cities</a></li>
+	<li><a href="#zonefaresSection">Zone Fares</a></li>
+	</ul>
+</div>
+
 <script src="js/jquery.min.js"></script> 
 <script src="js/bootstrap.min.js"></script> 
 <script src="js/bootstrap-toggle.min.js"></script> 

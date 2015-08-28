@@ -51,4 +51,36 @@ $(document).ready(function() {
 		  }
 	});
 	
+	$(function() {
+		  $('a[href*=#]:not([href=#])').click(function() {
+			if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
+			  var target = $(this.hash);
+			  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			  if (target.length) {
+				$('html,body').animate({
+				  scrollTop: target.offset().top + (-150)
+				}, 1000);
+				return false;
+			  }
+			}
+		  });
+		});
+
+	
+	$('#flyoutNavTrigger').click(function() {
+		if ($('#flyoutList').hasClass('displayNone')){
+			$('#flyoutList').removeClass('displayNone');
+			$('#flyoutNav span.glyphicon').removeClass('glyphicon-chevron-up');
+			$('#flyoutNav span.glyphicon').addClass('glyphicon-chevron-down');
+		}
+		else{
+			$('#flyoutList').addClass('displayNone');	
+			$('#flyoutNav span.glyphicon').addClass('glyphicon-chevron-up');
+			$('#flyoutNav span.glyphicon').removeClass('glyphicon-chevron-down');
+		}
+		
+	});
+	
+	
+	
 });

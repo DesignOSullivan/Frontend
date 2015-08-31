@@ -68,15 +68,17 @@ $(document).ready(function() {
 
 	
 	$('#flyoutNavTrigger').click(function() {
-		if ($('#flyoutList').hasClass('displayNone')){
+		if ($('#flyoutNav').hasClass('closed')){
+			$('#flyoutNav').removeClass('closed');
 			$('#flyoutList').removeClass('displayNone');
-			$('#flyoutNav span.glyphicon').removeClass('glyphicon-chevron-up');
-			$('#flyoutNav span.glyphicon').addClass('glyphicon-chevron-down');
+			$('#flyoutNav span.glyphicon').removeClass('glyphicon-chevron-right');
+			$('#flyoutNav span.glyphicon').addClass('glyphicon-chevron-left');
 		}
 		else{
-			$('#flyoutList').addClass('displayNone');	
-			$('#flyoutNav span.glyphicon').addClass('glyphicon-chevron-up');
-			$('#flyoutNav span.glyphicon').removeClass('glyphicon-chevron-down');
+			$('#flyoutNav').addClass('closed');	
+			$('#flyoutList').addClass('displayNone');
+			$('#flyoutNav span.glyphicon').addClass('glyphicon-chevron-right');
+			$('#flyoutNav span.glyphicon').removeClass('glyphicon-chevron-left');
 		}
 		
 	});

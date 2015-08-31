@@ -1,11 +1,13 @@
 /*Empty CSS file for your own CSS*/
 
-body{background: #f9f9fb; font-size: 13px; padding-top: 60px; padding-bottom: 60px;}
+body{background: #fff; color: #54698d; font-size: 13px; padding-top: 60px; padding-bottom: 60px;}
+h1, h2, h3, h4, h5, h6{color: #333;}
 h2{font-size: 24px;}
 h3{font-size: 21px;}
 h4{font-size: 17px;}
 .form-control, .input-group-addon{font-size: 12px;}
 textarea{min-height: 150px;}
+a{color: #fd5c63;}
 
 .container{max-width: 100%;}
 .container-border{ background: #fff; box-shadow: 0px 1px 2px rgba(43, 59, 93, .29); padding-top: 15px; padding-bottom: 15px; margin-bottom: 30px;}
@@ -13,16 +15,7 @@ textarea{min-height: 150px;}
 .navimg{ max-height: 60px; padding: 10px ;}
 
 .navbar-default{background: #001b3d;box-shadow: 0px 1px 4px rgba(43, 59, 93, .6); border-radius: 0;}
-
-.navbar-center {
-    color: #ffffff;
-    text-transform: uppercase;
-    margin-top: 19px;
-    margin-bottom: 0px;
-    text-align: center;
-    position:fixed;
-    width: 100%;
-}
+.navbar-center {color: #fff; text-transform: uppercase;  margin-top: 19px; margin-bottom: 0px; text-align: center; position:fixed; width: 100%;}
 
 #tourCodeHeader{display: inline; margin-right: 10px;}
 #tourPipeHeader{display: inline;}
@@ -56,7 +49,7 @@ textarea{min-height: 150px;}
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
 }
 
-.form-control:focus{border: 1px solid green;}
+.form-control:focus{border: 1px solid #fd5c63;}
 
 .btn-default, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default{color:#555; background: #ecf0f1; border-color: #dce4ec;}
 .btn-default:active:hover, .btn-default.active:hover, .open > .dropdown-toggle.btn-default:hover, .btn-default:active:focus, .btn-default.active:focus, .open > .dropdown-toggle.btn-default:focus, .btn-default.focus:active, .btn-default.active.focus, .open > .dropdown-toggle.btn-default.focus{background: #dedede; color: #555;}
@@ -65,7 +58,16 @@ textarea{min-height: 150px;}
 .catalogLabel{margin-top: 10px;}
 .catalogInput .input-group{width: 120px;}
 
-#flyoutNav.closed{left: -160px;}
+	#flyoutNav{position: fixed; left: 0; top: 20%; background: #ecf0f1; width: 200px; padding: 15px 15px 0px 15px; border-radius:0  3px 3px 0 ;}
+		#flyoutNav h4{color: #333; margin: 0; padding: 0; line-height: 1em; }
+		#flyoutNav ul{padding: 10px; margin: 0;}
+		#flyoutNav li{ padding:0 0 8px 5px; margin-bottom: 8px; border-bottom: 1px solid #ccc;}
+		#flyoutNav li:last-child{border: none; margin-bottom: 0; padding-bottom: 0;}
+		#flyoutNav a, #flyoutNav a .glyphicon{color: #2c3e50 !important; cursor: pointer;}
+		
+#flyoutNav.closed{left: -160px;background: #fd5c63;}
+#flyoutNav.closed a .glyphicon{color: #fff !important;}
+
 
 
 

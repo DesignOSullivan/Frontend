@@ -450,12 +450,15 @@
 			<div class="col-md-4 col-xs-12">
                 <div class="clear bottom15"></div>
                 <div class="form-group bottom30">
-                    <div class="checkbox">
-                    <label>
-                    <input type="checkbox" data-toggle="toggle">
-                        Pre-Tour Transfer
-                    </label>
-                    </div>
+                    <div class="onoffswitch alignLeft">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="aux 1" checked>
+                        <label class="onoffswitch-label" for="aux 1">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch">yes</span>
+                        </label>
+                    </div>                           
+                    <label class="onoffswitch-label">Pre-Tour Transfer</label>
+                    <div class="clear"></div>
                 </div>
                 <div class="form-group bottom30">
                     <div class="onoffswitch alignLeft">
@@ -1369,7 +1372,7 @@
 -->
                </div>
                <div class="col-md-2" >
-                   <button type="submit" class="btn btn-info btn-sm"> Submit </button>
+                   <button type="submit" class="btn btn-success btn-sm"> Submit </button>
                </div>
            </div>
         </div>
@@ -1378,12 +1381,19 @@
 
 </form>
 <style>
+	#flyoutNav{position: fixed; left: 0; top: 20%; background: #ecf0f1; width: 200px; padding: 15px 15px 0px 15px; border-radius:0  3px 3px 0 ;}
+		#flyoutNav h4{color: #333; margin: 0; padding: 0; line-height: 1em; }
+		#flyoutNav ul{padding: 10px; margin: 0;}
+		#flyoutNav li{ padding:0 0 8px 5px; margin-bottom: 8px; border-bottom: 1px solid #ccc;}
+		#flyoutNav li:last-child{border: none; margin-bottom: 0; padding-bottom: 0;}
+		#flyoutNav a, #flyoutNav a .glyphicon{color: #2c3e50 !important; cursor: pointer;}
+		
 </style>
 
-<div id="flyoutNav" class="closed">
+<div id="flyoutNav">
 	<a id="flyoutNavTrigger">
 		<h4 class="alignLeft">Quick Links:</h4>
-		<span class="glyphicon glyphicon-chevron-right alignRight" aria-hidden="true"></span>
+		<span class="glyphicon glyphicon-chevron-up alignRight" aria-hidden="true"></span>
 	</a>
 	<div class="clear"></div>
 	<ul class="noBull displayNone" id="flyoutList">

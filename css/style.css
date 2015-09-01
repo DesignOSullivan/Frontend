@@ -72,11 +72,22 @@ a:hover, a:focus{color: #fd5c63}
 
 #flyoutNav.closed a .glyphicon{color: #fff !important;}
 
-.input-group-addon{ background: #E2EFFF ;}
+.input-group-addon{ background: #f4f9ff;}
 
 
 
 /* --- Classes --- */
+
+.dkred{color: #b50f46 !important;}
+.red{color: #ff0000 !important;}
+.pink{color: #fd5c63 !important;}
+.green{color: #09b56a !important;}
+.blue{}
+.ltblue{}
+
+/* toggle blue #0071ff; */
+
+
 .clear { clear:both;  overflow:hidden; }
 .entry{margin-bottom: 15px; border-bottom: 1px solid #dedede; padding-bottom: 15px;}
 

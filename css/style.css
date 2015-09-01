@@ -8,7 +8,8 @@ h4{font-size: 17px; color: #999;}
 .form-control, label {color: #54698d;}
 .form-control, .input-group-addon{font-size: 12px;color: #54698d;}
 textarea{min-height: 150px;}
-a{color: #fd5c63;}
+a{color: #b50f46 /*#fd5c63*/;}
+a:hover, a:focus{color: #fd5c63}
 
 .container{max-width: 100%;}
 .container-border{ background: #fff; box-shadow: 0px 2px 4px 1px rgba(43, 59, 93, .29); padding-top: 15px; padding-bottom: 15px; margin-bottom: 30px;}
@@ -66,11 +67,12 @@ a{color: #fd5c63;}
 		#flyoutNav li:last-child{border: none; margin-bottom: 0; padding-bottom: 0;}
 		#flyoutNav a, #flyoutNav a .glyphicon{color: #2c3e50 !important; cursor: pointer;}
 		
-#flyoutNav.closed{left: -160px;background: #fd5c63;}
+#flyoutNav.closed{left: -160px;background: #b50f46;}
+#flyoutNav.closed:hover{background: #fd5c63;}
+
 #flyoutNav.closed a .glyphicon{color: #fff !important;}
 
-.input-group-addon{ background: #E2EFFF ;
-}
+.input-group-addon{ background: #E2EFFF ;}
 
 
 

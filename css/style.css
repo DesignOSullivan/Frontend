@@ -28,7 +28,7 @@ a:hover, a:focus{color: #fd5c63}
 .fixedtop{ position: fixed; z-index: 100; background-color: #fff; padding-top: 10px; min-width: 100%;}
 
 
-/*.btn{box-shadow: 0px 1px 2px rgba(43, 59, 93, .29);}*/
+.btn{box-shadow: 0px 1px 2px rgba(43, 59, 93, .29);}
 
 .tab-content{margin-top: 120px;}
 
@@ -37,8 +37,7 @@ a:hover, a:focus{color: #fd5c63}
 	.nav-tabs > li.active, .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{background: #f9f9fb; border-color:#cccccc; border-bottom: none; }
 	.nav-tabs > li > a{color:#001b3d; }
 
-#footer{width: 100%; position: fixed; bottom: 0; padding-top: 15px; padding-bottom: 5px; border-top: 1px solid #ccc; z-index: 10; 
-	background-color: #eee;
+#footer{width: 100%; position: fixed; bottom: 0; padding-top: 15px; padding-bottom: 5px; border-top: 1px solid #ccc; z-index: 10; background-color: #eee;
 }
 
 #illusion{width: 100%; height: 20px; margin-bottom: 56px; position: fixed; bottom: 0; padding-top: 15px; padding-bottom: 15px; z-index: 10; border: 0px !important; 
@@ -72,22 +71,11 @@ a:hover, a:focus{color: #fd5c63}
 
 #flyoutNav.closed a .glyphicon{color: #fff !important;}
 
-.input-group-addon{ background: #f4f9ff;}
+.input-group-addon{ background: #E2EFFF ;}
 
 
 
 /* --- Classes --- */
-
-.dkred{color: #b50f46 !important;}
-.red{color: #ff0000 !important;}
-.pink{color: #fd5c63 !important;}
-.green{color: #09b56a !important;}
-.blue{}
-.ltblue{}
-
-/* toggle blue #0071ff; */
-
-
 .clear { clear:both;  overflow:hidden; }
 .entry{margin-bottom: 15px; border-bottom: 1px solid #dedede; padding-bottom: 15px;}
 

@@ -38,7 +38,7 @@
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	left: 0;
+	left: -20px;
 	right: 50%;
 	margin: 0;
 	border: 0;
@@ -60,10 +60,18 @@
 	padding-top: 0px;
 	padding-bottom: 0px;
 	height: 100%;
-	width: 0px;
+	width: 20px;
 	border-width: 0 1px;
-    border-radius: 50%;
+    border-radius: 20px;
+	left: -8px;
 }
+.off .toggle-handle{left: 9px;}
+.toggle, .toggle-on, .toggle-off { border-radius: 20px; }
+
+span.toggle-handle{color: #fff !important; background: #fff !important; border-color: #ccc !important;}
+
+
+
 
 .toggle.btn { min-width: 59px; min-height: 34px; }
 .toggle-on.btn { padding-right: 24px; }

@@ -127,13 +127,16 @@ input.cmn-toggle-round + label:after {
   left: 1px;
   bottom: 1px;
   content: "";
+  padding-top: 2px;
 }
 input.cmn-toggle-round + label:before {
   right: 1px;
   background-color: #f1f1f1;
   border-radius: 30px;
   transition: background 0.4s;
-    content: "no";
+  content: "no";
+  padding-left: 30px;
+  color: #000;
 }
 input.cmn-toggle-round + label:after {
   width: 23px;
@@ -143,10 +146,11 @@ input.cmn-toggle-round + label:after {
   transition: margin 0.4s;
 }
 input.cmn-toggle-round:checked + label:before {
-  background-color: #0071FF;
+  background-color: #09B56A;
     content: "yes";
     color: #fff;
     justify-content: space-around;
+    padding-left: 10px;
 }
 
 

@@ -62,6 +62,7 @@
 	height: 100%;
 	width: 0px;
 	border-width: 0 1px;
+    border-radius: 50%;
 }
 
 .toggle.btn { min-width: 59px; min-height: 34px; }

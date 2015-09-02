@@ -38,7 +38,7 @@
     
     <!-- Page Header -->
 <div id="pageHeader">
-<div class="container pad0 bottom0 fixedtop">
+<div class="container pad0 bottom0 fixedtop shadow">
 	<div class="row">
 		<div class="col-md-12">
 			
@@ -109,34 +109,27 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				
-				<div class="form-group bottom30">
-                    <div class="onoffswitch alignLeft">
-                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="pre-tour-toggle" unchecked>
-                        <label class="onoffswitch-label" for="pre-tour-toggle">
-                            <span class="onoffswitch-inner"></span>
-                            <span class="onoffswitch-switch">yes</span>
-                        </label>
-                    </div>                           
-                    <label class="onoffswitch-label">Pre-Tour Option</label>
-                    <div class="clear"></div>
-                </div>
-                
-                
+                </div>               
                 <div class="form-group bottom30">
-                    <div class="onoffswitch alignLeft">
-                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="post-tour-toggle" unchecked>
-                        <label class="onoffswitch-label" for="post-tour-toggle">
-                            <span class="onoffswitch-inner"></span>
-                            <span class="onoffswitch-switch">yes</span>
-                        </label>
-                    </div>                           
+                    <div class="clear bottom15"></div>
+                    <div class="switch">
+                    <input id="tour-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                    <label for="tour-1"></label>
+                </div>    
+				<div class="switch-label">
+				 	<label for="tour-1">Pre-Tour Hotel</label>
+				</div>           
+                <div class="clear bottom30"></div>
+                <div class="switch">
+                    <input id="tour-2" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                    <label for="tour-2"></label>
+                </div> 
+				<div class="switch-label">
+					<label for="tour-2">Pre-Tour Transfer</label>
+				</div>                           
                     <label class="onoffswitch-label">Post-Tour Extension</label>
                     <div class="clear"></div>
-                </div>
-                
-                
+                </div>      
 			</div>
 			<div class="col-md-6">
 				<div class="form-group">
@@ -637,7 +630,7 @@
 						</div>
 						<div class="form-group col-md-2">
 							<div class="clear bottom30"></div>
-							<button type="" class="btn btn-success btn-sm"> Submit </button>
+							<button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search </button>
 						</div>
 					</div>
 				</div>
@@ -1301,7 +1294,8 @@
 </div> <!-- closes .tab-content wrapper -->
 
 <div class="clear" style="margin-bottom: 120px;"></div>
-
+       
+        <!-- footer -->
 <div id="illusion">
     <div id="footer">
 	   <div class="container">
@@ -1315,7 +1309,7 @@
 -->
                </div>
                <div class="col-md-2" >
-                   <button type="submit" class="btn btn-info btn-sm"> Submit </button>
+                   <button type="submit" class="btn btn-info btn-sm alignRight bottom0"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Submit </button>
                </div>
            </div>
         </div>

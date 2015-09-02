@@ -36,30 +36,7 @@
 	</div>
 </nav>
     
-    <!-- Page Header -->
-<div id="pageHeader">
-<div class="container pad0 bottom0 fixedtop">
-	<div class="row">
-		<div class="col-md-12">
-			
-			<div class="clear"></div>
-		</div>
-	</div>
-	<div class="clear bottom15">
-	</div>
-	<div class="row">
-		<div class="col-md-12 center">
-			<ul class="nav nav-tabs" role="tablist">
-				<li role="presentation" id="base-tour-tab-link" class="active"><a href="#base-tour-content" role="tab" data-toggle="tab">Base Tour</a></li>
-				<li role="presentation" id="pre-tour-tab-link" class="displayNone"><a href="#pre-tour-content" role="tab" data-toggle="tab">Pre-Tour Option</a></li>
-				<li role="presentation" id="post-tour-tab-link" class="displayNone"><a href="#post-tour-content" role="tab" data-toggle="tab">Post-Tour Extension</a></li>
-				<!--<li role="presentation"><a href="#add-tour-extension"><span class="glyphicon glyphicon-plus-sign"></span></a></li>-->
-			</ul>
-		</div>
-	</div>
-</div>
-</div>
-
+    
 <form role="form">
 <div class="tab-content">
 <div id="base-tour-content" role="tabpanel" class="tab-pane fade in active" >
@@ -69,7 +46,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<a name="tourinfoSection"></a>
-				<h3> Tour Information </h3>
+				<h3> Guest Name </h3>
 			</div>
 		</div>
 	</div>
@@ -78,16 +55,25 @@
 			<div class="col-md-6">
 				<div class="container-fluid pad0">
 					<div class="row">
-						<div class="form-group col-md-4">
-							<label for="exampleInputEmail1">Tour Code</label>
-							<input class="form-control" id="tourCode" type="text" placeholder="XXX-99">
+						<div class="form-group col-md-2">
+							<label for="title1">Title</label>
+							<select class="form-control" id="title1">
+                                <option>Mr.</option>
+                                <option>Mrs.</option>
+                                <option>Ms.</option>
+                            </select>
 						</div>
 						<div class="form-group col-md-8">
 							<label for="exampleInputEmail1">Tour Name</label>
 							<input class="form-control" id="tourName" type="text" placeholder="Tour Name">
 						</div>
+                        <div class="form-group col-md-2">
+                            <label for="middleInit">MI</label>
+                            <input class="form-control" id="middleInit" type="text" placeholder="MI">
+                        </div>
+                        </div>
 					</div>
-				</div>
+
 				<div class="form-group">
 					<label for="exampleInputPassword1">Tour Description</label>
 					<textarea class="form-control" id="exampleInputPassword1" placeholder="Tour Description"></textarea>
@@ -434,100 +420,7 @@
         </div>
     </div>
     
-        <!-- Auxiliary Rules -->
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<h3>
-					<a name="auxiliaryrulesSection"></a>
-					Auxiliary Rules
-				</h3>
-			</div>
-		</div>
-	</div>
-	<div class="container container-border">
-		<div class="row">
-			<div class="col-md-4 col-xs-12">
-                <div class="clear bottom15"></div>
-                <div class="switch">
-                    <input id="aux-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
-                    <label for="aux-1">Pre-Tour Hotel</label>
-                </div>                
-                <div class="clear bottom30"></div>
-                <div class="switch">
-                    <input id="aux-2" class="cmn-toggle cmn-toggle-round" type="checkbox">
-                    <label for="aux-2">Pre-Tour Transfer</label>
-                </div>
-                <div class="clear bottom30"></div>
-                <div class="switch">
-                    <input id="aux-3" class="cmn-toggle cmn-toggle-round" type="checkbox">
-                    <label for="aux-3">Post-Tour Hotel</label>
-                </div>
-                <div class="clear bottom30"></div>
-                <div class="switch">
-                    <input id="aux-4" class="cmn-toggle cmn-toggle-round" type="checkbox">
-                    <label for="aux-4">Post-Tour Transfer</label>
-                </div>
-                <div class="clear bottom30"></div>
-                <div class="switch">
-                    <input id="aux-5" class="cmn-toggle cmn-toggle-round" type="checkbox">
-                    <label for="aux-5">Inoculations Required</label>
-                </div>
-                <div class="clear bottom15"></div>    
-			</div>
-            <div class="col-md-4 col-xs-12">
-                <div class="clear bottom15"></div>
-                <div class="switch">
-                    <input id="aux-6" class="cmn-toggle cmn-toggle-round" type="checkbox">
-                    <label for="aux-6">Visa Required</label>
-                </div>                
-                <div class="clear bottom30"></div>
-                <div class="switch">
-                    <input id="aux-7" class="cmn-toggle cmn-toggle-round" type="checkbox">
-                    <label for="aux-7">Land Only Option</label>
-                </div>
-                <div class="clear bottom30"></div>
-                <div class="switch">
-                    <input id="aux-8" class="cmn-toggle cmn-toggle-round" type="checkbox">
-                    <label for="aux-8">U.S. Based Hotel</label>
-                </div>
-                <div class="clear bottom30"></div>
-                <div class="switch">
-                    <input id="aux-9" class="cmn-toggle cmn-toggle-round" type="checkbox">
-                    <label for="aux-9">Insurance Required</label>
-                </div>
-                <div class="clear bottom30"></div>
-                <div class="switch">
-                    <input id="aux-10" class="cmn-toggle cmn-toggle-round" type="checkbox">
-                    <label for="aux-10">Standard Insurance</label>
-                </div>
-                <div class="clear bottom15"></div>
-			</div>
-			<div class="col-md-4 col-xs-12">
-                <div class="clear bottom15"></div>
-                <div class="switch">
-                    <input id="aux-11" class="cmn-toggle cmn-toggle-round" type="checkbox">
-                    <label for="aux-11">Allow Alternate Return Date</label>
-                </div> 
-				<div class="clear bottom30"></div>
-					<div class="container pad0">
-						<div class="row">
-							<div class="col-md-12">
-								<div class="input-group input-group-sm col-md-6">
-									<span class="input-group-addon">Days After Departure:</span>
-									<input class="form-control textCenter" id="exampleInputPassword1" type="text" placeholder="0">
-								</div>
-							</div>
-						</div>
-					</div>
-				<div class="clear bottom30"></div>
-				<div class="switch">
-                    <input id="aux-12" class="cmn-toggle cmn-toggle-round" type="checkbox">
-                    <label for="aux-12">May Required Day Early Departure at Guest Expense</label>
-                </div> 				
-            </div>
-        </div>
-    </div>
+        
     
         <!-- Flight Information -->
 	<div class="container">

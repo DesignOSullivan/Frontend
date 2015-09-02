@@ -2554,8 +2554,8 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  height: 45px;
-  padding: 10px 15px;
+  /*height: 45px;*/
+  padding: 7px 10px;
   font-size: 15px;
   line-height: 1.42857143;
   color: #2c3e50;

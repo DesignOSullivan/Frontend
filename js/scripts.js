@@ -38,18 +38,39 @@ $(document).ready(function() {
 		}
 	});
 	
-	
-
-	//$($('.onoffswitch-switch').html() === 'yes' ? 'no' : 'yes');
-
-	$('.onoffswitch-checkbox').click(function() {
+	$('#alt-return-date-toggle').change(function(){
+		if ($('#alt-return-date').is(':visible')) {
+		  	$('#alt-return-date').slideUp('');
+		}
+		else { 
+		  	$('#alt-return-date').slideDown('');
+		}
 		
-		  if ($(this).is(':checked')) {
-			$(this).siblings('.onoffswitch-switch').html('yes');
-		  } else {
-			$(this).siblings('.onoffswitch-switch').html('no');
-		  }
+		if ($('#alt-return-date').hasClass('displayNone')) {
+		  	$('#alt-return-date').removeClass('displayNone');
+		}
+		
 	});
+	
+	
+	$('#cabin-upgrade-toggle').change(function(){
+		if ($('#cabin-upgrade').is(':visible')) {
+		  	$('#cabin-upgrade').slideUp('');
+		}
+		else { 
+		  	$('#cabin-upgrade').slideDown('');
+		}
+		
+		if ($('#cabin-upgrade').hasClass('displayNone')) {
+		  	$('#cabin-upgrade').removeClass('displayNone');
+		}
+		
+	});
+	
+	
+	
+	
+	
 	
 	$(function() {
 		  $('a[href*=#]:not([href=#])').click(function() {

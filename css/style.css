@@ -8,11 +8,13 @@ h4{font-size: 17px; color: #999;}
 .form-control, label {color: #54698d;}
 .form-control, .input-group-addon{font-size: 12px;color: #54698d;}
 textarea{min-height: 150px;}
-a{color: #b50f46 /*#fd5c63*/;}
+a{color: #b50f46 /*#fd5c63*/; text-decoration: none;}
 a:hover, a:focus{color: #fd5c63}
 
 .container{max-width: 100%;}
 .container-border{ background: #fff; box-shadow: 0px 2px 4px 1px rgba(43, 59, 93, .29); padding-top: 15px; padding-bottom: 15px; margin-bottom: 30px;}
+
+
 
 .navimg{ max-height: 60px; padding: 10px ;}
 
@@ -37,8 +39,8 @@ a:hover, a:focus{color: #fd5c63}
 	.nav-tabs > li.active, .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{background: #f9f9fb; border-color:#cccccc; border-bottom: none; }
 	.nav-tabs > li > a{color:#001b3d; }
 
-#footer{width: 100%; position: fixed; bottom: 0; padding-top: 15px; padding-bottom: 5px; border-top: 1px solid #ccc; z-index: 10; background-color: #eee;
-}
+#footer{width: 100%; position: fixed; bottom: 0; padding-top: 15px; padding-bottom: 5px; border-top: 1px solid #ccc; z-index: 10; background-color: #eee;}
+
 
 #illusion{width: 100%; height: 20px; margin-bottom: 56px; position: fixed; bottom: 0; padding-top: 15px; padding-bottom: 15px; z-index: 10; border: 0px !important; 
 	background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 20%, rgba(255,255,255,0.8) 40%, rgba(255,255,255,1) 100%);
@@ -79,8 +81,16 @@ a:hover, a:focus{color: #fd5c63}
 .clear { clear:both;  overflow:hidden; }
 .entry{margin-bottom: 15px; border-bottom: 1px solid #dedede; padding-bottom: 15px;}
 
-.shadow{box-shadow: 0px 1px 2px rgba(43, 59, 93, .29);}
 
+.dkred{color: #b50f46 !important;}
+.red{color: #ff0000 !important;}
+.pink{color: #fd5c63 !important;}
+.green{color: #09b56a !important;}
+.blue{}
+.ltblue{}
+
+
+.shadow{box-shadow: 0px 1px 2px rgba(43, 59, 93, .29);}
 .displayNone{display: none !important;}
 
 .alignLeft { float:left; margin:0 15px 15px 0; }
@@ -103,7 +113,7 @@ a:hover, a:focus{color: #fd5c63}
 .remove{ color: #ccc; }
 	.remove:hover{ color: #ff1744; }
 
-
+.borderRight{border-right: 1px solid #ededed;}
 
 .pad0{padding: 0;}
 .pad15{padding: 0px 15px;}

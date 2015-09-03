@@ -150,16 +150,29 @@
                                 <input class="form-control" id="country" type="text" placeholder="Country">
                             </div>
                         </div>
+
                     </div>
                 </div>
+
                 <div class="col-md-6">
-                    <div class="clear bottom30"></div>
+                    <div class="clear bottom30 hidden-xs"></div>
                     <div class="switch">
                         <input id="mail-promo-toggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
                         <label for="mail-promo-toggle"></label>
                     </div>
                     <div class="switch-label">
                         <label for="mail-promo-toggle">Accept Mail Promotions</label>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid pad0">
+
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <div class="clear bottom10"></div>
+                        <a href="#add-tour-address" class="green"><i class="fa fa-plus"></i> Add Address</a>
+
+
                     </div>
                 </div>
             </div>
@@ -231,16 +244,107 @@
                                 <div class="clear bottom30"></div>
                                 <a href="" id="addLocationCountry" class="green addPlus"><i class="fa fa-plus"></i></a>
                             </div>
-                                <div class="noLabel form-group col-md-12">
-                                    <div class="switch">
-                                        <input id="email-promo-toggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
-                                        <label for="email-promo-toggle"></label>
-                                    </div>
-                                    <div class="switch-label">
-                                        <label for="email-promo-toggle">Accept Email Promotions</label>
-                                    </div>
+                            <div class="noLabel form-group col-md-12">
+                                <div class="switch">
+                                    <input id="email-promo-toggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                                    <label for="email-promo-toggle"></label>
                                 </div>
-                           
+                                <div class="switch-label">
+                                    <label for="email-promo-toggle">Accept Email Promotions</label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <a name="passportTab"></a>
+                    <h3> Passport </h3>
+                </div>
+            </div>
+        </div>
+        <div class="container container-border">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="container-fluid pad0">
+                        <div class="row">
+                            <div class="form-group col-md-8 col-xs-8">
+                                <i>As it appears on your passport</i>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="container-fluid pad0">
+                        <div class="row">
+                            <div class="form-group col-md-6 col-xs-6">
+                                <label for="passportNumber">Passport #</label>
+                                <input class="form-control" id="passportNumber" type="text" placeholder="Passport #">
+                            </div>
+                            <div class="form-group col-md-6 col-xs-6">
+                                <label for="redressNumbe">Redress #</label>
+                                <input class="form-control" id="redressNumber" type="text" placeholder="Redress #">
+                            </div>                                                       
+                            <div class="form-group col-md-12 col-xs-12">
+                                <label for="pLastName">Last Name</label>
+                                <input class="form-control" id="pLastName" type="text" placeholder="Last Name">
+                            </div>
+                            <div class="form-group col-md-6 col-xs-6">
+                                <label for="pFirstName">First Name</label>
+                                <input class="form-control" id="pFirstName" type="text" placeholder="First Name">
+                            </div>
+                            <div class="form-group col-md-6 col-xs-6">
+                                <label for="pMiddleName">Middle Name</label>
+                                <input class="form-control" id="pMiddleName" type="text" placeholder="Middle Name">
+                            </div>
+                            <div class="form-group col-md-12 col-xs-12">
+                                <label for="pNationality">Nationality</label>
+                                <input class="form-control" id="pNationality" type="text" placeholder="Nationality">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <div class="input-group noLabel">
+                                    <span class="input-group-addon"><i class="fa fa-calendar fa-lg"></i></span>
+                                    <input class="form-control" id="pCalendar" type="text" placeholder="Date of Birth">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6 col-xs-6">
+                                <label for="pSex">Sex</label>
+                                <select class="form-control" id="pSex">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                        </div>                      
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="container-fluid pad0">
+                        <div class="row">
+                            <div class="noLabel form-group col-md-12">
+                                <div class="switch">
+                                    <input id="dualCitizenToggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                                    <label for="dualCitizenToggle"></label>
+                                </div>
+                                <div class="switch-label">
+                                    <label for="dualCitizenToggle">Dual Citizenship</label>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -262,10 +366,10 @@
                         <div class="col-md-2">
                             <button type="submit" class="btn btn-default btn-sm"> Cancel </button>
                         </div>
-                        <div class="col-md-8">
-                            <!-- Middle Links
-<p><a href="#location">Summary</a></p>
--->
+                        <div class="col-md-8 textCenter">
+
+<p><a href="#location">Remarks</a></p>
+
                         </div>
                         <div class="col-md-2">
                             <button type="submit" class="btn btn-info btn-sm alignRight bottom0"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Submit </button>

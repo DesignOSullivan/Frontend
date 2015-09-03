@@ -9,6 +9,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/toggle-me-softly.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
 </head>
 
 <body>
@@ -83,8 +84,11 @@
                                 <label for="suffix">Suffix</label>
                                 <select class="form-control" id="suffix">
                                     <option></option>
-                                    <option>Jr.</option>
                                     <option>Sr.</option>
+                                    <option>Jr.</option>
+                                    <option>III.</option>
+                                    <option>IV</option>
+                                    <option>V</option>
                                 </select>
                             </div>
                         </div>
@@ -175,37 +179,51 @@
                 <div class="col-md-6">
                     <div class="container-fluid pad0">
                         <div class="row">
-                            <div class="form-group col-md-2">
-                                <label for="title1">Title</label>
-                                <select class="form-control" id="title1">
-                                    <option>Mr.</option>
-                                    <option>Mrs.</option>
-                                    <option>Ms.</option>
+                            <div class="form-group col-md-8 col-xs-8">
+                                <label for="phoneNumber">Phone Number</label>
+                                <input class="form-control" id="phoneNumber" type="text" placeholder="Phone Number">
+                            </div>
+                            <div class="form-group col-md-3 col-xs-3">
+                                <label for="phoneType">Type</label>
+                                <select class="form-control" id="phoneType">
+                                    <option>Home</option>
+                                    <option>Moblie</option>
+                                    <option>Work</option>
+                                    <option>Fax</option>
                                 </select>
                             </div>
-                            <div class="form-group col-md-8">
-                                <label for="firstName">First Name</label>
-                                <input class="form-control" id="firstName" type="text" placeholder="First Name">
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label for="middleInit">MI</label>
-                                <input class="form-control" id="middleInit" type="text" placeholder="MI">
+                            <div class="col-md-1 col-xs-1">
+                                <div class="clear bottom30"></div>
+                                <a href="" id="addLocationCountry" class="green addPlus"><i class="fa fa-plus"></i></span></a>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="form-group col-md-10">
-                                <label for="lastName">Last Name</label>
-                                <input class="form-control" id="lastName" type="text" placeholder="Last Name">
+                            <div class="form-group col-md-11 col-xs-11">
+                                <label for="emailInput">Email</label>
+                                <input class="form-control" id="emailInput" type="text" placeholder="Email">
                             </div>
-                            <div class="form-group col-md-2">
-                                <label for="suffix">Suffix</label>
-                                <select class="form-control" id="suffix">
-                                    <option></option>
-                                    <option>Jr.</option>
-                                    <option>Sr.</option>
-                                </select>
+                            <div class="col-md-1 col-xs-1">
+                                <div class="clear bottom30"></div>
+                                <a href="" id="addLocationCountry" class="green addPlus"><i class="fa fa-plus"></i></span></a>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="exampleInputPassword1">Social</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-facebook-f fa-lg"></i></span>
+                                    <input class="form-control" id="exampleInputPassword1" type="text" placeholder="395">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="exampleInputPassword1">Social</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-twitter fa-lg"></i></span>
+                                    <input class="form-control" id="exampleInputPassword1" type="text" placeholder="395">
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <div class="col-md-6">

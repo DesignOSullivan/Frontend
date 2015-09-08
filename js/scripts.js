@@ -66,6 +66,36 @@ $(document).ready(function() {
 		
 	});
 	
+	
+	$('#business-class-addon').change(function(){
+		if ($('#business-class-addon-price').parent().is(':visible')) {
+		  	$('#business-class-addon-price').parent().slideUp('');
+		}
+		else { 
+		  	$('#business-class-addon-price').parent().slideDown('');
+		}
+		
+		if ($('#business-class-addon-price').parent().hasClass('displayNone')) {
+		  	$('#business-class-addon-price').parent().removeClass('displayNone');
+		}
+		
+	});
+	
+	$('#premium-class-addon').change(function(){
+		if ($('#premium-class-addon-price').parent().is(':visible')) {
+		  	$('#premium-class-addon-price').parent().slideUp('');
+		}
+		else { 
+		  	$('#premium-class-addon-price').parent().slideDown('');
+		}
+		
+		if ($('#premium-class-addon-price').parent().hasClass('displayNone')) {
+		  	$('#premium-class-addon-price').parent().removeClass('displayNone');
+		}
+		
+	});
+	
+	
 	$('#alt-return-date-toggle').change(function(){
 		if ($('#alt-return-date').is(':visible')) {
 		  	$('#alt-return-date').slideUp('');

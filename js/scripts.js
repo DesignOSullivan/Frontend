@@ -38,6 +38,34 @@ $(document).ready(function() {
 		}
 	});
 	
+	
+	$('#aux-6').change(function(){
+		if ($('#visa-notes').is(':visible')) {
+		  	$('#visa-notes').slideUp('');
+		}
+		else { 
+		  	$('#visa-notes').slideDown('');
+		}
+		
+		if ($('#visa-notes').hasClass('displayNone')) {
+		  	$('#visa-notes').removeClass('displayNone');
+		}
+		
+	});
+	$('#aux-5').change(function(){
+		if ($('#inoculations-notes').is(':visible')) {
+		  	$('#inoculations-notes').slideUp('');
+		}
+		else { 
+		  	$('#inoculations-notes').slideDown('');
+		}
+		
+		if ($('#inoculations-notes').hasClass('displayNone')) {
+		  	$('#inoculations-notes').removeClass('displayNone');
+		}
+		
+	});
+	
 	$('#alt-return-date-toggle').change(function(){
 		if ($('#alt-return-date').is(':visible')) {
 		  	$('#alt-return-date').slideUp('');

@@ -23,7 +23,7 @@
             <div class="navbar-center">
                 <h4 id="tourCodeHeader">New</h4>
                 <h4 id="tourPipeHeader">|</h4>
-                <h4 id="tourNameHeader">Tour</h4>
+                <h4 id="tourNameHeader">Guest</h4>
             </div>
             <ul class="nav navbar-nav navbar-right">
                 <li> <img src="http://lorempixel.com/output/people-q-c-100-100-9.jpg" class="navimg"> </li>
@@ -43,6 +43,27 @@
 
 
     <form role="form">
+
+        <!-- Active/ Inactive Bar -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xs-6">
+                    <h4>G-543323</h4>
+                </div>
+                <div class="col-md-6 col-xs-6">
+                    <div class="alignRight">
+                        <div class="clear bottom10"></div>
+                        <div class="switch">
+                            <input id="guestActiveToggle" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
+                            <label for="guestActiveToggle"></label>
+                        </div>
+                        <div class="switch-label">
+                            <label for="guestActiveToggle">Active</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Guest Name -->
         <div class="container">
@@ -94,11 +115,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="nickname">Nickname</label>
-                        <input class="form-control" id="nickname" type="text" placeholder="Nickname">
-                    </div>
+                <div class="form-group col-md-6">
+                    <label for="nickname">Nickname</label>
+                    <input class="form-control" id="nickname" type="text" placeholder="Nickname">
                 </div>
             </div>
         </div>
@@ -150,18 +169,16 @@
                                 <input class="form-control" id="country" type="text" placeholder="Country">
                             </div>
                         </div>
-
                     </div>
                 </div>
-
                 <div class="col-md-6">
                     <div class="clear bottom30 hidden-xs"></div>
                     <div class="switch">
-                        <input id="mail-promo-toggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
-                        <label for="mail-promo-toggle"></label>
+                        <input id="mailPromoToggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                        <label for="mailPromoToggle"></label>
                     </div>
                     <div class="switch-label">
-                        <label for="mail-promo-toggle">Accept Mail Promotions</label>
+                        <label for="mailPromoToggle">Accept Mail Promotions</label>
                     </div>
                 </div>
             </div>
@@ -250,7 +267,6 @@
                                     <label for="email-promo-toggle">Accept Email Promotions</label>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -288,10 +304,14 @@
                                 <label for="redressNumbe">Redress #</label>
                                 <input class="form-control" id="redressNumber" type="text" placeholder="Redress #">
                             </div>
+                        </div>
+                        <div class="row">
                             <div class="form-group col-md-12 col-xs-12">
                                 <label for="pLastName">Last Name</label>
                                 <input class="form-control" id="pLastName" type="text" placeholder="Last Name">
                             </div>
+                        </div>
+                        <div class="row">
                             <div class="form-group col-md-6 col-xs-6">
                                 <label for="pFirstName">First Name</label>
                                 <input class="form-control" id="pFirstName" type="text" placeholder="First Name">
@@ -300,10 +320,14 @@
                                 <label for="pMiddleName">Middle Name</label>
                                 <input class="form-control" id="pMiddleName" type="text" placeholder="Middle Name">
                             </div>
+                        </div>
+                        <div class="row">
                             <div class="form-group col-md-12 col-xs-12">
                                 <label for="pNationality">Nationality</label>
                                 <input class="form-control" id="pNationality" type="text" placeholder="Nationality">
                             </div>
+                        </div>
+                        <div class="row">
                             <div class="form-group col-md-6">
                                 <div class="input-group noLabel">
                                     <span class="input-group-addon"><i class="fa fa-calendar fa-lg"></i></span>
@@ -318,10 +342,14 @@
                                     <option>Other</option>
                                 </select>
                             </div>
+                        </div>
+                        <div class="row">
                             <div class="form-group col-md-12 col-xs-12">
                                 <label for="pPlaceOfBirth">Place of Birth</label>
                                 <input class="form-control" id="pPlaceOfBirth" type="text" placeholder="Place of Birth">
                             </div>
+                        </div>
+                        <div class="row">
                             <div class="form-group col-md-6">
                                 <div class="input-group noLabel">
                                     <span class="input-group-addon"><i class="fa fa-calendar fa-lg"></i></span>
@@ -334,6 +362,8 @@
                                     <input class="form-control" id="pDateOfExpiration" type="text" placeholder="Date of Expiration">
                                 </div>
                             </div>
+                        </div>
+                        <div class="row">
                             <div class="form-group col-md-12 col-xs-12">
                                 <label for="pIssuingAuthority">Issuing Authority</label>
                                 <select class="form-control" id="pIssuingAuthority">
@@ -343,6 +373,8 @@
                                     <option>Somewhere Else</option>
                                 </select>
                             </div>
+                        </div>
+                        <div class="row">
                             <div class="form-group col-md-12 col-xs-12">
                                 <label for="pOccupation">Occupation</label>
                                 <input class="form-control" id="pOccupation" type="text" placeholder="Occupation">
@@ -351,28 +383,20 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="container-fluid pad0">
-                        <div class="row">
-                            <div class="noLabel form-group col-md-12">
-                                <div class="switch">
-                                    <input id="dualCitizenToggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
-                                    <label for="dualCitizenToggle"></label>
-                                </div>
-                                <div class="switch-label">
-                                    <label for="dualCitizenToggle">Dual Citizenship</label>
-                                </div>
-                            </div>
-
-                        </div>
+                    <div class="clear bottom30 hidden-xs"></div>
+                    <div class="switch">
+                        <input id="dualCitizenToggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                        <label for="dualCitizenToggle"></label>
+                    </div>
+                    <div class="switch-label">
+                        <label for="dualCitizenToggle">Dual Citizenship</label>
                     </div>
                 </div>
             </div>
-            <div class="container-fluid pad0">
-                <div class="row">
-                    <div class="form-group col-md-12">
-                        <div class="clear bottom10"></div>
-                        <a href="#add-tour-address" class="green"><i class="fa fa-plus"></i> Add Passport</a>
-                    </div>
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <div class="clear bottom10"></div>
+                    <a href="#add-tour-address" class="green"><i class="fa fa-plus"></i> Add Passport</a>
                 </div>
             </div>
         </div>
@@ -388,46 +412,194 @@
         </div>
         <div class="container container-border">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="container-fluid pad0">
-                        <div class="row">
-                            <div class="form-group col-md-12 col-xs-12">
-                                <label for="hHealthConcerns">Health Concerns</label>
-                                <select class="form-control" id="hHealthConcerns">
-                                    <option>Health Concern</option>
-                                    <option>Something Else</option>
-                                    <option>Something Else</option>
-                                </select>
+                <div class="form-group col-md-6 col-xs-12">
+                    <label for="hHealthConcerns">Health Concerns</label>
+                    <select class="form-control" id="hHealthConcerns">
+                        <option>Health Concern</option>
+                        <option>Something Else</option>
+                        <option>Something Else</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6 col-xs-12">
+                    <label for="hPhysicalLimitations">Physical Limitations</label>
+                    <select class="form-control" id="hPhysicalLimitations">
+                        <option>Physical Limitation</option>
+                        <option>Something Else</option>
+                        <option>Something Else</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6 col-xs-12">
+                    <label for="hAllergies">Allergies</label>
+                    <select class="form-control" id="hAllergies">
+                        <option>Allergy</option>
+                        <option>Something Else</option>
+                        <option>Something Else</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6 col-xs-12">
+                    <label for="hMealConsiderations">Meal Considerations</label>
+                    <select class="form-control" id="hMealConsiderations">
+                        <option>Meal Consideration</option>
+                        <option>Something Else</option>
+                        <option>Something Else</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Emergency Tab -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <a name="emergencyTab"></a>
+                    <h3> Emergency </h3>
+                </div>
+            </div>
+        </div>
+        <div class="container container-border">
+            <div class="row">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="container-fluid pad0">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="container-fluid pad0">
+                                            <div class="row">
+                                                <div class="form-group col-md-2">
+                                                    <label for="eTitle1">Title</label>
+                                                    <select class="form-control" id="eTitle1">
+                                                        <option>Mr.</option>
+                                                        <option>Mrs.</option>
+                                                        <option>Ms.</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-md-8">
+                                                    <label for="eFirstName">First Name</label>
+                                                    <input class="form-control" id="eFirstName" type="text" placeholder="First Name">
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <label for="eMiddleInit">MI</label>
+                                                    <input class="form-control" id="eMiddleInit" type="text" placeholder="MI">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-md-10">
+                                                    <label for="eLastName">Last Name</label>
+                                                    <input class="form-control" id="eLastName" type="text" placeholder="Last Name">
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <label for="eSuffix">Suffix</label>
+                                                    <select class="form-control" id="eSuffix">
+                                                        <option></option>
+                                                        <option>Sr.</option>
+                                                        <option>Jr.</option>
+                                                        <option>III.</option>
+                                                        <option>IV</option>
+                                                        <option>V</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container-fluid pad0">
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="form-group col-md-8">
+                                                            <label for="eRelationship">Relationship</label>
+                                                            <select class="form-control" id="eRelationship">
+                                                                <option></option>
+                                                                <option>Sr.</option>
+                                                                <option>Jr.</option>
+                                                                <option>III.</option>
+                                                                <option>IV</option>
+                                                                <option>V</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group col-md-12 col-xs-12">
-                                <label for="hPhysicalLimitations">Physical Limitations</label>
-                                <select class="form-control" id="hPhysicalLimitations">
-                                    <option>Physical Limitation</option>
-                                    <option>Something Else</option>
-                                    <option>Something Else</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-12 col-xs-12">
-                                <label for="hAllergies">Allergies</label>
-                                <select class="form-control" id="hAllergies">
-                                    <option>Allergy</option>
-                                    <option>Something Else</option>
-                                    <option>Something Else</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-12 col-xs-12">
-                                <label for="hMealConsiderations">Meal Considerations</label>
-                                <select class="form-control" id="hMealConsiderations">
-                                    <option>Meal Consideration</option>
-                                    <option>Something Else</option>
-                                    <option>Something Else</option>
-                                </select>
+                        </div>
+                        <div class="container-fluid pad0">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="container-fluid pad0">
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="form-group col-md-8 col-xs-8">
+                                                            <label for="phoneNumber">Phone Number</label>
+                                                            <input class="form-control" id="phoneNumber" type="text" placeholder="Phone Number">
+                                                        </div>
+                                                        <div class="form-group col-md-3 col-xs-3">
+                                                            <label for="phoneType">Type</label>
+                                                            <select class="form-control" id="phoneType">
+                                                                <option>Home</option>
+                                                                <option>Moblie</option>
+                                                                <option>Work</option>
+                                                                <option>Fax</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-1 col-xs-1">
+                                                            <div class="clear bottom30"></div>
+                                                            <a href="" id="addLocationCountry" class="green addPlus"><i class="fa fa-plus"></i></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-md-11 col-xs-11">
+                                                            <label for="emailInput">Email</label>
+                                                            <input class="form-control" id="emailInput" type="text" placeholder="Email">
+                                                        </div>
+                                                        <div class="col-md-1 col-xs-1">
+                                                            <div class="clear bottom30"></div>
+                                                            <a href="" id="addLocationCountry" class="green addPlus"><i class="fa fa-plus"></i></a>
+                                                        </div>
+                                                        <div class="form-group col-md-12">
+                                                            <div class="switch">
+                                                                <input id="email-promo-toggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                                                                <label for="email-promo-toggle"></label>
+                                                            </div>
+                                                            <div class="switch-label">
+                                                                <label for="email-promo-toggle">Accept Email Promotions</label>
+                                                            </div>
+                                                        </div>
+                                                        <div col-md-12>
+                                                            <div class="container-fluid">
+                                                                <div class="row">
+                                                                    <div class="form-group col-md-12">
+                                                                        <div class="clear bottom10"></div>
+                                                                        <a href="#add-tour-address" class="green"><i class="fa fa-plus"></i> Add Contact</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
 
         <!-- Emergency Tab -->
         <div class="container">

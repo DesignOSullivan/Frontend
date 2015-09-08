@@ -1,20 +1,20 @@
 $(document).ready(function() {
 	
-	$('#tourCode').bind("change paste keyup", function() {
-	   if($(this).val() !== ''){
-	   	$('#tourCodeHeader').html($(this).val()); 
-	   }
-	   else{
-		   $('#tourCodeHeader').html('Tour Code');    
-	   }
-	});
-	
 	$('#tourName').bind("change paste keyup", function() {
 	   if($(this).val() !== ''){
 	   	$('#tourNameHeader').html($(this).val()); 
 	   }
 	   else{
 		   $('#tourNameHeader').html('Tour Name');    
+	   }
+	});
+	
+	$('#tourCode').bind("change paste keyup", function() {
+	   if($(this).val() !== ''){
+	   	$('#tourCodeHeader').html($(this).val()); 
+	   }
+	   else{
+		   $('#tourCodeHeader').html('Tour Code');    
 	   }
 	
 	});
@@ -65,36 +65,6 @@ $(document).ready(function() {
 		}
 		
 	});
-	
-	
-	$('#business-class-addon').change(function(){
-		if ($('#business-class-addon-price').parent().is(':visible')) {
-		  	$('#business-class-addon-price').parent().slideUp('');
-		}
-		else { 
-		  	$('#business-class-addon-price').parent().slideDown('');
-		}
-		
-		if ($('#business-class-addon-price').parent().hasClass('displayNone')) {
-		  	$('#business-class-addon-price').parent().removeClass('displayNone');
-		}
-		
-	});
-	
-	$('#premium-class-addon').change(function(){
-		if ($('#premium-class-addon-price').parent().is(':visible')) {
-		  	$('#premium-class-addon-price').parent().slideUp('');
-		}
-		else { 
-		  	$('#premium-class-addon-price').parent().slideDown('');
-		}
-		
-		if ($('#premium-class-addon-price').parent().hasClass('displayNone')) {
-		  	$('#premium-class-addon-price').parent().removeClass('displayNone');
-		}
-		
-	});
-	
 	
 	$('#alt-return-date-toggle').change(function(){
 		if ($('#alt-return-date').is(':visible')) {

@@ -1,20 +1,20 @@
 $(document).ready(function() {
 	
-	$('#tourName').bind("change paste keyup", function() {
+	$('#firstName').bind("change paste keyup", function() {
 	   if($(this).val() !== ''){
-	   	$('#tourNameHeader').html($(this).val()); 
+	   	$('#firstNameHeader').html($(this).val()); 
 	   }
 	   else{
-		   $('#tourNameHeader').html('Tour Name');    
+		   $('#firstNameHeader').html('First Name');    
 	   }
 	});
 	
-	$('#tourCode').bind("change paste keyup", function() {
+	$('#lastName').bind("change paste keyup", function() {
 	   if($(this).val() !== ''){
-	   	$('#tourCodeHeader').html($(this).val()); 
+	   	$('#lastNameHeader').html($(this).val()); 
 	   }
 	   else{
-		   $('#tourCodeHeader').html('Tour Code');    
+		   $('#lastNameHeader').html('Last Name');    
 	   }
 	
 	});

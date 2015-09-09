@@ -17,11 +17,12 @@
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </button>
-            <a class="navbar-brand" href="#" style="padding: 0 15px;"><img src="logo.png" style="max-height: 60px;"/></a>
+            <a class="navbar-brand" href="#" style="padding: 0 15px;"><img src="logo.png" style="max-height: 60px;" /></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <div class="navbar-center">
-                <h4 class="headerTextLeft" id="firstNameHeader">New</h4><h4 class="headerTextRight" id="lastNameHeader">Guest</h4>
+                <h4 class="headerTextLeft" id="firstNameHeader">New</h4>
+                <h4 class="headerTextRight" id="lastNameHeader">Guest</h4>
             </div>
             <ul class="nav navbar-nav navbar-right">
                 <li> <img src="http://lorempixel.com/output/people-q-c-100-100-9.jpg" class="navimg"> </li>
@@ -260,7 +261,38 @@
             </div>
         </div>
 
+
+        <!-- Page Header -->
+        <div id="pageHeader">
+            <div class="container pad0 bottom0 shadow">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="clear bottom15">
+                </div>
+                <div class="row">
+                    <div class="col-md-12 center">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" id="Passport-tab-link" class="active"><a href="#pasport-content" role="tab" data-toggle="tab">Passport</a></li>
+                            <li role="presentation" id="Air-tab-link"><a href="#air-content" role="tab" data-toggle="tab">Air</a></li>
+                            <li role="presentation" id="Health-tab-link"><a href="#health-content" role="tab" data-toggle="tab">Health</a></li>
+                            <li role="presentation" id="Emergency-tab-link"><a href="#post-tour-content" role="tab" data-toggle="tab">Emergency</a></li>
+                            <!--<li role="presentation"><a href="#add-tour-extension"><span class="glyphicon glyphicon-plus"></span></a></li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
         <!-- Passport Tab -->
+        <div class="tab-content">
+        <div id="passport-content" role="tabpanel" class="tab-pane fade in active" >
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -387,8 +419,11 @@
                 </div>
             </div>
         </div>
+            </div>
+        
 
         <!-- Health Tab -->
+            <div id="health-content" role="tabpanel" class="tab-pane fade in" >
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -407,8 +442,6 @@
                         <option>Something Else</option>
                     </select>
                 </div>
-            </div>
-            <div class="row">
                 <div class="form-group col-md-6 col-xs-12">
                     <label for="hPhysicalLimitations">Physical Limitations</label>
                     <select class="form-control" id="hPhysicalLimitations">
@@ -427,8 +460,6 @@
                         <option>Something Else</option>
                     </select>
                 </div>
-            </div>
-            <div class="row">
                 <div class="form-group col-md-6 col-xs-12">
                     <label for="hMealConsiderations">Meal Considerations</label>
                     <select class="form-control" id="hMealConsiderations">
@@ -551,7 +582,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Air Tab -->
         <div class="container">
             <div class="row">
@@ -612,7 +643,7 @@
                             <option>More Food</option>
                         </select>
                     </div>
-                </div>            
+                </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
@@ -632,13 +663,10 @@
                         <label for="aFrequentFlyer">Frequent Flyer #</label>
                         <input class="form-control" id="aFrequentFlyer" placeholder="Frequent Flyer #">
                     </div>
-                </div>            
+                </div>
             </div>
         </div>
-                    
-                    
-            
-
+        </div>
 
 
 
@@ -705,7 +733,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-toggle.min.js"></script>
     <script src="js/guest-scripts.js"></script>
-    
+
 </body>
 
 </html>

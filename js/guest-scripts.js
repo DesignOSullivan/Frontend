@@ -1,23 +1,23 @@
 $(document).ready(function() {
-	
-	$('#firstName').bind("change paste keyup", function() {
-	   if($(this).val() !== ''){
-	   	$('#firstNameHeader').html($(this).val()); 
-	   }
-	   else{
-		   $('#firstNameHeader').html('First Name');    
-	   }
-	});
-	
-	$('#lastName').bind("change paste keyup", function() {
-	   if($(this).val() !== ''){
-	   	$('#lastNameHeader').html($(this).val()); 
-	   }
-	   else{
-		   $('#lastNameHeader').html('Last Name');    
-	   }
-	
-	});
+
+    $('#firstName').bind("change paste keyup", function() {
+        if($(this).val() !== ''){
+            $('#fistNameHeader').html($(this).val()); 
+        }
+        else{
+            $('#firstnameHeader').html('Tour Code');    
+        }
+    });
+
+    $('#lastName').bind("change paste keyup", function() {
+        if($(this).val() !== ''){
+            $('#lastNameHeader').html($(this).val()); 
+        }
+        else{
+            $('#lastNameheader').html('Tour Name');    
+        }
+
+    });
 
 
 	$('#pre-tour-toggle').change(function(){

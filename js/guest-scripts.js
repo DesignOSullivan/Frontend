@@ -2,10 +2,10 @@ $(document).ready(function() {
 
     $('#firstName').bind("change paste keyup", function() {
         if($(this).val() !== ''){
-            $('#fistNameHeader').html($(this).val()); 
+            $('#firstNameHeader').html($(this).val()); 
         }
         else{
-            $('#firstnameHeader').html('Tour Code');    
+            $('#firstNameHeader').html('New');    
         }
     });
 
@@ -14,7 +14,7 @@ $(document).ready(function() {
             $('#lastNameHeader').html($(this).val()); 
         }
         else{
-            $('#lastNameheader').html('Tour Name');    
+            $('#lastNameHeader').html('Guest');    
         }
 
     });

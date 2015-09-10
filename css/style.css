@@ -37,7 +37,7 @@ a:hover, a:focus{color: #fd5c63}
 
 .nav-tabs{border-bottom: 1px solid #ccc;}
 .nav-tabs > li{display: inline-block; float: none; background: #fff; font-size: 16px;}
-	.nav-tabs > li.active, .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{background: #f9f9fb; border-color:#cccccc; border-bottom: none; }
+	.nav-tabs > li.active, .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{background: #f5f8fa; border-color:#cccccc; border-bottom: none; }
 	.nav-tabs > li > a{color:#001b3d; }
 
 #footer{width: 100%; position: fixed; bottom: 0; padding-top: 15px; padding-bottom: 5px; border-top: 1px solid #ccc; z-index: 10; background-color: #eee;}

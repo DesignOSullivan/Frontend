@@ -6920,7 +6920,7 @@ input {
   border-width: 2px;
   -webkit-box-shadow: none;
   box-shadow: none;
-    height: 35px;
+    /*height: 35px;*/
 }
 .form-control:focus,
 input:focus {

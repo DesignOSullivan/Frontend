@@ -19,7 +19,6 @@ $(document).ready(function() {
 	
 	});
 
-
 	$('#pre-tour-toggle').change(function(){
 		if ($('#pre-tour-tab-link').hasClass('displayNone')) {
 		  	$('#pre-tour-tab-link').removeClass('displayNone');
@@ -139,19 +138,6 @@ $(document).ready(function() {
 	});
 	
 	
-	$('#accomModal-searchHotel-link').click(function(){
-		  	$('#accomModal2').slideUp();
-			$('#accomModal-searchHotel').removeClass('displayNone').slideDown();
-			return false;
-	});
-	
-	$('#accomModal-addHotel-link').click(function(){
-		  	$('#accomModal2').slideUp();
-			$('#accomModal-addHotel').removeClass('displayNone').slideDown();
-			return false;
-	});
-	
-	
 	$('#accomModal-addOperator-link').click(function(){
 		  	$('#accomModal-searchOperator').slideUp();
 			$('#accomModal-addOperator').removeClass('displayNone').slideDown();
@@ -159,9 +145,30 @@ $(document).ready(function() {
 	});
 	
 	
+	$('#accomModal-searchAccom-link').click(function(){
+		  	$('#accomModal2').slideUp();
+			$('#accomModal-searchAccom').removeClass('displayNone').slideDown();
+			return false;
+	});
+	
+	$('#accomModal-addAccom-link').click(function(){
+		  	$('#accomModal2').slideUp();
+			$('#accomModal-addAccom').removeClass('displayNone').slideDown();
+			return false;
+	});
 	
 	
-	
+	$('#accomModal-addHotelCruise-trigger').change(function(){
+		if ($('#accomModal-addCruise').is(':visible')) {
+		  	$('#accomModal-addCruise').slideUp('');
+			$('#accomModal-addHotel').slideDown('');
+		}
+		if ($('#accomModal-addHotel').is(':visible')) {
+		  	$('#accomModal-addHotel').slideUp('');
+			$('#accomModal-addCruise').slideDown('');
+		}
+		
+	});
 	
 	$(function() {
 		  $('a[href*=#]:not([href=#])').click(function() {

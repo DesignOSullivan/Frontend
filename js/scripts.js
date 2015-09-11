@@ -159,13 +159,17 @@ $(document).ready(function() {
 	
 	
 	$('#accomModal-addHotelCruise-trigger').change(function(){
-		if ($('#accomModal-addCruise').is(':visible')) {
-		  	$('#accomModal-addCruise').slideUp('');
-			$('#accomModal-addHotel').slideDown('');
-		}
 		if ($('#accomModal-addHotel').is(':visible')) {
 		  	$('#accomModal-addHotel').slideUp('');
 			$('#accomModal-addCruise').slideDown('');
+		}
+		else {
+			$('#accomModal-addCruise').slideUp('');
+			$('#accomModal-addHotel').slideDown('');
+		}
+		
+		if ($('#aaccomModal-addHotel').hasClass('displayNone')) {
+		  	$('#accomModal-addHotel').removeClass('displayNone');
 		}
 		
 	});

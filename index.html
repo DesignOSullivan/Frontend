@@ -647,13 +647,15 @@
 							<input class="form-control" id="tourName" type="text" placeholder="City">
 						</div>
 						<div class="form-group col-md-2">
-							<br />
-							<button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search </button>
+							<div class="clear bottom20"></div>
+							<a data-toggle="modal" data-target="#accomModal" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search </a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		
+
 		<div class="row">
 			<div class="col-md-12 table-responsive">
 				<table class="table">
@@ -842,7 +844,7 @@
 				<div class="container pad0">
 					<div class="form-group row bottom30">
 						<div class="col-md-6">
-							<label>Airline Taxes & <br /> Departure Fees</label>
+							<label>Airline Taxes &amp; <br /> Departure Fees</label>
 						</div>
 						<div class="col-md-5">
 							<div class="input-group">
@@ -1314,7 +1316,7 @@
 
 <div class="clear" style="margin-bottom: 120px;"></div>
        
-        <!-- footer -->
+<!-- footer -->
 <div id="illusion">
     <div id="footer">
 	   <div class="container">
@@ -1360,6 +1362,291 @@
 	<li><a href="#zonefaresSection">Zone Fares</a></li>
 	</ul>
 </div>
+
+
+
+			
+<!-- Itin Accom Modals   modal fade  -->
+<div class="" id="accomModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document" style="width: 100%; margin: 23% 10px;">
+		<div class="modal-content">
+		  <div class="modal-body">
+			<div class="container">
+				<div id="accomModal1">
+					<div class="row">
+						<div class="col-md-12 bottom30"> 
+							<h5>Accommodations Search Results</h5>
+							<h3 class="textCenter">No results found.</h3>
+						</div>
+					</div>	
+					<div class="row">
+						<div class="col-md-2"></div>
+						<div class="col-md-4 textCenter"> 
+							<a href="" id="accomModal2-link" class="green"><span class="glyphicon glyphicon-plus"></span> Add New Accommodation</a>
+						</div>
+						<div class="col-md-4 textCenter"> 
+							<a href="" data-dismiss="modal"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search Again</a>
+						</div>
+						<div class="col-md-2"></div>
+					</div>
+				</div>
+				<!-- -->
+				<div class="displayNone" id="accomModal2">
+					<div class="row">
+						<div class="col-md-12 textCenter"> 
+							<h3>Does this accommodation have a gound operator?</h3>
+							<a href="" id="accomModal-addHotel-link" class="btn btn-default">NO</a>&nbsp&nbsp;
+							<a href="" id="accomModal-searchOperator-link" class="btn btn-default">YES</a>
+						</div>
+					</div>	
+				</div>
+				<!-- -->
+				<div class="displayNone" id="accomModal-searchOperator">
+					<div class="row">
+						<div class="col-md-12 table-responsive"> 
+							<h5>Operator Search Results</h5>
+							<div class="clear bottom30"></div>
+							<table class="table table-striped">
+								<tr>
+									<th>Ground Operator Name</th>
+									<th>Phone #</th>
+									<th>Primary Street Address</th>
+									<th>City</th>
+									<th>Country</th>
+								</tr>
+								<tr>
+									<td><span class="glyphicon glyphicon-plus green"></span> Irish Adventures</td>
+									<td>353 87 419 0318</td>
+									<td>225 Green Street</td>
+									<td>Dublin</td>
+									<td>Ireland</td>
+								</tr>
+								<tr>
+									<td><span class="glyphicon glyphicon-plus green"></span> Go Ireland</td>
+									<td>353 87 514 9543</td>
+									<td>8893 Farley Court</td>
+									<td>Cork</td>
+									<td>Ireland</td>
+								</tr>
+							</table>
+							<div class="clear bottom15"></div>
+							<div class="textCenter">
+								<a href="" id="accomModal-addOperator-link" class="green"><span class="glyphicon glyphicon-plus"></span> Add New Ground Operator</a>
+								<a href=""><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search Again (not functioninal)</a>
+							</div>
+						</div>
+					</div>	
+				</div>
+				<!-- -->
+				<div class="displayNone" id="accomModal-addOperator">
+					<div class="row">
+						<div class="col-md-6 borderRight"> 
+							<h5>Add New Ground Operator</h5>
+							<div class="clear bottom15"></div>
+							
+							<div class="container-fluid pad0">
+								<div class="row">
+									<div class="form-group col-md-12">
+										<label for="exampleInputEmail1">Ground Operator Name</label>
+										<input class="form-control" id="" type="text" placeholder="Ground Operator Name">
+									</div>
+									<div class="form-group col-md-12">
+										<label for="middleInit">Attention</label>
+										<input class="form-control" id="" type="text" placeholder="Attention (not required)">
+									</div>
+									
+									<div class="form-group col-md-6">
+										<label for="middleInit">Address</label>
+										<input class="form-control" id="" type="text" placeholder="Address">
+									</div>
+									<div class="form-group col-md-6">
+										<label for="middleInit">Address 2</label>
+										<input class="form-control" id="" type="text" placeholder="Address cont'd (not required)">
+									</div>
+									
+									<div class="form-group col-md-4">
+										<label for="middleInit">Postal Code</label>
+										<input class="form-control" id="" type="text" placeholder="Postal Code">
+									</div>
+									<div class="form-group col-md-8">
+										<label for="middleInit">City</label>
+										<input class="form-control" id="" type="text" placeholder="City">
+									</div>
+									<div class="form-group col-md-6">
+										<label for="middleInit">State / Province</label>
+										<input class="form-control" id="" type="text" placeholder="State / Province (not required)">
+									</div>
+									<div class="form-group col-md-6">
+										<label for="middleInit">Country</label>
+										<input class="form-control" id="" type="text" placeholder="Country">
+									</div>
+									<div class="col-md-12 bottom15">
+										<div class="form-group">
+											<div class="switch">
+												<input id="addGroundOperator-fedex-toggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
+												<label for="addGroundOperator-fedex-toggle"></label>
+											</div>
+											<div class="switch-label">
+												<label for="addGroundOperator-fedex-toggle">Allows FedEx Delivery</label>
+											</div>  
+											<div class="clear bottom15"></div>
+										</div>
+										<em><a href="" id="" class="green"><span class="glyphicon glyphicon-plus"></span> Additional Address</a></em>
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col-md-6">
+										<label for="middleInit">Phone</label>
+										<input class="form-control" id="" type="text" placeholder="Phone">
+									</div>
+									<div class="form-group col-md-4">
+										<label for="title1">Type</label>
+										<select class="form-control" id="">
+											<option>Landline</option>
+											<option>Mobile</option>
+										</select>
+									</div>
+									<div class="form-group col-md-2">
+										<label for="title1">Ext.</label>
+										<input class="form-control" id="" type="text" placeholder="Ext">
+									</div>
+									<div class="col-md-12 bottom15">
+										<em><a href="" id="" class="green"><span class="glyphicon glyphicon-plus"></span> Additional Phone Number</a></em>
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col-md-6">
+										<label for="middleInit">Email Address</label>
+										<input class="form-control" id="" type="text" placeholder="Email Address">
+									</div>
+									<div class="col-md-12 bottom15">
+										<em><a href="" id="" class="green"><span class="glyphicon glyphicon-plus"></span> Additional Email Address</a></em>
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group col-md-8 pad0">
+											<div class="input-group">
+												<span class="input-group-addon">Skype.com/</span>
+												<input class="form-control" id="" type="text" placeholder="User Name">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6"> 
+							<h5>Create Contact</h5>
+							<div class="clear bottom15"></div>
+							
+							<div class="container-fluid pad0">
+								<div class="row">
+									<div class="form-group col-md-2">
+										<label for="title1">Title</label>
+										<select class="form-control" id="title">
+											<option>Mr.</option>
+											<option>Mrs.</option>
+											<option>Ms.</option>
+										</select>
+									</div>
+									<div class="form-group col-md-10">
+										<label for="exampleInputEmail1">First Name</label>
+										<input class="form-control" id="tourName" type="text" placeholder="First Name">
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col-md-10">
+										<label for="exampleInputEmail1">Last Name</label>
+										<input class="form-control" id="tourName" type="text" placeholder="Last Name">
+									</div>
+									<div class="form-group col-md-2">
+										<label for="title1">Suffix</label>
+										<select class="form-control" id="title1">
+											<option>Jr.</option>
+											<option>Sr.</option>
+										</select>
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col-md-6">
+										<label for="middleInit">Phone</label>
+										<input class="form-control" id="" type="text" placeholder="Phone">
+									</div>
+									<div class="form-group col-md-4">
+										<label for="title1">Type</label>
+										<select class="form-control" id="">
+											<option>Landline</option>
+											<option>Mobile</option>
+										</select>
+									</div>
+									<div class="form-group col-md-2">
+										<label for="title1">Ext.</label>
+										<input class="form-control" id="" type="text" placeholder="Ext">
+									</div>
+									<div class="col-md-12 bottom15">
+										<em><a href="" id="" class="green"><span class="glyphicon glyphicon-plus"></span> Additional Phone Number</a></em>
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col-md-6">
+										<label for="middleInit">Email Address</label>
+										<input class="form-control" id="" type="text" placeholder="Email Address">
+									</div>
+									<div class="col-md-12 bottom15">
+										<em><a href="" id="" class="green"><span class="glyphicon glyphicon-plus"></span> Additional Email Address</a></em>
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col-md-6">
+										<label for="middleInit">Job Title</label>
+										<input class="form-control" id="" type="text" placeholder="Job Title">
+									</div>
+									<div class="form-group col-md-6">
+										<label for="title1">OUI Department</label>
+										<select class="form-control" id="">
+											<option>Dept A</option>
+											<option>Dept B</option>
+										</select>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						
+					</div>	
+				</div>
+				<!-- -->
+				<div class="displayNone" id="accomModal-searchHotel">
+					<div class="row">
+						<div class="col-md-12 textCenter"> 
+							Hotel Search Results
+							
+						</div>
+					</div>	
+				</div>
+				<!-- -->
+				<div class="displayNone" id="accomModal-addHotel">
+					<div class="row">
+						<div class="col-md-12 textCenter"> 
+							Add Hotel
+							
+						</div>
+					</div>	
+				</div>
+				<!-- -->
+			</div>
+		  </div>
+		  <!--<div class="modal-footer">
+			<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+			<button type="button" class="btn btn-sm btn-success">Save changes</button>
+		  </div>-->
+		</div>
+	</div>
+</div>
+		
+		
+
 
 <script src="js/jquery.min.js"></script> 
 <script src="js/bootstrap.min.js"></script> 

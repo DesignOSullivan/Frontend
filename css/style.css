@@ -14,6 +14,8 @@ textarea{min-height: 150px;}
 a{color: #b50f46 /*#fd5c63*/; text-decoration: none;}
 a:hover, a:focus{color: #fd5c63}
 
+th{color: #54698d;}
+
 .container{max-width: 100%;}
 .container-border{ background: #fff; box-shadow: 0px 2px 4px 1px rgba(43, 59, 93, .29); padding: 30px; margin-bottom: 30px; border-radius: 3px;}
 
@@ -29,7 +31,6 @@ a:hover, a:focus{color: #fd5c63}
 .navbar-right{margin-right: 15px;}
 
 .fixedtop{ position: fixed; z-index: 100; background-color: #fff; padding-top: 10px; min-width: 100%;}
-
 
 .btn{box-shadow: 0px 1px 2px rgba(43, 59, 93, .29);}
 
@@ -131,6 +132,8 @@ a:hover, a:focus{color: #fd5c63}
 .bottom60{margin-bottom:60px;}
 .bottom45{margin-bottom:45px;}
 .bottom30{margin-bottom:30px;}
+.bottom25{margin-bottom:25px;}
+.bottom20{margin-bottom:20px;}
 .bottom15{margin-bottom:15px;}
 .bottom10{margin-bottom:10px;}
 .bottom5{margin-bottom:5px;}

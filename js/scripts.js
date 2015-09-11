@@ -125,6 +125,39 @@ $(document).ready(function() {
 		
 	});
 	
+/* ITIN MODAL STUFF */	
+	$('#accomModal2-link').click(function(){
+		  	$('#accomModal1').slideUp();
+			$('#accomModal2').removeClass('displayNone').slideDown();
+			return false;
+	});
+	
+	$('#accomModal-searchOperator-link').click(function(){
+		  	$('#accomModal2').slideUp();
+			$('#accomModal-searchOperator').removeClass('displayNone').slideDown();
+			return false;
+	});
+	
+	
+	$('#accomModal-searchHotel-link').click(function(){
+		  	$('#accomModal2').slideUp();
+			$('#accomModal-searchHotel').removeClass('displayNone').slideDown();
+			return false;
+	});
+	
+	$('#accomModal-addHotel-link').click(function(){
+		  	$('#accomModal2').slideUp();
+			$('#accomModal-addHotel').removeClass('displayNone').slideDown();
+			return false;
+	});
+	
+	
+	$('#accomModal-addOperator-link').click(function(){
+		  	$('#accomModal-searchOperator').slideUp();
+			$('#accomModal-addOperator').removeClass('displayNone').slideDown();
+			return false;
+	});
+	
 	
 	
 	

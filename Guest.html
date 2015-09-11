@@ -262,46 +262,35 @@
         </div>
 
 
-        <!-- Page Header -->
-        <div id="pageHeader">
-            <div class="container pad0 bottom0 shadow">
+        <!-- Tabs -->
+        <div id="tabs body-tabs">
+            
                 <div class="row">
                     <div class="col-md-12">
-
                         <div class="clear"></div>
                     </div>
                 </div>
                 <div class="clear bottom15">
                 </div>
-                <div class="row">
+            <div class="row">
                     <div class="col-md-12 center">
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" id="Passport-tab-link" class="active"><a href="#pasport-content" role="tab" data-toggle="tab">Passport</a></li>
-                            <li role="presentation" id="Air-tab-link"><a href="#air-content" role="tab" data-toggle="tab">Air</a></li>
-                            <li role="presentation" id="Health-tab-link"><a href="#health-content" role="tab" data-toggle="tab">Health</a></li>
-                            <li role="presentation" id="Emergency-tab-link"><a href="#post-tour-content" role="tab" data-toggle="tab">Emergency</a></li>
-                            <!--<li role="presentation"><a href="#add-tour-extension"><span class="glyphicon glyphicon-plus"></span></a></li>-->
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" data-target="#passport-content">Passport</a></li>
+                            <li><a data-toggle="tab" data-target="#air-content">Air</a></li>
+                            <li><a data-toggle="tab" data-target="#health-content">Health</a></li>
+                            <li><a data-toggle="tab" data-target="#emergency-content">Emergency</a></li>
                         </ul>
                     </div>
                 </div>
-            </div>
+          
         </div>
 
+  
 
-
-
-        <!-- Passport Tab -->
         <div class="tab-content">
-        <div id="passport-content" role="tabpanel" class="tab-pane fade in active" >
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <a name="passportTab"></a>
-                    <h3> Passport </h3>
-                </div>
-            </div>
-        </div>
-        <div class="container container-border">
+        <!-- Passport Tab -->
+            <div id="passport-content" class="tab-pane fade in active">
+                <div class="container container-border">
             <div class="row">
                 <div class="col-md-12">
                     <div class="container-fluid pad0">
@@ -419,20 +408,12 @@
                 </div>
             </div>
         </div>
-            </div>
+        </div>
         
 
         <!-- Health Tab -->
-            <div id="health-content" role="tabpanel" class="tab-pane fade in" >
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <a name="healthTab"></a>
-                    <h3> Health </h3>
-                </div>
-            </div>
-        </div>
-        <div class="container container-border">
+            <div id="health-content" class="tab-pane fade">
+                <div class="container container-border">
             <div class="row">
                 <div class="form-group col-md-6 col-xs-12">
                     <label for="hHealthConcerns">Health Concerns</label>
@@ -470,17 +451,11 @@
                 </div>
             </div>
         </div>
+            </div>
 
         <!-- Emergency Tab -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <a name="emergencyTab"></a>
-                    <h3> Emergency </h3>
-                </div>
-            </div>
-        </div>
-        <div class="container container-border">
+            <div id="emergency-content" class="tab-pane fade">
+                <div class="container container-border">
             <div class="row">
                 <div class="form-group col-md-1">
                     <label for="eTitle1">Title</label>
@@ -582,17 +557,11 @@
                 </div>
             </div>
         </div>
+            </div>
 
         <!-- Air Tab -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <a name="airTab"></a>
-                    <h3> Air </h3>
-                </div>
-            </div>
-        </div>
-        <div class="container container-border">
+        <div id="air-content" class="tab-pane fade">
+            <div class="container container-border">
             <div class="row">
                 <div class="col-md-12">
                     <label><b>Flyer Information</b></label>
@@ -667,6 +636,9 @@
             </div>
         </div>
         </div>
+        </div>
+        
+        
 
 
 
@@ -686,15 +658,15 @@
             <div id="footer">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-xs-2">
                             <button type="submit" class="btn btn-default btn-sm"> Cancel </button>
                         </div>
-                        <div class="col-md-8 textCenter">
+                        <div class="col-md-8 col-xs-8 textCenter">
 
                             <p><a href="#location">Remarks</a></p>
 
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-xs-2">
                             <button type="submit" class="btn btn-info btn-sm alignRight bottom0"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Submit </button>
                         </div>
                     </div>

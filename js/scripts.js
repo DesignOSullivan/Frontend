@@ -157,20 +157,24 @@ $(document).ready(function() {
 			return false;
 	});
 	
+	$('#accomModal-addCruise').slideUp('');
 	
 	$('#accomModal-addHotelCruise-trigger').change(function(){
 		if ($('#accomModal-addHotel').is(':visible')) {
 		  	$('#accomModal-addHotel').slideUp('');
 			$('#accomModal-addCruise').slideDown('');
+			
 		}
 		else {
-			$('#accomModal-addCruise').slideUp('');
+		  	$('#accomModal-addCruise').slideUp('');
 			$('#accomModal-addHotel').slideDown('');
-		}
+			
 		
-		if ($('#aaccomModal-addHotel').hasClass('displayNone')) {
-		  	$('#accomModal-addHotel').removeClass('displayNone');
 		}
+		if ($('#accomModal-addHotel').hasClass('displayNone')) {
+			$('#accomModal-addHotel').removeClass('displayNone');
+		}
+			
 		
 	});
 	

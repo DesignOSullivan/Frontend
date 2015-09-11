@@ -4,10 +4,9 @@ body{background: #f5f8fa; color: #333; font-size: 13px; padding-top: 60px; paddi
 h1, h2, h3, h4, h5, h6{color: #666;}
 h2{font-size: 24px;}
 h3{font-size: 21px;}
-h4{font-size: 17px; color: #999;}
+h4{font-size: 17px; color: #999; margin-top: 0;}
 .form-control, label {color: #54698d;}
 .form-control, .input-group-addon{font-size: 12px;color: #54698d;}
-
 .form-control:focus{border-color: #fd5c63;}
 
 textarea{min-height: 150px;}
@@ -24,6 +23,7 @@ th{color: #54698d;}
 .navbar-default{background: #001b3d;box-shadow: 0px 1px 4px rgba(43, 59, 93, .6); border-radius: 0;}
 .navbar-center {color: #fff; text-transform: uppercase;  margin-top: 19px; margin-bottom: 0px; text-align: center; position:fixed; width: 100%;}
 
+.header-tabs{margin-top: 100px;}
 .headerTextLeft{display: inline; margin-right: 5px;}
 .headerPipe{display: inline;}
 .headerTextRight{display: inline; margin-left: 5px;}

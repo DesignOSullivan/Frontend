@@ -40,7 +40,7 @@
     
     <!-- Page Header -->
 <div id="pageHeader">
-<div class="container pad0 bottom0 fixedtop shadow">
+<div class="container pad0 bottom0 fixedtop"> <!--shadow-->
 	<div class="row">
 		<div class="col-md-12">
 			
@@ -55,7 +55,7 @@
 				<li role="presentation" id="base-tour-tab-link" class="active"><a href="#base-tour-content" role="tab" data-toggle="tab">Base Tour</a></li>
 				<li role="presentation" id="pre-tour-tab-link" class="displayNone"><a href="#pre-tour-content" role="tab" data-toggle="tab">Pre-Tour Option</a></li>
 				<li role="presentation" id="post-tour-tab-link" class="displayNone"><a href="#post-tour-content" role="tab" data-toggle="tab">Post-Tour Extension</a></li>
-				<!--<li role="presentation"><a href="#add-tour-extension"><span class="glyphicon glyphicon-plus"></span></a></li>-->
+				<!--<li role="presentation"><a href="#add-tour-extension"><i class="fa fa-plus-circle"></i></a></li>-->
 			</ul>
 		</div>
 	</div>
@@ -134,19 +134,14 @@
 					<div class="row">
 						<div class="form-group col-md-6">
 							<label for="exampleInputEmail1">Product Manager</label>
-							<select class="form-control">
-								<option selected>Please Select...</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-							</select>
+							<input class="form-control" id="" type="text" placeholder="Product Manager">
 						</div>
 					</div>
 					<div class="row bottom15">
 						<div class="col-md-6">
 							<label>OUI World Region</label>
 							<select class="form-control">
+								<option>Please Select...</option>
 								<option>Europe</option>
 								<option>Africa & Middle East</option>
 								<option>Americas</option>
@@ -160,6 +155,7 @@
 							<div class="locationCountry">
 								<label>Country </label>
 								<select class="form-control" id="locationCountry1">
+									<option>Please Select...</option>
 									<option>France</option>
 									<option>Greece</option>
 									<option>Germany</option>
@@ -171,7 +167,7 @@
 					</div>
 					<div class="row">
 						<div class="col-md-6 locationCountryHolder">
-							<a href="" id="addLocationCountry" class="green"><span class="glyphicon glyphicon-plus"></span> <em>Add Additional Country</em></a>
+							<a href="" id="addLocationCountry" class="green"><i class="fa fa-plus-circle"></i> <em>Additional Country</em></a>
 						</div>
 					</div>
 				</div>
@@ -270,7 +266,7 @@
 	<div class="container container-border">
 		<div class="row">
 			<div class="col-md-6 borderRight">
-				<label for=""><h4>Booking Rules</h4></label>
+				<label for=""></label><h4>Booking Rules</h4></label>
                 <div class="pad15">
 					<div class="form-group row">
 						<div class="col-md-6">
@@ -299,6 +295,7 @@
 					<div class="form-group row">
 						<div class="col-md-6">
 							<select class="form-control">
+							   <option>Please Select...</option>
 							   <option>Confirmed</option>
 							   <option>No Bookings Allowed</option>
 							</select>
@@ -314,6 +311,7 @@
 					<div class="form-group row">
 						<div class="col-md-6">
 							<select class="form-control">
+							   <option>Please Select...</option>
 							   <option>Confirmed</option>
 							   <option>No Bookings Allowed</option>
 							</select>
@@ -329,6 +327,7 @@
 					<div class="form-group row">
 						<div class="col-md-6">
 							<select class="form-control">
+							   <option>Please Select...</option>
 							   <option>Confirmed</option>
 							   <option>No Bookings Allowed</option>
 							</select>
@@ -344,7 +343,7 @@
 				</div>
             </div>
             <div class="col-md-6">
-				<label for=""><h4>Cancellation Rules</h4></label>
+				<label for=""></label><h4>Cancellation Rules</h4></label>
 				<div class="pad15">
 					<div class="form-group row">
 						<div class="col-md-6">
@@ -607,7 +606,7 @@
 			<div class="col-md-12 center">
 				<ul class="nav nav-tabs alt-color" role="tablist">
 					<li role="presentation" id="" class="active"><a href="#base-tour-content" role="tab" data-toggle="tab">Pattern A</a></li>
-					<li role="presentation"><a href="#add-pattern-itinerary" class="green"><span class="glyphicon glyphicon-plus"></span></a></li>
+					<li role="presentation"><a href="#add-pattern-itinerary" class="green"><i class="fa fa-plus-circle"></i></a></li>
 				</ul>
 			</div>
 		</div>
@@ -656,7 +655,7 @@
 					</tr>
 					<tr>
 						<td colspan="7">
-							<a href="" class="textCenter green"><span class="glyphicon glyphicon-plus"></span> <em>Add Additional Leg</em></a>
+							<a href="" class="textCenter green"><i class="fa fa-plus-circle"></i> <em>Additional Leg</em></a>
 						</td>
 					</tr>
 				</table>
@@ -730,7 +729,7 @@
 					</tr>
 					<tr>
 					<td colspan="5">
-						<a href="" class="textCenter green"><span class="glyphicon glyphicon-plus"></span> <em>Add Additional Flight</em></a>
+						<a href="" class="textCenter green"><i class="fa fa-plus-circle"></i> <em>Additional Flight</em></a>
 					</td>
 					</tr>
 				</table>
@@ -748,7 +747,7 @@
 						<option>5</option>
 					</select>
 				</div>
-				<a href="#add-pattern-itinerary" class="green"><span class="glyphicon glyphicon-plus"></span> <em>Add Additional Airline</em></a>
+				<a href="#add-pattern-itinerary" class="green"><i class="fa fa-plus-circle"></i> <em>Additional Airline</em></a>
 			</div>
 			<div class="clear"></div>
 		</div>
@@ -794,7 +793,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<a href="#add-tour-director" class="green"><span class="glyphicon glyphicon-plus"></span> <em>Add Additional Tour Director</em></a>
+				<a href="#add-tour-director" class="green"><i class="fa fa-plus-circle"></i> <em>Additional Tour Director</em></a>
 			</div>
 		</div>
 	</div>
@@ -1285,7 +1284,7 @@
 				<a href="" data-toggle="modal" data-target="#myModal" class="green"><i class="fa fa-map-marker"></i> Add States to Zone</a>
 			</div>
 			<div class="col-md-12">
-				<a href="" class="green"><span class="glyphicon glyphicon-plus"></span> <em>Add Additional Zone</em></a>
+				<a href="" class="green"><i class="fa fa-plus-circle"></i> <em>Add Additional Zone</em></a>
 			</div>
 		</div>
 		
@@ -1423,7 +1422,7 @@
 					<div class="row">
 						<div class="col-md-2"></div>
 						<div class="col-md-4 textCenter"> 
-							<a href="" id="accomModal2-link" class="green"><span class="glyphicon glyphicon-plus"></span> Add New Accommodation</a>
+							<a href="" id="accomModal2-link" class="green"><i class="fa fa-plus-circle"></i> Add New Accommodation</a>
 						</div>
 						<div class="col-md-4 textCenter"> 
 							<a href="" data-dismiss="modal"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search Again</a>
@@ -1472,7 +1471,7 @@
 							</table>
 							<div class="clear bottom15"></div>
 							<div class="textCenter">
-								<a href="" id="accomModal-addOperator-link" class="green"><span class="glyphicon glyphicon-plus"></span> Add New Ground Operator</a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="" id="accomModal-addOperator-link" class="green"><i class="fa fa-plus-circle"></i> Add New Ground Operator</a>&nbsp;&nbsp;&nbsp;&nbsp;
 								<a href=""><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search Again (not functional)</a>
 							</div>
 						</div>
@@ -1493,7 +1492,7 @@
 									</div>
 									<div class="form-group col-md-12">
 										<label for="">Attention</label>
-										<input class="form-control" id="" type="text" placeholder="Attention (not required)">
+										<input class="form-control" id="" type="text" placeholder="Attention (Optional)">
 									</div>
 									
 									<div class="form-group col-md-6">
@@ -1502,7 +1501,7 @@
 									</div>
 									<div class="form-group col-md-6">
 										<label for="">Address 2</label>
-										<input class="form-control" id="" type="text" placeholder="Address cont'd (not required)">
+										<input class="form-control" id="" type="text" placeholder="Address cont'd (Optional)">
 									</div>
 									
 									<div class="form-group col-md-4">
@@ -1515,7 +1514,7 @@
 									</div>
 									<div class="form-group col-md-6">
 										<label for="">State / Province</label>
-										<input class="form-control" id="" type="text" placeholder="State / Province (not required)">
+										<input class="form-control" id="" type="text" placeholder="State / Province (Optional)">
 									</div>
 									<div class="form-group col-md-6">
 										<label for="">Country</label>
@@ -1532,7 +1531,7 @@
 											</div>  
 											<div class="clear bottom15"></div>
 										</div>
-										<em><a href="" id="" class="green"><span class="glyphicon glyphicon-plus"></span> Additional Address</a></em>
+										<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Additional Address</a></em>
 									</div>
 								</div>
 								<div class="row">
@@ -1552,7 +1551,7 @@
 										<input class="form-control" id="" type="text" placeholder="Ext">
 									</div>
 									<div class="col-md-12 bottom15">
-										<em><a href="" id="" class="green"><span class="glyphicon glyphicon-plus"></span> Additional Phone Number</a></em>
+										<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Additional Phone Number</a></em>
 									</div>
 								</div>
 								<div class="row">
@@ -1561,7 +1560,7 @@
 										<input class="form-control" id="" type="text" placeholder="Email Address">
 									</div>
 									<div class="col-md-12 bottom15">
-										<em><a href="" id="" class="green"><span class="glyphicon glyphicon-plus"></span> Additional Email Address</a></em>
+										<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Additional Email Address</a></em>
 									</div>
 								</div>
 								
@@ -1570,7 +1569,7 @@
 										<div class="form-group col-md-8 pad0">
 											<div class="input-group">
 												<span class="input-group-addon">Skype.com/</span>
-												<input class="form-control" id="" type="text" placeholder="User Name (not required)">
+												<input class="form-control" id="" type="text" placeholder="User Name (Optional)">
 											</div>
 										</div>
 									</div>
@@ -1626,7 +1625,7 @@
 										<input class="form-control" id="" type="text" placeholder="Ext">
 									</div>
 									<div class="col-md-12 bottom15">
-										<em><a href="" id="" class="green"><span class="glyphicon glyphicon-plus"></span> Additional Phone Number</a></em>
+										<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Additional Phone Number</a></em>
 									</div>
 								</div>
 								<div class="row">
@@ -1635,7 +1634,7 @@
 										<input class="form-control" id="" type="text" placeholder="Email Address">
 									</div>
 									<div class="col-md-12 bottom15">
-										<em><a href="" id="" class="green"><span class="glyphicon glyphicon-plus"></span> Additional Email Address</a></em>
+										<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Additional Email Address</a></em>
 									</div>
 								</div>
 								<div class="row">
@@ -1696,7 +1695,7 @@
 							</table>
 							<div class="clear bottom15"></div>
 							<div class="textCenter">
-								<a href="" id="accomModal-addOperator-link" class="green"><span class="glyphicon glyphicon-plus"></span> Add New Accommodation</a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="" id="accomModal-addOperator-link" class="green"><i class="fa fa-plus-circle"></i> Add New Accommodation</a>&nbsp;&nbsp;&nbsp;&nbsp;
 								<a href=""><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search Again (not functional)</a>
 							</div>
 						</div>
@@ -1711,7 +1710,7 @@
 					</div>
 					<div class="row bottom30">
 						<div class="col-md-2">
-							<label for="title1" style="margin-top: 5px;">Accommodation Type: </label>
+							<label for="title1" style="margin-top: 5px;">Accommodation Type </label>
 						</div>
 						<div class="col-md-4">
 							<select class="form-control" id="accomModal-addHotelCruise-trigger">
@@ -1752,7 +1751,7 @@
 										</div>
 										<div class="form-group col-md-6">
 											<label for="">Address 2</label>
-											<input class="form-control" id="" type="text" placeholder="Address cont'd (not required)">
+											<input class="form-control" id="" type="text" placeholder="Address cont'd (Optional)">
 										</div>
 										
 										<div class="form-group col-md-4">
@@ -1765,14 +1764,14 @@
 										</div>
 										<div class="form-group col-md-6">
 											<label for="">State / Province</label>
-											<input class="form-control" id="" type="text" placeholder="State / Province (not required)">
+											<input class="form-control" id="" type="text" placeholder="State / Province (Optional)">
 										</div>
 										<div class="form-group col-md-6">
 											<label for="">Country</label>
 											<input class="form-control" id="" type="text" placeholder="Country">
 										</div>
 										<div class="col-md-12 bottom15">
-											<em><a href="" id="" class="green"><span class="glyphicon glyphicon-plus"></span> Additional Address</a></em>
+											<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Additional Address</a></em>
 										</div>
 									</div>
 									<div class="row">
@@ -1790,7 +1789,7 @@
 									</div>
 									<div class="row">
 										<div class="col-md-12 bottom15">
-											<em><a href="" id="" class="green"><span class="glyphicon glyphicon-plus"></span> Additional Phone Number</a></em>
+											<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Additional Phone Number</a></em>
 										</div>
 									</div>
 									<div class="row">
@@ -1799,7 +1798,7 @@
 											<input class="form-control" id="" type="text" placeholder="Email Address">
 										</div>
 										<div class="col-md-12 bottom15">
-											<em><a href="" id="" class="green"><span class="glyphicon glyphicon-plus"></span> Additional Email Address</a></em>
+											<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Additional Email Address</a></em>
 										</div>
 									</div>
 									
@@ -1807,11 +1806,7 @@
 										<div class="col-md-12">
 											<div class="form-group col-md-8 pad0">
 												<label>Website</label>
-												<div class="clear"></div>
-												<div class="input-group">
-													<span class="input-group-addon">http://</span>
-													<input class="form-control" id="" type="text" placeholder="Website">
-												</div>
+												<input class="form-control" id="" type="text" placeholder="http://www.example.com">
 											</div>
 										</div>
 									</div>
@@ -1858,7 +1853,7 @@
 									<div class="row">
 										<div class="col-md-12 form-group">
 											<label for="">Cabin Description</label>
-											<textarea class="form-control" id="" placeholder="Description"></textarea>
+											<textarea class="form-control" id="" placeholder="Description" style="height: 100px;"></textarea>
 										</div>
 									</div>
 									
@@ -1890,7 +1885,7 @@
 										</div>
 										<div class="form-group col-md-6">
 											<label for="">Address 2</label>
-											<input class="form-control" id="" type="text" placeholder="Address cont'd (not required)">
+											<input class="form-control" id="" type="text" placeholder="Address cont'd (Optional)">
 										</div>
 										
 										<div class="form-group col-md-4">
@@ -1903,14 +1898,14 @@
 										</div>
 										<div class="form-group col-md-6">
 											<label for="">State / Province</label>
-											<input class="form-control" id="" type="text" placeholder="State / Province (not required)">
+											<input class="form-control" id="" type="text" placeholder="State / Province (Optional)">
 										</div>
 										<div class="form-group col-md-6">
 											<label for="">Country</label>
 											<input class="form-control" id="" type="text" placeholder="Country">
 										</div>
 										<div class="col-md-12 bottom15">
-											<em><a href="" id="" class="green"><span class="glyphicon glyphicon-plus"></span> Additional Address</a></em>
+											<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Additional Address</a></em>
 										</div>
 									</div>
 									<div class="row">
@@ -1928,7 +1923,7 @@
 									</div>
 									<div class="row">
 										<div class="col-md-12 bottom15">
-											<em><a href="" id="" class="green"><span class="glyphicon glyphicon-plus"></span> Additional Phone Number</a></em>
+											<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Additional Phone Number</a></em>
 										</div>
 									</div>
 									<div class="row">
@@ -1937,7 +1932,7 @@
 											<input class="form-control" id="" type="text" placeholder="Email Address">
 										</div>
 										<div class="col-md-12 bottom15">
-											<em><a href="" id="" class="green"><span class="glyphicon glyphicon-plus"></span> Additional Email Address</a></em>
+											<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Additional Email Address</a></em>
 										</div>
 									</div>
 									
@@ -1945,11 +1940,7 @@
 										<div class="col-md-12">
 											<div class="form-group col-md-8 pad0">
 												<label>Website</label>
-												<div class="clear"></div>
-												<div class="input-group">
-													<span class="input-group-addon">http://</span>
-													<input class="form-control" id="" type="text" placeholder="Website">
-												</div>
+												<input class="form-control" id="" type="text" placeholder="http://www.example.com">
 											</div>
 										</div>
 									</div>
@@ -1997,13 +1988,17 @@
 										
 										</div>
 										<div class="col-md-4 form-group">
-											<label>Dates</label>
+											<label>Start Date</label>
+											<input class="form-control" id="" type="text" placeholder="MM/DD/YYYY">
+										</div>
+										<div class="col-md-4 form-group">
+											<label>End Date</label>
 											<input class="form-control" id="" type="text" placeholder="MM/DD/YYYY">
 										</div>
 									</div>
 									<div class="row">
 										<div class="col-md-12 bottom15">
-											<em><a href="" id="" class="green"><span class="glyphicon glyphicon-plus"></span> Additional Rate</a></em>
+											<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Additional Rate</a></em>
 										</div>
 									</div>
 									<div class="row">

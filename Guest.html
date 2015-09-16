@@ -70,7 +70,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <a name="guestNameSection"></a>
+                    <a name="guestName"></a>
                     <h3> Guest Name </h3>
                 </div>
             </div>
@@ -181,7 +181,7 @@
                 <div class="row">
                     <div class="form-group col-md-12">
                         <div class="clear bottom10"></div>
-                        <a href="#add-tour-address" class="green"><i class="fa fa-plus"></i> Add Address</a>
+                        <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add Additional Address</i></a>
                     </div>
                 </div>
             </div>
@@ -219,7 +219,7 @@
                             </div>
                             <div class="col-md-1 col-xs-1">
                                 <div class="clear bottom30"></div>
-                                <a href="" id="addLocationCountry" class="green addPlus"><i class="fa fa-plus"></i></a>
+                                <a href="" id="addLocationCountry" class="green addPlus"><i class="fa fa-plus-circle"></i></a>
                             </div>
                         </div>
                         <div class="row">
@@ -229,7 +229,7 @@
                             </div>
                             <div class="col-md-1 col-xs-1">
                                 <div class="clear bottom30"></div>
-                                <a href="" id="addLocationCountry" class="green addPlus"><i class="fa fa-plus"></i></a>
+                                <a href="" id="addLocationCountry" class="green addPlus"><i class="fa fa-plus-circle"></i></a>
                             </div>
                         </div>
                         <div class="row">
@@ -278,12 +278,12 @@
         </div>
 
 
-        <!-- History -->
+        <!-- Reservations -->
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <a name="history"></a>
-                    <h3>History</h3>
+                    <a name="reservations"></a>
+                    <h3>Reservations</h3>
                 </div>
             </div>
         </div>
@@ -291,7 +291,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <label>
-                        <h4>Upcoming Reservations</h4></label>
+                        <h4>Upcoming</h4></label>
                 </div>
             </div>
             <div class="pad15">
@@ -307,11 +307,10 @@
                     </div>
                 </div>
             </div>
-
             <div class="row">
                 <div class="col-md-12">
                     <label>
-                        <h4>Past Reservations</h4></label>
+                        <h4>Past</h4></label>
                 </div>
             </div>
             <div class="pad15">
@@ -344,47 +343,81 @@
                                 </div>
                                 <div class="col-md-6 col-xs-4 form-group pad0">
                                     <div class="clear bottom25"></div>
-                                    <label><input type="checkbox" id="email" value="" class=""><span class="pad5">Mail</span></label>
+                                    <label>
+                                        <input type="checkbox" id="email" value="" class=""><span class="pad5">Mail</span></label>
                                     <label><span class="pad5"><input type="checkbox" id="email" value="" class=""></span>Email</label>
                                 </div>
                             </div>
                             <div class="row borderBottom">
                                 <div class="col-md-6 form-group">
-                                    <label><input type="checkbox" id="email" value="" class=""><span class="pad5">Airline Itinerary – Preliminary</span></label><br>
-                                    <label><input type="checkbox" id="email" value="" class=""><span class="pad5">Airline Itinerary – Final</span></label><br>
-                                    <label><input type="checkbox" id="email" value="" class=""><span class="pad5"> Day by Day</span></label><br>
-                                    <label><input type="checkbox" id="email" value="" class=""><span class="pad5">Final Travel Documents (Replacement)</span></label><br>
-                                    <label><input type="checkbox" id="email" value="" class=""><span class="pad5">General Information</span></label><br>
-                                <label><input type="checkbox" id="email" value="" class=""><span class="pad5">Guest Information Form</span></label><br>
-                            <label><input type="checkbox" id="email" value="" class=""><span class="pad5"> Insurance Brochure</span></label><br>
-                        <label><input type="checkbox" id="email" value="" class=""><span class="pad5">Invoice</span></label><br>
-                                    <label><input type="checkbox" id="email" value="" class=""><span class="pad5">Luggage Tags</span></label>
+                                    <label>
+                                        <input type="checkbox" id="email" value="" class=""><span class="pad5">Airline Itinerary – Preliminary</span></label>
+                                    <br>
+                                    <label>
+                                        <input type="checkbox" id="email" value="" class=""><span class="pad5">Airline Itinerary – Final</span></label>
+                                    <br>
+                                    <label>
+                                        <input type="checkbox" id="email" value="" class=""><span class="pad5"> Day by Day</span></label>
+                                    <br>
+                                    <label>
+                                        <input type="checkbox" id="email" value="" class=""><span class="pad5">Final Travel Documents (Replacement)</span></label>
+                                    <br>
+                                    <label>
+                                        <input type="checkbox" id="email" value="" class=""><span class="pad5">General Information</span></label>
+                                    <br>
+                                    <label>
+                                        <input type="checkbox" id="email" value="" class=""><span class="pad5">Guest Information Form</span></label>
+                                    <br>
+                                    <label>
+                                        <input type="checkbox" id="email" value="" class=""><span class="pad5"> Insurance Brochure</span></label>
+                                    <br>
+                                    <label>
+                                        <input type="checkbox" id="email" value="" class=""><span class="pad5">Invoice</span></label>
+                                    <br>
+                                    <label>
+                                        <input type="checkbox" id="email" value="" class=""><span class="pad5">Luggage Tags</span></label>
                                 </div>
-                    
-                    
-                    
-                    
-                    
+
+
+
+
+
                                 <div class="col-md-6 form-group">
-                                    <label><input type="checkbox" id="email" value="" class=""><span class="pad5"> Name Badge</span></label><br>
-                                    <label><input type="checkbox" id="email" value="" class=""><span class="pad5">  Passport Verification Form</span></label><br>
-                                    <label><input type="checkbox" id="email" value="" class=""><span class="pad5">Practical Travel Tips</span></label><br>
-                                    <label><input type="checkbox" id="email" value="" class=""><span class="pad5">Reading List</span></label><br>
-                    <label><input type="checkbox" id="email" value="" class=""><span class="pad5">Terms and Conditions</span></label><br>
-                <label><input type="checkbox" id="email" value="" class=""><span class="pad5">Tour Member Evaluation Form</span></label><br>
-            <label><input type="checkbox" id="email" value="" class=""><span class="pad5">Tour Member List</span></label><br>
-            <label><input type="checkbox" id="email" value="" class=""><span class="pad5">Visa Information</span></label>
-                                </div>      
+                                    <label>
+                                        <input type="checkbox" id="email" value="" class=""><span class="pad5"> Name Badge</span></label>
+                                    <br>
+                                    <label>
+                                        <input type="checkbox" id="email" value="" class=""><span class="pad5">  Passport Verification Form</span></label>
+                                    <br>
+                                    <label>
+                                        <input type="checkbox" id="email" value="" class=""><span class="pad5">Practical Travel Tips</span></label>
+                                    <br>
+                                    <label>
+                                        <input type="checkbox" id="email" value="" class=""><span class="pad5">Reading List</span></label>
+                                    <br>
+                                    <label>
+                                        <input type="checkbox" id="email" value="" class=""><span class="pad5">Terms and Conditions</span></label>
+                                    <br>
+                                    <label>
+                                        <input type="checkbox" id="email" value="" class=""><span class="pad5">Tour Member Evaluation Form</span></label>
+                                    <br>
+                                    <label>
+                                        <input type="checkbox" id="email" value="" class=""><span class="pad5">Tour Member List</span></label>
+                                    <br>
+                                    <label>
+                                        <input type="checkbox" id="email" value="" class=""><span class="pad5">Visa Information</span></label>
+                                </div>
                             </div>
-                            
-                            
+
+
                             <div class="row">
                                 <div class="col-md-6 col-xs-8">
                                     <h3>Catalog</h3>
                                 </div>
                                 <div class="col-md-6 col-xs-4 form-group pad0">
                                     <div class="clear bottom25"></div>
-                                    <label><input type="checkbox" id="email" value="" class=""><span class="pad5">Mail</span></label>
+                                    <label>
+                                        <input type="checkbox" id="email" value="" class=""><span class="pad5">Mail</span></label>
                                     <label><span class="pad5"><input type="checkbox" id="email" value="" class=""></span>Email</label>
                                 </div>
                             </div>
@@ -414,7 +447,7 @@
 
 
         <!-- Tabs -->
-        <div id="tabs body-tabs">
+        <div id="guestTabs">
             <div class="container pad0">
                 <div class="row">
                     <div class="col-md-12">
@@ -432,15 +465,15 @@
                             <li><a data-toggle="tab" data-target="#health-content">Health</a></li>
                             <li><a data-toggle="tab" data-target="#emergency-content">Emergency</a></li>
                             <li><a data-toggle="tab" data-target="#sig-content">SIG</a></li>
+                            <li><a data-toggle="tab" data-target="#travel-credit-content">Traveler Credit</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
 
-
-
-        <div class="tab-content container container-border">
+        <!-- Tab Content-->
+        <div id="guestTabContent" class="tab-content container container-border">
 
             <!-- Passport Tab -->
             <div id="passport-content" class="tab-pane fade in active">
@@ -558,7 +591,7 @@
                     <div class="row">
                         <div class="form-group col-md-12">
                             <div class="clear bottom10"></div>
-                            <a href="#add-tour-address" class="green"><i class="fa fa-plus"></i> Add Passport</a>
+                            <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add Additional Passport</i></a>
                         </div>
                     </div>
                 </div>
@@ -674,7 +707,7 @@
                         </div>
                         <div class="col-md-1 col-xs-1">
                             <div class="clear bottom30"></div>
-                            <a href="" id="addLocationCountry" class="green addPlus"><i class="fa fa-plus"></i></a>
+                            <a href="" id="addLocationCountry" class="green addPlus"><i class="fa fa-plus-circle"></i></a>
                         </div>
                     </div>
                     <div class="row">
@@ -684,7 +717,7 @@
                         </div>
                         <div class="col-md-1 col-xs-1">
                             <div class="clear bottom30"></div>
-                            <a href="" id="addLocationCountry" class="green addPlus"><i class="fa fa-plus"></i></a>
+                            <a href="" id="addLocationCountry" class="green addPlus"><i class="fa fa-plus-circle"></i></a>
                         </div>
                     </div>
                     <div class="row">
@@ -704,7 +737,7 @@
                                 <div class="row">
                                     <div class="form-group col-md-12">
                                         <div class="clear bottom10"></div>
-                                        <a href="#add-tour-address" class="green"><i class="fa fa-plus"></i> Add Contact</a>
+                                        <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add Additional Contact</i></a>
                                     </div>
                                 </div>
                             </div>
@@ -851,8 +884,104 @@
                     </div>
                 </div>
             </div>
-        </div>
 
+            <!-- Travel Credit -->
+            <div id="travel-credit-content" class="tab-pane fade">
+                <div class="container pad0">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4>Past Traveler Credit</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="container pad15">
+                            <div class="row">
+                                <div class="form-group col-md-1">
+                                    <label for="tPastTravelerCredit">Credit</label>
+                                    <h4 id="tPastTravelerCredit">$0</h4>
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="tCompletedDirectTrips">Completed Direct Trips</label>
+                                    <h4 id="tCompletedDirectTrips">0</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="clear bottom15 borderBottom"></div>
+                    </div>
+                </div>
+                <div class="container pad0">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4>Future Credit</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="container pad15">
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label for="tReservation">Reservation</label>
+                                        <select class="form-control" id="treservation">
+                                            <option>Select...</option>
+                                            <option>Reservation 1</option>
+                                            <option>Reservation 2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-2">
+                                        <label for="tAmount">Amount</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">$</span>
+                                            <input class="form-control" id="tAmount" type="text" placeholder="0">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="tIssueDate">Issue Date</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-calendar fa-lg"></i></span>
+                                            <input class="form-control" id="tIssueDate" type="text" placeholder="Issue Date">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="tExpirationDate">Expiration Date</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-calendar fa-lg"></i></span>
+                                            <input class="form-control" id="tExpirationDate" type="text" placeholder="Expiration Date">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="tIssuer">Issuer</label>
+                                        <select id="tIssuer" class="form-control">
+                                            <option>Select...</option>
+                                            <option>Elizabeth Bougie</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="tReason">Reason</label>
+                                        <select id="tReason" class="form-control">
+                                            <option>Select...</option>
+                                            <option>Good Will Credit</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-12">
+                                        <div class="clear bottom10"></div>
+                                        <a href="#add-future-credit" class="green"><i class="fa fa-plus-circle"></i> <i>Add Additional Future Credit</i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- /guestTabContent-->
 
 
 
@@ -900,18 +1029,11 @@
         </a>
         <div class="clear"></div>
         <ul class="noBull displayNone" id="flyoutList">
-            <li><a href="#tourinfoSection">Tour Information</a></li>
-            <li><a href="#locationSection">Location</a></li>
-            <li><a href="#inventorySection">Inventory Rules</a></li>
-            <li><a href="#bookingSection">Booking & Cancellation</a></li>
-            <li><a href="#auxiliaryrulesSection">Auxiliary Rules</a></li>
-            <li><a href="#flightinfoSection">Flight Information</a></li>
-            <li><a href="#itinerarySection">Itinerary</a></li>
-            <li><a href="#aircomponentSection">Internal Air Component</a></li>
-            <li><a href="#tourdirectorSection">Tour Director</a></li>
-            <li><a href="#tourpricingSection">Tour Pricing</a></li>
-            <li><a href="#catalogcitiesSection">Catalog Cities</a></li>
-            <li><a href="#zonefaresSection">Zone Fares</a></li>
+            <li><a href="#guestName">Guest Name</a></li>
+            <li><a href="#address">Address</a></li>
+            <li><a href="#contactInformation">Contact Information</a></li>
+            <li><a href="#history">History</a></li>
+            <li><a href="#guestTabs"> Guest Tabs</a></li>
         </ul>
     </div>
 

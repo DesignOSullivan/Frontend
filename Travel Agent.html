@@ -21,9 +21,9 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <div class="navbar-center">
-                <h4 class="headerTextLeft">G-543323 |</h4>
+                <h4 class="headerTextLeft">A-543323 |</h4>
                 <h4 class="headerTextLeft" id="firstNameHeader">New</h4>
-                <h4 class="headerTextRight" id="lastNameHeader">Guest</h4>
+                <h4 class="headerTextRight" id="lastNameHeader">Agent</h4>
             </div>
             <ul class="nav navbar-nav navbar-right">
                 <li> <img src="http://lorempixel.com/output/people-q-c-100-100-9.jpg" class="navimg"> </li>
@@ -64,8 +64,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <a name="guestName"></a>
-                    <h3> Guest Name </h3>
+                    <a name="agentName"></a>
+                    <h3> Agent Name </h3>
                 </div>
             </div>
         </div>
@@ -83,10 +83,6 @@
                     <label for="firstName">First Name</label>
                     <input class="form-control" id="firstName" type="text" placeholder="First Name">
                 </div>
-                <div class="form-group col-md-1">
-                    <label for="middleInit">MI</label>
-                    <input class="form-control" id="middleInit" type="text" placeholder="MI">
-                </div>
                 <div class="form-group col-md-3">
                     <label for="lastName">Last Name</label>
                     <input class="form-control" id="lastName" type="text" placeholder="Last Name">
@@ -101,12 +97,6 @@
                         <option>IV</option>
                         <option>V</option>
                     </select>
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-md-5">
-                    <label for="nickname">Nickname</label>
-                    <input class="form-control" id="nickname" type="text" placeholder="Nickname">
                 </div>
             </div>
         </div>
@@ -167,7 +157,7 @@
                         <label for="mailPromoToggle"></label>
                     </div>
                     <div class="switch-label">
-                        <label for="mailPromoToggle">Mail Promotions</label>
+                        <label for="mailPromoToggle">Accept Mail Promotions</label>
                     </div>
                 </div>
             </div>
@@ -191,80 +181,44 @@
         </div>
         <div class="container container-border">
             <div class="row">
-                <div class="col-md-7">
-                    <div class="container pad0">
-                        <div class="row">
-                            <div class="form-group col-md-7 col-xs-8">
-                                <label for="phoneNumber">Phone Number</label>
-                                <input class="form-control" id="phoneNumber" type="text" placeholder="Phone Number">
-                            </div>
-                            <div class="form-group col-md-4 col-xs-4">
-                                <label for="phoneType">Type</label>
-                                <select class="form-control" id="phoneType">
-                                    <option>Home</option>
-                                    <option>Moblie</option>
-                                    <option>Work</option>
-                                    <option>Fax</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-12">
-                                <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Phone Number</i></a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-7">
-                                <label for="emailInput">Email Address</label>
-                                <input class="form-control" id="emailInput" type="text" placeholder="Email Address">
-                            </div>
-
-                            <div class="form-group col-md-4">
-                                <div class="clear bottom25"></div>
-                                <div class="switch">
-                                    <input id="email-promo-toggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
-                                    <label for="email-promo-toggle"></label>
-                                </div>
-                                <div class="switch-label">
-                                    <label for="email-promo-toggle">Email Promotions</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-12">
-                                <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add an Email Address</i></a>
-                            </div>
-                        </div>
+                <div class="form-group col-md-4 col-xs-8">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input class="form-control" id="phoneNumber" type="text" placeholder="Phone Number">
+                </div>
+                <div class="form-group col-md-3 col-xs-3">
+                    <label for="phoneType">Type</label>
+                    <select class="form-control" id="phoneType">
+                        <option>Home</option>
+                        <option>Moblie</option>
+                        <option>Work</option>
+                        <option>Fax</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Phone Number</i></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label for="emailInput">Email Address</label>
+                    <input class="form-control" id="emailInput" type="text" placeholder="Email Address">
+                </div>
+                <div class="form-group col-md-3">
+                    <div class="clear bottom25"></div>
+                    <div class="switch">
+                        <input id="email-promo-toggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                        <label for="email-promo-toggle"></label>
+                    </div>
+                    <div class="switch-label">
+                        <label for="email-promo-toggle">Email Promotions</label>
                     </div>
                 </div>
-                <div class="col-md-5">
-                    <div class="container pad0">
-                        <div class="row">
-                            <div class="form-group col-md-12">
-                                <label for="social">Social</label>
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-facebook-f fa-lg"></i></span>
-                                    <input class="form-control" id="facebook" type="text" placeholder="username">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-12">
-                                <div class="input-group noLabel">
-                                    <span class="input-group-addon"><i class="fa fa-twitter fa-lg"></i></span>
-                                    <input class="form-control" id="exampleInputPassword1" type="text" placeholder="username">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-12">
-                                <div class="input-group noLabel">
-                                    <span class="input-group-addon"><i class="fa fa-instagram fa-lg"></i></span>
-                                    <input class="form-control" id="instagram" type="text" placeholder="username">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add an Email Address</i></a>
                 </div>
             </div>
         </div>
@@ -310,21 +264,22 @@
             </div>
             <div class="pad15">
                 <div class="row">
-                    <div class="col-md-3">
-                        <label>Tour</label>
+                    <div class="form-group col-md-3">
+                        <b>Mr. Daniel O'Sullivan</b>
                         <br>
+                        <b>Mrs. Catherine O'Sullivan</b>
+                    </div>
+                    <div class="form-group col-md-3">
                         <b>GRV | Classic Greek Isles</b>
                         <p>12-Oct to 23-Oct-2015
                             <br>(30 days out)</p>
                     </div>
-                    <div class="col-md-2">
-                        <label>Status</label>
-                        <br>
+                    <div class="form-group col-md-3">
+                        <div class="clear bottom30"></div>
                         <b>Confirmed</b>
                     </div>
-                </div>
-                <div class="row">
                     <div class="form-group col-md-3">
+                        <div class="clear bottom30"></div>
                         <a href="" data-toggle="modal" data-target="#myModalInfo" class="green"><i class="fa fa-info-circle"></i> &nbsp;Request Information</a>
                     </div>
                 </div>
@@ -337,20 +292,13 @@
             </div>
             <div class="pad15">
                 <div class="row">
-                    <div class="col-md-3">
-                        <label>Tour</label>
-                        <br>
-                        <b>GRV | Classic Greek Isles</b>
-                        <p>12-Feb to 23-Feb-2014</p>
-                    </div>
-                    <div class="col-md-3">
-                        <label>Satus</label>
-                        <br>
-                        <b>Confirmed</b>
-                    </div>
-                </div>
-                <div class="row">
                     <div class="form-group col-md-3">
+                        <b>GRV | Classic Greek Isles</b>
+                        <p>12-Oct to 23-Oct-2015
+                            <br>(30 days out)</p>
+                    </div>
+                    <div class="form-group col-md-9">
+                        <div class="clear bottom30"></div>
                         <a href="" data-toggle="modal" data-target="#myModalInfo" class="green"><i class="fa fa-info-circle"></i> &nbsp;Request Information</a>
                     </div>
                 </div>
@@ -763,287 +711,287 @@
                 </div>
             </div>
 
-                <!-- Air Tab -->
-                <div id="air-content" class="tab-pane fade">
-                    <div class="container pad0">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <label><b>Flyer Information</b></label>
-                            </div>
-                        </div>
-                        <div class="pad15">
-                            <div class="row">
-                                <div class="form-group col-md-3">
-                                    <label for="aKnownTraveler">Known Traveler #</label>
-                                    <input class="form-control" id="aKnownTraveler" placeholder="Known Traveler #">
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label for="aGlobalEntry">Global Entry</label>
-                                    <input class="form-control" id="aGlobalEntry" placeholder="Global Entry #">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <label><b>Preferences</b></label>
-                            </div>
-                        </div>
-                        <div class="pad15">
-                            <div class="row">
-                                <div class="form-group col-md-3">
-                                    <label for="aAirportCity">Airport City</label>
-                                    <input class="form-control" id="aAirportCity" placeholder="Airport City">
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label for="aAirport">Airport</label>
-                                    <select class="form-control" id="aAirport">
-                                        <option>Select...</option>
-                                        <option>Some Airport</option>
-                                        <option>Another Airport</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label for="aSeating">Seating</label>
-                                    <select class="form-control" id="aSeating">
-                                        <option>Select...</option>
-                                        <option>Window</option>
-                                        <option>Aisle</option>
-                                        <option>Two Side</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label for="aMeal">Meal</label>
-                                    <select class="form-control" id="aMeal">
-                                        <option>Select...</option>
-                                        <option>Food</option>
-                                        <option>More Food</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <label><b>Frequent Flyer</b></label>
-                            </div>
-                        </div>
-                        <div class="pad15">
-                            <div class="row">
-                                <div class="form-group col-md-3">
-                                    <label for="aAirline">Airline</label>
-                                    <select class="form-control" id="aAirline">
-                                        <option>Select...</option>
-                                        <option>Some Airline</option>
-                                        <option>Another Airline</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label for="aFrequentFlyer">Frequent Flyer #</label>
-                                    <input class="form-control" id="aFrequentFlyer" placeholder="Frequent Flyer #">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-group col-md-12">
-                                    <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Frequent Flyer Program</i></a>
-                                </div>
-                            </div>
+            <!-- Air Tab -->
+            <div id="air-content" class="tab-pane fade">
+                <div class="container pad0">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label><b>Flyer Information</b></label>
                         </div>
                     </div>
-                </div>
-
-                <!-- SIG -->
-                <div id="sig-content" class="tab-pane fade">
-                    <div class="container pad0">
+                    <div class="pad15">
                         <div class="row">
                             <div class="form-group col-md-3">
-                                <b>The University of Texas</b>
-                                <p>The Texas Exes | The Flying Longhorns</p>
+                                <label for="aKnownTraveler">Known Traveler #</label>
+                                <input class="form-control" id="aKnownTraveler" placeholder="Known Traveler #">
                             </div>
                             <div class="form-group col-md-3">
-                                <label for="sAffiliation">Affiliation</label>
-                                <select class="form-control" id="sAffiliation">
-                                    <option>Alumn</option>
-                                    <option>Spouce</option>
-                                    <option>Faculty</option>
+                                <label for="aGlobalEntry">Global Entry</label>
+                                <input class="form-control" id="aGlobalEntry" placeholder="Global Entry #">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label><b>Preferences</b></label>
+                        </div>
+                    </div>
+                    <div class="pad15">
+                        <div class="row">
+                            <div class="form-group col-md-3">
+                                <label for="aAirportCity">Airport City</label>
+                                <input class="form-control" id="aAirportCity" placeholder="Airport City">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="aAirport">Airport</label>
+                                <select class="form-control" id="aAirport">
+                                    <option>Select...</option>
+                                    <option>Some Airport</option>
+                                    <option>Another Airport</option>
                                 </select>
                             </div>
-                            <div class="form-group col-md-2">
-                                <label for="sClassYear">Class Year</label>
-                                <select class="form-control" id="sClassYear">
-                                    <option>2015</option>
-                                    <option>2014</option>
-                                    <option>2013</option>
-                                    <option>2012</option>
-                                    <option>2011</option>
-                                    <option>2010</option>
-                                    <option>2009</option>
-                                    <option>2008</option>
-                                    <option>2007</option>
-                                    <option>2006</option>
-                                    <option>2005</option>
-                                    <option>2004</option>
-                                    <option>2003</option>
-                                    <option>2002</option>
-                                    <option>2001</option>
-                                    <option>2000</option>
-                                    <option>1999</option>
-                                    <option>1998</option>
-                                    <option>1997</option>
-                                    <option>1996</option>
-                                    <option>1995</option>
-                                    <option>1994</option>
-                                    <option>1993</option>
-                                    <option>1992</option>
-                                    <option>1991</option>
-                                    <option>1990</option>
+                            <div class="form-group col-md-3">
+                                <label for="aSeating">Seating</label>
+                                <select class="form-control" id="aSeating">
+                                    <option>Select...</option>
+                                    <option>Window</option>
+                                    <option>Aisle</option>
+                                    <option>Two Side</option>
                                 </select>
                             </div>
-                            <div class="form-group col-md-1">
-                                <div class="clear bottom30"></div>
-                                <label for="sHost">Host</label>
-                                <input id="sHost" type="checkbox">
-                            </div>
-                            <div class="form-group col-md-2">
-                                <div class="clear bottom30"></div>
-                                <label for="sHostCompanion">Host Companion</label>
-                                <input id="sHost" type="checkbox">
+                            <div class="form-group col-md-3">
+                                <label for="aMeal">Meal</label>
+                                <select class="form-control" id="aMeal">
+                                    <option>Select...</option>
+                                    <option>Food</option>
+                                    <option>More Food</option>
+                                </select>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Travel Credit -->
-                <div id="travel-credit-content" class="tab-pane fade">
-                    <div class="container pad0">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h4>Past Traveler Credit</h4>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="container pad15">
-                                    <div class="row">
-                                        <div class="form-group col-md-1">
-                                            <label for="tPastTravelerCredit">Credit</label>
-                                            <h4 id="tPastTravelerCredit">$0</h4>
-                                        </div>
-                                        <div class="form-group col-md-2">
-                                            <label for="tCompletedDirectTrips">Completed Direct Trips</label>
-                                            <h4 id="tCompletedDirectTrips">0</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="clear bottom15 borderBottom"></div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label><b>Frequent Flyer</b></label>
                         </div>
                     </div>
-                    <div class="container pad0">
+                    <div class="pad15">
                         <div class="row">
-                            <div class="col-md-12">
-                                <h4>Future Credit</h4>
+                            <div class="form-group col-md-3">
+                                <label for="aAirline">Airline</label>
+                                <select class="form-control" id="aAirline">
+                                    <option>Select...</option>
+                                    <option>Some Airline</option>
+                                    <option>Another Airline</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="aFrequentFlyer">Frequent Flyer #</label>
+                                <input class="form-control" id="aFrequentFlyer" placeholder="Frequent Flyer #">
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12">
-                                <div class="container pad15">
-                                    <div class="row">
-                                        <div class="form-group col-md-6">
-                                            <label for="tReservation">Reservation</label>
-                                            <select class="form-control" id="treservation">
-                                                <option>Select...</option>
-                                                <option>Reservation 1</option>
-                                                <option>Reservation 2</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="form-group col-md-2">
-                                            <label for="tAmount">Amount</label>
-                                            <div class="input-group">
-                                                <span class="input-group-addon">$</span>
-                                                <input class="form-control" id="tAmount" type="text" placeholder="0">
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-md-2">
-                                            <label for="tIssueDate">Issue Date</label>
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><i class="fa fa-calendar fa-lg"></i></span>
-                                                <input class="form-control" id="tIssueDate" type="text" placeholder="Issue Date">
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-md-2">
-                                            <label for="tExpirationDate">Expiration Date</label>
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><i class="fa fa-calendar fa-lg"></i></span>
-                                                <input class="form-control" id="tExpirationDate" type="text" placeholder="Expiration Date">
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-md-3">
-                                            <label for="tIssuer">Issuer</label>
-                                            <select id="tIssuer" class="form-control">
-                                                <option>Select...</option>
-                                                <option>Elizabeth Bougie</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-md-3">
-                                            <label for="tReason">Reason</label>
-                                            <select id="tReason" class="form-control">
-                                                <option>Select...</option>
-                                                <option>Good Will Credit</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="form-group col-md-12">
-                                            <div class="clear bottom10"></div>
-                                            <a href="#add-future-credit" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Future Credit</i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-            <!-- /guestTabContent-->
-
-
-
-
-
-
-
-
-
-            <!-- /base tour content -->
-
-            <!-- Bottom Space -->
-            <div class="clear" style="margin-bottom: 120px;"></div>
-
-            <!-- footer -->
-            <div id="illusion">
-                <div id="footer">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-2 col-xs-2">
-                                <button type="submit" class="btn btn-default btn-sm"> Cancel </button>
-                            </div>
-                            <div class="col-md-8 col-xs-8 textCenter">
-
-                                <p><a href="#location">Remarks</a></p>
-
-                            </div>
-                            <div class="col-md-2 col-xs-2">
-                                <button type="submit" class="btn btn-info btn-sm alignRight bottom0"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Submit </button>
+                            <div class="form-group col-md-12">
+                                <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Frequent Flyer Program</i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- SIG -->
+            <div id="sig-content" class="tab-pane fade">
+                <div class="container pad0">
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <b>The University of Texas</b>
+                            <p>The Texas Exes | The Flying Longhorns</p>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="sAffiliation">Affiliation</label>
+                            <select class="form-control" id="sAffiliation">
+                                <option>Alumn</option>
+                                <option>Spouce</option>
+                                <option>Faculty</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="sClassYear">Class Year</label>
+                            <select class="form-control" id="sClassYear">
+                                <option>2015</option>
+                                <option>2014</option>
+                                <option>2013</option>
+                                <option>2012</option>
+                                <option>2011</option>
+                                <option>2010</option>
+                                <option>2009</option>
+                                <option>2008</option>
+                                <option>2007</option>
+                                <option>2006</option>
+                                <option>2005</option>
+                                <option>2004</option>
+                                <option>2003</option>
+                                <option>2002</option>
+                                <option>2001</option>
+                                <option>2000</option>
+                                <option>1999</option>
+                                <option>1998</option>
+                                <option>1997</option>
+                                <option>1996</option>
+                                <option>1995</option>
+                                <option>1994</option>
+                                <option>1993</option>
+                                <option>1992</option>
+                                <option>1991</option>
+                                <option>1990</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-1">
+                            <div class="clear bottom30"></div>
+                            <label for="sHost">Host</label>
+                            <input id="sHost" type="checkbox">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <div class="clear bottom30"></div>
+                            <label for="sHostCompanion">Host Companion</label>
+                            <input id="sHost" type="checkbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Travel Credit -->
+            <div id="travel-credit-content" class="tab-pane fade">
+                <div class="container pad0">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4>Past Traveler Credit</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="container pad15">
+                                <div class="row">
+                                    <div class="form-group col-md-1">
+                                        <label for="tPastTravelerCredit">Credit</label>
+                                        <h4 id="tPastTravelerCredit">$0</h4>
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="tCompletedDirectTrips">Completed Direct Trips</label>
+                                        <h4 id="tCompletedDirectTrips">0</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="clear bottom15 borderBottom"></div>
+                    </div>
+                </div>
+                <div class="container pad0">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4>Future Credit</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="container pad15">
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label for="tReservation">Reservation</label>
+                                        <select class="form-control" id="treservation">
+                                            <option>Select...</option>
+                                            <option>Reservation 1</option>
+                                            <option>Reservation 2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-2">
+                                        <label for="tAmount">Amount</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">$</span>
+                                            <input class="form-control" id="tAmount" type="text" placeholder="0">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="tIssueDate">Issue Date</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-calendar fa-lg"></i></span>
+                                            <input class="form-control" id="tIssueDate" type="text" placeholder="Issue Date">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="tExpirationDate">Expiration Date</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-calendar fa-lg"></i></span>
+                                            <input class="form-control" id="tExpirationDate" type="text" placeholder="Expiration Date">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="tIssuer">Issuer</label>
+                                        <select id="tIssuer" class="form-control">
+                                            <option>Select...</option>
+                                            <option>Elizabeth Bougie</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="tReason">Reason</label>
+                                        <select id="tReason" class="form-control">
+                                            <option>Select...</option>
+                                            <option>Good Will Credit</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-12">
+                                        <div class="clear bottom10"></div>
+                                        <a href="#add-future-credit" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Future Credit</i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- /guestTabContent-->
+
+
+
+
+
+
+
+
+
+        <!-- /base tour content -->
+
+        <!-- Bottom Space -->
+        <div class="clear" style="margin-bottom: 120px;"></div>
+
+        <!-- footer -->
+        <div id="illusion">
+            <div id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 col-xs-2">
+                            <button type="submit" class="btn btn-default btn-sm"> Cancel </button>
+                        </div>
+                        <div class="col-md-8 col-xs-8 textCenter">
+
+                            <p><a href="#location">Remarks</a></p>
+
+                        </div>
+                        <div class="col-md-2 col-xs-2">
+                            <button type="submit" class="btn btn-info btn-sm alignRight bottom0"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Submit </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </form>
     <style>

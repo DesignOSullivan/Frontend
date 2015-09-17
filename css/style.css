@@ -126,6 +126,7 @@ th{color: #54698d;}
 	.remove:hover{ color: #ff1744; }
 
 .borderRight{border-right: 1px solid #ededed;}
+.borderLeft{border-left: 15px solid #ededed; padding-left: 15px !important;}
 .borderBottom{border-bottom: 2px solid #ededed;}
 
 .pad0{padding: 0;}

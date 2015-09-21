@@ -1,23 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>OUI</title>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Odysseys Unlimited</title>
-    <link href="../kendoui/content/shared/styles/examples-offline.css" rel="stylesheet">
-    <link href="../kendoui/styles/kendo.rtl.min.css" rel="stylesheet">
-    <link href="../kendoui/styles/kendo.default.min.css" rel="stylesheet">
 
-    <link href="../kendoui/styles/kendo.common-bootstrap.min.css" rel="stylesheet">
+        <link href="../kendoui/content/shared/styles/examples-offline.css" rel="stylesheet">
+        <link href="../kendoui/styles/kendo.rtl.min.css" rel="stylesheet">
+        <link href="../kendoui/styles/kendo.default.min.css" rel="stylesheet">
 
-    <link href="../css/bootstrap.css" rel="stylesheet">
-    <link href="../css/toggle-me-softly.css" rel="stylesheet">
-    <link href="../css/style.css" rel="stylesheet">
-    <link href="../css/font-awesome.css" rel="stylesheet">
-    <link rel="icon"  type="image/png"  href="../Odysseys-Logo-Bird.png">
-</head>
+        <link href="../kendoui/styles/kendo.common-bootstrap.min.css" rel="stylesheet">
+
+        <link href="../css/bootstrap.css" rel="stylesheet">
+
+        <link href="../css/toggle-me-softly.css" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
+        <link href="../css/font-awesome.css" rel="stylesheet">
+
+
+
+        <script src="../js/jquery.min.js"></script> 
+        <script src="../js/bootstrap.min.js"></script> 
+        <script src="../js/bootstrap-toggle.min.js"></script> 
+        <script src="../js/guest-scripts.js"></script>
+
+        <script src="../kendoui/js/kendo.all.min.js"></script>
+
+
+        <!-- grab all the component modules we need for this page -->
+        <script> 
+            $(function(){
+                $("#includeGuestName").load("_components/guest-name.html"); 
+                $("#includeAddress").load("_components/address.html"); 
+                $("#includeContactInformation").load("_components/contact-information.html"); 
+                $("#includeReservationNew").load("_components/reservation-new.html"); 
+                $("#includeReservationEdit").load("_components/reservation-edit.html"); 
+                $("#includeItinerary").load("_components/itinerary.html"); 
+                $("#includeInternalAir").load("_components/internal-air.html"); 
+                $("#includeTourDirector").load("_components/tour-director.html"); 
+                $("#includeTourPricing").load("_components/tour-pricing.html"); 
+                $("#includeCatalogPricing").load("_components/catalog-pricing.html"); 
+                $("#includeZoneFares").load("_components/zone-fares.html"); 
+            });
+        </script> 
+
+    </head>
 
 <body>
     <!-- Navbar -->
@@ -68,328 +97,20 @@
         </div>
 
         <!-- Guest Name -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <a name="guestName"></a>
-                    <h3> Guest Name </h3>
-                </div>
-            </div>
-        </div>
-        <div class="container container-border">
-            <div class="row">
-                <div class="form-group col-md-1">
-                    <label for="title1">Title</label>
-                    <select class="form-control" id="title1">
-                        <option>Mr.</option>
-                        <option>Mrs.</option>
-                        <option>Ms.</option>
-                    </select>
-                </div>
-                <div class="form-group col-md-3">
-                    <label for="firstName">First Name</label>
-                    <input class="form-control" id="firstName" type="text" placeholder="First Name">
-                </div>
-                <div class="form-group col-md-1">
-                    <label for="middleInit">MI</label>
-                    <input class="form-control" id="middleInit" type="text" placeholder="MI">
-                </div>
-                <div class="form-group col-md-3">
-                    <label for="lastName">Last Name</label>
-                    <input class="form-control" id="lastName" type="text" placeholder="Last Name">
-                </div>
-                <div class="form-group col-md-1">
-                    <label for="suffix">Suffix</label>
-                    <select class="form-control" id="suffix">
-                        <option></option>
-                        <option>Sr.</option>
-                        <option>Jr.</option>
-                        <option>III.</option>
-                        <option>IV</option>
-                        <option>V</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-md-5">
-                    <label for="nickname">Nickname</label>
-                    <input class="form-control" id="nickname" type="text" placeholder="Nickname">
-                </div>
-            </div>
-        </div>
-
+        <div id="includeGuestName"></div>
+        
         <!-- Address -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <a name="addressSection"></a>
-                    <h3> Address </h3>
-                </div>
-            </div>
-        </div>
-        <div class="container container-border">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="container-fluid pad0">
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="address">Address</label>
-                                <input class="form-control" id="address" type="text" placeholder="Address">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="address2">Address 2</label>
-                                <input class="form-control" id="address2" type="text" placeholder="address 2">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-4">
-                                <label for="zip">Zip Code</label>
-                                <input class="form-control" id="zip" type="text" placeholder="Zip">
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label for="plus4">Plus 4</label>
-                                <input class="form-control" id="plus4" type="text" placeholder="+4">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="city">City</label>
-                                <input class="form-control" id="city" type="text" placeholder="City">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="state">State</label>
-                                <input class="form-control" id="state" type="text" placeholder="State">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="country">Country</label>
-                                <input class="form-control" id="country" type="text" placeholder="Country">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="clear bottom30 hidden-xs"></div>
-                    <div class="switch">
-                        <input id="mailPromoToggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
-                        <label for="mailPromoToggle"></label>
-                    </div>
-                    <div class="switch-label">
-                        <label for="mailPromoToggle">Mail Promotions</label>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid pad0">
-                <div class="row">
-                    <div class="form-group col-md-12">
-                        <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add an Address</i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        <div id="includeAddress"></div>
+        
         <!-- Contact Information -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <a name="contactInformation"></a>
-                    <h3> Contact Information </h3>
-                </div>
-            </div>
-        </div>
-        <div class="container container-border">
-            <div class="row">
-                <div class="col-md-7">
-                    <div class="container pad0">
-                        <div class="row">
-                            <div class="form-group col-md-7 col-xs-8">
-                                <label for="phoneNumber">Phone Number</label>
-                                <input class="form-control" id="phoneNumber" type="text" placeholder="Phone Number">
-                            </div>
-                            <div class="form-group col-md-4 col-xs-4">
-                                <label for="phoneType">Type</label>
-                                <select class="form-control" id="phoneType">
-                                    <option>Home</option>
-                                    <option>Moblie</option>
-                                    <option>Work</option>
-                                    <option>Fax</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-12">
-                                <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Phone Number</i></a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-7">
-                                <label for="emailInput">Email Address</label>
-                                <input class="form-control" id="emailInput" type="text" placeholder="Email Address">
-                            </div>
-
-                            <div class="form-group col-md-4">
-                                <div class="clear bottom25"></div>
-                                <div class="switch">
-                                    <input id="email-promo-toggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
-                                    <label for="email-promo-toggle"></label>
-                                </div>
-                                <div class="switch-label">
-                                    <label for="email-promo-toggle">Email Promotions</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-12">
-                                <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add an Email Address</i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <div class="container pad0">
-                        <div class="row">
-                            <div class="form-group col-md-12">
-                                <label for="social">Social</label>
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-facebook-f fa-lg"></i></span>
-                                    <input class="form-control" id="facebook" type="text" placeholder="username">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-12">
-                                <div class="input-group noLabel">
-                                    <span class="input-group-addon"><i class="fa fa-twitter fa-lg"></i></span>
-                                    <input class="form-control" id="exampleInputPassword1" type="text" placeholder="username">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-12">
-                                <div class="input-group noLabel">
-                                    <span class="input-group-addon"><i class="fa fa-instagram fa-lg"></i></span>
-                                    <input class="form-control" id="instagram" type="text" placeholder="username">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        <div id="includeContactInformation"></div>
+        
         <!-- Reservations blank -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <a name="reservations"></a>
-                    <h3>Reservations</h3>
-                </div>
-            </div>
-        </div>
-        <div class="container container-border">
-            <div class="row">
-                <div class="col-md-12">
-                    <label>
-                        <h6>[Guest Name] does not have any upcoming or past reservations</h6></label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-md-12">
-                    <button type="submit" class="btn btn-info btn-xs bottom0"><i class="fa fa-globe"></i> New Reservation</button>
-                </div>
-            </div>
-        </div>
-
+        <div id="includeReservationNew"></div>
+        
         <!-- Reservations w/ upcoming reservations -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <a name="reservations"></a>
-                    <h3>Reservations</h3>
-                </div>
-            </div>
-        </div>
-        <div class="container container-border">
-            <div class="row">
-                <div class="col-md-12">
-                    <label>
-                        <h4>Upcoming</h4></label>
-                </div>
-            </div>
-            <div class="pad15">
-                <div class="row">
-                    <div class="col-md-3">
-                        <label>Tour</label>
-                        <br>
-                        <b>GRV-15 | Classic Greek Isles</b>
-                        <p>12-Oct to 23-Oct-25
-                            <br>(30 days out)</p>
-                    </div>
-                    <div class="col-md-2">
-                        <label>Status</label>
-                        <br>
-                        <b>Confirmed</b>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-md-3">
-                        <a href="" data-toggle="modal" data-target="#myModalInfo" class="green"><i class="fa fa-info-circle"></i> &nbsp;Request Information</a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <hr>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-12">
-                    <label>
-                        <h4>Past</h4></label>
-                </div>
-            </div>
-            <div class="pad15">
-                <div class="row">
-                    <div class="col-md-3">
-                        <label>Tour</label>
-                        <br>
-                        <b>ITY-14 | Portrait of Italy</b>
-                        <p>15-Aug to 25-Aug-14</p>
-                    </div>
-                    <div class="col-md-3">
-                        <label>Satus</label>
-                        <br>
-                        <b>Confirmed</b>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-md-3">
-                        <a href="" data-toggle="modal" data-target="#myModalInfo" class="green"><i class="fa fa-info-circle"></i> &nbsp;Request Information</a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <b>CSR-14 | Costa Rica's Natural Heritage</b>
-                        <p>08-Feb to 17-Feb-14</p>
-                    </div>
-                    <div class="col-md-3">
-                        <b>Confirmed</b>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-md-3">
-                        <a href="" data-toggle="modal" data-target="#myModalInfo" class="green"><i class="fa fa-info-circle"></i> &nbsp;Request Information</a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-md-12">
-                    <button type="submit" class="btn btn-info btn-xs bottom0"><i class="fa fa-globe"></i> New Reservation</button>
-                </div>
-            </div>
-
-        </div>
-
+        <div id="includeReservationEdit"></div>
+        
         <!-- Modal -->
         <div class="modal fade" id="myModalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalInfo">
             <div class="modal-dialog" role="document">
@@ -1088,14 +809,10 @@
             <li><a href="#address">Address</a></li>
             <li><a href="#contactInformation">Contact Information</a></li>
             <li><a href="#reservations">Reservations</a></li>
-            <li><a href="#guestTabs"> Guest Tabs</a></li>
+            <li><a href="#guestTabs">Guest Tabs</a></li>
         </ul>
     </div>
 
-    <script src="..js/jquery.min.js"></script>
-    <script src="..js/bootstrap.min.js"></script>
-    <script src="..js/bootstrap-toggle.min.js"></script>
-    <script src="../js/guest-scripts.js"></script>
 
 </body>
 

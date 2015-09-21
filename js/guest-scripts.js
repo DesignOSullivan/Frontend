@@ -1,19 +1,19 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-    $('#firstName').bind("change paste keyup", function() {
-        if($(this).val() !== ''){
+    $('#firstName').bind("change paste keyup", function () {
+        if ($(this).val() !== '') {
             $('#firstNameHeader').html($(this).val()); 
         }
-        else{
+        else {
             $('#firstNameHeader').html('New');    
         }
     });
 
-    $('#lastName').bind("change paste keyup", function() {
-        if($(this).val() !== ''){
+    $('#lastName').bind("change paste keyup", function () {
+        if ($(this).val() !== '') {
             $('#lastNameHeader').html($(this).val()); 
         }
-        else{
+        else {
             $('#lastNameHeader').html('Guest');    
         }
 
@@ -57,22 +57,3 @@ $(document).ready(function() {
 	
 	
 });
-
-$(document).ready(function() {
-    $("#phoneNumber").kendoMaskedTextBox({
-        mask: "(999) 000-0000"
-    });
-
-    $("#credit_card").kendoMaskedTextBox({
-        mask: "0000 0000 0000 0000"
-    });
-
-    $("#ssn").kendoMaskedTextBox({
-        mask: "000-00-0000"
-    });
-
-    $("#postcode").kendoMaskedTextBox({
-        mask: "L0L 0LL"
-    });
-});
-</script>

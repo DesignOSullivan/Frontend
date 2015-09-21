@@ -1,0 +1,744 @@
+	<!-- Itinerary -->
+    <div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3>
+					<a name="itinerarySection"></a>
+					Itinerary
+				</h3>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12 center">
+				<ul class="nav nav-tabs alt-color" role="tablist">
+					<li role="presentation" id="" class="active"><a href="#base-tour-content" role="tab" data-toggle="tab">Pattern A</a></li>
+					<li role="presentation"><a href="#add-pattern-itinerary" class="green"><i class="fa fa-plus-circle"></i></a></li>
+				</ul>
+			</div>
+		</div>
+		
+	</div>		
+	<div class="container container-border">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="container pad0">
+					<div class="row">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="row">
+			<div class="col-md-12 table-responsive">
+				<table class="table">
+					<tr>
+						<th>Leg</th>
+						<th>Check-In Day</th>
+						<th># of Nights</th>
+						<th>Check-Out Day</th>
+						<th colspan="2">Accommodation Name</th>
+						<th>City</th>
+						<th>Country</th>
+						<th>OUI Book</th>
+					</tr>
+					<tr>
+						<td><input class="form-control" placeholder="Leg" size="1"></input></td>
+						<td><input class="form-control" placeholder="Check-In" size="1"></input></td>
+						<td><input class="form-control" placeholder="Nights" size="1"></input></td>
+						<td><input class="form-control" placeholder="Check-Out" size="1"></input></td>
+						<td><input class="form-control" id="tourCode" type="text" placeholder="Accommodation Name"></td>
+						<td><a data-toggle="modal" data-target="#accomModal" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search </a></td>
+						<td><input class="form-control" id="tourName" type="text" placeholder="City"></td>
+						<td><input class="form-control" id="tourName" type="text" placeholder="Country"></td>
+						<td valign="middle">
+							<div class="clear bottom5"></div>
+							<div class="switch">
+								<input id="oui-book" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
+								<label for="oui-book"></label>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="7">
+							<a href="" class="textCenter green"><i class="fa fa-plus-circle"></i> <em>Add a Leg</em></a>
+						</td>
+					</tr>
+				</table>
+				<div class="clear bottom15"></div>
+				<div class="center">
+					<a href="" class="textCenter"><span class="glyphicon glyphicon-list"></span> View Direct Flow</a>
+				</div>
+				<hr />
+			</div>
+			<div class="col-md-4">
+				<div class="form-group">
+					<label for="exampleInputEmail1">In Country Pre-Night Accommodation</label>
+					<select class="form-control">
+						<option selected>Please Select...</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="form-group">
+					<label for="exampleInputEmail1">In Country Post-Night Accommodation</label>
+					<select class="form-control">
+						<option selected>Please Select...</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	
+<!-- Itin Accom Modals     -->
+<div class="modal fade" id="accomModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document" style="width: 100%; margin: 23% 10px;">
+		<div class="modal-content">
+		  <div class="modal-body">
+			<div class="container">
+				<div id="accomModal1">
+					<div class="row">
+						<div class="col-md-12 bottom30"> 
+							<h5>Accommodations Search Results</h5>
+							<h3 class="textCenter">No results found.</h3>
+						</div>
+					</div>	
+					<div class="row">
+						<div class="col-md-2"></div>
+						<div class="col-md-4 textCenter"> 
+							<a href="" id="accomModal2-link" class="green"><i class="fa fa-plus-circle"></i> Add New Accommodation</a>
+						</div>
+						<div class="col-md-4 textCenter"> 
+							<a href="" data-dismiss="modal"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search Again</a>
+						</div>
+						<div class="col-md-2"></div>
+					</div>
+				</div>
+				<!-- -->
+				<div class="displayNone" id="accomModal2">
+					<div class="row">
+						<div class="col-md-12 textCenter"> 
+							<h3>Does this accommodation have a gound operator?</h3>
+							<a href="" id="accomModal-addAccom-link" class="btn btn-default">No</a>&nbsp&nbsp;
+							<a href="" id="accomModal-searchOperator-link" class="btn btn-default">Yes</a>
+						</div>
+					</div>	
+				</div>
+				<!-- -->
+				<div class="displayNone" id="accomModal-searchOperator">
+					<div class="row">
+						<div class="col-md-12 table-responsive"> 
+							<h5>Operator Search Results</h5>
+							<div class="clear bottom30"></div>
+							<table class="table table-striped">
+								<tr>
+									<th>Ground Operator Name</th>
+									<th>Phone #</th>
+									<th>Primary Street Address</th>
+									<th>City</th>
+									<th>Country</th>
+								</tr>
+								<tr>
+									<td><span class="glyphicon glyphicon-plus green"></span> Irish Adventures</td>
+									<td>353 87 419 0318</td>
+									<td>225 Green Street</td>
+									<td>Dublin</td>
+									<td>Ireland</td>
+								</tr>
+								<tr>
+									<td><span class="glyphicon glyphicon-plus green"></span> Go Ireland</td>
+									<td>353 87 514 9543</td>
+									<td>8893 Farley Court</td>
+									<td>Cork</td>
+									<td>Ireland</td>
+								</tr>
+							</table>
+							<div class="clear bottom15"></div>
+							<div class="textCenter">
+								<a href="" id="accomModal-addOperator-link" class="green"><i class="fa fa-plus-circle"></i> Add New Ground Operator</a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href=""><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search Again (not functional)</a>
+							</div>
+						</div>
+					</div>	
+				</div>
+				<!-- -->
+				<div class="displayNone" id="accomModal-addOperator">
+					<div class="row">
+						<div class="col-md-5"> 
+							<h5>Add New Ground Operator</h5>
+							<div class="clear bottom15">
+							</div>
+							<div class="container-fluid pad0">
+								<div class="row">
+									<div class="form-group col-md-12">
+										<label for="exampleInputEmail1">Ground Operator Name</label>
+										<input class="form-control" id="" type="text" placeholder="Ground Operator Name">
+									</div>
+									
+									<div class="form-group col-md-6">
+										<label for="">Phone</label>
+										<input class="form-control" id="" type="text" placeholder="Phone">
+									</div>
+									<div class="form-group col-md-4">
+										<label for="title1">Type</label>
+										<select class="form-control" id="">
+											<option>Landline</option>
+											<option>Mobile</option>
+										</select>
+									</div>
+									<div class="form-group col-md-2">
+										<label for="title1">Ext.</label>
+										<input class="form-control" id="" type="text" placeholder="Ext">
+									</div>
+									<div class="col-md-12 bottom15">
+										<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Add a Phone Number</a></em>
+									</div>
+									
+									<div class="form-group col-md-6">
+										<label for="">Email Address</label>
+										<input class="form-control" id="" type="text" placeholder="Email Address">
+									</div>
+									<div class="col-md-12 bottom15">
+										<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Add a Email Address</a></em>
+									</div>
+									
+									<div class="col-md-12">
+										<div class="form-group col-md-8 pad0">
+											<div class="input-group">
+												<span class="input-group-addon">Skype.com/</span>
+												<input class="form-control" id="" type="text" placeholder="User Name (Optional)">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-1">
+						</div>
+						<div class="col-md-6">
+							<div class="clear bottom45" style="margin-bottom: 51px;"></div>
+							<div class="container-fluid pad0">
+									<div class="row">
+									
+										<div class="form-group col-md-12">
+											<label for="">Attention</label>
+											<input class="form-control" id="" type="text" placeholder="Attention (Optional)">
+										</div>
+										<div class="form-group col-md-6">
+											<label for="">Address</label>
+											<input class="form-control" id="" type="text" placeholder="Address">
+										</div>
+										<div class="form-group col-md-6">
+											<label for="">Address 2</label>
+											<input class="form-control" id="" type="text" placeholder="Address cont'd (Optional)">
+										</div>
+										
+										<div class="form-group col-md-4">
+											<label for="">Postal Code</label>
+											<input class="form-control" id="" type="text" placeholder="Postal Code">
+										</div>
+										<div class="form-group col-md-8">
+											<label for="">City</label>
+											<input class="form-control" id="" type="text" placeholder="City">
+										</div>
+										<div class="form-group col-md-6">
+											<label for="">State / Province</label>
+											<input class="form-control" id="" type="text" placeholder="State / Province (Optional)">
+										</div>
+										<div class="form-group col-md-6">
+											<label for="">Country</label>
+											<input class="form-control" id="" type="text" placeholder="Country">
+										</div>
+										<div class="col-md-12 bottom15">
+											<div class="form-group">
+												<div class="switch">
+													<input id="addGroundOperator-fedex-toggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
+													<label for="addGroundOperator-fedex-toggle"></label>
+												</div>
+												<div class="switch-label">
+													<label for="addGroundOperator-fedex-toggle">Allows FedEx Delivery</label>
+												</div>  
+												<div class="clear bottom15">
+												</div>
+											</div>
+										</div>
+									<div class="col-md-12">
+										<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Add a Address</a></em>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
+						
+						<div class="col-md-12">
+						<hr />
+						</div>
+						
+						<div class="col-md-12"> 
+							<h5>Create Contact</h5>
+							<div class="clear bottom15"></div>
+							
+							<div class="container-fluid pad0">
+								<div class="row">
+									<div class="form-group col-md-1">
+										<label for="title1">Title</label>
+										<select class="form-control" id="title">
+											<option>Mr.</option>
+											<option>Mrs.</option>
+											<option>Ms.</option>
+										</select>
+									</div>
+									<div class="form-group col-md-3">
+										<label for="exampleInputEmail1">First Name</label>
+										<input class="form-control" id="tourName" type="text" placeholder="First Name">
+									</div>
+									<div class="form-group col-md-3">
+										<label for="exampleInputEmail1">Last Name</label>
+										<input class="form-control" id="tourName" type="text" placeholder="Last Name">
+									</div>
+									<div class="form-group col-md-1">
+										<label for="title1">Suffix</label>
+										<select class="form-control" id="title1">
+											<option>Jr.</option>
+											<option>Sr.</option>
+										</select>
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col-md-3">
+										<label for="">Phone</label>
+										<input class="form-control" id="" type="text" placeholder="Phone">
+									</div>
+									<div class="form-group col-md-2">
+										<label for="title1">Type</label>
+										<select class="form-control" id="">
+											<option>Landline</option>
+											<option>Mobile</option>
+										</select>
+									</div>
+									<div class="form-group col-md-1">
+										<label for="title1">Ext.</label>
+										<input class="form-control" id="" type="text" placeholder="Ext">
+									</div>
+									<div class="col-md-12 bottom15">
+										<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Add a Phone Number</a></em>
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col-md-4">
+										<label for="">Email Address</label>
+										<input class="form-control" id="" type="text" placeholder="Email Address">
+									</div>
+									<div class="col-md-12 bottom15">
+										<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Add a Email Address</a></em>
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col-md-4">
+										<label for="">Contact Job Title</label>
+										<input class="form-control" id="" type="text" placeholder="Contact Job Title">
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col-md-4">
+										<label for="title1">OUI Department</label>
+										<select class="form-control" id="">
+											<option>Dept A</option>
+											<option>Dept B</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>	
+					<div class="clear bottom30"></div>
+					<div class="row">
+						<div class="col-md-6">
+							<button type="button" class="btn btn-sm btn-default">Cancel</button>
+						</div>
+						<div class="col-md-6 textRight">
+							<button type="button" class="btn btn-sm btn-success">Create Operator</button>
+						</div>
+					</div>
+			
+				</div>
+				<!-- -->
+				<div class="displayNone" id="accomModal-searchAccom">
+					<div class="row">
+						<div class="col-md-12 table-responsive"> 
+							<h5>Hotel Search Results</h5>
+							<div class="clear bottom30"></div>
+							<table class="table table-striped">
+								<tr>
+									<th>Accommodation Name</th>
+									<th>Phone #</th>
+									<th>Primary Street Address</th>
+									<th>City</th>
+									<th>Country</th>
+								</tr>
+								<tr>
+									<td><span class="glyphicon glyphicon-plus green"></span> The Dublin Inn</td>
+									<td>353 01 874 9202</td>
+									<td>777 Irish Road</td>
+									<td>Dublin</td>
+									<td>Ireland</td>
+								</tr>
+								<tr>
+									<td><span class="glyphicon glyphicon-plus green"></span> Cork Bed and Breakfast</td>
+									<td>353 71 98 2222</td>
+									<td>9801 Celtic Way</td>
+									<td>Cork</td>
+									<td>Ireland</td>
+								</tr>
+							</table>
+							<div class="clear bottom15"></div>
+							<div class="textCenter">
+								<a href="" id="accomModal-addOperator-link" class="green"><i class="fa fa-plus-circle"></i> Add New Accommodation</a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href=""><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search Again (not functional)</a>
+							</div>
+						</div>
+					</div>	
+				</div>
+				<!-- -->
+				<div class="displayNone" id="accomModal-addAccom">
+					<div class="row bottom15">
+						<div class="col-md-12"> 
+							<h5>Add New Accommodation</h5>
+						</div>
+					</div>
+					<div class="row bottom30">
+						<div class="col-md-2">
+							<label for="title1" style="margin-top: 5px;">Accommodation Type </label>
+						</div>
+						<div class="col-md-4">
+							<select class="form-control" id="accomModal-addHotelCruise-trigger">
+								<option value="accomModal-addHotel" selected="selected">Hotel</option>
+								<option value="accomModal-addCruise">Cruise</option>
+							</select>
+						</div>
+					</div>
+					<div id="accomModal-addCruise">
+						<div class="row">
+							<div class="col-md-6 borderRight">
+								<div class="container-fluid pad0">
+									<div class="row">
+										<div class="form-group col-md-12">
+											<label for="exampleInputEmail1">Ship Name</label>
+											<input class="form-control" id="" type="text" placeholder="Ship Name">
+										</div>
+										<div class="form-group col-md-3">
+											<label for="">Year Built</label>
+											<input class="form-control" id="" type="text" placeholder="YYYY">
+										</div>
+										<div class="form-group col-md-3">
+											<label for="">Refurbished</label>
+											<input class="form-control" id="" type="text" placeholder="YYYY">
+										</div>
+										<div class="form-group col-md-3">
+											<label for="">Size (ft.)</label>
+											<input class="form-control" id="" type="text" placeholder="--">
+										</div>
+										<div class="form-group col-md-3">
+											<label for="">No. of Cabins</label>
+											<input class="form-control" id="" type="text" placeholder="--">
+										</div>
+										
+										<div class="form-group col-md-6">
+											<label for="">Address</label>
+											<input class="form-control" id="" type="text" placeholder="Address">
+										</div>
+										<div class="form-group col-md-6">
+											<label for="">Address 2</label>
+											<input class="form-control" id="" type="text" placeholder="Address cont'd (Optional)">
+										</div>
+										
+										<div class="form-group col-md-4">
+											<label for="">Postal Code</label>
+											<input class="form-control" id="" type="text" placeholder="Postal Code">
+										</div>
+										<div class="form-group col-md-8">
+											<label for="">City</label>
+											<input class="form-control" id="" type="text" placeholder="City">
+										</div>
+										<div class="form-group col-md-6">
+											<label for="">State / Province</label>
+											<input class="form-control" id="" type="text" placeholder="State / Province (Optional)">
+										</div>
+										<div class="form-group col-md-6">
+											<label for="">Country</label>
+											<input class="form-control" id="" type="text" placeholder="Country">
+										</div>
+										<div class="col-md-12 bottom15">
+											<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Add a Address</a></em>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group col-md-6">
+											<label for="">Phone</label>
+											<input class="form-control" id="" type="text" placeholder="Phone">
+										</div>
+										<div class="form-group col-md-4">
+											<label for="title1">Type</label>
+											<select class="form-control" id="">
+												<option>Landline</option>
+												<option>Mobile</option>
+											</select>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12 bottom15">
+											<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Add a Phone Number</a></em>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group col-md-6">
+											<label for="">Email Address</label>
+											<input class="form-control" id="" type="text" placeholder="Email Address">
+										</div>
+										<div class="col-md-12 bottom15">
+											<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Add a Email Address</a></em>
+										</div>
+									</div>
+									
+									<div class="row">
+										<div class="col-md-12">
+											<div class="form-group col-md-8 pad0">
+												<label>Website</label>
+												<input class="form-control" id="" type="text" placeholder="http://www.example.com">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6"> 
+								<div class="container-fluid pad0">
+									<div class="row">
+										<div class="form-group col-md-6">
+											<label for="">Cabin Name</label>
+											<input class="form-control" id="" type="text" placeholder="Cabin Name">
+										</div>
+									</div>
+									<div class="row bottom15">
+										<div class="col-md-12">
+											<label>Room Types</label>
+										</div>
+										<div class="col-md-3">
+											<div class="input-group">
+												<span class="input-group-addon">Single</span>
+												<input class="form-control textRight" id="" type="text" placeholder="0">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="input-group">
+												<span class="input-group-addon">Twin</span>
+												<input class="form-control textRight" id="" type="text" placeholder="0">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="input-group">
+												<span class="input-group-addon">Double</span>
+												<input class="form-control textRight" id="" type="text" placeholder="0">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="input-group">
+												<span class="input-group-addon">Queen</span>
+												<input class="form-control textRight" id="" type="text" placeholder="0">
+											</div>
+										</div>
+									</div>
+									
+									<div class="row">
+										<div class="col-md-12 form-group">
+											<label for="">Cabin Description</label>
+											<textarea class="form-control" id="" placeholder="Description" style="height: 100px;"></textarea>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>	
+						<div class="clear bottom30"></div>
+						<div class="row">
+							<div class="col-md-6">
+								<button type="button" class="btn btn-sm btn-default">Cancel</button>
+							</div>
+							<div class="col-md-6 textRight">
+								<button type="button" class="btn btn-sm btn-success">Create Cruise</button>
+							</div>
+						</div>
+					</div>
+					<div id="accomModal-addHotel">
+						<div class="row">
+							<div class="col-md-6 borderRight">
+								<div class="container-fluid pad0">
+									<div class="row">
+										<div class="form-group col-md-12">
+											<label for="exampleInputEmail1">Hotel Name</label>
+											<input class="form-control" id="" type="text" placeholder="Hotel Name">
+										</div>
+										<div class="form-group col-md-6">
+											<label for="">Address</label>
+											<input class="form-control" id="" type="text" placeholder="Address">
+										</div>
+										<div class="form-group col-md-6">
+											<label for="">Address 2</label>
+											<input class="form-control" id="" type="text" placeholder="Address cont'd (Optional)">
+										</div>
+										
+										<div class="form-group col-md-4">
+											<label for="">Postal Code</label>
+											<input class="form-control" id="" type="text" placeholder="Postal Code">
+										</div>
+										<div class="form-group col-md-8">
+											<label for="">City</label>
+											<input class="form-control" id="" type="text" placeholder="City">
+										</div>
+										<div class="form-group col-md-6">
+											<label for="">State / Province</label>
+											<input class="form-control" id="" type="text" placeholder="State / Province (Optional)">
+										</div>
+										<div class="form-group col-md-6">
+											<label for="">Country</label>
+											<input class="form-control" id="" type="text" placeholder="Country">
+										</div>
+										<div class="col-md-12 bottom15">
+											<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Add a Address</a></em>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group col-md-6">
+											<label for="">Phone</label>
+											<input class="form-control" id="" type="text" placeholder="Phone">
+										</div>
+										<div class="form-group col-md-4">
+											<label for="title1">Type</label>
+											<select class="form-control" id="">
+												<option>Landline</option>
+												<option>Mobile</option>
+											</select>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12 bottom15">
+											<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Add a Phone Number</a></em>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group col-md-6">
+											<label for="">Email Address</label>
+											<input class="form-control" id="" type="text" placeholder="Email Address">
+										</div>
+										<div class="col-md-12 bottom15">
+											<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Add a Email Address</a></em>
+										</div>
+									</div>
+									
+									<div class="row">
+										<div class="col-md-12">
+											<div class="form-group col-md-8 pad0">
+												<label>Website</label>
+												<input class="form-control" id="" type="text" placeholder="http://www.example.com">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6"> 
+								<div class="container-fluid pad0">
+									<div class="row bottom15">
+										<div class="col-md-12">
+											<label>Room Types</label>
+										</div>
+										<div class="col-md-3">
+											<div class="input-group">
+												<span class="input-group-addon">Single</span>
+												<input class="form-control textRight" id="" type="text" placeholder="0">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="input-group">
+												<span class="input-group-addon">Twin</span>
+												<input class="form-control textRight" id="" type="text" placeholder="0">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="input-group">
+												<span class="input-group-addon">Double</span>
+												<input class="form-control textRight" id="" type="text" placeholder="0">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="input-group">
+												<span class="input-group-addon">Queen</span>
+												<input class="form-control textRight" id="" type="text" placeholder="0">
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-4 form-group">
+											<label>Sell Price</label>
+											<div class="clear"></div>
+											<div class="input-group">
+												<span class="input-group-addon">$</span>
+												<input class="form-control textRight" id="" type="text" placeholder="0">
+											</div>
+										
+										</div>
+										<div class="col-md-4 form-group">
+											<label>Start Date</label>
+											<input class="form-control" id="" type="text" placeholder="MM/DD/YYYY">
+										</div>
+										<div class="col-md-4 form-group">
+											<label>End Date</label>
+											<input class="form-control" id="" type="text" placeholder="MM/DD/YYYY">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12 bottom15">
+											<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Add a Rate</a></em>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12 form-group">
+											<label for="">Description</label>
+											<textarea class="form-control" id="" placeholder="Description"></textarea>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>	
+						<div class="clear bottom30"></div>
+						<div class="row">
+							<div class="col-md-6">
+								<button type="button" class="btn btn-sm btn-default">Cancel</button>
+							</div>
+							<div class="col-md-6 textRight">
+								<button type="button" class="btn btn-sm btn-success">Create Hotel</button>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+				<!-- -->
+			</div>
+		  </div>
+		  <!--<div class="modal-footer">
+			<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+			<button type="button" class="btn btn-sm btn-success">Save changes</button>
+		  </div>-->
+		</div>
+	</div>
+</div>

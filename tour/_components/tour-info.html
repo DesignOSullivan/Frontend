@@ -1,0 +1,144 @@
+
+    <!-- Tour Information -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<a name="tourinfoSection"></a>
+				<h3> Tour Information </h3>
+			</div>
+		</div>
+	</div>
+	<div class="container container-border">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="container-fluid pad0">
+					<div class="row">
+						<div class="form-group col-md-4">
+							<label for="exampleInputEmail1">Tour Code</label>
+							<input class="form-control" id="tourCode" type="text" placeholder="XXX-99">
+						</div>
+						<div class="form-group col-md-8">
+							<label for="exampleInputEmail1">Tour Name</label>
+							<input class="form-control" id="tourName" type="text" placeholder="Tour Name">
+						</div>
+					</div>
+				</div>
+				<div class="container-fluid pad0">
+					<div class="row bottom15">
+						<div class="form-group col-md-4">
+							<label for="">Final Payment Due</label>
+							<div class="input-group">
+								<span class="input-group-addon">Days Out:</span>
+								<input class="form-control textCenter" id="" type="text" placeholder="95">
+							</div>
+						</div>
+						<div class="form-group col-md-3">
+							<label for="">Deposit Amount</label>
+							<div class="input-group">
+								<span class="input-group-addon">$</span>
+								<input class="form-control textRight" id="" type="text" placeholder="375">
+							</div>
+						</div>
+						
+					</div>
+					<div class="row">
+						<div class="form-group col-md-6">
+							<div class="switch">
+								<input id="pre-tour-toggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
+								<label for="pre-tour-toggle"></label>
+							</div>
+							<div class="switch-label">
+								<label for="pre-tour-toggle">Pre-Tour Option</label>
+							</div>  
+							<div class="clear bottom15"></div>
+						</div>
+					
+						<div class="form-group col-md-6">
+							<div class="switch">
+								<input id="post-tour-toggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
+								<label for="post-tour-toggle"></label>
+							</div>
+							<div class="switch-label">
+								<label for="post-tour-toggle">Post-Tour Extension</label>
+							</div>  
+							<div class="clear bottom15"></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-6">
+							<label for="exampleInputEmail1">Product Manager</label>
+							<input class="form-control" id="" type="text" placeholder="Product Manager">
+						</div>
+					</div>
+					<div class="row bottom15">
+						<div class="col-md-6">
+							<label>OUI World Region</label>
+							<select class="form-control">
+								<option>Please Select...</option>
+								<option>Europe</option>
+								<option>Africa & Middle East</option>
+								<option>Americas</option>
+								<option>Australia & South Pacific</option>
+								<option>Asia & Far East</option>
+							</select>
+						</div>
+					</div>
+					<div class="row bottom15">
+						<div class="col-md-6 locationCountryHolder">
+							<div class="locationCountry">
+								<label>Country </label>
+								<input class="form-control" id="tour-country" type="text" >
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 locationCountryHolder">
+							<a href="" id="addLocationCountry" class="green"><i class="fa fa-plus-circle"></i> <em>Add a Country</em></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="">Tour Description</label>
+					<textarea class="form-control" id="" placeholder="Tour Description"></textarea>
+				</div>
+				<div class="form-group">
+					<label for="exampleInputEmail1">Tour Image</label>
+					<img alt="" src="../file-drop-placeholder.png" class="img-responsive" />
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		$(document).ready(function () {
+			var tourCountries = [
+					"Albania",
+					"Andorra",
+					"Armenia",
+					"Austria",
+					"Azerbaijan",
+					"Belarus",
+					"Belgium",
+					"Bosnia & Herzegovina",
+					"Bulgaria",
+					"Croatia",
+					"Cyprus",
+					"Czech Republic",
+					"Denmark",
+					"Estonia",
+					"Finland",
+					"France"
+				];
+
+			//create AutoComplete UI component
+			$("#tour-country").kendoAutoComplete({
+				dataSource: tourCountries,
+				filter: "startswith",
+				placeholder: "Select Country...",
+				separator: ", "
+			});
+		});
+	</script>
+

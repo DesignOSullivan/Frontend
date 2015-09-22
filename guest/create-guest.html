@@ -37,7 +37,7 @@
                 $("#includeContactInformation").load("_components/contact-information.html"); 
                 $("#includeReservationNew").load("_components/reservation-new.html"); 
                 $("#includeReservationEdit").load("_components/reservation-edit.html"); 
-                $("#includeItinerary").load("_components/itinerary.html"); 
+                $("#includeInfoRequestModal").load("_components/info-request-modal.html"); 
                 $("#includeInternalAir").load("_components/internal-air.html"); 
                 $("#includeTourDirector").load("_components/tour-director.html"); 
                 $("#includeTourPricing").load("_components/tour-pricing.html"); 
@@ -112,108 +112,7 @@
         <div id="includeReservationEdit"></div>
         
         <!-- Modal -->
-        <div class="modal fade" id="myModalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalInfo">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-6 col-xs-8">
-                                    <h3>Reservation Information</h3>
-                                </div>
-                                <div class="col-md-6 col-xs-4">
-                                    <div class="clear bottom25"></div>
-                                    <label>
-                                        <input type="checkbox" id="email" value="" class=""><span class="pad5">Mail</span></label>
-                                    <label><span class="pad5"><input type="checkbox" id="email" value="" class=""></span>Email</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-group col-md-6">
-                                    <div class="input-group noLabel">
-                                        <span class="input-group-addon width210">Preliminary Itinerary - Preliminary</span>
-                                        <input class="form-control" id="mAirItineraryPreliminary" type="text" placeholder="0">
-                                    </div>
-                                    <div class="input-group noLabel">
-                                        <span class="input-group-addon width210">Preliminary Itinerary - Final</span>
-                                        <input class="form-control" id="mAirItineraryFinal" type="text" placeholder="0">
-                                    </div>
-                                    <div class="input-group noLabel">
-                                        <span class="input-group-addon width210">Day by Day</span>
-                                        <input class="form-control" id="mDayByDay" type="text" placeholder="0">
-                                    </div>
-                                    <div class="input-group noLabel">
-                                        <span class="input-group-addon width210">Final Travel Documents</span>
-                                        <input class="form-control" id="mFinalTravelDocuments" type="text" placeholder="0">
-                                    </div>
-                                    <div class="input-group noLabel">
-                                        <span class="input-group-addon width210">General Information</span>
-                                        <input class="form-control" id="mGeneralInformation" type="text" placeholder="0">
-                                    </div>
-                                    <div class="input-group noLabel">
-                                        <span class="input-group-addon width210">Guest Information Form</span>
-                                        <input class="form-control" id="mGuestInformationForm" type="text" placeholder="0">
-                                    </div>
-                                    <div class="input-group noLabel">
-                                        <span class="input-group-addon width210">Insurance Brochure</span>
-                                        <input class="form-control" id="mInsuranceBrochure" type="text" placeholder="0">
-                                    </div>
-                                    <div class="input-group noLabel">
-                                        <span class="input-group-addon width210">Invoice</span>
-                                        <input class="form-control" id="mInvoice" type="text" placeholder="0">
-                                    </div>
-                                    <div class="input-group noLabel">
-                                        <span class="input-group-addon width210">Luggage Tags</span>
-                                        <input class="form-control" id="mLuggageTags" type="text" placeholder="0">
-                                    </div>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <div class="input-group noLabel">
-                                        <span class="input-group-addon width210">Name Badge</span>
-                                        <input class="form-control" id="mNameBadge" type="text" placeholder="0">
-                                    </div>
-                                    <div class="input-group noLabel">
-                                        <span class="input-group-addon width210">Passport Varification From</span>
-                                        <input class="form-control" id="mPassportVarificationForm" type="text" placeholder="0">
-                                    </div>
-                                    <div class="input-group noLabel">
-                                        <span class="input-group-addon width210">Practical Travel Tips</span>
-                                        <input class="form-control" id="mPracticalTravelTips" type="text" placeholder="0">
-                                    </div>
-                                    <div class="input-group noLabel">
-                                        <span class="input-group-addon width210">Reading List</span>
-                                        <input class="form-control" id="mReadingList" type="text" placeholder="0">
-                                    </div>
-                                    <div class="input-group noLabel">
-                                        <span class="input-group-addon width210">Terms and Conditions</span>
-                                        <input class="form-control" id="mTermsAndConditions" type="text" placeholder="0">
-                                    </div>
-                                    <div class="input-group noLabel">
-                                        <span class="input-group-addon width210">Tour Member Evalutaion From</span>
-                                        <input class="form-control" id="mTourMemberEvaluationForm" type="text" placeholder="0">
-                                    </div>
-                                    <div class="input-group noLabel">
-                                        <span class="input-group-addon width210">Tour Member List</span>
-                                        <input class="form-control" id="mTourMemberList" type="text" placeholder="0">
-                                    </div>
-                                    <div class="input-group noLabel">
-                                        <span class="input-group-addon width210">Visa Information</span>
-                                        <input class="form-control" id="mVisaInformation" type="text" placeholder="0">
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-sm btn-success">Submit Request</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        <div id="includeInfoRequestModal"></div>
 
 
         <!-- Tabs -->

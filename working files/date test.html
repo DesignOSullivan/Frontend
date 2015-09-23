@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OUI</title>
+
+
+    <link rel="stylesheet" href="../kendoui/styles/kendo.common-bootstrap.min.css">
+    <link rel="stylesheet" href="../kendoui/styles/kendo.bootstrap.min.css">
+
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-toggle.min.js"></script>
+    <script src="../kendoui/js/kendo.all.min.js"></script>
+    <script src="guest-scripts.js"></script>
+
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/toggle-me-softly.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/font-awesome.css" rel="stylesheet">
+
+
+    <!-- grab all the component modules we need for this page -->
+    <script>
+        $(function () {
+            $("#includeGuestName").load("_components/guest-name.html");
+            $("#includeAddress").load("_components/address.html");
+            $("#includeContactInformation").load("_components/contact-information.html");
+            $("#includeReservationNew").load("_components/reservation-new.html");
+            $("#includeReservationEdit").load("_components/reservation-edit.html");
+            $("#includeInfoRequestModal").load("_components/info-request-modal.html");
+            $("#includeGuestTabs").load("_components/guest-tabs.html");
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div id="example">
+        <div class="demo-section k-header">
+
+            <h4>Show e-mails from:</h4>
+            <input id="datepicker" value="10/10/2011" style="width: 100%" />
+
+            <h4 style="margin-top: 2em;">Add to archive mail from:</h4>
+            <input id="monthpicker" value="November 2011" style="width: 100%" />
+            </p>
+    </div>
+    <script>
+        $(document).ready(function() {
+            // create DatePicker from input HTML element
+            $("#datepicker").kendoDatePicker({format: "dd-MMM-yy"});
+
+            $("#monthpicker").kendoDatePicker({
+                // defines the start view
+                start: "year",
+
+                // defines when the calendar should return date
+                depth: "year",
+
+                // display month and year in the input
+                format: "MMMM yyyy"
+            });
+        });
+    </script>
+    </div>
+
+
+
+    <script>
+        console.log(kendo.parseDate("3/4/2013", "MM/dd/yyyy"));
+    </script>
+</body>

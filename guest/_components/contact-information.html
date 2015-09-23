@@ -18,12 +18,7 @@
                     </div>
                     <div class="form-group col-md-4 col-xs-4">
                         <label for="phoneType">Type</label>
-                        <select class="form-control" id="phoneType">
-                            <option>Home</option>
-                            <option>Moblie</option>
-                            <option>Work</option>
-                            <option>Fax</option>
-                        </select>
+                        <input class="form-control" id="phoneType">
                     </div>
                 </div>
                 <div class="row">
@@ -40,7 +35,7 @@
                     <div class="form-group col-md-4">
                         <div class="clear bottom25"></div>
                         <div class="switch">
-                            <input id="email-promo-toggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                            <input id="email-promo-toggle" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
                             <label for="email-promo-toggle"></label>
                         </div>
                         <div class="switch-label">
@@ -94,3 +89,19 @@
             });
         });
     </script>
+
+<script>
+    $(document).ready(function() {
+        $("#phoneType").kendoDropDownList({
+            dataTextField: "text",
+            dataValueField: "value",
+            dataSource: [
+                { text: "Home", value: "1" },
+                { text: "Mobile", value: "2" },
+                { text: "Work", value: "3" },
+                { text: "Fax", value: "4" }
+            ]
+        });
+    });
+</script>
+

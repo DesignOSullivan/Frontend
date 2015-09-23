@@ -1,3 +1,5 @@
+<script src="guest-tabs.js"></script>
+
 <!-- Tabs -->
 <div id="guestTabs">
     <div class="container pad0">
@@ -76,49 +78,34 @@
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
-                                <div class="input-group noLabel">
-                                    <span class="input-group-addon"><i class="fa fa-calendar fa-lg"></i></span>
-                                    <input class="form-control" id="pCalendar" type="text" placeholder="Date of Birth">
-                                </div>
+                                <label for="pDateOfBirth">Date of Birth</label>
+                                <input id="pDateOfBirth" class="form-control">
                             </div>
                             <div class="form-group col-md-6 col-xs-6">
                                 <label for="pSex">Sex</label>
-                                <select class="form-control" id="pSex">
-                                    <option>Male</option>
-                                    <option>Female</option>
-                                    <option>Other</option>
-                                </select>
+                                <input id="pSex" class="form-control">
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-12 col-xs-12">
                                 <label for="pPlaceOfBirth">Place of Birth</label>
-                                <input class="form-control" id="pPlaceOfBirth" type="text" placeholder="Place of Birth">
+                                <input class="form-control" id="pPlaceOfBirth" placeholder="Place of Birth">
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
-                                <div class="input-group noLabel">
-                                    <span class="input-group-addon"><i class="fa fa-calendar fa-lg"></i></span>
-                                    <input class="form-control" id="pDateOfIssue" type="text" placeholder="Date of Issue">
-                                </div>
+                                <label for="pDateOfIssue">Date of Issue</label>
+                                <input id="pDateOfIssue" class="form-control">
                             </div>
                             <div class="form-group col-md-6">
-                                <div class="input-group noLabel">
-                                    <span class="input-group-addon"><i class="fa fa-calendar fa-lg"></i></span>
-                                    <input class="form-control" id="pDateOfExpiration" type="text" placeholder="Date of Expiration">
-                                </div>
+                                <label for="pDateOfExpiration">Date of Expiration</label>
+                                <input class="form-control" id="pDateOfExpiration">
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-12 col-xs-12">
                                 <label for="pIssuingAuthority">Issuing Authority</label>
-                                <select class="form-control" id="pIssuingAuthority">
-                                    <option></option>
-                                    <option>Port of Miami</option>
-                                    <option>Somewhere Else</option>
-                                    <option>Somewhere Else</option>
-                                </select>
+                                <input id="pIssuingAuthority" class="form-control">
                             </div>
                         </div>
                         <div class="row">
@@ -148,6 +135,72 @@
             </div>
         </div>
     </div>
+
+<!--Passport Scripts-->
+    
+    <script>
+        $("#pDateOfBirth").kendoDatePicker({
+            format: "dd-MMM-yy",
+            start: "century",
+            value: "Select date..."
+        });
+    </script>
+
+    <script>
+        $("#pDateOfIssue").kendoDatePicker({
+            format: "dd-MMM-yy",
+            start: "decade",
+            value: "Select date..."
+        });
+    </script>
+    
+    <script>
+        $("#pDateOfExpiration").kendoDatePicker({
+            format: "dd-MMM-yy",
+            start: "decade",
+            value: "Select date..."
+        });
+    </script>
+
+    
+    <script>
+        $(document).ready(function(){
+            $("#pSex").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select sex...",
+                filter: "startswith",
+                dataSource: [
+                    { text: "Male", value: "1" },
+                    { text: "Female", value: "2" },
+                    { text: "Other", value: "3" }
+                ]
+            });
+        });
+    </script>
+    
+    <script>
+        $(document).ready(function(){
+            $("#pIssuingAuthority").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select issuing authority...",
+                filter: "startswith",
+                dataSource: [
+                    { text: "Port of Miami", value: "1" },
+                    { text: "Other Issuing Authority", value: "1" },
+                    { text: "Other Issuing Authority", value: "2" }
+                ]
+            });
+        });
+    </script>
+    
+   
+  
+<!--/end passport scripts-->
+
+
+
 
     <!-- Health Tab -->
     <div id="health-content" class="tab-pane fade">

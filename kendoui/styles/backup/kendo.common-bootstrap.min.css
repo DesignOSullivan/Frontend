@@ -832,7 +832,7 @@ body .k-touch-scrollbar {
 	box-sizing: border-box
 }
 .form-control.k-widget {
-	padding: 0
+	padding: 7px 10px;
 }
 a.k-button:hover {
 	text-decoration: none
@@ -3179,9 +3179,9 @@ span.k-datepicker, span.k-timepicker, span.k-datetimepicker, span.k-colorpicker,
 	padding-bottom: 6px
 }
 .k-textbox, .k-autocomplete, .k-dropdown-wrap, .k-picker-wrap, .k-numeric-wrap {
-	border-width: 1px;
-	border-style: solid;
-	padding: 0 1.9em 0 0
+	/*border-width: 1px;
+	border-style: solid;*/
+	padding: 0 ;
 }
 .k-numeric-wrap.k-expand-padding {
 	padding-right: 0
@@ -3262,10 +3262,7 @@ span.k-datetimepicker .k-select, span.k-datetimepicker .k-select+.k-select {
 	text-overflow: ellipsis
 }
 .k-textbox>input, .k-autocomplete .k-input, .k-picker-wrap .k-input, .k-numeric-wrap .k-input, .k-dropdown-wrap .k-input, .k-selectbox .k-input {
-	height: 1.94em;
-	line-height: 1.94em;
-	padding: .177em 0;
-	text-indent: .8em;
+	padding: 0;
 	border: 0;
 	margin: 0
 }
@@ -3530,6 +3527,8 @@ span.k-numerictextbox {
 .k-colorpalette .k-item.k-state-selected {
 	z-index: 100;
 	background: transparent;
+	-webkit-box-shadow: 0 1px 4px #000, inset 0 0 3px #fff;
+	box-shadow: 0 1px 4px #000, inset 0 0 3px #fff;
 	position: relative
 }
 .k-flatcolorpicker {
@@ -3574,11 +3573,15 @@ div.k-flatcolorpicker {
 	margin-left: -5px;
 	margin-top: -5px;
 	border-radius: 6px;
+	-webkit-box-shadow: 0 1px 2px #444;
+	box-shadow: 0 1px 2px #444;
 	background: transparent
 }
 .k-flatcolorpicker .k-hsv-rectangle .k-draghandle:hover, .k-flatcolorpicker .k-hsv-rectangle .k-draghandle:focus {
 	background: transparent;
 	border-color: #fff;
+	-webkit-box-shadow: 0 1px 5px #000;
+	box-shadow: 0 1px 5px #000
 }
 .k-flatcolorpicker .k-hsv-rectangle.k-dragging, .k-flatcolorpicker .k-hsv-rectangle.k-dragging * {
 	cursor: none
@@ -3587,6 +3590,10 @@ div.k-flatcolorpicker {
 	height: 20px;
 	width: 90%;
 	margin: 0 5%
+}
+.k-flatcolorpicker .k-slider-horizontal .k-slider-track {
+	-webkit-box-shadow: 0 1px 0 #fff, 0 -1px 0 #999;
+	box-shadow: 0 1px 0 #fff, 0 -1px 0 #999
 }
 .k-flatcolorpicker .k-hue-slider, .k-flatcolorpicker .k-transparency-slider {
 	display: block
@@ -7898,66 +7905,6 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', end
 .k-popup>.k-group-header, .k-popup>.k-virtual-wrap>.k-group-header {
 	text-align: right
 }
-@font-face {
-	font-family: "DejaVu Sans";
-	src: url("fonts/DejaVu/DejaVuSans.ttf") format("truetype")
-}
-@font-face {
-	font-family: "DejaVu Sans";
-	font-weight: bold;
-	src: url("fonts/DejaVu/DejaVuSans-Bold.ttf") format("truetype")
-}
-@font-face {
-	font-family: "DejaVu Sans";
-	font-style: italic;
-	src: url("fonts/DejaVu/DejaVuSans-Oblique.ttf") format("truetype")
-}
-@font-face {
-	font-family: "DejaVu Sans";
-	font-weight: bold;
-	font-style: italic;
-	src: url("fonts/DejaVu/DejaVuSans-BoldOblique.ttf") format("truetype")
-}
-@font-face {
-	font-family: "DejaVu Serif";
-	src: url("fonts/DejaVu/DejaVuSerif.ttf") format("truetype")
-}
-@font-face {
-	font-family: "DejaVu Serif";
-	font-weight: bold;
-	src: url("fonts/DejaVu/DejaVuSerif-Bold.ttf") format("truetype")
-}
-@font-face {
-	font-family: "DejaVu Serif";
-	font-style: italic;
-	src: url("fonts/DejaVu/DejaVuSerif-Italic.ttf") format("truetype")
-}
-@font-face {
-	font-family: "DejaVu Serif";
-	font-weight: bold;
-	font-style: italic;
-	src: url("fonts/DejaVu/DejaVuSerif-BoldItalic.ttf") format("truetype")
-}
-@font-face {
-	font-family: "DejaVu Mono";
-	src: url("fonts/DejaVu/DejaVuSansMono.ttf") format("truetype")
-}
-@font-face {
-	font-family: "DejaVu Mono";
-	font-weight: bold;
-	src: url("fonts/DejaVu/DejaVuSansMono-Bold.ttf") format("truetype")
-}
-@font-face {
-	font-family: "DejaVu Mono";
-	font-style: italic;
-	src: url("fonts/DejaVu/DejaVuSansMono-Oblique.ttf") format("truetype")
-}
-@font-face {
-	font-family: "DejaVu Mono";
-	font-weight: bold;
-	font-style: italic;
-	src: url("fonts/DejaVu/DejaVuSansMono-BoldOblique.ttf") format("truetype")
-}
 .k-widget.k-tabstrip {
 	background-color: transparent;
 	background-image: none;
@@ -7992,7 +7939,7 @@ input.k-textbox {
 	height: 2.43em
 }
 .k-textbox>input, .k-autocomplete .k-input, .k-picker-wrap .k-input, .k-numeric-wrap .k-input, .k-dropdown-wrap .k-input, .k-selectbox .k-input {
-	padding: 4px 0 3px 0
+	
 }
 .k-numerictextbox .k-link {
 	height: 1.15em

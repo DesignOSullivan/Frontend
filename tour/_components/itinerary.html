@@ -1,7 +1,9 @@
+<div class="clear bottom15">
+</div>
 	<!-- Itinerary -->
     <div class="container">
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-12" style="margin-bottom: -45px;">
 				<h3>
 					<a name="itinerarySection"></a>
 					Itinerary
@@ -48,10 +50,10 @@
 						<td><input class="form-control" placeholder="Check-In" size="1"></input></td>
 						<td><input class="form-control" placeholder="Nights" size="1"></input></td>
 						<td><input class="form-control" placeholder="Check-Out" size="1"></input></td>
-						<td><input class="form-control" id="tourCode" type="text" placeholder="Accommodation Name"></td>
-						<td><a data-toggle="modal" data-target="#accomModal" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search </a></td>
-						<td><input class="form-control" id="tourName" type="text" placeholder="City"></td>
-						<td><input class="form-control" id="tourName" type="text" placeholder="Country"></td>
+						<td><input class="form-control" id="legAccom" type="text" placeholder="Accommodation Name"></td>
+						<td><a data-toggle="modal" data-target="#accomModal" class="btn btn-success btn-sm"><i class="fa fa-search"></i> Search </a></td>
+						<td><input class="form-control" id="legCities" type="text" placeholder="City"></td>
+						<td><input class="form-control" id="legCountries" type="text" placeholder="Country"></td>
 						<td valign="middle">
 							<div class="clear bottom5"></div>
 							<div class="switch">
@@ -68,32 +70,20 @@
 				</table>
 				<div class="clear bottom15"></div>
 				<div class="center">
-					<a href="" class="textCenter"><span class="glyphicon glyphicon-list"></span> View Direct Flow</a>
+					<a href="" class="textCenter"><i class="fa fa-list"></i>  View Direct Flow</a>
 				</div>
 				<hr />
 			</div>
 			<div class="col-md-4">
 				<div class="form-group">
-					<label for="exampleInputEmail1">In Country Pre-Night Accommodation</label>
-					<select class="form-control">
-						<option selected>Please Select...</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
-					</select>
+					<label for="legPreNightAccom">In Country Pre-Night Accommodation</label>
+					<input class="form-control" id="legPreNightAccom" type="text" placeholder="Accommodation Name">
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="form-group">
-					<label for="exampleInputEmail1">In Country Post-Night Accommodation</label>
-					<select class="form-control">
-						<option selected>Please Select...</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
-					</select>
+					<label for="legPostNightAccom">In Country Post-Night Accommodation</label>
+					<input class="form-control" id="legPostNightAccom" type="text" placeholder="Accommodation Name">
 				</div>
 			</div>
 			<div class="clear"></div>
@@ -119,7 +109,7 @@
 							<a href="" id="accomModal2-link" class="green"><i class="fa fa-plus-circle"></i> Add New Accommodation</a>
 						</div>
 						<div class="col-md-4 textCenter"> 
-							<a href="" data-dismiss="modal"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search Again</a>
+							<a href="" data-dismiss="modal"><i class="fa fa-search"></i> Search Again</a>
 						</div>
 						<div class="col-md-2"></div>
 					</div>
@@ -127,10 +117,18 @@
 				<!-- -->
 				<div class="displayNone" id="accomModal2">
 					<div class="row">
-						<div class="col-md-12 textCenter"> 
+						<div class="col-md-12 textCenter bottom15"> 
 							<h3>Does this accommodation have a gound operator?</h3>
-							<a href="" id="accomModal-addAccom-link" class="btn btn-default">No</a>&nbsp&nbsp;
-							<a href="" id="accomModal-searchOperator-link" class="btn btn-default">Yes</a>
+						</div>
+						<div class="col-md-3">
+						</div>
+						<div class="col-md-3 textCenter">
+							<a href="" id="accomModal-addAccom-link" class="btn btn-default btn-sm" style="width: 33%;">No</a>
+						</div>
+						<div class="col-md-3 textCenter">
+							<a href="" id="accomModal-searchOperator-link" class="btn btn-success btn-sm" style="width: 33%;">Yes</a>
+						</div>
+						<div class="col-md-3">
 						</div>
 					</div>	
 				</div>
@@ -149,14 +147,14 @@
 									<th>Country</th>
 								</tr>
 								<tr>
-									<td><span class="glyphicon glyphicon-plus green"></span> Irish Adventures</td>
+									<td><a href="" class="green"><i class="fa fa-plus-circle"></i> Irish Adventures</a></td>
 									<td>353 87 419 0318</td>
 									<td>225 Green Street</td>
 									<td>Dublin</td>
 									<td>Ireland</td>
 								</tr>
 								<tr>
-									<td><span class="glyphicon glyphicon-plus green"></span> Go Ireland</td>
+									<td><a href="" class="green"><i class="fa fa-plus-circle"></i> Go Ireland</a></td>
 									<td>353 87 514 9543</td>
 									<td>8893 Farley Court</td>
 									<td>Cork</td>
@@ -166,7 +164,7 @@
 							<div class="clear bottom15"></div>
 							<div class="textCenter">
 								<a href="" id="accomModal-addOperator-link" class="green"><i class="fa fa-plus-circle"></i> Add New Ground Operator</a>&nbsp;&nbsp;&nbsp;&nbsp;
-								<a href=""><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search Again (not functional)</a>
+								<a href=""><i class="fa fa-search"></i> Search Again</a>
 							</div>
 						</div>
 					</div>	
@@ -367,7 +365,7 @@
 						<div class="col-md-6">
 							<button type="button" class="btn btn-sm btn-default">Cancel</button>
 						</div>
-						<div class="col-md-6 textRight">
+						<div class="col-md-6 textRight digits">
 							<button type="button" class="btn btn-sm btn-success">Create Operator</button>
 						</div>
 					</div>
@@ -388,14 +386,14 @@
 									<th>Country</th>
 								</tr>
 								<tr>
-									<td><span class="glyphicon glyphicon-plus green"></span> The Dublin Inn</td>
+									<td><i class="fa fa-plus-circle"></i> The Dublin Inn</td>
 									<td>353 01 874 9202</td>
 									<td>777 Irish Road</td>
 									<td>Dublin</td>
 									<td>Ireland</td>
 								</tr>
 								<tr>
-									<td><span class="glyphicon glyphicon-plus green"></span> Cork Bed and Breakfast</td>
+									<td><i class="fa fa-plus-circle"></i> Cork Bed and Breakfast</td>
 									<td>353 71 98 2222</td>
 									<td>9801 Celtic Way</td>
 									<td>Cork</td>
@@ -405,7 +403,7 @@
 							<div class="clear bottom15"></div>
 							<div class="textCenter">
 								<a href="" id="accomModal-addOperator-link" class="green"><i class="fa fa-plus-circle"></i> Add New Accommodation</a>&nbsp;&nbsp;&nbsp;&nbsp;
-								<a href=""><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search Again (not functional)</a>
+								<a href=""><i class="fa fa-search"></i> Search Again (not functional)</a>
 							</div>
 						</div>
 					</div>	
@@ -536,25 +534,25 @@
 										<div class="col-md-3">
 											<div class="input-group">
 												<span class="input-group-addon">Single</span>
-												<input class="form-control textRight" id="" type="text" placeholder="0">
+												<input class="form-control textRight digits" id="" type="text" placeholder="0">
 											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="input-group">
 												<span class="input-group-addon">Twin</span>
-												<input class="form-control textRight" id="" type="text" placeholder="0">
+												<input class="form-control textRight digits" id="" type="text" placeholder="0">
 											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="input-group">
 												<span class="input-group-addon">Double</span>
-												<input class="form-control textRight" id="" type="text" placeholder="0">
+												<input class="form-control textRight digits" id="" type="text" placeholder="0">
 											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="input-group">
 												<span class="input-group-addon">Queen</span>
-												<input class="form-control textRight" id="" type="text" placeholder="0">
+												<input class="form-control textRight digits" id="" type="text" placeholder="0">
 											</div>
 										</div>
 									</div>
@@ -574,7 +572,7 @@
 							<div class="col-md-6">
 								<button type="button" class="btn btn-sm btn-default">Cancel</button>
 							</div>
-							<div class="col-md-6 textRight">
+							<div class="col-md-6 textRight digits">
 								<button type="button" class="btn btn-sm btn-success">Create Cruise</button>
 							</div>
 						</div>
@@ -664,25 +662,25 @@
 										<div class="col-md-3">
 											<div class="input-group">
 												<span class="input-group-addon">Single</span>
-												<input class="form-control textRight" id="" type="text" placeholder="0">
+												<input class="form-control textRight digits" id="" type="text" placeholder="0">
 											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="input-group">
 												<span class="input-group-addon">Twin</span>
-												<input class="form-control textRight" id="" type="text" placeholder="0">
+												<input class="form-control textRight digits" id="" type="text" placeholder="0">
 											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="input-group">
 												<span class="input-group-addon">Double</span>
-												<input class="form-control textRight" id="" type="text" placeholder="0">
+												<input class="form-control textRight digits" id="" type="text" placeholder="0">
 											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="input-group">
 												<span class="input-group-addon">Queen</span>
-												<input class="form-control textRight" id="" type="text" placeholder="0">
+												<input class="form-control textRight digits" id="" type="text" placeholder="0">
 											</div>
 										</div>
 									</div>
@@ -692,7 +690,7 @@
 											<div class="clear"></div>
 											<div class="input-group">
 												<span class="input-group-addon">$</span>
-												<input class="form-control textRight" id="" type="text" placeholder="0">
+												<input class="form-control textRight digits" id="" type="text" placeholder="0">
 											</div>
 										
 										</div>
@@ -725,7 +723,7 @@
 							<div class="col-md-6">
 								<button type="button" class="btn btn-sm btn-default">Cancel</button>
 							</div>
-							<div class="col-md-6 textRight">
+							<div class="col-md-6 textRight digits">
 								<button type="button" class="btn btn-sm btn-success">Create Hotel</button>
 							</div>
 						</div>
@@ -742,3 +740,153 @@
 		</div>
 	</div>
 </div>
+
+<script>
+$(document).ready(function () {
+				
+			var countries = [
+					"United States",
+					"Albania",
+					"Andorra",
+					"Armenia",
+					"Austria",
+					"Azerbaijan",
+					"Belarus",
+					"Belgium",
+					"Bosnia & Herzegovina",
+					"Bulgaria",
+					"Croatia",
+					"Cyprus",
+					"Czech Republic",
+					"Denmark",
+					"Estonia",
+					"Finland",
+					"France",
+					"Ireland"
+				];
+				
+				var cities = [
+					"Cork",
+					"Dublin",
+					"Dublin/Leixlip",
+					"Galway",
+					"Killarney",
+					"Knock",
+					"Shannon",
+					"Sligo",
+					"Waterford"
+				];
+				
+				var accommodations = [
+					"Ashling Hotel Dublin",
+					"Ballsbridge Hotel",
+					"Citywest Hotel",
+					"Clarion Hotel Dublin Liffey Valley",
+					"Galway Bay Hotel",
+					"Harveys Point",
+					"Knightsbrook Hotel & Golf Resort",
+					"Osprey Hotel & Spa",
+					"Redcastle Hotel",
+					"Seafield Golf & Spa Hotel",
+					"Solis Lough Eske Castle",
+					"The Croke Park Hotel",
+					"The Europe Hotel & Resort",
+					"The Gibson Hotel",
+					"The Gresham Hotel"
+				];
+				
+			//create AutoComplete UI component
+			$("#legCities").kendoAutoComplete({
+				dataSource: cities,
+				filter: "startswith",
+				placeholder: "City",
+				separator: ", "
+			});
+			//---------
+			$("#legCountry").kendoAutoComplete({
+				dataSource: countries,
+				filter: "startswith",
+				placeholder: "Country",
+				separator: ", "
+			});
+			//---------
+			$("#legAccom").kendoAutoComplete({
+				dataSource: accommodations,
+				filter: "startswith",
+				placeholder: "Accommodation Name",
+				separator: ", "
+			});
+			//---------
+			$("#legPreNightAccom").kendoAutoComplete({
+				dataSource: accommodations,
+				filter: "startswith",
+				placeholder: "Accommodation Name",
+				separator: ", "
+			});
+			//---------
+			
+			$("#legPostNightAccom").kendoAutoComplete({
+				dataSource: accommodations,
+				filter: "startswith",
+				placeholder: "Accommodation Name",
+				separator: ", "
+			});
+			//---------
+			
+			
+			/* ITIN MODAL STUFF */	
+				$('#accomModal2-link').click(function(){
+						$('#accomModal1').slideUp();
+						$('#accomModal2').removeClass('displayNone').slideDown();
+						return false;
+				});
+				
+				$('#accomModal-searchOperator-link').click(function(){
+						$('#accomModal2').slideUp();
+						$('#accomModal-searchOperator').removeClass('displayNone').slideDown();
+						return false;
+				});
+				
+				
+				$('#accomModal-addOperator-link').click(function(){
+						$('#accomModal-searchOperator').slideUp();
+						$('#accomModal-addOperator').removeClass('displayNone').slideDown();
+						return false;
+				});
+				
+				
+				$('#accomModal-searchAccom-link').click(function(){
+						$('#accomModal2').slideUp();
+						$('#accomModal-searchAccom').removeClass('displayNone').slideDown();
+						return false;
+				});
+				
+				$('#accomModal-addAccom-link').click(function(){
+						$('#accomModal2').slideUp();
+						$('#accomModal-addAccom').removeClass('displayNone').slideDown();
+						return false;
+				});
+				
+				$('#accomModal-addCruise').slideUp('');
+				
+				$('#accomModal-addHotelCruise-trigger').change(function(){
+					if ($('#accomModal-addHotel').is(':visible')) {
+						$('#accomModal-addHotel').slideUp('');
+						$('#accomModal-addCruise').slideDown('');
+						
+					}
+					else {
+						$('#accomModal-addCruise').slideUp('');
+						$('#accomModal-addHotel').slideDown('');
+						
+					
+					}
+					if ($('#accomModal-addHotel').hasClass('displayNone')) {
+						$('#accomModal-addHotel').removeClass('displayNone');
+					}
+						
+					
+				});
+	});
+	
+</script>

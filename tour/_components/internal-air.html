@@ -25,9 +25,9 @@
 					</tr>
 					<tr>
 						<td><input class="form-control" placeholder="Day" size="1"></input></td>
-						<td><input class="form-control" placeholder="Airline Name"></input></td>
-						<td><input class="form-control" placeholder="Departure City, Country"></input></td>
-						<td><input class="form-control" placeholder="Arrival City, Country"></input></td>
+						<td><input class="form-control" id="internalAirComponentAirline" placeholder="Airline Name"></input></td>
+						<td><input class="form-control" id="internalAirDepartCity" placeholder="Departure City, Country"></input></td>
+						<td><input class="form-control" id="internalAirArrivalCity" placeholder="Arrival City, Country"></input></td>
 						<td valign="middle">
 							<div class="switch">
 								<input id="oui-book-air" class="cmn-toggle cmn-toggle-round" type="checkbox">
@@ -44,19 +44,75 @@
 				<div class="clear bottom15"></div>
 				<hr />
 			</div>
+			<!--
 			<div class="col-md-4">
 				<div class="form-group">
 					<label for="exampleInputEmail1">Airline Name</label>
-					<select class="form-control">
-						<option selected>Please Select...</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
-					</select>
+					<input class="form-control" id="addAirline">
 				</div>
 				<a href="#add-pattern-itinerary" class="green"><i class="fa fa-plus-circle"></i> <em>Add a Airline</em></a>
-			</div>
+			</div>-->
 			<div class="clear"></div>
 		</div>
 	</div>
+	
+<script>
+$(document).ready(function () {
+				
+			var airlines = [
+				"Aer Arann Islands",
+				"Aer Lingus",
+				"ASL Airlines Ireland",
+				"CityJet",
+				"Norwegian Long Haul",
+				"Ryanair",
+				"Stobart Air"
+				];
+				
+				var citiesCountry = [
+					"Cork, Ireland",
+					"Dublin, Ireland",
+					"Dublin/Leixlip, Ireland",
+					"Galway, Ireland",
+					"Killarney, Ireland",
+					"Knock, Ireland",
+					"Shannon, Ireland",
+					"Sligo, Ireland",
+					"Waterford, Ireland"
+				];
+				
+				
+			//create AutoComplete UI component
+			$("#internalAirComponentAirline").kendoAutoComplete({
+				dataSource: airlines,
+				filter: "startswith",
+				placeholder: "Airline Name",
+				separator: ", "
+			});
+			//---------
+			$("#addAirline").kendoAutoComplete({
+				dataSource: airlines,
+				filter: "startswith",
+				placeholder: "Airline Name",
+				separator: ", "
+			});
+			//---------
+			$("#internalAirDepartCity").kendoAutoComplete({
+				dataSource: citiesCountry,
+				filter: "startswith",
+				placeholder: "City, Country",
+				separator: ", "
+			});
+			//---------
+			$("#internalAirArrivalCity").kendoAutoComplete({
+				dataSource: citiesCountry,
+				filter: "startswith",
+				placeholder: "City, Country",
+				separator: ", "
+			});
+			//---------
+			
+	});
+	
+	
+</script>

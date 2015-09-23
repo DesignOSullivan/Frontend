@@ -12,10 +12,10 @@
 		<div class="row">
 			<div class="col-md-6">
 				<div class="container-fluid pad0">
-					<div class="row">
+					<div class="row bottom15">
 						<div class="form-group col-md-4">
 							<label for="exampleInputEmail1">Tour Code</label>
-							<input class="form-control" id="tourCode" type="text" placeholder="XXX-99">
+							<input class="form-control" id="tourCode" type="text" placeholder="ABC-99">
 						</div>
 						<div class="form-group col-md-8">
 							<label for="exampleInputEmail1">Tour Name</label>
@@ -64,30 +64,23 @@
 							<div class="clear bottom15"></div>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row bottom15">
 						<div class="form-group col-md-6">
 							<label for="exampleInputEmail1">Product Manager</label>
-							<input class="form-control" id="" type="text" placeholder="Product Manager">
+							<input class="form-control" id="productManager" type="text" placeholder="Product Manager">
 						</div>
 					</div>
 					<div class="row bottom15">
-						<div class="col-md-6">
+						<div class="col-md-6 form-group">
 							<label>OUI World Region</label>
-							<select class="form-control">
-								<option>Please Select...</option>
-								<option>Europe</option>
-								<option>Africa & Middle East</option>
-								<option>Americas</option>
-								<option>Australia & South Pacific</option>
-								<option>Asia & Far East</option>
-							</select>
+							<input id="ouiWorldRegion" class="form-control">
 						</div>
 					</div>
-					<div class="row bottom15">
-						<div class="col-md-6 locationCountryHolder">
+					<div class="row">
+						<div class="col-md-6 form-group locationCountryHolder">
 							<div class="locationCountry">
 								<label>Country </label>
-								<input class="form-control" id="tour-country" type="text" >
+								<input class="form-control" id="tourCountry" type="text" >
 							</div>
 						</div>
 					</div>
@@ -113,7 +106,32 @@
 	
 	<script>
 		$(document).ready(function () {
-			var tourCountries = [
+			 
+			 
+			$("#ouiWorldRegion").kendoDropDownList({
+			  dataTextField: "text",
+			  dataValueField: "value",
+			  dataSource: [
+				{ text: "Europe", value: "1" },
+				{ text: "Africa & Middle East", value: "2" },
+				{ text: "Americas", value: "3" },
+				{ text: "Australia & South Pacific", value: "4" },
+				{ text: "Asia & Far East", value: "5" }
+			  ]
+			});
+			
+			//---------
+			
+			var names = [
+					"Daniel O'Sullivan",
+					"Gavin Dock",
+					"Joseph Bonanno",
+					"Justin Beckett",
+					"Patrick Nord",
+					"Steve Fleishaker"
+				];
+				
+			var countries = [
 					"Albania",
 					"Andorra",
 					"Armenia",
@@ -129,16 +147,29 @@
 					"Denmark",
 					"Estonia",
 					"Finland",
-					"France"
+					"France",
+					"Ireland"
 				];
 
-			//create AutoComplete UI component
-			$("#tour-country").kendoAutoComplete({
-				dataSource: tourCountries,
+
+			$("#productManager").kendoAutoComplete({
+				dataSource: names,
 				filter: "startswith",
-				placeholder: "Select Country...",
+				placeholder: "Product Manager",
 				separator: ", "
 			});
+			
+			//---------
+			
+			//create AutoComplete UI component
+			$("#tourCountry").kendoAutoComplete({
+				dataSource: countries,
+				filter: "startswith",
+				placeholder: "Select Country",
+				separator: ", "
+			});
+			//---------
+			
 		});
 	</script>
 

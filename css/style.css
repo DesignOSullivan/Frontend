@@ -17,9 +17,11 @@ th{color: #54698d;}
 .input-group-addon{ background: #E2EFFF ;}
 .form-group select{height: 35px;}
 .catalogLabel{margin-top: 10px;}
+.catalogLabel .fa{color: #fd5c63;}
 .catalogInput .input-group{width: 120px;}
-
 .k-dropdown{border-width: 1px;}
+
+i.fa{font-size: 15px; top: 2px;}
 
 textarea{min-height: 150px;}
 

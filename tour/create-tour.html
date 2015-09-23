@@ -7,27 +7,20 @@
 <title>OUI</title>
 
 
-    <link href="../kendoui/content/shared/styles/examples-offline.css" rel="stylesheet">
-    <link href="../kendoui/styles/kendo.rtl.min.css" rel="stylesheet">
-    <link href="../kendoui/styles/kendo.default.min.css" rel="stylesheet">
-	
-    <link href="../kendoui/styles/kendo.common-bootstrap.min.css" rel="stylesheet">
-	
-	<link href="../css/bootstrap.css" rel="stylesheet">
-	
-	<link href="../css/toggle-me-softly.css" rel="stylesheet">
-	<link href="../css/style.css" rel="stylesheet">
-	<link href="../css/font-awesome.css" rel="stylesheet">
-		
-	
+	<link rel="stylesheet" href="../kendoui/styles/kendo.common-bootstrap.min.css">
+	<link rel="stylesheet" href="../kendoui/styles/kendo.bootstrap.min.css">
+
 		
 	<script src="../js/jquery.min.js"></script> 
 	<script src="../js/bootstrap.min.js"></script> 
 	<script src="../js/bootstrap-toggle.min.js"></script> 
-	<script src="../js/scripts.js"></script>
-
     <script src="../kendoui/js/kendo.all.min.js"></script>
+	<script src="create-tour-scripts.js"></script>
    
+	<link href="../css/bootstrap.css" rel="stylesheet">
+	<link href="../css/toggle-me-softly.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/font-awesome.css" rel="stylesheet">
    
    <!-- grab all the component modules we need for this page -->
 	<script> 
@@ -44,6 +37,42 @@
 		  $("#includeCatalogPricing").load("_components/catalog-pricing.html"); 
 		  $("#includeZoneFares").load("_components/zone-fares.html"); 
 		});
+		
+		
+		$(function() {
+			  $('a[href*=#]:not([href=#])').click(function() {
+				if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
+				  var target = $(this.hash);
+				  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				  if (target.length) {
+					$('html,body').animate({
+					  scrollTop: target.offset().top + (-150)
+					}, 1000);
+					return false;
+				  }
+				}
+			  });
+			});
+
+		
+	
+		$('#flyoutNavTrigger').click(function() {
+			if ($('#flyoutNav').hasClass('closed')){
+				$('#flyoutNav').removeClass('closed');
+				$('#flyoutList').removeClass('displayNone');
+				$('#flyoutNav span.glyphicon').removeClass('glyphicon-chevron-right');
+				$('#flyoutNav span.glyphicon').addClass('glyphicon-chevron-left');
+			}
+			else{
+				$('#flyoutNav').addClass('closed');	
+				$('#flyoutList').addClass('displayNone');
+				$('#flyoutNav span.glyphicon').addClass('glyphicon-chevron-right');
+				$('#flyoutNav span.glyphicon').removeClass('glyphicon-chevron-left');
+			}
+			
+		});
+		
+	
     </script> 
 	
 </head>
@@ -163,8 +192,7 @@
 </div>
 
 </form>
-<style>
-</style>
+
 
 <div id="flyoutNav" class="closed">
 	<a id="flyoutNavTrigger">

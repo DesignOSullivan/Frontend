@@ -19,15 +19,19 @@
 					<tr>
 						<th>Day</th>
 						<th>Airline Name</th>
-						<th>Departure City, Country</th>
-						<th>Arrival City, Country</th>
+						<th>Departure City</th>
+						<th>Departure Country</th>
+						<th>Arrival City</th>
+						<th>Arrival Country</th>
 						<th>OUI Book</th>
 					</tr>
 					<tr>
-						<td><input class="form-control" placeholder="Day" size="1"></input></td>
-						<td><input class="form-control" id="internalAirComponentAirline" placeholder="Airline Name"></input></td>
-						<td><input class="form-control" id="internalAirDepartCity" placeholder="Departure City, Country"></input></td>
-						<td><input class="form-control" id="internalAirArrivalCity" placeholder="Arrival City, Country"></input></td>
+						<td><input class="form-control" placeholder="Day" style="width: 50px"></input></td>
+						<td><input class="form-control" id="internalAirComponentAirline"></input></td>
+						<td><input class="form-control" id="internalAirDepartCity" ></input></td>
+						<td><input class="form-control" id="internalAirDepartCountry"></input></td>
+						<td><input class="form-control" id="internalAirArrivalCity" ></input></td>
+						<td><input class="form-control" id="internalAirArrivalCountry"></input></td>
 						<td valign="middle">
 							<div class="switch">
 								<input id="oui-book-air" class="cmn-toggle cmn-toggle-round" type="checkbox">
@@ -57,17 +61,39 @@ $(document).ready(function () {
 				"Stobart Air"
 				];
 				
-				var citiesCountry = [
-					"Cork, Ireland",
-					"Dublin, Ireland",
-					"Dublin/Leixlip, Ireland",
-					"Galway, Ireland",
-					"Killarney, Ireland",
-					"Knock, Ireland",
-					"Shannon, Ireland",
-					"Sligo, Ireland",
-					"Waterford, Ireland"
+				var countries = [
+					"United States",
+					"Albania",
+					"Andorra",
+					"Armenia",
+					"Austria",
+					"Azerbaijan",
+					"Belarus",
+					"Belgium",
+					"Bosnia & Herzegovina",
+					"Bulgaria",
+					"Croatia",
+					"Cyprus",
+					"Czech Republic",
+					"Denmark",
+					"Estonia",
+					"Finland",
+					"France",
+					"Ireland"
 				];
+				
+				var cities = [
+					"Cork",
+					"Dublin",
+					"Dublin/Leixlip",
+					"Galway",
+					"Killarney",
+					"Knock",
+					"Shannon",
+					"Sligo",
+					"Waterford"
+				];
+				
 				
 				
 			//create AutoComplete UI component
@@ -85,20 +111,33 @@ $(document).ready(function () {
 				separator: ", "
 			});
 			//---------
-			$("#internalAirDepartCity").kendoComboBox({
-				dataSource: citiesCountry,
-				filter: "startswith",
-				placeholder: "City, Country",
-				separator: ", "
-			});
-			//---------
 			$("#internalAirArrivalCity").kendoComboBox({
-				dataSource: citiesCountry,
+				dataSource: cities,
 				filter: "startswith",
-				placeholder: "City, Country",
+				placeholder: "Arrival City",
 				separator: ", "
 			});
 			//---------
+			$("#internalAirArrivalCountry").kendoComboBox({
+				dataSource: countries,
+				filter: "startswith",
+				placeholder: "Arrival Country",
+				separator: ", "
+			});
+			//---------
+			$("#internalAirDepartCity").kendoComboBox({
+				dataSource: cities,
+				filter: "startswith",
+				placeholder: "Departure City",
+				separator: ", "
+			});
+			//---------
+			$("#internalAirDepartCountry").kendoComboBox({
+				dataSource: countries,
+				filter: "startswith",
+				placeholder: "Departure Country",
+				separator: ", "
+			});
 			
 	});
 	

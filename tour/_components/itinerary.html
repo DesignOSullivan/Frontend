@@ -14,7 +14,7 @@
 		<div class="row">
 			<div class="col-md-12 center">
 				<ul class="nav nav-tabs alt-color" role="tablist">
-					<li role="presentation" id="" class="active"><a href="#base-tour-content" role="tab" data-toggle="tab">Pattern A</a></li>
+					<li role="presentation" class="active"><a href="#base-tour-content" role="tab" data-toggle="tab">Pattern A</a></li>
 					<li role="presentation"><a href="#add-pattern-itinerary" class="green"><i class="fa fa-plus-circle"></i></a></li>
 				</ul>
 			</div>
@@ -50,10 +50,10 @@
 						<td><input class="form-control" placeholder="Check-In" size="1"></input></td>
 						<td><input class="form-control" placeholder="Nights" size="1"></input></td>
 						<td><input class="form-control" placeholder="Check-Out" size="1"></input></td>
-						<td><input class="form-control" id="legAccom" type="text" placeholder="Accommodation Name"></td>
+						<td><input class="form-control" id="legAccom" type="text"></td>
 						<td><a data-toggle="modal" data-target="#accomModal" class="btn btn-success btn-sm"><i class="fa fa-search"></i> Search </a></td>
-						<td><input class="form-control" id="legCities" type="text" placeholder="City"></td>
-						<td><input class="form-control" id="legCountries" type="text" placeholder="Country"></td>
+						<td><input class="form-control" id="legCity" type="text"></td>
+						<td><input class="form-control" id="legCountry" type="text"></td>
 						<td valign="middle">
 							<div class="clear bottom5"></div>
 							<div class="switch">
@@ -180,12 +180,12 @@
 								<div class="row">
 									<div class="form-group col-md-12">
 										<label for="exampleInputEmail1">Ground Operator Name</label>
-										<input class="form-control" id="" type="text" placeholder="Ground Operator Name">
+										<input class="form-control" type="text" placeholder="Ground Operator Name">
 									</div>
 									
 									<div class="form-group col-md-6">
 										<label for="">Phone</label>
-										<input class="form-control" id="" type="text" placeholder="Phone">
+										<input class="form-control" type="text" placeholder="Phone">
 									</div>
 									<div class="form-group col-md-4">
 										<label for="title1">Type</label>
@@ -196,25 +196,25 @@
 									</div>
 									<div class="form-group col-md-2">
 										<label for="title1">Ext.</label>
-										<input class="form-control" id="" type="text" placeholder="Ext">
+										<input class="form-control" type="text" placeholder="Ext">
 									</div>
 									<div class="col-md-12 bottom15">
-										<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Add a Phone Number</a></em>
+										<em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add a Phone Number</a></em>
 									</div>
 									
 									<div class="form-group col-md-6">
 										<label for="">Email Address</label>
-										<input class="form-control" id="" type="text" placeholder="Email Address">
+										<input class="form-control" type="text" placeholder="Email Address">
 									</div>
 									<div class="col-md-12 bottom15">
-										<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Add a Email Address</a></em>
+										<em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add a Email Address</a></em>
 									</div>
 									
 									<div class="col-md-12">
 										<div class="form-group col-md-8 pad0">
 											<div class="input-group">
 												<span class="input-group-addon">Skype.com/</span>
-												<input class="form-control" id="" type="text" placeholder="User Name (Optional)">
+												<input class="form-control" type="text" placeholder="User Name (Optional)">
 											</div>
 										</div>
 									</div>
@@ -230,32 +230,32 @@
 									
 										<div class="form-group col-md-12">
 											<label for="">Attention</label>
-											<input class="form-control" id="" type="text" placeholder="Attention (Optional)">
+											<input class="form-control" type="text" placeholder="Attention (Optional)">
 										</div>
 										<div class="form-group col-md-6">
 											<label for="">Address</label>
-											<input class="form-control" id="" type="text" placeholder="Address">
+											<input class="form-control" type="text" placeholder="Address">
 										</div>
 										<div class="form-group col-md-6">
 											<label for="">Address 2</label>
-											<input class="form-control" id="" type="text" placeholder="Address cont'd (Optional)">
+											<input class="form-control" type="text" placeholder="Address cont'd (Optional)">
 										</div>
 										
 										<div class="form-group col-md-4">
 											<label for="">Postal Code</label>
-											<input class="form-control" id="" type="text" placeholder="Postal Code">
+											<input class="form-control" type="text" placeholder="Postal Code">
 										</div>
 										<div class="form-group col-md-8">
 											<label for="">City</label>
-											<input class="form-control" id="" type="text" placeholder="City">
+											<input class="form-control" type="text" placeholder="City">
 										</div>
 										<div class="form-group col-md-6">
 											<label for="">State / Province</label>
-											<input class="form-control" id="" type="text" placeholder="State / Province (Optional)">
+											<input class="form-control" type="text" id="addGroundOperatorState">
 										</div>
 										<div class="form-group col-md-6">
 											<label for="">Country</label>
-											<input class="form-control" id="" type="text" placeholder="Country">
+											<input class="form-control" id="addGroundOperatorCountry" type="text">
 										</div>
 										<div class="col-md-12 bottom15">
 											<div class="form-group">
@@ -271,7 +271,7 @@
 											</div>
 										</div>
 									<div class="col-md-12">
-										<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Add a Address</a></em>
+										<em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add a Address</a></em>
 									</div>
 								</div>
 							</div>
@@ -316,7 +316,7 @@
 								<div class="row">
 									<div class="form-group col-md-3">
 										<label for="">Phone</label>
-										<input class="form-control" id="" type="text" placeholder="Phone">
+										<input class="form-control" type="text" placeholder="Phone">
 									</div>
 									<div class="form-group col-md-2">
 										<label for="title1">Type</label>
@@ -327,25 +327,25 @@
 									</div>
 									<div class="form-group col-md-1">
 										<label for="title1">Ext.</label>
-										<input class="form-control" id="" type="text" placeholder="Ext">
+										<input class="form-control" type="text" placeholder="Ext">
 									</div>
 									<div class="col-md-12 bottom15">
-										<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Add a Phone Number</a></em>
+										<em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add a Phone Number</a></em>
 									</div>
 								</div>
 								<div class="row">
 									<div class="form-group col-md-4">
 										<label for="">Email Address</label>
-										<input class="form-control" id="" type="text" placeholder="Email Address">
+										<input class="form-control" type="text" placeholder="Email Address">
 									</div>
 									<div class="col-md-12 bottom15">
-										<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Add a Email Address</a></em>
+										<em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add a Email Address</a></em>
 									</div>
 								</div>
 								<div class="row">
 									<div class="form-group col-md-4">
 										<label for="">Contact Job Title</label>
-										<input class="form-control" id="" type="text" placeholder="Contact Job Title">
+										<input class="form-control" type="text" placeholder="Contact Job Title">
 									</div>
 								</div>
 								<div class="row">
@@ -433,58 +433,58 @@
 									<div class="row">
 										<div class="form-group col-md-12">
 											<label for="exampleInputEmail1">Ship Name</label>
-											<input class="form-control" id="" type="text" placeholder="Ship Name">
+											<input class="form-control" type="text" placeholder="Ship Name">
 										</div>
 										<div class="form-group col-md-3">
 											<label for="">Year Built</label>
-											<input class="form-control" id="" type="text" placeholder="YYYY">
+											<input class="form-control" type="text" placeholder="YYYY">
 										</div>
 										<div class="form-group col-md-3">
 											<label for="">Refurbished</label>
-											<input class="form-control" id="" type="text" placeholder="YYYY">
+											<input class="form-control" type="text" placeholder="YYYY">
 										</div>
 										<div class="form-group col-md-3">
 											<label for="">Size (ft.)</label>
-											<input class="form-control" id="" type="text" placeholder="--">
+											<input class="form-control" type="text" placeholder="--">
 										</div>
 										<div class="form-group col-md-3">
 											<label for="">No. of Cabins</label>
-											<input class="form-control" id="" type="text" placeholder="--">
+											<input class="form-control" type="text" placeholder="--">
 										</div>
 										
 										<div class="form-group col-md-6">
 											<label for="">Address</label>
-											<input class="form-control" id="" type="text" placeholder="Address">
+											<input class="form-control" type="text" placeholder="Address">
 										</div>
 										<div class="form-group col-md-6">
 											<label for="">Address 2</label>
-											<input class="form-control" id="" type="text" placeholder="Address cont'd (Optional)">
+											<input class="form-control" type="text" placeholder="Address cont'd (Optional)">
 										</div>
 										
 										<div class="form-group col-md-4">
 											<label for="">Postal Code</label>
-											<input class="form-control" id="" type="text" placeholder="Postal Code">
+											<input class="form-control" type="text" placeholder="Postal Code">
 										</div>
 										<div class="form-group col-md-8">
 											<label for="">City</label>
-											<input class="form-control" id="" type="text" placeholder="City">
+											<input class="form-control" type="text" placeholder="City">
 										</div>
 										<div class="form-group col-md-6">
 											<label for="">State / Province</label>
-											<input class="form-control" id="" type="text" placeholder="State / Province (Optional)">
+											<input class="form-control" type="text" id="addShipState">
 										</div>
 										<div class="form-group col-md-6">
 											<label for="">Country</label>
-											<input class="form-control" id="" type="text" placeholder="Country">
+											<input class="form-control" id="addShipCountry" type="text">
 										</div>
 										<div class="col-md-12 bottom15">
-											<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Add a Address</a></em>
+											<em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add a Address</a></em>
 										</div>
 									</div>
 									<div class="row">
 										<div class="form-group col-md-6">
 											<label for="">Phone</label>
-											<input class="form-control" id="" type="text" placeholder="Phone">
+											<input class="form-control" type="text" placeholder="Phone">
 										</div>
 										<div class="form-group col-md-4">
 											<label for="title1">Type</label>
@@ -496,16 +496,16 @@
 									</div>
 									<div class="row">
 										<div class="col-md-12 bottom15">
-											<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Add a Phone Number</a></em>
+											<em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add a Phone Number</a></em>
 										</div>
 									</div>
 									<div class="row">
 										<div class="form-group col-md-6">
 											<label for="">Email Address</label>
-											<input class="form-control" id="" type="text" placeholder="Email Address">
+											<input class="form-control" type="text" placeholder="Email Address">
 										</div>
 										<div class="col-md-12 bottom15">
-											<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Add a Email Address</a></em>
+											<em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add a Email Address</a></em>
 										</div>
 									</div>
 									
@@ -513,7 +513,7 @@
 										<div class="col-md-12">
 											<div class="form-group col-md-8 pad0">
 												<label>Website</label>
-												<input class="form-control" id="" type="text" placeholder="http://www.example.com">
+												<input class="form-control" type="text" placeholder="http://www.example.com">
 											</div>
 										</div>
 									</div>
@@ -524,7 +524,7 @@
 									<div class="row">
 										<div class="form-group col-md-6">
 											<label for="">Cabin Name</label>
-											<input class="form-control" id="" type="text" placeholder="Cabin Name">
+											<input class="form-control" type="text" placeholder="Cabin Name">
 										</div>
 									</div>
 									<div class="row bottom15">
@@ -534,25 +534,25 @@
 										<div class="col-md-3">
 											<div class="input-group">
 												<span class="input-group-addon">Single</span>
-												<input class="form-control textRight digits" id="" type="text" placeholder="0">
+												<input class="form-control textRight digits" type="text" placeholder="0">
 											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="input-group">
 												<span class="input-group-addon">Twin</span>
-												<input class="form-control textRight digits" id="" type="text" placeholder="0">
+												<input class="form-control textRight digits" type="text" placeholder="0">
 											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="input-group">
 												<span class="input-group-addon">Double</span>
-												<input class="form-control textRight digits" id="" type="text" placeholder="0">
+												<input class="form-control textRight digits" type="text" placeholder="0">
 											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="input-group">
 												<span class="input-group-addon">Queen</span>
-												<input class="form-control textRight digits" id="" type="text" placeholder="0">
+												<input class="form-control textRight digits" type="text" placeholder="0">
 											</div>
 										</div>
 									</div>
@@ -560,7 +560,7 @@
 									<div class="row">
 										<div class="col-md-12 form-group">
 											<label for="">Cabin Description</label>
-											<textarea class="form-control" id="" placeholder="Description" style="height: 100px;"></textarea>
+											<textarea class="form-control" placeholder="Description" style="height: 100px;"></textarea>
 										</div>
 									</div>
 									
@@ -584,41 +584,41 @@
 									<div class="row">
 										<div class="form-group col-md-12">
 											<label for="exampleInputEmail1">Hotel Name</label>
-											<input class="form-control" id="" type="text" placeholder="Hotel Name">
+											<input class="form-control" type="text" placeholder="Hotel Name">
 										</div>
 										<div class="form-group col-md-6">
 											<label for="">Address</label>
-											<input class="form-control" id="" type="text" placeholder="Address">
+											<input class="form-control" type="text" placeholder="Address">
 										</div>
 										<div class="form-group col-md-6">
 											<label for="">Address 2</label>
-											<input class="form-control" id="" type="text" placeholder="Address cont'd (Optional)">
+											<input class="form-control" type="text" placeholder="Address cont'd (Optional)">
 										</div>
 										
 										<div class="form-group col-md-4">
 											<label for="">Postal Code</label>
-											<input class="form-control" id="" type="text" placeholder="Postal Code">
+											<input class="form-control" type="text" placeholder="Postal Code">
 										</div>
 										<div class="form-group col-md-8">
 											<label for="">City</label>
-											<input class="form-control" id="" type="text" placeholder="City">
+											<input class="form-control" type="text" placeholder="City">
 										</div>
 										<div class="form-group col-md-6">
 											<label for="">State / Province</label>
-											<input class="form-control" id="" type="text" placeholder="State / Province (Optional)">
+											<input class="form-control" type="text" id="addHotelState">
 										</div>
 										<div class="form-group col-md-6">
 											<label for="">Country</label>
-											<input class="form-control" id="" type="text" placeholder="Country">
+											<input class="form-control" type="text" id="addHotelCountry" >
 										</div>
 										<div class="col-md-12 bottom15">
-											<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Add a Address</a></em>
+											<em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add a Address</a></em>
 										</div>
 									</div>
 									<div class="row">
 										<div class="form-group col-md-6">
 											<label for="">Phone</label>
-											<input class="form-control" id="" type="text" placeholder="Phone">
+											<input class="form-control" type="text" placeholder="Phone">
 										</div>
 										<div class="form-group col-md-4">
 											<label for="title1">Type</label>
@@ -630,16 +630,16 @@
 									</div>
 									<div class="row">
 										<div class="col-md-12 bottom15">
-											<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Add a Phone Number</a></em>
+											<em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add a Phone Number</a></em>
 										</div>
 									</div>
 									<div class="row">
 										<div class="form-group col-md-6">
 											<label for="">Email Address</label>
-											<input class="form-control" id="" type="text" placeholder="Email Address">
+											<input class="form-control" type="text" placeholder="Email Address">
 										</div>
 										<div class="col-md-12 bottom15">
-											<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Add a Email Address</a></em>
+											<em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add a Email Address</a></em>
 										</div>
 									</div>
 									
@@ -647,7 +647,7 @@
 										<div class="col-md-12">
 											<div class="form-group col-md-8 pad0">
 												<label>Website</label>
-												<input class="form-control" id="" type="text" placeholder="http://www.example.com">
+												<input class="form-control" type="text" placeholder="http://www.example.com">
 											</div>
 										</div>
 									</div>
@@ -662,25 +662,25 @@
 										<div class="col-md-3">
 											<div class="input-group">
 												<span class="input-group-addon">Single</span>
-												<input class="form-control textRight digits" id="" type="text" placeholder="0">
+												<input class="form-control textRight digits" type="text" placeholder="0">
 											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="input-group">
 												<span class="input-group-addon">Twin</span>
-												<input class="form-control textRight digits" id="" type="text" placeholder="0">
+												<input class="form-control textRight digits" type="text" placeholder="0">
 											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="input-group">
 												<span class="input-group-addon">Double</span>
-												<input class="form-control textRight digits" id="" type="text" placeholder="0">
+												<input class="form-control textRight digits" type="text" placeholder="0">
 											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="input-group">
 												<span class="input-group-addon">Queen</span>
-												<input class="form-control textRight digits" id="" type="text" placeholder="0">
+												<input class="form-control textRight digits" type="text" placeholder="0">
 											</div>
 										</div>
 									</div>
@@ -690,28 +690,28 @@
 											<div class="clear"></div>
 											<div class="input-group">
 												<span class="input-group-addon">$</span>
-												<input class="form-control textRight digits" id="" type="text" placeholder="0">
+												<input class="form-control textRight digits" type="text" placeholder="0">
 											</div>
 										
 										</div>
 										<div class="col-md-4 form-group">
 											<label>Start Date</label>
-											<input class="form-control" id="" type="text" placeholder="MM/DD/YYYY">
+											 <input id="datepickerAddHotelStart" class="form-control"  value="10/10/2015" style="width: 100%" />
 										</div>
 										<div class="col-md-4 form-group">
 											<label>End Date</label>
-											<input class="form-control" id="" type="text" placeholder="MM/DD/YYYY">
+											 <input id="datepickerAddHotelEnd" class="form-control"  value="10/10/2015" style="width: 100%" />
 										</div>
 									</div>
 									<div class="row">
 										<div class="col-md-12 bottom15">
-											<em><a href="" id="" class="green"><i class="fa fa-plus-circle"></i> Add a Rate</a></em>
+											<em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add a Rate</a></em>
 										</div>
 									</div>
 									<div class="row">
 										<div class="col-md-12 form-group">
 											<label for="">Description</label>
-											<textarea class="form-control" id="" placeholder="Description"></textarea>
+											<textarea class="form-control" placeholder="Description"></textarea>
 										</div>
 									</div>
 									
@@ -743,6 +743,17 @@
 
 <script>
 $(document).ready(function () {
+				
+				
+			var names = [
+				"Daniel O Sullivan",
+				"Gavin Dock",
+				"Joseph Bonanno",
+				"Justin Beckett",
+				"Patrick Nord",
+				"Steve Fleishaker"
+			];
+				
 				
 			var countries = [
 					"United States",
@@ -795,8 +806,62 @@ $(document).ready(function () {
 					"The Gresham Hotel"
 				];
 				
+				var states = [
+					"Alabama",
+					"Alaska",
+					"Arizona",
+					"Arkansas",
+					"California",
+					"Colorado",
+					"Connecticut",
+					"Delaware",
+					"Florida",
+					"Georgia",
+					"Hawaii",
+					"Idaho",
+					"Illinois",
+					"Indiana",
+					"Iowa",
+					"Kansas",
+					"Kentucky",
+					"Louisiana",
+					"Maine",
+					"Maryland",
+					"Massachusetts",
+					"Michigan",
+					"Minnesota",
+					"Mississippi",
+					"Missouri",
+					"Montana",
+					"Nebraska",
+					"Nevada",
+					"New Hampshire",
+					"New Jersey",
+					"New Mexico",
+					"New York",
+					"North Carolina",
+					"North Dakota",
+					"Ohio",
+					"Oklahoma",
+					"Oregon",
+					"Pennsylvania",
+					"Rhode Island",
+					"South Carolina",
+					"South Dakota",
+					"Tennessee",
+					"Texas",
+					"Utah",
+					"Vermont",
+					"Virginia",
+					"Washington",
+					"West Virginia",
+					"Wisconsin",
+					"Wyoming"
+				];
+				
+			
 			//create AutoComplete UI component
-			$("#legCities").kendoComboBox({
+			$("#legCity").kendoComboBox({
 				dataSource: cities,
 				filter: "startswith",
 				placeholder: "City",
@@ -831,6 +896,50 @@ $(document).ready(function () {
 				placeholder: "Accommodation Name",
 				separator: ", "
 			});
+			
+			//---------
+
+			$("#addHotelCountry").kendoComboBox({
+				dataSource: countries,
+				filter: "startswith",
+				placeholder: "Country",
+				separator: ", "
+			});
+			$("#addShipCountry").kendoComboBox({
+				dataSource: countries,
+				filter: "startswith",
+				placeholder: "Country",
+				separator: ", "
+			});
+			$("#addGroundOperatorCountry").kendoComboBox({
+				dataSource: countries,
+				filter: "startswith",
+				placeholder: "Country",
+				separator: ", "
+			});
+			
+			$("#addHotelState").kendoComboBox({
+				dataSource: states,
+				filter: "startswith",
+				placeholder: "State / Province",
+				separator: ", "
+			});
+			$("#addShipState").kendoComboBox({
+				dataSource: states,
+				filter: "startswith",
+				placeholder: "State / Province",
+				separator: ", "
+			});
+			$("#addGroundOperatorState").kendoComboBox({
+				dataSource: states,
+				filter: "startswith",
+				placeholder: "State / Province",
+				separator: ", "
+			});
+
+  		$("#datepickerAddHotelStart").kendoDatePicker();
+    	$("#datepickerAddHotelEnd").kendoDatePicker();
+			
 			//---------
 			
 			
@@ -867,8 +976,6 @@ $(document).ready(function () {
 						return false;
 				});
 				
-				$('#accomModal-addCruise').slideUp('');
-				
 				$('#accomModal-addHotelCruise-trigger').change(function(){
 					if ($('#accomModal-addHotel').is(':visible')) {
 						$('#accomModal-addHotel').slideUp('');
@@ -887,6 +994,20 @@ $(document).ready(function () {
 						
 					
 				});
+				
+				$('#accomModal').on('hidden.bs.modal', function (e) {
+					$('#accomModal1').slideDown('');
+					$('#accomModal2').slideUp('');
+					$('#accomModal-searchOperator').slideUp('');
+					$('#accomModal-addOperator').slideUp('');
+					$('#accomModal-searchAccom').slideUp('');
+					$('#accomModal-addAccom').slideUp('');
+					$('#accomModal-addCruise').slideUp('');
+				});
+				
+				
+		
+
 	});
 	
 </script>

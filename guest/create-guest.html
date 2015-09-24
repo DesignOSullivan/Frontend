@@ -132,7 +132,7 @@
                             </div>
                             <div class="col-md-8 col-xs-8 textCenter">
 
-                                <p><a href="#location">Remarks</a></p>
+                                <p id="remarksTrigger">Remarks</p>
 
                             </div>
                             <div class="col-md-2 col-xs-2">
@@ -147,6 +147,8 @@
     <style>
 
     </style>
+    
+    
     <!-- Flyout Nav -->
     <div id="flyoutNav" class="closed shadow">
         <a id="flyoutNavTrigger">
@@ -161,6 +163,25 @@
             <li><a href="#reservations">Reservations</a></li>
             <li><a href="#guestTabs">Guest Tabs</a></li>
         </ul>
+    </div>
+    
+    
+    
+    <!-- Remarks -->
+    <div id="remarks" class="closed shadow">
+        <a id="remarksTrigger2">
+            <h4 class="alignRight">Remarks</h4>
+            
+            <span class="glyphicon glyphicon-chevron-left alignLeft" aria-hidden="true"></span><br>
+            <br>
+                <span class="rotate"><b>Remarks</b></span><br><br><br>
+        </a>
+        
+        <div class="clear"></div>
+        
+        <div class="displayNone" id="remarksList">
+            
+        </div>
     </div>
 
 

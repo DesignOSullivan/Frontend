@@ -144,32 +144,26 @@
             start: "century",
             value: "Select date..."
         });
-    </script>
-
-    <script>
+    
         $("#pDateOfIssue").kendoDatePicker({
             format: "dd-MMM-yy",
             start: "decade",
             value: "Select date..."
         });
-    </script>
     
-    <script>
         $("#pDateOfExpiration").kendoDatePicker({
             format: "dd-MMM-yy",
             start: "decade",
             value: "Select date..."
         });
-    </script>
-
     
-    <script>
         $(document).ready(function(){
             $("#pSex").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
                 placeholder: "Select sex...",
                 filter: "startswith",
+                suggest: "true",
                 dataSource: [
                     { text: "Male", value: "1" },
                     { text: "Female", value: "2" },
@@ -177,15 +171,14 @@
                 ]
             });
         });
-    </script>
     
-    <script>
         $(document).ready(function(){
             $("#pIssuingAuthority").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
                 placeholder: "Select issuing authority...",
                 filter: "startswith",
+                suggest: "true",
                 dataSource: [
                     { text: "Port of Miami", value: "1" },
                     { text: "Other Issuing Authority", value: "1" },
@@ -201,6 +194,95 @@
 
 
 
+    <!-- Air Tab -->
+    <div id="air-content" class="tab-pane fade">
+        <div class="container pad0">
+            <div class="row">
+                <div class="col-md-12">
+                    <label><b>Flyer Information</b></label>
+                </div>
+            </div>
+            <div class="pad15">
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <label for="aKnownTraveler">Known Traveler #</label>
+                        <input class="form-control" id="aKnownTraveler" placeholder="Known Traveler #">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="aGlobalEntry">Global Entry</label>
+                        <input class="form-control" id="aGlobalEntry" placeholder="Global Entry #">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <label><b>Preferences</b></label>
+                </div>
+            </div>
+            <div class="pad15">
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <label for="aAirportCity">Airport City</label>
+                        <input class="form-control" id="aAirportCity" placeholder="Airport City">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="aAirport">Airport</label>
+                        <select class="form-control" id="aAirport">
+                            <option>Select...</option>
+                            <option>Some Airport</option>
+                            <option>Another Airport</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="aSeating">Seating</label>
+                        <select class="form-control" id="aSeating">
+                            <option>Select...</option>
+                            <option>Window</option>
+                            <option>Aisle</option>
+                            <option>Two Side</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="aMeal">Meal</label>
+                        <select class="form-control" id="aMeal">
+                            <option>Select...</option>
+                            <option>Food</option>
+                            <option>More Food</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <label><b>Frequent Flyer</b></label>
+                </div>
+            </div>
+            <div class="pad15">
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <label for="aAirline">Airline</label>
+                        <select class="form-control" id="aAirline">
+                            <option>Select...</option>
+                            <option>Some Airline</option>
+                            <option>Another Airline</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="aFrequentFlyer">Frequent Flyer #</label>
+                        <input class="form-control" id="aFrequentFlyer" placeholder="Frequent Flyer #">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Frequent Flyer Program</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
 
     <!-- Health Tab -->
     <div id="health-content" class="tab-pane fade">
@@ -346,92 +428,6 @@
         </div>
     </div>
 
-    <!-- Air Tab -->
-    <div id="air-content" class="tab-pane fade">
-        <div class="container pad0">
-            <div class="row">
-                <div class="col-md-12">
-                    <label><b>Flyer Information</b></label>
-                </div>
-            </div>
-            <div class="pad15">
-                <div class="row">
-                    <div class="form-group col-md-3">
-                        <label for="aKnownTraveler">Known Traveler #</label>
-                        <input class="form-control" id="aKnownTraveler" placeholder="Known Traveler #">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="aGlobalEntry">Global Entry</label>
-                        <input class="form-control" id="aGlobalEntry" placeholder="Global Entry #">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <label><b>Preferences</b></label>
-                </div>
-            </div>
-            <div class="pad15">
-                <div class="row">
-                    <div class="form-group col-md-3">
-                        <label for="aAirportCity">Airport City</label>
-                        <input class="form-control" id="aAirportCity" placeholder="Airport City">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="aAirport">Airport</label>
-                        <select class="form-control" id="aAirport">
-                            <option>Select...</option>
-                            <option>Some Airport</option>
-                            <option>Another Airport</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="aSeating">Seating</label>
-                        <select class="form-control" id="aSeating">
-                            <option>Select...</option>
-                            <option>Window</option>
-                            <option>Aisle</option>
-                            <option>Two Side</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="aMeal">Meal</label>
-                        <select class="form-control" id="aMeal">
-                            <option>Select...</option>
-                            <option>Food</option>
-                            <option>More Food</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <label><b>Frequent Flyer</b></label>
-                </div>
-            </div>
-            <div class="pad15">
-                <div class="row">
-                    <div class="form-group col-md-3">
-                        <label for="aAirline">Airline</label>
-                        <select class="form-control" id="aAirline">
-                            <option>Select...</option>
-                            <option>Some Airline</option>
-                            <option>Another Airline</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="aFrequentFlyer">Frequent Flyer #</label>
-                        <input class="form-control" id="aFrequentFlyer" placeholder="Frequent Flyer #">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-md-12">
-                        <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Frequent Flyer Program</i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- SIG -->
     <div id="sig-content" class="tab-pane fade">

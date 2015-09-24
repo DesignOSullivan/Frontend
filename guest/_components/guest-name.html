@@ -40,11 +40,14 @@
 
 
 
+
 <script>
     $(document).ready(function() {
-        $("#title").kendoDropDownList({
+        $("#title").kendoComboBox({
             dataTextField: "text",
             dataValueField: "value",
+            filter: "startswith",
+            suggest: "true",
             dataSource: [
                 { text: "Mr.", value: "1" },
                 { text: "Mrs.", value: "2" },
@@ -52,18 +55,19 @@
             ]
         });
     });
-</script>
 
-<script>
+    
     $(document).ready(function() {
-        $("#suffix").kendoDropDownList({
+        $("#suffix").kendoComboBox({
             dataTextField: "text",
             dataValueField: "value",
+            filter: "startswith",
+            suggest: "true",
             dataSource: [
                 { text: "", value: "1" },
                 { text: "Sr.", value: "2" },
                 { text: "Jr.", value: "3" },
-                { text: "III.", value: "4" },
+                { text: "III", value: "4" },
                 { text: "IV", value: "5" },
                 { text: "V", value: "6" }
             ]

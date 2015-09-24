@@ -188,8 +188,6 @@
         });
     </script>
     
-   
-  
 <!--/end passport scripts-->
 
 
@@ -227,28 +225,15 @@
                     </div>
                     <div class="form-group col-md-3">
                         <label for="aAirport">Airport</label>
-                        <select class="form-control" id="aAirport">
-                            <option>Select...</option>
-                            <option>Some Airport</option>
-                            <option>Another Airport</option>
-                        </select>
+                        <input class="form-control" id="aAirport">
                     </div>
                     <div class="form-group col-md-3">
                         <label for="aSeating">Seating</label>
-                        <select class="form-control" id="aSeating">
-                            <option>Select...</option>
-                            <option>Window</option>
-                            <option>Aisle</option>
-                            <option>Two Side</option>
-                        </select>
+                        <input class="form-control" id="aSeating">
                     </div>
                     <div class="form-group col-md-3">
                         <label for="aMeal">Meal</label>
-                        <select class="form-control" id="aMeal">
-                            <option>Select...</option>
-                            <option>Food</option>
-                            <option>More Food</option>
-                        </select>
+                        <input class="form-control" id="aMeal">
                     </div>
                 </div>
             </div>
@@ -261,11 +246,7 @@
                 <div class="row">
                     <div class="form-group col-md-3">
                         <label for="aAirline">Airline</label>
-                        <select class="form-control" id="aAirline">
-                            <option>Select...</option>
-                            <option>Some Airline</option>
-                            <option>Another Airline</option>
-                        </select>
+                        <input class="form-control" id="aAirline">
                     </div>
                     <div class="form-group col-md-3">
                         <label for="aFrequentFlyer">Frequent Flyer #</label>
@@ -281,7 +262,75 @@
         </div>
     </div>
 
+<!-- Air Scirpts -->
     
+    <script>
+        
+        $(document).ready(function(){
+            $("#aAirport").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select airport...",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    { text: "Myrtle Beach Int'l | MYR", value: "1" },
+                    { text: "Logan Int'l | BOS", value: "3" }
+                ]
+            });
+        });
+                
+        $(document).ready(function(){
+            $("#aSeating").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select seat type...",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    { text: "Aisle", value: "1" },
+                    { text: "Window", value: "1" },
+                    { text: "Two Side", value: "3" }
+                ]
+            });
+        });   
+        
+        $(document).ready(function(){
+            $("#aMeal").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select meal type...",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    { text: "Kosher", value: "1" },
+                    { text: "Veagan", value: "1" },
+                    { text: "Vegitarian", value: "3" }
+                ]
+            });
+        });
+        
+        $(document).ready(function(){
+            $("#aAirline").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select airline...",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    { text: "American Airlines", value: "1" },
+                    { text: "US Airways", value: "1" },
+                    { text: "Spirit", value: "1" },
+                    { text: "Delta", value: "3" }
+                ]
+            });
+        });
+        
+        
+        
+    </script>
+    
+<!-- /End Air Scripts -->
     
 
     <!-- Health Tab -->
@@ -290,41 +339,94 @@
             <div class="row">
                 <div class="form-group col-md-6 col-xs-12">
                     <label for="hHealthConcerns">Health Concerns</label>
-                    <select class="form-control" id="hHealthConcerns">
-                        <option>Health Concern</option>
-                        <option>Something Else</option>
-                        <option>Something Else</option>
-                    </select>
+                    <input class="form-control" id="hHealthConcerns">
                 </div>
                 <div class="form-group col-md-6 col-xs-12">
                     <label for="hPhysicalLimitations">Physical Limitations</label>
-                    <select class="form-control" id="hPhysicalLimitations">
-                        <option>Physical Limitation</option>
-                        <option>Something Else</option>
-                        <option>Something Else</option>
-                    </select>
+                    <input class="form-control" id="hPhysicalLimitations">
                 </div>
             </div>
             <div class="row">
                 <div class="form-group col-md-6 col-xs-12">
                     <label for="hAllergies">Allergies</label>
-                    <select class="form-control" id="hAllergies">
-                        <option>Allergy</option>
-                        <option>Something Else</option>
-                        <option>Something Else</option>
-                    </select>
+                    <input class="form-control" id="hAllergies">
                 </div>
                 <div class="form-group col-md-6 col-xs-12">
                     <label for="hMealConsiderations">Meal Considerations</label>
-                    <select class="form-control" id="hMealConsiderations">
-                        <option>Meal Consideration</option>
-                        <option>Something Else</option>
-                        <option>Something Else</option>
-                    </select>
+                    <input class="form-control" id="hMealConsiderations">
                 </div>
             </div>
         </div>
     </div>
+    
+    
+    <!-- Health Scirpts -->
+
+    <script>
+
+        $(document).ready(function(){
+            $("#hHealthConcerns").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select health concern...",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    { text: "Health Concern 1", value: "1" },
+                    { text: "Health Concern 2", value: "3" }
+                ]
+            });
+        });
+
+        $(document).ready(function(){
+            $("#hAllergies").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select allergy...",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    { text: "Allergy 1", value: "1" },
+                    { text: "Allergy 2", value: "1" },
+                ]
+            });
+        });   
+
+        $(document).ready(function(){
+            $("#hPhysicalLimitations").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select physical limitation...",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    { text: "Physical Limitation 1", value: "1" },
+                    { text: "Physical Limitation 2", value: "1" },
+                ]
+            });
+        });
+
+        $(document).ready(function(){
+            $("#hMealConsiderations").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select meal consideration...",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    { text: "Meal Consideration 1", value: "1" },
+                    { text: "Meal Consideration 2", value: "1" },
+                ]
+            });
+        });
+
+
+
+    </script>
+
+    <!-- /End Health Scripts -->
+    
+    
 
     <!-- Emergency Tab -->
     <div id="emergency-content" class="tab-pane fade">

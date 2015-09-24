@@ -90,7 +90,7 @@ textarea{min-height: 150px;}
 #flyoutNav.closed a i{color: #fff !important; }
 
 
-#remarks{position: fixed; right: 0; top: 20%; background: #666; width: 200px; padding: 15px 15px 0px 15px; border-radius:0  3px 3px 0 ;}
+#remarks{position: fixed; right: 0; top: 20%; background: rgba(0,27,61,.8); width: 300px; padding: 15px 15px 0px 15px; border-radius:0  3px 3px 0 ; z-index: 100;}
 #remarks h4{color: #fff; margin: 0; padding: 0; line-height: 1em; }
 #remarks label{color:#fff;}
 #remarks ul{padding: 10px; margin: 0;}
@@ -98,14 +98,21 @@ textarea{min-height: 150px;}
 #remarks li:hover{ background: rgba(253, 92, 99, .85);}
 #remarks li:last-child{border: none; margin-bottom: 0; padding-bottom: 0;}
 #remarks a, #remarks a i{color: #fff !important; cursor: pointer;}	
-#remarks.closed{right: -160px;background: rgba(181, 15, 70, .85);}
+#remarks p{color: #fff;}
+#remarks.closed{right: -260px;background: rgba(181, 15, 70, .85);}
 #remarks.closed:hover{background: rgba(253, 92, 99, .85);}
 #remarks.closed a i{color: #fff !important; }
+#remarksList{margin-top: -60px; margin-left: 15px;}
+#remarks i{color:#ccc;}
+
 
 
 
 
 .rotate {position:absolute; left:-2%; -webkit-transform:  rotate(-90deg);-moz-transform:  rotate(-90deg);-o-transform:  rotate(-90deg);writing-mode: tb-rl;}
+
+
+
 
 /* --- Classes --- */
 .clear { clear:both;  overflow:hidden; }

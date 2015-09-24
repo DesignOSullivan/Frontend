@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>OUI</title>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OUI</title>
 
 
-        <link rel="stylesheet" href="../kendoui/styles/kendo.common-bootstrap.min.css">
-        <link rel="stylesheet" href="../kendoui/styles/kendo.bootstrap.min.css">
+    <link rel="stylesheet" href="../kendoui/styles/kendo.common-bootstrap.min.css">
+    <link rel="stylesheet" href="../kendoui/styles/kendo.bootstrap.min.css">
 
 
-        <script src="../js/jquery.min.js"></script> 
-        <script src="../js/bootstrap.min.js"></script> 
-        <script src="../js/bootstrap-toggle.min.js"></script> 
-        <script src="../kendoui/js/kendo.all.min.js"></script>
-        <script src="guest-scripts.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-toggle.min.js"></script>
+    <script src="../kendoui/js/kendo.all.min.js"></script>
+    <script src="guest-scripts.js"></script>
 
-        <link href="../css/bootstrap.css" rel="stylesheet">
-        <link href="../css/toggle-me-softly.css" rel="stylesheet">
-        <link href="../css/style.css" rel="stylesheet">
-        <link href="../css/font-awesome.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/toggle-me-softly.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/font-awesome.css" rel="stylesheet">
 
 
-        <!-- grab all the component modules we need for this page -->
-        <script> 
-            $(function(){
-                $("#includeGuestName").load("_components/guest-name.html"); 
-                $("#includeAddress").load("_components/address.html"); 
-                $("#includeContactInformation").load("_components/contact-information.html"); 
-                $("#includeReservationNew").load("_components/reservation-new.html"); 
-                $("#includeReservationEdit").load("_components/reservation-edit.html"); 
-                $("#includeInfoRequestModal").load("_components/info-request-modal.html"); 
-                $("#includeGuestTabs").load("_components/guest-tabs.html"); 
-            });
-        </script> 
+    <!-- grab all the component modules we need for this page -->
+    <script>
+        $(function () {
+            $("#includeGuestName").load("_components/guest-name.html");
+            $("#includeAddress").load("_components/address.html");
+            $("#includeContactInformation").load("_components/contact-information.html");
+            $("#includeReservationNew").load("_components/reservation-new.html");
+            $("#includeReservationEdit").load("_components/reservation-edit.html");
+            $("#includeInfoRequestModal").load("_components/info-request-modal.html");
+            $("#includeGuestTabs").load("_components/guest-tabs.html");
+        });
+    </script>
 
-    </head>
+</head>
 
 <body>
     <!-- Navbar -->
@@ -85,24 +86,24 @@
                 </div>
             </div>
         </div>
-        
-        
+
+
 
         <!-- Guest Name -->
         <div id="includeGuestName"></div>
-        
+
         <!-- Address -->
         <div id="includeAddress"></div>
-        
+
         <!-- Contact Information -->
         <div id="includeContactInformation"></div>
-        
+
         <!-- Reservations blank -->
         <div id="includeReservationNew"></div>
-        
+
         <!-- Reservations w/ upcoming reservations -->
         <div id="includeReservationEdit"></div>
-        
+
         <!-- Modal -->
         <div id="includeInfoRequestModal"></div>
 
@@ -117,38 +118,38 @@
 
 
 
-            <!-- /base tour content -->
+        <!-- /base tour content -->
 
-            <!-- Bottom Space -->
-            <div class="clear" style="margin-bottom: 120px;"></div>
+        <!-- Bottom Space -->
+        <div class="clear" style="margin-bottom: 120px;"></div>
 
-            <!-- footer -->
-            <div id="illusion">
-                <div id="footer">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-2 col-xs-2">
-                                <button type="submit" class="btn btn-default btn-sm"> Cancel </button>
-                            </div>
-                            <div class="col-md-8 col-xs-8 textCenter">
+        <!-- footer -->
+        <div id="illusion">
+            <div id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 col-xs-2">
+                            <button type="submit" class="btn btn-default btn-sm"> Cancel </button>
+                        </div>
+                        <div class="col-md-8 col-xs-8 textCenter">
 
-                                <p id="remarksTrigger">Remarks</p>
+                            <p id="remarksTrigger">Remarks</p>
 
-                            </div>
-                            <div class="col-md-2 col-xs-2">
-                                <button type="submit" class="btn btn-info btn-sm alignRight bottom0"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Submit </button>
-                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-2">
+                            <button type="submit" class="btn btn-info btn-sm alignRight bottom0"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Submit </button>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
     </form>
     <style>
 
     </style>
-    
-    
+
+
     <!-- Flyout Nav -->
     <div id="flyoutNav" class="closed shadow">
         <a id="flyoutNavTrigger">
@@ -164,25 +165,81 @@
             <li><a href="#guestTabs">Guest Tabs</a></li>
         </ul>
     </div>
-    
-    
-    
+
+
+
     <!-- Remarks -->
     <div id="remarks" class="closed shadow">
         <a id="remarksTrigger2">
             <h4 class="alignRight">Remarks</h4>
-            
-            <span class="glyphicon glyphicon-chevron-left alignLeft" aria-hidden="true"></span><br>
+            <span class="glyphicon glyphicon-chevron-left alignLeft" aria-hidden="true"></span>
             <br>
-                <span class="rotate"><b>Remarks</b></span><br><br><br>
+            <br>
+            <span class="rotate"><b>Remarks</b></span>
+            <br>
+            <br>
+            <br>
         </a>
         
-        <div class="clear"></div>
-        
         <div class="displayNone" id="remarksList">
-            
+            <div class="container">
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <input class="form-control" id="remarkType">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <textarea class="form-control" id="" placeholder="Enter note..."></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12 borderBottom">
+                        <button type="submit" class="btn btn-info btn-xs alignRight"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Submit </button>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <h4 class="alignRight">Guest Notes</h4>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <p class="alignLeft">The 'e' at the end of the guest's name is silent.<br><i>Elizabeth Bougie, 20-Sept-15</i></p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <p class="alignLeft">Handle guest delicately.<br><i>Elizabeth Bougie, 20-Sept-15</i></p>
+                    </div>
+                </div>
+                
+            </div>
         </div>
     </div>
+
+    
+    <script>
+    $(document).ready(function(){
+    $("#remarkType").kendoComboBox({
+    dataTextField: "text",
+    dataValueField: "value",
+    placeholder: "Select remark type...",
+    filter: "startswith",
+    suggest: "true",
+    dataSource: [
+    { text: "Guest Note", value: "1" },
+    { text: "Reservation Note", value: "2" },
+    { text: "Air Operations Note", value: "3" },
+    { text: "Ground Operations Note", value: "3" },
+    { text: "Fulfillment Note", value: "3" }
+    ]
+    });
+    });
+    </script>
 
 
 </body>

@@ -108,7 +108,7 @@
 		$(document).ready(function () {
 			 
 			 
-			$("#ouiWorldRegion").kendoDropDownList({
+			$("#ouiWorldRegion").kendoComboBox({
 			  dataTextField: "text",
 			  dataValueField: "value",
 			  dataSource: [
@@ -117,7 +117,10 @@
 				{ text: "Americas", value: "3" },
 				{ text: "Australia & South Pacific", value: "4" },
 				{ text: "Asia & Far East", value: "5" }
-			  ]
+			  ], 
+			  filter: "contains",
+			  suggest: true,
+			  index: 3
 			});
 			
 			//---------
@@ -152,7 +155,7 @@
 				];
 
 
-			$("#productManager").kendoAutoComplete({
+			$("#productManager").kendoComboBox({
 				dataSource: names,
 				filter: "startswith",
 				placeholder: "Product Manager",
@@ -162,7 +165,7 @@
 			//---------
 			
 			//create AutoComplete UI component
-			$("#tourCountry").kendoAutoComplete({
+			$("#tourCountry").kendoComboBox({
 				dataSource: countries,
 				filter: "startswith",
 				placeholder: "Select Country",

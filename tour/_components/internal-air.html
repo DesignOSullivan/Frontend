@@ -71,28 +71,28 @@ $(document).ready(function () {
 				
 				
 			//create AutoComplete UI component
-			$("#internalAirComponentAirline").kendoAutoComplete({
+			$("#internalAirComponentAirline").kendoComboBox({
 				dataSource: airlines,
 				filter: "startswith",
 				placeholder: "Airline Name",
 				separator: ", "
 			});
 			//---------
-			$("#addAirline").kendoAutoComplete({
+			$("#addAirline").kendoComboBox({
 				dataSource: airlines,
 				filter: "startswith",
 				placeholder: "Airline Name",
 				separator: ", "
 			});
 			//---------
-			$("#internalAirDepartCity").kendoAutoComplete({
+			$("#internalAirDepartCity").kendoComboBox({
 				dataSource: citiesCountry,
 				filter: "startswith",
 				placeholder: "City, Country",
 				separator: ", "
 			});
 			//---------
-			$("#internalAirArrivalCity").kendoAutoComplete({
+			$("#internalAirArrivalCity").kendoComboBox({
 				dataSource: citiesCountry,
 				filter: "startswith",
 				placeholder: "City, Country",

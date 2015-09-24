@@ -1,0 +1,200 @@
+
+	<!-- Tour Pricing -->
+    <div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3>
+					<a name="tourpricingSection"></a>
+					Tour Pricing
+				</h3>
+			</div>
+		</div>
+	</div>
+	<div class="container container-border">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="container pad0">
+					<div class="form-group row bottom30">
+						<div class="col-md-5">
+							<label>Airline Taxes &amp; <br /> Departure Fees</label>
+						</div>
+						<div class="col-md-5">
+							<div class="input-group">
+								<span class="input-group-addon">$</span>
+								<input class="form-control textRight digits" id="" type="text" placeholder="0">
+							</div>
+						</div>
+					</div>
+					<div class="form-group row bottom30">
+						<div class="col-md-5">
+							<label>Port Taxes</label>
+						</div>
+						<div class="col-md-5">
+							<div class="input-group">
+								<span class="input-group-addon">$</span>
+								<input class="form-control textRight digits" id="" type="text" placeholder="0">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div class="col-md-7 col-md-push-1">
+				<div class="container pad0">
+					<div class="row bottom30">
+						<div class="col-md-6">
+							<div class="form-group bottom30">
+								<div class="switch">
+									<input id="business-class-addon" class="cmn-toggle cmn-toggle-round" type="checkbox">
+									<label for="business-class-addon"></label>
+								</div>
+								<div class="switch-label">
+									<label for="business-class-addon">Business Class Available</label>
+								</div>  
+							</div>	
+						</div>
+						<div class="col-md-5 displayNone">
+							<div class="input-group" id="business-class-addon-price">
+								<span class="input-group-addon">Business Upgrade Price: $</span>
+								<input class="form-control textRight digits" id="" type="text" placeholder="0">
+							</div>
+						</div>
+					</div>
+					<div class="row bottom30">
+						<div class="col-md-6">
+							<div class="form-group bottom30">
+								<div class="switch">
+									<input id="premium-class-addon" class="cmn-toggle cmn-toggle-round" type="checkbox">
+									<label for="premium-class-addon"></label>
+								</div>
+								<div class="switch-label">
+									<label for="premium-class-addon">Premium Class Available</label>
+								</div>  
+							</div>	
+						</div>
+						<div class="col-md-5 displayNone">
+							<div class="input-group" id="premium-class-addon-price">
+								<span class="input-group-addon">Premium Upgrade Price: $</span>
+								<input class="form-control textRight digits" id="" type="text" placeholder="0">
+							</div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group bottom30">
+								<div class="switch">
+									<input id="cabin-upgrade-toggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
+									<label for="cabin-upgrade-toggle"></label>
+								</div>
+								<div class="switch-label">
+									<label for="cabin-upgrade-toggle">Single Cabin Upgrade</label>
+								</div>  
+							</div>	
+							<div class="container pad0 displayNone" id="cabin-upgrade">
+								<div class="row">
+									<div class="col-md-4">
+									</div>
+									<div class="col-md-3 center">
+										<label>Single</label>
+									</div>	
+									<div class="col-md-3 center">
+										<label>Twin</label>
+									</div>	
+								</div>
+								<div class="row bottom5">
+									<div class="col-md-4">
+										<label>Cabin A Upgrade</label>
+									</div>
+									<div class="col-md-3 center">
+										<div class="input-group" id="">
+											<span class="input-group-addon">$</span>
+											<input class="form-control textRight digits" id="" type="text" placeholder="0">
+										</div>
+									</div>	
+									<div class="col-md-3 center">
+										<div class="input-group" id="">
+											<span class="input-group-addon">$</span>
+											<input class="form-control textRight digits" id="" type="text" placeholder="0">
+										</div>
+									</div>	
+								</div>
+								<div class="row">
+									<div class="col-md-4">
+										<label>Cabin B Upgrade</label>
+									</div>
+									<div class="col-md-3 center">
+										<div class="input-group" id="">
+											<span class="input-group-addon">$</span>
+											<input class="form-control textRight digits" id="" type="text" placeholder="0">
+										</div>
+									</div>	
+									<div class="col-md-3 center">
+										<div class="input-group" id="">
+											<span class="input-group-addon">$</span>
+											<input class="form-control textRight digits" id="" type="text" placeholder="0">
+										</div>
+									</div>	
+								</div>
+							
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+	
+	
+	
+	
+<script>
+	$(document).ready(function() {
+	
+	$('#business-class-addon').change(function(){
+		if ($('#business-class-addon-price').parent().is(':visible')) {
+		  	$('#business-class-addon-price').parent().slideUp('');
+		}
+		else { 
+		  	$('#business-class-addon-price').parent().slideDown('');
+		}
+		
+		if ($('#business-class-addon-price').parent().hasClass('displayNone')) {
+		  	$('#business-class-addon-price').parent().removeClass('displayNone');
+		}
+		
+	});
+	
+	$('#premium-class-addon').change(function(){
+		if ($('#premium-class-addon-price').parent().is(':visible')) {
+		  	$('#premium-class-addon-price').parent().slideUp('');
+		}
+		else { 
+		  	$('#premium-class-addon-price').parent().slideDown('');
+		}
+		
+		if ($('#premium-class-addon-price').parent().hasClass('displayNone')) {
+		  	$('#premium-class-addon-price').parent().removeClass('displayNone');
+		}
+		
+	});
+	
+	
+	$('#cabin-upgrade-toggle').change(function(){
+		if ($('#cabin-upgrade').is(':visible')) {
+		  	$('#cabin-upgrade').slideUp('');
+		}
+		else { 
+		  	$('#cabin-upgrade').slideDown('');
+		}
+		
+		if ($('#cabin-upgrade').hasClass('displayNone')) {
+		  	$('#cabin-upgrade').removeClass('displayNone');
+		}
+		
+	});
+	
+	
+	
+	
+});
+</script>

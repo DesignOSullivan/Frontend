@@ -50,7 +50,7 @@ textarea{min-height: 150px;}
 .nav-tabs{ /* border-bottom: 1px solid #ccc;*/ border-bottom: 0;}
 .nav-tabs > li{display: inline-block; float: none; background: #f5f8fa; font-size: 16px;}
 	.nav-tabs > li.active, .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{background: #fff; border-color:#cccccc; border-bottom: none; }
-	.nav-tabs > li > a{color:#001b3d;  border-color:#cccccc; border-style: none; border-bottom: 1px solid #ccc;}
+	.nav-tabs > li > a{color:#001b3d; border: none;}
 
 	#pageHeader .nav-tabs > li{display: inline-block; float: none; background: #fff; font-size: 16px;}
 		#pageHeader .nav-tabs > li.active, #pageHeader .nav-tabs > li.active > a, #pageHeader .nav-tabs > li.active > a:hover, #pageHeader .nav-tabs > li.active > a:focus{background: #f5f8fa; border-color:#cccccc; border-bottom: none; }

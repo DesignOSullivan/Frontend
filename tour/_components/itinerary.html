@@ -796,28 +796,28 @@ $(document).ready(function () {
 				];
 				
 			//create AutoComplete UI component
-			$("#legCities").kendoAutoComplete({
+			$("#legCities").kendoComboBox({
 				dataSource: cities,
 				filter: "startswith",
 				placeholder: "City",
 				separator: ", "
 			});
 			//---------
-			$("#legCountry").kendoAutoComplete({
+			$("#legCountry").kendoComboBox({
 				dataSource: countries,
 				filter: "startswith",
 				placeholder: "Country",
 				separator: ", "
 			});
 			//---------
-			$("#legAccom").kendoAutoComplete({
+			$("#legAccom").kendoComboBox({
 				dataSource: accommodations,
 				filter: "startswith",
 				placeholder: "Accommodation Name",
 				separator: ", "
 			});
 			//---------
-			$("#legPreNightAccom").kendoAutoComplete({
+			$("#legPreNightAccom").kendoComboBox({
 				dataSource: accommodations,
 				filter: "startswith",
 				placeholder: "Accommodation Name",
@@ -825,7 +825,7 @@ $(document).ready(function () {
 			});
 			//---------
 			
-			$("#legPostNightAccom").kendoAutoComplete({
+			$("#legPostNightAccom").kendoComboBox({
 				dataSource: accommodations,
 				filter: "startswith",
 				placeholder: "Accommodation Name",

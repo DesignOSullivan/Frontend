@@ -124,60 +124,6 @@ $(document).ready(function() {
 		
 	});
 	
-/* ITIN MODAL STUFF */	
-	$('#accomModal2-link').click(function(){
-		  	$('#accomModal1').slideUp();
-			$('#accomModal2').removeClass('displayNone').slideDown();
-			return false;
-	});
-	
-	$('#accomModal-searchOperator-link').click(function(){
-		  	$('#accomModal2').slideUp();
-			$('#accomModal-searchOperator').removeClass('displayNone').slideDown();
-			return false;
-	});
-	
-	
-	$('#accomModal-addOperator-link').click(function(){
-		  	$('#accomModal-searchOperator').slideUp();
-			$('#accomModal-addOperator').removeClass('displayNone').slideDown();
-			return false;
-	});
-	
-	
-	$('#accomModal-searchAccom-link').click(function(){
-		  	$('#accomModal2').slideUp();
-			$('#accomModal-searchAccom').removeClass('displayNone').slideDown();
-			return false;
-	});
-	
-	$('#accomModal-addAccom-link').click(function(){
-		  	$('#accomModal2').slideUp();
-			$('#accomModal-addAccom').removeClass('displayNone').slideDown();
-			return false;
-	});
-	
-	$('#accomModal-addCruise').slideUp('');
-	
-	$('#accomModal-addHotelCruise-trigger').change(function(){
-		if ($('#accomModal-addHotel').is(':visible')) {
-		  	$('#accomModal-addHotel').slideUp('');
-			$('#accomModal-addCruise').slideDown('');
-			
-		}
-		else {
-		  	$('#accomModal-addCruise').slideUp('');
-			$('#accomModal-addHotel').slideDown('');
-			
-		
-		}
-		if ($('#accomModal-addHotel').hasClass('displayNone')) {
-			$('#accomModal-addHotel').removeClass('displayNone');
-		}
-			
-		
-	});
-	
 	
 	
 	

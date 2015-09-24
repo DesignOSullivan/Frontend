@@ -70,28 +70,28 @@
 				];
 				
 			//create AutoComplete UI component
-			$("#arrivalCountry").kendoAutoComplete({
+			$("#arrivalCountry").kendoComboBox({
 				dataSource: countries,
 				filter: "startswith",
 				placeholder: "Arrival Country",
 				separator: ", "
 			});
 			//---------
-			$("#departCountry").kendoAutoComplete({
+			$("#departCountry").kendoComboBox({
 				dataSource: countries,
 				filter: "startswith",
 				placeholder: "Departure Country",
 				separator: ", "
 			});
 			//---------
-			$("#arrivalCity").kendoAutoComplete({
+			$("#arrivalCity").kendoComboBox({
 				dataSource: cities,
 				filter: "startswith",
 				placeholder: "Arrival City",
 				separator: ", "
 			});
 			//---------
-			$("#departCity").kendoAutoComplete({
+			$("#departCity").kendoComboBox({
 				dataSource: cities,
 				filter: "startswith",
 				placeholder: "Departure City",

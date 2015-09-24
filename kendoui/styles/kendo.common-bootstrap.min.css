@@ -3179,7 +3179,7 @@ span.k-datepicker, span.k-timepicker, span.k-datetimepicker, span.k-colorpicker,
 	padding-bottom: 6px
 }
 .k-textbox, .k-autocomplete, .k-dropdown-wrap, .k-picker-wrap, .k-numeric-wrap {
-	border-width: 1px;
+	border-width: 0px;
 	border-style: solid;
 	padding: 0 1.9em 0 0
 }

@@ -9,10 +9,11 @@ a{color: #b50f46 /*#fd5c63*/; text-decoration: none;}
 a:hover, a:focus{color: #fd5c63}
 th{color: #54698d;}
 
-[placeholder]:focus::-webkit-input-placeholder {
-    transition: opacity 0.2s 0.2s ease; 
-    opacity: 0;
-}
+[placeholder]input-placeholder {transition: opacity 0.2s 0.2s ease; opacity: 0;}
+[placeholder]:focus::-webkit-input-placeholder {transition: opacity 0.2s 0.2s ease; opacity: 0;}
+[placeholder]:focus::-moz-input-placeholder {transition: opacity 0.2s 0.2s ease; opacity: 0;}
+[placeholder]:focus::-ms-input-placeholder {transition: opacity 0.2s 0.2s ease; opacity: 0;}
+
 
 
 /* FORM BASIC STUFF */

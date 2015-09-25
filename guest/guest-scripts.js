@@ -55,37 +55,37 @@ $(document).ready(function () {
 	});
 
 	
-	$('#remarksTrigger').click(function() {
-		if ($('#remarks').hasClass('closed')){
-			$('#remarks').removeClass('closed');
-			$('#remarksList').removeClass('displayNone');
-			$('#remarks span.glyphicon').removeClass('glyphicon-chevron-right');
-			$('#remarks span.glyphicon').addClass('glyphicon-chevron-left');
-		}
-		else{
-			$('#remarks').addClass('closed');	
-			$('#remarksList').addClass('displayNone');
-			$('#remarks span.glyphicon').addClass('glyphicon-chevron-right');
-			$('#remarks span.glyphicon').removeClass('glyphicon-chevron-left');
-		}
-		
-	});
-	
 	$('#remarksTrigger2').click(function() {
 		if ($('#remarks').hasClass('closed')){
 			$('#remarks').removeClass('closed');
 			$('#remarksList').removeClass('displayNone');
-			$('#remarks span.glyphicon').removeClass('glyphicon-chevron-left');
-			$('#remarks span.glyphicon').addClass('glyphicon-chevron-right');
+            $('#remarks i.fa').removeClass('fa-chevron-left');
+            $('#remarks i.fa').addClass('fa-chevron-right');
 		}
 		else{
 			$('#remarks').addClass('closed');	
 			$('#remarksList').addClass('displayNone');
-			$('#remarks span.glyphicon').addClass('glyphicon-chevron-left');
-			$('#remarks span.glyphicon').removeClass('glyphicon-chevron-right');
+            $('#remarks i.fa').addClass('fa-chevron-left');
+            $('#remarks i.fa').removeClass('fa-chevron-right');
+		}
+		
+	});	
+	$('#remarksTrigger').click(function() {
+		if ($('#remarks').hasClass('closed')){
+			$('#remarks').removeClass('closed');
+			$('#remarksList').removeClass('displayNone');
+            $('#remarks i.fa').removeClass('fa-chevron-left');
+            $('#remarks i.fa').addClass('fa-chevron-right');
+		}
+		else{
+			$('#remarks').addClass('closed');	
+			$('#remarksList').addClass('displayNone');
+            $('#remarks i.fa').addClass('fa-chevron-left');
+            $('#remarks i.fa').removeClass('fa-chevron-right');
 		}
 		
 	});
+	
 	
 	
 	

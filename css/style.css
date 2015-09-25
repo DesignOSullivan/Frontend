@@ -54,7 +54,7 @@ textarea{min-height: 150px;}
 .tab-header{margin-top: 120px;}
 
 .nav-tabs{  border-bottom: 0;}
-.nav-tabs > li{display: inline-block; float: none; font-size: 16px; margin-left: -3px; margin-right: -1px; z-index: 1; cursor: pointer;
+.nav-tabs > li{display: inline-block; float: none; font-size: 16px; margin-left: -3px; margin-right: -1px; z-index: 1; cursor: pointer; width: 140px;
 				border-radius: 4px 4px 0 0; border-top: 1px solid #ccc; border-left: 1px solid #ccc; border-right: none; border-bottom: none;
 				background: #ffffff; /* Old browsers */
 				background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 47%, #ededed 100%); /* FF3.6+ */

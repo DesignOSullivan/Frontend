@@ -14,17 +14,47 @@
         <div class="row">
             <div class="col-md-12 center">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a data-toggle="tab" data-target="#passport-content">Passport</a></li>
-                    <li><a data-toggle="tab" data-target="#air-content">Air</a></li>
-                    <li><a data-toggle="tab" data-target="#health-content">Health</a></li>
-                    <li><a data-toggle="tab" data-target="#emergency-content">Emergency</a></li>
-                    <li><a data-toggle="tab" data-target="#sig-content">SIG</a></li>
-                    <li><a data-toggle="tab" data-target="#travel-credit-content">Traveler Credit</a></li>
+                    <li class="active"><a data-toggle="tab" data-target="#passport-content" id="passportTab">Passport</a></li>
+                    <li><a data-toggle="tab" data-target="#air-content" id="airTab">Air</a></li>
+                    <li><a data-toggle="tab" data-target="#health-content" id="healthTab">Health</a></li>
+                    <li><a data-toggle="tab" data-target="#emergency-content" id="emergencyTab">Emergency</a></li>
+                    <li><a data-toggle="tab" data-target="#sig-content" id="sigTab">SIG</a></li>
+                    <li><a data-toggle="tab" data-target="#travel-credit-content" id="travelerTab">Traveler Credit</a></li>
                 </ul>
             </div>
         </div>
     </div>
 </div>
+
+
+<script>
+    $('#passportTab').click(function(){
+        $('#bottomSpace').css('margin-bottom', 220);
+    }); 
+
+    $('#healthTab, #sigTab, #airTab, #emergencyTab, #travelerTab').click(function(){
+        $('#bottomSpace').css('margin-bottom', 520);
+    });
+
+
+</script>
+
+
+
+
+<script>
+    $('#passportTab').click(function(){
+        $('#bottomSpace').css('margin-bottom', 220);
+    }); 
+    
+    $('#healthTab, #sigTab, #airTab, #emergencyTab, #travelerTab').click(function(){
+        $('#bottomSpace').css('margin-bottom', 520);
+    });
+    
+    
+</script>
+
+
 
 <!-- Tab Content-->
 <div id="guestTabContent" class="tab-content container container-border">
@@ -188,6 +218,8 @@
         });
     </script>
     
+   
+  
 <!--/end passport scripts-->
 
 
@@ -262,10 +294,10 @@
         </div>
     </div>
 
-<!-- Air Scirpts -->
-    
+    <!-- Air Scirpts -->
+
     <script>
-        
+
         $(document).ready(function(){
             $("#aAirport").kendoComboBox({
                 dataTextField: "text",
@@ -279,7 +311,7 @@
                 ]
             });
         });
-                
+
         $(document).ready(function(){
             $("#aSeating").kendoComboBox({
                 dataTextField: "text",
@@ -294,7 +326,7 @@
                 ]
             });
         });   
-        
+
         $(document).ready(function(){
             $("#aMeal").kendoComboBox({
                 dataTextField: "text",
@@ -309,7 +341,7 @@
                 ]
             });
         });
-        
+
         $(document).ready(function(){
             $("#aAirline").kendoComboBox({
                 dataTextField: "text",
@@ -325,12 +357,13 @@
                 ]
             });
         });
-        
-        
-        
+
+
+
     </script>
-    
-<!-- /End Air Scripts -->
+
+    <!-- /End Air Scripts -->
+
     
 
     <!-- Health Tab -->
@@ -358,8 +391,7 @@
             </div>
         </div>
     </div>
-    
-    
+
     <!-- Health Scirpts -->
 
     <script>
@@ -427,7 +459,6 @@
     <!-- /End Health Scripts -->
     
     
-
     <!-- Emergency Tab -->
     <div id="emergency-content" class="tab-pane fade">
         <div class="container pad0">

@@ -9,6 +9,12 @@ a{color: #b50f46 /*#fd5c63*/; text-decoration: none;}
 a:hover, a:focus{color: #fd5c63}
 th{color: #54698d;}
 
+[placeholder]:focus::-webkit-input-placeholder {
+    transition: opacity 0.2s 0.2s ease; 
+    opacity: 0;
+}
+
+
 /* FORM BASIC STUFF */
 .form-control, label {color: #54698d;}
 .form-control, .input-group-addon{font-size: 12px;color: #54698d;}

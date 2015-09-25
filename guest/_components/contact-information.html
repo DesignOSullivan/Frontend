@@ -57,7 +57,7 @@
                         <label for="social">Social</label>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-facebook-f fa-lg"></i></span>
-                            <input class="form-control" id="facebook" type="text" placeholder="username">
+                            <input class="form-control" id="facebook" type="text" placeholder="(Username)">
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                     <div class="form-group col-md-12">
                         <div class="input-group noLabel">
                             <span class="input-group-addon"><i class="fa fa-twitter fa-lg"></i></span>
-                            <input class="form-control" id="exampleInputPassword1" type="text" placeholder="username">
+                            <input class="form-control" id="exampleInputPassword1" type="text" placeholder="(Username)">
                         </div>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                     <div class="form-group col-md-12">
                         <div class="input-group noLabel">
                             <span class="input-group-addon"><i class="fa fa-instagram fa-lg"></i></span>
-                            <input class="form-control" id="instagram" type="text" placeholder="username">
+                            <input class="form-control" id="instagram" type="text" placeholder="(Username)">
                         </div>
                     </div>
                 </div>
@@ -92,9 +92,10 @@
 
 <script>
     $(document).ready(function() {
-        $("#phoneType").kendoDropDownList({
+        $("#phoneType").kendoComboBox({
             dataTextField: "text",
             dataValueField: "value",
+            placeholder: "Select Type",
             dataSource: [
                 { text: "Home", value: "1" },
                 { text: "Mobile", value: "2" },

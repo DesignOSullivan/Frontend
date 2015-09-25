@@ -162,26 +162,27 @@
         $("#pDateOfBirth").kendoDatePicker({
             format: "dd-MMM-yy",
             start: "century",
-            value: "Select date..."
+            placeholder: "test",
+            value: "Select Date"
         });
     
         $("#pDateOfIssue").kendoDatePicker({
             format: "dd-MMM-yy",
             start: "decade",
-            value: "Select date..."
+            value: "Select Date"
         });
     
         $("#pDateOfExpiration").kendoDatePicker({
             format: "dd-MMM-yy",
             start: "decade",
-            value: "Select date..."
+            value: "Select Date"
         });
     
         $(document).ready(function(){
             $("#pSex").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
-                placeholder: "Select sex...",
+                placeholder: "Select Sex",
                 filter: "startswith",
                 suggest: "true",
                 dataSource: [
@@ -196,7 +197,7 @@
             $("#pIssuingAuthority").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
-                placeholder: "Select issuing authority...",
+                placeholder: "Select Issuing Authority",
                 filter: "startswith",
                 suggest: "true",
                 dataSource: [
@@ -292,7 +293,7 @@
             $("#aAirport").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
-                placeholder: "Select airport...",
+                placeholder: "Select Airport",
                 filter: "startswith",
                 suggest: "true",
                 dataSource: [
@@ -306,7 +307,7 @@
             $("#aSeating").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
-                placeholder: "Select seat type...",
+                placeholder: "Select Seat Type",
                 filter: "startswith",
                 suggest: "true",
                 dataSource: [
@@ -321,7 +322,7 @@
             $("#aMeal").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
-                placeholder: "Select meal type...",
+                placeholder: "Select Meal Type",
                 filter: "startswith",
                 suggest: "true",
                 dataSource: [
@@ -336,7 +337,7 @@
             $("#aAirline").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
-                placeholder: "Select airline...",
+                placeholder: "Select Airline",
                 filter: "startswith",
                 suggest: "true",
                 dataSource: [
@@ -362,21 +363,21 @@
             <div class="row">
                 <div class="form-group col-md-6 col-xs-12">
                     <label for="hHealthConcerns">Health Concerns</label>
-                    <input class="form-control" id="hHealthConcerns">
+                    <select class="form-control" id="hHealthConcerns"></select>
                 </div>
                 <div class="form-group col-md-6 col-xs-12">
                     <label for="hPhysicalLimitations">Physical Limitations</label>
-                    <input class="form-control" id="hPhysicalLimitations">
+                    <select class="form-control" id="hPhysicalLimitations"></select>
                 </div>
             </div>
             <div class="row">
                 <div class="form-group col-md-6 col-xs-12">
                     <label for="hAllergies">Allergies</label>
-                    <input class="form-control" id="hAllergies">
+                    <select class="form-control" id="hAllergies"></select>
                 </div>
                 <div class="form-group col-md-6 col-xs-12">
                     <label for="hMealConsiderations">Meal Considerations</label>
-                    <input class="form-control" id="hMealConsiderations">
+                    <select class="form-control" id="hMealConsiderations"></select>
                 </div>
             </div>
         </div>
@@ -387,57 +388,105 @@
     <script>
 
         $(document).ready(function(){
-            $("#hHealthConcerns").kendoComboBox({
+            $("#hHealthConcerns").kendoMultiSelect({
                 dataTextField: "text",
                 dataValueField: "value",
-                placeholder: "Select health concern...",
+                placeholder: "Select Health Concern",
                 filter: "startswith",
                 suggest: "true",
                 dataSource: [
-                    { text: "Health Concern 1", value: "1" },
-                    { text: "Health Concern 2", value: "3" }
+                    { text: "Asthma", value: "1" },
+                    { text: "Diabetes Type I (Needs Access to Refrigerator)", value: "3" },
+                    { text: "Diabetes Type II (Managed With Oral Meds)", value: "3" },
+                    { text: "Hearing: Wears Hearing Aid", value: "3" },
+                    { text: "Hearing Impaired", value: "3" },
+                    { text: "Heart: Irregular Heartbeat (AFib)", value: "3" },
+                    { text: "Heart: Pace Maker", value: "3" },
+                    { text: "High Blood Pressure (Hypertension)", value: "3" },
+                    { text: "Sleep Apnea (Travels With CPAP Machine)", value: "3" },
+                    { text: "Other: See Guest Form)", value: "3" },
+                    { text: "None Advised", value: "3" }
                 ]
             });
         });
 
         $(document).ready(function(){
-            $("#hAllergies").kendoComboBox({
+            $("#hAllergies").kendoMultiSelect({
                 dataTextField: "text",
                 dataValueField: "value",
-                placeholder: "Select allergy...",
+                placeholder: "Select Allergy",
                 filter: "startswith",
                 suggest: "true",
                 dataSource: [
-                    { text: "Allergy 1", value: "1" },
-                    { text: "Allergy 2", value: "1" },
+                    { text: "Down Feathers", value: "1" },
+                    { text: "Drug: Morphine", value: "1" },
+                    { text: "Drug: Penicillin", value: "1" },
+                    { text: "Drug: Sulfa", value: "1" },
+                    { text: "Eggs", value: "1" },
+                    { text: "Fish", value: "1" },
+                    { text: "Gluten Intolerant", value: "1" },
+                    { text: "Gluten Sensitive", value: "1" },
+                    { text: "Hay Fever", value: "1" },
+                    { text: "Lactose Intolerant", value: "1" },
+                    { text: "Lactose Sensitive", value: "1" },
+                    { text: "Peanut", value: "1" },
+                    { text: "Seafood", value: "1" },
+                    { text: "Shellfish: Crustaceans", value: "1" },
+                    { text: "Shellfish: Mollusks", value: "1" },
+                    { text: "Tree Nuts", value: "1" },
+                    { text: "Other: See Guest Form", value: "1" },
+                    { text: "None Advised", value: "1" },
                 ]
             });
         });   
 
         $(document).ready(function(){
-            $("#hPhysicalLimitations").kendoComboBox({
+            $("#hPhysicalLimitations").kendoMultiSelect({
                 dataTextField: "text",
                 dataValueField: "value",
-                placeholder: "Select physical limitation...",
+                placeholder: "Select Physical Limitation",
                 filter: "startswith",
                 suggest: "true",
                 dataSource: [
-                    { text: "Physical Limitation 1", value: "1" },
-                    { text: "Physical Limitation 2", value: "1" },
+                    { text: "Arthritis", value: "1" },
+                    { text: "Arthritis: Knees", value: "1" },
+                    { text: "Back Pain", value: "1" },
+                    { text: "Difficulty Climbing Stairs", value: "1" },
+                    { text: "Difficulty Walking Long Distances", value: "1" },
+                    { text: "Heavy Lifting Restriction", value: "1" },
+                    { text: "Hip Replacement", value: "1" },
+                    { text: "Knee Replacement", value: "1" },
+                    { text: "Prosthetic Leg", value: "1" },
+                    { text: "Shoulder Injury", value: "1" },
+                    { text: "Slow Walker", value: "1" },
+                    { text: "Uses Cane to Walk Long Distances (or on Uneven Terrain)", value: "1" },
+                    { text: "Other: See Guest Form", value: "1" },
+                    { text: "None Advised", value: "1" },
                 ]
             });
         });
 
         $(document).ready(function(){
-            $("#hMealConsiderations").kendoComboBox({
+            $("#hMealConsiderations").kendoMultiSelect({
                 dataTextField: "text",
                 dataValueField: "value",
-                placeholder: "Select meal consideration...",
+                placeholder: "Select Meal Consideration",
                 filter: "startswith",
                 suggest: "true",
                 dataSource: [
-                    { text: "Meal Consideration 1", value: "1" },
-                    { text: "Meal Consideration 2", value: "1" },
+                    { text: "Low Sodium, Low Fat", value: "1" },
+                    { text: "No Pork", value: "1" },
+                    { text: "No Red Meats", value: "1" },
+                    { text: "No Seafood", value: "1" },
+                    { text: "No Shellfish", value: "1" },
+                    { text: "Prefers Dairy Free", value: "1" },
+                    { text: "Prefers Gluten Free", value: "1" },
+                    { text: "Prefers Vegetarian", value: "1" },
+                    { text: "Vegan (No Animal Products Whatsoever)", value: "1" },
+                    { text: "Vegetarian", value: "1" },
+                    { text: "Vegetarian and Fish", value: "1" },
+                    { text: "Other: See Guest Form", value: "1" },
+                    { text: "None Advised", value: "1" },
                 ]
             });
         });
@@ -455,11 +504,7 @@
             <div class="row">
                 <div class="form-group col-md-1">
                     <label for="eTitle1">Title</label>
-                    <select class="form-control" id="eTitle1">
-                        <option>Mr.</option>
-                        <option>Mrs.</option>
-                        <option>Ms.</option>
-                    </select>
+                    <input class="form-control" id="eTitle">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="eFirstName">First Name</label>
@@ -477,14 +522,7 @@
                 </div>
                 <div class="form-group col-md-1">
                     <label for="eSuffix">Suffix</label>
-                    <select class="form-control" id="eSuffix">
-                        <option></option>
-                        <option>Sr.</option>
-                        <option>Jr.</option>
-                        <option>III.</option>
-                        <option>IV</option>
-                        <option>V</option>
-                    </select>
+                    <Input class="form-control" id="eSuffix">
                 </div>
             </div>
             <div class="row">
@@ -493,13 +531,8 @@
                     <input class="form-control" id="phoneNumber" type="text" placeholder="Phone Number">
                 </div>
                 <div class="form-group col-md-2 col-xs-3">
-                    <label for="phoneType">Type</label>
-                    <select class="form-control" id="phoneType">
-                        <option>Home</option>
-                        <option>Moblie</option>
-                        <option>Work</option>
-                        <option>Fax</option>
-                    </select>
+                    <label for="ePhoneType">Type</label>
+                    <Input class="form-control" id="ePhoneType">
                 </div>
             </div>
             <div class="row">
@@ -532,14 +565,7 @@
             <div class="row">
                 <div class="form-group col-md-4">
                     <label for="eRelationship">Relationship</label>
-                    <select class="form-control" id="eRelationship">
-                        <option></option>
-                        <option>Sr.</option>
-                        <option>Jr.</option>
-                        <option>III.</option>
-                        <option>IV</option>
-                        <option>V</option>
-                    </select>
+                    <input class="form-control" id="eRelationship">
                 </div>
             </div>
         </div>
@@ -551,6 +577,77 @@
         </div>
     </div>
 
+    
+    <!-- Air Scirpts -->
+
+    <script>
+
+        $(document).ready(function(){
+            $("#eTitle").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "--",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    { text: "Mr.", value: "1" },
+                    { text: "Mrs.", value: "3" },
+                    { text: "Ms.", value: "3" },
+                    { text: "Prof.", value: "3" },
+                    { text: "Dr.", value: "3" },
+                ]
+            });
+        });
+
+        $(document).ready(function(){
+            $("#eSuffix").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "--",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    { text: "Sr.", value: "1" },
+                    { text: "Jr.", value: "3" },
+                    { text: "III", value: "3" },
+                ]
+            });
+        });
+
+        $(document).ready(function(){
+            $("#ePhoneType").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select Type",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    { text: "Home", value: "1" },
+                    { text: "Mobile", value: "3" },
+                    { text: "Work", value: "3" },
+                    { text: "Fax", value: "3" },
+                ]
+            });
+        });
+
+        $(document).ready(function(){
+            $("#eRelationship").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select Relationship",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    { text: "Friend", value: "1" },
+                    { text: "Relative", value: "3" },
+                ]
+            });
+        });
+        
+        
+    </script>
+    
+<!-- /End Air Scripts -->
 
     <!-- SIG -->
     <div id="sig-content" class="tab-pane fade">

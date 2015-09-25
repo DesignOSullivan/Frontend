@@ -11,7 +11,7 @@
     <div class="row">
         <div class="form-group col-md-1">
             <label for="title1">Title</label>
-            <input class="form-control" id="title">
+            <input class="form-control" id="title" placeholder="--">
         </div>
         <div class="form-group col-md-3">
             <label for="firstName">First Name</label>
@@ -27,13 +27,13 @@
         </div>
         <div class="form-group col-md-1">
             <label for="suffix">Suffix</label>
-            <input class="form-control" id="suffix">
+            <input class="form-control" id="suffix" placeholder="--">
         </div>
     </div>
     <div class="row">
         <div class="form-group col-md-5">
             <label for="nickname">Nickname</label>
-            <input class="form-control" id="nickname" type="text" placeholder="Nickname">
+            <input class="form-control" id="nickname" type="text" placeholder="(Nickname)">
         </div>
     </div>
 </div>
@@ -51,7 +51,9 @@
             dataSource: [
                 { text: "Mr.", value: "1" },
                 { text: "Mrs.", value: "2" },
-                { text: "Ms.", value: "3" }
+                { text: "Ms.", value: "3" },
+                { text: "Prof.", value: "3" },
+                { text: "Dr.", value: "3" }
             ]
         });
     });
@@ -68,8 +70,6 @@
                 { text: "Sr.", value: "2" },
                 { text: "Jr.", value: "3" },
                 { text: "III", value: "4" },
-                { text: "IV", value: "5" },
-                { text: "V", value: "6" }
             ]
         });
     });

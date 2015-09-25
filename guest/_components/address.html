@@ -18,7 +18,7 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label for="address2">Address 2</label>
-                        <input class="form-control" id="address2" type="text" placeholder="address 2">
+                        <input class="form-control" id="address2" type="text" placeholder="(Address 2)">
                     </div>
                 </div>
                 <div class="row">
@@ -28,7 +28,7 @@
                     </div>
                     <div class="form-group col-md-2">
                         <label for="plus4">Plus 4</label>
-                        <input class="form-control" id="plus4" type="text" placeholder="+4">
+                        <input class="form-control" id="plus4" type="text" placeholder="(+4)">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="city">City</label>
@@ -38,11 +38,11 @@
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label for="state">State</label>
-                        <input class="form-control" id="state" type="text" placeholder="State">
+                        <input class="form-control" id="state">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="countries">Country</label>
-                        <input class="form-control" id="countries" type="text" placeholder="Country">
+                        <input class="form-control" id="countries">
                     </div>
                 </div>
             </div>
@@ -123,15 +123,15 @@
         ];
 
         //create AutoComplete UI component
-        $("#countries").kendoAutoComplete({
+        $("#countries").kendoComboBox({
             dataSource: countries,
             filter: "startswith",
-            placeholder: "Select country...",
+            placeholder: "Select Country",
         });
     });
-</script>
 
-<script>
+
+
     $(document).ready(function () {
         var state = [
             "Alabama",
@@ -187,10 +187,10 @@
         ];
 
         //create AutoComplete UI component
-        $("#state").kendoAutoComplete({
+        $("#state").kendoComboBox({
             dataSource: state,
             filter: "startswith",
-            placeholder: "Select state...",
+            placeholder: "Select State",
         });
     });
 </script>

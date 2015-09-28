@@ -170,9 +170,9 @@
     <!-- Remarks -->
     <div id="remarks" class="closed shadow">
         <a id="remarksTrigger2">
-            <h4 class="alignRight">Remarks</h4>
+            <!--            <h4 class="alignRight">Remarks</h4>-->
             <i class="fa fa-chevron-left white alignLeft"></i>
-            
+
             <br>
             <br>
             <span class="rotate"><b>Remarks</b></span>
@@ -180,7 +180,7 @@
             <br>
             <br>
         </a>
-        
+
         <div class="displayNone" id="remarksList">
             <div class="container">
                 <div class="row">
@@ -198,48 +198,72 @@
                         <button type="submit" class="btn btn-info btn-xs alignRight"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Submit </button>
                     </div>
                 </div>
-                
+
                 <div class="row">
                     <div class="form-group col-md-12">
                         <h4 class="alignRight">Guest Notes</h4>
                     </div>
                 </div>
-                
+
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <p class="alignLeft">The 'e' at the end of the guest's name is silent.<br><i>Elizabeth Bougie, 20-Sept-15</i></p>
+                        <p class="alignLeft">The 'e' at the end of the guest's name is silent.
+                            <br><i>Elizabeth Bougie, 20-Sept-15</i></p>
                     </div>
                 </div>
-                
+
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <p class="alignLeft">Handle guest delicately.<br><i>Elizabeth Bougie, 20-Sept-15</i></p>
+                        <p class="alignLeft">Handle guest delicately.
+                            <br><i>Elizabeth Bougie, 20-Sept-15</i></p>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
 
-    
+
     <script>
-    $(document).ready(function(){
-    $("#remarkType").kendoComboBox({
-    dataTextField: "text",
-    dataValueField: "value",
-    placeholder: "Select remark type...",
-    filter: "startswith",
-    suggest: "true",
-    dataSource: [
-    { text: "Guest Note", value: "1" },
-    { text: "Reservation Note", value: "2" },
-    { text: "Air Operations Note", value: "3" },
-    { text: "Ground Operations Note", value: "3" },
-    { text: "Fulfillment Note", value: "3" }
+        $(document).ready(function () {
+            $("#remarkType").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select Type",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "Guest Note",
+                        value: "1"
+                    },
+                    {
+                        text: "Reservation Note",
+                        value: "2"
+                    },
+                    {
+                        text: "Air Operations Note",
+                        value: "3"
+                    },
+                    {
+                        text: "Ground Operations Note",
+                        value: "3"
+                    },
+                    {
+                        text: "Fulfillment Note",
+                        value: "3"
+                    }
     ]
-    });
-    });
+            });
+        });
     </script>
+
+
+
+
+
+
+
 
 
 </body>

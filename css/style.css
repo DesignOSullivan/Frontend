@@ -135,12 +135,14 @@ textarea{min-height: 150px;}
 
 
 .modal-backdrop.fade.in{ background: rgba(0,0,0,0.5)}
-.modal-dialog{width: 60%;   }
+.modal-dialog{width: 60%; margin-top: 7%}
 .modal-content {background:  rgba(0,27,61,.8);}
 .modal-content h3 {color: #fff;text-transform: uppercase;}
 .modal-content p {color: #fff; font-size: 12px}
 .modal-content span{color: #fff}
 .modal-footer{background:#fff; width:100%; border-radius: 5px;}
+
+#creditTotal{margin-top: 10; background: #E2EFFF; border-radius: 5px}
 
 
 /* --- Classes --- */

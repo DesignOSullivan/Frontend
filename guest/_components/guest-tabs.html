@@ -1,5 +1,3 @@
-<script src="guest-tabs.js"></script>
-
 <!-- Tabs -->
 <div id="guestTabs">
     <div class="container pad0">
@@ -33,15 +31,13 @@
 
 
 <script>
-    $('#passportTab').click(function(){
+    $('#passportTab').click(function () {
         $('#bottomSpace').css('margin-bottom', 220);
-    }); 
-    
-    $('#healthTab, #sigTab, #airTab, #emergencyTab, #travelerTab').click(function(){
+    });
+
+    $('#healthTab, #sigTab, #airTab, #emergencyTab, #travelerTab').click(function () {
         $('#bottomSpace').css('margin-bottom', 520);
     });
-    
-    
 </script>
 
 
@@ -156,8 +152,8 @@
         </div>
     </div>
 
-<!--Passport Scripts-->
-    
+    <!--Passport Scripts-->
+
     <script>
         $("#pDateOfBirth").kendoDatePicker({
             format: "dd-MMM-yy",
@@ -165,20 +161,20 @@
             placeholder: "test",
             value: "Select Date"
         });
-    
+
         $("#pDateOfIssue").kendoDatePicker({
             format: "dd-MMM-yy",
             start: "decade",
             value: "Select Date"
         });
-    
+
         $("#pDateOfExpiration").kendoDatePicker({
             format: "dd-MMM-yy",
             start: "decade",
             value: "Select Date"
         });
-    
-        $(document).ready(function(){
+
+        $(document).ready(function () {
             $("#pSex").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
@@ -186,14 +182,23 @@
                 filter: "startswith",
                 suggest: "true",
                 dataSource: [
-                    { text: "Male", value: "1" },
-                    { text: "Female", value: "2" },
-                    { text: "Other", value: "3" }
+                    {
+                        text: "Male",
+                        value: "1"
+                    },
+                    {
+                        text: "Female",
+                        value: "2"
+                    },
+                    {
+                        text: "Other",
+                        value: "3"
+                    }
                 ]
             });
         });
-    
-        $(document).ready(function(){
+
+        $(document).ready(function () {
             $("#pIssuingAuthority").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
@@ -201,17 +206,26 @@
                 filter: "startswith",
                 suggest: "true",
                 dataSource: [
-                    { text: "Port of Miami", value: "1" },
-                    { text: "Other Issuing Authority", value: "1" },
-                    { text: "Other Issuing Authority", value: "2" }
+                    {
+                        text: "Port of Miami",
+                        value: "1"
+                    },
+                    {
+                        text: "Other Issuing Authority",
+                        value: "1"
+                    },
+                    {
+                        text: "Other Issuing Authority",
+                        value: "2"
+                    }
                 ]
             });
         });
     </script>
-    
-   
-  
-<!--/end passport scripts-->
+
+
+
+    <!--/end passport scripts-->
 
 
 
@@ -288,8 +302,7 @@
     <!-- Air Scirpts -->
 
     <script>
-
-        $(document).ready(function(){
+        $(document).ready(function () {
             $("#aAirport").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
@@ -297,13 +310,19 @@
                 filter: "startswith",
                 suggest: "true",
                 dataSource: [
-                    { text: "Myrtle Beach Int'l | MYR", value: "1" },
-                    { text: "Logan Int'l | BOS", value: "3" }
+                    {
+                        text: "Myrtle Beach Int'l | MYR",
+                        value: "1"
+                    },
+                    {
+                        text: "Logan Int'l | BOS",
+                        value: "3"
+                    }
                 ]
             });
         });
 
-        $(document).ready(function(){
+        $(document).ready(function () {
             $("#aSeating").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
@@ -311,14 +330,23 @@
                 filter: "startswith",
                 suggest: "true",
                 dataSource: [
-                    { text: "Aisle", value: "1" },
-                    { text: "Window", value: "1" },
-                    { text: "Two Side", value: "3" }
+                    {
+                        text: "Aisle",
+                        value: "1"
+                    },
+                    {
+                        text: "Window",
+                        value: "1"
+                    },
+                    {
+                        text: "Two Side",
+                        value: "3"
+                    }
                 ]
             });
-        });   
+        });
 
-        $(document).ready(function(){
+        $(document).ready(function () {
             $("#aMeal").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
@@ -326,14 +354,23 @@
                 filter: "startswith",
                 suggest: "true",
                 dataSource: [
-                    { text: "Kosher", value: "1" },
-                    { text: "Veagan", value: "1" },
-                    { text: "Vegitarian", value: "3" }
+                    {
+                        text: "Kosher",
+                        value: "1"
+                    },
+                    {
+                        text: "Veagan",
+                        value: "1"
+                    },
+                    {
+                        text: "Vegitarian",
+                        value: "3"
+                    }
                 ]
             });
         });
 
-        $(document).ready(function(){
+        $(document).ready(function () {
             $("#aAirline").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
@@ -341,21 +378,30 @@
                 filter: "startswith",
                 suggest: "true",
                 dataSource: [
-                    { text: "American Airlines", value: "1" },
-                    { text: "US Airways", value: "1" },
-                    { text: "Spirit", value: "1" },
-                    { text: "Delta", value: "3" }
+                    {
+                        text: "American Airlines",
+                        value: "1"
+                    },
+                    {
+                        text: "US Airways",
+                        value: "1"
+                    },
+                    {
+                        text: "Spirit",
+                        value: "1"
+                    },
+                    {
+                        text: "Delta",
+                        value: "3"
+                    }
                 ]
             });
         });
-
-
-
     </script>
 
     <!-- /End Air Scripts -->
 
-    
+
 
     <!-- Health Tab -->
     <div id="health-content" class="tab-pane fade">
@@ -386,8 +432,7 @@
     <!-- Health Scirpts -->
 
     <script>
-
-        $(document).ready(function(){
+        $(document).ready(function () {
             $("#hHealthConcerns").kendoMultiSelect({
                 dataTextField: "text",
                 dataValueField: "value",
@@ -395,22 +440,55 @@
                 filter: "startswith",
                 suggest: "true",
                 dataSource: [
-                    { text: "Asthma", value: "1" },
-                    { text: "Diabetes Type I (Needs Access to Refrigerator)", value: "3" },
-                    { text: "Diabetes Type II (Managed With Oral Meds)", value: "3" },
-                    { text: "Hearing: Wears Hearing Aid", value: "3" },
-                    { text: "Hearing Impaired", value: "3" },
-                    { text: "Heart: Irregular Heartbeat (AFib)", value: "3" },
-                    { text: "Heart: Pace Maker", value: "3" },
-                    { text: "High Blood Pressure (Hypertension)", value: "3" },
-                    { text: "Sleep Apnea (Travels With CPAP Machine)", value: "3" },
-                    { text: "Other: See Guest Form)", value: "3" },
-                    { text: "None Advised", value: "3" }
+                    {
+                        text: "Asthma",
+                        value: "1"
+                    },
+                    {
+                        text: "Diabetes Type I (Needs Access to Refrigerator)",
+                        value: "3"
+                    },
+                    {
+                        text: "Diabetes Type II (Managed With Oral Meds)",
+                        value: "3"
+                    },
+                    {
+                        text: "Hearing: Wears Hearing Aid",
+                        value: "3"
+                    },
+                    {
+                        text: "Hearing Impaired",
+                        value: "3"
+                    },
+                    {
+                        text: "Heart: Irregular Heartbeat (AFib)",
+                        value: "3"
+                    },
+                    {
+                        text: "Heart: Pace Maker",
+                        value: "3"
+                    },
+                    {
+                        text: "High Blood Pressure (Hypertension)",
+                        value: "3"
+                    },
+                    {
+                        text: "Sleep Apnea (Travels With CPAP Machine)",
+                        value: "3"
+                    },
+                    {
+                        text: "Other: See Guest Form)",
+                        value: "3"
+                    },
+                    {
+                        text: "None Advised",
+                        value: "3"
+                    }
                 ]
             });
         });
 
-        $(document).ready(function(){
+        $(document).ready(function () {
             $("#hAllergies").kendoMultiSelect({
                 dataTextField: "text",
                 dataValueField: "value",
@@ -418,29 +496,83 @@
                 filter: "startswith",
                 suggest: "true",
                 dataSource: [
-                    { text: "Down Feathers", value: "1" },
-                    { text: "Drug: Morphine", value: "1" },
-                    { text: "Drug: Penicillin", value: "1" },
-                    { text: "Drug: Sulfa", value: "1" },
-                    { text: "Eggs", value: "1" },
-                    { text: "Fish", value: "1" },
-                    { text: "Gluten Intolerant", value: "1" },
-                    { text: "Gluten Sensitive", value: "1" },
-                    { text: "Hay Fever", value: "1" },
-                    { text: "Lactose Intolerant", value: "1" },
-                    { text: "Lactose Sensitive", value: "1" },
-                    { text: "Peanut", value: "1" },
-                    { text: "Seafood", value: "1" },
-                    { text: "Shellfish: Crustaceans", value: "1" },
-                    { text: "Shellfish: Mollusks", value: "1" },
-                    { text: "Tree Nuts", value: "1" },
-                    { text: "Other: See Guest Form", value: "1" },
-                    { text: "None Advised", value: "1" },
+                    {
+                        text: "Down Feathers",
+                        value: "1"
+                    },
+                    {
+                        text: "Drug: Morphine",
+                        value: "1"
+                    },
+                    {
+                        text: "Drug: Penicillin",
+                        value: "1"
+                    },
+                    {
+                        text: "Drug: Sulfa",
+                        value: "1"
+                    },
+                    {
+                        text: "Eggs",
+                        value: "1"
+                    },
+                    {
+                        text: "Fish",
+                        value: "1"
+                    },
+                    {
+                        text: "Gluten Intolerant",
+                        value: "1"
+                    },
+                    {
+                        text: "Gluten Sensitive",
+                        value: "1"
+                    },
+                    {
+                        text: "Hay Fever",
+                        value: "1"
+                    },
+                    {
+                        text: "Lactose Intolerant",
+                        value: "1"
+                    },
+                    {
+                        text: "Lactose Sensitive",
+                        value: "1"
+                    },
+                    {
+                        text: "Peanut",
+                        value: "1"
+                    },
+                    {
+                        text: "Seafood",
+                        value: "1"
+                    },
+                    {
+                        text: "Shellfish: Crustaceans",
+                        value: "1"
+                    },
+                    {
+                        text: "Shellfish: Mollusks",
+                        value: "1"
+                    },
+                    {
+                        text: "Tree Nuts",
+                        value: "1"
+                    },
+                    {
+                        text: "Other: See Guest Form",
+                        value: "1"
+                    },
+                    {
+                        text: "None Advised",
+                        value: "1"
+                    },
                 ]
             });
-        });   
+        });
 
-        $(document).ready(function(){
+        $(document).ready(function () {
             $("#hPhysicalLimitations").kendoMultiSelect({
                 dataTextField: "text",
                 dataValueField: "value",
@@ -448,25 +580,67 @@
                 filter: "startswith",
                 suggest: "true",
                 dataSource: [
-                    { text: "Arthritis", value: "1" },
-                    { text: "Arthritis: Knees", value: "1" },
-                    { text: "Back Pain", value: "1" },
-                    { text: "Difficulty Climbing Stairs", value: "1" },
-                    { text: "Difficulty Walking Long Distances", value: "1" },
-                    { text: "Heavy Lifting Restriction", value: "1" },
-                    { text: "Hip Replacement", value: "1" },
-                    { text: "Knee Replacement", value: "1" },
-                    { text: "Prosthetic Leg", value: "1" },
-                    { text: "Shoulder Injury", value: "1" },
-                    { text: "Slow Walker", value: "1" },
-                    { text: "Uses Cane to Walk Long Distances (or on Uneven Terrain)", value: "1" },
-                    { text: "Other: See Guest Form", value: "1" },
-                    { text: "None Advised", value: "1" },
+                    {
+                        text: "Arthritis",
+                        value: "1"
+                    },
+                    {
+                        text: "Arthritis: Knees",
+                        value: "1"
+                    },
+                    {
+                        text: "Back Pain",
+                        value: "1"
+                    },
+                    {
+                        text: "Difficulty Climbing Stairs",
+                        value: "1"
+                    },
+                    {
+                        text: "Difficulty Walking Long Distances",
+                        value: "1"
+                    },
+                    {
+                        text: "Heavy Lifting Restriction",
+                        value: "1"
+                    },
+                    {
+                        text: "Hip Replacement",
+                        value: "1"
+                    },
+                    {
+                        text: "Knee Replacement",
+                        value: "1"
+                    },
+                    {
+                        text: "Prosthetic Leg",
+                        value: "1"
+                    },
+                    {
+                        text: "Shoulder Injury",
+                        value: "1"
+                    },
+                    {
+                        text: "Slow Walker",
+                        value: "1"
+                    },
+                    {
+                        text: "Uses Cane to Walk Long Distances (or on Uneven Terrain)",
+                        value: "1"
+                    },
+                    {
+                        text: "Other: See Guest Form",
+                        value: "1"
+                    },
+                    {
+                        text: "None Advised",
+                        value: "1"
+                    },
                 ]
             });
         });
 
-        $(document).ready(function(){
+        $(document).ready(function () {
             $("#hMealConsiderations").kendoMultiSelect({
                 dataTextField: "text",
                 dataValueField: "value",
@@ -474,30 +648,66 @@
                 filter: "startswith",
                 suggest: "true",
                 dataSource: [
-                    { text: "Low Sodium, Low Fat", value: "1" },
-                    { text: "No Pork", value: "1" },
-                    { text: "No Red Meats", value: "1" },
-                    { text: "No Seafood", value: "1" },
-                    { text: "No Shellfish", value: "1" },
-                    { text: "Prefers Dairy Free", value: "1" },
-                    { text: "Prefers Gluten Free", value: "1" },
-                    { text: "Prefers Vegetarian", value: "1" },
-                    { text: "Vegan (No Animal Products Whatsoever)", value: "1" },
-                    { text: "Vegetarian", value: "1" },
-                    { text: "Vegetarian and Fish", value: "1" },
-                    { text: "Other: See Guest Form", value: "1" },
-                    { text: "None Advised", value: "1" },
+                    {
+                        text: "Low Sodium, Low Fat",
+                        value: "1"
+                    },
+                    {
+                        text: "No Pork",
+                        value: "1"
+                    },
+                    {
+                        text: "No Red Meats",
+                        value: "1"
+                    },
+                    {
+                        text: "No Seafood",
+                        value: "1"
+                    },
+                    {
+                        text: "No Shellfish",
+                        value: "1"
+                    },
+                    {
+                        text: "Prefers Dairy Free",
+                        value: "1"
+                    },
+                    {
+                        text: "Prefers Gluten Free",
+                        value: "1"
+                    },
+                    {
+                        text: "Prefers Vegetarian",
+                        value: "1"
+                    },
+                    {
+                        text: "Vegan (No Animal Products Whatsoever)",
+                        value: "1"
+                    },
+                    {
+                        text: "Vegetarian",
+                        value: "1"
+                    },
+                    {
+                        text: "Vegetarian and Fish",
+                        value: "1"
+                    },
+                    {
+                        text: "Other: See Guest Form",
+                        value: "1"
+                    },
+                    {
+                        text: "None Advised",
+                        value: "1"
+                    },
                 ]
             });
         });
-
-
-
     </script>
 
     <!-- /End Health Scripts -->
-    
-    
+
+
     <!-- Emergency Tab -->
     <div id="emergency-content" class="tab-pane fade">
         <div class="container pad0">
@@ -577,12 +787,11 @@
         </div>
     </div>
 
-    
+
     <!-- Air Scirpts -->
 
     <script>
-
-        $(document).ready(function(){
+        $(document).ready(function () {
             $("#eTitle").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
@@ -590,16 +799,31 @@
                 filter: "startswith",
                 suggest: "true",
                 dataSource: [
-                    { text: "Mr.", value: "1" },
-                    { text: "Mrs.", value: "3" },
-                    { text: "Ms.", value: "3" },
-                    { text: "Prof.", value: "3" },
-                    { text: "Dr.", value: "3" },
+                    {
+                        text: "Mr.",
+                        value: "1"
+                    },
+                    {
+                        text: "Mrs.",
+                        value: "3"
+                    },
+                    {
+                        text: "Ms.",
+                        value: "3"
+                    },
+                    {
+                        text: "Prof.",
+                        value: "3"
+                    },
+                    {
+                        text: "Dr.",
+                        value: "3"
+                    },
                 ]
             });
         });
 
-        $(document).ready(function(){
+        $(document).ready(function () {
             $("#eSuffix").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
@@ -607,14 +831,23 @@
                 filter: "startswith",
                 suggest: "true",
                 dataSource: [
-                    { text: "Sr.", value: "1" },
-                    { text: "Jr.", value: "3" },
-                    { text: "III", value: "3" },
+                    {
+                        text: "Sr.",
+                        value: "1"
+                    },
+                    {
+                        text: "Jr.",
+                        value: "3"
+                    },
+                    {
+                        text: "III",
+                        value: "3"
+                    },
                 ]
             });
         });
 
-        $(document).ready(function(){
+        $(document).ready(function () {
             $("#ePhoneType").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
@@ -622,15 +855,27 @@
                 filter: "startswith",
                 suggest: "true",
                 dataSource: [
-                    { text: "Home", value: "1" },
-                    { text: "Mobile", value: "3" },
-                    { text: "Work", value: "3" },
-                    { text: "Fax", value: "3" },
+                    {
+                        text: "Home",
+                        value: "1"
+                    },
+                    {
+                        text: "Mobile",
+                        value: "3"
+                    },
+                    {
+                        text: "Work",
+                        value: "3"
+                    },
+                    {
+                        text: "Fax",
+                        value: "3"
+                    },
                 ]
             });
         });
 
-        $(document).ready(function(){
+        $(document).ready(function () {
             $("#eRelationship").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
@@ -638,16 +883,20 @@
                 filter: "startswith",
                 suggest: "true",
                 dataSource: [
-                    { text: "Friend", value: "1" },
-                    { text: "Relative", value: "3" },
+                    {
+                        text: "Friend",
+                        value: "1"
+                    },
+                    {
+                        text: "Relative",
+                        value: "3"
+                    },
                 ]
             });
         });
-        
-        
     </script>
-    
-<!-- /End Air Scripts -->
+
+    <!-- /End Air Scripts -->
 
     <!-- SIG -->
     <div id="sig-content" class="tab-pane fade">
@@ -679,124 +928,145 @@
         </div>
     </div>
 
-            <script>
-
-                $(document).ready(function(){
-                    $("#sAffiliation").kendoComboBox({
-                        dataTextField: "text",
-                        dataValueField: "value",
-                        placeholder: "Select Affiliation",
-                        filter: "startswith",
-                        suggest: "true",
-                        dataSource: [
-                            { text: "Alumn", value: "1" },
-                            { text: "Faculty", value: "3" },
-                            { text: "Spouce", value: "3" },
+    <script>
+        $(document).ready(function () {
+            $("#sAffiliation").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select Affiliation",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "Alumn",
+                        value: "1"
+                    },
+                    {
+                        text: "Faculty",
+                        value: "3"
+                    },
+                    {
+                        text: "Spouce",
+                        value: "3"
+                    },
                         ]
-                    });
-                });
+            });
+        });
 
-                $("#sClassYear").kendoDatePicker({
-                    format: "yyyy",
-                    start: "century",
-                    value: "Select Date",
-                    depth: "decade"
-                });
-            </script>
-            
-            
-            
-            
+        $("#sClassYear").kendoDatePicker({
+            format: "yyyy",
+            start: "century",
+            value: "Select Date",
+            depth: "decade"
+        });
+    </script>
+
+
+
+
     <!-- Travel Credit -->
     <div id="travel-credit-content" class="tab-pane fade">
         <div class="container pad0">
             <div class="row">
                 <div class="col-md-12">
-                    <h4>Past Traveler Credit</h4>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="container pad15">
+                    <div class="container pad0">
                         <div class="row">
-                            <div class="form-group col-md-1">
-                                <label for="tPastTravelerCredit">Credit</label>
-                                <h4 id="tPastTravelerCredit">$0</h4>
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label for="tCompletedDirectTrips">Completed Direct Trips</label>
-                                <h4 id="tCompletedDirectTrips">0</h4>
+                            <div class="col-md-12">
+                                <h4>Past Traveler Credit</h4>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="container pad15">
+                                    <div class="row">
+                                        <div class="form-group col-md-2">
+                                            <label for="tAmount">Amount</label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">$</span>
+                                                <input class="form-control textRight" id="tAmount" type="text" placeholder="0">
+                                            </div>
+                                        </div>
+                                        <div class="form-group noLabel col-md-3">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Completed Direct Trips</span>
+                                                <input class="form-control textCenter" id="tAmount" type="text" placeholder="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       <hr>
+                    </div>
+                    <div class="container pad0">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="clear bottom15"></div>
+                                <h4>Future Credit</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="container pad15">
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label for="tReservation">Reservation</label>
+                                            <input class="form-control" id="tReservation">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-2">
+                                            <label for="tAmount">Amount</label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">$</span>
+                                                <input class="form-control textRight" id="tAmount" type="text" placeholder="0">
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label for="tIssueDate">Issue Date</label>
+                                            <div class="input-group">
+                                                <input class="form-control" id="tIssueDate">
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label for="tExpirationDate">Expiration Date</label>
+                                            <div class="input-group">
+                                                <input class="form-control" id="tExpirationDate">
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label for="tIssuer">Issuer</label>
+                                            <input id="tIssuer" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label for="tReason">Reason</label>
+                                            <input id="tReason" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-12">
+                                            <div class="clear bottom10"></div>
+                                            <a href="#add-future-credit" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Future Credit</i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="clear bottom15 borderBottom"></div>
-            </div>
-        </div>
-        <div class="container pad0">
-            <div class="row">
-                <div class="col-md-12">
-                    <h4>Future Credit</h4>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="container pad15">
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="tReservation">Reservation</label>
-                                <select class="form-control" id="treservation">
-                                    <option>Select...</option>
-                                    <option>Reservation 1</option>
-                                    <option>Reservation 2</option>
-                                </select>
+                    <div class="col-md-12">
+                    <div class="row">
+                        <div class="clear bottom15"></div>
+                        <div id="creditTotal" class="col-md-12">
+                            <div class="clear bottom15"></div>
+                            <div class="textCenter">
+                                <label>Credit Total</label>
+                                <h2>$0</h2>
                             </div>
+                            <div class="clear bottom15"></div>
                         </div>
-                        <div class="row">
-                            <div class="form-group col-md-2">
-                                <label for="tAmount">Amount</label>
-                                <div class="input-group">
-                                    <span class="input-group-addon">$</span>
-                                    <input class="form-control" id="tAmount" type="text" placeholder="0">
-                                </div>
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label for="tIssueDate">Issue Date</label>
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-calendar fa-lg"></i></span>
-                                    <input class="form-control" id="tIssueDate" type="text" placeholder="Issue Date">
-                                </div>
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label for="tExpirationDate">Expiration Date</label>
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-calendar fa-lg"></i></span>
-                                    <input class="form-control" id="tExpirationDate" type="text" placeholder="Expiration Date">
-                                </div>
-                            </div>
-                            <div class="form-group col-md-3">
-                                <label for="tIssuer">Issuer</label>
-                                <select id="tIssuer" class="form-control">
-                                    <option>Select...</option>
-                                    <option>Elizabeth Bougie</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-3">
-                                <label for="tReason">Reason</label>
-                                <select id="tReason" class="form-control">
-                                    <option>Select...</option>
-                                    <option>Good Will Credit</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-12">
-                                <div class="clear bottom10"></div>
-                                <a href="#add-future-credit" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Future Credit</i></a>
-                            </div>
-                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -804,5 +1074,88 @@
     </div>
 
 
-</div>
+<script>
+    $(document).ready(function () {
+        $("#tReservation").kendoComboBox({
+            dataTextField: "text",
+            dataValueField: "value",
+            placeholder: "Select Reservation",
+            filter: "startswith",
+            suggest: "true",
+            dataSource: [
+                {
+                    text: "GRV-15 | Classic Greek Isles",
+                    value: "1"
+                },
+                {
+                    text: "ANT-14 | Antarctica Explorer",
+                    value: "3"
+                },
+                {
+                    text: "GRV-13 | Classic Greek Isles",
+                    value: "3"
+                },
+                    ]
+        });
+    });
+
+    $(document).ready(function () {
+        $("#tIssuer").kendoComboBox({
+            dataTextField: "text",
+            dataValueField: "value",
+            placeholder: "Select Issuer",
+            filter: "startswith",
+            suggest: "true",
+            dataSource: [
+                {
+                    text: "Elizabeth Bougie",
+                    value: "1"
+                },
+                {
+                    text: "Daniel O'Sullivan",
+                    value: "3"
+                },
+                {
+                    text: "Steve Fleishaker",
+                    value: "3"
+                },
+                    ]
+        });
+    });
+
+    $(document).ready(function () {
+        $("#tReason").kendoComboBox({
+            dataTextField: "text",
+            dataValueField: "value",
+            placeholder: "Select Reason",
+            filter: "startswith",
+            suggest: "true",
+            dataSource: [
+                {
+                    text: "Good Will Credit",
+                    value: "1"
+                },
+                {
+                    text: "Another Reason",
+                    value: "3"
+                },
+                {
+                    text: "Another Reason",
+                    value: "3"
+                },
+                    ]
+        });
+    });
+
+    $("#tIssueDate").kendoDatePicker({
+        format: "dd-MMM-yy",
+        value: "Select Date",
+    });
+
+    $("#tExpirationDate").kendoDatePicker({
+        format: "dd-MMM-yy",
+        value: "Select Date",
+        start: "decade"
+    });
+</script>
 <!-- /guestTabContent-->

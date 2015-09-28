@@ -15,7 +15,7 @@
 	<div class="container container-border">
 		<div class="row">
 			<div class="col-md-12 table-responsive">
-				<table class="table">
+				<table class="table" id="internalair-table" >
 					<tr>
 						<th>Day</th>
 						<th>Airline Name</th>
@@ -25,7 +25,7 @@
 						<th>Arrival Country</th>
 						<th>OUI Book</th>
 					</tr>
-					<tr>
+					<tr class="internalair-row">
 						<td><input class="form-control" placeholder="Day" style="width: 50px"></input></td>
 						<td><input class="form-control" id="internalAirComponentAirline"></input></td>
 						<td><input class="form-control" id="internalAirDepartCity" ></input></td>
@@ -42,7 +42,7 @@
 					<tr>
 				</table>	
 				<div class="clear"></div>
-				<a href="" class="textCenter green"><i class="fa fa-plus-circle"></i> <em>Add a Flight</em></a>
+				<a id="addInternalAir" class="textCenter green"><i class="fa fa-plus-circle"></i> <em>Add a Flight</em></a>
 							
 			</div>
 		</div>
@@ -50,6 +50,11 @@
 	
 <script>
 $(document).ready(function () {
+				
+			$('#addInternalAir').click(function() {
+				$("#internalair-table tr.internalair-row:first").clone().appendTo("#internalair-table");
+			});	
+				
 				
 			var airlines = [
 				"Aer Arann Islands",

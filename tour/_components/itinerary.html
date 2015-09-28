@@ -34,7 +34,7 @@
 
 		<div class="row">
 			<div class="col-md-12 table-responsive">
-				<table class="table">
+				<table class="table" id="itinerary-table">
 					<tr>
 						<th>Leg</th>
 						<th>Check-In Day</th>
@@ -45,7 +45,7 @@
 						<th>Country</th>
 						<th>OUI Book</th>
 					</tr>
-					<tr>
+					<tr class="itinerary-row">
 						<td><input class="form-control" placeholder="Leg" size="1"></input></td>
 						<td><input class="form-control" placeholder="Check-In" size="1"></input></td>
 						<td><input class="form-control" placeholder="Nights" size="1"></input></td>
@@ -62,15 +62,11 @@
 							</div>
 						</td>
 					</tr>
-					<tr>
-						<td colspan="7">
-							<a href="" class="textCenter green"><i class="fa fa-plus-circle"></i> <em>Add a Leg</em></a>
-						</td>
-					</tr>
 				</table>
+				<a id="addItineraryLeg" class="textCenter green"><i class="fa fa-plus-circle"></i> <em>Add a Leg</em></a>
 				<div class="clear bottom15"></div>
 				<div class="center">
-					<a href="" class="textCenter"><i class="fa fa-list"></i>  View Direct Flow</a>
+					<a class="textCenter"><i class="fa fa-list"></i>  View Direct Flow</a>
 				</div>
 				<hr />
 			</div>
@@ -745,6 +741,11 @@
 $(document).ready(function () {
 				
 				
+			$('#addItineraryLeg').click(function() {
+				$("#itinerary-table tr.itinerary-row:first").clone().appendTo("#itinerary-table");
+			});	
+			
+			
 			var names = [
 				"Daniel O Sullivan",
 				"Gavin Dock",

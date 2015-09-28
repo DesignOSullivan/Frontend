@@ -24,8 +24,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 	
-	<script src="create-tour-scripts.js"></script>
-   
+	
    <!-- grab all the component modules we need for this page -->
 	<script> 
 		$(function(){
@@ -59,24 +58,6 @@
 			});
 
 		
-	
-		$('#flyoutNavTrigger').click(function() {
-			if ($('#flyoutNav').hasClass('closed')){
-				$('#flyoutNav').removeClass('closed');
-				$('#flyoutList').removeClass('displayNone');
-				$('#flyoutNav .fa').removeClass('fa-chevron-right');
-				$('#flyoutNav .fa').addClass('fa-chevron-left');
-			}
-			else{
-				$('#flyoutNav').addClass('closed');	
-				$('#flyoutList').addClass('displayNone');
-				$('#flyoutNav fa').addClass('fa-chevron-right');
-				$('#flyoutNav fa').removeClass('fa-chevron-left');
-			}
-			
-		});
-		
-	
     </script> 
 	
 </head>
@@ -218,8 +199,27 @@
 	<li><a href="#zonefaresSection">Zone Fares</a></li>
 	</ul>
 </div>
+
 <script>
 $(document).ready(function() {
+	
+	
+	$('#flyoutNavTrigger').click(function() {
+		if ($('#flyoutNav').hasClass('closed')){
+			$('#flyoutNav').removeClass('closed');
+			$('#flyoutList').removeClass('displayNone');
+			$('#flyoutNav .fa').removeClass('fa-chevron-right');
+			$('#flyoutNav .fa').addClass('fa-chevron-left');
+		}
+		else{
+			$('#flyoutNav').addClass('closed');	
+			$('#flyoutList').addClass('displayNone');
+			$('#flyoutNav .fa').addClass('fa-chevron-right');
+			$('#flyoutNav .fa').removeClass('fa-chevron-left');
+		}
+		
+	});
+		
 	
 	$('#tourCode').bind("change paste keyup", function() {
 	   if($(this).val() !== ''){

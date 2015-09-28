@@ -76,19 +76,21 @@
 							<input id="ouiWorldRegion" class="form-control">
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-md-6 form-group locationCountryHolder">
+					<div class="row locationCountries">
+						<div class="col-md-6 form-group">
 							<div class="locationCountry">
 								<label>Country </label>
 								<input class="form-control" id="tourCountry" type="text" >
 							</div>
 						</div>
 					</div>
+					<!-- 
 					<div class="row">
-						<div class="col-md-6 locationCountryHolder">
-							<a href="" id="addLocationCountry" class="green"><i class="fa fa-plus-circle"></i> <em>Add a Country</em></a>
+						<div class="col-md-6">
+							<a id="addLocationCountry" class="green"><i class="fa fa-plus-circle"></i> <em>Add a Country</em></a>
 						</div>
 					</div>
+					-->
 				</div>
 			</div>
 			<div class="col-md-6">
@@ -106,7 +108,7 @@
 	
 	<script>
 		$(document).ready(function () {
-			 
+			
 			 
 			$("#ouiWorldRegion").kendoComboBox({
 			  dataTextField: "text",
@@ -165,13 +167,15 @@
 			//---------
 			
 			//create AutoComplete UI component
-			$("#tourCountry").kendoComboBox({
+			$("#tourCountry").kendoMultiSelect({
 				dataSource: countries,
 				filter: "startswith",
-				placeholder: "Select Country",
-				separator: ", "
-			});
+				placeholder: "Select Country/Countries",
+				autoClose: false
+            }).data("kendoMultiSelect");
 			//---------
+			
+			
 			
 		});
 	</script>

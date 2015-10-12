@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OUI</title>
+
+
+	<link rel="stylesheet" href="../kendoui/styles/kendo.common-bootstrap.min.css">
+	<link rel="stylesheet" href="../kendoui/styles/kendo.bootstrap.min.css">
+
+		
+	<script src="../js/jquery.min.js"></script> 
+	<script src="../js/bootstrap.min.js"></script> 
+	<script src="../js/bootstrap-toggle.min.js"></script> 
+    <script src="../kendoui/js/kendo.all.min.js"></script>
+   
+	<script src="../js/moment.js"></script> 
+	
+	<link href="../css/bootstrap.css" rel="stylesheet">
+	<link href="../css/toggle-me-softly.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	
+	<!-- <link href="../css/font-awesome.css" rel="stylesheet"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+	
+	
+   <!-- grab all the component modules we need for this page -->
+	<script> 
+		$(function() {
+			  $('a[href*=#]:not([href=#])').click(function() {
+				if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
+				  var target = $(this.hash);
+				  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				  if (target.length) {
+					$('html,body').animate({
+					  scrollTop: target.offset().top + (-150)
+					}, 1000);
+					return false;
+				  }
+				}
+			  });
+			});
+
+		
+    </script> 
+	
+	<style>
+		table, th{color: #54698d;}
+		#departTable tr:hover{background: #ffffee !important;}
+		.tour-legs{padding:0; margin: 0 0 5px 0px;}
+		.tour-legs li{padding: 5px 0; list-style-type: square;margin-left: 10px;}
+	</style>
+	
+</head>
+<body>
+
+
+<!-- Navbar -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </button>
+		<a class="navbar-brand" href="#" style="padding: 0 15px;"><img src="../images/logo.png" style="max-height: 60px;"/></a>
+	</div>
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="navbar-center">
+                <h4 class="headerTextLeft" id="tourCodeHeader">Departure Dates | Enchanting Ireland</h4>
+        </div>
+		<ul class="nav navbar-nav navbar-right">
+			<li> <img src="http://lorempixel.com/output/people-q-c-100-100-9.jpg" class="navimg"> </li>
+            <li class="nav  navbar-toggle navbar-link">Danielle O'Sullivan</li>
+			<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cog"></i><b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li> <a href="#">Action</a> </li>
+					<li> <a href="#">Another action</a> </li>
+					<li> <a href="#">Something else here</a> </li>
+					<li class="divider"> </li>
+					<li> <a href="#">Separated link</a> </li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</nav>
+    
+
+<form role="form">
+
+
+		<div class="clear bottom30"></div>
+		<div class="clear bottom30"></div>
+		
+<div class="container container-border">
+<div class="row">
+<div class="col-md-12 table-responsive">
+		
+			<table class="table table-bordered table-hover" id="departTable">
+					<tr>
+						<th style="width: 170px;">Depart USA</th>
+						<th class="basetour">Tour Legs</th>
+						<th class="basetour" style="">Return for USA</th>
+						<th class="basetour" style="background: #ffffee;">Arrive in USA</th>
+						<th class="pretour">Pre-Tour Option</th>
+						<th class="posttour">Post-Tour Extension</th>
+					</tr>
+					<!-- tour row -->
+					<tr>
+						<td>
+							<input class="datepicker" value="" style="width: 100%; border: 1px solid #ccc;" />
+						</td>
+						<td>
+							<ul class="tour-legs">
+								<li>Dublin (3 nts)<br /> <span class="tourleg1">Day 2 - Day 4</span></li>
+								<li>Galway (3 nts)<br /> <span class="tourleg2">Day 5 - Day 7</span></li>
+								<li>Killarney (2 nts)<br /> <span class="tourleg3">Day 8 - Day 9</span></li>
+								<li>Kilkenny (3 nts)<br /> <span class="tourleg4">Day 10 - Day 12</span></li>
+							</ul>
+						</td>
+						<td>
+							<span class="returnusa">Day 13</span>
+						</td>
+						<td style="background: #ffffee;">
+							<span class="arriveusa">Day 13</span>
+						</td>
+						<td>
+							<ul class="tour-legs">
+								<li>Depart USA<br /> <span class="pretourdepartusa">Day -3</span></li>
+								<li>Moher (3 nts)<br /> <span class="pretourleg1">Day -3 - Day -1</span></li>
+								<li>Join Tour<br /> <span class="jointour">Day 1</span></li>
+							</ul>
+						</td>
+						<td>
+							<ul class="tour-legs">
+								<li>Northern Ireland (3 nts)<br /> <span class="posttourleg1">Day 13 - Day 15</span></li>
+								<li>Return to USA<br /> <span class="posttourreturnusa">Day 16</span></li>
+								<li>Arrive in USA<br /> <span class="posttourarriveusa">Day 16</span></li>
+							</ul>
+						
+						</td>
+					</tr>
+					<!-- tour row -->
+					
+				</table>
+
+
+				<div class="clear bottom30"></div>
+				<a id="addDepartRow" class="green"><i class="fa fa-plus-circle"></i> <em>Add a New Departure Date</em></a>
+				
+
+
+</div>
+</div>
+</div>
+
+<div class="clear" style="margin-bottom: 120px;"></div>
+       
+<!-- footer -->
+<div id="illusion">
+    <div id="footer">
+	   <div class="container">
+           <div class="row">
+               <div class="col-md-2" >
+                   <button type="submit" class="btn btn-default btn-sm"> Cancel </button>
+               </div>
+               <div class="col-md-8">
+					<!-- Middle Links
+                   <p><a href="#location">Summary</a></p>
+					-->
+               </div>
+               <div class="col-md-2" >
+                   <button type="submit" class="btn btn-info btn-sm alignRight bottom0"><i class="fa fa-check-circle-o"></i> Submit </button>
+               </div>
+           </div>
+        </div>
+    </div>
+</div>
+
+</form>
+
+
+<script>
+$(document).ready(function() {
+	
+	// create DatePicker from input HTML element
+	
+	function onChange() {
+		//kendoConsole.log("Change :: " + kendo.toString(this.value(), 'd'));
+		var startDate = "";
+		var startMonth= "";
+		var startDatex = kendo.toString(this.value(), 'dd');
+		var startMonth = kendo.toString(this.value(), 'MMM');
+		var startDate = parseInt(startDatex);
+		
+		$('.pretourdepartusa').html((startDate - 3) + '-' + startMonth);
+		$('.pretourleg1').html((startDate - 3) + '-' + startMonth + ' - ' + (startDate - 1) + '-' + startMonth);
+		$('.jointour').html((startDate + 1) + '-' + startMonth);
+		
+		$('.tourleg1').html((startDate + 2) + '-' + startMonth + ' - ' + (startDate + 4) + '-' + startMonth);
+		$('.tourleg2').html((startDate + 5) + '-' + startMonth + ' - ' + (startDate + 7) + '-' + startMonth);
+		$('.tourleg3').html((startDate + 8) + '-' + startMonth + ' - ' + (startDate + 9) + '-' + startMonth);
+		$('.tourleg4').html((startDate + 10) + '-' + startMonth + ' - ' + (startDate + 12) + '-' + startMonth);
+		$('.returnusa').html((startDate + 13) + '-' + startMonth);
+		$('.arriveusa').html((startDate + 13) + '-' + startMonth);
+		
+		$('.posttourleg1').html((startDate + 13) + '-' + startMonth + ' - ' + (startDate + 15) + '-' + startMonth);
+		$('.posttourreturnusa').html((startDate + 16) + '-' + startMonth);
+		$('.posttourarriveusa').html((startDate + 16) + '-' + startMonth);
+		
+	}
+		
+    $(".datepicker").kendoDatePicker({
+	 format: "dd-MMM-yy ",
+	 change: onChange
+	});
+					
+	
+	$('#addDepartRow').click(function() {
+		var rowCount = $('#departTable tr').length - 1;
+		
+		$('#departTable tr:last-child').clone().appendTo('#departTable');
+		$('#departTable tr:last-child .datepicker').attr('id','');
+	});	
+});
+
+
+</script>
+
+</body>
+</html>

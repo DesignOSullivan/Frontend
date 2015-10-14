@@ -16,7 +16,7 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/bootstrap-toggle.min.js"></script>
     <script src="../kendoui/js/kendo.all.min.js"></script>
-    <script src="guest-scripts.js"></script>
+    <script src="travel-agent-scripts.js"></script>
 
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/toggle-me-softly.css" rel="stylesheet">
@@ -27,7 +27,7 @@
     <!-- grab all the component modules we need for this page -->
     <script>
         $(function () {
-            $("#includeGuestName").load("_components/guest-name.html");
+            $("#includeAgentName").load("_components/agent-name.html");
             $("#includeAddress").load("_components/address.html");
             $("#includeContactInformation").load("_components/contact-information.html");
             $("#includeReservationNew").load("_components/reservation-new.html");
@@ -48,9 +48,9 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <div class="navbar-center">
-                <h4 class="headerTextLeft">G-543323 |</h4>
+                <h4 class="headerTextLeft">A-653346 |</h4>
                 <h4 class="headerTextLeft" id="firstNameHeader">New</h4>
-                <h4 class="headerTextRight" id="lastNameHeader">Guest</h4>
+                <h4 class="headerTextRight" id="lastNameHeader">Agent</h4>
             </div>
             <ul class="nav navbar-nav navbar-right">
                 <li> <img src="http://lorempixel.com/output/people-q-c-100-100-9.jpg" class="navimg"> </li>
@@ -68,14 +68,43 @@
         </div>
     </nav>
 
-
     <form role="form">
+        
+        
+    <!-- Tabs -->
+    <div id="guestTabs">
+        <div class="container pad0">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear bottom15">
+            </div>
 
-  <div class="clear bottom15"></div>
+            <div class="row">
+                <div class="col-md-12 center">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" data-target="#agent-content" id="agentTab">Agent</a></li>
+                        <li><a data-toggle="tab" data-target="#agency-content" id="agencyTab">Agency</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- Tab Content-->
+    <div id="guestTabContent" class="tab-content container container-border">
 
 
-        <!-- Guest Name -->
-        <div id="includeGuestName"></div>
+        <div id="agent-content" class="tab-pane fade in active">
+        
+        <div class="clear bottom15"></div>
+
+
+        <!-- Agent Name -->
+        <div id="includeAgentName"></div>
 
         <!-- Address -->
         <div id="includeAddress"></div>
@@ -92,13 +121,17 @@
         <!-- Modal -->
         <div id="includeInfoRequestModal"></div>
 
-        <!-- Tabs -->
-        <div id="includeGuestTabs"></div>
-
-
-
+        <!-- /base agent content -->
         
-        <!-- /base tour content -->
+        </div>
+        
+        <div id="agency-content" class="tab-pane fade in">
+            <h1>Agency Here</h1>
+        </div>
+        
+        
+        
+        </div>
 
         <!-- Bottom Space -->
         <div id="bottomSpace" class="clear" style="margin-bottom: 120px;"></div>

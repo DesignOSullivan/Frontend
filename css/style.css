@@ -28,6 +28,7 @@ th{color: #54698d;}
 .catalogInput .input-group{width: 120px;}
 .k-dropdown{border-width: 1px;}
 .k-multiselect-wrap .k-input{color: #acb6c0; padding: 7px 0;}
+input.k-textbox {height: 35px;}
 
 i.fa{font-size: 15px; top: 2px;}
 

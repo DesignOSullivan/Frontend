@@ -8,6 +8,8 @@ h4{font-size: 17px; color: #999; margin-top: 0;}
 a{color: #b50f46 /*#fd5c63*/; text-decoration: none; cursor:pointer;}
 a:hover, a:focus{color: #fd5c63}
 th{color: #54698d;}
+b{color: #54698d;}
+p{color: #54698d;}
 
 [placeholder]input-placeholder {transition: opacity 0.2s 0.2s ease; opacity: 0;}
 [placeholder]:focus::-webkit-input-placeholder {transition: opacity 0.2s 0.2s ease; opacity: 0;}
@@ -54,6 +56,9 @@ textarea{min-height: 150px;}
 .btn{box-shadow: 0px 1px 2px rgba(43, 59, 93, .29);}
 .btn-default{box-shadow: none;}
 
+
+
+/*Tab Styling*/
 .tab-header{margin-top: 120px;}
 
 .nav-tabs{  border-bottom: 0;}
@@ -80,6 +85,7 @@ textarea{min-height: 150px;}
  
 
 
+/*Footer Styling*/
 #footer{width: 100%; position: fixed; bottom: 0; padding-top: 15px; padding-bottom: 5px; border-top: 1px solid #ccc; z-index: 10 !important; background-color: #eee;}
 
 
@@ -98,7 +104,7 @@ textarea{min-height: 150px;}
 .btn-default:active:hover, .btn-default.active:hover, .open > .dropdown-toggle.btn-default:hover, .btn-default:active:focus, .btn-default.active:focus, .open > .dropdown-toggle.btn-default:focus, .btn-default.focus:active, .btn-default.active.focus, .open > .dropdown-toggle.btn-default.focus{background: #dedede; color: #555;}
 
 
-
+/*flyout Navigation Styling*/
 #flyoutNav{transition: left 0.5s ease; position: fixed; left: 0; top: 20%; background: #fff; width: 200px; padding: 15px 15px 0px 15px; border-radius:0  3px 3px 0 ;}
 	#flyoutNav h4{color: #333; margin: 0; padding: 0; line-height: 1em; }
 	#flyoutNav ul{padding: 10px; margin: 0;}
@@ -111,6 +117,8 @@ textarea{min-height: 150px;}
 #flyoutNav.closed a i{color: #fff !important; }
 
 
+
+/*Remarks Styling*/
 #remarks{transition: all 0.5s ease; height: 100%; position: fixed; right: 0; top: 64px; background: rgba(0,27,61,.8); width: 400px; padding: 15px 15px 0px 15px; border-radius:0  3px 3px 0 ; z-index: 9;}
 #remarks h4{ color: #ccc; margin: 0; padding: 0; line-height: 1em;}
 #remarks label{color:#fff;}
@@ -121,7 +129,7 @@ textarea{min-height: 150px;}
 #remarks.closed a i{color: #fff !important; }
 #remarksList{margin-top: -60px; margin-left: 15px;}
 #remarks p i{color:#ccc; font-size: 11px;}
-#remarks b{text-transform: uppercase; word-wrap: break-word;}
+#remarks b{text-transform: uppercase; word-wrap: break-word; color: #fff;}
 
 #remarks .k-in {color:#fff; margin-left: 0}
 #remarks .k-item {color:#fff; text-overflow: ellipsis}
@@ -130,12 +138,10 @@ textarea{min-height: 150px;}
 #remarks textarea{min-height: 100px}
 
 
-
-
 .rotate {margin-top: 10px; position:absolute; left:-2%; -webkit-transform:  rotate(-90deg);-moz-transform:  rotate(-90deg);-o-transform:  rotate(-90deg);writing-mode: tb-rl;}
 
 
-
+/*Modal Styling*/
 #myModalInfo .modal-backdrop.fade.in{ background: rgba(0,0,0,0.5)}
 #myModalInfo .modal-dialog{width: 60%; margin-top: 7%}
 #myModalInfo .modal-content {background:  rgba(0,27,61,.8);}
@@ -145,6 +151,17 @@ textarea{min-height: 150px;}
 #myModalInfo .modal-footer{background:#fff; width:100%; border-radius: 5px;}
 
 #creditTotal{margin-top: 10; background: #E2EFFF; border-radius: 5px}
+
+
+/*Grid Styling*/
+.k-grid-header th.k-header{border-style: none; background-color: #fff !important; font-weight: 900}
+.k-grid td{border:none !important; color:inherit;}
+.k-grid{border:none}
+.k-alt{background-color: #E2EFFF;}
+.k-state-selected{background-color: #428bca}
+.k-grid-header-wrap{border:none}
+
+
 
 
 /* --- Classes --- */

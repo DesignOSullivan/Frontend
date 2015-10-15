@@ -28,12 +28,16 @@
     <script>
         $(function () {
             $("#includeAgentName").load("_components/agent-name.html");
-            $("#includeAddress").load("_components/address.html");
-            $("#includeContactInformation").load("_components/contact-information.html");
+            $("#includeAgentAddress").load("_components/agent-address.html");
+            $("#includeAgentContactInformation").load("_components/agent-contact-information.html");
             $("#includeReservationNew").load("_components/reservation-new.html");
             $("#includeReservationEdit").load("_components/reservation-edit.html");
             $("#includeInfoRequestModal").load("_components/info-request-modal.html");
-            $("#includeGuestTabs").load("_components/guest-tabs.html");
+            $("#includeAgencyName").load("_components/agency-name.html");
+            $("#includeAgencyAddress").load("_components/agency-address.html");
+            $("#includeAgencyContactInformation").load("_components/agency-contact-information.html");
+            $("#includeAgencyAgents").load("_components/agency-agents.html");
+            $("#includeAgencyStats").load("_components/agency-stats.html");
         });
     </script>
 
@@ -69,68 +73,276 @@
     </nav>
 
     <form role="form">
-        
-        
-    <!-- Tabs -->
-    <div id="guestTabs">
-        <div class="container pad0">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="clear"></div>
+
+
+        <!-- Tabs -->
+        <div id="guestTabs">
+            <div class="container pad0">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="clear bottom15">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 center">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" data-target="#agent-content" id="agentTab">Agent</a></li>
+                            <li><a data-toggle="tab" data-target="#agency-content" id="agencyTab">Agency</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="clear bottom15">
+        </div>
+
+
+        <!-- Tab Content-->
+        <div id="guestTabContent" class="tab-content container container-border">
+
+
+            <div id="agent-content" class="tab-pane fade in active">
+
+
+
+                <!-- Agent Name -->
+                <div id="includeAgentName"></div>
+
+                <!-- Agent Address -->
+                <div id="includeAgentAddress"></div>
+
+                <!-- Agent Contact Information -->
+                <div id="includeAgentContactInformation"></div>
+
+                <!-- Reservations blank -->
+                <div id="includeReservationNew"></div>
+
+                <!-- Reservations w/ upcoming reservations -->
+                <div id="includeReservationEdit"></div>
+
+                <!-- Modal -->
+                <div id="includeInfoRequestModal"></div>
+
+                <!-- /base agent content -->
+
             </div>
 
-            <div class="row">
-                <div class="col-md-12 center">
-                    <ul class="nav nav-tabs">
-                        <li class="active"><a data-toggle="tab" data-target="#agent-content" id="agentTab">Agent</a></li>
-                        <li><a data-toggle="tab" data-target="#agency-content" id="agencyTab">Agency</a></li>
-                    </ul>
+            
+                <!-- Agency Tab -->
+            
+            <div id="agency-content" class="tab-pane fade in">
+
+                <!-- Agency Name -->
+                <div id="includeAgencyName"></div>
+
+                <!-- Agency Address -->
+                <div id="includeAgencyAddress"></div>
+                
+                <!-- Contact Information -->
+                <div id="includeAgencyContactInformation"></div>
+                
+                <!-- Agents -->
+                <div id="includeAgencyAgents"></div>
+
+                <!-- Agency Reservations YTD -->
+                <div id="includeAgencyStats"></div>
+                
+                <!-- Reservations w/ upcoming reservations -->
+<!--
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a name="reservations"></a>
+                            <h3>Reservations</h3>
+                        </div>
+                    </div>
                 </div>
+                <div class="container container-border">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label>
+                                <h4>Upcoming</h4></label>
+                        </div>
+                    </div>
+                    <div class="pad15">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label>Guests</label>
+                                <br>
+                                <b>Mr. Daniel O'Sullivan<br>
+                                    Mrs. Catherine O'Sullivan</b>
+                            </div>
+                            <div class="col-md-3">
+                                <label>Tour</label>
+                                <br>
+                                <b>GRV-15 | Classic Greek Isles</b>
+                                <p>12-Oct to 23-Oct-25
+                                    <br>(30 days out)</p>
+                            </div>
+                            <div class="col-md-2">
+                                <label>Status</label>
+                                <br>
+                                <b>Confirmed</b>
+                            </div>
+                            <div class="col-md-2">
+                                <label>Agent</label>
+                                <br>
+                                <b>Matt McCourry</b>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-3">
+                                <a href="" data-toggle="modal" data-target="#myModalInfo" class="green"><i class="fa fa-info-circle"></i> &nbsp;Request Information</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <b>Mr. Daniel O'Sullivan</b>
+                                <b>Mrs. Catherine O'Sullivan</b>
+                            </div>
+                            <div class="col-md-3">
+                                <b>ITY-14 | Portrait of Italy</b>
+                                <p>15-Aug to 25-Aug-14</p>
+                            </div>
+                            <div class="col-md-2">
+                                <b>Completed</b>
+                            </div>
+                            <div class="col-md-2">
+                                <b>Matt McCourry</b>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-3">
+                                <a href="" data-toggle="modal" data-target="#myModalInfo" class="green"><i class="fa fa-info-circle"></i> &nbsp;Request Information</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <b>Mr. Daniel O'Sullivan</b><br>
+                                <b>Mrs. Catherine O'Sullivan</b>
+                            </div>
+                            <div class="col-md-3">
+                                <b>CSR-14 | Costa Rica's Natural Heritage</b>
+                                <p>08-Feb to 17-Feb-14</p>
+                            </div>
+                            <div class="col-md-2">
+                                <b>Completed</b>
+                            </div>
+                            <div class="col-md-2">
+                                <b>Matt McCourry</b>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-3">
+                                <a href="" data-toggle="modal" data-target="#myModalInfo" class="green"><i class="fa fa-info-circle"></i> &nbsp;Request Information</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <div class="clear bottom15"></div>
+                            <button type="submit" class="btn btn-info btn-xs bottom0"><i class="fa fa-globe"></i> New Reservation</button>
+                        </div>
+                    </div>
+
+                </div>
+                
+-->
+                
+
+                <!-- Agents -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a name="agents"></a>
+                            <h3> Upcoming Reservations </h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container container-border">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="reservationsGrid"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agents Grid Scripts-->
+                <script>
+                    $("#reservationsGrid").kendoGrid({
+                        selectable: "multiple cell",
+                        allowCopy: true,
+                        editable: "popup",
+                        selectable: "row",
+                        sortable: "true",
+                        columns: [
+                            {
+                                field: "guests",
+                                title: "Guests",
+                                encoded: false,
+                                width: 250,
+                            },
+                            {
+                                field: "tour",
+                                title: "Tour",
+                                encoded: false,
+                                width: 300,
+                            },
+                            {
+                                field: "status",
+                                title: "Status",
+                                encoded: false,
+                                width: 100,
+                            },
+                            {
+                                field: "agent",
+                                title: "Agent",
+                                encoded: false,
+                                width: 150,
+                            },
+                            {
+                                command: ["Request Information"]
+                            }
+                        ],
+                        dataSource: [
+                            {
+                                guests: "<b>Mr. Daniel O'Sullivan</b><br><b>Mrs. Catherine O'Sullivan</b>",
+                                tour: "<b>CSR-14 | Costa Rica's Natural Heritage</b><p>08-Feb to 17-Feb-14 | 30 days out</p>",
+                                status: "Confirmed",
+                                agent: "Matt McCourry",
+                            },
+                            {
+                                guests: "<b>Mr. Steve Fleishaker</b><br><b>Mrs. Edna Fleishaker</b>",
+                                tour: "<b>CSR-14 | Costa Rica's Natural Heritage</b><p>08-Feb to 17-Feb-14 | 30 days out</p>",
+                                status: "Confirmed",
+                                agent: "Matt McCourry",
+                            },
+                            {
+                                guests: "<b>Mr. Joseph Bonanno</b><br><b>Mrs. April Bonanno</b>",
+                                tour: "<b>CSR-14 | Costa Rica's Natural Heritage</b><p>08-Feb to 17-Feb-14 | 30 days out</p>",
+                                status: "Confirmed",
+                                agent: "Matt McCourry",
+                            },
+                            {
+                                guests: "<b>Mr. Patrick Nord/b><br><b>Mrs. Jaqueline Kennedy</b>",
+                                tour: "<b>CSR-14 | Costa Rica's Natural Heritage</b><p>08-Feb to 17-Feb-14 | 30 days out</p>",
+                                status: "Confirmed",
+                                agent: "Matt McCourry",
+                            },
+                        ]
+                    });
+                </script>
+
+
+
+
             </div>
-        </div>
-    </div>
-    
-    
-    <!-- Tab Content-->
-    <div id="guestTabContent" class="tab-content container container-border">
 
 
-        <div id="agent-content" class="tab-pane fade in active">
-        
-        <div class="clear bottom15"></div>
 
-
-        <!-- Agent Name -->
-        <div id="includeAgentName"></div>
-
-        <!-- Address -->
-        <div id="includeAddress"></div>
-
-        <!-- Contact Information -->
-        <div id="includeContactInformation"></div>
-
-        <!-- Reservations blank -->
-        <div id="includeReservationNew"></div>
-
-        <!-- Reservations w/ upcoming reservations -->
-        <div id="includeReservationEdit"></div>
-
-        <!-- Modal -->
-        <div id="includeInfoRequestModal"></div>
-
-        <!-- /base agent content -->
-        
-        </div>
-        
-        <div id="agency-content" class="tab-pane fade in">
-            <h1>Agency Here</h1>
-        </div>
-        
-        
-        
         </div>
 
         <!-- Bottom Space -->

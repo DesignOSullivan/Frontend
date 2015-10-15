@@ -1,29 +1,27 @@
-
-
 <!--indludeAgentName-->
 
 <div class="container">
     <div class="row">
         <div class="col-md-2">
-            <a name="guestName"></a>
+            <a name="agentName"></a>
             <h3> Agent Name </h3>
         </div>
         <div class="col-md-10">
-                <div class="clear bottom20"></div>
-                        <div class="switch">
-                            <input id="guestActiveToggle" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
-                            <label for="guestActiveToggle"></label>
-                        </div>
-                        <div class="switch-label">
-                            <label for="guestActiveToggle">Active</label>
-                        </div>
+            <div class="clear bottom20"></div>
+            <div class="switch">
+                <input id="agentActiveToggle" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
+                <label for="agentActiveToggle"></label>
+            </div>
+            <div class="switch-label">
+                <label for="agentActiveToggle">Active</label>
+            </div>
         </div>
     </div>
 </div>
 <div class="container container-border">
     <div class="row">
         <div class="form-group col-md-1">
-            <label for="title1">Title</label>
+            <label for="title">Title</label>
             <input class="form-control" id="title" placeholder="(--)">
         </div>
         <div class="form-group col-md-3">
@@ -42,37 +40,64 @@
 </div>
 
 
-
+<!--Scripts for Combo Boxes-->
 
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         $("#title").kendoComboBox({
             dataTextField: "text",
             dataValueField: "value",
             filter: "startswith",
             suggest: "true",
             dataSource: [
-                { text: "Mr.", value: "1" },
-                { text: "Mrs.", value: "2" },
-                { text: "Ms.", value: "3" },
-                { text: "Prof.", value: "3" },
-                { text: "Dr.", value: "3" }
+                {
+                    text: "Mr.",
+                    value: "1"
+                },
+                {
+                    text: "Mrs.",
+                    value: "2"
+                },
+                {
+                    text: "Ms.",
+                    value: "3"
+                },
+                {
+                    text: "Prof.",
+                    value: "3"
+                },
+                {
+                    text: "Dr.",
+                    value: "3"
+                }
             ]
         });
     });
 
-    
-    $(document).ready(function() {
+
+    $(document).ready(function () {
         $("#suffix").kendoComboBox({
             dataTextField: "text",
             dataValueField: "value",
             filter: "startswith",
             suggest: "true",
             dataSource: [
-                { text: "", value: "1" },
-                { text: "Sr.", value: "2" },
-                { text: "Jr.", value: "3" },
-                { text: "III", value: "4" },
+                {
+                    text: "",
+                    value: "1"
+                },
+                {
+                    text: "Sr.",
+                    value: "2"
+                },
+                {
+                    text: "Jr.",
+                    value: "3"
+                },
+                {
+                    text: "III",
+                    value: "4"
+                },
             ]
         });
     });

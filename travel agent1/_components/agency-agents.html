@@ -1,0 +1,90 @@
+<!-- Agents -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <a name="agents"></a>
+            <h3> Agents </h3>
+        </div>
+    </div>
+</div>
+
+<div class="container container-border">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="agentsGrid"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Agents Grid Scripts-->
+<script>
+    $("#agentsGrid").kendoGrid({
+        selectable: "multiple cell",
+        allowCopy: true,
+        editable: "popup",
+        selectable: "row",
+        sortable: "true",
+        columns: [
+            {
+                field: "agentName",
+                title: "Agent Name"
+            },
+            {
+                field: "agentPhone",
+                title: "Phone Number"
+            },
+            {
+                field: "agentAddress",
+                title: "Address"
+            },
+            {
+                field: "agentCityState",
+                title: "City, State"
+            },
+            {
+                field: "agentCountry",
+                title: "Country"
+            },
+            {
+                command: ["edit", "destroy"]
+            }
+],
+        dataSource: [
+            {
+                agentName: "Mr. Matthew McCourry",
+                agentPhone: "843-555-4346",
+                agentAddress: "982 Baller Lane",
+                agentCityState: "Conway, SC",
+                agentCountry: "United States"
+            },
+            {
+                agentName: "Mr. David Nefield",
+                agentPhone: "843-555-8491",
+                agentAddress: "204 Margarets Lane",
+                agentCityState: "Murrells Inlet, SC",
+                agentCountry: "United States"
+            },
+            {
+                agentName: "Mrs. Adelyn Price",
+                agentPhone: "843-555-4560",
+                agentAddress: "281 Starfish Drive",
+                agentCityState: "Little River, SC",
+                agentCountry: "United States"
+            },
+{
+                agentName: "Mrs. Barbara Smith",
+                agentPhone: "843-555-9957",
+                agentAddress: "187 World Court",
+                agentCityState: "Myrtle Beach, SC",
+                agentCountry: "United States"
+            },
+{
+                agentName: "Mr. Bob Smith",
+                agentPhone: "843-555-9957",
+                agentAddress: "187 World Court",
+                agentCityState: "Myrtle Beach, SC",
+                agentCountry: "United States"
+            },
+]
+    });
+</script>

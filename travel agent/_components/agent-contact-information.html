@@ -1,3 +1,4 @@
+
 <!-- Contact Information -->
 <div class="container">
     <div class="row">
@@ -12,12 +13,9 @@
         <div class="col-md-7">
             <div class="container pad0">
                 <div class="row">
-                    <div class="form-group col-md-5 col-xs-8">
+                    <div class="form-group col-md-7 col-xs-8">
                         <label for="phoneNumber">Phone Number</label>
                         <input class="form-control" id="phoneNumber" placeholder="Phone Number">
-                    </div>
-                    <div class="form-group col-md-2 col-xs-4 noLabel">
-                        <input class="form-control" id="phoneExtension" placeholder="(Ext.)">
                     </div>
                     <div class="form-group col-md-4 col-xs-4">
                         <label for="phoneType">Type</label>
@@ -26,10 +24,8 @@
                 </div>
                 <div class="row">
                     <div class="form-group col-md-7 col-xs-6">
-                        <input class="form-control" id="phoneNumber" type="text" placeholder="(Fax Number)">
-                    </div>
-                    <div class="form-group col-md-4 col-xs-4">
-                        <input class="form-control" id="faxType" disabled>
+                        <label for="faxNumber">Fax Number</label>
+                        <input class="form-control" id="faxNumber" type="text" placeholder="(Fax Number)">
                     </div>
                 </div>
                 <div class="row">
@@ -92,39 +88,9 @@
                     text: "Work",
                     value: "3"
                 },
-                {
-                    text: "Fax",
-                    value: "4"
-                }
             ]
         });
     });
 
 
-    $(document).ready(function () {
-        $("#faxType").kendoComboBox({
-            dataTextField: "text",
-            dataValueField: "value",
-            placeholder: "Select Type",
-            value: "Fax",
-            dataSource: [
-                {
-                    text: "Home",
-                    value: "1"
-                },
-                {
-                    text: "Mobile",
-                    value: "2"
-                },
-                {
-                    text: "Work",
-                    value: "3"
-                },
-                {
-                    text: "Fax",
-                    value: "4"
-                }
-            ]
-        });
-    });
 </script>

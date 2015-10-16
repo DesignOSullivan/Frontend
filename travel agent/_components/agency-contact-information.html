@@ -1,3 +1,4 @@
+
 <!-- Contact Information -->
 <div class="container">
     <div class="row">
@@ -12,46 +13,36 @@
         <div class="col-md-7">
             <div class="container pad0">
                 <div class="row">
-                    <div class="form-group col-md-5 col-xs-8">
+                    <div class="form-group col-md-7 col-xs-8">
                         <label for="agencyPhoneNumber">Phone Number</label>
                         <input class="form-control" id="agencyPhoneNumber" placeholder="Phone Number">
                     </div>
+<!--
                     <div class="form-group col-md-2 col-xs-4 noLabel">
                         <input class="form-control" id="agencyPhoneExtension" placeholder="(Ext.)">
                     </div>
+-->
                     <div class="form-group col-md-4 col-xs-4">
                         <label for="agencyPhoneType">Type</label>
                         <input class="form-control" id="agencyPhoneType">
                     </div>
                 </div>
-                <div class="row">
-                    <div class="form-group col-md-7 col-xs-6">
-                        <input class="form-control" id="agencyFNumber" type="text" placeholder="(Fax Number)">
-                    </div>
-                    <div class="form-group col-md-4 col-xs-4">
-                        <input class="form-control" id="agencyFaxType" disabled>
-                    </div>
-                </div>
+                
                 <div class="row">
                     <div class="form-group col-md-12">
                         <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Phone Number</i></a>
                     </div>
                 </div>
                 <div class="row">
+                    <div class="form-group col-md-7 col-xs-6">
+                        <label for="agencyFaxNumber">Fax Number</label>
+                        <input class="form-control" id="agencyFaxNumber" type="text" placeholder="(Fax Number)">
+                    </div>
+                </div>
+                <div class="row">
                     <div class="form-group col-md-7">
                         <label for="emailInput">Email Address</label>
                         <input class="form-control" id="emailInput" type="text" placeholder="(Email Address)">
-                    </div>
-
-                    <div class="form-group col-md-4">
-                        <div class="clear bottom25"></div>
-                        <div class="switch">
-                            <input id="email-promo-toggle" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
-                            <label for="email-promo-toggle"></label>
-                        </div>
-                        <div class="switch-label">
-                            <label for="email-promo-toggle">Email Promotions</label>
-                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -88,7 +79,6 @@
             dataTextField: "text",
             dataValueField: "value",
             placeholder: "Select Type",
-            value: "Work",
             dataSource: [
                 {
                     text: "Home",
@@ -102,39 +92,9 @@
                     text: "Work",
                     value: "3"
                 },
-                {
-                    text: "Fax",
-                    value: "4"
-                }
             ]
         });
     });
 
 
-    $(document).ready(function () {
-        $("#agencyFaxType").kendoComboBox({
-            dataTextField: "text",
-            dataValueField: "value",
-            placeholder: "Select Type",
-            value: "Fax",
-            dataSource: [
-                {
-                    text: "Home",
-                    value: "1"
-                },
-                {
-                    text: "Mobile",
-                    value: "2"
-                },
-                {
-                    text: "Work",
-                    value: "3"
-                },
-                {
-                    text: "Fax",
-                    value: "4"
-                }
-            ]
-        });
-    });
 </script>

@@ -1,3 +1,24 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>OUI</title>
+        <link rel="stylesheet" href="../../kendoui/styles/kendo.common-bootstrap.min.css">
+        <link rel="stylesheet" href="../../kendoui/styles/kendo.bootstrap.min.css">
+        <link href="../../css/bootstrap.css" rel="stylesheet">
+        <link href="../../css/toggle-me-softly.css" rel="stylesheet">
+        <link href="../../css/style.css" rel="stylesheet">
+        <link href="../../css/font-awesome.css" rel="stylesheet">
+        <script src="../../js/jquery.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/bootstrap-toggle.min.js"></script>
+        <script src="../../kendoui/js/kendo.all.min.js"></script>
+        <script src="guest-scripts.js"></script>
+
+
+    </head>
+
 <!-- Agency Address -->
 <div class="container">
     <div class="row">
@@ -7,8 +28,16 @@
         </div>
     </div>
 </div>
-<div class="container container-border">
-    <div class="row">
+<div id="test" class="container container-border">
+    <div class="container-fluid pad0">
+        <div class="row">
+            <div class="col-md-6 form-group">
+                <label for="attention">Attention</label>
+                <input class="form-control" id="attention" placeholder="(Attention)">
+            </div>
+        </div>
+    </div>
+    <div id="addressBlock" class="row">
         <div class="col-md-6">
             <div class="container-fluid pad0">
                 <div class="row">
@@ -45,36 +74,25 @@
                         <input class="form-control" id="agencyCountries">
                     </div>
                 </div>
-                <div class="row">
-                    <div class="form-group col-md-12">
-                        <label for="attention">Attention</label>
-                        <input class="form-control" id="attention" placeholder="(Attention)">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="clear bottom30 hidden-xs"></div>
-            <div class="switch">
-                <input id="mailPromoToggle" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
-                <label for="mailPromoToggle"></label>
-            </div>
-            <div class="switch-label">
-                <label for="mailPromoToggle">Mail Promotions</label>
             </div>
         </div>
     </div>
     <div class="container-fluid pad0">
         <div class="row">
             <div class="form-group col-md-12">
-                <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add an Address</i></a>
+                <a href="#addAgencyAddress" class="green"><i class="fa fa-plus-circle"></i> <i>Add an Address</i></a>
             </div>
         </div>
     </div>
 </div>
+    
+    <script>
+        $(document).ready(function () {
 
-<script>
-    $(document).ready(function () {
+
+        
+        
+        
         var countries = [
 "Albania",
 "Andorra",
@@ -200,3 +218,4 @@
         });
     });
 </script>
+</html>

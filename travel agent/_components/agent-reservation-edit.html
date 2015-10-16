@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>OUI</title>
+        <link rel="stylesheet" href="../../kendoui/styles/kendo.common-bootstrap.min.css">
+        <link rel="stylesheet" href="../../kendoui/styles/kendo.bootstrap.min.css">
+        <link href="../../css/bootstrap.css" rel="stylesheet">
+        <link href="../../css/toggle-me-softly.css" rel="stylesheet">
+        <link href="../../css/style.css" rel="stylesheet">
+        <link href="../../css/font-awesome.css" rel="stylesheet">
+        <script src="../../js/jquery.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/bootstrap-toggle.min.js"></script>
+        <script src="../../kendoui/js/kendo.all.min.js"></script>
+        <script src="guest-scripts.js"></script>
+
+
+    </head>
+<!-- UPCOMING RESERVATIONS -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <a name="agents"></a>
+            <h3> Upcoming Reservations </h3>
+        </div>
+    </div>
+</div>
+
+<div class="container container-border">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="agentUpcomingReservationsGrid"></div>
+        </div>
+    </div>
+</div>
+
+<!-- UPCOMING RESERVATIONS SCRIPTS -->
+<script>
+    $("#agentUpcomingReservationsGrid").kendoGrid({
+        selectable: "multiple cell",
+        allowCopy: true,
+        editable: "popup",
+        selectable: "row",
+        sortable: "true",
+        columns: [
+            {
+                field: "guests",
+                title: "Guests",
+                encoded: false,
+                width: 250,
+            },
+            {
+                field: "tour",
+                title: "Tour",
+                encoded: false,
+                width: 280,
+            },
+            {
+                field: "status",
+                title: "Status",
+                encoded: false,
+                width: 120,
+            },
+            {
+                field: "agent",
+                title: "Agent",
+                encoded: false,
+                width: 150,
+            },
+            {
+                command: ["Request Information"]
+            }
+        ],
+        dataSource: [
+            {
+                guests: "<b>Mr. Joseph Bonanno</b><br><b>Mrs. April Bonanno</b>",
+                tour: "<b>CSR-16 | Costa Rica's Natural Heritage</b><p>08-Feb to 17-Feb-16 | 115 days out<br>R-634554</p>",
+                status: "Confirmed",
+                agent: "Matt McCourry",
+            },
+            {
+                guests: "<b>Mr. Steve Fleishaker (2)</b><br><b>Mrs. Edna Fleishaker (3)</b>",
+                tour: "<b>CSR-16 | Costa Rica's Natural Heritage</b><p>08-Feb to 17-Feb-16 | 115 days out<br>R-634534</p>",
+                status: "Confirmed",
+                agent: "Matt McCourry",
+            },
+           
+            {
+                guests: "<b>Mr. Patrick Nord (1)</b><br><b>Mrs. Jaqueline Kennedy (1)</b>",
+                tour: "<b>CSR-16 | Costa Rica's Natural Heritage</b><p>08-Feb to 17-Feb-16 | 115 days out<br>R-634549</p>",
+                status: "Confirmed",
+                agent: "Matt McCourry",
+            },
+            {
+                guests: "<b>Mr. Daniel O'Sullivan (1)</b><br><b>Mrs. Catherine O'Sullivan (1)</b>",
+                tour: "<b>CSR-16 | Costa Rica's Natural Heritage</b><p>08-Feb to 17-Feb-16 | 115 days out <br>R-634565</p>",
+                status: "Confirmed",
+                agent: "Matt McCourry",
+            },
+        ]
+    });
+</script>
+    
+    <!-- PAST RESERVATIONS -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <a name="agents"></a>
+            <h3> Past Reservations </h3>
+        </div>
+    </div>
+</div>
+
+<div class="container container-border">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="agentPastReservationsGrid"></div>
+        </div>
+    </div>
+</div>
+
+<!-- PAST RESERVATIONS SCRIPTS -->
+<script>
+    $("#agentPastReservationsGrid").kendoGrid({
+        selectable: "multiple cell",
+        allowCopy: true,
+        editable: "popup",
+        selectable: "row",
+        sortable: "true",
+        columns: [
+            {
+                field: "guests",
+                title: "Guests",
+                encoded: false,
+                width: 250,
+            },
+            {
+                field: "tour",
+                title: "Tour",
+                encoded: false,
+                width: 280,
+            },
+            {
+                field: "status",
+                title: "Status",
+                encoded: false,
+                width: 120,
+            },
+            {
+                field: "agent",
+                title: "Agent",
+                encoded: false,
+                width: 150,
+            },
+            {
+                command: ["Request Information"],
+            }
+        ],
+        dataSource: [
+            {
+                guests: "<b>Mr. Daniel O'Sullivan (1)</b><br><b>Mrs. Catherine O'Sullivan (1)</b>",
+                tour: "<b>GRV-13 | Classic Greek Isles</b><p>6-Jul to 18-Jul-13<br>R-573478</p>",
+                status: "Completed",
+                agent: "Matt McCourry",
+            },
+            {
+                guests: "<b>Mr. Steve Fleishaker (2)</b><br><b>Mrs. Edna Fleishaker (3)</b>",
+                tour: "<b>TNZ-13 | Tanzania Adventure</b><p>04-Nov to 18-Feb-14<br>R-573498</p>",
+                status: "Completed",
+                agent: "Matt McCourry",
+            },
+        ]
+    });
+</script>
+
+
+</html>
+
+
+

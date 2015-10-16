@@ -42,14 +42,14 @@ $(document).ready(function () {
 		if ($('#flyoutNav').hasClass('closed')){
 			$('#flyoutNav').removeClass('closed');
 			$('#flyoutList').removeClass('displayNone');
-			$('#flyoutNav span.glyphicon').removeClass('glyphicon-chevron-right');
-			$('#flyoutNav span.glyphicon').addClass('glyphicon-chevron-left');
+			$('#flyoutNav i.fa').removeClass('fa-chevron-right');
+			$('#flyoutNav i.fa').addClass('fa-chevron-left');
 		}
 		else{
 			$('#flyoutNav').addClass('closed');	
 			$('#flyoutList').addClass('displayNone');
-			$('#flyoutNav span.glyphicon').addClass('glyphicon-chevron-right');
-			$('#flyoutNav span.glyphicon').removeClass('glyphicon-chevron-left');
+			$('#flyoutNav i.fa').addClass('fa-chevron-right');
+			$('#flyoutNav i.fa').removeClass('fa-chevron-left');
 		}
 		
 	});

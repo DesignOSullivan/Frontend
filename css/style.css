@@ -106,18 +106,19 @@ textarea{min-height: 150px;}
 
 
 /*flyout Navigation Styling*/
-#flyoutNav{transition: all 0.5s ease; position: fixed; left: 0; top: 20%; background: rgba(0,27,61,.8); width: 200px; padding: 15px 15px 0px 15px; border-radius:0  3px 3px 0 ;}
-	#flyoutNav h4{color: #fff; margin: 0; padding: 0; line-height: 1em; }
-	#flyoutNav ul{padding: 10px; margin: 0;}
-	#flyoutNav li{ padding:0 0 8px 5px; margin-bottom: 8px; border-bottom: 1px solid #ccc;}
-#flyoutNav li:hover{transition: all 0.35s ease; background: rgba(253, 92, 99, .85);}
-		#flyoutNav li:last-child{border: none; margin-bottom: 0; padding-bottom: 0;}
+#flyoutNav{transition: all 0.5s ease; position: fixed; left: 0; top: 20%; background: rgba(0,27,61,.8); width: 200px; padding: 15px 15px 0px 15px; border-radius:0  0px 0px 0 ;}
+#flyoutNav h4{color: #fff; margin: 0; padding: 0; line-height: 1em; }
+#flyoutNav ul{padding: 10px; margin: 0;margin-right: 20px; margin-top: -100px}
+#flyoutNav li{ padding:0 0 8px 5px; margin-bottom: 8px; }
+#flyoutNav li:hover{transition: all 0.35s ease; color: rgba(253, 92, 99, .85);}
+#flyoutNav li:last-child{border: none; margin-bottom: 5px; padding-bottom: 0;}
 #flyoutNav a, #flyoutNav a i{color: #fff !important; cursor: pointer;}	
-#flyoutNav.closed{transition: all 0.35s ease; left: -160px; background: rgba(181, 15, 70, .85);}
+#flyoutNav.closed{transition: all 0.35s ease; left: -160px; background: rgba(181, 15, 70, .85); height: 120px}
 #flyoutNav.closed:hover{background: rgba(253, 92, 99, .85);}
 #flyoutNav.closed a i{color: #fff !important; }
+#flyoutNav b{text-transform: uppercase; word-wrap: break-word; color: #fff;}
 
-
+.rotate2 {margin-top: 10px; position:absolute; right: -7%; -webkit-transform:  rotate(-90deg);-moz-transform:  rotate(-90deg);-o-transform:  rotate(-90deg); writing-mode: tb-rl;}
 
 /*Remarks Styling*/
 #remarks{transition: all 0.5s ease; height: 100%; position: fixed; right: 0; top: 64px; background: rgba(0,27,61,.8); width: 400px; padding: 15px 15px 0px 15px; border-radius:0  3px 3px 0 ; z-index: 9;}
@@ -140,6 +141,8 @@ textarea{min-height: 150px;}
 
 
 .rotate {margin-top: 10px; position:absolute; left:-2%; -webkit-transform:  rotate(-90deg);-moz-transform:  rotate(-90deg);-o-transform:  rotate(-90deg);writing-mode: tb-rl;}
+
+
 
 
 /*Modal Styling*/

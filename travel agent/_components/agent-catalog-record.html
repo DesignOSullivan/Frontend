@@ -1,0 +1,59 @@
+    
+    <!-- Agents -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a name="agentCatalogRecord"></a>
+                <h3> Catalog Record </h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container container-border">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="agentCatalogRecordGrid"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Agents Grid Scripts-->
+    <script>
+        $("#agentCatalogRecordGrid").kendoGrid({
+            selectable: "multiple cell",
+            allowCopy: true,
+            editable: "popup",
+            selectable: "row",
+            sortable: "true",
+            columns: [
+                {
+                    field: "catalogName",
+                    title: "Catalog Name"
+                },
+                {
+                    field: "dateRequested",
+                    title: "Date Requested"
+                },
+            ],
+            dataSource: [
+                {
+                    catalogName: "Winter 2015",
+                    dateRequested: "22-Oct-15",
+                },
+                {
+                    catalogName: "Fall 2015",
+                    dateRequested: "02-Jul-15",
+                },
+                {
+                    catalogName: "Summer 2015",
+                    dateRequested: "27-May-15",
+                },
+                {
+                    catalogName: "Spring 2015",
+                    dateRequested: "13-Dec-14",
+                },
+            ]
+        });
+    </script>
+    
+    

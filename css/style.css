@@ -32,7 +32,8 @@ p{color: #54698d;}
 .k-multiselect-wrap .k-input{color: #acb6c0; padding: 7px 0;}
 input.k-textbox {height: 35px;}
 
-i.fa{font-size: 15px; top: 2px;}
+
+i.fa{font-size: 13px; }
 
 textarea{min-height: 150px;}
 
@@ -106,7 +107,7 @@ textarea{min-height: 150px;}
 
 
 /*flyout Navigation Styling*/
-#flyoutNav{transition: all 0.5s ease; position: fixed; left: 0; top: 20%; background: rgba(0,27,61,.8); width: 200px; padding: 15px 15px 0px 15px; border-radius:0  0px 0px 0 ;}
+#flyoutNav{transition: all 0.5s ease; position: fixed; left: 0; top: 20%; background: rgba(0,27,61,.9); width: 200px; padding: 15px 15px 0px 15px; border-radius:0  0px 0px 0 ;}
 #flyoutNav h4{color: #fff; margin: 0; padding: 0; line-height: 1em; }
 #flyoutNav ul{padding: 10px; margin: 0;margin-right: 20px; margin-top: -100px}
 #flyoutNav li{ padding:0 0 8px 5px; margin-bottom: 8px; }
@@ -121,7 +122,7 @@ textarea{min-height: 150px;}
 .rotate2 {margin-top: 10px; position:absolute; right: -7%; -webkit-transform:  rotate(-90deg);-moz-transform:  rotate(-90deg);-o-transform:  rotate(-90deg); writing-mode: tb-rl;}
 
 /*Remarks Styling*/
-#remarks{transition: all 0.5s ease; height: 100%; position: fixed; right: 0; top: 64px; background: rgba(0,27,61,.8); width: 400px; padding: 15px 15px 0px 15px; border-radius:0  3px 3px 0 ; z-index: 9;}
+#remarks{transition: all 0.5s ease; height: 100%; position: fixed; right: 0; top: 64px; background: rgba(0,27,61,.9); width: 400px; padding: 15px 15px 0px 15px; border-radius:0  3px 3px 0 ; z-index: 9;}
 #remarks h4{ color: #ccc; margin: 0; padding: 0; line-height: 1em;}
 #remarks label{color:#fff;}
 #remarks a, #remarks a i{color: #fff !important; cursor: pointer;}	

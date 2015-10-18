@@ -21,8 +21,19 @@
 
 </head>
 
-<a href="" data-toggle="modal" data-target="#agentCreateModal" class="green"><i class="fa fa-info-circle"></i> &nbsp;Create Travel Agent</a>
-<a href="" data-toggle="modal" data-target="#agencyCreateModal" class="green"><i class="fa fa-info-circle"></i> &nbsp;Create Travel Agency</a>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-3 textCenter">
+            <button href="" data-toggle="modal" data-target="#agentCreateModal" class="btn btn-info btn-lg"><i class="fa fa-user"></i> &nbsp;Create Travel Agent</button>
+        </div>
+        <div class="col-md-3 textCenter">
+            <button href="" data-toggle="modal" data-target="#agencyCreateModal" class="btn btn-info btn-lg"><i class="fa fa-group"></i> &nbsp;Create Travel Agency</button>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+
 
 <!-- CREATE AGENT MODAL -->
 <div class="modal fade dark-modal" id="agentCreateModal" tabindex="-1" role="dialog" aria-labelledby="myModalInfo">
@@ -114,7 +125,7 @@
                     </div>
 
                     <hr>
-                    
+
                     <div class="row">
                         <div class="form-group col-md-7 col-xs-8">
                             <label for="phoneNumber">Phone Number</label>
@@ -162,87 +173,87 @@
 
 
 
-<!-- MODAL FOOTER -->
+                    <!-- MODAL FOOTER -->
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-sm btn-default " data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-sm btn-success" id="createAgent" ><i class="fa fa-check-circle-o"></i> Create Agent</button>
+                <button type="button" class="btn btn-sm btn-success" id="createAgent"><i class="fa fa-check-circle-o"></i> Create Agent</button>
             </div>
         </div>
     </div>
 </div>
 
-    <!-- AGENT SCRIPTS -->
-    <script>
-        //AGENT CREATE BUTTON
-        $("#createAgent").on('click', function(){
-            window.location = "travel-agent.html";    
-        });
+<!-- AGENT SCRIPTS -->
+<script>
+    //AGENT CREATE BUTTON
+    $("#createAgent").on('click', function () {
+        window.location = "travel-agent.html";
+    });
 
-        //AGENT TITLE
-        $(document).ready(function () {
-            $("#title").kendoComboBox({
-                dataTextField: "text",
-                dataValueField: "value",
-                filter: "startswith",
-                suggest: "true",
-                dataSource: [
-                    {
-                        text: "Mr.",
-                        value: "1"
+    //AGENT TITLE
+    $(document).ready(function () {
+        $("#title").kendoComboBox({
+            dataTextField: "text",
+            dataValueField: "value",
+            filter: "startswith",
+            suggest: "true",
+            dataSource: [
+                {
+                    text: "Mr.",
+                    value: "1"
                     },
-                    {
-                        text: "Mrs.",
-                        value: "2"
+                {
+                    text: "Mrs.",
+                    value: "2"
                     },
-                    {
-                        text: "Ms.",
-                        value: "3"
+                {
+                    text: "Ms.",
+                    value: "3"
                     },
-                    {
-                        text: "Prof.",
-                        value: "3"
+                {
+                    text: "Prof.",
+                    value: "3"
                     },
-                    {
-                        text: "Dr.",
-                        value: "3"
+                {
+                    text: "Dr.",
+                    value: "3"
                     }
                 ]
-            });
         });
+    });
 
-        //AGENT SUFFIX
-        $(document).ready(function () {
-            $("#suffix").kendoComboBox({
-                dataTextField: "text",
-                dataValueField: "value",
-                filter: "startswith",
-                suggest: "true",
-                dataSource: [
-                    {
-                        text: "",
-                        value: "1"
+    //AGENT SUFFIX
+    $(document).ready(function () {
+        $("#suffix").kendoComboBox({
+            dataTextField: "text",
+            dataValueField: "value",
+            filter: "startswith",
+            suggest: "true",
+            dataSource: [
+                {
+                    text: "",
+                    value: "1"
                     },
-                    {
-                        text: "Sr.",
-                        value: "2"
+                {
+                    text: "Sr.",
+                    value: "2"
                     },
-                    {
-                        text: "Jr.",
-                        value: "3"
+                {
+                    text: "Jr.",
+                    value: "3"
                     },
-                    {
-                        text: "III",
-                        value: "4"
+                {
+                    text: "III",
+                    value: "4"
                     },
                 ]
-            });
         });
- 
-        //COUNTRY LIST
-        $(document).ready(function () {
-            var countries = [
+    });
+
+    //COUNTRY LIST
+    $(document).ready(function () {
+        var countries = [
                 "Albania",
                 "Andorra",
                 "Armenia",
@@ -295,17 +306,17 @@
                 "Vatican City"
             ];
 
-            //AGENT COUNTRY COMBO BOX
-            $("#countries").kendoComboBox({
-                dataSource: countries,
-                filter: "startswith",
-                placeholder: "Select Country",
-            });
+        //AGENT COUNTRY COMBO BOX
+        $("#countries").kendoComboBox({
+            dataSource: countries,
+            filter: "startswith",
+            placeholder: "Select Country",
         });
+    });
 
-        //STSATE LIST
-        $(document).ready(function () {
-            var state = [
+    //STSATE LIST
+    $(document).ready(function () {
+        var state = [
                 "Alabama",
                 "Alaska",
                 "Arizona",
@@ -358,53 +369,53 @@
                 "Wyoming"
             ];
 
-            //create AutoComplete UI component
-            $("#state").kendoComboBox({
-                dataSource: state,
-                filter: "startswith",
-                placeholder: "Select State",
-            });
+        //create AutoComplete UI component
+        $("#state").kendoComboBox({
+            dataSource: state,
+            filter: "startswith",
+            placeholder: "Select State",
         });
-        
-        //AGENT PHONE NUMBER MASK
-        $(document).ready(function () {
-            $("#phoneNumber").kendoMaskedTextBox({
-                mask: "(999) 000-0000"
-            });
-        });
+    });
 
-        //AGENT PHONE TYPE
-        $(document).ready(function () {
-            $("#phoneType").kendoComboBox({
-                dataTextField: "text",
-                dataValueField: "value",
-                placeholder: "Select Type",
-                dataSource: [
-                    {
-                        text: "Home",
-                        value: "1"
+    //AGENT PHONE NUMBER MASK
+    $(document).ready(function () {
+        $("#phoneNumber").kendoMaskedTextBox({
+            mask: "(999) 000-0000"
+        });
+    });
+
+    //AGENT PHONE TYPE
+    $(document).ready(function () {
+        $("#phoneType").kendoComboBox({
+            dataTextField: "text",
+            dataValueField: "value",
+            placeholder: "Select Type",
+            dataSource: [
+                {
+                    text: "Home",
+                    value: "1"
                     },
-                    {
-                        text: "Mobile",
-                        value: "2"
+                {
+                    text: "Mobile",
+                    value: "2"
                     },
-                    {
-                        text: "Work",
-                        value: "3"
+                {
+                    text: "Work",
+                    value: "3"
                     },
                 ]
-            });
         });
-    </script>
-    
-    
-    
-    
-    
-    
-    
-    
-    <!-- CREATE AGENCY MODAL -->
+    });
+</script>
+
+
+
+
+
+
+
+
+<!-- CREATE AGENCY MODAL -->
 <div class="modal fade dark-modal" id="agencyCreateModal" tabindex="-1" role="dialog" aria-labelledby="myModalInfo">
 
     <div class="modal-dialog" role="document">
@@ -505,7 +516,7 @@
                             <label for="agencyPhoneNumber">Phone Number</label>
                             <input class="form-control" id="agencyPhoneNumber" placeholder="Phone Number">
                         </div>
-                     
+
                         <div class="form-group col-md-4 col-xs-4">
                             <label for="agencyPhoneType">Type</label>
                             <input class="form-control" id="agencyPhoneType">
@@ -545,10 +556,9 @@
                     </div>
 
                     <script>
-                        
                         //AGENT CREATE BUTTON
-                        $("#createAgency").on('click', function(){
-                            window.location = "travel-agency.html";    
+                        $("#createAgency").on('click', function () {
+                            window.location = "travel-agency.html";
                         });
 
                         $(document).ready(function () {
@@ -681,15 +691,15 @@
                                 placeholder: "Select State",
                             });
                         });
-                   
-                        
+
+
                         $(document).ready(function () {
                             $("#agencyPhoneNumber").kendoMaskedTextBox({
                                 mask: "(999) 000-0000"
                             });
                         });
 
-                        
+
                         $(document).ready(function () {
                             $("#agencyPhoneType").kendoComboBox({
                                 dataTextField: "text",
@@ -711,8 +721,6 @@
                                 ]
                             });
                         });
-
-
                     </script>
 
 
@@ -727,14 +735,12 @@
     </div>
 </div>
 
-    <script>
+<script>
+    //AGENT CREATE BUTTON
+    $("#createAgency").on('click', function () {
+        window.location = "travel-agency.html";
+    });
+</script>
 
-        //AGENT CREATE BUTTON
-        $("#createAgency").on('click', function(){
-            window.location = "travel-agency.html";    
-        });
 
-    </script>
-    
-    
 </html>

@@ -147,15 +147,18 @@ textarea{min-height: 150px;}
 
 
 /*Dark Modal Styling*/
+.dark-modal{overflow-y: auto;}
 .dark-modal .modal-backdrop.fade.in { background: rgba(0,0,0,0.5)}
+.dark-modal .modal-header {background:rgba(0,27,61,.8); width:100%; border-radius: 5px;}
+.dark-modal .modal-header label {color: #fff}
+.dark-modal .modal-content hr{border-top: 2px solid #ddd;}
 .dark-modal .modal-dialog {width: 60%; margin-top: 7%}
-.dark-modal .modal-content {background:  rgba(0,27,61,.8);}
-.dark-modal .modal-content h3 {color: #fff;text-transform: uppercase;}
+.dark-modal .modal-content .modal-header h3 {color: #fff;text-transform: uppercase}
+.dark-modal .modal-content .modal-body  h3 {margin-bottom: -15px; margin-top: 45px}
+.dark-modal .modal-content h4 {text-transform: uppercase; text-decoration: underline}
 .dark-modal .modal-content h1 {color: #fff;}
 .dark-modal .modal-content p {color: #fff; font-size: 12px}
-.dark-modal .modal-content span {color: #fff}
 .dark-modal .modal-footer {background:#fff; width:100%; border-radius: 5px;}
-.dark-modal label {color:#fff}
 .dark-modal .modal-content .input-group span {color:rgba(0,27,61,.8)}
 
 

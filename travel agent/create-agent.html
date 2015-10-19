@@ -19,6 +19,7 @@
     <script src="guest-scripts.js"></script>
 
 
+    
 </head>
 
 <div class="container">
@@ -40,9 +41,10 @@
 
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-body">
+            
                 <div class="container">
                     <div class="row">
+                        <div class=" modal-header">
                         <div class="col-md-4 col-xs-8 borderRight">
                             <h3>Create<br> Travel Agent</h3>
                         </div>
@@ -54,9 +56,10 @@
                             <label>IATA/ CLIA: 847364859</label>
                         </div>
                         <div class="clear bottom30"></div>
+                        </div>
                     </div>
 
-
+                    <div class="modal-body">
                     <div class="row">
                         <div class="form-group col-md-2">
                             <label for="title">Title</label>
@@ -75,8 +78,9 @@
                             <input class="form-control" id="suffix" placeholder="(--)">
                         </div>
                     </div>
-
-                    <hr>
+                        
+                        <h3>Address</h3>
+                        <hr>
 
                     <div class="row">
                         <div class="form-group col-md-6">
@@ -112,22 +116,13 @@
                             <input class="form-control" id="countries">
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="switch">
-                                <input id="mailPromoToggle" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
-                                <label for="mailPromoToggle"></label>
-                            </div>
-                            <div class="switch-label">
-                                <label for="mailPromoToggle">Mail Promotions</label>
-                            </div>
-                        </div>
-                    </div>
 
-                    <hr>
-
+                    
+                    <h3>Contatct Information</h3>
+                        <hr>
+                    
                     <div class="row">
-                        <div class="form-group col-md-7 col-xs-8">
+                        <div class="form-group col-md-6 col-xs-8">
                             <label for="phoneNumber">Phone Number</label>
                             <input class="form-control" id="phoneNumber" placeholder="Phone Number">
                         </div>
@@ -142,27 +137,17 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="form-group col-md-7 col-xs-6">
+                        <div class="form-group col-md-6 col-xs-6">
                             <label for="faxNumber">Fax Number</label>
                             <input class="form-control" id="faxNumber" type="text" placeholder="(Fax Number)">
                         </div>
                     </div>
                     <div class="row">
-                        <div class="form-group col-md-7">
+                        <div class="form-group col-md-6">
                             <label for="emailInput">Email Address</label>
                             <input class="form-control" id="emailInput" type="text" placeholder="(Email Address)">
                         </div>
 
-                        <div class="form-group col-md-4">
-                            <div class="clear bottom25"></div>
-                            <div class="switch">
-                                <input id="email-promo-toggle" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
-                                <label for="email-promo-toggle"></label>
-                            </div>
-                            <div class="switch-label">
-                                <label for="email-promo-toggle">Email Promotions</label>
-                            </div>
-                        </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-md-12">
@@ -177,8 +162,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-sm btn-default " data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-sm btn-success" id="createAgent"><i class="fa fa-check-circle-o"></i> Create Agent</button>
+                <button type="button" class="btn btn-sm btn-default " data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-sm btn-info" id="createAgent"><i class="fa fa-check-circle-o"></i> Submit </button>
             </div>
         </div>
     </div>
@@ -583,6 +568,7 @@
                         <div class="form-group col-md-12 textCenter">
                           <h1><i style="font-size: 72px;" class="fa fa-check-circle-o"></i><br> Agent Created Susscessfully</h1>
                         </div>
+                        <div class="clear bottom30"></div>
                     </div>
 
 
@@ -592,9 +578,9 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button id="createAgency" type="button" class="btn btn-sm btn-default " data-dismiss="modal"><i class="fa fa-eye"></i> View Agency</button>
+                <button id="createAgency" type="button" class="btn btn-default " data-dismiss="modal"><i class="fa fa-eye"></i> View Agency</button>
 <!--                <button type="button" class="btn btn-sm btn-success" id="createAgency" ><i class="fa fa-check-circle-o"></i> Create Agency</button>-->
-                <button href="" data-dismiss="modal" data-toggle="modal" data-target="#agentCreateModal" class="btn btn-success btn-sm"><i class="fa fa-user"></i> &nbsp;Add a Travel Agent</button>
+                <button href="" data-dismiss="modal" data-toggle="modal" data-target="#agentCreateModal" class="btn btn-success"><i class="fa fa-user"></i> &nbsp;Add a Travel Agent</button>
             </div>
         </div>
     </div>

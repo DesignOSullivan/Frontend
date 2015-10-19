@@ -152,7 +152,7 @@
 						<td style="background: #ffffee;" class="pad0">
 							<table class="table center inner-table">
 								<tr>
-									<td>
+									<td style="background: #ffffee;" >
 										<span class="arriveusa"></span>
 									</td>
 								</tr>
@@ -262,19 +262,19 @@ $(document).ready(function() {
 		$('.pretourleg1').html(moment(startDate).subtract(3, 'days').format('DD-MMM') + ' - ' + moment(startDate).subtract(1, 'days').format('DD-MMM'));
 		$('.jointour').html(moment(startDate).format('DD-MMM'));
 		
-		$('.tourleg1').html(moment(startDate).add(3, 'days').format('DD-MMM') + ' - ' + moment(startDate).add(4, 'days').format('DD-MMM'));
-		$('.tourleg2').html(moment(startDate).add(5, 'days').format('DD-MMM') + ' - ' + moment(startDate).add(7, 'days').format('DD-MMM'));
-		$('.tourleg3').html(moment(startDate).add(8, 'days').format('DD-MMM') + ' - ' + moment(startDate).add(9, 'days').format('DD-MMM'));
-		$('.tourleg4').html(moment(startDate).add(10, 'days').format('DD-MMM') + ' - ' + moment(startDate).add(12, 'days').format('DD-MMM'));
+		$('.tourleg1').html(moment(startDate).format('DD-MMM') + ' - ' + moment(startDate).add(3, 'days').format('DD-MMM'));
+		$('.tourleg2').html(moment(startDate).add(4, 'days').format('DD-MMM') + ' - ' + moment(startDate).add(7, 'days').format('DD-MMM'));
+		$('.tourleg3').html(moment(startDate).add(8, 'days').format('DD-MMM') + ' - ' + moment(startDate).add(10, 'days').format('DD-MMM'));
+		$('.tourleg4').html(moment(startDate).add(11, 'days').format('DD-MMM') + ' - ' + moment(startDate).add(13, 'days').format('DD-MMM'));
 		
 		
 		
-		$('.returnusa').html(moment(startDate).add(13, 'days').format('DD-MMM'));
-		$('.arriveusa').html(moment(startDate).add(13, 'days').format('DD-MMM'));
+		$('.returnusa').html(moment(startDate).add(14, 'days').format('DD-MMM'));
+		$('.arriveusa').html(moment(startDate).add(14, 'days').format('DD-MMM'));
 		
-		$('.posttourleg1').html(moment(startDate).add(13, 'days').format('DD-MMM') + ' - ' + moment(startDate).add(15, 'days').format('DD-MMM'));
-		$('.posttourreturnusa').html(moment(startDate).add(16, 'days').format('DD-MMM'));
-		$('.posttourarriveusa').html(moment(startDate).add(16, 'days').format('DD-MMM'));
+		$('.posttourleg1').html(moment(startDate).add(14, 'days').format('DD-MMM') + ' - ' + moment(startDate).add(16, 'days').format('DD-MMM'));
+		$('.posttourreturnusa').html(moment(startDate).add(17, 'days').format('DD-MMM'));
+		$('.posttourarriveusa').html(moment(startDate).add(17, 'days').format('DD-MMM'));
 		
 		//$('#addDepartRow').trigger('click');
 		

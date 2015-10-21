@@ -1,92 +1,175 @@
 
-<!-- Reservations w/ upcoming reservations -->
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <a name="reservations"></a>
-            <h3>Reservations</h3>
-        </div>
-    </div>
-</div>
-<div class="container container-border">
-    <div class="row">
-        <div class="col-md-12">
-            <label>
-                <h4>Upcoming</h4></label>
-        </div>
-    </div>
-    <div class="pad15">
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>OUI</title>
+        <link rel="stylesheet" href="../../kendoui/styles/kendo.common-bootstrap.min.css">
+        <link rel="stylesheet" href="../../kendoui/styles/kendo.bootstrap.min.css">
+        <link href="../../css/bootstrap.css" rel="stylesheet">
+        <link href="../../css/toggle-me-softly.css" rel="stylesheet">
+        <link href="../../css/style.css" rel="stylesheet">
+        <link href="../../css/font-awesome.css" rel="stylesheet">
+        <script src="../../js/jquery.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/bootstrap-toggle.min.js"></script>
+        <script src="../../kendoui/js/kendo.all.min.js"></script>
+        <script src="guest-scripts.js"></script>
+
+
+    </head>
+    <!-- UPCOMING RESERVATIONS -->
+    <div class="container">
         <div class="row">
-            <div class="col-md-3">
-                <label>Tour</label>
-                <br>
-                <b>GRV-15 | Classic Greek Isles</b>
-                <p>12-Oct to 23-Oct-25
-                    <br>(30 days out)</p>
+            <div class="col-md-12">
+                <a name="agents"></a>
+                <h3> Upcoming Reservations </h3>
             </div>
-            <div class="col-md-2">
-                <label>Status</label>
-                <br>
-                <b>Confirmed</b>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group col-md-3">
-                <a href="" data-toggle="modal" data-target="#myModalInfo" class="green"><i class="fa fa-info-circle"></i> &nbsp;Request Information</a>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <hr>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <label>
-                <h4>Past</h4></label>
-        </div>
-    </div>
-    <div class="pad15">
+    <div class="container container-border">
         <div class="row">
-            <div class="col-md-3">
-                <label>Tour</label>
-                <br>
-                <b>ITY-14 | Portrait of Italy</b>
-                <p>15-Aug to 25-Aug-14</p>
-            </div>
-            <div class="col-md-3">
-                <label>Satus</label>
-                <br>
-                <b>Completed</b>
+            <div class="form-group col-md-12">
+                <div id="agentUpcomingReservationsGrid"></div>
             </div>
         </div>
         <div class="row">
-            <div class="form-group col-md-3">
-                <a href="" data-toggle="modal" data-target="#myModalInfo" class="green"><i class="fa fa-info-circle"></i> &nbsp;Request Information</a>
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-info btn-xs bottom0"><i class="fa fa-globe"></i> New Reservation</button>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <b>CSR-14 | Costa Rica's Natural Heritage</b>
-                <p>08-Feb to 17-Feb-14</p>
-            </div>
-            <div class="col-md-3">
-                <b>Completed</b>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group col-md-3">
-                <a href="" data-toggle="modal" data-target="#myModalInfo" class="green"><i class="fa fa-info-circle"></i> &nbsp;Request Information</a>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="form-group col-md-12">
-            <div class="clear bottom15"></div>
-            <button type="submit" class="btn btn-info btn-xs bottom0"><i class="fa fa-globe"></i> New Reservation</button>
         </div>
     </div>
 
-</div>
+    <!-- UPCOMING RESERVATIONS SCRIPTS -->
+    <script>
+        $("#agentUpcomingReservationsGrid").kendoGrid({
+            selectable: "multiple cell",
+            allowCopy: true,
+            editable: "popup",
+            selectable: "row",
+            sortable: "true",
+            columns: [
+                {
+                    field: "tour",
+                    title: "Tour",
+                    encoded: false,
+                    width: 280,
+                },
+                {
+                    field: "daysOut",
+                    title: "Days Out",
+                    encoded: false,
+                    width:150,
+                    attributes: {
+                        style: "text-align: center;"
+                    },
+                    headerAttributes: {
+                        style: "text-align: center;"
+                    }
+
+                },
+                {
+                    field: "status",
+                    title: "Status",
+                    encoded: false,
+                    width: 120,
+                },
+                {
+                    command: ["Information Request"]
+                }
+            ],
+            dataSource: [
+                {
+                    tour: "<b>CSR-16 | Costa Rica's Natural Heritage</b><p>08-Feb to 17-Feb-16 | 115 days out <br>R-634565</p>",
+                    daysOut: 115,
+                    status: "Confirmed",
+                    agent: "Matt McCourry",
+                },
+            ]
+        });
+    </script>
+
+    <!-- PAST RESERVATIONS -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a name="agents"></a>
+                <h3> Past Reservations </h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container container-border">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="agentPastReservationsGrid"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAST RESERVATIONS SCRIPTS -->
+    <script>
+        $("#agentPastReservationsGrid").kendoGrid({
+            selectable: "multiple cell",
+            allowCopy: true,
+            editable: "popup",
+            selectable: "row",
+            sortable: "true",
+            columns: [
+                {
+                    field: "tour",
+                    title: "Tour",
+                    encoded: false,
+                    width: 280,
+                },
+                {
+                    field: "status",
+                    title: "Status",
+                    encoded: false,
+                    width: 120,
+                },
+                { command: [ {
+                    name: "details",
+                    click: function(e) {
+                        // e.target is the DOM element representing the button
+                        var tr = $(e.target).closest("tr"); // get the current table row (tr)
+                        // get the data bound to the current table row
+                        var data = this.dataItem(tr);
+                        console.log("Details for: " + data.name);
+                    }
+                } ]
+                }
+            ],
+            dataSource: [
+                {
+                    tour: "<b>GRV-13 | Classic Greek Isles</b><p>6-Jul to 18-Jul-13<br>R-573478</p>",
+                    status: "Completed",
+                    agent: "Matt McCourry",
+                },
+                {
+                    tour: "<b>TNZ-13 | Tanzania Adventure</b><p>04-Nov to 18-Feb-14<br>R-573498</p>",
+                    status: "Completed",
+                    agent: "Matt McCourry",
+                },
+            ]
+        });
+    </script>
+
+
+</html>
+
+
+
+
+
+<!--
+<div class="row">
+            <div class="form-group col-md-3">
+                <a href="" data-toggle="modal" data-target="#myModalInfo" class="green"><i class="fa fa-info-circle"></i> &nbsp;Request Information</a>
+            </div>
+        </div>
+    -->

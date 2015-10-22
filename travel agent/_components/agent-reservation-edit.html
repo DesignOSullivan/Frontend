@@ -33,7 +33,7 @@
 <div class="container container-border">
     <div class="row">
         <div class="form-group col-md-12">
-            <div id="agentUpcomingReservationsGrid"></div>
+            <div class="maxHeight200" id="agentUpcomingReservationsGrid"></div>
         </div>
     </div>
     <div class="row">
@@ -55,20 +55,21 @@
             {
                 field: "guests",
                 title: "Guests",
-                encoded: false,
-                width: 250,
+                width: "20%",
+                template: "<div><b>#: guest1 # (#: trips1 #) </b></div><div><b>#: guest2 # (#: trips2 #)</b></div>"
             },
             {
                 field: "tour",
                 title: "Tour",
-                encoded: false,
-                width: 280,
+                width: "25%",
+                minScreenWidth: "480",
+                template: "<div><b> #: tourCode # | #: tour # </b><div><div> #: startDate # to #:endDate# </div><div> #:reservationNumber# </div>"
             },
             {
                 field: "daysOut",
                 title: "Days Out",
-                encoded: false,
-                width:150,
+                width: "10%",
+                minScreenWidth: "960",
                 attributes: {
                     style: "text-align: center;"
                 },
@@ -80,43 +81,90 @@
             {
                 field: "status",
                 title: "Status",
-                encoded: false,
-                width: 120,
+                width: "10%",
+                minScreenWidth: "960",
             },
             {
-                command: ["Information Request"]
+                field: "alert",
+                title: "Alert",
+                minScreenWidth: "480",
+                width: 50,
+                encoded: false,
+                template: "<i class='fa fa-warning'></i>",
+
+                headerAttributes: {style: "text-align: center;"},
+                attributes: {
+                    style: "text-align: center; color: orange",
+
+
+                },
+            },
+            {
+                command: ["Information Request"],
+                width: 170,
+                attributes: {
+                style: "text-align: right;"
+            },
             }
         ],
         dataSource: [
             {
-                guests: "<b>Mr. Joseph Bonanno</b><br><b>Mrs. April Bonanno</b>",
-                tour: "<b>CSR-16 | Costa Rica's Natural Heritage</b><p>08-Feb to 17-Feb-16 | 115 days out<br>R-634554</p>",
+                guest1: "Mr. Joseph Bonanno",
+                trips1: "0",
+                guest2: "Mrs. April Bonanno",
+                trips2: "0",
+                tourCode: "CSR-16",
+                tour: "Costa Rica's Natural Heritage",
+                startDate: "08-Feb",
+                endDate: "17-feb-16",
+                reservationNumber: "R-634554",
                 daysOut: 115,
                 status: "Confirmed",
                 agent: "Matt McCourry",
             },
             {
-                guests: "<b>Mr. Steve Fleishaker (2)</b><br><b>Mrs. Edna Fleishaker (3)</b>",
-                tour: "<b>CSR-16 | Costa Rica's Natural Heritage</b><p>08-Feb to 17-Feb-16 | 115 days out<br>R-634534</p>",
+                guest1: "Mr. Steve Fleishaker",
+                trips1: "3",
+                guest2: "Mrs. Edna Fleishaker",
+                trips2: "1",
+                tourCode: "CSR-16",
+                tour: "Costa Rica's Natural Heritage",
+                startDate: "08-Feb",
+                endDate: "17-feb-16",
+                reservationNumber: "R-634554",
+                daysOut: 115,
+                status: "Confirmed",
+                agent: "Matt McCourry",
+            },
+            {
+                guest1: "Mr. Patrick Nord",
+                trips1: "1",
+                guest2: "Mrs. Jaqueline Kennedy",
+                trips2: "1",
+                tourCode: "CSR-16",
+                tour: "Costa Rica's Natural Heritage",
+                startDate: "08-Feb",
+                endDate: "17-feb-16",
+                reservationNumber: "R-634554",
+                daysOut: 115,
+                status: "Confirmed",
+                agent: "Matt McCourry",
+            },
+            {
+                guest1: "Mr. Daniel O'Sullivan",
+                trips1: "3",
+                guest2: "Mrs. Catherine O'Sullivan",
+                trips2: "1",
+                tourCode: "CSR-16",
+                tour: "Costa Rica's Natural Heritage",
+                startDate: "08-Feb",
+                endDate: "17-feb-16",
+                reservationNumber: "R-634554",
                 daysOut: 115,
                 status: "Confirmed",
                 agent: "Matt McCourry",
             },
            
-            {
-                guests: "<b>Mr. Patrick Nord (1)</b><br><b>Mrs. Jaqueline Kennedy (1)</b>",
-                tour: "<b>CSR-16 | Costa Rica's Natural Heritage</b><p>08-Feb to 17-Feb-16 | 115 days out<br>R-634549</p>",
-                daysOut: 115,
-                status: "Confirmed",
-                agent: "Matt McCourry",
-            },
-            {
-                guests: "<b>Mr. Daniel O'Sullivan (1)</b><br><b>Mrs. Catherine O'Sullivan (1)</b>",
-                tour: "<b>CSR-16 | Costa Rica's Natural Heritage</b><p>08-Feb to 17-Feb-16 | 115 days out <br>R-634565</p>",
-                daysOut: 115,
-                status: "Confirmed",
-                agent: "Matt McCourry",
-            },
         ]
     });
 </script>
@@ -134,7 +182,7 @@
 <div class="container container-border">
     <div class="row">
         <div class="col-md-12">
-            <div id="agentPastReservationsGrid"></div>
+            <div class="maxHeight200" id="agentPastReservationsGrid"></div>
         </div>
     </div>
 </div>
@@ -147,44 +195,68 @@
         editable: "popup",
         selectable: "row",
         sortable: "true",
+        resizable: "true",
         columns: [
             {
                 field: "guests",
                 title: "Guests",
-                encoded: false,
-                width: 250,
+                width: "20%",
+                template: "<div><b>#: guest1 # (#: trips1 #) </b></div><div><b>#: guest2 # (#: trips2 #)</b></div>"
             },
             {
                 field: "tour",
                 title: "Tour",
-                encoded: false,
-                width: 280,
+                width: "25%",
+                minScreenWidth: "480",
+                template: "<div><b> #: tourCode # | #: tour # </b><div><div> #: startDate # to #:endDate# </div><div> #:reservationNumber# </div>"
             },
             {
                 field: "status",
                 title: "Status",
-                encoded: false,
-                width: 120,
+                width: "10%",
+                minScreenWidth: "960",
             },
             {
                 command: ["Information Request"],
+                width: "170px",
+                attributes: {
+                    style: "text-align: right;"
+                },
             }
         ],
         dataSource: [
             {
-                guests: "<b>Mr. Daniel O'Sullivan (1)</b><br><b>Mrs. Catherine O'Sullivan (1)</b>",
-                tour: "<b>GRV-13 | Classic Greek Isles</b><p>6-Jul to 18-Jul-13<br>R-573478</p>",
+                guest1: "Mr. Steve Fleishsaker",
+                trips1: "3",
+                guest2: "Mr. Daniel O'Sullivan",
+                trips2: "3",
+                tourCode: "TNZ-13",
+                tour: "Tanzania Adventure",
+                startDate: "08-Feb",
+                endDate: "04-Nov-14",
+                reservationNumber: "R-573478",
                 status: "Completed",
                 agent: "Matt McCourry",
+                alert: "Yes"
             },
             {
-                guests: "<b>Mr. Steve Fleishaker (2)</b><br><b>Mrs. Edna Fleishaker (3)</b>",
-                tour: "<b>TNZ-13 | Tanzania Adventure</b><p>04-Nov to 18-Feb-14<br>R-573498</p>",
+                guest1: "Mr. Steve Fleishaker",
+                trips1: "3",
+                guest2: "Mr. Daniel O'Sullivan",
+                trips2: "3",
+                tourCode: "GRV-13",
+                tour: "Classic Greek Isles",
+                startDate: "06-July",
+                endDate: "18-July-13",
+                reservationNumber: "R-573498",
                 status: "Completed",
                 agent: "Matt McCourry",
+                alert: "Yes",
             },
         ]
     });
+    
+   
 </script>
 
 

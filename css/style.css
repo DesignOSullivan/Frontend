@@ -172,9 +172,20 @@ textarea{min-height: 150px;}
 .k-grid{border:none}
 .k-alt{background-color: #E2EFFF;}
 .k-state-selected{background-color: #428bca}
+.k-state-selected b{color:#fff}
 .k-grid-header-wrap{border:none}
 
+.maxHeight200 .k-grid-content
+{
+    min-height: 100px;
+    max-height: 200px;
+}
 
+/*
+ tbody tr:hover {
+    background: #ff0000 ;
+}
+*/
 
 
 /* --- Classes --- */

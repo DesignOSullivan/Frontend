@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OUI</title>
+
+
+    <link rel="stylesheet" href="../kendoui/styles/kendo.common-bootstrap.min.css">
+    <link rel="stylesheet" href="../kendoui/styles/kendo.bootstrap.min.css">
+
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-toggle.min.js"></script>
+    <script src="../kendoui/js/kendo.all.min.js"></script>
+    <script src="tour-director-scripts.js"></script>
+
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/toggle-me-softly.css" rel="stylesheet">
+    <link href="../css/actively-toggle-me-softly.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/font-awesome.css" rel="stylesheet">
+
+
+    <!-- GRAB ALL THE COMPONENT MODULES WE NEED FOR THIS PAGE -->
+    <script>
+        $(function () {
+            $("#includeTourDirectorName").load("_components/tour-director-name.html");
+            $("#includeTourDirectorAddress").load("_components/tour-director-address.html");
+            $("#includeTourDirectorContactInformation").load("_components/tour-director-contact-information.html");
+            $("#includeTourDirectorTravelInformation").load("_components/tour-director-travel-information.html");
+            $("#includeTourDirectorTabs").load("_components/tour-director-tabs.html");
+        });
+    </script>
+
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </button>
+            <a class="navbar-brand" href="#" style="padding: 0 15px;"><img src="../images/logo.png" style="max-height: 60px;" /></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="navbar-center">
+                <h4 class="headerTextLeft">TD-543323 |</h4>
+                <h4 class="headerTextLeft" id="firstNameHeader">New</h4>
+                <h4 class="headerTextRight" id="lastNameHeader">Tour Director</h4>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li> <img src="http://lorempixel.com/output/people-q-c-100-100-9.jpg" class="navimg"> </li>
+                <li class="nav  navbar-toggle navbar-link">Danielle O'Sullivan</li>
+                <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span><b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li> <a href="#">Action</a> </li>
+                        <li> <a href="#">Another action</a> </li>
+                        <li> <a href="#">Something else here</a> </li>
+                        <li class="divider"> </li>
+                        <li> <a href="#">Separated link</a> </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- PAGE HEADER -->
+    <div id="pageHeader">
+        <div class="container pad0 bottom0 fixedtop pageHeader">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear bottom15">
+            </div>
+            <div class="row">
+                <div class="col-md-12 center">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" id="base-tour-tab-link" class="active"><a data-target="#tour-director-content" role="tab" data-toggle="tab">Tour Director</a></li>
+                        <li role="presentation" id="pre-tour-tab-link"><a data-target="#ground-operator-content" role="tab" data-toggle="tab">Ground Operator</a></li>
+                        <li role="presentation" id="pre-tour-tab-link"><a data-target="#tour-log-content" role="tab" data-toggle="tab"> Tour Log</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <form role="form">
+
+
+        <div class="tab-content header-tabs">
+
+
+            <!-- TAB CONTENT -->
+            <div id="tourDirectorContent" class="tab-content header-tabs container">
+
+                <!-- TOUR DIRECTOR TAB -->
+                <div id="tour-director-content" class="tab-pane fade in active">
+                    
+                    <!-- TOUR DIRECTOR NAME -->
+                    <div id="includeTourDirectorName"></div>
+
+                    <!-- ADDRESS -->
+                    <div id="includeTourDirectorAddress"></div>
+
+                    <!-- CONTACT INFORMATION -->
+                    <div id="includeTourDirectorContactInformation"></div>
+
+                    <!-- TRAVEL INFORMATION -->
+                    <div id="includeTourDirectorTravelInformation"></div>
+
+                    <!-- TAB SECTION -->
+                    <div id="includeTourDirectorTabs"></div>
+
+                </div>
+                <!-- /END TOUR DIRECTOR TAB -->
+
+                
+                <!-- GROUND OPERATOR TAB-->
+                <div id="ground-operator-content" class="tab-pane fade in active">
+                <div class="container container-border">
+                        <div class="row">
+                            <div class="col-md-5"> 
+                                <h5>Add New Ground Operator</h5>
+                                <div class="clear bottom15">
+                                </div>
+                                <div class="container-fluid pad0">
+                                    <div class="row">
+                                        <div class="form-group col-md-12">
+                                            <label for="exampleInputEmail1">Ground Operator Name</label>
+                                            <input class="form-control" type="text" placeholder="Ground Operator Name">
+                                        </div>
+
+                                        <div class="form-group col-md-6">
+                                            <label for="">Phone</label>
+                                            <input class="form-control" type="text" placeholder="Phone">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="title1">Type</label>
+                                            <select class="form-control" id="">
+                                                <option>Landline</option>
+                                                <option>Mobile</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label for="title1">Ext.</label>
+                                            <input class="form-control" type="text" placeholder="Ext">
+                                        </div>
+                                        <div class="col-md-12 bottom15">
+                                            <em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add a Phone Number</a></em>
+                                        </div>
+
+                                        <div class="form-group col-md-6">
+                                            <label for="">Email Address</label>
+                                            <input class="form-control" type="text" placeholder="Email Address">
+                                        </div>
+                                        <div class="col-md-12 bottom15">
+                                            <em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add an Email Address</a></em>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group col-md-8 pad0">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">Skype.com/</span>
+                                                    <input class="form-control" type="text" placeholder="User Name (Optional)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="clear bottom45" style="margin-bottom: 51px;"></div>
+                                <div class="container-fluid pad0">
+                                    <div class="row">
+
+                                        <div class="form-group col-md-12">
+                                            <label for="">Attention</label>
+                                            <input class="form-control" type="text" placeholder="Attention (Optional)">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="">Address</label>
+                                            <input class="form-control" type="text" placeholder="Address">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="">Address 2</label>
+                                            <input class="form-control" type="text" placeholder="Address cont'd (Optional)">
+                                        </div>
+
+                                        <div class="form-group col-md-4">
+                                            <label for="">Postal Code</label>
+                                            <input class="form-control" type="text" placeholder="Postal Code">
+                                        </div>
+                                        <div class="form-group col-md-8">
+                                            <label for="">City</label>
+                                            <input class="form-control" type="text" placeholder="City">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="">State / Province</label>
+                                            <input class="form-control" type="text" id="addGroundOperatorState">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="">Country</label>
+                                            <input class="form-control" id="addGroundOperatorCountry" type="text">
+                                        </div>
+                                        <div class="col-md-12 bottom15">
+                                            <div class="form-group">
+                                                <div class="switch">
+                                                    <input id="addGroundOperator-fedex-toggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                                                    <label for="addGroundOperator-fedex-toggle"></label>
+                                                </div>
+                                                <div class="switch-label">
+                                                    <label for="addGroundOperator-fedex-toggle">Allows FedEx Delivery</label>
+                                                </div>  
+                                                <div class="clear bottom15">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add an Address</a></em>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-md-12">
+                                <hr />
+                            </div>
+
+                            <div class="col-md-12"> 
+                                <h5>Create Contact</h5>
+                                <div class="clear bottom15"></div>
+
+                                <div class="container-fluid pad0">
+                                    <div class="row">
+                                        <div class="form-group col-md-1">
+                                            <label for="title1">Title</label>
+                                            <select class="form-control" id="title">
+                                                <option>Mr.</option>
+                                                <option>Mrs.</option>
+                                                <option>Ms.</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label for="exampleInputEmail1">First Name</label>
+                                            <input class="form-control" id="tourName" type="text" placeholder="First Name">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label for="exampleInputEmail1">Last Name</label>
+                                            <input class="form-control" id="tourName" type="text" placeholder="Last Name">
+                                        </div>
+                                        <div class="form-group col-md-1">
+                                            <label for="title1">Suffix</label>
+                                            <select class="form-control" id="title1">
+                                                <option>Jr.</option>
+                                                <option>Sr.</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-3">
+                                            <label for="">Phone</label>
+                                            <input class="form-control" type="text" placeholder="Phone">
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label for="title1">Type</label>
+                                            <select class="form-control" id="">
+                                                <option>Landline</option>
+                                                <option>Mobile</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-1">
+                                            <label for="title1">Ext.</label>
+                                            <input class="form-control" type="text" placeholder="Ext">
+                                        </div>
+                                        <div class="col-md-12 bottom15">
+                                            <em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add a Phone Number</a></em>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-4">
+                                            <label for="">Email Address</label>
+                                            <input class="form-control" type="text" placeholder="Email Address">
+                                        </div>
+                                        <div class="col-md-12 bottom15">
+                                            <em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add an Email Address</a></em>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-4">
+                                            <label for="">Contact Job Title</label>
+                                            <input class="form-control" type="text" placeholder="Contact Job Title">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-4">
+                                            <label for="title1">OUI Department</label>
+                                            <select class="form-control" id="">
+                                                <option>Dept A</option>
+                                                <option>Dept B</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>	
+                        <div class="clear bottom30"></div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-sm btn-default">Cancel</button>
+                            </div>
+                            <div class="col-md-6 textRight digits">
+                                <button type="button" class="btn btn-sm btn-success">Create Operator</button>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+            
+                <!-- /END GROUND OPERATOR TAB -->
+                
+                
+                
+                <!-- TOUR LOG TAB-->
+                <div id="tour-log-content" class="tab-pane fade in active">
+                    <div class="container container-border">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h1>Tour Log Tab Content</h1>
+                            </div>
+                        </div>
+                    </div>    
+                    
+                    
+                </div>
+                <!-- /END TOUR LOG TAB -->
+                
+                
+                
+            </div>
+        </div>
+
+        
+
+        <!-- BOTTOM SPACE -->
+        <div id="bottomSpace" class="clear" style="margin-bottom: 120px;"></div>
+
+        <!-- FOOTER -->
+        <div>
+            <div id="illusion"></div>
+            <div id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 col-xs-2">
+                            <button type="submit" class="btn btn-default btn-sm"> Cancel </button>
+                        </div>
+                        <div class="col-md-8 col-xs-8 textCenter">
+
+                            <p id="remarksTrigger">Remarks</p>
+
+                        </div>
+                        <div class="col-md-2 col-xs-2">
+                            <button type="submit" class="btn btn-info btn-sm alignRight bottom0"><i class="fa fa-check-circle-o"></i> Submit </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <style>
+
+    </style>
+
+
+    <!-- FLYOUT NAV -->
+    <div id="flyoutNav" class="closed shadow">
+        <a id="flyoutNavTrigger">
+            <i class="fa fa-chevron-right white alignRight"></i>
+            <br>
+            <br>
+            <span class="rotate2"><b>page Nav</b></span>
+            <br>
+            <br>
+            <br>
+        </a>
+        <div class="clear"></div>
+        <ul class="noBull displayNone" id="flyoutList">
+            <li><a href="#tourDirectorName">Tour Director Name</a></li>
+            <li><a href="#tourDirectorAddress">Address</a></li>
+            <li><a href="#tourDirectorContactInformation">Contact Information</a></li>
+            <li><a href="#tourDirectorTabs">Tour Director Tabs</a></li>
+        </ul>
+    </div>
+
+
+
+    <!-- REMARKS -->
+    <div id="remarks" class="closed shadow">
+        <a id="remarksTrigger2">
+            <!--            <h4 class="alignRight">Remarks</h4>-->
+            <i class="fa fa-chevron-left white alignLeft"></i>
+
+            <br>
+            <br>
+            <span class="rotate"><b>Remarks</b></span>
+            <br>
+            <br>
+            <br>
+        </a>
+
+        <div class="displayNone" id="remarksList">
+            <div class="container">
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <input class="form-control" id="remarkType">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <textarea class="form-control" id="" placeholder="Enter note"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12 borderBottom">
+                        <button type="submit" class="btn btn-info btn-xs alignRight"><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Add Remark </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container scrollable">
+
+
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <h4 class="alignRight">Guest Notes</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="alignLeft">The 'e' at the end of the guest's name is silent.
+                        <br><i>Elizabeth Bougie, 20-Sept-15</i></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="alignLeft">Handle guest delicately.
+                        <br><i>Elizabeth Bougie, 20-Sept-15</i></p>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <h4 class="alignRight">Reservation Notes</h4>
+                </div>
+            </div>
+
+
+            <ul id="treeview">
+                <li data-expanded="true">
+
+                    <b>GRV-15 | Classic Greek Isles</b>
+                    <ul>
+
+                        <li>
+                            <p>Guest siad something about something.
+                                <br><i>Elizabeth Bougie, 15-Sept-15</i></p>
+                        </li>
+                        <li>
+                            <p>Guest siad something.
+                                <br><i>Elizabeth Bougie, 15-Sept-15</i></p>
+                        </li>
+                        <li>
+                            <p>Guest siad something about something else.
+                                <br><i>Elizabeth Bougie, 15-Sept-15</i></p>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+
+                    <b>ANT-14 | Classic Greek Isles</b>
+                    <ul>
+
+                        <li>
+                            <p>Guest siad something about something.
+                                <br><i>Elizabeth Bougie, 15-Feb-14</i></p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+
+                    <b>GRV-13 | Classic Greek Isles</b>
+                    <ul>
+
+                        <li>
+                            <p>Guest siad something about something.
+                                <br><i>Elizabeth Bougie, 15-Feb-13</i></p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            $("#remarkType").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select Type",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "Guest Note",
+                        value: "1"
+                    },
+                    {
+                        text: "Reservation Note",
+                        value: "2"
+                    },
+                    {
+                        text: "Air Operations Note",
+                        value: "3"
+                    },
+                    {
+                        text: "Ground Operations Note",
+                        value: "3"
+                    },
+                    {
+                        text: "Fulfillment Note",
+                        value: "3"
+                    }
+    ]
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#treeview").kendoTreeView();
+        });
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

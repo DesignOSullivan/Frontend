@@ -1,0 +1,167 @@
+<!-- Contact Information -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <a name="contactInformation"></a>
+            <h3> Contact Information </h3>
+        </div>
+    </div>
+</div>
+<div class="container container-border">
+    <div class="row">
+        <div class="form-group col-md-4 col-xs-8">
+            <label for="phoneNumber">Phone Number</label>
+            <input class="form-control" id="phoneNumber" type="text" placeholder="Phone Number">
+        </div>
+        <div class="form-group col-md-3 col-xs-4">
+            <label for="phoneType">Type</label>
+            <input class="form-control" id="phoneType">
+        </div>
+        <div class="form-group col-md-5">
+            <label for="validCountries">Valid in Country</label>
+            <input class="form-control" id="validCountries">
+        </div>
+    </div>
+    <div class="row borderBottom">
+        <div class="form-group col-md-12">
+            <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Phone Number</i></a>
+        </div>
+    </div>
+    <div class="clear bottom15"></div>
+    <div class="row">
+        <div class="col-md-7">
+            <div class="container pad0">
+                <div class="row">
+                    <div class="form-group col-md-7">
+                        <label for="emailInput">Email Address</label>
+                        <input class="form-control" id="emailInput" type="text" placeholder="Email Address">
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <div class="clear bottom25"></div>
+                        <div class="switch">
+                            <input id="email-promo-toggle" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
+                            <label for="email-promo-toggle"></label>
+                        </div>
+                        <div class="switch-label">
+                            <label for="email-promo-toggle">Email Promotions</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add an Email Address</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="container pad0">
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label for="social">Social</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-skype fa-lg"></i></span>
+                            <input class="form-control" id="skype" type="text" placeholder="(Username)">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <div class="input-group noLabel">
+                            <span class="input-group-addon"><i class="fa fa-whatsapp fa-lg"></i></span>
+                            <input class="form-control" id="whatsapp" type="text" placeholder="(Username)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+        $(document).ready(function () {
+            var countries = [
+                "Albania",
+                "Andorra",
+                "Armenia",
+                "Austria",
+                "Azerbaijan",
+                "Belarus",
+                "Belgium",
+                "Bosnia & Herzegovina",
+                "Bulgaria",
+                "Croatia",
+                "Cyprus",
+                "Czech Republic",
+                "Denmark",
+                "Estonia",
+                "Finland",
+                "France",
+                "Georgia",
+                "Germany",
+                "Greece",
+                "Hungary",
+                "Iceland",
+                "Ireland",
+                "Italy",
+                "Kosovo",
+                "Latvia",
+                "Liechtenstein",
+                "Lithuania",
+                "Luxembourg",
+                "Macedonia",
+                "Malta",
+                "Moldova",
+                "Monaco",
+                "Montenegro",
+                "Netherlands",
+                "Norway",
+                "Poland",
+                "Portugal",
+                "Romania",
+                "Russia",
+                "San Marino",
+                "Serbia",
+                "Slovakia",
+                "Slovenia",
+                "Spain",
+                "Sweden",
+                "Switzerland",
+                "Turkey",
+                "Ukraine",
+                "United Kingdom",
+                "Vatican City"
+            ];
+
+            //create AutoComplete UI component
+            $("#validCountries").kendoComboBox({
+                dataSource: countries,
+                filter: "startswith",
+                placeholder: "Select Country",
+            });
+        });
+        
+        
+        $(document).ready(function() {
+            $("#phoneNumber").kendoMaskedTextBox({
+                mask: "(999) 000-0000"
+            });
+        });
+    </script>
+
+<script>
+    $(document).ready(function() {
+        $("#phoneType").kendoComboBox({
+            dataTextField: "text",
+            dataValueField: "value",
+            placeholder: "Select Type",
+            dataSource: [
+                { text: "Home", value: "1" },
+                { text: "Mobile", value: "2" },
+                { text: "Work", value: "3" },
+            ]
+        });
+    });
+</script>
+

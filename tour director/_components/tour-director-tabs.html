@@ -1,0 +1,421 @@
+<!-- Tabs -->
+<div id="guestTabs">
+    <div class="container pad0">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="clear bottom15">
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 center">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" data-target="#passport-content" id="passportTab">Passport</a></li>
+                    <li><a data-toggle="tab" data-target="#emergency-content" id="emergencyTab">Emergency</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script>
+    $('#passportTab').click(function () {
+        $('#bottomSpace').css('margin-bottom', 220);
+    });
+
+    $('#healthTab, #sigTab, #airTab, #emergencyTab, #travelerTab').click(function () {
+        $('#bottomSpace').css('margin-bottom', 520);
+    });
+</script>
+
+
+
+<!-- Tab Content-->
+<div id="guestTabContent" class="tab-content container container-border">
+
+    <!-- Passport Tab -->
+    <div id="passport-content" class="tab-pane fade in active">
+        <div class="container pad0">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="container-fluid pad0">
+                        <div class="row">
+                            <div class="form-group col-md-8 col-xs-8">
+                                <i>As it appears on your passport</i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="container-fluid pad0">
+                        <div class="row">
+                            <div class="form-group col-md-6 col-xs-6">
+                                <label for="passportNumber">Passport #</label>
+                                <input class="form-control" id="passportNumber" type="text" placeholder="Passport #">
+                            </div>
+                            <div class="form-group col-md-6 col-xs-6">
+                                <label for="redressNumbe">Redress #</label>
+                                <input class="form-control" id="redressNumber" type="text" placeholder="Redress #">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12 col-xs-12">
+                                <label for="pLastName">Last Name</label>
+                                <input class="form-control" id="pLastName" type="text" placeholder="Last Name">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6 col-xs-6">
+                                <label for="pFirstName">First Name</label>
+                                <input class="form-control" id="pFirstName" type="text" placeholder="First Name">
+                            </div>
+                            <div class="form-group col-md-6 col-xs-6">
+                                <label for="pMiddleName">Middle Name</label>
+                                <input class="form-control" id="pMiddleName" type="text" placeholder="Middle Name">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12 col-xs-12">
+                                <label for="pNationality">Nationality</label>
+                                <input class="form-control" id="pNationality" type="text" placeholder="Nationality">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="pDateOfBirth">Date of Birth</label>
+                                <input id="pDateOfBirth" class="form-control">
+                            </div>
+                            <div class="form-group col-md-6 col-xs-6">
+                                <label for="pSex">Sex</label>
+                                <input id="pSex" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12 col-xs-12">
+                                <label for="pPlaceOfBirth">Place of Birth</label>
+                                <input class="form-control" id="pPlaceOfBirth" placeholder="Place of Birth">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="pDateOfIssue">Date of Issue</label>
+                                <input id="pDateOfIssue" class="form-control">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="pDateOfExpiration">Date of Expiration</label>
+                                <input class="form-control" id="pDateOfExpiration">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12 col-xs-12">
+                                <label for="pIssuingAuthority">Issuing Authority</label>
+                                <input id="pIssuingAuthority" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12 col-xs-12">
+                                <label for="pOccupation">Occupation</label>
+                                <input class="form-control" id="pOccupation" type="text" placeholder="Occupation">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="clear bottom30 hidden-xs"></div>
+                    <div class="switch">
+                        <input id="dualCitizenToggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                        <label for="dualCitizenToggle"></label>
+                    </div>
+                    <div class="switch-label">
+                        <label for="dualCitizenToggle">Dual Citizenship</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Passport Scripts-->
+
+    <script>
+        $("#pDateOfBirth").kendoDatePicker({
+            format: "dd-MMM-yy",
+            start: "century",
+            placeholder: "test",
+            value: "Select Date"
+        });
+
+        $("#pDateOfIssue").kendoDatePicker({
+            format: "dd-MMM-yy",
+            start: "decade",
+            value: "Select Date"
+        });
+
+        $("#pDateOfExpiration").kendoDatePicker({
+            format: "dd-MMM-yy",
+            start: "decade",
+            value: "Select Date"
+        });
+
+        $(document).ready(function () {
+            $("#pSex").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select Sex",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "Male",
+                        value: "1"
+                    },
+                    {
+                        text: "Female",
+                        value: "2"
+                    },
+                    {
+                        text: "Other",
+                        value: "3"
+                    }
+                ]
+            });
+        });
+
+        $(document).ready(function () {
+            $("#pIssuingAuthority").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select Issuing Authority",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "Port of Miami",
+                        value: "1"
+                    },
+                    {
+                        text: "Other Issuing Authority",
+                        value: "1"
+                    },
+                    {
+                        text: "Other Issuing Authority",
+                        value: "2"
+                    }
+                ]
+            });
+        });
+    </script>
+
+
+
+    <!--/end passport scripts-->
+
+
+
+
+
+
+
+
+    <!-- Emergency Tab -->
+    <div id="emergency-content" class="tab-pane fade">
+        <div class="container pad0">
+            <div class="row">
+                <div class="form-group col-md-1">
+                    <label for="eTitle1">Title</label>
+                    <input class="form-control" id="eTitle">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="eFirstName">First Name</label>
+                    <input class="form-control" id="eFirstName" type="text" placeholder="First Name">
+                </div>
+                <div class="form-group col-md-1">
+                    <label for="eMiddleInit">MI</label>
+                    <input class="form-control" id="eMiddleInit" type="text" placeholder="MI">
+                </div>
+
+
+                <div class="form-group col-md-3">
+                    <label for="eLastName">Last Name</label>
+                    <input class="form-control" id="eLastName" type="text" placeholder="Last Name">
+                </div>
+                <div class="form-group col-md-1">
+                    <label for="eSuffix">Suffix</label>
+                    <Input class="form-control" id="eSuffix">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-4 col-xs-8">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input class="form-control" id="phoneNumber" type="text" placeholder="Phone Number">
+                </div>
+                <div class="form-group col-md-2 col-xs-3">
+                    <label for="ePhoneType">Type</label>
+                    <Input class="form-control" id="ePhoneType">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Phone Number</i></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-4 col-xs-11">
+                    <label for="emailInput">Email</label>
+                    <input class="form-control" id="emailInput" type="text" placeholder="Email">
+                </div>
+                <div class="form-group col-md-3">
+                    <div class="clear bottom25"></div>
+                    <div class="switch">
+                        <input id="email-promo-toggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                        <label for="email-promo-toggle"></label>
+                    </div>
+                    <div class="switch-label">
+                        <label for="email-promo-toggle">Email Promotions</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add an Email Address</i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label for="eRelationship">Relationship</label>
+                    <input class="form-control" id="eRelationship">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class=" form-group col-md-12">
+                <div class="clear bottom20"></div>
+                <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Contact</i></a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Emergency Scirpts -->
+
+    <script>
+        $(document).ready(function () {
+            $("#eTitle").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "--",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "Mr.",
+                        value: "1"
+                    },
+                    {
+                        text: "Mrs.",
+                        value: "3"
+                    },
+                    {
+                        text: "Ms.",
+                        value: "3"
+                    },
+                    {
+                        text: "Prof.",
+                        value: "3"
+                    },
+                    {
+                        text: "Dr.",
+                        value: "3"
+                    },
+                ]
+            });
+        });
+
+        $(document).ready(function () {
+            $("#eSuffix").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "--",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "Sr.",
+                        value: "1"
+                    },
+                    {
+                        text: "Jr.",
+                        value: "3"
+                    },
+                    {
+                        text: "III",
+                        value: "3"
+                    },
+                ]
+            });
+        });
+
+        $(document).ready(function () {
+            $("#ePhoneType").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select Type",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "Home",
+                        value: "1"
+                    },
+                    {
+                        text: "Mobile",
+                        value: "3"
+                    },
+                    {
+                        text: "Work",
+                        value: "3"
+                    },
+                    {
+                        text: "Fax",
+                        value: "3"
+                    },
+                ]
+            });
+        });
+
+        $(document).ready(function () {
+            $("#eRelationship").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select Relationship",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "Friend",
+                        value: "1"
+                    },
+                    {
+                        text: "Relative",
+                        value: "3"
+                    },
+                ]
+            });
+        });
+    </script>
+
+    <!-- /End Air Scripts -->
+
+
+
+
+
+<!-- /guestTabContent-->

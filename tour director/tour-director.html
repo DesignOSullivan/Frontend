@@ -504,8 +504,8 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
-                                <a name="agents"></a>
-                                <h3> Upcoming Reservations </h3>
+                                <a name="contacts"></a>
+                                <h3> Contacts </h3>
                             </div>
                         </div>
                     </div>
@@ -517,8 +517,8 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12">
-                                <button type="submit" class="btn btn-info btn-xs bottom0"><i class="fa fa-globe"></i> New Reservation</button>
+                            <div class="form-group col-md-12">
+                                <a data-toggle="modal" data-target="#contactCreateModal" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Contact</i></a>
                             </div>
                         </div>
                     </div>
@@ -533,57 +533,35 @@
                             sortable: "true",
                             columns: [
                                 {
-                                    field: "guests",
-                                    title: "Guests",
-                                    width: "20%",
-                                    template: "<div><b>#: guest1 # (#: trips1 #) </b></div><div><b>#: guest2 # (#: trips2 #)</b></div>"
+                                    field: "name",
+                                    title: "Name",
+                                    template: "<b> #: name # </b>",
                                 },
                                 {
-                                    field: "tour",
-                                    title: "Tour",
-                                    width: "25%",
+                                    field: "phoneNumber",
+                                    title: "Phone Number",
                                     minScreenWidth: "480",
-                                    template: "<div><b> #: tourCode # | #: tour # </b><div><div> #: startDate # to #:endDate# </div><div> #:reservationNumber# </div>"
                                 },
                                 {
-                                    field: "daysOut",
-                                    title: "Days Out",
-                                    width: "10%",
+                                    field: "emailAddress",
+                                    title: "Email Address",
                                     minScreenWidth: "960",
-                                    attributes: {
-                                        style: "text-align: center;"
-                                    },
-                                    headerAttributes: {
-                                        style: "text-align: center;"
-                                    }
 
                                 },
                                 {
-                                    field: "status",
-                                    title: "Status",
-                                    width: "10%",
+                                    field: "jobTitle",
+                                    title: "Job Title",
                                     minScreenWidth: "960",
                                 },
                                 {
-                                    field: "alert",
-                                    title: "Alert",
+                                    field: "department",
+                                    title: "Department",
                                     minScreenWidth: "480",
-                                    width: 50,
                                     encoded: false,
-                                    template: "<i class='fa fa-warning'></i>",
-
-                                    headerAttributes: {
-                                        style: "text-align: center;"
-                                    },
-                                    attributes: {
-                                        style: "text-align: center; color: orange",
-
-
-                                    },
                                 },
                                 {
-                                    command: ["Information Request"],
-                                    width: 170,
+                                    command: ["edit", { name: "destroy", text: "Remove" }],
+                                    width: 185,
                                     attributes: {
                                         style: "text-align: right;"
                                     },
@@ -591,18 +569,11 @@
                             ],
                             dataSource: [
                                 {
-                                    guest1: "Mr. Daniel O'Sullivan",
-                                    trips1: "0",
-                                    guest2: "Mrs. Catherine O'Sullivan",
-                                    trips2: "0",
-                                    tourCode: "CSR-16",
-                                    tour: "Costa Rica's Natural Heritage",
-                                    startDate: "08-Feb",
-                                    endDate: "17-feb-16",
-                                    reservationNumber: "R-634554",
-                                    daysOut: 115,
-                                    status: "Confirmed",
-                                    agent: "Matt McCourry",
+                                    name: "Mrs. Autumn Silk",
+                                    phoneNumber: "843-555-7654",
+                                    emailAddress: "Autumn@groundops.com",
+                                    jobTitle: "Employee Liaison",
+                                    department: "Ground Operations",
                                 },
 
                             ]
@@ -612,6 +583,244 @@
 
 
                 </div>
+                
+                <!-- CREATE CONTACT MODAL -->
+                <div class="modal fade dark-modal" id="contactCreateModal" tabindex="-1" role="dialog" aria-labelledby="myModalInfo">
+
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class=" modal-header">
+                                <div class="container">
+                                    <div class="row">
+
+                                        <div class="col-md-3 col-xs-6 borderRight">
+                                            <h3>Create<br> Contact</h3>
+                                        </div>
+
+                                        <div class="col-md-8 col-xs-4">
+                                            <div class="clear bottom30"></div>
+                                            <label>Mrs. Autumn Silk</label>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="form-group col-md-2">
+                                            <label for="title">Title</label>
+                                            <input class="form-control" id="title" placeholder="(--)">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="firstName">First Name</label>
+                                            <input class="form-control" id="firstName" type="text" placeholder="First Name">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="lastName">Last Name</label>
+                                            <input class="form-control" id="lastName" type="text" placeholder="Last Name">
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label for="suffix">Suffix</label>
+                                            <input class="form-control" id="suffix" placeholder="(--)">
+                                        </div>
+                                    </div>
+
+
+
+                                    <h3>Contatct Information</h3>
+                                    <hr>
+
+                                    <div class="row">
+                                        <div class="form-group col-md-6 col-xs-8">
+                                            <label for="contactPhoneNumber">Phone Number</label>
+                                            <input class="form-control" id="contactPhoneNumber" placeholder="Phone Number">
+                                        </div>
+                                        <div class="form-group col-md-4 col-xs-4">
+                                            <label for="contactPhoneType">Type</label>
+                                            <input class="form-control" id="contactPhoneType">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-12">
+                                            <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Phone Number</i></a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label for="emailInput">Email Address</label>
+                                            <input class="form-control" id="emailInput" type="text" placeholder="(Email Address)">
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-12">
+                                            <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add an Email Address</i></a>
+                                        </div>
+                                    </div>
+
+
+<h3>Description</h3>
+                                    <hr>
+
+                                    <div class="row">
+                                        <div class="form-group col-md-6 col-xs-8">
+                                            <label for="contactJobTitle">Job Title</label>
+                                            <input class="form-control" id="contactJobTitle" placeholder="Job Title">
+                                        </div>
+                                    </div>
+                                     <div class="row">
+                                        <div class="form-group col-md-6 col-xs-8">
+                                            <label for="contactDepartment">OUI Department</label>
+                                            <input class="form-control" id="contactDepartment" placeholder="Phone Number">
+                                        </div>
+                                    </div>
+
+                                        
+
+
+
+
+                                    <!-- MODAL FOOTER -->
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-sm btn-default " data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-sm btn-info" id="createAgent"><i class="fa fa-check-circle-o"></i> Submit </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AGENT SCRIPTS -->
+                <script>
+
+                    //CONTACT TITLE
+                    $(document).ready(function () {
+                        $("#title").kendoComboBox({
+                            dataTextField: "text",
+                            dataValueField: "value",
+                            filter: "startswith",
+                            suggest: "true",
+                            dataSource: [
+                                {
+                                    text: "Mr.",
+                                    value: "1"
+                                },
+                                {
+                                    text: "Mrs.",
+                                    value: "2"
+                                },
+                                {
+                                    text: "Ms.",
+                                    value: "3"
+                                },
+                                {
+                                    text: "Prof.",
+                                    value: "3"
+                                },
+                                {
+                                    text: "Dr.",
+                                    value: "3"
+                                }
+                            ]
+                        });
+                    });
+
+                    //CONTACT SUFFIX
+                    $(document).ready(function () {
+                        $("#suffix").kendoComboBox({
+                            dataTextField: "text",
+                            dataValueField: "value",
+                            filter: "startswith",
+                            suggest: "true",
+                            dataSource: [
+                                {
+                                    text: "",
+                                    value: "1"
+                                },
+                                {
+                                    text: "Sr.",
+                                    value: "2"
+                                },
+                                {
+                                    text: "Jr.",
+                                    value: "3"
+                                },
+                                {
+                                    text: "III",
+                                    value: "4"
+                                },
+                            ]
+                        });
+                    });
+
+
+                    //CONTACT PHONE NUMBER MASK
+                    $(document).ready(function () {
+                        $("#contactPhoneNumber").kendoMaskedTextBox({
+                            mask: "(999) 000-0000"
+                        });
+                    });
+
+                    //CONTACT PHONE TYPE
+                    $(document).ready(function () {
+                        $("#contactPhoneType").kendoComboBox({
+                            dataTextField: "text",
+                            dataValueField: "value",
+                            placeholder: "Select Type",
+                            dataSource: [
+                                {
+                                    text: "Home",
+                                    value: "1"
+                                },
+                                {
+                                    text: "Mobile",
+                                    value: "2"
+                                },
+                                {
+                                    text: "Work",
+                                    value: "3"
+                                },
+                                {
+                                    text: "Fax",
+                                    value: "3"
+                                },
+                            ]
+                        });
+                    });
+                    
+                    
+                    //CONTACT OUI DEPARTMENT
+                    $(document).ready(function () {
+                        $("#contactDepartment").kendoComboBox({
+                            dataTextField: "text",
+                            dataValueField: "value",
+                            placeholder: "Select Department",
+                            dataSource: [
+                                {
+                                    text: "Accounting",
+                                    value: "1"
+                                },
+                                {
+                                    text: "Air Operations",
+                                    value: "1"
+                                },
+                                {
+                                    text: "Fulfillment",
+                                    value: "2"
+                                },
+                                {
+                                    text: "Ground Operations",
+                                    value: "2"
+                                },
+                            ]
+                        });
+                    });
+                </script>
+
+
+
 
                 <!-- /END GROUND OPERATOR TAB -->
 
@@ -622,13 +831,42 @@
                     <div class="container container-border">
                         <div class="row">
                             <div class="col-md-12">
-                                <h1>Tour Log Tab Content</h1>
+                                <ul id="panelbar"></ul>
                             </div>
                         </div>
                     </div>
-
-
                 </div>
+                
+                <script>
+                    $("#panelbar").kendoPanelBar({
+                        dataSource: [
+                            {
+                                text: "Item 1",
+                                cssClass: "accordianTitle",                            // Add custom CSS class to the item, optional, added 2012 Q3 SP1.
+                                url: "http://www.telerik.com/"                  // link URL if navigation is needed (optional)
+                            },
+                            {
+                                text: "<b>BZZ | Africa's Wildlife</b>",
+                                encoded: false,                                 // Allows use of HTML for item text
+                                items: [{                                       // Sub item collection.
+                                    text: "Sub Item 1"
+                                },
+                                        {
+                                            text: "Sub Item 2"
+                                        }]
+                            },
+                            {
+                                text: "Item 3",
+                                contentUrl: "http://osullivan.design"               // content URL to load within an item
+                            },
+                            {
+                                text: "Item 5",
+                                // item image sprite CSS class, optional
+                                spriteCssClass: "imageClass3"
+                            }
+                        ]
+                    });
+                </script>
                 <!-- /END TOUR LOG TAB -->
 
 

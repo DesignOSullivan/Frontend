@@ -58,7 +58,7 @@ textarea{min-height: 150px;}
 .btn{box-shadow: 0px 1px 2px rgba(43, 59, 93, .29);}
 .btn-default{box-shadow: none;}
 
-
+.accordianTitle{color:red; margin:100px;}
 
 /*Tab Styling*/
 .pageHeader{z-index: 1;}

@@ -60,7 +60,7 @@ input.cmn-active-toggle-round + label:before {
 /*FOREGROUND CIRCLE*/
 input.cmn-active-toggle-round + label:after {
     width: 63px;
-    background-color: #666;
+    background-color: #ccc;
     border-radius: 5%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     transition: all .6s ease;

@@ -1,27 +1,103 @@
+
+
 <div class="container">
-<div class="row">
-<div class="col-md-12">
-<a name="directorInformation"></a>
-<h3> Travel Information </h3>
-</div>
-</div>
+    <div class="row">
+        <div class="col-md-12">
+            <a name="directorInformation"></a>
+            <h3> Travel Information </h3>
+        </div>
+    </div>
 </div>
 <div class="container container-border">
-<div class="row">
-<div class="form-group col-md-4">
-<label for="travelInformationCountries">Departure Country</label>
-<input class="form-control" id="travelInformationCountries">
-</div>
-<div class="form-group col-md-4">
-<label for="travelInformationCities">Departure City</label>
-<input class="form-control" id="travelInformationCities">
-</div>
-</div>
+    <div class="row">
+        <div class="form-group col-md-8">
+            <label for="qualifiedTours">Qualified Tours</label>
+            <input class="form-control" id="qualifiedTours">
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-4">
+            <label for="travelInformationCountries">Departure Country</label>
+            <input class="form-control" id="travelInformationCountries">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="travelInformationCities">Departure City</label>
+            <input class="form-control" id="travelInformationCities">
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="form-group col-md-2">
+            <label for="unavailableDates1">Unavailable Date Range</label>
+            <input class="form-control" id="unavailableDates1">
+        </div>
+        <div class="noLabel form-group col-md-2">
+            <input class="form-control" id="unavailableDates2">
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-12">
+            <a href="#add-dage-range" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Date Range</i></a>
+        </div>
+    </div>
 </div>
 
+    
+    <script>
+        
+
+            $("#unavailableDates1").kendoDatePicker({
+            format: "dd-MMM-yy",
+            start: "century",
+            value: "Select Start Date"
+        });
+        
+            $("#unavailableDates2").kendoDatePicker({
+            format: "dd-MMM-yy",
+            start: "century",
+            value: "Select End Date"
+        });
+        
+        $(document).ready(function () {
+            $("#qualifiedTours").kendoMultiSelect({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select Qualified Tours",
+                filter: "startswith",
+                suggest: "true",
+                autoClose: false,
+                dataSource: [
+                    {
+                        text: "ABP-15 | European Tapestry",
+                        value: "1"
+                    },
+                    {
+                        text: "ADR-15 | Pearls of Dalmatia",
+                        value: "3"
+                    },
+                    {
+                        text: "ANT-15 | Antarctica Explorer",
+                        value: "3"
+                    },
+                    {
+                        text: "BHU-15 | Himalayan Kingdoms: Nepal & Bhutan",
+                        value: "3"
+                    },
+                    
+                ]
+            });
+        });
+
+        
+        
+    </script>
+    
 <script>
-$(document).ready(function () {
-var countries = [
+ 
+
+
+    $(document).ready(function () {
+        var countries = [
 "Albania",
 "Andorra",
 "Armenia",
@@ -74,11 +150,12 @@ var countries = [
 "Vatican City"
 ];
 
-//create AutoComplete UI component
-$("#travelInformationCountries").kendoComboBox({
-dataSource: countries,
-filter: "startswith",
-placeholder: "Select Country",
-});
-});
+        //create AutoComplete UI component
+        $("#travelInformationCountries").kendoComboBox({
+            dataSource: countries,
+            filter: "startswith",
+            placeholder: "Select Country",
+        });
+    });
 </script>
+

@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OUI</title>
+
+
+	<link rel="stylesheet" href="../kendoui/styles/kendo.common-bootstrap.min.css">
+	<link rel="stylesheet" href="../kendoui/styles/kendo.bootstrap.min.css">
+
+		
+	<script src="../js/jquery.min.js"></script> 
+	<script src="../js/bootstrap.min.js"></script> 
+	<script src="../js/bootstrap-toggle.min.js"></script> 
+    <script src="../kendoui/js/kendo.all.min.js"></script>
+   
+	<link href="../css/bootstrap.css" rel="stylesheet">
+	<link href="../css/toggle-me-softly.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	
+	<!-- <link href="../css/font-awesome.css" rel="stylesheet"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+	
+	
+   <!-- grab all the component modules we need for this page -->
+	<script> 
+		$(function(){
+		  $("#includeTourInfo").load("_components/tour-info.html"); 
+		  $("#includeInventoryRules").load("_components/inventory-rules.html"); 
+		  $("#includeBookingCancelRules").load("_components/booking-cancellation-rules.html"); 
+		  $("#includeAuxiliaryRules").load("_components/auxiliary-rules.html"); 
+		  $("#includeFlightInfo").load("_components/flight-info.html"); 
+		  $("#includeItinerary").load("_components/itinerary.html"); 
+		  $("#includeInternalAir").load("_components/internal-air.html"); 
+		  $("#includeTourDirector").load("_components/tour-director.html"); 
+		  $("#includeTourPricing").load("_components/tour-pricing.html"); 
+		  $("#includeCatalogPricing").load("_components/catalog-pricing.html"); 
+		  $("#includeZoneFares").load("_components/zone-fares.html"); 
+		});
+		
+		
+		$(function() {
+			  $('a[href*=#]:not([href=#])').click(function() {
+				if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
+				  var target = $(this.hash);
+				  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				  if (target.length) {
+					$('html,body').animate({
+					  scrollTop: target.offset().top + (-150)
+					}, 1000);
+					return false;
+				  }
+				}
+			  });
+			});
+
+		
+    </script> 
+	
+</head>
+<body>
+
+<div class="clear bottom15">
+</div>
+	<!-- Itinerary -->
+    <div class="container">
+		<div class="row">
+			<div class="col-md-12" style="margin-bottom: -45px;">
+				<h3>
+					<a name="itinerarySection"></a>
+					Itinerary
+				</h3>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12 center">
+				<ul class="nav nav-tabs alt-color" role="tablist">
+					<li role="presentation" class="active"><a href="#base-tour-content" role="tab" data-toggle="tab">Pattern A</a></li>
+					<li role="presentation"><a href="#add-pattern-itinerary" class="green"><i class="fa fa-plus-circle"></i></a></li>
+				</ul>
+			</div>
+		</div>
+		
+	</div>		
+	<div class="container container-border">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="container pad0">
+					<div class="row">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="row">
+			<div class="col-md-12 table-responsive">
+				<table class="table" id="itinerary-table">
+					<tr>
+						<th>Leg</th>
+						<th>Check-In Day</th>
+						<th># of Nights</th>
+						<th>Check-Out Day</th>
+						<th colspan="2">Accommodation Name</th>
+						<th>City</th>
+						<th>Country</th>
+						<th>OUI Book</th>
+					</tr>
+					<tr class="itinerary-row">
+						<td><input class="form-control" placeholder="Leg" size="1"></input></td>
+						<td><input class="form-control" placeholder="Check-In" size="1"></input></td>
+						<td><input class="form-control" placeholder="Nights" size="1"></input></td>
+						<td><input class="form-control" placeholder="Check-Out" size="1"></input></td>
+						<td><input class="form-control" id="legAccom" type="text"></td>
+						<td><a data-toggle="modal" data-target="#accomModal" class="btn btn-success btn-sm"><i class="fa fa-search"></i> Search </a></td>
+						<td><input class="form-control" id="legCity" type="text"></td>
+						<td><input class="form-control" id="legCountry" type="text"></td>
+						<td valign="middle">
+							<div class="clear bottom5"></div>
+							<div class="switch">
+								<input id="oui-book" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
+								<label for="oui-book"></label>
+							</div>
+						</td>
+					</tr>
+				</table>
+				<a id="addItineraryLeg" class="textCenter green"><i class="fa fa-plus-circle"></i> <em>Add a Leg</em></a>
+				<div class="clear bottom15"></div>
+				<div class="center">
+					<a class="textCenter"><i class="fa fa-list"></i>  View Direct Flow</a>
+				</div>
+				<hr />
+			</div>
+			<div class="col-md-4">
+				<div class="form-group">
+					<label for="legPreNightAccom">In Country Pre-Night Accommodation</label>
+					<input class="form-control" id="legPreNightAccom" type="text" placeholder="Accommodation Name">
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="form-group">
+					<label for="legPostNightAccom">In Country Post-Night Accommodation</label>
+					<input class="form-control" id="legPostNightAccom" type="text" placeholder="Accommodation Name">
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	
+<!-- Itin Accom Modals     -->
+<div class="modal fade" id="accomModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document" style="width: 100%; margin: 23% 10px;">
+		<div class="modal-content">
+		  <div class="modal-body">
+			<div class="container">
+				<div id="accomModal1">
+					<div class="row">
+						<div class="col-md-12 bottom30"> 
+							<h5>Accommodations Search Results</h5>
+							<h3 class="textCenter">No results found.</h3>
+						</div>
+					</div>	
+					<div class="row">
+						<div class="col-md-2"></div>
+						<div class="col-md-4 textCenter"> 
+							<a href="" id="accomModal2-link" class="green"><i class="fa fa-plus-circle"></i> Add New Accommodation</a>
+						</div>
+						<div class="col-md-4 textCenter"> 
+							<a href="" data-dismiss="modal"><i class="fa fa-search"></i> Search Again</a>
+						</div>
+						<div class="col-md-2"></div>
+					</div>
+				</div>
+				<!-- -->
+				<div class="displayNone" id="accomModal2">
+					<div class="row">
+						<div class="col-md-12 textCenter bottom15"> 
+							<h3>Does this accommodation have a ground operator?</h3>
+						</div>
+						<div class="col-md-3">
+						</div>
+						<div class="col-md-3 textCenter">
+							<a href="" id="accomModal-addAccom-link" class="btn btn-default btn-sm" style="width: 33%;">No</a>
+						</div>
+						<div class="col-md-3 textCenter">
+							<a href="" id="accomModal-searchOperator-link" class="btn btn-success btn-sm" style="width: 33%;">Yes</a>
+						</div>
+						<div class="col-md-3">
+						</div>
+					</div>	
+				</div>
+				<!-- -->
+				<div class="displayNone" id="accomModal-searchOperator">
+					<div class="row">
+						<div class="col-md-12 table-responsive"> 
+							<h5>Operator Search Results</h5>
+							<div class="clear bottom30"></div>
+							<table class="table table-striped">
+								<tr>
+									<th>Ground Operator Name</th>
+									<th>Phone #</th>
+									<th>Primary Street Address</th>
+									<th>City</th>
+									<th>Country</th>
+								</tr>
+								<tr>
+									<td><a href="" class="green"><i class="fa fa-plus-circle"></i> Irish Adventures</a></td>
+									<td>353 87 419 0318</td>
+									<td>225 Green Street</td>
+									<td>Dublin</td>
+									<td>Ireland</td>
+								</tr>
+								<tr>
+									<td><a href="" class="green"><i class="fa fa-plus-circle"></i> Go Ireland</a></td>
+									<td>353 87 514 9543</td>
+									<td>8893 Farley Court</td>
+									<td>Cork</td>
+									<td>Ireland</td>
+								</tr>
+							</table>
+							<div class="clear bottom15"></div>
+							<div class="textCenter">
+								<a href="" id="accomModal-addOperator-link" class="green"><i class="fa fa-plus-circle"></i> Add New Ground Operator</a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href=""><i class="fa fa-search"></i> Search Again</a>
+							</div>
+						</div>
+					</div>	
+				</div>
+				<!-- -->
+				<div class="displayNone" id="accomModal-addOperator">
+					<div class="row">
+						<div class="col-md-5"> 
+							<h5>Add New Ground Operator</h5>
+							<div class="clear bottom15">
+							</div>
+							<div class="container-fluid pad0">
+								<div class="row">
+									<div class="form-group col-md-12">
+										<label for="exampleInputEmail1">Ground Operator Name</label>
+										<input class="form-control" type="text" placeholder="Ground Operator Name">
+									</div>
+									
+									<div class="form-group col-md-6">
+										<label for="">Phone</label>
+										<input class="form-control" type="text" placeholder="Phone">
+									</div>
+									<div class="form-group col-md-4">
+										<label for="title1">Type</label>
+										<select class="form-control" id="">
+											<option>Landline</option>
+											<option>Mobile</option>
+										</select>
+									</div>
+									<div class="form-group col-md-2">
+										<label for="title1">Ext.</label>
+										<input class="form-control" type="text" placeholder="Ext">
+									</div>
+									<div class="col-md-12 bottom15">
+										<em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add a Phone Number</a></em>
+									</div>
+									
+									<div class="form-group col-md-6">
+										<label for="">Email Address</label>
+										<input class="form-control" type="text" placeholder="Email Address">
+									</div>
+									<div class="col-md-12 bottom15">
+										<em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add an Email Address</a></em>
+									</div>
+									
+									<div class="col-md-12">
+										<div class="form-group col-md-8 pad0">
+											<div class="input-group">
+												<span class="input-group-addon">Skype.com/</span>
+												<input class="form-control" type="text" placeholder="User Name (Optional)">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-1">
+						</div>
+						<div class="col-md-6">
+							<div class="clear bottom45" style="margin-bottom: 51px;"></div>
+							<div class="container-fluid pad0">
+									<div class="row">
+									
+										<div class="form-group col-md-12">
+											<label for="">Attention</label>
+											<input class="form-control" type="text" placeholder="Attention (Optional)">
+										</div>
+										<div class="form-group col-md-6">
+											<label for="">Address</label>
+											<input class="form-control" type="text" placeholder="Address">
+										</div>
+										<div class="form-group col-md-6">
+											<label for="">Address 2</label>
+											<input class="form-control" type="text" placeholder="Address cont'd (Optional)">
+										</div>
+										
+										<div class="form-group col-md-4">
+											<label for="">Postal Code</label>
+											<input class="form-control" type="text" placeholder="Postal Code">
+										</div>
+										<div class="form-group col-md-8">
+											<label for="">City</label>
+											<input class="form-control" type="text" placeholder="City">
+										</div>
+										<div class="form-group col-md-6">
+											<label for="">State / Province</label>
+											<input class="form-control" type="text" id="addGroundOperatorState">
+										</div>
+										<div class="form-group col-md-6">
+											<label for="">Country</label>
+											<input class="form-control" id="addGroundOperatorCountry" type="text">
+										</div>
+										<div class="col-md-12 bottom15">
+											<div class="form-group">
+												<div class="switch">
+													<input id="addGroundOperator-fedex-toggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
+													<label for="addGroundOperator-fedex-toggle"></label>
+												</div>
+												<div class="switch-label">
+													<label for="addGroundOperator-fedex-toggle">Allows FedEx Delivery</label>
+												</div>  
+												<div class="clear bottom15">
+												</div>
+											</div>
+										</div>
+									<div class="col-md-12">
+										<em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add an Address</a></em>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
+						
+						<div class="col-md-12">
+						<hr />
+						</div>
+						
+						<div class="col-md-12"> 
+							<h5>Create Contact</h5>
+							<div class="clear bottom15"></div>
+							
+							<div class="container-fluid pad0">
+								<div class="row">
+									<div class="form-group col-md-1">
+										<label for="title1">Title</label>
+										<select class="form-control" id="title">
+											<option>Mr.</option>
+											<option>Mrs.</option>
+											<option>Ms.</option>
+										</select>
+									</div>
+									<div class="form-group col-md-3">
+										<label for="exampleInputEmail1">First Name</label>
+										<input class="form-control" id="tourName" type="text" placeholder="First Name">
+									</div>
+									<div class="form-group col-md-3">
+										<label for="exampleInputEmail1">Last Name</label>
+										<input class="form-control" id="tourName" type="text" placeholder="Last Name">
+									</div>
+									<div class="form-group col-md-1">
+										<label for="title1">Suffix</label>
+										<select class="form-control" id="title1">
+											<option>Jr.</option>
+											<option>Sr.</option>
+										</select>
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col-md-3">
+										<label for="">Phone</label>
+										<input class="form-control" type="text" placeholder="Phone">
+									</div>
+									<div class="form-group col-md-2">
+										<label for="title1">Type</label>
+										<select class="form-control" id="">
+											<option>Landline</option>
+											<option>Mobile</option>
+										</select>
+									</div>
+									<div class="form-group col-md-1">
+										<label for="title1">Ext.</label>
+										<input class="form-control" type="text" placeholder="Ext">
+									</div>
+									<div class="col-md-12 bottom15">
+										<em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add a Phone Number</a></em>
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col-md-4">
+										<label for="">Email Address</label>
+										<input class="form-control" type="text" placeholder="Email Address">
+									</div>
+									<div class="col-md-12 bottom15">
+										<em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add an Email Address</a></em>
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col-md-4">
+										<label for="">Contact Job Title</label>
+										<input class="form-control" type="text" placeholder="Contact Job Title">
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col-md-4">
+										<label for="title1">OUI Department</label>
+										<select class="form-control" id="">
+											<option>Dept A</option>
+											<option>Dept B</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>	
+					<div class="clear bottom30"></div>
+					<div class="row">
+						<div class="col-md-6">
+							<button type="button" class="btn btn-sm btn-default">Cancel</button>
+						</div>
+						<div class="col-md-6 textRight digits">
+							<button type="button" class="btn btn-sm btn-success">Create Operator</button>
+						</div>
+					</div>
+			
+				</div>
+				<!-- -->
+				<div class="displayNone" id="accomModal-searchAccom">
+					<div class="row">
+						<div class="col-md-12 table-responsive"> 
+							<h5>Hotel Search Results</h5>
+							<div class="clear bottom30"></div>
+							<table class="table table-striped">
+								<tr>
+									<th>Accommodation Name</th>
+									<th>Phone #</th>
+									<th>Primary Street Address</th>
+									<th>City</th>
+									<th>Country</th>
+								</tr>
+								<tr>
+									<td><i class="fa fa-plus-circle"></i> The Dublin Inn</td>
+									<td>353 01 874 9202</td>
+									<td>777 Irish Road</td>
+									<td>Dublin</td>
+									<td>Ireland</td>
+								</tr>
+								<tr>
+									<td><i class="fa fa-plus-circle"></i> Cork Bed and Breakfast</td>
+									<td>353 71 98 2222</td>
+									<td>9801 Celtic Way</td>
+									<td>Cork</td>
+									<td>Ireland</td>
+								</tr>
+							</table>
+							<div class="clear bottom15"></div>
+							<div class="textCenter">
+								<a href="" id="accomModal-addOperator-link" class="green"><i class="fa fa-plus-circle"></i> Add New Accommodation</a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href=""><i class="fa fa-search"></i> Search Again (not functional)</a>
+							</div>
+						</div>
+					</div>	
+				</div>
+				<!-- -->
+				<div class="displayNone" id="accomModal-addAccom">
+					<div class="row bottom15">
+						<div class="col-md-12"> 
+							<h5>Add New Accommodation</h5>
+						</div>
+					</div>
+					<div class="row bottom30">
+						<div class="col-md-2">
+							<label for="title1" style="margin-top: 5px;">Accommodation Type </label>
+						</div>
+						<div class="col-md-4">
+							<select class="form-control" id="accomModal-addHotelCruise-trigger">
+								<option value="accomModal-addHotel" selected="selected">Hotel</option>
+								<option value="accomModal-addCruise">Cruise</option>
+							</select>
+						</div>
+					</div>
+					<div id="accomModal-addCruise">
+						<div class="row">
+							<div class="col-md-6 borderRight">
+								<div class="container-fluid pad0">
+									<div class="row">
+										<div class="form-group col-md-12">
+											<label for="exampleInputEmail1">Ship Name</label>
+											<input class="form-control" type="text" placeholder="Ship Name">
+										</div>
+										<div class="form-group col-md-3">
+											<label for="">Year Built</label>
+											<input class="form-control" type="text" placeholder="YYYY">
+										</div>
+										<div class="form-group col-md-3">
+											<label for="">Refurbished</label>
+											<input class="form-control" type="text" placeholder="YYYY">
+										</div>
+										<div class="form-group col-md-3">
+											<label for="">Size (ft.)</label>
+											<input class="form-control" type="text" placeholder="--">
+										</div>
+										<div class="form-group col-md-3">
+											<label for="">No. of Cabins</label>
+											<input class="form-control" type="text" placeholder="--">
+										</div>
+										
+										<div class="form-group col-md-6">
+											<label for="">Address</label>
+											<input class="form-control" type="text" placeholder="Address">
+										</div>
+										<div class="form-group col-md-6">
+											<label for="">Address 2</label>
+											<input class="form-control" type="text" placeholder="Address cont'd (Optional)">
+										</div>
+										
+										<div class="form-group col-md-4">
+											<label for="">Postal Code</label>
+											<input class="form-control" type="text" placeholder="Postal Code">
+										</div>
+										<div class="form-group col-md-8">
+											<label for="">City</label>
+											<input class="form-control" type="text" placeholder="City">
+										</div>
+										<div class="form-group col-md-6">
+											<label for="">State / Province</label>
+											<input class="form-control" type="text" id="addShipState">
+										</div>
+										<div class="form-group col-md-6">
+											<label for="">Country</label>
+											<input class="form-control" id="addShipCountry" type="text">
+										</div>
+										<div class="col-md-12 bottom15">
+											<em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add an Address</a></em>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group col-md-6">
+											<label for="">Phone</label>
+											<input class="form-control" type="text" placeholder="Phone">
+										</div>
+										<div class="form-group col-md-4">
+											<label for="title1">Type</label>
+											<select class="form-control" id="">
+												<option>Landline</option>
+												<option>Mobile</option>
+											</select>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12 bottom15">
+											<em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add a Phone Number</a></em>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group col-md-6">
+											<label for="">Email Address</label>
+											<input class="form-control" type="text" placeholder="Email Address">
+										</div>
+										<div class="col-md-12 bottom15">
+											<em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add an Email Address</a></em>
+										</div>
+									</div>
+									
+									<div class="row">
+										<div class="col-md-12">
+											<div class="form-group col-md-8 pad0">
+												<label>Website</label>
+												<input class="form-control" type="text" placeholder="http://www.example.com">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6"> 
+								<div class="container-fluid pad0">
+									<div class="row">
+										<div class="form-group col-md-6">
+											<label for="">Cabin Name</label>
+											<input class="form-control" type="text" placeholder="Cabin Name">
+										</div>
+									</div>
+									<div class="row bottom15">
+										<div class="col-md-12">
+											<label>Room Types</label>
+										</div>
+										<div class="col-md-3">
+											<div class="input-group">
+												<span class="input-group-addon">Single</span>
+												<input class="form-control textRight digits" type="text" placeholder="0">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="input-group">
+												<span class="input-group-addon">Twin</span>
+												<input class="form-control textRight digits" type="text" placeholder="0">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="input-group">
+												<span class="input-group-addon">Double</span>
+												<input class="form-control textRight digits" type="text" placeholder="0">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="input-group">
+												<span class="input-group-addon">Queen</span>
+												<input class="form-control textRight digits" type="text" placeholder="0">
+											</div>
+										</div>
+									</div>
+									
+									<div class="row">
+										<div class="col-md-12 form-group">
+											<label for="">Cabin Description</label>
+											<textarea class="form-control" placeholder="Description" style="height: 100px;"></textarea>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>	
+						<div class="clear bottom30"></div>
+						<div class="row">
+							<div class="col-md-6">
+								<button type="button" class="btn btn-sm btn-default">Cancel</button>
+							</div>
+							<div class="col-md-6 textRight digits">
+								<button type="button" class="btn btn-sm btn-success">Create Cruise</button>
+							</div>
+						</div>
+					</div>
+					<div id="accomModal-addHotel">
+						<div class="row">
+							<div class="col-md-6 borderRight">
+								<div class="container-fluid pad0">
+									<div class="row">
+										<div class="form-group col-md-12">
+											<label for="exampleInputEmail1">Hotel Name</label>
+											<input class="form-control" type="text" placeholder="Hotel Name">
+										</div>
+										<div class="form-group col-md-6">
+											<label for="">Address</label>
+											<input class="form-control" type="text" placeholder="Address">
+										</div>
+										<div class="form-group col-md-6">
+											<label for="">Address 2</label>
+											<input class="form-control" type="text" placeholder="Address cont'd (Optional)">
+										</div>
+										
+										<div class="form-group col-md-4">
+											<label for="">Postal Code</label>
+											<input class="form-control" type="text" placeholder="Postal Code">
+										</div>
+										<div class="form-group col-md-8">
+											<label for="">City</label>
+											<input class="form-control" type="text" placeholder="City">
+										</div>
+										<div class="form-group col-md-6">
+											<label for="">State / Province</label>
+											<input class="form-control" type="text" id="addHotelState">
+										</div>
+										<div class="form-group col-md-6">
+											<label for="">Country</label>
+											<input class="form-control" type="text" id="addHotelCountry" >
+										</div>
+										<div class="col-md-12 bottom15">
+											<em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add an Address</a></em>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group col-md-6">
+											<label for="">Phone</label>
+											<input class="form-control" type="text" placeholder="Phone">
+										</div>
+										<div class="form-group col-md-4">
+											<label for="title1">Type</label>
+											<select class="form-control" id="">
+												<option>Landline</option>
+												<option>Mobile</option>
+											</select>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12 bottom15">
+											<em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add a Phone Number</a></em>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group col-md-6">
+											<label for="">Email Address</label>
+											<input class="form-control" type="text" placeholder="Email Address">
+										</div>
+										<div class="col-md-12 bottom15">
+											<em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add an Email Address</a></em>
+										</div>
+									</div>
+									
+									<div class="row">
+										<div class="col-md-12">
+											<div class="form-group col-md-8 pad0">
+												<label>Website</label>
+												<input class="form-control" type="text" placeholder="http://www.example.com">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6"> 
+								<div class="container-fluid pad0">
+									<div class="row bottom15">
+										<div class="col-md-12">
+											<label>Room Types</label>
+										</div>
+										<div class="col-md-3">
+											<div class="input-group">
+												<span class="input-group-addon">Single</span>
+												<input class="form-control textRight digits" type="text" placeholder="0">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="input-group">
+												<span class="input-group-addon">Twin</span>
+												<input class="form-control textRight digits" type="text" placeholder="0">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="input-group">
+												<span class="input-group-addon">Double</span>
+												<input class="form-control textRight digits" type="text" placeholder="0">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="input-group">
+												<span class="input-group-addon">Queen</span>
+												<input class="form-control textRight digits" type="text" placeholder="0">
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-3 form-group">
+											<label>Sell Price</label>
+											<div class="clear"></div>
+											<div class="input-group">
+												<span class="input-group-addon">$</span>
+												<input class="form-control textRight digits" type="text" placeholder="0">
+											</div>
+										
+										</div>
+										<div class="col-md-4 form-group">
+											<label>Start Date</label>
+											 <input id="datepickerAddHotelStart" class="form-control"  value="10/10/2015" style="width: 100%" />
+										</div>
+										<div class="col-md-4 form-group">
+											<label>End Date</label>
+											 <input id="datepickerAddHotelEnd" class="form-control"  value="10/10/2015" style="width: 100%" />
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12 bottom15">
+											<em><a href="" class="green"><i class="fa fa-plus-circle"></i> Add a Rate</a></em>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12 form-group">
+											<label for="">Description</label>
+											<textarea class="form-control" placeholder="Description"></textarea>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>	
+						<div class="clear bottom30"></div>
+						<div class="row">
+							<div class="col-md-6">
+								<button type="button" class="btn btn-sm btn-default">Cancel</button>
+							</div>
+							<div class="col-md-6 textRight digits">
+								<button type="button" class="btn btn-sm btn-success">Create Hotel</button>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+				<!-- -->
+			</div>
+		  </div>
+		  <!--<div class="modal-footer">
+			<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+			<button type="button" class="btn btn-sm btn-success">Save changes</button>
+		  </div>-->
+		</div>
+	</div>
+</div>
+<div class="container container-border">
+	<div class="row">
+		<div class="col-md-12">
+			<div id="groundOpGrid"></div>
+		</div>
+	</div>
+</div>
+
+<!-- Agents Grid Scripts-->
+<script>
+
+
+$(document).ready(function () {
+				
+	var sharedDataSource = new kendo.data.DataSource({
+		transport: {
+			read: {
+				url: "https://ouidevapi.azurewebsites.net/api/geo/countries/1/go", 
+				dataType: "json"
+			}
+		}
+	});			
+	
+	$("#groundOpGrid").kendoGrid({
+		selectable: "row",
+		sortable: "true",
+		dataSource: sharedDataSource,
+		
+		
+		columns: [
+			{
+				command: ["Add"], 
+				width: 100
+			},
+			{
+				field: "Name",
+				title: "Ground Operator Name"
+			},
+			{
+				field: "phone",
+				title: "Phone"
+			},
+			{
+				field: "address",
+				title: "Address"
+			},
+			{
+				field: "city",
+				title: "City"
+			},
+			{
+				field: "country",
+				title: "Country"
+			}
+		]
+		
+	});
+	
+	
+});
+			
+</script>
+
+<script>
+$(document).ready(function () {
+				
+				
+			$('#addItineraryLeg').click(function() {
+				$("#itinerary-table tr.itinerary-row:first").clone().appendTo("#itinerary-table");
+			});	
+			
+			
+			var names = [
+				"Daniel O Sullivan",
+				"Gavin Dock",
+				"Joseph Bonanno",
+				"Justin Beckett",
+				"Patrick Nord",
+				"Steve Fleishaker"
+			];
+				
+				
+			var countries = [
+					"United States",
+					"Albania",
+					"Andorra",
+					"Armenia",
+					"Austria",
+					"Azerbaijan",
+					"Belarus",
+					"Belgium",
+					"Bosnia & Herzegovina",
+					"Bulgaria",
+					"Croatia",
+					"Cyprus",
+					"Czech Republic",
+					"Denmark",
+					"Estonia",
+					"Finland",
+					"France",
+					"Ireland"
+				];
+				
+				var cities = [
+					"Cork",
+					"Dublin",
+					"Dublin/Leixlip",
+					"Galway",
+					"Killarney",
+					"Knock",
+					"Shannon",
+					"Sligo",
+					"Waterford"
+				];
+				
+				var accommodations = [
+					"Ashling Hotel Dublin",
+					"Ballsbridge Hotel",
+					"Citywest Hotel",
+					"Clarion Hotel Dublin Liffey Valley",
+					"Galway Bay Hotel",
+					"Harveys Point",
+					"Knightsbrook Hotel & Golf Resort",
+					"Osprey Hotel & Spa",
+					"Redcastle Hotel",
+					"Seafield Golf & Spa Hotel",
+					"Solis Lough Eske Castle",
+					"The Croke Park Hotel",
+					"The Europe Hotel & Resort",
+					"The Gibson Hotel",
+					"The Gresham Hotel"
+				];
+				
+				var states = [
+					"Alabama",
+					"Alaska",
+					"Arizona",
+					"Arkansas",
+					"California",
+					"Colorado",
+					"Connecticut",
+					"Delaware",
+					"Florida",
+					"Georgia",
+					"Hawaii",
+					"Idaho",
+					"Illinois",
+					"Indiana",
+					"Iowa",
+					"Kansas",
+					"Kentucky",
+					"Louisiana",
+					"Maine",
+					"Maryland",
+					"Massachusetts",
+					"Michigan",
+					"Minnesota",
+					"Mississippi",
+					"Missouri",
+					"Montana",
+					"Nebraska",
+					"Nevada",
+					"New Hampshire",
+					"New Jersey",
+					"New Mexico",
+					"New York",
+					"North Carolina",
+					"North Dakota",
+					"Ohio",
+					"Oklahoma",
+					"Oregon",
+					"Pennsylvania",
+					"Rhode Island",
+					"South Carolina",
+					"South Dakota",
+					"Tennessee",
+					"Texas",
+					"Utah",
+					"Vermont",
+					"Virginia",
+					"Washington",
+					"West Virginia",
+					"Wisconsin",
+					"Wyoming"
+				];
+				
+			
+			
+			//create AutoComplete UI component
+			$("#legCity").kendoComboBox({
+				dataSource: cities,
+				filter: "startswith",
+				placeholder: "City",
+				separator: ", "
+			});
+			//---------
+			$("#legCountry").kendoComboBox({
+				dataSource: countries,
+				filter: "startswith",
+				placeholder: "Country",
+				separator: ", "
+			});
+			//---------
+			$("#legAccom").kendoComboBox({
+				dataSource: accommodations,
+				filter: "startswith",
+				placeholder: "Accommodation Name",
+				separator: ", "
+			});
+			//---------
+			$("#legPreNightAccom").kendoComboBox({
+				dataSource: accommodations,
+				filter: "startswith",
+				placeholder: "Accommodation Name",
+				separator: ", "
+			});
+			//---------
+			
+			$("#legPostNightAccom").kendoComboBox({
+				dataSource: accommodations,
+				filter: "startswith",
+				placeholder: "Accommodation Name",
+				separator: ", "
+			});
+			
+			//---------
+
+			$("#addHotelCountry").kendoComboBox({
+				dataSource: countries,
+				filter: "startswith",
+				placeholder: "Country",
+				separator: ", "
+			});
+			$("#addShipCountry").kendoComboBox({
+				dataSource: countries,
+				filter: "startswith",
+				placeholder: "Country",
+				separator: ", "
+			});
+			$("#addGroundOperatorCountry").kendoComboBox({
+				dataSource: countries,
+				filter: "startswith",
+				placeholder: "Country",
+				separator: ", "
+			});
+			
+			$("#addHotelState").kendoComboBox({
+				dataSource: states,
+				filter: "startswith",
+				placeholder: "State / Province",
+				separator: ", "
+			});
+			$("#addShipState").kendoComboBox({
+				dataSource: states,
+				filter: "startswith",
+				placeholder: "State / Province",
+				separator: ", "
+			});
+			$("#addGroundOperatorState").kendoComboBox({
+				dataSource: states,
+				filter: "startswith",
+				placeholder: "State / Province",
+				separator: ", "
+			});
+
+  		$("#datepickerAddHotelStart").kendoDatePicker();
+    	$("#datepickerAddHotelEnd").kendoDatePicker();
+			
+			//---------
+			
+			
+			/* ITIN MODAL STUFF */	
+				$('#accomModal2-link').click(function(){
+						$('#accomModal1').slideUp();
+						$('#accomModal2').removeClass('displayNone').slideDown();
+						return false;
+				});
+				
+				$('#accomModal-searchOperator-link').click(function(){
+						$('#accomModal2').slideUp();
+						$('#accomModal-searchOperator').removeClass('displayNone').slideDown();
+						return false;
+				});
+				
+				
+				$('#accomModal-addOperator-link').click(function(){
+						$('#accomModal-searchOperator').slideUp();
+						$('#accomModal-addOperator').removeClass('displayNone').slideDown();
+						return false;
+				});
+				
+				
+				$('#accomModal-searchAccom-link').click(function(){
+						$('#accomModal2').slideUp();
+						$('#accomModal-searchAccom').removeClass('displayNone').slideDown();
+						return false;
+				});
+				
+				$('#accomModal-addAccom-link').click(function(){
+						$('#accomModal2').slideUp();
+						$('#accomModal-addAccom').removeClass('displayNone').slideDown();
+						return false;
+				});
+				
+				$('#accomModal-addHotelCruise-trigger').change(function(){
+					if ($('#accomModal-addHotel').is(':visible')) {
+						$('#accomModal-addHotel').slideUp('');
+						$('#accomModal-addCruise').slideDown('');
+						
+					}
+					else {
+						$('#accomModal-addCruise').slideUp('');
+						$('#accomModal-addHotel').slideDown('');
+						
+					
+					}
+					if ($('#accomModal-addHotel').hasClass('displayNone')) {
+						$('#accomModal-addHotel').removeClass('displayNone');
+					}
+						
+					
+				});
+				
+				$('#accomModal').on('hidden.bs.modal', function (e) {
+					$('#accomModal1').slideDown('');
+					$('#accomModal2').slideUp('');
+					$('#accomModal-searchOperator').slideUp('');
+					$('#accomModal-addOperator').slideUp('');
+					$('#accomModal-searchAccom').slideUp('');
+					$('#accomModal-addAccom').slideUp('');
+					$('#accomModal-addCruise').slideUp('');
+				});
+				
+				
+		
+
+	});
+	
+</script>
+</body>
+</html>

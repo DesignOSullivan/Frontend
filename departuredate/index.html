@@ -27,16 +27,50 @@
 
 	
 	<style>
-		table, th, td{color: #54698d; white-space: nowrap;}
+		.container{width: 96% !important;}
+		table, th, td{color: #54698d; }
+		table{width: 100%; text-align: center;}
 		
-		#departTable tr:hover{background: #ffffee !important;}
+		td{padding: 4px !important; vertical-align: top; border: 1px solid #efefef;}
+			td.pad0{padding: 0 !important;}
+		th{padding: 8px !important; vertical-align: top; border: 1px solid #efefef;}
+		
+		tr{border-bottom: 1px solid #efefef;}
+			.inner-table tr, th tr{border: none;}
+		
+		#departTable tr:hover, #departTable tr:hover tr{background: #eef9ff !important;}
 		#departTable th table{margin-top: 15px;}
 		#departTable th table td{font-weight: normal; padding-bottom: 0;}
 		
-		td.pad0{padding: 0 !important;}
 		
 		.inner-table td{border-right: 1px solid #efefef !important; height: 52px; vertical-align: middle !important;}
 		.inner-table td:last-child{border-right: none !important;}
+		
+		
+		.pretour, .basetour, .arrivetour, .pretour-collapsed{border-right: 3px solid #eef0f1 !important;}
+		.departCol{background: #2c3e50; color: #fff; border-right: 3px solid #999 !important;}
+		
+		.highlight{background: #d1e9f6;}
+		
+		.single{}
+		.double{}
+		
+		
+		.collapsed{max-width: 30px; white-space: nowrap; overflow: hidden; }
+			.collapsed td{white-space: nowrap;opacity: 0; border: none !important;}
+			.collapsed span{display: none;}
+			
+			
+		th .fa{font-size: 16px;}
+		
+		.pretour-collapsed{max-width: 80px; white-space: nowrap;}
+			.pretour-collapsed h3{position: absolute; font-size: 24px; top: 80px;-webkit-transform: rotate(-90deg);
+			-moz-transform: rotate(-90deg);
+			-ms-transform: rotate(-90deg); 
+			-o-transform: rotate(-90deg);}
+			
+			.pretour-collapsed a{position: absolute; right: -225px;top:135px;}		
+					
 	</style>
 	
 </head>
@@ -73,149 +107,156 @@
 <form role="form">
 
 
-		<div class="clear bottom30"></div>
-		<div class="clear bottom30"></div>
-		
+<div class="clear bottom30"></div>
+<div class="clear bottom30"></div>
+
 <div class="container container-border">
 <div class="row">
-<div class="col-md-12">
-	<div class="table-responsive">
-			<table class="table table-bordered table-hover" id="departTable">
-					<tr>
-						<th>Depart USA</th>
-						<th class="pretour">Pre-Tour Option
-							<table class="table center">
-								<tr>
-									<td>Depart USA</td>
-									<td>Moher (3)</td>
-									<td>Join Tour</td>
-								</tr>
-							</table>
-						</th>
-						<th class="basetour">Tour Legs (Nights)
-							<br />
-							<table class="table center">
-								<tr>
-									<td>Dublin (3)</td>
-									<td>Galway (3)</td>
-									<td>Killarney (2)</td>
-									<td>Kilkenny (3)</td>
-								</tr>
-							</table>
-						</th>
-						<th class="" style="">Return for USA</th>
-						<th class="" style="background: #ffffee;">Arrive in USA</th>
-						<th class="posttour">Post-Tour Extension
-							<table class="table center">
-								<tr>
-									<td>Northern Ireland (3)</td>
-									<td>Return to USA</td>
-									<td>Arrive in USA</td>
-								</tr>
-							</table>
-						</th>
-					</tr>
-					
-					<!-- tour row -->
-					<tr class="tourRow">
-						<td>
-							<input class="datepicker" value="" style="width: 105px; border: 1px solid #ccc;" />
-						</td>
-						<td class="pretour pad0">
-							<table class="table center inner-table">
-								<tr>
-									<td><span class="pretourdepartusa"></span></td>
-									<td><span class="pretourleg1"></span></td>
-									<td><span class="jointour"></span></td>
-								</tr>
-							</table>
-						</td>
-						<td class="basetour pad0">
-							<table class="table center inner-table">
-								<tr>
-									<td><span class="tourleg1"></span></td>
-									<td><span class="tourleg2"></span></td>
-									<td><span class="tourleg3"></span></td>
-									<td><span class="tourleg4"></span></td>
-								</tr>
-							</table>
-						</td>
-						<td class="pad0">
-							<table class="table center inner-table">
-								<tr>
-									<td>
-										<span class="returnusa"></span>
-									</td>
-								</tr>
-							</table>
-						</td>
-						<td style="background: #ffffee;" class="pad0">
-							<table class="table center inner-table">
-								<tr>
-									<td style="background: #ffffee;" >
-										<span class="arriveusa"></span>
-									</td>
-								</tr>
-							</table>
-						</td>
-						<td class="post-tour pad0">
-							<table class="table center inner-table">
-								<tr>
-									<td><span class="posttourleg1"></span></td>
-									<td><span class="posttourreturnusa"></span></td>
-									<td><span class="posttourarriveusa"></span></td>
-								</tr>
-							</table>
-						</td>
-					</tr>
-					<!-- tour row -->
-					
-				</table>
 
 
-				<div class="clear bottom30"></div>
-				<a id="addDepartRow" class="green"><i class="fa fa-plus-circle"></i> <em>Add a New Departure Date</em></a>
-				
-				
-				<div class="clear bottom30"></div>
-				
-				<script>
-				/*
-				$(document).ready(function() {
-					var max_fields      = 10; //maximum input boxes allowed
-					var wrapper         = $(".input_fields_wrap"); //Fields wrapper
-					var add_button      = $(".add_field_button"); //Add button ID
-				   
-					var x = 1; //initlal text box count
-					$(add_button).click(function(e){ //on add input button click
-						e.preventDefault();
-						if(x < max_fields){ //max input box allowed
-							x++; //text box increment
-							$(wrapper).append('<div><input type="text" name="mytext[' + x + ']"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
-						}
-					});
-				   
-					$(wrapper).on("click",".remove_field", function(e){ //user click on remove text
-						e.preventDefault(); $(this).parent('div').remove(); x--;
-					})
-				});
-				*/
-				</script>
-				<!--
-				<div class="input_fields_wrap">
-					<button class="add_field_button">Add More Fields</button>
-					<div><input type="text" name="mytext[1]"></div>
-				</div>
-				-->
-								
+	<div class="col-md-12 bottom30" >
+				<table class=" table-hover" id="departTable">
+						<tr>
+							<th ></th>
+							<th class="departCol">Depart USA</th>
+							<!--
+							<th width="80" class="pretour-collapsed displayNone" rowspan="1">
+								<div style="width: 100%; height: 100%; top: 160px; position: absolute;">
+									<h3>Pre-Tour Option</h3>
+									<a class="expandPretour"><i class="fa fa-expand"></i></a>
+								</div>
+							</th>-->
+							<th class="pretour">
+								<a class="alignRight shrinkPretour"><i class="fa fa-compress"></i></a>
+								<span>Pre-Tour Option</span>
+								<div class="clear"></div>
+								<table class="table center">
+									<tr>
+										<td width="80">Depart</td>
+										<td width="105">Moher (3)</td>
+										<td width="80">Join Tour</td>
+									</tr>
+								</table>
+							</th>
+							<th class="basetour">
+								<a class="alignRight shrinkBasetour"><i class="fa fa-compress"></i></a>
+								<span>Tour Legs (Nights)</span>
+								<div class="clear"></div>
+								<table class="table center">
+									<tr>
+										<td width="80">Depart</td>
+										<td width="105">Dublin (3)</td>
+										<td width="105" >Galway (3)</td>
+										<td width="105" >Killarney (2)</td>
+										<td width="105" >Kilkenny (3)</td>
+									</tr>
+								</table>
+							</th>
+							<th style="">Return to USA</th>
+							<th class="arrivetour highlight">Arrive in USA</th>
+							<th class="posttour">
+								<a class="alignRight shrinkPosttour"><i class="fa fa-compress"></i></a>
+								<span>Post-Tour Extension</span>
+								<div class="clear"></div>
+								<table class="table center">
+									<tr>
+										<td width="105">Northern Ireland (3)</td>
+										<td width="80">Return</td>
+										<td width="105">Arrive in USA</td>
+									</tr>
+								</table>
+							</th>
+						</tr>
+						<!-- tour row -->
+						<tr class="tourRow displayNone copyMe">
+							<td class="" style="border-right: none !important;" >
+								<a class="removeRow" id="" style="position: relative; top: 13px;"><i class="fa fa-times-circle"></i></a>&nbsp;&nbsp;
+								<!-- <input type="checkbox" id="editDepartDate" style="position: relative; top: 1px;"> -->
+							</td>
+							<td style="border-left: none;" id="sortCell" class="departCol">
+								<span class="departDate" style="position: relative; top: 13px;"></span>
+							</td>
+							<td class="pretour pad0">
+								<table class="table center inner-table">
+									<tr>
+										<td width="80" class="highlight"><span class="pretourdepartusa"></span></td>
+										<td width="105"><span class="pretourleg1"></span></td>
+										<td width="80" class="highlight"><span class="jointour"></span></td>
+									</tr>
+								</table>
+							</td>
+							<td class="basetour pad0">
+								<table class="table center inner-table">
+									<tr>
+										<td width="80"><span class="departDate"></span></td>
+										<td width="105"><span class="tourleg1"></span></td>
+										<td width="105"><span class="tourleg2"></span></td>
+										<td width="105"><span class="tourleg3"></span></td>
+										<td width="105"><span class="tourleg4"></span></td>
+									</tr>
+								</table>
+							</td>
+							<td class="pad0">
+								<table class="table center inner-table">
+									<tr>
+										<td width="80" >
+											<span class="returnusa"></span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="arrivetour pad0 highlight">
+								<table class="table center inner-table">
+									<tr>
+										<td width="100"  class="highlight" >
+											<span class="arriveusa"></span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td class="posttour pad0">
+								<table class="table center inner-table">
+									<tr>
+										<td width="105"><span class="posttourleg1"></span></td>
+										<td width="80" ><span class="posttourreturnusa"></span></td>
+										<td width="105" class="highlight"><span class="posttourarriveusa"></span></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<!-- tour row -->
+					</table>
 	</div>
-</div>
+	
+	<div class="col-md-4"> 
+		<div class="container-fluid pad0">
+			<div class="row">
+			
+				<div class="clear bottom30"></div>
+				<div class="form-group col-md-12">
+					<h4><label>Use the Calendar Below to Add Departure Dates</label></h4>
+					<div class="clear"></div>
+					<input class="datepicker" value="" style="border: 1px solid #ccc;" />
+				</div>
+			</div>
+		</div>
+		
+		<div class="clear bottom30"></div>
+				
+	
+	</div>
+	<!--
+	<div class="col-md-4">
+		<div class="clear bottom25"></div>
+		<a id="editRows" class="btn btn-sm btn-info displayNone"><i class="fa fa-edit"></i> Edit Selected Departure Dates</a>
+	</div>
+	-->
 </div>
 </div>
 
 
 
-<div class="clear" style="margin-bottom: 120px;"></div>
+<div class="clear" style="margin-bottom: 105px;"></div>
        
 <!-- footer -->
 <div id="illusion">
@@ -247,7 +288,6 @@ $(document).ready(function() {
 	// create DatePicker from input HTML element
 	
 	
-	
 	function onChange() {
 		//console.log("Change :: " + kendo.toString(this.value(), 'd'));
 		//console.log(kendo.toString(this.value()));
@@ -255,42 +295,98 @@ $(document).ready(function() {
 		
 		
 		var startDate = moment(kendo.toString(this.value()));
+		$('#departTable tr.tourRow.copyMe').clone().appendTo('#departTable').removeClass('displayNone').removeClass('copyMe');
 		
-					
+		$('#departTable tr.tourRow:last-child .departDate').html(moment(startDate).format('DD-MMM ddd'));
 		
-		$('.pretourdepartusa').html(moment(startDate).subtract(4, 'days').format('DD-MMM'));
-		$('.pretourleg1').html(moment(startDate).subtract(3, 'days').format('DD-MMM') + ' - ' + moment(startDate).subtract(1, 'days').format('DD-MMM'));
-		$('.jointour').html(moment(startDate).format('DD-MMM'));
+		$('#departTable tr.tourRow:last-child .pretourdepartusa').html(moment(startDate).subtract(4, 'days').format('DD-MMM'));
+		$('#departTable tr.tourRow:last-child .pretourleg1').html(moment(startDate).subtract(3, 'days').format('DD-MMM') + ' - ' + moment(startDate).subtract(1, 'days').format('DD-MMM'));
+		$('#departTable tr.tourRow:last-child .jointour').html(moment(startDate).add(1, 'days').format('DD-MMM'));
 		
-		$('.tourleg1').html(moment(startDate).format('DD-MMM') + ' - ' + moment(startDate).add(3, 'days').format('DD-MMM'));
-		$('.tourleg2').html(moment(startDate).add(4, 'days').format('DD-MMM') + ' - ' + moment(startDate).add(7, 'days').format('DD-MMM'));
-		$('.tourleg3').html(moment(startDate).add(8, 'days').format('DD-MMM') + ' - ' + moment(startDate).add(10, 'days').format('DD-MMM'));
-		$('.tourleg4').html(moment(startDate).add(11, 'days').format('DD-MMM') + ' - ' + moment(startDate).add(13, 'days').format('DD-MMM'));
+		$('#departTable tr.tourRow:last-child .tourleg1').html(moment(startDate).add(1, 'days').format('DD-MMM') + ' - ' + moment(startDate).add(3, 'days').format('DD-MMM'));
+		$('#departTable tr.tourRow:last-child .tourleg2').html(moment(startDate).add(4, 'days').format('DD-MMM') + ' - ' + moment(startDate).add(6, 'days').format('DD-MMM'));
+		$('#departTable tr.tourRow:last-child .tourleg3').html(moment(startDate).add(7, 'days').format('DD-MMM') + ' - ' + moment(startDate).add(8, 'days').format('DD-MMM'));
+		$('#departTable tr.tourRow:last-child .tourleg4').html(moment(startDate).add(9, 'days').format('DD-MMM') + ' - ' + moment(startDate).add(11, 'days').format('DD-MMM'));
 		
+		$('#departTable tr.tourRow:last-child .returnusa').html(moment(startDate).add(12, 'days').format('DD-MMM'));
+		$('#departTable tr.tourRow:last-child .arriveusa').html(moment(startDate).add(12, 'days').format('DD-MMM ddd'));
 		
+		$('#departTable tr.tourRow:last-child .posttourleg1').html(moment(startDate).add(12, 'days').format('DD-MMM') + ' - ' + moment(startDate).add(14, 'days').format('DD-MMM'));
+		$('#departTable tr.tourRow:last-child .posttourreturnusa').html(moment(startDate).add(15, 'days').format('DD-MMM'));
+		$('#departTable tr.tourRow:last-child .posttourarriveusa').html(moment(startDate).add(15, 'days').format('DD-MMM ddd'));
 		
-		$('.returnusa').html(moment(startDate).add(14, 'days').format('DD-MMM'));
-		$('.arriveusa').html(moment(startDate).add(14, 'days').format('DD-MMM'));
+		$('html,body').animate({
+		  scrollTop: $('.datepicker').offset().top + (-400)
+		}, 1000);
 		
-		$('.posttourleg1').html(moment(startDate).add(14, 'days').format('DD-MMM') + ' - ' + moment(startDate).add(16, 'days').format('DD-MMM'));
-		$('.posttourreturnusa').html(moment(startDate).add(17, 'days').format('DD-MMM'));
-		$('.posttourarriveusa').html(moment(startDate).add(17, 'days').format('DD-MMM'));
-		
-		//$('#addDepartRow').trigger('click');
+        //$('#editRows').removeClass('displayNone');
+	
+		return false();
+	}
+	
+	function onClose() {
+		// sort table by depart dates	
+	
 		
 	}
 		
     $('.datepicker').kendoDatePicker({
 	 format: "dd-MMM-yy ",
-	 change: onChange
+	 change: onChange, 
+	 close: onClose
+	 
 	});
-					
 	
-	$('#addDepartRow').click(function() {
-		var rowCount = $('#departTable tr').length - 1;
-		$('#departTable tr.tourRow:last-child').clone().appendTo('#departTable');
-		$('#departTable tr.tourRow:last-child .datepicker').attr('id', rowCount);
-	});	
+    $("#departTable").on('click', '.removeRow', function(){
+        $(this).parent().parent().remove();
+    });
+	
+	$('.shrinkPretour').click(function() {
+    	//var rowCount = 0;
+	    //var rowCount = $('#departTable tr.tourRow').length;
+	    //$('.pretour-collapsed').attr('rowspan', rowCount);
+		//$('.pretour-collapsed').toggleClass('displayNone');
+		$('.pretour').toggleClass('collapsed');
+		
+		if ($('.shrinkPretour i').hasClass('fa-compress')){
+			$('.shrinkPretour i').removeClass('fa-compress').addClass('fa-expand');
+				
+		} else {
+			$('.shrinkPretour i').removeClass('fa-expand').addClass('fa-compress');
+			
+		}
+		return false();
+		
+		
+		
+    });
+	
+	
+	$('.shrinkBasetour').click(function() {
+        $('.basetour').toggleClass('collapsed');
+		
+		if ($('.shrinkBasetour i').hasClass('fa-compress')){
+			$('.shrinkBasetour i').removeClass('fa-compress').addClass('fa-expand');
+				
+		} else {
+			$('.shrinkBasetour i').removeClass('fa-expand').addClass('fa-compress');
+				
+		}
+		
+		return false();
+    });
+	$('.shrinkPosttour').click(function() {
+		if ($('.shrinkPosttour i').hasClass('fa-compress')){
+			$('.shrinkPosttour i').removeClass('fa-compress').addClass('fa-expand');
+				
+		} else {
+			$('.shrinkPosttour i').removeClass('fa-expand').addClass('fa-compress');
+				
+		}
+		return false();
+    });
+
+	
 });
 
 

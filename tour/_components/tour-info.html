@@ -109,33 +109,37 @@
 	<script>
 		$(document).ready(function () {
 			
-			 
-			$("#ouiWorldRegion").kendoComboBox({
-			  dataTextField: "text",
-			  dataValueField: "value",
-			  dataSource: [
-				{ text: "Europe", value: "1" },
-				{ text: "Africa & Middle East", value: "2" },
-				{ text: "Americas", value: "3" },
-				{ text: "Australia & South Pacific", value: "4" },
-				{ text: "Asia & Far East", value: "5" }
-			  ], 
-			  filter: "contains",
-			  suggest: true,
-			  index: 3
-			});
+			var regionsAPI = $("#ouiWorldRegion").kendoComboBox({
+				dataTextField: "Name",
+				dataValueField: "ShortName",
+				filter: "contains",
+				suggest: true,
+				placeholder: "Select Region...",
+				dataSource: {
+					transport: {
+						read: {
+							url: "https://ouidevapi.azurewebsites.net/api/geo/regions", 
+							dataType: "xml"
+							}
+					},
+					schema: {
+						type: "xml",
+						data: "/ArrayOfRegionWithCountries/RegionWithCountries",
+						model: {
+							fields: {
+								Name: "Name/text()",
+								ShortName: "ShortName/text()",
+								}
+						}
+					}
+				}
+			}).data("kendoComboBox");
 			
-			//---------
-			
-			var names = [
-					"Daniel O Sullivan",
-					"Gavin Dock",
-					"Joseph Bonanno",
-					"Justin Beckett",
-					"Patrick Nord",
-					"Steve Fleishaker"
-				];
-				
+			console.log(regionsAPI);
+
+		  
+		//---------
+		/*
 			var countries = [
 					"Albania",
 					"Andorra",
@@ -155,18 +159,6 @@
 					"France",
 					"Ireland"
 				];
-
-
-			$("#productManager").kendoComboBox({
-				dataSource: names,
-				filter: "startswith",
-				placeholder: "Product Manager",
-				separator: ", "
-			});
-			
-			//---------
-			
-			//create AutoComplete UI component
 			$("#tourCountry").kendoMultiSelect({
 				dataSource: countries,
 				filter: "startswith",
@@ -175,6 +167,29 @@
             }).data("kendoMultiSelect");
 			//---------
 			
+
+			*/
+			//---------
+			
+			//create AutoComplete UI component
+			
+			
+			
+			var names = [
+					"Daniel O Sullivan",
+					"Gavin Dock",
+					"Joseph Bonanno",
+					"Justin Beckett",
+					"Patrick Nord",
+					"Steve Fleishaker"
+				];
+
+			$("#productManager").kendoComboBox({
+				dataSource: names,
+				filter: "startswith",
+				placeholder: "Product Manager",
+				separator: ", "
+			});
 			
 			
 		});

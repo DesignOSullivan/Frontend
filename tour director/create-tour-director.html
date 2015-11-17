@@ -24,13 +24,13 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-3 textCenter" style=" margin-right: 15px; margin-left: -15px;">
+        <div class="col-md-4 textCenter" >
             <button href="" data-toggle="modal" data-target="#tourDirectorCreateModal" class="btn btn-info btn-lg"><i class="fa fa-group"></i> &nbsp;Create Tour Director</button>
         </div>
-        <div class="col-md-3 textCenter" style=" margin-right: 15px; margin-left: -15px;">
+        <div class="col-md-4 form-group textCenter" >
             <button href="" data-toggle="modal" data-target="#groundOperatorCreateModal" class="btn btn-info btn-lg"><i class="fa fa-group"></i> &nbsp;Create Ground Operator</button>
         </div>
-        <div class="col-md-3 textCenter" style=" margin-left: 15px;">
+        <div class="col-md-4 form-group textCenter" >
             <button href="" data-toggle="modal" data-target="#contactCreateModal" class="btn btn-info btn-lg"><i class="fa fa-user"></i> &nbsp;Create Contact</button>
         </div>
     </div>
@@ -58,11 +58,13 @@
                             <h3>Create<br> Tour Director</h3>
                         </div>
 
-                        <div class="col-md-8 col-xs-4">
+                        <div class="col-md-7 col-xs-4">
                             <div class="clear bottom30"></div>
                             <label>New Tour Director</label>
                         </div>
-                        <div class="clear"></div>
+                    <div class="textRight col-md-1">
+                        <a data-dismiss="modal"><i class="fa fa-times exitIcon alignRight"></i></a>
+                    </div>
                     </div>
                 </div>
                 </div>
@@ -92,7 +94,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="form-group col-md-5">
+                            <div class="form-group col-md-6">
                                 <label for="nickname">On-Tour Nickname</label>
                                 <input class="form-control" id="nickname" type="text" placeholder="(Nickname)">
                             </div>
@@ -218,7 +220,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-sm btn-default " data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-sm btn-default " data-dismiss="modal">cancel</button>
                 <!--                <button type="button" class="btn btn-sm btn-success" id="createTour Director" ><i class="fa fa-check-circle-o"></i> Create Tour Director</button>-->
                 <button href="" data-dismiss="modal" data-toggle="modal" data-target="#contactCreateFromTourDirectorModal" class="btn btn-info btn-sm"><i class="fa fa-check-circle-o"></i> &nbsp;Submit</button>
             </div>
@@ -239,9 +241,12 @@
                             <h3>Create<br> Tour Director</h3>
                         </div>
 
-                        <div class="col-md-8 col-xs-4">
+                        <div class="col-md-7 col-xs-4">
                             <div class="clear bottom30"></div>
                             <label>New Tour Director</label>
+                        </div>
+                        <div class="textRight col-md-1">
+                            <a data-dismiss="modal"><i class="fa fa-times exitIcon alignRight"></i></a>
                         </div>
                         <div class="clear"></div>
                     </div>
@@ -263,7 +268,7 @@
             </div>
             <div class="modal-footer">
                 <button href="tour-director.html" id="createTourDirector" type="button" class="btn btn-default " data-dismiss="modal"><i class="fa fa-eye"></i> View Tour Director</button>
-                <button data-dismiss="modal" data-toggle="modal" data-target="#contactCreateModal" class="btn btn-success"><i class="fa fa-user"></i> &nbsp;Add a Contact</button>
+                <button data-dismiss="modal" data-toggle="modal" data-target="#contactCreateModal" class="btn btn-success"><i class="fa fa-user"></i> &nbsp;Assign to Ground Operator</button>
             </div>
         </div>
     </div>
@@ -393,11 +398,13 @@
                                 <h3>Create<br> Ground Operator</h3>
                             </div>
 
-                            <div class="col-md-8 col-xs-4">
+                            <div class="col-md-7 col-xs-4">
                                 <div class="clear bottom30"></div>
                                 <label>New Ground Operator</label>
                             </div>
-                            <div class="clear"></div>
+                            <div class="textRight col-md-1">
+                                <a data-dismiss="modal"><i class="fa fa-times exitIcon alignRight"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -530,7 +537,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-sm btn-default " data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-sm btn-default " data-dismiss="modal">Cancel</button>
                     <!--                <button type="button" class="btn btn-sm btn-success" id="createGround Operator" ><i class="fa fa-check-circle-o"></i> Create Ground Operator</button>-->
                     <button href="" data-dismiss="modal" data-toggle="modal" data-target="#contactCreateFromGroundOperatorModal" class="btn btn-info btn-sm"><i class="fa fa-check-circle-o"></i> &nbsp;Submit</button>
                 </div>
@@ -551,9 +558,12 @@
                                 <h3>Create<br> Ground Operator</h3>
                             </div>
 
-                            <div class="col-md-8 col-xs-4">
+                            <div class="col-md-7 col-xs-4">
                                 <div class="clear bottom30"></div>
                                 <label>New Ground Operator</label>
+                            </div>
+                            <div class="textRight col-md-1">
+                                <a data-dismiss="modal"><i class="fa fa-times exitIcon alignRight"></i></a>
                             </div>
                             <div class="clear"></div>
                         </div>
@@ -703,6 +713,9 @@
                                 <div class="clear bottom30"></div>
                                 <label>New Contact</label>
                             </div>
+                            <div class="textRight col-md-1">
+                                <a data-dismiss="modal"><i class="fa fa-times exitIcon alignRight"></i></a>
+                            </div>
                             <div class="clear"></div>
                         </div>
                     </div>
@@ -774,7 +787,7 @@
                         <div class="row">
                             <div class="form-group col-md-6 col-xs-8">
                                 <label for="contactDepartment">OUI Department</label>
-                                <input class="form-control" id="contactDepartment" placeholder="Phone Number">
+                                <input class="form-control" id="contactDepartment">
                             </div>
                         </div>
 
@@ -900,7 +913,7 @@
 
         //CONTACT OUI DEPARTMENT
         $(document).ready(function () {
-            $("#contactDepartment").kendoComboBox({
+            $("#contactDepartment").kendoMultiSelect({
                 dataTextField: "text",
                 dataValueField: "value",
                 placeholder: "Select Department",

@@ -48,8 +48,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <div class="navbar-center">
                     <h4 class="headerTextLeft">GO-543323 |</h4>
-                    <h4 class="headerTextLeft" id="firstNameHeader">New</h4>
-                    <h4 class="headerTextRight" id="lastNameHeader">Ground Operator</h4>
+                    <h4 class="headerTextRight" id="lastNameHeader">True Greece</h4>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
                     <li> <img src="http://lorempixel.com/output/people-q-c-100-100-9.jpg" class="navimg"> </li>
@@ -92,7 +91,7 @@
         <div class="row">
             <div class="form-group col-md-6">
                 <label for="groundOperatorName">Ground Operator Name</label>
-                <input class="form-control" id="firstName" type="text" placeholder="Ground Operator Name">
+                <input class="form-control" id="firstName" type="text" placeholder="Ground Operator Name" value="True Greece">
             </div>
         </div>
     </div>
@@ -116,13 +115,13 @@
                     <div class="row">
                         <div class="form-group col-md-9">
                             <label for="attention">Attention</label>
-                            <input class="form-control" id="attention" type="text" placeholder="Attention">
+                            <input class="form-control" id="attention" type="text" placeholder="Attention"  value="TD Department">
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-md-12">
                             <label for="address">Address</label>
-                            <input class="form-control" id="address" type="text" placeholder="Address">
+                            <input class="form-control" id="address" type="text" placeholder="Address"  value="Hatziantoniou 25-27">
                         </div>
                     </div>
                     <div class="row">
@@ -138,21 +137,21 @@
                     <div class="row">
                         <div class="form-group col-md-4">
                             <label for="zip">Postal Code</label>
-                            <input class="form-control" id="zip" type="text" placeholder="Postal Code">
+                            <input class="form-control" id="zip" type="text" placeholder="Postal Code" value="151 24">
                         </div>
                         <div class="form-group col-md-8">
                             <label for="city">City</label>
-                            <input class="form-control" id="city" type="text" placeholder="City">
+                            <input class="form-control" id="city" type="text" placeholder="City" value="Marousi">
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-md-6">
                             <label for="groundOperatorState">State</label>
-                            <input class="form-control" id="state" placeholder="State">
+                            <input class="form-control" id="state" placeholder="(State)">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="groundOperatorCountries">Country</label>
-                            <input class="form-control" id="groundOperatorCountries">
+                            <input class="form-control" id="groundOperatorCountries" value="Greece">
                         </div>
                     </div>
                 </div>
@@ -320,11 +319,11 @@
         <div class="row">
             <div class="form-group col-md-4 col-xs-8">
                 <label for="phoneNumber">Phone Number</label>
-                <input class="form-control" id="phoneNumber" type="text" placeholder="Phone Number">
+                <input class="form-control" id="phoneNumber" type="text" placeholder="Phone Number" value="+30-210-6120656">
             </div>
             <div class="form-group col-md-3 col-xs-4">
                 <label for="phoneType">Type</label>
-                <input class="form-control" id="phoneType">
+                <input class="form-control" id="phoneType" value="Work">
             </div>
         </div>
         <div class="row">
@@ -338,7 +337,7 @@
                     <div class="row">
                         <div class="form-group col-md-12">
                             <label for="emailInput">Email Address</label>
-                            <input class="form-control" id="emailInput" type="text" placeholder="Email Address">
+                            <input class="form-control" id="emailInput" type="text" placeholder="Email Address" value="info@truegreece.com">
                         </div>
 
                     </div>
@@ -356,7 +355,7 @@
                             <label for="social">Social</label>
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-skype"></i></span>
-                                <input class="form-control" id="skype" type="text" placeholder="(Skype Username)">
+                                <input class="form-control" id="skype" type="text" placeholder="(Skype Username)" value="TrueGreeceYO">
                             </div>
                         </div>
                     </div>
@@ -429,11 +428,7 @@
         });
 
 
-        $(document).ready(function () {
-            $("#phoneNumber").kendoMaskedTextBox({
-                mask: "(999) 000-0000"
-            });
-        });
+       
     </script>
 
     <script>
@@ -534,8 +529,8 @@
             dataSource: [
                 {
                     name: "Mrs. Autumn Silk",
-                    phoneNumber: "843-555-7654",
-                    emailAddress: "Autumn@groundops.com",
+                    phoneNumber: "+30-210-6120656",
+                    emailAddress: "Autumn@truegreece.com",
                     jobTitle: "Employee Liaison",
                     department: "Ground Operations",
 },
@@ -565,7 +560,9 @@
                             <div class="clear bottom30"></div>
                             <label>New Contact</label>
                         </div>
-                        <div class="clear"></div>
+                        <div class="textRight col-md-1">
+                            <a data-dismiss="modal"><i class="fa fa-times exitIcon alignRight"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -756,7 +753,7 @@
 
     //CONTACT OUI DEPARTMENT
     $(document).ready(function () {
-        $("#contactDepartment").kendoComboBox({
+        $("#contactDepartment").kendoMultiSelect({
             dataTextField: "text",
             dataValueField: "value",
             placeholder: "Select Department",

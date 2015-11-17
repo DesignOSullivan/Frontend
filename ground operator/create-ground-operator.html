@@ -57,10 +57,13 @@
                             <h3>Create<br> Ground Operator</h3>
                         </div>
 
-                        <div class="col-md-8 col-xs-4">
+                        <div class="col-md-7 col-xs-4">
                             <div class="clear bottom30"></div>
                             <label>New Ground Operator</label>
                         </div>
+                    <div class="textRight col-md-1">
+                        <a data-dismiss="modal"><i class="fa fa-times exitIcon alignRight"></i></a>
+                    </div>
                         <div class="clear"></div>
                     </div>
                 </div>
@@ -194,16 +197,15 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-sm btn-default " data-dismiss="modal">Close</button>
-                <!--                <button type="button" class="btn btn-sm btn-success" id="createGround Operator" ><i class="fa fa-check-circle-o"></i> Create Ground Operator</button>-->
-                <button href="" data-dismiss="modal" data-toggle="modal" data-target="#contactCreateFromGroundOperatorModal" class="btn btn-info btn-sm"><i class="fa fa-check-circle-o"></i> &nbsp;Submit</button>
+                <button type="button" class="btn btn-sm btn-default alignLeft" data-dismiss="modal">Cancel</button>
+                <button href="" data-dismiss="modal" data-toggle="modal" data-target="#groundOperatorSuccessModal" class="btn btn-info btn-sm"><i class="fa fa-check-circle-o"></i> &nbsp;Submit</button>
             </div>
         </div>
     </div>
 </div>
 
 <!-- CREATE CONTACT FROM GROUND OPERATOR NAVIGATION MODAL -->
-<div class="modal fade dark-modal" id="contactCreateFromGroundOperatorModal" tabindex="-1" role="dialog" aria-labelledby="myModalInfo">
+<div class="modal fade dark-modal" id="groundOperatorSuccessModal" tabindex="-1" role="dialog" aria-labelledby="myModalInfo">
 
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -215,9 +217,12 @@
                             <h3>Create<br> Ground Operator</h3>
                         </div>
 
-                        <div class="col-md-8 col-xs-4">
+                        <div class="col-md-7 col-xs-4">
                             <div class="clear bottom30"></div>
                             <label>New Ground Operator</label>
+                        </div>
+                        <div class="textRight col-md-1">
+                            <a data-dismiss="modal"><i class="fa fa-times exitIcon alignRight"></i></a>
                         </div>
                         <div class="clear"></div>
                     </div>
@@ -238,7 +243,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button id="createGroundOperator" type="button" class="btn btn-default " data-dismiss="modal"><i class="fa fa-eye"></i> View Ground Operator</button>
+                <button id="cancelButton" type="button" class="btn btn-default alignLeft" data-dismiss="modal"> Close</button>
+                <button data-dismiss="modal" data-toggle="modal" data-target="#groundOperatorCreateModal" class="btn btn-success"><i class="fa fa-plus-circle"></i> Create Another Ground Operator</button>
                 <button data-dismiss="modal" data-toggle="modal" data-target="#contactCreateModal" class="btn btn-success"><i class="fa fa-user"></i> &nbsp;Add a Contact</button>
             </div>
         </div>
@@ -247,7 +253,7 @@
 
 <script>
     //GROUND OPERATOR VIEW BUTTON
-    $("#createGroundOperator").on('click', function () {
+    $("#createGroundOperator-view").on('click', function () {
         window.location = "ground-operator.html";
     });
 
@@ -367,6 +373,9 @@
                                 <div class="clear bottom30"></div>
                                 <label>New Contact</label>
                             </div>
+                            <div class="textRight col-md-1">
+                                <a data-dismiss="modal"><i class="fa fa-times exitIcon alignRight"></i></a>
+                            </div>
                             <div class="clear"></div>
                         </div>
                     </div>
@@ -451,8 +460,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Cancel</button>
-                    <button  type="button" class="btn btn-sm btn-info" id="createContact"><i class="fa fa-check-circle-o"></i> Submit </button>
+                    <button type="button" class="btn btn-sm btn-default alignLeft" data-dismiss="modal">Cancel</button>
+                    <button href="" data-dismiss="modal" data-toggle="modal" data-target="#contactSuccessModal" class="btn btn-info btn-sm"><i class="fa fa-check-circle-o"></i> &nbsp;Submit</button>
                 </div>
             </div>
         </div>
@@ -564,7 +573,7 @@
 
         //CONTACT OUI DEPARTMENT
         $(document).ready(function () {
-            $("#contactDepartment").kendoComboBox({
+            $("#contactDepartment").kendoMultiSelect({
                 dataTextField: "text",
                 dataValueField: "value",
                 placeholder: "Select Department",
@@ -590,6 +599,52 @@
         });
     </script>
 
-    
+    <!-- CREATE CONTACT FROM GROUND OPERATOR NAVIGATION MODAL -->
+    <div class="modal fade dark-modal" id="contactSuccessModal" tabindex="-1" role="dialog" aria-labelledby="myModalInfo">
+
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="modal-header">
+                            <div class="col-md-4 col-xs-8 borderRight">
+                                <h3>Create<br> Contact</h3>
+                            </div>
+
+                            <div class="col-md-7 col-xs-4">
+                                <div class="clear bottom30"></div>
+                                <label>New Contact</label>
+                            </div>
+                            <div class="textRight col-md-1">
+                                <a data-dismiss="modal"><i class="fa fa-times exitIcon alignRight"></i></a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="form-group col-md-12 textCenter">
+                                <h1><i style="font-size: 72px;" class="fa fa-check-circle-o"></i><br> Contact Created Successfully</h1>
+                            </div>
+                            <div class="clear bottom30"></div>
+                        </div>
+
+
+
+
+                        <!-- MODAL FOOTER -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="cancelButton" type="button" class="btn btn-default alignLeft" data-dismiss="modal"> Close</button>
+                    <button id="createGroundOperator" type="button" class="btn btn-success " data-dismiss="modal"><i class="fa fa-plus-circle"></i> Create Another Ground Operator</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
     
 </html>

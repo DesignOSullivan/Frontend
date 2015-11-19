@@ -12,6 +12,7 @@
 
 		
 	<script src="../js/jquery.min.js"></script> 
+	
 	<script src="../js/bootstrap.min.js"></script> 
 	<script src="../js/bootstrap-toggle.min.js"></script> 
     <script src="../kendoui/js/kendo.all.min.js"></script>
@@ -154,7 +155,7 @@
 </div> <!-- closes .tab-content wrapper -->
 
 <div class="clear" style="margin-bottom: 120px;"></div>
-       
+           
 <!-- footer -->
 <div id="illusion">
     <div id="footer">
@@ -169,7 +170,7 @@
 					-->
                </div>
                <div class="col-md-2" >
-                   <button type="submit" class="btn btn-info btn-sm alignRight bottom0"><i class="fa fa-check-circle-o"></i> Submit </button>
+                   <a id="tourSubmit" class="btn btn-info btn-sm alignRight bottom0"><i class="fa fa-check-circle-o"></i> Submit </a>
                </div>
            </div>
         </div>
@@ -177,7 +178,6 @@
 </div>
 
 </form>
-
 
     <div id="flyoutNav" class="closed shadow">
         <a id="flyoutNavTrigger">
@@ -189,82 +189,156 @@
             <br>
             <br>
         </a>
-	<div class="clear"></div>
-	<ul class="noBull displayNone" id="flyoutList">
-	<li><a href="#tourinfoSection">Tour Information</a></li>
-	<li><a href="#inventorySection">Inventory Rules</a></li>
-	<li><a href="#bookingSection">Booking & Cancellation</a></li>
-	<li><a href="#auxiliaryrulesSection">Auxiliary Rules</a></li>
-	<li><a href="#flightinfoSection">Flight Information</a></li>
-	<li><a href="#itinerarySection">Itinerary</a></li>
-	<li><a href="#aircomponentSection">Internal Air Component</a></li>
-	<li><a href="#tourdirectorSection">Tour Director</a></li>
-	<li><a href="#tourpricingSection">Tour Pricing</a></li>
-	<li><a href="#catalogcitiesSection">Catalog Cities</a></li>
-	<li><a href="#zonefaresSection">Zone Fares</a></li>
-	</ul>
-</div>
+		<div class="clear"></div>
+		<ul class="noBull displayNone" id="flyoutList">
+		<li><a href="#tourinfoSection">Tour Information</a></li>
+		<li><a href="#inventorySection">Inventory Rules</a></li>
+		<li><a href="#bookingSection">Booking & Cancellation</a></li>
+		<li><a href="#auxiliaryrulesSection">Auxiliary Rules</a></li>
+		<li><a href="#flightinfoSection">Flight Information</a></li>
+		<li><a href="#itinerarySection">Itinerary</a></li>
+		<li><a href="#aircomponentSection">Internal Air Component</a></li>
+		<li><a href="#tourdirectorSection">Tour Director</a></li>
+		<li><a href="#tourpricingSection">Tour Pricing</a></li>
+		<li><a href="#catalogcitiesSection">Catalog Cities</a></li>
+		<li><a href="#zonefaresSection">Zone Fares</a></li>
+		</ul>
+	</div>
 
 <script>
-$(document).ready(function() {
-	
-	
-	$('#flyoutNavTrigger').click(function() {
-		if ($('#flyoutNav').hasClass('closed')){
-			$('#flyoutNav').removeClass('closed');
-			$('#flyoutList').removeClass('displayNone');
-			$('#flyoutNav .fa').removeClass('fa-chevron-right');
-			$('#flyoutNav .fa').addClass('fa-chevron-left');
-		}
-		else{
-			$('#flyoutNav').addClass('closed');	
-			$('#flyoutList').addClass('displayNone');
-			$('#flyoutNav .fa').addClass('fa-chevron-right');
-			$('#flyoutNav .fa').removeClass('fa-chevron-left');
-		}
+	$(document).ready(function() {
 		
-	});
 		
+			$('#flyoutNavTrigger').click(function() {
+				if ($('#flyoutNav').hasClass('closed')){
+					$('#flyoutNav').removeClass('closed');
+					$('#flyoutList').removeClass('displayNone');
+					$('#flyoutNav .fa').removeClass('fa-chevron-right');
+					$('#flyoutNav .fa').addClass('fa-chevron-left');
+				}
+				else{
+					$('#flyoutNav').addClass('closed');	
+					$('#flyoutList').addClass('displayNone');
+					$('#flyoutNav .fa').addClass('fa-chevron-right');
+					$('#flyoutNav .fa').removeClass('fa-chevron-left');
+				}
+				
+			});
+				
+			
+		
+		/* -- TEMPO REMOVE FOR NOV 17 SHOWING OF API 
+			$('#pre-tour-toggle').change(function(){
+				if ($('#pre-tour-tab-link').hasClass('displayNone')) {
+					$('#pre-tour-tab-link').removeClass('displayNone');
+				}
+				else { 
+					$('#pre-tour-tab-link').addClass('displayNone');
+				}
+			});
+			
+			$('#post-tour-toggle').change(function(){
+				if ($('#post-tour-tab-link').hasClass('displayNone')) {
+					$('#post-tour-tab-link').removeClass('displayNone');
+				}
+				else { 
+					$('#post-tour-tab-link').addClass('displayNone');
+				}
+			});
+		*/
+			
+	//==========================================
 	
-	$('#tourCode').bind("change paste keyup", function() {
-	   if($(this).val() !== ''){
-	   	$('#tourCodeHeader').html($(this).val()); 
-	   }
-	   else{
-		   $('#tourCodeHeader').html('Tour Code');    
-	   }
-	});
-	
-	$('#tourName').bind("change paste keyup", function() {
-	   if($(this).val() !== ''){
-	   	$('#tourNameHeader').html($(this).val()); 
-	   }
-	   else{
-		   $('#tourNameHeader').html('Tour Name');    
-	   }
-	
-	});
+		//read and submit to the object
+		var tourData='';
+		var newProductID = '';
+		
+		$.ajax({
+			type:'GET',
+			url: "https://ouidevapi.azurewebsites.net/api/tours/products/string/-1",
+			dataType:'json',
+			success: function(data) {
+				useReturnData(data);
+			}
+		});
+		function useReturnData(data){
+			tourData = data;
+			var newProductID = tourData.ID;
+				
+		};
+		
+		$('#tourSubmit').click(function() {
+			
+		
+			var newProductID = tourData.ID;
+			
+			// tour info
+			tourData.Name = $('#Name').val();
+			tourData.TourCode = $('#TourCode').val();
+			tourData.Deposit = $('#Deposit').val();
+			tourData.Description = $('#Description').val();
+			tourData.EnablePostTour = $('#EnablePostTour').val();
+			tourData.EnablePreTour = $('#EnablePreTour').val();
+			tourData.FinalPayDueLead = $('#FinalPayDueLead').val();
+			
+			
+			var kendoRegion = $("#tourRegion").data("kendoComboBox");
+			var regionDataItem = kendoRegion.dataItem();
+			tourData.RegionID = regionDataItem.ID;
+			tourData.RegionName = regionDataItem.Name;
+			
+			tourData.Countries = $("#tourCountry").data("kendoMultiSelect").dataItems();
+			
+			tourData.ProductManagerName = $('#ProductManagerName').val();
+			
+			/*
+			var kendoProdManager = $("#ProductManager").data("kendoComboBox");
+			var prodManagerDataItem = kendoProdManager.dataItem();
+			tourData.ProductManagerID = prodManagerDataItem.ID;
+			tourData.ProductManagerName = prodManagerDataItem.Name;
+			*/
+		
+			// inventory
+			tourData.MaximumCapacity = $('#MaximumCapacity').val();
+			tourData.MaximumSingle = $('#MaximumSingle').val();
+			tourData.NumberTwinInterchangeables = $('#NumberTwinInterchangeables').val();
+			tourData.NumberSingles = $('#NumberSingles').val();
+			tourData.NumberTwins = $('#NumberTwins').val();
+			tourData.NumberDoubles = $('#NumberDoubles').val();
+			
+			//cancel rules
+ 			tourData.CancelDaysWith0PctPenalty = $('#CancelDaysWith0PctPenalty').val();
+			tourData.CancelDaysWith25PctPenalty = $('#CancelDaysWith25PctPenalty').val();
+			tourData.CancelDaysWith50PctPenalty = $('#CancelDaysWith50PctPenalty').val();
+			tourData.CancelDaysWith75PctPenalty = $('#CancelDaysWith75PctPenalty').val();
+			tourData.CancelDaysWith100PctPenalty = $('#CancelDaysWith100PctPenalty').val();
+			
+			//flight data
+			tourData.FlightArrivalCityID = $('#FlightArrivalCityID').val();
+			tourData.FlightArrivalCountryID = $('#FlightArrivalCountryID').val();
+			tourData.FlightDepartureCityID = $('#FlightDepartureCityID').val();
+			tourData.FlightDepartureCountryID = $('#FlightDepartureCountryID').val();
+			
+			
+		
+			$.ajax({
+				type: "PUT",
+				url: "https://ouidevapi.azurewebsites.net/api/tours/products/string/" + newProductID,
+				contentType: "application/json; charset=utf-8",
+				dataType: "json",
+				data: JSON.stringify(tourData)
+			});
+		
+			
+			console.log(tourData);
+			return false;
+			
+		});
+		
 
-	$('#pre-tour-toggle').change(function(){
-		if ($('#pre-tour-tab-link').hasClass('displayNone')) {
-		  	$('#pre-tour-tab-link').removeClass('displayNone');
-		}
-		else { 
-		  	$('#pre-tour-tab-link').addClass('displayNone');
-		}
-	});
-	
-	$('#post-tour-toggle').change(function(){
-		if ($('#post-tour-tab-link').hasClass('displayNone')) {
-		  	$('#post-tour-tab-link').removeClass('displayNone');
-		}
-		else { 
-		  	$('#post-tour-tab-link').addClass('displayNone');
-		}
-	});
-	});
-	
-	</script>
+	}); // doc ready
+
+</script>
 
 </body>
 </html>

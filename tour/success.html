@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OUI</title>
+<title>Temp work</title>
 
 
 	<link rel="stylesheet" href="../kendoui/styles/kendo.common-bootstrap.min.css">
@@ -22,11 +22,6 @@
 	
 	<!-- <link href="../css/font-awesome.css" rel="stylesheet"> -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
-	
-	
-   <!-- grab all the component modules we need for this page -->
-
 	
 </head>
 <body>
@@ -34,69 +29,14 @@
 <div class="clear bottom15">
 </div>
 	
-	
-<div class="container container-border">
-	<div class="row">
-		<div class="col-md-12">
-			<div id="groundOpGrid"></div>
-		</div>
-	</div>
+	<div class="container container-border">
+		<div class="row">
+			<div class="col-md-12 textcenter">
+				<h1>SUCCESS</h1>
+           </div>
+        </div>
+    </div>
 </div>
-
-
-
-<script>
-$(document).ready(function () {
-	
-
-		
-	var groundOps = new kendo.data.DataSource({
-		transport: {
-			read: {
-				url: "https://ouidevapi.azurewebsites.net/api/geo/countries/1/go", 
-				dataType: "json"
-			}
-		}
-	});			
-	
-	$("#groundOpGrid").kendoGrid({
-		selectable: "row",
-		sortable: "true",
-		dataSource: groundOps,
-		columns: [
-			{
-				command: ["Add"], 
-				width: 100
-			},
-			{
-				field: "Name",
-				title: "Ground Operator Name"
-			},
-			{
-				field: "ID",
-				title: "Phone"
-			},
-			{
-				field: "address",
-				title: "Address"
-			},
-			{
-				field: "city",
-				title: "City"
-			},
-			{
-				field: "country",
-				title: "Country"
-			}
-		]
-		
-	});
-	
-
-});
-
-			
-</script>
 
 	
 

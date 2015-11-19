@@ -1,3 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Temp work</title>
+
+
+	<link rel="stylesheet" href="../kendoui/styles/kendo.common-bootstrap.min.css">
+	<link rel="stylesheet" href="../kendoui/styles/kendo.bootstrap.min.css">
+
+		
+	<script src="../js/jquery.min.js"></script> 
+	<script src="../js/bootstrap.min.js"></script> 
+	<script src="../js/bootstrap-toggle.min.js"></script> 
+    <script src="../kendoui/js/kendo.all.min.js"></script>
+   
+	<link href="../css/bootstrap.css" rel="stylesheet">
+	<link href="../css/toggle-me-softly.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	
+	<!-- <link href="../css/font-awesome.css" rel="stylesheet"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	
+</head>
+<body>
+
+<div class="clear bottom15">
+</div>
+	
+<form role="form">
 
     <!-- Tour Information -->
 	<div class="container">
@@ -19,7 +51,7 @@
 						</div>
 						<div class="form-group col-md-8">
 							<label for="exampleInputEmail1">Tour Name</label>
-							<input class="form-control" id="Name" type="text" placeholder="Tour Name">
+							<input class="form-control" id="tourName" type="text" placeholder="Tour Name">
 						</div>
 					</div>
 				</div> 
@@ -29,7 +61,7 @@
 							<label for="">Final Payment Due</label>
 							<div class="input-group">
 								<span class="input-group-addon">Days Out:</span>
-								<input class="form-control textCenter digits" id="FinalPayDueLead" type="text" placeholder="95">
+								<input class="form-control textCenter digits" id="" type="text" placeholder="95">
 							</div>
 						</div>
 						<div class="form-group col-md-3">
@@ -44,30 +76,30 @@
 					<div class="row">
 						<div class="form-group col-md-6">
 							<div class="switch">
-								<input id="EnablePreTour" class="cmn-toggle cmn-toggle-round" type="checkbox" value="off">
-								<label for="EnablePreTour"></label>
+								<input id="pre-tour-toggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
+								<label for="pre-tour-toggle"></label>
 							</div>
 							<div class="switch-label">
-								<label for="EnablePreTour">Pre-Tour Option</label>
+								<label for="pre-tour-toggle">Pre-Tour Option</label>
 							</div>  
 							<div class="clear bottom15"></div>
 						</div>
 					
 						<div class="form-group col-md-6">
 							<div class="switch">
-								<input id="EnablePostTour" class="cmn-toggle cmn-toggle-round" type="checkbox" value="off">
-								<label for="EnablePostTour"></label>
+								<input id="post-tour-toggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
+								<label for="post-tour-toggle"></label>
 							</div>
 							<div class="switch-label">
-								<label for="EnablePostTour">Post-Tour Extension</label>
+								<label for="post-tour-toggle">Post-Tour Extension</label>
 							</div>  
 							<div class="clear bottom15"></div>
 						</div>
 					</div>
 					<div class="row bottom15">
 						<div class="form-group col-md-6">
-							<label>Product Manager</label>
-							<input class="form-control" id="ProductManagerName" type="text" placeholder="Product Manager">
+							<label for="exampleInputEmail1">Product Manager</label>
+							<input class="form-control" id="productManager" type="text" placeholder="Product Manager">
 						</div>
 					</div>
 					<div class="row bottom15">
@@ -97,10 +129,10 @@
 			<div class="col-md-6">
 				<div class="form-group">
 					<label for="">Tour Description</label>
-					<textarea class="form-control" id="Description" placeholder="Tour Description"></textarea>
+					<textarea class="form-control" id="" placeholder="Tour Description"></textarea>
 				</div>
 				<div class="form-group">
-					<label>Tour Image</label>
+					<label for="exampleInputEmail1">Tour Image</label>
 					<img alt="" src="../images/file-drop-placeholder.png" class="img-responsive" />
 				</div>
 			</div>
@@ -108,8 +140,35 @@
 	</div>
 	
 	
-	<script>
 	
+<div class="clear" style="margin-bottom: 120px;"></div>
+       
+<!-- footer -->
+<div id="illusion">
+    <div id="footer">
+	   <div class="container">
+           <div class="row">
+               <div class="col-md-2" >
+                   <button type="submit" class="btn btn-default btn-sm"> Cancel </button>
+               </div>
+               <div class="col-md-8">
+					<!-- Middle Links
+                   <p><a href="#location">Summary</a></p>
+					-->
+               </div>
+               <div class="col-md-2" >
+                   <a id="tourSubmit" class="btn btn-info btn-sm alignRight bottom0"><i class="fa fa-check-circle-o"></i> Submit </a>
+               </div>
+           </div>
+        </div>
+    </div>
+</div>
+
+</form>
+	
+	
+	
+	<script>
 		$(document).ready(function () {
 			
 			$("#tourRegion").kendoComboBox({  
@@ -151,9 +210,6 @@
 				multi.value("");
 				multi.input.blur();
 				
-				var kendoComboBox = "";
-				var dataItem = "";
-				
 				var kendoComboBox = $("#tourRegion").data("kendoComboBox");
 				var dataItem = kendoComboBox.dataItem();
 				
@@ -183,7 +239,7 @@
 					"Steve Fleishaker"
 				];
 
-			$("#ProductManagerName").kendoComboBox({
+			$("#productManager").kendoComboBox({
 				dataSource: names,
 				filter: "startswith",
 				placeholder: "Product Manager",
@@ -191,27 +247,81 @@
 			});
 			
 			
-			$('#TourCode').bind("change paste keyup", function() {
-			   if($(this).val() !== ''){
-				$('#tourCodeHeader').html($(this).val()); 
-			   }
-			   else{
-				   $('#tourCodeHeader').html('Tour Code');    
-			   }
-			});
+	//==========================================
+	
+		//read and submit to the object
+		/*$.ajax({
+			method: "GET",
+			url: "https://ouidevapi.azurewebsites.net/api/tours/products/-1",
+			//contentType: "application/json; charset=utf-8",
+			dataType: "json",
+			data: tourData
+		});*/
+		
+		var tourData='';
+		var newProductID = '';
+		
+		$.ajax({
+			type:'GET',
+			url: "https://ouidevapi.azurewebsites.net/api/tours/products/-1",
+			dataType:'json',
+			success: function(data) {
+				useReturnData(data);
+			}
+		});
+		
+		function useReturnData(data){
+			tourData = data;
+			console.log(tourData);
 			
-			$('#Name').bind("change paste keyup", function() {
-			   if($(this).val() !== ''){
-				$('#tourNameHeader').html($(this).val()); 
-			   }
-			   else{
-				   $('#tourNameHeader').html('Tour Name');    
-			   }
+			var newProductID = tourData.ID;
+			console.log('newprodid =' + newProductID);
+				
+		};
+		
+		$('#tourSubmit').click(function() {
 			
+			console.log(tourData);
+			
+			
+			tourData.Name = $('#Name').val();
+			tourData.TourCode = $('#TourCode').val();
+			tourData.Deposit = $('#Deposit').val();
+			tourData.Description = $('#Description').val();
+			tourData.EnablePostTour = $('#EnablePostTour').val();
+			tourData.EnablePreTour = $('#EnablePreTour').val();
+			tourData.FinalPayDueLead = $('#FinalPayDueLead').val();
+			tourData.MaximumCapacity = $('#MaximumCapacity').val();
+			tourData.MaximumSingle = $('#MaximumSingle').val();
+			tourData.NumberTwinInterchangeables = $('#NumberTwinInterchangeables').val();
+			tourData.NumberSingles = $('#NumberSingles').val();
+			tourData.NumberTwins = $('#NumberTwins').val();
+			tourData.ProductManagerID = $('#ProductManagerID').val();
+			tourData.ProductManagerName = $('#ProductManagerName').val();
+			tourData.RegionID = $('#RegionID').val();
+			tourData.RegionName = $('#RegionName').val();
+			
+						
+			/*
+			$.ajax({
+				type: "PATCH",
+				url: "https://ouidevapi.azurewebsites.net/api/tours/products/" + newProductID",
+				contentType: "application/json; charset=utf-8",
+				dataType: "json",
+				data: tourData
 			});
+			*/
+			
+			return false;
+			
+		});
 		
 		
 	});
-	
 	</script>
 
+
+	
+
+</body>
+</html>

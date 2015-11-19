@@ -13,22 +13,22 @@
 		<div class="row">
 			<div class="col-md-3">           
                 <label>Arrival Country</label>
-				<input class="form-control" id="arrivalCountry" placeholder="Arrival Country">
+				<input class="form-control" id="FlightArrivalCountryID" placeholder="Arrival Country">
 				</input>
 			</div>
 			<div class="col-md-3"> 
 				<label>Arrival City </label> 
-				<input class="form-control" id="arrivalCity" placeholder="Arrival City">
+				<input class="form-control" id="FlightArrivalCityID" placeholder="Arrival City">
 				</input>
             </div>
 			<div class="col-md-3">
 				<label>Departure Country </label> 
-				<input class="form-control" id="departCountry" placeholder="Departure Country">
+				<input class="form-control" id="FlightDepartureCountryID" placeholder="Departure Country">
 				</input>
             </div>
 			<div class="col-md-3">
 				<label>Departure City </label> 
-				<input class="form-control" id="departCity" placeholder="Departure City">
+				<input class="form-control" id="FlightDepartureCityID" placeholder="Departure City">
 				</input>
             </div>
         </div>
@@ -70,28 +70,28 @@
 				];
 				
 			//create AutoComplete UI component
-			$("#arrivalCountry").kendoComboBox({
-				dataSource: countries,
-				filter: "startswith",
-				placeholder: "Arrival Country",
-				separator: ", "
-			});
-			//---------
-			$("#departCountry").kendoComboBox({
+			$("#FlightArrivalCountryID").kendoComboBox({
 				dataSource: countries,
 				filter: "startswith",
 				placeholder: "Departure Country",
 				separator: ", "
 			});
 			//---------
-			$("#arrivalCity").kendoComboBox({
+			$("#FlightArrivalCityID").kendoComboBox({
 				dataSource: cities,
 				filter: "startswith",
 				placeholder: "Arrival City",
 				separator: ", "
 			});
 			//---------
-			$("#departCity").kendoComboBox({
+			$("#FlightDepartureCountryID").kendoComboBox({
+				dataSource: countries,
+				filter: "startswith",
+				placeholder: "Arrival Country",
+				separator: ", "
+			});
+			//---------
+			$("#FlightDepartureCityID").kendoComboBox({
 				dataSource: cities,
 				filter: "startswith",
 				placeholder: "Departure City",

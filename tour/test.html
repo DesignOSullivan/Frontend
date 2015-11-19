@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Temp work</title>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="clear bottom15">
+</div>
+	
+<form role="form">
+
+    <!-- Tour Information -->
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<a name="tourinfoSection"></a>
+			<h3> Tour Information </h3>
+		</div>
+	</div>
+</div>
+<div class="container container-border">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="container-fluid pad0">
+				<div class="row bottom15">
+					<div class="form-group col-md-4">
+						<label for="">Tour Code</label>
+						<input class="form-control" id="TourCode" type="text" placeholder="ABC-99">
+					</div>
+					<div class="form-group col-md-8">
+						<label for="">Tour Name</label>
+						<input class="form-control" id="Name" type="text" placeholder="Tour Name">
+					</div>
+				</div>
+			</div> 
+		</div>
+	</div>
+</div>	
+	
+	
+<div class="clear" style="margin-bottom: 120px;"></div>
+       
+<!-- footer -->
+<div id="illusion">
+    <div id="footer">
+	   <div class="container">
+           <div class="row">
+               <div class="col-md-2" >
+                   <a id="tourSubmit" style="background: green; color: #fff; padding: 4px 8px;" class="btn btn-info btn-sm alignRight bottom0"><i class="fa fa-check-circle-o"></i> Submit </a>
+               </div>
+           </div>
+        </div>
+    </div>
+</div>
+
+</form>
+	
+	
+	
+	<script>
+		$(document).ready(function () {
+			
+			//read and submit to the object
+		var tourData='';
+		var newProductID = '';
+		
+		$.ajax({
+			type:'GET',
+			url: "https://ouidevapi.azurewebsites.net/api/tours/products/basic/-1",
+			dataType:'json',
+			success: function(data) {
+				useReturnData(data);
+			}
+		});
+		function useReturnData(data){
+			tourData = data;
+			var newProductID = tourData.ID;
+				
+		};
+		
+		
+		$('#tourSubmit').click(function() {
+			
+		
+			var newProductID = tourData.ID;
+			
+			// tour info
+			tourData.Name = $('#Name').val();
+			tourData.TourCode = $('#TourCode').val();
+			console.log(tourData);
+			
+		
+			$.ajax({
+				type: "PUT",
+				url: "https://ouidevapi.azurewebsites.net/api/tours/products/basic/" + newProductID,
+				contentType: "application/json; charset=utf-8",
+				dataType: "json",
+				data: tourData
+			});
+		
+			
+			return false;
+			
+		});
+		
+		
+	});
+	</script>
+
+
+	
+
+</body>
+</html>

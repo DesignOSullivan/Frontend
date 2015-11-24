@@ -20,8 +20,6 @@
 <script>
 $(document).ready(function () {
 	
-
-	
 		var catalogCitiesDS = new kendo.data.DataSource({
 			transport: {
 				read: {
@@ -38,8 +36,8 @@ $(document).ready(function () {
 				var cityName = catalogCities[i].Name;
 				var cityID = catalogCities[i].ID;
 				
-				var first = '<div class="col-md-4 col-xs-12 form-group"><div class="container pad0"><div class="row"><div class="col-md-4 catalogLabel"><a class="removeCatalog"><i class="fa fa-times-circle"></i></a>&nbsp;<label>';
-				var second = '</label></div><div class="col-md-8 catalogInput"><div class="input-group"><span class="input-group-addon">$</span><input class="form-control textRight digits" id="';
+				var first = '<div class="col-md-4 col-xs-12 form-group"><div class="container pad0"><div class="row"><div class="col-md-5 catalogLabel"><a class="removeCatalog"><i class="fa fa-times-circle"></i></a>&nbsp;<label>';
+				var second = '</label></div><div class="col-md-5 catalogInput"><div class="input-group"><span class="input-group-addon">$</span><input class="form-control textRight digits" id="';
 				var third = '" type="text" placeholder="0"></div></div></div></div></div>';
 				var appendString = first + cityName + second + cityID + third;
 				$('#catalogCities').append(appendString);

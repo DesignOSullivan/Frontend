@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OUI</title>
+
+
+	<link rel="stylesheet" href="../kendoui/styles/kendo.common-bootstrap.min.css">
+	<link rel="stylesheet" href="../kendoui/styles/kendo.bootstrap.min.css">
+
+		
+	<script src="../js/jquery.min.js"></script> 
+	
+	<script src="../js/bootstrap.min.js"></script> 
+	<script src="../js/bootstrap-toggle.min.js"></script> 
+    <script src="../kendoui/js/kendo.all.min.js"></script>
+   
+	<link href="../css/bootstrap.css" rel="stylesheet">
+	<link href="../css/toggle-me-softly.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	
+	<!-- <link href="../css/font-awesome.css" rel="stylesheet"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <script src="run-first.js"></script>
+   
+	
+</head>
+<body>
+
+
+<!-- Navbar -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </button>
+		<a class="navbar-brand" href="#" style="padding: 0 15px;"><img src="../images/logo.png" style="max-height: 60px;"/></a>
+	</div>
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="navbar-center">
+                <h4 class="headerTextLeft" id="tourCodeHeader">New</h4><h4 class="headerPipe" id="tourPipeHeader">|</h4><h4 class="headerTextRight" id="tourNameHeader">Tour</h4>
+        </div>
+		
+	</div>
+</nav>
+    
+<div class="clear bottom60"></div>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+	<form role="form">
+		<section id="login">
+				<h2>Login</h2>
+				<p>User: <input id="txtUser" />   Password:  <input id="txtPwd"  type="password" />  
+				
+				<a type="button" class="btn btn-info btn-sm" value="Login" onclick="locallogin();" /><i class="fa fa-check-circle-o"></i> Login</a> 
+				
+				<input type="button" value="Logout" onclick="locallogout();" /></p>
+		
+				<script>
+				
+					function locallogin() {
+					
+						/* 11/25 - proven to work across domain */
+						var settings = {
+							"async": true,
+							"crossDomain": true,
+							"url": getOuiHostUri()+"/token",
+							"method": "POST",
+							"headers": {
+								"cache-control": "no-cache",
+								"content-type": "application/x-www-form-urlencoded"
+								},
+							"data": {
+								"grant_type": "password",
+								"username": $('#txtUser').val(),
+								"password": $('#txtPwd').val()
+							}
+					
+					}
+
+					$.ajax(settings).done(function (response) {
+						// Cache the access token in session storage.
+						sessionStorage.setItem(authTokenKey, response.access_token);
+						location.href = "success.html";
+						//   alert('OK: ' + response.userName);
+						}).fail(function (response) {
+							if (response)  
+							{
+								if (response.status == 400) {
+									//bad credentials
+									alert("Username or Password not recognized");
+								}
+								else {
+									if (response.status == 404) {
+										alert("Token end point not found: Bad request - make sure credentials are not blank");
+									}
+									else
+									{
+										ouiErrHandler(response, response.status, null);
+									}
+								}
+							}
+							else
+							{
+								//dunno
+								ouiErrHandler(null, "Unknown error", null);
+							}
+					
+						});
+					}
+				</script>
+			</section>
+	</form>
+</div>
+</div>
+</div>  
+
+
+</body>
+</html>

@@ -120,7 +120,8 @@
 					transport: {  
 						read: {  
 							dataType: "json",  
-							url: "https://ouidevapi.azurewebsites.net/api/geo/regions" 
+							headers: getOuiRequiredHeaders(),
+							url: getOuiUri("geo/regions")
 						}  
 					}  
 				}  
@@ -137,7 +138,8 @@
 					transport: {  
 						read: {  
 							dataType: "json",  
-							url: "https://ouidevapi.azurewebsites.net/api/geo/regions" 
+							headers: getOuiRequiredHeaders(),
+							url: getOuiUri("geo/regions")
 						}  
 					}  
 				} 
@@ -155,11 +157,12 @@
 				var kendoComboBox = $("#tourRegion").data("kendoComboBox");
 				var dataItem = kendoComboBox.dataItem();
 				
-				var tourCountryAPI = "https://ouidevapi.azurewebsites.net/api/geo/regions/" + dataItem.ID + "/countries";
+				var tourCountryAPI = getOuiUri("geo/regions/" + dataItem.ID + "/countries");
 				var DS = new kendo.data.DataSource({
 				  transport: {
 					read: {
 					  url: tourCountryAPI,
+					  headers: getOuiRequiredHeaders(),
 					  dataType: "json"
 						}
 				  }

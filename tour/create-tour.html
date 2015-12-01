@@ -25,6 +25,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 	
+    <script src="run-first.js"></script>
 	
    <!-- grab all the component modules we need for this page -->
 	<script> 
@@ -227,6 +228,8 @@
 				
 			
 		
+	
+	
 		/* -- TEMPO REMOVE FOR NOV 17 SHOWING OF API 
 			$('#pre-tour-toggle').change(function(){
 				if ($('#pre-tour-tab-link').hasClass('displayNone')) {
@@ -253,19 +256,26 @@
 		var tourData='';
 		var newProductID = '';
 		
-		$.ajax({
-			type:'GET',
-			url: "https://ouidevapi.azurewebsites.net/api/tours/products/string/-1",
-			dataType:'json',
-			success: function(data) {
-				useReturnData(data);
-			}
-		});
-		function useReturnData(data){
+		
+		var subUri = "tours/products/string/-1";
+		
+		getOuiApiObject(subUri, handleTourLoad, handleError);
+		
+		function handleTourLoad(){
 			tourData = data;
 			var newProductID = tourData.ID;
-				
 		};
+		
+		function handleError(){
+			alert("error");
+		};
+		
+		alert(newProductID);
+		
+		
+		
+		
+		
 		
 		$('#tourSubmit').click(function() {
 			
@@ -337,7 +347,6 @@
 		
 
 	}); // doc ready
-
 </script>
 
 </body>

@@ -1,372 +1,420 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>GROUND OPERATOR | OUI</title>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Special Interest Group | OUI</title>
 
 
-        <link rel="stylesheet" href="../kendoui/styles/kendo.common-bootstrap.min.css">
-        <link rel="stylesheet" href="../kendoui/styles/kendo.bootstrap.min.css">
+    <link rel="stylesheet" href="../kendoui/styles/kendo.common-bootstrap.min.css">
+    <link rel="stylesheet" href="../kendoui/styles/kendo.bootstrap.min.css">
 
 
-        <script src="../js/jquery.min.js"></script>
-        <script src="../js/bootstrap.min.js"></script>
-        <script src="../js/bootstrap-toggle.min.js"></script>
-        <script src="../kendoui/js/kendo.all.min.js"></script>
-        <script src="ground-operator-scripts.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-toggle.min.js"></script>
+    <script src="../kendoui/js/kendo.all.min.js"></script>
+    <script src="special-interest-group-scripts.js"></script>
 
-        <link href="../css/bootstrap.css" rel="stylesheet">
-        <link href="../css/toggle-me-softly.css" rel="stylesheet">
-        <link href="../css/actively-toggle-me-softly.css" rel="stylesheet">
-        <link href="../css/style.css" rel="stylesheet">
-        <link href="../css/font-awesome.css" rel="stylesheet">
-
-
-        <!-- GRAB ALL THE COMPONENT MODULES WE NEED FOR THIS PAGE -->
-        <script>
-            $(function () {
-                $("#includeTourDirectorName").load("_components/tour-director-name.html");
-                $("#includeTourDirectorAddress").load("_components/tour-director-address.html");
-                $("#includeTourDirectorContactInformation").load("_components/tour-director-contact-information.html");
-                $("#includeTourDirectorTravelInformation").load("_components/tour-director-travel-information.html");
-                $("#includeTourDirectorTabs").load("_components/tour-director-tabs.html");
-            });
-        </script>
-
-    </head>
-
-    <body>
-        <!-- NAVBAR -->
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </button>
-                <a class="navbar-brand" href="#" style="padding: 0 15px;"><img src="../images/logo.png" style="max-height: 60px;" /></a>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <div class="navbar-center">
-                    <h4 class="headerTextLeft">GO-543323 |</h4>
-                    <h4 class="headerTextRight" id="lastNameHeader">True Greece</h4>
-                </div>
-                <ul class="nav navbar-nav navbar-right">
-                    <li> <img src="http://lorempixel.com/output/people-q-c-100-100-9.jpg" class="navimg"> </li>
-                    <li class="nav  navbar-toggle navbar-link">Danielle O'Sullivan</li>
-                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span><b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li> <a href="#">Action</a> </li>
-                            <li> <a href="#">Another action</a> </li>
-                            <li> <a href="#">Something else here</a> </li>
-                            <li class="divider"> </li>
-                            <li> <a href="#">Separated link</a> </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/toggle-me-softly.css" rel="stylesheet">
+    <link href="../css/actively-toggle-me-softly.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/font-awesome.css" rel="stylesheet">
 
 
-<!-- GROUND OPERATOR TAB-->
-<div id="ground-operator-content" class="tab-pane fade in">
-
-
-    <!-- GROUND OPERATOR NAME -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-2">
-                <a name="groundOperatorName"></a>
-                <h3> Ground Operator  </h3>
-            </div>
-            <div class="col-md-10">
-                <div class="clear bottom20"></div>
-                <div class="switch">
-                    <input id="groundOperatorActiveToggle" class="cmn-active-toggle cmn-active-toggle-round" type="checkbox" checked>
-                    <label for="groundOperatorActiveToggle"></label>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container container-border">
-        <div class="row">
-            <div class="form-group col-md-6">
-                <label for="groundOperatorName">Ground Operator Name</label>
-                <input class="form-control" id="firstName" type="text" placeholder="Ground Operator Name" value="True Greece">
-            </div>
-        </div>
-    </div>
-
-
-
-    <!-- GROUND OPERATOR ADDRESS -->
-    <!-- Address -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <a name="address"></a>
-                <h3> Address </h3>
-            </div>
-        </div>
-    </div>
-    <div class="container container-border">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="container-fluid pad0">
-                    <div class="row">
-                        <div class="form-group col-md-9">
-                            <label for="attention">Attention</label>
-                            <input class="form-control" id="attention" type="text" placeholder="Attention"  value="TD Department">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-12">
-                            <label for="address">Address</label>
-                            <input class="form-control" id="address" type="text" placeholder="Address"  value="Hatziantoniou 25-27">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-6">
-                            <label for="address">Address 2</label>
-                            <input class="form-control" id="address" type="text" placeholder="(Address 2)">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="address2">Address 3</label>
-                            <input class="form-control" id="address2" type="text" placeholder="(Address 3)">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-4">
-                            <label for="zip">Postal Code</label>
-                            <input class="form-control" id="zip" type="text" placeholder="Postal Code" value="151 24">
-                        </div>
-                        <div class="form-group col-md-8">
-                            <label for="city">City</label>
-                            <input class="form-control" id="city" type="text" placeholder="City" value="Marousi">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-6">
-                            <label for="groundOperatorState">State</label>
-                            <input class="form-control" id="state" placeholder="(State)">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="groundOperatorCountries">Country</label>
-                            <input class="form-control" id="groundOperatorCountries" value="Greece">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="clear bottom30 hidden-xs"></div>
-                <div class="switch">
-                    <input id="fedexToggle" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
-                    <label for="fedexToggle"></label>
-                </div>
-                <div class="switch-label">
-                    <label for="fedexToggle">Allows FedEx Delivery</label>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid pad0">
-            <div class="row">
-                <div class="form-group col-md-12">
-                    <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add an Address</i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    <!-- GRAB ALL THE COMPONENT MODULES WE NEED FOR THIS PAGE -->
     <script>
-        $(document).ready(function () {
-
-            var countries = [
-"Albania",
-"Andorra",
-"Armenia",
-"Austria",
-"Azerbaijan",
-"Belarus",
-"Belgium",
-"Bosnia & Herzegovina",
-"Bulgaria",
-"Croatia",
-"Cyprus",
-"Czech Republic",
-"Denmark",
-"Estonia",
-"Finland",
-"France",
-"Georgia",
-"Germany",
-"Greece",
-"Hungary",
-"Iceland",
-"Ireland",
-"Italy",
-"Kosovo",
-"Latvia",
-"Liechtenstein",
-"Lithuania",
-"Luxembourg",
-"Macedonia",
-"Malta",
-"Moldova",
-"Monaco",
-"Montenegro",
-"Netherlands",
-"Norway",
-"Poland",
-"Portugal",
-"Romania",
-"Russia",
-"San Marino",
-"Serbia",
-"Slovakia",
-"Slovenia",
-"Spain",
-"Sweden",
-"Switzerland",
-"Turkey",
-"Ukraine",
-"United Kingdom",
-"Vatican City"
-];
-
-            //create AutoComplete UI component
-            $("#groundOperatorCountries").kendoComboBox({
-                dataSource: countries,
-                filter: "startswith",
-                placeholder: "Select Country",
-            });
-        });
-
-
-
-        $(document).ready(function () {
-            var state = [
-"Alabama",
-"Alaska",
-"Arizona",
-"Arkansas",
-"California",
-"Colorado",
-"Connecticut",
-"Delaware",
-"Florida",
-"Georgia",
-"Hawaii",
-"Idaho",
-"Illinois",
-"Indiana",
-"Iowa",
-"Kansas",
-"Kentucky",
-"Louisiana",
-"Maine",
-"Maryland",
-"Massachusetts",
-"Michigan",
-"Minnesota",
-"Mississippi",
-"Missouri",
-"Montana",
-"Nebraska",
-"Nevada",
-"New Hampshire",
-"New Jersey",
-"New Mexico",
-"New York",
-"North Carolina",
-"North Dakota",
-"Ohio",
-"Oklahoma",
-"Oregon",
-"Pennsylvania",
-"Rhode Island",
-"South Carolina",
-"South Dakota",
-"Tennessee",
-"Texas",
-"Utah",
-"Vermont",
-"Virginia",
-"Washington",
-"West Virginia",
-"Wisconsin",
-"Wyoming"
-];
-
-            //create AutoComplete UI component
-            $("#groundOperatorState").kendoComboBox({
-                dataSource: state,
-                filter: "startswith",
-                placeholder: "Select State",
-            });
+        $(function () {
+            $("#includeTourDirectorName").load("_components/tour-director-name.html");
+            $("#includeTourDirectorAddress").load("_components/tour-director-address.html");
+            $("#includeTourDirectorContactInformation").load("_components/tour-director-contact-information.html");
+            $("#includeTourDirectorTravelInformation").load("_components/tour-director-travel-information.html");
+            $("#includeTourDirectorTabs").load("_components/tour-director-tabs.html");
         });
     </script>
 
+</head>
 
-    <!-- GROUND OPERATOR CONTACT INFORMATION -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <a name="contactInformation"></a>
-                <h3> Contact Information </h3>
-            </div>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </button>
+            <a class="navbar-brand" href="#" style="padding: 0 15px;"><img src="../images/logo.png" style="max-height: 60px;" /></a>
         </div>
-    </div>
-    <div class="container container-border">
-        <div class="row">
-            <div class="form-group col-md-4 col-xs-8">
-                <label for="phoneNumber">Phone Number</label>
-                <input class="form-control" id="phoneNumber" type="text" placeholder="Phone Number" value="+30-210-6120656">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="navbar-center">
+                <h4 class="headerTextLeft">SIG-543323 |</h4>
+                <h4 class="headerTextRight" id="lastNameHeader">True Greece</h4>
             </div>
-            <div class="form-group col-md-3 col-xs-4">
-                <label for="phoneType">Type</label>
-                <input class="form-control" id="phoneType" value="Work">
-            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li> <img src="http://lorempixel.com/output/people-q-c-100-100-9.jpg" class="navimg"> </li>
+                <li class="nav  navbar-toggle navbar-link">Danielle O'Sullivan</li>
+                <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span><b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li> <a href="#">Action</a> </li>
+                        <li> <a href="#">Another action</a> </li>
+                        <li> <a href="#">Something else here</a> </li>
+                        <li class="divider"> </li>
+                        <li> <a href="#">Separated link</a> </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-        <div class="row">
-            <div class="form-group col-md-12">
-                <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Phone Number</i></a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="container pad0">
-                    <div class="row">
-                        <div class="form-group col-md-12">
-                            <label for="emailInput">Email Address</label>
-                            <input class="form-control" id="emailInput" type="text" placeholder="Email Address" value="info@truegreece.com">
-                        </div>
+    </nav>
 
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-12">
-                            <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add an Email Address</i></a>
-                        </div>
+
+    <!-- SPECIAL INTEREST GROUP TAB-->
+    <div id="special-interest-group-content" class="tab-pane fade in">
+
+
+        <!-- SPECIAL INTEREST GROUP NAME -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <a name="specialInterestGroupName"></a>
+                    <h3> Special Interest Group  </h3>
+                </div>
+                <div class="col-md-9">
+                    <div class="clear bottom20"></div>
+                    <div class="switch">
+                        <input id="specialInterestGroupActiveToggle" class="cmn-active-toggle cmn-active-toggle-round" type="checkbox" checked>
+                        <label for="specialInterestGroupActiveToggle"></label>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="container pad0">
-                    <div class="row">
-                        <div class="form-group col-md-12">
-                            <label for="social">Social</label>
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-skype"></i></span>
-                                <input class="form-control" id="skype" type="text" placeholder="(Skype Username)" value="TrueGreeceYO">
+        </div>
+
+        <div class="container container-border">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="container-fluid pad0">
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label for="travelProgramName">Travel Program Name</label>
+                                <input class="form-control" id="travelProgramName" type="text" placeholder="Tour Name">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label for="institutionName">Institution Name</label>
+                                <input class="form-control" id="institutionName" type="text" placeholder="Tour Name">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label for="website">Website</label>
+                                <input class="form-control" id="website" type="text" placeholder="(www.website.com)">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label>Special Interest Group Logo</label>
+                        <img alt="" src="../images/file-drop-placeholder-SIG.png" class="img-responsive">
+                    </div>
+                    <div class="form-group">
+
+                    </div>
+                </div>
+            </div>
+            <div class="container pad0">
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="sellingPoints">Description</label>
+                        <textarea class="form-control" id="escription" placeholder="Description"></textarea>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="sellingPoints">Selling Points</label>
+                        <textarea class="form-control" id="escription" placeholder="(Selling Points)"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- SPECIAL INTEREST GROUP ADDRESS -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <a name="address"></a>
+                    <h3> Address </h3>
+                </div>
+            </div>
+        </div>
+        <div class="container container-border">
+            <div class="row">
+                <div class="form-group col-md-8">
+                    <label for="address">Attention</label>
+                    <input class="form-control" id="address" type="text" placeholder="(Attention)">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="container-fluid pad0">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="address">Address</label>
+                                <input class="form-control" id="address" type="text" placeholder="Address">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="address2">Address 2</label>
+                                <input class="form-control" id="address2" type="text" placeholder="(Address 2)">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-4">
+                                <label for="zip">Zip Code</label>
+                                <input class="form-control" id="zip" type="text" placeholder="Zip">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="plus4">Plus 4</label>
+                                <input class="form-control" id="plus4" type="text" placeholder="(+4)" disabled>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="city">City</label>
+                                <input class="form-control" id="city" type="text" placeholder="City" disabled>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="state">State</label>
+                                <input class="form-control" id="state" disabled>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="countries">Country</label>
+                                <input class="form-control" id="countries">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="clear bottom30 hidden-xs"></div>
+                    <div class="switch">
+                        <input id="receivesCommission" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
+                        <label for="receivesCommission"></label>
+                    </div>
+                    <div class="switch-label">
+                        <label for="receivesCommission">Receives Commission Check</label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="clear bottom30 hidden-xs"></div>
+                    <div class="switch">
+                        <input id="fedexDeliveryToggle" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
+                        <label for="fedexDeliveryToggle"></label>
+                    </div>
+                    <div class="switch-label">
+                        <label for="fedexDeliveryToggle">Allows Fedex Delivery</label>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid pad0">
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add an Address</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                var countries = [
+                    "Albania",
+                    "Andorra",
+                    "Armenia",
+                    "Austria",
+                    "Azerbaijan",
+                    "Belarus",
+                    "Belgium",
+                    "Bosnia & Herzegovina",
+                    "Bulgaria",
+                    "Croatia",
+                    "Cyprus",
+                    "Czech Republic",
+                    "Denmark",
+                    "Estonia",
+                    "Finland",
+                    "France",
+                    "Georgia",
+                    "Germany",
+                    "Greece",
+                    "Hungary",
+                    "Iceland",
+                    "Ireland",
+                    "Italy",
+                    "Kosovo",
+                    "Latvia",
+                    "Liechtenstein",
+                    "Lithuania",
+                    "Luxembourg",
+                    "Macedonia",
+                    "Malta",
+                    "Moldova",
+                    "Monaco",
+                    "Montenegro",
+                    "Netherlands",
+                    "Norway",
+                    "Poland",
+                    "Portugal",
+                    "Romania",
+                    "Russia",
+                    "San Marino",
+                    "Serbia",
+                    "Slovakia",
+                    "Slovenia",
+                    "Spain",
+                    "Sweden",
+                    "Switzerland",
+                    "Turkey",
+                    "Ukraine",
+                    "United Kingdom",
+                    "Vatican City"
+                ];
+
+                //create AutoComplete UI component
+                $("#countries").kendoComboBox({
+                    dataSource: countries,
+                    filter: "startswith",
+                    placeholder: "Select Country",
+                });
+            });
+
+
+
+            $(document).ready(function () {
+                var state = [
+                    "Alabama",
+                    "Alaska",
+                    "Arizona",
+                    "Arkansas",
+                    "California",
+                    "Colorado",
+                    "Connecticut",
+                    "Delaware",
+                    "Florida",
+                    "Georgia",
+                    "Hawaii",
+                    "Idaho",
+                    "Illinois",
+                    "Indiana",
+                    "Iowa",
+                    "Kansas",
+                    "Kentucky",
+                    "Louisiana",
+                    "Maine",
+                    "Maryland",
+                    "Massachusetts",
+                    "Michigan",
+                    "Minnesota",
+                    "Mississippi",
+                    "Missouri",
+                    "Montana",
+                    "Nebraska",
+                    "Nevada",
+                    "New Hampshire",
+                    "New Jersey",
+                    "New Mexico",
+                    "New York",
+                    "North Carolina",
+                    "North Dakota",
+                    "Ohio",
+                    "Oklahoma",
+                    "Oregon",
+                    "Pennsylvania",
+                    "Rhode Island",
+                    "South Carolina",
+                    "South Dakota",
+                    "Tennessee",
+                    "Texas",
+                    "Utah",
+                    "Vermont",
+                    "Virginia",
+                    "Washington",
+                    "West Virginia",
+                    "Wisconsin",
+                    "Wyoming"
+                ];
+
+                //create AutoComplete UI component
+                $("#state").kendoComboBox({
+                    dataSource: state,
+                    filter: "startswith",
+                    placeholder: "Select State",
+                });
+            });
+        </script>
+
+
+
+
+
+        <!-- SPECIAL INTEREST GROUP CONTACT INFORMATION -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <a name="contactInformation"></a>
+                    <h3> Contact Information </h3>
+                </div>
+            </div>
+        </div>
+        <div class="container container-border">
+            <div class="row">
+                <div class="form-group col-md-4 col-xs-8">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input class="form-control" id="phoneNumber" type="text" placeholder="Phone Number">
+                </div>
+                <div class="form-group col-md-3 col-xs-4">
+                    <label for="phoneType">Type</label>
+                    <input class="form-control" id="phoneType" value="Work">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Phone Number</i></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="container pad0">
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label for="emailInput">Email Address</label>
+                                <input class="form-control" id="emailInput" type="text" placeholder="(Email Address)">
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add an Email Address</i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        
+        <script>
+            $(document).ready(function() {
+                $("#phoneNumber").kendoMaskedTextBox({
+                    mask: "(999) 000-0000"
+                });
+            });
+        </script>
 
-    <script>
-        $(document).ready(function () {
-            var countries = [
+        <script>
+            $(document).ready(function () {
+                var countries = [
 "Albania",
 "Andorra",
 "Armenia",
@@ -419,21 +467,486 @@
 "Vatican City"
 ];
 
-            //create AutoComplete UI component
-            $("#validCountries").kendoComboBox({
-                dataSource: countries,
+                //create AutoComplete UI component
+                $("#validCountries").kendoComboBox({
+                    dataSource: countries,
+                    filter: "startswith",
+                    placeholder: "Select Country",
+                });
+            });
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                $("#phoneType").kendoComboBox({
+                    dataTextField: "text",
+                    dataValueField: "value",
+                    placeholder: "Select Type",
+                    dataSource: [
+                        {
+                            text: "Home",
+                            value: "1"
+},
+                        {
+                            text: "Mobile",
+                            value: "2"
+},
+                        {
+                            text: "Work",
+                            value: "3"
+},
+]
+                });
+            });
+        </script>
+
+        <!-- OPTIONS -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>
+                        <a name="auxiliaryrulesSection"></a>
+                        Options
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="container container-border">
+            <div class="row">
+                <div class="col-md-4 col-xs-12">
+                    <div class="clear bottom15"></div>
+                    <div class="switch">
+                        <input id="aux-5" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
+                        <label for="aux-5"></label>
+                    </div>
+                    <div class="switch-label">
+                        <label for="aux-5">Allows OUI Travel Protection</label>
+                    </div>   
+                    <div class="container " id="inoculations-notes">
+                        <div class="clear"></div>
+                        <div class="row">
+                            <div class="input-group input-group-sm col-md-12">
+                                <textarea class="form-control" id="" type="text" placeholder="(Travel Protection Information)"></textarea>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                <div class="col-md-3 col-xs-12">
+                    <div class="clear bottom15"></div>
+                    <div class="switch">
+                        <input id="aux-7" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
+                        <label for="aux-7"></label>
+                    </div>
+                    <div class="switch-label">
+                        <label for="aux-7">OUI Managed Waitlist</label>
+                    </div>  
+                    <div class="clear bottom30"></div>
+                    <div class="switch">
+                        <input id="aux-8" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
+                        <label for="aux-8"></label>
+                    </div>
+                    <div class="switch-label">
+                        <label for="aux-8">Allows OUI to use Logo</label>
+                    </div>  
+                    <div class="clear bottom30"></div>
+                    <div class="switch">
+                        <input id="aux-9" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
+                        <label for="aux-9"></label>
+                    </div>
+                    <div class="switch-label">
+                        <label for="aux-9">Requires Affiliation</label>
+                    </div>  
+                    
+                </div>
+                <div class="col-md-5 col-xs-12">
+                    <div class="clear bottom15"></div>
+                    <div class="switch">
+                        <input id="alt-return-date-toggle" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
+                        <label for="alt-return-date-toggle"></label>
+                    </div>
+                    <div class="switch-label">
+                        <label for="alt-return-date-toggle">Unique Deposit</label>
+                    </div>  
+                    <div class="container pad0" id="alt-return-date">
+                        <div class="clear bottom15"></div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="input-group input-group-sm col-md-6">
+                                    <span class="input-group-addon">$</span>
+                                    <input class="form-control textRight digits" id="" type="text" placeholder="0">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear bottom30"></div>
+                    <div class="switch">
+                        <input id="aux-12" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                        <label for="aux-12"></label>
+                    </div> 		
+                    <div class="switch-label" >
+                        <label for="aux-12">Requires Written Guest Cancellation Request</label>
+                    </div>  		
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function() {
+
+                $('#tourCode').bind("change paste keyup", function() {
+                    if($(this).val() !== ''){
+                        $('#tourCodeHeader').html($(this).val()); 
+                    }
+                    else{
+                        $('#tourCodeHeader').html('Tour Code');    
+                    }
+                });
+
+                $('#tourName').bind("change paste keyup", function() {
+                    if($(this).val() !== ''){
+                        $('#tourNameHeader').html($(this).val()); 
+                    }
+                    else{
+                        $('#tourNameHeader').html('Tour Name');    
+                    }
+
+                });
+
+                $('#pre-tour-toggle').change(function(){
+                    if ($('#pre-tour-tab-link').hasClass('displayNone')) {
+                        $('#pre-tour-tab-link').removeClass('displayNone');
+                    }
+                    else { 
+                        $('#pre-tour-tab-link').addClass('displayNone');
+                    }
+                });
+
+                $('#post-tour-toggle').change(function(){
+                    if ($('#post-tour-tab-link').hasClass('displayNone')) {
+                        $('#post-tour-tab-link').removeClass('displayNone');
+                    }
+                    else { 
+                        $('#post-tour-tab-link').addClass('displayNone');
+                    }
+                });
+
+
+                $('#aux-6').change(function(){
+                    if ($('#visa-notes').is(':visible')) {
+                        $('#visa-notes').slideUp('');
+                    }
+                    else { 
+                        $('#visa-notes').slideDown('');
+                    }
+
+                    if ($('#visa-notes').hasClass('displayNone')) {
+                        $('#visa-notes').removeClass('displayNone');
+                    }
+
+                });
+                $('#aux-5').change(function(){
+                    if ($('#inoculations-notes').is(':visible')) {
+                        $('#inoculations-notes').slideUp('');
+                    }
+                    else { 
+                        $('#inoculations-notes').slideDown('');
+                    }
+
+                    if ($('#inoculations-notes').hasClass('displayNone')) {
+                        $('#inoculations-notes').removeClass('displayNone');
+                    }
+
+                });
+
+
+                $('#alt-return-date-toggle').change(function(){
+                    if ($('#alt-return-date').is(':visible')) {
+                        $('#alt-return-date').slideUp('');
+                    }
+                    else { 
+                        $('#alt-return-date').slideDown('');
+                    }
+
+                    if ($('#alt-return-date').hasClass('displayNone')) {
+                        $('#alt-return-date').removeClass('displayNone');
+                    }
+
+                });
+
+
+
+            });
+
+        </script>
+        
+        
+        <!-- SPECIAL INTEREST GROUP TRAVEL PLANNER -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <a name="contacts"></a>
+                    <h3> Travel Planners </h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="container container-border">
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <div class="maxHeight200" id="guestUpcomingReservationsGrid"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <a data-toggle="modal" data-target="#contactCreateModal" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Travel Planner</i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- UPCOMING RESERVATIONS SCRIPTS -->
+        <script>
+            $("#guestUpcomingReservationsGrid").kendoGrid({
+                selectable: "multiple cell",
+                allowCopy: true,
+                editable: "popup",
+                selectable: "row",
+                sortable: "true",
+                columns: [
+                    {
+                        field: "name",
+                        title: "Name",
+                        template: "<b> #: name # </b>",
+},
+                    {
+                        field: "phoneNumber",
+                        title: "Phone Number",
+                        minScreenWidth: "480",
+},
+                    {
+                        field: "emailAddress",
+                        title: "Email Address",
+                        minScreenWidth: "960",
+
+},
+                    {
+                        field: "jobTitle",
+                        title: "Job Title",
+                        minScreenWidth: "960",
+},
+                    {
+                        field: "primary",
+                        title: "Primary",
+                        minScreenWidth: "480",
+                        width: 70,
+                        encoded: false,
+                        headerAttributes: {
+                            
+                            style: "text-align: center;"
+                        },
+                        
+},
+                    {
+                        command: ["edit", {
+                            name: "destroy",
+                            text: "Remove"
+                    }],
+                        width: 185,
+                        attributes: {
+                            style: "text-align: right;"
+                        },
+}
+],
+                dataSource: [
+                    {
+                        name: "Mr. David Rhodes",
+                        phoneNumber: "843-457-7896",
+                        emailAddress: "david@usc.edu",
+                        jobTitle: "Travel Director",
+                        primary: "<div style='text-align: center'> <input id='primaryCheck' type='checkbox'> </div>",
+},
+
+]
+            });
+        </script>
+
+
+
+    </div>
+
+    <!-- CREATE CONTACT MODAL -->
+    <div class="modal fade dark-modal" id="contactCreateModal" tabindex="-1" role="dialog" aria-labelledby="myModalInfo">
+
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class=" modal-header">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-md-4 col-xs-6 borderRight">
+                                <h3>Create<br> Travel Planner</h3>
+                            </div>
+
+                            <div class="col-md-7 col-xs-4">
+                                <div class="clear bottom30"></div>
+                                <label>New Travel Planner</label>
+                            </div>
+                            <div class="textRight col-md-1">
+                                <a data-dismiss="modal"><i class="fa fa-times exitIcon alignRight"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="form-group col-md-2">
+                                <label for="title">Title</label>
+                                <input class="form-control" id="title" placeholder="--">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="firstName">First Name</label>
+                                <input class="form-control" id="firstName" type="text" placeholder="First Name">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="lastName">Last Name</label>
+                                <input class="form-control" id="lastName" type="text" placeholder="Last Name">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="suffix">Suffix</label>
+                                <input class="form-control" id="suffix" placeholder="(--)">
+                            </div>
+                        </div>
+
+
+
+                        <h3>Contatct Information</h3>
+                        <hr>
+
+                        <div class="row">
+                            <div class="form-group col-md-6 col-xs-8">
+                                <label for="contactPhoneNumber">Phone Number</label>
+                                <input class="form-control" id="contactPhoneNumber" placeholder="Phone Number">
+                            </div>
+                            <div class="form-group col-md-4 col-xs-4">
+                                <label for="contactPhoneType">Type</label>
+                                <input class="form-control" id="contactPhoneType">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Phone Number</i></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="emailInput">Email Address</label>
+                                <input class="form-control" id="emailInput" type="text" placeholder="(Email Address)">
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add an Email Address</i></a>
+                            </div>
+                        </div>
+
+
+                        <h3>Description</h3>
+                        <hr>
+
+                        <div class="row">
+                            <div class="form-group col-md-6 col-xs-8">
+                                <label for="contactJobTitle">Job Title</label>
+                                <input class="form-control" id="contactJobTitle" placeholder="Job Title">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                        <!-- MODAL FOOTER -->
+                   
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-sm btn-info" id="createContact"><i class="fa fa-check-circle-o"></i> Submit </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT SCRIPTS -->
+    <script>
+        //CONTACT TITLE
+        $(document).ready(function () {
+            $("#title").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
                 filter: "startswith",
-                placeholder: "Select Country",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "Mr.",
+                        value: "1"
+},
+                    {
+                        text: "Mrs.",
+                        value: "2"
+},
+                    {
+                        text: "Ms.",
+                        value: "3"
+},
+                    {
+                        text: "Prof.",
+                        value: "3"
+},
+                    {
+                        text: "Dr.",
+                        value: "3"
+}
+]
+            });
+        });
+
+        //CONTACT SUFFIX
+        $(document).ready(function () {
+            $("#suffix").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "",
+                        value: "1"
+},
+                    {
+                        text: "Sr.",
+                        value: "2"
+},
+                    {
+                        text: "Jr.",
+                        value: "3"
+},
+                    {
+                        text: "III",
+                        value: "4"
+},
+]
             });
         });
 
 
-       
-    </script>
-
-    <script>
+        //CONTACT PHONE NUMBER MASK
         $(document).ready(function () {
-            $("#phoneType").kendoComboBox({
+            $("#contactPhoneNumber").kendoMaskedTextBox({
+                mask: "(999) 000-0000"
+            });
+        });
+
+        //CONTACT PHONE TYPE
+        $(document).ready(function () {
+            $("#contactPhoneType").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
                 placeholder: "Select Type",
@@ -450,337 +963,99 @@
                         text: "Work",
                         value: "3"
 },
+                    {
+                        text: "Fax",
+                        value: "3"
+},
 ]
             });
         });
+
+
+      
     </script>
 
-
-    <!-- GROUND OPERATOR CONTACTS-->
+    <!-- BOOKING AND CANCELLATION RULES -->
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <a name="contacts"></a>
-                <h3> Contacts </h3>
+                <h3>
+                    <a name=""></a>
+                    Booking and Cancellation Rules
+                </h3>
             </div>
         </div>
     </div>
-
     <div class="container container-border">
         <div class="row">
-            <div class="form-group col-md-12">
-                <div class="maxHeight200" id="guestUpcomingReservationsGrid"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group col-md-12">
-                <a data-toggle="modal" data-target="#contactCreateModal" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Contact</i></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- UPCOMING RESERVATIONS SCRIPTS -->
-    <script>
-        $("#guestUpcomingReservationsGrid").kendoGrid({
-            selectable: "multiple cell",
-            allowCopy: true,
-            editable: "popup",
-            selectable: "row",
-            sortable: "true",
-            columns: [
-                {
-                    field: "name",
-                    title: "Name",
-                    template: "<b> #: name # </b>",
-},
-                {
-                    field: "phoneNumber",
-                    title: "Phone Number",
-                    minScreenWidth: "480",
-},
-                {
-                    field: "emailAddress",
-                    title: "Email Address",
-                    minScreenWidth: "960",
-
-},
-                {
-                    field: "jobTitle",
-                    title: "Job Title",
-                    minScreenWidth: "960",
-},
-                {
-                    field: "department",
-                    title: "Department",
-                    minScreenWidth: "480",
-                    encoded: false,
-},
-                {
-                    command: ["edit", {
-                        name: "destroy",
-                        text: "Remove"
-                    }],
-                    width: 185,
-                    attributes: {
-                        style: "text-align: right;"
-                    },
-}
-],
-            dataSource: [
-                {
-                    name: "Mrs. Autumn Silk",
-                    phoneNumber: "+30-210-6120656",
-                    emailAddress: "Autumn@truegreece.com",
-                    jobTitle: "Employee Liaison",
-                    department: "Ground Operations",
-},
-
-]
-        });
-    </script>
-
-
-
-</div>
-
-<!-- CREATE CONTACT MODAL -->
-<div class="modal fade dark-modal" id="contactCreateModal" tabindex="-1" role="dialog" aria-labelledby="myModalInfo">
-
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class=" modal-header">
-                <div class="container">
+            <div class="col-md-6 col-xs-12">
+                <b>Booking Rules</b>
+                <div class="container pad0">
                     <div class="row">
-
-                        <div class="col-md-3 col-xs-6 borderRight">
-                            <h3>Create<br> Contact</h3>
+                        <div class="form-group col-md-6">
+                            <div class="clear bottom15"></div>
+                            <div class="switch">
+                                <input id="1" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                                <label for="1"></label>
+                            </div>
+                            <div class="switch-label">
+                                <label for="1">Departure Dependent Rules</label>
+                            </div>  
                         </div>
-
-                        <div class="col-md-8 col-xs-4">
-                            <div class="clear bottom30"></div>
-                            <label>New Contact</label>
-                        </div>
-                        <div class="textRight col-md-1">
-                            <a data-dismiss="modal"><i class="fa fa-times exitIcon alignRight"></i></a>
+                        <div class="form-group col-md-6">
+                            <div class="clear bottom15"></div>
+                            <div class="switch">
+                                <input id="2" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
+                                <label for="2"></label>
+                            </div>
+                            <div class="switch-label">
+                                <label for="2">Guests May Book Through OUI</label>
+                            </div>  
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="container">
-                <div class="modal-body">
+            <div class="col-md-6 col-xs-12 borderLeft">
+                <b>Cancellation Rules</b>
+                <div class="container pad0">
                     <div class="row">
-                        <div class="form-group col-md-2">
-                            <label for="title">Title</label>
-                            <input class="form-control" id="title" placeholder="(--)">
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="firstName">First Name</label>
-                            <input class="form-control" id="firstName" type="text" placeholder="First Name">
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="lastName">Last Name</label>
-                            <input class="form-control" id="lastName" type="text" placeholder="Last Name">
-                        </div>
-                        <div class="form-group col-md-2">
-                            <label for="suffix">Suffix</label>
-                            <input class="form-control" id="suffix" placeholder="(--)">
-                        </div>
-                    </div>
-
-
-
-                    <h3>Contatct Information</h3>
-                    <hr>
-
-                    <div class="row">
-                        <div class="form-group col-md-6 col-xs-8">
-                            <label for="contactPhoneNumber">Phone Number</label>
-                            <input class="form-control" id="contactPhoneNumber" placeholder="Phone Number">
-                        </div>
-                        <div class="form-group col-md-4 col-xs-4">
-                            <label for="contactPhoneType">Type</label>
-                            <input class="form-control" id="contactPhoneType">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-12">
-                            <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Phone Number</i></a>
+                        <div class="form-group col-md-6">
+                            <div class="clear bottom15"></div>
+                            <div class="switch">
+                                <input id="3" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                                <label for="3"></label>
+                            </div>
+                            <div class="switch-label">
+                                <label for="3">Departure Dependent Rules</label>
+                            </div>  
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-md-6">
-                            <label for="emailInput">Email Address</label>
-                            <input class="form-control" id="emailInput" type="text" placeholder="(Email Address)">
+                            <div class="clear bottom10"></div>
+                            <label for="">Deposit Amount Non-Refundable</label>
                         </div>
-
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-12">
-                            <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add an Email Address</i></a>
-                        </div>
-                    </div>
-
-
-                    <h3>Description</h3>
-                    <hr>
-
-                    <div class="row">
-                        <div class="form-group col-md-6 col-xs-8">
-                            <label for="contactJobTitle">Job Title</label>
-                            <input class="form-control" id="contactJobTitle" placeholder="Job Title">
+                        <div class="input-group input-group-sm col-md-6">
+                            <span class="input-group-addon">$</span>
+                            <input class="form-control textRight digits" id="" type="text" placeholder="0">
                         </div>
                     </div>
                     <div class="row">
-                        <div class="form-group col-md-6 col-xs-8">
-                            <label for="contactDepartment">OUI Department</label>
-                            <input class="form-control" id="contactDepartment" placeholder="Phone Number">
+                        <div class="form-group col-md-6">
+                            <div class="clear bottom10"></div>
+                            <label for="">Days After Booking Full Refund Allowed</label>
+                        </div>
+                        <div class="input-group col-md-6">
+                            <input class="form-control textCenter digits" style="min-width:87px" id="" type="text" placeholder="0">
                         </div>
                     </div>
-
-
-
-
-
-
-                    <!-- MODAL FOOTER -->
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-sm btn-info" id="createContact"><i class="fa fa-check-circle-o"></i> Submit </button>
             </div>
         </div>
     </div>
-</div>
-
-<!-- CONTACT SCRIPTS -->
-<script>
-    //CONTACT TITLE
-    $(document).ready(function () {
-        $("#title").kendoComboBox({
-            dataTextField: "text",
-            dataValueField: "value",
-            filter: "startswith",
-            suggest: "true",
-            dataSource: [
-                {
-                    text: "Mr.",
-                    value: "1"
-},
-                {
-                    text: "Mrs.",
-                    value: "2"
-},
-                {
-                    text: "Ms.",
-                    value: "3"
-},
-                {
-                    text: "Prof.",
-                    value: "3"
-},
-                {
-                    text: "Dr.",
-                    value: "3"
-}
-]
-        });
-    });
-
-    //CONTACT SUFFIX
-    $(document).ready(function () {
-        $("#suffix").kendoComboBox({
-            dataTextField: "text",
-            dataValueField: "value",
-            filter: "startswith",
-            suggest: "true",
-            dataSource: [
-                {
-                    text: "",
-                    value: "1"
-},
-                {
-                    text: "Sr.",
-                    value: "2"
-},
-                {
-                    text: "Jr.",
-                    value: "3"
-},
-                {
-                    text: "III",
-                    value: "4"
-},
-]
-        });
-    });
-
-
-    //CONTACT PHONE NUMBER MASK
-    $(document).ready(function () {
-        $("#contactPhoneNumber").kendoMaskedTextBox({
-            mask: "(999) 000-0000"
-        });
-    });
-
-    //CONTACT PHONE TYPE
-    $(document).ready(function () {
-        $("#contactPhoneType").kendoComboBox({
-            dataTextField: "text",
-            dataValueField: "value",
-            placeholder: "Select Type",
-            dataSource: [
-                {
-                    text: "Home",
-                    value: "1"
-},
-                {
-                    text: "Mobile",
-                    value: "2"
-},
-                {
-                    text: "Work",
-                    value: "3"
-},
-                {
-                    text: "Fax",
-                    value: "3"
-},
-]
-        });
-    });
-
-
-    //CONTACT OUI DEPARTMENT
-    $(document).ready(function () {
-        $("#contactDepartment").kendoMultiSelect({
-            dataTextField: "text",
-            dataValueField: "value",
-            placeholder: "Select Department",
-            dataSource: [
-                {
-                    text: "Accounting",
-                    value: "1"
-},
-                {
-                    text: "Air Operations",
-                    value: "1"
-},
-                {
-                    text: "Fulfillment",
-                    value: "2"
-},
-                {
-                    text: "Ground Operations",
-                    value: "2"
-},
-]
-        });
-    });
-</script>
 
 
 
+</body>
 
-    </body>
 </html>

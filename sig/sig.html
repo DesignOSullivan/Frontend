@@ -47,8 +47,7 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <div class="navbar-center">
-                <h4 class="headerTextLeft">SIG-543323 |</h4>
-                <h4 class="headerTextRight" id="lastNameHeader">True Greece</h4>
+                <h4 class="headerTextRight" id="lastNameHeader">New SIG</h4>
             </div>
             <ul class="nav navbar-nav navbar-right">
                 <li> <img src="http://lorempixel.com/output/people-q-c-100-100-9.jpg" class="navimg"> </li>
@@ -188,7 +187,7 @@
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="state">State</label>
-                                <input class="form-control" id="state" disabled>
+                                <input class="form-control" id="state" placeholder="State" disabled>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="countries">Country</label>
@@ -292,67 +291,8 @@
 
 
 
-            $(document).ready(function () {
-                var state = [
-                    "Alabama",
-                    "Alaska",
-                    "Arizona",
-                    "Arkansas",
-                    "California",
-                    "Colorado",
-                    "Connecticut",
-                    "Delaware",
-                    "Florida",
-                    "Georgia",
-                    "Hawaii",
-                    "Idaho",
-                    "Illinois",
-                    "Indiana",
-                    "Iowa",
-                    "Kansas",
-                    "Kentucky",
-                    "Louisiana",
-                    "Maine",
-                    "Maryland",
-                    "Massachusetts",
-                    "Michigan",
-                    "Minnesota",
-                    "Mississippi",
-                    "Missouri",
-                    "Montana",
-                    "Nebraska",
-                    "Nevada",
-                    "New Hampshire",
-                    "New Jersey",
-                    "New Mexico",
-                    "New York",
-                    "North Carolina",
-                    "North Dakota",
-                    "Ohio",
-                    "Oklahoma",
-                    "Oregon",
-                    "Pennsylvania",
-                    "Rhode Island",
-                    "South Carolina",
-                    "South Dakota",
-                    "Tennessee",
-                    "Texas",
-                    "Utah",
-                    "Vermont",
-                    "Virginia",
-                    "Washington",
-                    "West Virginia",
-                    "Wisconsin",
-                    "Wyoming"
-                ];
-
-                //create AutoComplete UI component
-                $("#state").kendoComboBox({
-                    dataSource: state,
-                    filter: "startswith",
-                    placeholder: "Select State",
-                });
-            });
+            
+          
         </script>
 
 
@@ -522,7 +462,7 @@
                     <div class="switch-label">
                         <label for="aux-5">Allows OUI Travel Protection</label>
                     </div>   
-                    <div class="container " id="inoculations-notes">
+                    <div class="container " id="travelProtection" style="display:none;">
                         <div class="clear"></div>
                         <div class="row">
                             <div class="input-group input-group-sm col-md-12">
@@ -550,7 +490,7 @@
                     </div>  
                     <div class="clear bottom30"></div>
                     <div class="switch">
-                        <input id="aux-9" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
+                        <input id="aux-9" class="cmn-toggle cmn-toggle-round" type="checkbox">
                         <label for="aux-9"></label>
                     </div>
                     <div class="switch-label">
@@ -645,15 +585,15 @@
 
                 });
                 $('#aux-5').change(function(){
-                    if ($('#inoculations-notes').is(':visible')) {
-                        $('#inoculations-notes').slideUp('');
+                    if ($('#travelProtection').is(':visible')) {
+                        $('#travelProtection').slideUp('');
                     }
                     else { 
-                        $('#inoculations-notes').slideDown('');
+                        $('#travelProtection').slideDown('');
                     }
 
-                    if ($('#inoculations-notes').hasClass('displayNone')) {
-                        $('#inoculations-notes').removeClass('displayNone');
+                    if ($('#travelProtection').hasClass('displayNone')) {
+                        $('#travelProtection').removeClass('displayNone');
                     }
 
                 });
@@ -759,7 +699,7 @@
                 dataSource: [
                     {
                         name: "Mr. David Rhodes",
-                        phoneNumber: "843-457-7896",
+                        phoneNumber: "843-457-7896 (Mobile)",
                         emailAddress: "david@usc.edu",
                         jobTitle: "Travel Director",
                         primary: "<div style='text-align: center'> <input id='primaryCheck' type='checkbox'> </div>",
@@ -986,10 +926,53 @@
             </div>
         </div>
     </div>
+    
+    
     <div class="container container-border">
+        
         <div class="row">
+                        <div class="form-group col-md-3">
+                            <div class="switch">
+                                <input id="3" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
+                                <label for="3"></label>
+                            </div>
+                            <div class="switch-label">
+                                <label for="3">Guests May Book Through OUI</label>
+                            </div>  
+                        </div>
+                   
+        </div>
+        <div class="row">
+                    
+                        <div class="form-group col-md-3">
+                            <div class="clear bottom10"></div>
+                            <label for="">Days After Booking Full Refund Allowed</label>
+                        </div>
+            
+                        <div class="form-group col-md-1 pad0">
+                            <input class="form-control textCenter digits" style="min-width:87px" id="" type="number" placeholder="0">
+                        </div>
+            
+            </div>
+        
+            <div class="row">
+                        <div class="form-group col-md-3">
+                            <div class="clear bottom10"></div>
+                            <label for="">Deposit Amount Non-Refundable</label>
+                        </div>
+            
+                        <div class="input-group input-group-sm col-md-1">
+                            <span class="input-group-addon">$</span>
+                            <input class="form-control textRight digits" id="" type="number" placeholder="0">
+                        </div>
+            
+        </div>
+        
+            <div class="clear bottom30"></div>
+            
+                <div class="row">
+<!--UNIQUE BOOKING AND CANCELLATION RULES-->
             <div class="col-md-6 col-xs-12">
-                <b>Booking Rules</b>
                 <div class="container pad0">
                     <div class="row">
                         <div class="form-group col-md-6">
@@ -999,62 +982,246 @@
                                 <label for="1"></label>
                             </div>
                             <div class="switch-label">
-                                <label for="1">Departure Dependent Rules</label>
+                                <label for="1">Unique Booking Rules</label>
                             </div>  
                         </div>
+                    </div>
+                    
+<!--UNIQUE BOOKING RULES SECTION-->
+                    <div id="uniqueBookingRules" class="container pad0" style="display: none">
+                                <div class="form-group row">
+                                    <div class="col-md-6">
+                                        <div class="clear bottom5"></div>
+                                        <label>Confirmed</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">Days Prior to Departure</span>
+                                            <input class="form-control textRight digits" id="" type="text" placeholder="0">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-6">
+                                        <div class="clear bottom5"></div>
+                                        <label>No Bookings</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">Days Prior to Departure</span>
+                                            <input class="form-control textRight digits" id="" type="text" placeholder="0">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-6">
+                                        <input id="bookingrules3" class="booking-rules form-control">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="clear"></div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">Days Prior to Departure</span>
+                                            <input class="form-control textRight digits" id="" type="text" placeholder="0">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-6">
+                                        <input id="bookingrules4" class="booking-rules form-control">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="clear"></div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">Days Prior to Departure</span>
+                                            <input class="form-control textRight digits" id="" type="text" placeholder="0">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-6">
+                                        <input id="bookingrules5" class="booking-rules form-control">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="clear"></div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">Days Prior to Departure</span>
+                                            <input class="form-control textRight digits" id="" type="text" placeholder="0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+<!--/ END UNIQUE BOOKING RULES-->
+                    
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <div class="container pad0">
+                    
+                    <div class="row">
                         <div class="form-group col-md-6">
                             <div class="clear bottom15"></div>
                             <div class="switch">
-                                <input id="2" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
+                                <input id="2" class="cmn-toggle cmn-toggle-round" type="checkbox">
                                 <label for="2"></label>
                             </div>
                             <div class="switch-label">
-                                <label for="2">Guests May Book Through OUI</label>
+                                <label for="2">Unique Cancellation Rules</label>
                             </div>  
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-xs-12 borderLeft">
-                <b>Cancellation Rules</b>
-                <div class="container pad0">
-                    <div class="row">
-                        <div class="form-group col-md-6">
-                            <div class="clear bottom15"></div>
-                            <div class="switch">
-                                <input id="3" class="cmn-toggle cmn-toggle-round" type="checkbox">
-                                <label for="3"></label>
+                    
+<!--UNIQUE CANCELLATION RULES SECTION-->
+                    <div id="uniqueCancellationRules" class="container pad0" style="display:none">
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <div class="clear bottom5"></div>
+                                <label>0% (Full Refund)</label>
                             </div>
-                            <div class="switch-label">
-                                <label for="3">Departure Dependent Rules</label>
-                            </div>  
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Days Prior to Departure</span>
+                                    <input class="form-control textRight digits" id="CancelDaysWith0PctPenalty" type="text" placeholder="0">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <div class="clear bottom5"></div>
+                                <label>25% of Tour Price</label>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Days Prior to Departure</span>
+                                    <input class="form-control textRight digits" id="CancelDaysWith25PctPenalty" type="text" placeholder="0">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <div class="clear bottom5"></div>
+                                <label>50% of Tour Price</label>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Days Prior to Departure</span>
+                                    <input class="form-control textRight digits" id="CancelDaysWith50PctPenalty" type="text" placeholder="0">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <div class="clear bottom5"></div>
+                                <label>75% of Tour Price</label>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Days Prior to Departure</span>
+                                    <input class="form-control textRight digits" id="CancelDaysWith75PctPenalty" type="text" placeholder="0">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <div class="clear bottom5"></div>
+                                <label>100% (No Refund)</label>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Days Prior to Departure</span>
+                                    <input class="form-control textRight digits" id="CancelDaysWith100PctPenalty" type="text" placeholder="0">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="form-group col-md-6">
-                            <div class="clear bottom10"></div>
-                            <label for="">Deposit Amount Non-Refundable</label>
-                        </div>
-                        <div class="input-group input-group-sm col-md-6">
-                            <span class="input-group-addon">$</span>
-                            <input class="form-control textRight digits" id="" type="text" placeholder="0">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-6">
-                            <div class="clear bottom10"></div>
-                            <label for="">Days After Booking Full Refund Allowed</label>
-                        </div>
-                        <div class="input-group col-md-6">
-                            <input class="form-control textCenter digits" style="min-width:87px" id="" type="text" placeholder="0">
-                        </div>
-                    </div>
+<!--/ END UNIQUE CANCELLATION RULES-->
+                    
                 </div>
             </div>
+<!--/ END UNIQUE BOOKING AND CANCELLATION RULES-->
+            </div>
+            
+            
+            
+            
         </div>
-    </div>
+   
 
+<script>
+    $(document).ready(function() {
+        
+        $("#bookingrules3").kendoComboBox({
+            dataTextField: "text",
+            dataValueField: "value",
+            dataSource: [
+                { text: "Pending Air", value: "1" },
+                { text: "Pending Cruise", value: "2" },
+                { text: "Pending Ground", value: "3" }
+            ], 
+            filter: "contains",
+            suggest: true,
+            index: 3
+        });
 
+        $("#bookingrules4").kendoComboBox({
+            dataTextField: "text",
+            dataValueField: "value",
+            dataSource: [
+                { text: "Pending Air", value: "1" },
+                { text: "Pending Cruise", value: "2" },
+                { text: "Pending Ground", value: "3" }
+            ], 
+            filter: "contains",
+            suggest: true,
+            index: 3
+        });
+
+        $("#bookingrules5").kendoComboBox({
+            dataTextField: "text",
+            dataValueField: "value",
+            dataSource: [
+                { text: "Pending Air", value: "1" },
+                { text: "Pending Cruise", value: "2" },
+                { text: "Pending Ground", value: "3" }
+            ], 
+            filter: "contains",
+            suggest: true,
+            index: 3
+        });
+
+    
+    $('#1').change(function(){
+        if ($('#uniqueBookingRules').is(':visible')) {
+            $('#uniqueBookingRules').slideUp('');
+        }
+        else { 
+            $('#uniqueBookingRules').slideDown('');
+        }
+
+        if ($('#uniqueBookingRules').hasClass('displayNone')) {
+            $('#uniqueBookingRules').removeClass('displayNone');
+        }
+        
+    });
+        
+        
+        $('#2').change(function(){
+            if ($('#uniqueCancellationRules').is(':visible')) {
+                $('#uniqueCancellationRules').slideUp('');
+        }
+        else { 
+            $('#uniqueCancellationRules').slideDown('');
+        }
+
+            if ($('#uniqueCancellationRules').hasClass('displayNone')) {
+                $('#uniqueCancellationRules').removeClass('displayNone');
+        }
+        
+    });
+        
+        //-------------
+        
+    });
+    </script>
 
 </body>
 

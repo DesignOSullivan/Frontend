@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OUI</title>
+
+
+    <link rel="stylesheet" href="../kendoui/styles/kendo.common-bootstrap.min.css">
+    <link rel="stylesheet" href="../kendoui/styles/kendo.bootstrap.min.css">
+
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-toggle.min.js"></script>
+    <script src="../kendoui/js/kendo.all.min.js"></script>
+    <script src="tour-director-scripts.js"></script>
+
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/toggle-me-softly.css" rel="stylesheet">
+    <link href="../css/actively-toggle-me-softly.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/font-awesome.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </button>
+            <a class="navbar-brand" href="#" style="padding: 0 15px;"><img src="../images/logo.png" style="max-height: 60px;" /></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="navbar-center">
+                <h4 class="headerTextRight" id="lastNameHeader">Tour Director Master Schedule</h4>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li> <img src="http://lorempixel.com/output/people-q-c-100-100-9.jpg" class="navimg"> </li>
+                <li class="nav  navbar-toggle navbar-link">Danielle O'Sullivan</li>
+                <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span><b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li> <a href="#">Action</a> </li>
+                        <li> <a href="#">Another action</a> </li>
+                        <li> <a href="#">Something else here</a> </li>
+                        <li class="divider"> </li>
+                        <li> <a href="#">Separated link</a> </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <form role="form">
+        
+        <div class="container" style="margin-top:30px">
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="tour">Tour</label>
+                    <input class="form-control" id="tour">
+                </div>
+                <div class="col-md-2">
+                    <label for="sig">Special Interest Group</label>
+                    <input class="form-control" id="sig">
+                </div>
+                <div class="col-md-2">
+                    <label for="director">Director</label>
+                    <input class="form-control" id="director">
+                </div>
+                <div class="col-md-2">
+                    <label for="user">User</label>
+                    <input class="form-control" id="user">
+                </div>
+                <div class="col-md-2">
+                    <label for="daysOut">Days Out</label>
+                    <input class="form-control" id="daysOut" placeholder="Enter Number of Days" type="number">
+                </div>
+                <div class="col-md-2">
+                    <label for="date">Date</label>
+                    <input class="form-control" id="date">
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="margin-top:30px">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="example">
+                        <ul id="panelbar">
+                            
+                            
+                            <li class="k-state-active">
+                                <span class="k-link k-state-selected">ABP-15 | European Tapestry<span class="right">2 Departures &nbsp;</span></span>
+                                <div class="container">
+                                    <div class="row row-panelbar borderBottom">
+                                        <div class="col-md-12">
+                                            <table>
+                                                <tr>
+                                                    <th width="20%">Departure</th>
+                                                    <th width="20%">Base Tour</th>
+                                                    <th width="20%">Pre-Tour Option</th>
+                                                    <th width="20%">Post-Tour Extension</th>
+                                                    <th width="">User</th>
+                                                </tr>
+                                                <tr>
+                                                    <td><b>16-May to 25-May-15</b><br><p>Smithsonian Journeys<br> 90 Day to Departure</p></td>
+                                                    
+                                                    <td><div>Advertised | 24 Guests</div><br>
+                                                        <label>16-May to 20-May-15</label>
+                                                        <input class="form-control" id="leg1"><br>
+                                                        <label>21-May to 25-May-15</label>
+                                                        <input class="form-control" id="leg2">
+                                                    </td>
+                                                    
+                                                    <td>——</td>
+                                                    
+                                                    <td><div>Advertised | 24 Guests</div><br>
+                                                        <label>16-May to 20-May-15</label>
+                                                        <input class="form-control" id="leg3"><br>
+                                                        <label>21-May to 25-May-15</label>
+                                                        <input class="form-control" id="leg4">
+                                                    </td>
+                                                    
+                                                    <td>jhobbsbailey</td>
+                                                </tr>
+                                                
+                                            </table>
+
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row row-panelbar borderBottom">
+                                        <div class="col-md-12">
+                                            <table>
+                                                <tr>
+                                                    <th width="20%">Departure</th>
+                                                    <th width="20%">Base Tour</th>
+                                                    <th width="20%">Pre-Tour Option</th>
+                                                    <th width="20%">Post-Tour Extension</th>
+                                                    <th width="">User</th>
+                                                </tr>
+                                                <tr>
+                                                    <td><b>16-May to 25-May-15</b><br><p>Smithsonian Journeys<br> 90 Day to Departure</p></td>
+                                                    
+                                                    <td><div>Advertised | 24 Guests</div><br>
+                                                        <label>16-May to 20-May-15</label>
+                                                        <input class="form-control" id="leg1"><br>
+                                                        <label>21-May to 25-May-15</label>
+                                                        <input class="form-control" id="leg2">
+                                                    </td>
+                                                    
+                                                    <td>——</td>
+                                                    
+                                                    <td><div>Advertised | 24 Guests</div><br>
+                                                        <label>16-May to 20-May-15</label>
+                                                        <input class="form-control" id="leg3"><br>
+                                                        <label>21-May to 25-May-15</label>
+                                                        <input class="form-control" id="leg4">
+                                                    </td>
+                                                    
+                                                    <td>jhobbsbailey</td>
+                                                </tr>
+                                                
+                                            </table>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            
+                            <li>
+                                <span>ADR-15 | Pearls of Dalmatia<span class="right">1 Departure &nbsp;</span></span>
+                                <div class="container">
+                                    <div class="row row-panelbar borderBottom">
+                                        <div class="col-md-12">
+                                            <table>
+                                                <tr>
+                                                    <th width="20%">Departure</th>
+                                                    <th width="20%">Base Tour</th>
+                                                    <th width="20%">Pre-Tour Option</th>
+                                                    <th width="20%">Post-Tour Extension</th>
+                                                    <th width="">User</th>
+                                                </tr>
+                                                <tr>
+                                                    <td><b>16-May to 25-May-15</b><br><p>Smithsonian Journeys<br> 90 Day to Departure</p></td>
+                                                    
+                                                    <td><div>Advertised | 24 Guests</div><br>
+                                                        <label>16-May to 20-May-15</label>
+                                                        <input class="form-control" id="leg1"><br>
+                                                        <label>21-May to 25-May-15</label>
+                                                        <input class="form-control" id="leg2">
+                                                    </td>
+                                                    
+                                                    <td>——</td>
+                                                    
+                                                    <td><div>Advertised | 24 Guests</div><br>
+                                                        <label>16-May to 20-May-15</label>
+                                                        <input class="form-control" id="leg3"><br>
+                                                        <label>21-May to 25-May-15</label>
+                                                        <input class="form-control" id="leg4">
+                                                    </td>
+                                                    
+                                                    <td>jhobbsbailey</td>
+                                                </tr>
+                                                
+                                            </table>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            
+                            <li>
+                                <span>ANT-15 | Antarctica Explorer<span class="right">2 Departures &nbsp;</span></span>
+                                <div class="container">
+                                    <div class="row row-panelbar borderBottom">
+                                        <div class="col-md-12">
+                                            <table>
+                                                <tr>
+                                                    <th width="20%">Departure</th>
+                                                    <th width="20%">Base Tour</th>
+                                                    <th width="20%">Pre-Tour Option</th>
+                                                    <th width="20%">Post-Tour Extension</th>
+                                                    <th width="">User</th>
+                                                </tr>
+                                                <tr>
+                                                    <td><b>16-May to 25-May-15</b><br><p>Smithsonian Journeys<br> 90 Day to Departure</p></td>
+                                                    
+                                                    <td><div>Advertised | 24 Guests</div><br>
+                                                        <label>16-May to 20-May-15</label>
+                                                        <input class="form-control" id="leg1"><br>
+                                                        <label>21-May to 25-May-15</label>
+                                                        <input class="form-control" id="leg2">
+                                                    </td>
+                                                    
+                                                    <td>——</td>
+                                                    
+                                                    <td><div>Advertised | 24 Guests</div><br>
+                                                        <label>16-May to 20-May-15</label>
+                                                        <input class="form-control" id="leg3"><br>
+                                                        <label>21-May to 25-May-15</label>
+                                                        <input class="form-control" id="leg4">
+                                                    </td>
+                                                    
+                                                    <td>jhobbsbailey</td>
+                                                </tr>
+                                                
+                                            </table>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            
+                            <li>
+                                <span>BHU-15 | Himalayan Kingdoms: Nepal & Bhutan<span class="right">1 Departure &nbsp;</span></span>
+                                <div class="container">
+                                    <div class="row row-panelbar borderBottom">
+                                        <div class="col-md-12">
+                                            <table>
+                                                <tr>
+                                                    <th width="20%">Departure</th>
+                                                    <th width="20%">Base Tour</th>
+                                                    <th width="20%">Pre-Tour Option</th>
+                                                    <th width="20%">Post-Tour Extension</th>
+                                                    <th width="">User</th>
+                                                </tr>
+                                                <tr>
+                                                    <td><b>16-May to 25-May-15</b><br><p>Smithsonian Journeys<br> 90 Day to Departure</p></td>
+                                                    
+                                                    <td><div>Advertised | 24 Guests</div><br>
+                                                        <label>16-May to 20-May-15</label>
+                                                        <input class="form-control" id="leg1"><br>
+                                                        <label>21-May to 25-May-15</label>
+                                                        <input class="form-control" id="leg2">
+                                                    </td>
+                                                    
+                                                    <td>——</td>
+                                                    
+                                                    <td><div>Advertised | 24 Guests</div><br>
+                                                        <label>16-May to 20-May-15</label>
+                                                        <input class="form-control" id="leg3"><br>
+                                                        <label>21-May to 25-May-15</label>
+                                                        <input class="form-control" id="leg4">
+                                                    </td>
+                                                    
+                                                    <td>jhobbsbailey</td>
+                                                </tr>
+                                                
+                                            </table>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            
+                            <li>
+                                <span>BZZ-15 | Africa's Wildlife<span class="right">1 Departure &nbsp;</span></span>
+                                <div class="container">
+                                    <div class="row row-panelbar borderBottom">
+                                        <div class="col-md-12">
+                                            <table>
+                                                <tr>
+                                                    <th width="20%">Departure</th>
+                                                    <th width="20%">Base Tour</th>
+                                                    <th width="20%">Pre-Tour Option</th>
+                                                    <th width="20%">Post-Tour Extension</th>
+                                                    <th width="">User</th>
+                                                </tr>
+                                                <tr>
+                                                    <td><b>16-May to 25-May-15</b><br><p>Smithsonian Journeys<br> 90 Day to Departure</p></td>
+                                                    
+                                                    <td><div>Advertised | 24 Guests</div><br>
+                                                        <label>16-May to 20-May-15</label>
+                                                        <input class="form-control" id="leg1"><br>
+                                                        <label>21-May to 25-May-15</label>
+                                                        <input class="form-control" id="leg2">
+                                                    </td>
+                                                    
+                                                    <td>——</td>
+                                                    
+                                                    <td><div>Advertised | 24 Guests</div><br>
+                                                        <label>16-May to 20-May-15</label>
+                                                        <input class="form-control" id="leg3"><br>
+                                                        <label>21-May to 25-May-15</label>
+                                                        <input class="form-control" id="leg4">
+                                                    </td>
+                                                    
+                                                    <td>jhobbsbailey</td>
+                                                </tr>
+                                                
+                                            </table>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            
+                            <li>
+                                <span>CCY-15 | Claissical China & the Yangtze<span class="right">1 Departure &nbsp;</span></span>
+                                <div class="container">
+                                    <div class="row row-panelbar borderBottom">
+                                        <div class="col-md-12">
+                                            <table>
+                                                <tr>
+                                                    <th width="20%">Departure</th>
+                                                    <th width="20%">Base Tour</th>
+                                                    <th width="20%">Pre-Tour Option</th>
+                                                    <th width="20%">Post-Tour Extension</th>
+                                                    <th width="">User</th>
+                                                </tr>
+                                                <tr>
+                                                    <td><b>16-May to 25-May-15</b><br><p>Smithsonian Journeys<br> 90 Day to Departure</p></td>
+                                                    
+                                                    <td><div>Advertised | 24 Guests</div><br>
+                                                        <label>16-May to 20-May-15</label>
+                                                        <input class="form-control" id="leg1"><br>
+                                                        <label>21-May to 25-May-15</label>
+                                                        <input class="form-control" id="leg2">
+                                                    </td>
+                                                    
+                                                    <td>——</td>
+                                                    
+                                                    <td><div>Advertised | 24 Guests</div><br>
+                                                        <label>16-May to 20-May-15</label>
+                                                        <input class="form-control" id="leg3"><br>
+                                                        <label>21-May to 25-May-15</label>
+                                                        <input class="form-control" id="leg4">
+                                                    </td>
+                                                    
+                                                    <td>jhobbsbailey</td>
+                                                </tr>
+                                                
+                                            </table>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            
+                            <li>
+                                <span>CRP-15 | Panama Canal Cruise<span class="right">1 Departure &nbsp;</span></span>
+                                <div class="container">
+                                    <div class="row row-panelbar borderBottom">
+                                        <div class="col-md-12">
+                                            <table>
+                                                <tr>
+                                                    <th width="20%">Departure</th>
+                                                    <th width="20%">Base Tour</th>
+                                                    <th width="20%">Pre-Tour Option</th>
+                                                    <th width="20%">Post-Tour Extension</th>
+                                                    <th width="">User</th>
+                                                </tr>
+                                                <tr>
+                                                    <td><b>16-May to 25-May-15</b><br><p>Smithsonian Journeys<br> 90 Day to Departure</p></td>
+                                                    
+                                                    <td><div>Advertised | 24 Guests</div><br>
+                                                        <label>16-May to 20-May-15</label>
+                                                        <input class="form-control" id="leg1"><br>
+                                                        <label>21-May to 25-May-15</label>
+                                                        <input class="form-control" id="leg2">
+                                                    </td>
+                                                    
+                                                    <td>——</td>
+                                                    
+                                                    <td><div>Advertised | 24 Guests</div><br>
+                                                        <label>16-May to 20-May-15</label>
+                                                        <input class="form-control" id="leg3"><br>
+                                                        <label>21-May to 25-May-15</label>
+                                                        <input class="form-control" id="leg4">
+                                                    </td>
+                                                    
+                                                    <td>jhobbsbailey</td>
+                                                </tr>
+                                                
+                                            </table>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            
+                            <li>
+                                <span>CSR-15 | Costa Rica's Natural Heritage<span class="right">1 Departure &nbsp;</span></span>
+                                <div class="container">
+                                    <div class="row row-panelbar borderBottom">
+                                        <div class="col-md-12">
+                                            <table>
+                                                <tr>
+                                                    <th width="20%">Departure</th>
+                                                    <th width="20%">Base Tour</th>
+                                                    <th width="20%">Pre-Tour Option</th>
+                                                    <th width="20%">Post-Tour Extension</th>
+                                                    <th width="">User</th>
+                                                </tr>
+                                                <tr>
+                                                    <td><b>16-May to 25-May-15</b><br><p>Smithsonian Journeys<br> 90 Day to Departure</p></td>
+                                                    
+                                                    <td><div>Advertised | 24 Guests</div><br>
+                                                        <label>16-May to 20-May-15</label>
+                                                        <input class="form-control" id="leg1"><br>
+                                                        <label>21-May to 25-May-15</label>
+                                                        <input class="form-control" id="leg2">
+                                                    </td>
+                                                    
+                                                    <td>——</td>
+                                                    
+                                                    <td><div>Advertised | 24 Guests</div><br>
+                                                        <label>16-May to 20-May-15</label>
+                                                        <input class="form-control" id="leg3"><br>
+                                                        <label>21-May to 25-May-15</label>
+                                                        <input class="form-control" id="leg4">
+                                                    </td>
+                                                    
+                                                    <td>jhobbsbailey</td>
+                                                </tr>
+                                                
+                                            </table>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            
+                          
+
+
+                          
+
+                           
+                          
+                           
+                        </ul>
+                        
+                        <script>
+                            $(document).ready(function () {
+                                $("#panelbar").kendoPanelBar({
+                                    expandMode: "multiple"
+                                });
+                            });
+                        </script>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </form>
+
+
+    <script>
+        $(document).ready(function () {
+            
+            var names = [
+                "",
+                "Jason Bogart",
+                "Lindsay Herd",
+                "Oscar Porter",
+                "Steven Shing",
+                "Wesley Cox",
+            ];
+
+            
+            $("#tour").kendoComboBox({
+                dataSource: names,
+                filter: "startswith",
+                placeholder: "Select Tour",
+            });
+
+        
+            $("#sig").kendoComboBox({
+                dataSource: names,
+                filter: "startswith",
+                placeholder: "Select SIG",
+            });
+
+        
+            $("#director").kendoComboBox({
+                dataSource: names,
+                filter: "startswith",
+                placeholder: "Select Tour Director",
+            });
+
+        
+            $("#user").kendoComboBox({
+                dataSource: names,
+                filter: "startswith",
+                placeholder: "Select User",
+            });
+
+        
+            $("#date").kendoDatePicker({
+                dataSource: names,
+                filter: "startswith",
+                placeholder: "Select Date",
+            });
+
+        
+            $("#leg1").kendoComboBox({
+                dataSource: names,
+                filter: "startswith",
+                placeholder: "Select Tour Director",
+            });
+
+        
+        $("#leg2").kendoComboBox({
+                dataSource: names,
+                filter: "startswith",
+                placeholder: "Select Tour Director",
+            });
+        
+        $("#leg3").kendoComboBox({
+                dataSource: names,
+                filter: "startswith",
+                placeholder: "Select Tour Director",
+            });
+        
+        $("#leg4").kendoComboBox({
+                dataSource: names,
+                filter: "startswith",
+                placeholder: "Select Tour Director",
+            });
+            
+            
+        });
+    </script>
+
+    
+    
+    
+    
+    
+    
+    
+    <script>
+        $(document).ready(function () {
+            $("#treeview").kendoTreeView();
+        });
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

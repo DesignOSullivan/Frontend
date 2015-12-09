@@ -25,17 +25,6 @@
     <link href="../css/font-awesome.css" rel="stylesheet">
 
 
-    <!-- GRAB ALL THE COMPONENT MODULES WE NEED FOR THIS PAGE -->
-    <script>
-        $(function () {
-            $("#includeTourDirectorName").load("_components/tour-director-name.html");
-            $("#includeTourDirectorAddress").load("_components/tour-director-address.html");
-            $("#includeTourDirectorContactInformation").load("_components/tour-director-contact-information.html");
-            $("#includeTourDirectorTravelInformation").load("_components/tour-director-travel-information.html");
-            $("#includeTourDirectorTabs").load("_components/tour-director-tabs.html");
-        });
-    </script>
-
 </head>
 
 <body>
@@ -65,9 +54,7 @@
         </div>
     </nav>
 
-
-    <!-- SPECIAL INTEREST GROUP TAB-->
-    <div id="special-interest-group-content" class="tab-pane fade in">
+    <form role="form">
 
 
         <!-- SPECIAL INTEREST GROUP NAME -->
@@ -711,7 +698,6 @@
 
 
 
-    </div>
 
     <!-- CREATE CONTACT MODAL -->
     <div class="modal fade dark-modal" id="contactCreateModal" tabindex="-1" role="dialog" aria-labelledby="myModalInfo">
@@ -1140,11 +1126,10 @@
 <!--/ END UNIQUE BOOKING AND CANCELLATION RULES-->
             </div>
             
-            
-            
-            
         </div>
    
+    </form>
+        
 
 <script>
     $(document).ready(function() {

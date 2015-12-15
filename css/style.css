@@ -45,9 +45,11 @@ li .right{float:right; text-align:right;}
 
 td{padding: 10px; color: #54698d}
 .tdTable th{padding: 10px;}
-.tdTable tr:hover{background-color: rgba(253,92,99,.9); transition: all .2s ease;}
-.tdTable tr.tableHeader:hover{background-color: #fff;}
+.tdTable tr:hover{background-color: rgba(253,92,99,.9); transition: all .2s ease; cursor: pointer}
+.tdTable tr.selected{background-color: rgba(253,92,99,.9); transition: all .2s ease;}
+.tdTable tr.tableHeader:hover{background-color: #fff; cursor: default}
 .tdTable tr:hover b, .tdTable tr:hover span {color: #fff; transition: all .2s ease}
+.tdTable tr.selected b, .tdTable tr.selected span {color: #fff; transition: all .2s ease}
 .tdTable th:hover b, .tdTable th:hover span {color: #54698d;}
 
 .tdTable{width:100% !important}

@@ -420,7 +420,7 @@
 
 
                             <li>
-                                <span>CCY-15 | Claissical China & the Yangtze<span class="right">1 Departure &nbsp;</span></span>
+                                <span>CCY-15 | Classical China & the Yangtze<span class="right">1 Departure &nbsp;</span></span>
                                 <div class="container">
                                     <div class="row row-panelbar borderBottom">
                                         <div class="col-md-12">
@@ -1000,17 +1000,22 @@
 
                 <!-- MODAL FOOTER -->
 
-<!--
                 <div class="modal-footer">
                     <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-sm btn-info" id="createContact"><i class="fa fa-check-circle-o"></i> Submit </button>
+                    <button type="button" class="btn btn-sm btn-info" id="createContact" data-dismiss="modal"><i class="fa fa-check-circle-o"></i> Submit </button>
                 </div>
--->
             </div>
         </div>
     </div>
 
-
+<script>
+    $(document).ready(function () {
+    
+    $("tr").click(function(){
+        $(this).addClass("selected").siblings().removeClass("selected");
+    });
+    });
+    </script>
 
 
 

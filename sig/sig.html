@@ -443,6 +443,14 @@
                 <div class="col-md-4 col-xs-12">
                     <div class="clear bottom15"></div>
                     <div class="switch">
+                        <input id="aux-7" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
+                        <label for="aux-7"></label>
+                    </div>
+                    <div class="switch-label">
+                        <label for="aux-7">OUI Managed Waitlist</label>
+                    </div>  
+                    <div class="clear bottom30"></div>
+                    <div class="switch">
                         <input id="aux-5" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
                         <label for="aux-5"></label>
                     </div>
@@ -460,14 +468,6 @@
                 </div>
                 <div class="col-md-3 col-xs-12">
                     <div class="clear bottom15"></div>
-                    <div class="switch">
-                        <input id="aux-7" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
-                        <label for="aux-7"></label>
-                    </div>
-                    <div class="switch-label">
-                        <label for="aux-7">OUI Managed Waitlist</label>
-                    </div>  
-                    <div class="clear bottom30"></div>
                     <div class="switch">
                         <input id="aux-8" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
                         <label for="aux-8"></label>
@@ -495,7 +495,7 @@
                         <label for="alt-return-date-toggle">Unique Deposit</label>
                     </div>  
                     <div class="container pad0" id="alt-return-date">
-                        <div class="clear bottom15"></div>
+                        <div class="clear bottom25"></div>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="input-group input-group-sm col-md-6">
@@ -916,49 +916,59 @@
     
     <div class="container container-border">
         
+        
         <div class="row">
-                        <div class="form-group col-md-3">
-                            <div class="switch">
-                                <input id="3" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
-                                <label for="3"></label>
-                            </div>
-                            <div class="switch-label">
-                                <label for="3">Guests May Book Through OUI</label>
-                            </div>  
-                        </div>
-                   
-        </div>
-        <div class="row">
-                    
-                        <div class="form-group col-md-3">
+                    <div class="col-md-6">
+                        <div class="container">
+                            <div class="row">
+                            
+                                <div class="form-group col-md-2 pad0">
+                                    <input class="form-control textCenter digits" style="min-width:87px; float:left" id="" type="number" placeholder="0">
+                                </div>  
+                        <div class="form-group col-md-6">
                             <div class="clear bottom10"></div>
                             <label for="">Days After Booking Full Refund Allowed</label>
                         </div>
             
-                        <div class="form-group col-md-1 pad0">
-                            <input class="form-control textCenter digits" style="min-width:87px" id="" type="number" placeholder="0">
-                        </div>
-            
-            </div>
-        
+                        
+                            </div>
+                            
             <div class="row">
-                        <div class="form-group col-md-3">
+                <div class="input-group input-group-sm col-md-2" style="float:left">
+                    <span class="input-group-addon">$</span>
+                    <input class="form-control textRight digits" id="" type="number" placeholder="0">
+                </div>
+                        <div class="form-group col-md-6">
                             <div class="clear bottom10"></div>
                             <label for="">Deposit Amount Non-Refundable</label>
                         </div>
             
-                        <div class="input-group input-group-sm col-md-1">
-                            <span class="input-group-addon">$</span>
-                            <input class="form-control textRight digits" id="" type="number" placeholder="0">
+                        
+        </div>
+                            
                         </div>
             
+            </div>
+            
+            
+        <div class="col-md-6">
+            <div class="clear bottom5"></div>
+        <div class="container pad0">
+        <div class="row">
+            <div class="form-group col-md-6">
+                <div class="switch">
+                    <input id="3" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
+                    <label for="3"></label>
+                </div>
+                <div class="switch-label">
+                    <label for="3">Guests May Book Through OUI</label>
+                </div>  
+            </div>
         </div>
         
-            <div class="clear bottom30"></div>
-            
                 <div class="row">
 <!--UNIQUE BOOKING AND CANCELLATION RULES-->
-            <div class="col-md-6 col-xs-12">
+            <div class="col-md-12 col-xs-12">
                 <div class="container pad0">
                     <div class="row">
                         <div class="form-group col-md-6">
@@ -1040,7 +1050,7 @@
                     
                 </div>
             </div>
-            <div class="col-md-6 col-xs-12">
+            <div class="col-md-12 col-xs-12">
                 <div class="container pad0">
                     
                     <div class="row">
@@ -1125,9 +1135,10 @@
             </div>
 <!--/ END UNIQUE BOOKING AND CANCELLATION RULES-->
             </div>
-            
+            </div>
         </div>
-   
+        </div>
+        </div>
     </form>
         
 

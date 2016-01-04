@@ -14,12 +14,16 @@ hr{border-top: 1px solid #ddd}
 textarea{border-radius: 3px !important}
 input.form-control.textCenter.digits{border-radius: 3px}
 
+
 [placeholder]input-placeholder {transition: opacity 0.2s 0.2s ease; opacity: 0;}
 [placeholder]:focus::-webkit-input-placeholder {transition: opacity 0.2s 0.2s ease; opacity: 0;}
 [placeholder]:focus::-moz-input-placeholder {transition: opacity 0.2s 0.2s ease; opacity: 0;}
 [placeholder]:focus::-ms-input-placeholder {transition: opacity 0.2s 0.2s ease; opacity: 0;}
 
-
+/*KENDO TABLES*/
+.k-alt{background: #fff !important}
+tr{border-bottom: 1px solid #afafaf !important;}
+.k-grid table{border-collapse: collapse;}
 
 /* FORM BASIC STUFF */
 .form-control, label {color: #54698d;}
@@ -124,6 +128,17 @@ textarea.form-control {min-height: 60px;}
 	background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.6) 20%,rgba(255,255,255,0.8) 40%,rgba(255,255,255,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
 }
+
+.illusion{width: 100%; height: 20px; margin-bottom: 56px; position: absolute; top:520px; padding-top: 15px; padding-bottom: 15px; z-index: 8 !important; border: 0px !important; 
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 20%, rgba(255,255,255,0.8) 40%, rgba(255,255,255,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(20%,rgba(255,255,255,0.6)), color-stop(40%,rgba(255,255,255,0.8)), color-stop(100%,rgba(255,255,255,1)));
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.6) 20%,rgba(255,255,255,0.8) 40%,rgba(255,255,255,1) 100%);
+    background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.6) 20%,rgba(255,255,255,0.8) 40%,rgba(255,255,255,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.6) 20%,rgba(255,255,255,0.8) 40%,rgba(255,255,255,1) 100%);
+    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.6) 20%,rgba(255,255,255,0.8) 40%,rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+}
+
 
 
 

@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tour Manager | OUI</title>
+
+
+    <link rel="stylesheet" href="../kendoui/styles/kendo.common-bootstrap.min.css">
+    <link rel="stylesheet" href="../kendoui/styles/kendo.bootstrap.min.css">
+
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-toggle.min.js"></script>
+    <script src="../kendoui/js/kendo.all.min.js"></script>
+    <script src="tour-director-scripts.js"></script>
+
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/toggle-me-softly.css" rel="stylesheet">
+    <link href="../css/actively-toggle-me-softly.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/font-awesome.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </button>
+            <a class="navbar-brand" href="#" style="padding: 0 15px;"><img src="../images/logo.png" style="max-height: 60px;" /></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="navbar-center">
+                <h4 class="headerTextRight" id="lastNameHeader">Tour Manager</h4>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li> <img src="http://lorempixel.com/output/people-q-c-100-100-9.jpg" class="navimg"> </li>
+                <li class="nav  navbar-toggle navbar-link">Danielle O'Sullivan</li>
+                <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span><b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li> <a href="#">Action</a> </li>
+                        <li> <a href="#">Another action</a> </li>
+                        <li> <a href="#">Something else here</a> </li>
+                        <li class="divider"> </li>
+                        <li> <a href="#">Separated link</a> </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+    <div class="container fixedtop borderBottom">
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 col-xs-3" style="padding-left:0">
+                            <label for="tourCode">Tour Code</label>
+                            <input class="form-control" id="tourCode" placeholder="Enter Tour Code">
+                        </div>
+                        <div class="col-md-2 col-xs-3">
+                            <label for="status">Status</label>
+                            <input class="form-control" id="status">
+                        </div>
+                        <div class="col-md-2 col-xs-3">
+                            <label for="worldRegion">World Region</label>
+                            <input class="form-control" id="worldRegion">
+                        </div>
+                        <div class="col-md-2 alignRight bottom0 pad0">
+                            <div class="clear bottom10"></div>
+                            <button type="button" class="btn btn btn-success alignRight bottom0">Create a Tour <i class="fa fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <form role="form">
+
+
+        <div class="container" style="margin-top:100px;">
+            <div class="row form-group" style="position: relative">
+                <table id="grid">
+                    <colgroup>
+                        <col style="width:400px" />
+                        <col />
+                        <col style="width:110px" />
+                        <col style="width:175px" />
+                        <col style="width:130px" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th data-field="tour">Tour</th>
+                            <th data-field="status">Status</th>
+                            <th data-field="editTour"></th>
+                            <th data-field="editDeparture"></th>
+                            <th data-field="copyTour"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="#"><b>ABP-16 | European Tapestry</b></a></td>
+                            <td>Active</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Tour</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Departure Dates</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-copy"></i> Copy Tour</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"><b>ADR-16 | Pearls of Dalmatia</b></a></td>
+                            <td>Draft</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Tour</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Departure Dates</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-copy"></i> Copy Tour</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"><b>ANT-16 | Antarctica Explorer</b></a></td>
+                            <td>Cancelled</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Tour</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Departure Dates</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-copy"></i> Copy Tour</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"><b>BAL-16 | St. Petersburg &amp; the Baltic Capitals</b></a></td>
+                            <td>Active</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Tour</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Departure Dates</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-copy"></i> Copy Tour</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"><b>BHU-16 | Himalayan Kingdoms: Nepal &amp; Bhutan</b></a></td>
+                            <td>Active</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Tour</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Departure Dates</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-copy"></i> Copy Tour</button>
+                            </td>
+                        </tr>
+                        <td><a href="#"><b>BZZ-16 | Africa's Wildlife</b></a></td>
+                        <td>Active</td>
+                        <td>
+                            <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Tour</button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Departure Dates</button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-sm btn-default"><i class="fa fa-copy"></i> Copy Tour</button>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"><b>CCY-16 | Classic China &amp; the Yangtze </b></a></td>
+                            <td>Draft</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Tour</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Departure Dates</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-copy"></i> Copy Tour</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"><b>COL-16 | Colombia Rediscovered</b></a></td>
+                            <td>Active</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Tour</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Departure Dates</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-copy"></i> Copy Tour</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"><b>CRP-16 | Panama Canal Cruise</b></a></td>
+                            <td>Active</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Tour</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Departure Dates</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-copy"></i> Copy Tour</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"><b>CSR-16 | Costa Rica's Natural Heritage</b></a></td>
+                            <td>Active</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Tour</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Departure Dates</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-copy"></i> Copy Tour</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"><b>DEE-16 | Discovering Eastern Europes</b></a></td>
+                            <td>Active</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Tour</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Departure Dates</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-copy"></i> Copy Tour</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"><b>EGY-16 | Egypt &amp; the Eternal Nile</b></a></td>
+                            <td>Active</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Tour</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Departure Dates</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-copy"></i> Copy Tour</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"><b>FRN-16 | Provincial French Countryside</b></a></td>
+                            <td>Draft</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Tour</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Departure Dates</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-copy"></i> Copy Tour</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"><b>FRS-16 | Southern France: Languedoc &amp; Provence</b></a></td>
+                            <td>Active</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Tour</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Departure Dates</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-copy"></i> Copy Tour</button>
+                            </td>
+                        </tr>
+                        </tr>
+                        <tr>
+                            <td><a href="#"><b>GER-16 | Classic Germany</b></a></td>
+                            <td>Active</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Tour</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Departure Dates</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-copy"></i> Copy Tour</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"><b>GSW-16 | Journey Through Britain</b></a></td>
+                            <td>Active</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Tour</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Departure Dates</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-copy"></i> Copy Tour</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"><b>GRV-16 | Classic Greek Isles</b></a></td>
+                            <td>Active</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Tour</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Departure Dates</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-copy"></i> Copy Tour</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"><b>ICE-16 | Exploring Iceland</b></a></td>
+                            <td>Draft</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Tour</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Departure Dates</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-copy"></i> Copy Tour</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"><b>ILA-16 | Italian Landscapes: Tuscany &amp; Umbria</b></a></td>
+                            <td>Active</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Tour</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-edit"></i> Edit Departure Dates</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-default"><i class="fa fa-copy"></i> Copy Tour</button>
+                            </td>
+                        </tr>
+       
+                    </tbody>
+    
+                </table>
+    
+                <script>
+                    $(document).ready(function () {
+                        $("#grid").kendoGrid({
+                            height: 550,
+                            sortable: true
+                        });
+                    });
+                </script>
+    <div class="illusion"></div>
+            </div>
+
+        </div>
+        <div class="container pad0">
+            <div class="row">
+                <div class="col-xs-2">
+                    <p>117 Total Tours</p>
+                </div>
+                <div class="col-xs-2">
+                    <p>92 Active</p>
+                </div>
+                <div class="col-xs-2">
+                    <p>14 Draft</p>
+                </div>
+                <div class="col-xs-2">
+                    <p>8 Cancelled</p>
+                </div>
+                <div class="col-xs-2">
+                    <p>3 Completed</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </form>
+
+
+    <script>
+        $(document).ready(function () {
+
+            var codes = [
+                "",
+                "ABP-16",
+                "ADR-16",
+                "ANT-16",
+                "BAL-16",
+                "BHU-16",
+                "BZZ-16",
+                "CCY-16",
+                "COL-16",
+                "CRP-16",
+                "CSR-16",
+                "DEE-16",
+                "EGY-16",
+                "FRN-16",
+                "FRS-16",
+                "GER-16",
+                "GSW-16",
+                "GRV-16",
+                "ICE-16",
+                "ILA-16",
+                "IND-16",
+                "INJ-16",
+                "IRE-16",
+                "ISR-16",
+                "ITY-16",
+                "JOR-16",
+                "JPN-16",
+                "KTN-16",
+                "MON-16",
+                "MRC-16",
+                "MYN-16",
+                "NAU-16",
+                "NIT-16",
+                "PAP-16",
+                "PEF-16",
+                "PEG-16",
+                "PER-16",
+                "PSP-16",
+                "SAF-16",
+                "SAT-16",
+                "SCA-16",
+                "SCT-16",
+                "SIT-16",
+                "TNZ-16",
+                "TUR-16",
+                "VIE-16",
+                "WOC-16",
+            ];
+
+            var status = [
+                "",
+                "Active",
+                "Cancelled",
+                "Complete",
+                "Draft",
+            ];
+            
+            var regions = [
+                "",
+                "Africa & the Middle East",
+                "Asia & the Far East",
+                "Australia & the South Pacific",
+                "Europe",
+                "The Americas",
+            ];
+
+            $("#tourCode").kendoComboBox({
+                dataSource: codes,
+                filter: "startswith",
+                placeholder: "Select Tour Code",
+            });
+
+            $("#status").kendoComboBox({
+                dataSource: status,
+                filter: "startswith",
+                placeholder: "Select Status",
+            });
+
+            $("#worldRegion").kendoComboBox({
+                dataSource: regions,
+                filter: "startswith",
+                placeholder: "Select World Region",
+            });
+
+
+
+
+
+        });
+    </script>
+
+
+
+
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            $("#treeview").kendoTreeView();
+        });
+    </script>
+
+
+
+
+    <a data-toggle="modal" data-target="#contactCreateModal"></a>
+
+
+    <!-- SELECT TOUR DIRECTOR MODAL -->
+    <div class="modal fade dark-modal" id="contactCreateModal" tabindex="-1" role="dialog" aria-labelledby="myModalInfo">
+
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class=" modal-header">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-md-4 col-xs-6 borderRight">
+                                <h3>Select<br> Tour Director</h3>
+                            </div>
+
+                            <div class="col-md-7 col-xs-4">
+                                <div class="clear bottom30"></div>
+                                <label>Hovered Tour Director's Name</label>
+                            </div>
+                            <div class="textRight col-md-1">
+                                <a data-dismiss="modal"><i class="fa fa-times exitIcon alignRight"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="modal-body">
+
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <table class="tdTable">
+                                    <tr class="tableHeader">
+                                        <th width="20%">Tour Director</th>
+                                        <th class="textCenter" width="20%">Tour Excellence</th>
+                                        <th class="textCenter" width="25%">Tour Director Excellence</th>
+                                        <th class="textCenter" width="20%">Cancelled Tours</th>
+                                        <th class="textCenter" width="15%">Tours Led</th>
+                                    </tr>
+                                    <tr class="borderBottom">
+                                        <td>
+                                            <b>Asher, David</b>
+                                        </td>
+
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-md-6 textRight borderRight">
+                                                    <b>93%</b>
+                                                    <br>
+                                                    <span>2014</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>98%</b>
+                                                    <br>
+                                                    <span>YTD</span>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-md-6 textRight borderRight">
+                                                    <b>96%</b>
+                                                    <br>
+                                                    <span>2014</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>98%</b>
+                                                    <br>
+                                                    <span>YTD</span>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-md-6 textRight borderRight">
+                                                    <b>5</b>
+                                                    <br>
+                                                    <span>2014</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>4</b>
+                                                    <br>
+                                                    <span>YTD</span>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-md-6 textRight borderRight">
+                                                    <b>23</b>
+                                                    <br>
+                                                    <span>2014</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>8</b>
+                                                    <br>
+                                                    <span>YTD</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="borderBottom">
+                                        <td>
+                                            <b>Danson, Theador</b>
+                                        </td>
+
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-md-6 textRight borderRight">
+                                                    <b>93%</b>
+                                                    <br>
+                                                    <span>2014</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>98%</b>
+                                                    <br>
+                                                    <span>YTD</span>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-md-6 textRight borderRight">
+                                                    <b>96%</b>
+                                                    <br>
+                                                    <span>2014</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>98%</b>
+                                                    <br>
+                                                    <span>YTD</span>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-md-6 textRight borderRight">
+                                                    <b>5</b>
+                                                    <br>
+                                                    <span>2014</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>4</b>
+                                                    <br>
+                                                    <span>YTD</span>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-md-6 textRight borderRight">
+                                                    <b>23</b>
+                                                    <br>
+                                                    <span>2014</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>8</b>
+                                                    <br>
+                                                    <span>YTD</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="borderBottom">
+                                        <td>
+                                            <b>Miller, Tandy</b>
+                                        </td>
+
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-md-6 textRight borderRight">
+                                                    <b>93%</b>
+                                                    <br>
+                                                    <span>2014</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>98%</b>
+                                                    <br>
+                                                    <span>YTD</span>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-md-6 textRight borderRight">
+                                                    <b>96%</b>
+                                                    <br>
+                                                    <span>2014</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>98%</b>
+                                                    <br>
+                                                    <span>YTD</span>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-md-6 textRight borderRight">
+                                                    <b>5</b>
+                                                    <br>
+                                                    <span>2014</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>4</b>
+                                                    <br>
+                                                    <span>YTD</span>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-md-6 textRight borderRight">
+                                                    <b>23</b>
+                                                    <br>
+                                                    <span>2014</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>8</b>
+                                                    <br>
+                                                    <span>YTD</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="borderBottom">
+                                        <td>
+                                            <b>Roberts, Rashad</b>
+                                        </td>
+
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-md-6 textRight borderRight">
+                                                    <b>93%</b>
+                                                    <br>
+                                                    <span>2014</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>98%</b>
+                                                    <br>
+                                                    <span>YTD</span>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-md-6 textRight borderRight">
+                                                    <b>96%</b>
+                                                    <br>
+                                                    <span>2014</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>98%</b>
+                                                    <br>
+                                                    <span>YTD</span>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-md-6 textRight borderRight">
+                                                    <b>5</b>
+                                                    <br>
+                                                    <span>2014</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>4</b>
+                                                    <br>
+                                                    <span>YTD</span>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-md-6 textRight borderRight">
+                                                    <b>23</b>
+                                                    <br>
+                                                    <span>2014</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>8</b>
+                                                    <br>
+                                                    <span>YTD</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </table>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- MODAL FOOTER -->
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-sm btn-info" id="createContact" data-dismiss="modal"><i class="fa fa-check-circle-o"></i> Submit </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+            $("tr").click(function () {
+                $(this).addClass("selected").siblings().removeClass("selected");
+            });
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>

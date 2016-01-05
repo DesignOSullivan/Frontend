@@ -24,6 +24,15 @@
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/font-awesome.css" rel="stylesheet">
 
+    <style>
+        html{height: 100%; overflow: hidden}
+        body{height: 100%}
+        form{height: 100%}
+        #tourGrid{height: 100%}
+        .k-grid{height: 100% !important}
+        tbody tr:last-child{height: 120px}
+    </style>
+    
 </head>
 
 <body>
@@ -63,8 +72,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-2 col-xs-3" style="padding-left:0">
-                            <label for="tourCode">Tour Code</label>
-                            <input class="form-control" id="tourCode" placeholder="Enter Tour Code">
+                            <label for="tourCode">Tour Code | Tour Name</label>
+                            <input class="form-control" id="tourCode">
                         </div>
                         <div class="col-md-2 col-xs-3">
                             <label for="status">Status</label>
@@ -91,9 +100,9 @@
     <form role="form">
 
 
-        <div class="container" style="margin-top:100px;">
-            <div class="row form-group" style="position: relative">
-                <table id="grid">
+        <div class="container" id="tourGrid" style="margin-top:100px;">
+            <div id="tourGrid" class="row">
+                <table id="grid" style="height: 100%">
                     <colgroup>
                         <col style="width:400px" />
                         <col />
@@ -358,6 +367,13 @@
                                 <button type="button" class="btn btn-sm btn-default"><i class="fa fa-copy"></i> Copy Tour</button>
                             </td>
                         </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
        
                     </tbody>
     
@@ -366,33 +382,16 @@
                 <script>
                     $(document).ready(function () {
                         $("#grid").kendoGrid({
-                            height: 550,
+                           height: 550,
                             sortable: true
                         });
                     });
                 </script>
-    <div class="illusion"></div>
             </div>
 
         </div>
         <div class="container pad0">
-            <div class="row">
-                <div class="col-xs-2">
-                    <p>117 Total Tours</p>
-                </div>
-                <div class="col-xs-2">
-                    <p>92 Active</p>
-                </div>
-                <div class="col-xs-2">
-                    <p>14 Draft</p>
-                </div>
-                <div class="col-xs-2">
-                    <p>8 Cancelled</p>
-                </div>
-                <div class="col-xs-2">
-                    <p>3 Completed</p>
-                </div>
-            </div>
+
         </div>
 
 
@@ -474,7 +473,7 @@
             $("#tourCode").kendoComboBox({
                 dataSource: codes,
                 filter: "startswith",
-                placeholder: "Select Tour Code",
+                placeholder: "Select Tour",
             });
 
             $("#status").kendoComboBox({
@@ -515,334 +514,32 @@
     <a data-toggle="modal" data-target="#contactCreateModal"></a>
 
 
-    <!-- SELECT TOUR DIRECTOR MODAL -->
-    <div class="modal fade dark-modal" id="contactCreateModal" tabindex="-1" role="dialog" aria-labelledby="myModalInfo">
-
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class=" modal-header">
-                    <div class="container">
-                        <div class="row">
-
-                            <div class="col-md-4 col-xs-6 borderRight">
-                                <h3>Select<br> Tour Director</h3>
-                            </div>
-
-                            <div class="col-md-7 col-xs-4">
-                                <div class="clear bottom30"></div>
-                                <label>Hovered Tour Director's Name</label>
-                            </div>
-                            <div class="textRight col-md-1">
-                                <a data-dismiss="modal"><i class="fa fa-times exitIcon alignRight"></i></a>
-                            </div>
-                        </div>
-                    </div>
+<!-- footer -->
+<div>
+    <div id="illusion"></div>
+    <div id="footer" style="min-height: 56px">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-2">
+                    <p>117 Total Tours</p>
                 </div>
-                <div class="container">
-                    <div class="modal-body">
-
-
-                        <div class="row">
-                            <div class="col-md-12">
-                                <table class="tdTable">
-                                    <tr class="tableHeader">
-                                        <th width="20%">Tour Director</th>
-                                        <th class="textCenter" width="20%">Tour Excellence</th>
-                                        <th class="textCenter" width="25%">Tour Director Excellence</th>
-                                        <th class="textCenter" width="20%">Cancelled Tours</th>
-                                        <th class="textCenter" width="15%">Tours Led</th>
-                                    </tr>
-                                    <tr class="borderBottom">
-                                        <td>
-                                            <b>Asher, David</b>
-                                        </td>
-
-                                        <td>
-                                            <div class="row">
-                                                <div class="col-md-6 textRight borderRight">
-                                                    <b>93%</b>
-                                                    <br>
-                                                    <span>2014</span>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <b>98%</b>
-                                                    <br>
-                                                    <span>YTD</span>
-                                                </div>
-                                            </div>
-                                        </td>
-
-                                        <td>
-                                            <div class="row">
-                                                <div class="col-md-6 textRight borderRight">
-                                                    <b>96%</b>
-                                                    <br>
-                                                    <span>2014</span>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <b>98%</b>
-                                                    <br>
-                                                    <span>YTD</span>
-                                                </div>
-                                            </div>
-                                        </td>
-
-                                        <td>
-                                            <div class="row">
-                                                <div class="col-md-6 textRight borderRight">
-                                                    <b>5</b>
-                                                    <br>
-                                                    <span>2014</span>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <b>4</b>
-                                                    <br>
-                                                    <span>YTD</span>
-                                                </div>
-                                            </div>
-                                        </td>
-
-                                        <td>
-                                            <div class="row">
-                                                <div class="col-md-6 textRight borderRight">
-                                                    <b>23</b>
-                                                    <br>
-                                                    <span>2014</span>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <b>8</b>
-                                                    <br>
-                                                    <span>YTD</span>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr class="borderBottom">
-                                        <td>
-                                            <b>Danson, Theador</b>
-                                        </td>
-
-                                        <td>
-                                            <div class="row">
-                                                <div class="col-md-6 textRight borderRight">
-                                                    <b>93%</b>
-                                                    <br>
-                                                    <span>2014</span>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <b>98%</b>
-                                                    <br>
-                                                    <span>YTD</span>
-                                                </div>
-                                            </div>
-                                        </td>
-
-                                        <td>
-                                            <div class="row">
-                                                <div class="col-md-6 textRight borderRight">
-                                                    <b>96%</b>
-                                                    <br>
-                                                    <span>2014</span>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <b>98%</b>
-                                                    <br>
-                                                    <span>YTD</span>
-                                                </div>
-                                            </div>
-                                        </td>
-
-                                        <td>
-                                            <div class="row">
-                                                <div class="col-md-6 textRight borderRight">
-                                                    <b>5</b>
-                                                    <br>
-                                                    <span>2014</span>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <b>4</b>
-                                                    <br>
-                                                    <span>YTD</span>
-                                                </div>
-                                            </div>
-                                        </td>
-
-                                        <td>
-                                            <div class="row">
-                                                <div class="col-md-6 textRight borderRight">
-                                                    <b>23</b>
-                                                    <br>
-                                                    <span>2014</span>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <b>8</b>
-                                                    <br>
-                                                    <span>YTD</span>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr class="borderBottom">
-                                        <td>
-                                            <b>Miller, Tandy</b>
-                                        </td>
-
-                                        <td>
-                                            <div class="row">
-                                                <div class="col-md-6 textRight borderRight">
-                                                    <b>93%</b>
-                                                    <br>
-                                                    <span>2014</span>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <b>98%</b>
-                                                    <br>
-                                                    <span>YTD</span>
-                                                </div>
-                                            </div>
-                                        </td>
-
-                                        <td>
-                                            <div class="row">
-                                                <div class="col-md-6 textRight borderRight">
-                                                    <b>96%</b>
-                                                    <br>
-                                                    <span>2014</span>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <b>98%</b>
-                                                    <br>
-                                                    <span>YTD</span>
-                                                </div>
-                                            </div>
-                                        </td>
-
-                                        <td>
-                                            <div class="row">
-                                                <div class="col-md-6 textRight borderRight">
-                                                    <b>5</b>
-                                                    <br>
-                                                    <span>2014</span>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <b>4</b>
-                                                    <br>
-                                                    <span>YTD</span>
-                                                </div>
-                                            </div>
-                                        </td>
-
-                                        <td>
-                                            <div class="row">
-                                                <div class="col-md-6 textRight borderRight">
-                                                    <b>23</b>
-                                                    <br>
-                                                    <span>2014</span>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <b>8</b>
-                                                    <br>
-                                                    <span>YTD</span>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr class="borderBottom">
-                                        <td>
-                                            <b>Roberts, Rashad</b>
-                                        </td>
-
-                                        <td>
-                                            <div class="row">
-                                                <div class="col-md-6 textRight borderRight">
-                                                    <b>93%</b>
-                                                    <br>
-                                                    <span>2014</span>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <b>98%</b>
-                                                    <br>
-                                                    <span>YTD</span>
-                                                </div>
-                                            </div>
-                                        </td>
-
-                                        <td>
-                                            <div class="row">
-                                                <div class="col-md-6 textRight borderRight">
-                                                    <b>96%</b>
-                                                    <br>
-                                                    <span>2014</span>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <b>98%</b>
-                                                    <br>
-                                                    <span>YTD</span>
-                                                </div>
-                                            </div>
-                                        </td>
-
-                                        <td>
-                                            <div class="row">
-                                                <div class="col-md-6 textRight borderRight">
-                                                    <b>5</b>
-                                                    <br>
-                                                    <span>2014</span>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <b>4</b>
-                                                    <br>
-                                                    <span>YTD</span>
-                                                </div>
-                                            </div>
-                                        </td>
-
-                                        <td>
-                                            <div class="row">
-                                                <div class="col-md-6 textRight borderRight">
-                                                    <b>23</b>
-                                                    <br>
-                                                    <span>2014</span>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <b>8</b>
-                                                    <br>
-                                                    <span>YTD</span>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                </table>
-
-                            </div>
-                        </div>
-
-                    </div>
+                <div class="col-xs-2">
+                    <p>92 Active</p>
                 </div>
-
-
-                <!-- MODAL FOOTER -->
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-sm btn-info" id="createContact" data-dismiss="modal"><i class="fa fa-check-circle-o"></i> Submit </button>
+                <div class="col-xs-2">
+                    <p>14 Draft</p>
+                </div>
+                <div class="col-xs-2">
+                    <p>8 Cancelled</p>
+                </div>
+                <div class="col-xs-2">
+                    <p>3 Completed</p>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <script>
-        $(document).ready(function () {
-
-            $("tr").click(function () {
-                $(this).addClass("selected").siblings().removeClass("selected");
-            });
-        });
-    </script>
 
 
 

@@ -68,9 +68,9 @@
 
     <div class="container fixedtop borderBottom">
         <div class="row">
-            <div class="col-md-12 form-group">
+            <div class="col-md-12">
                 <div class="container">
-                    <div class="row">
+                    <div class="row bottom10">
                         <div class="col-md-2 col-xs-3" style="padding-left:0">
                             <label for="tourCode">Tour</label>
                             <input class="form-control" id="tourCode">
@@ -96,6 +96,19 @@
                             <input class="form-control" id="user">
                         </div>
                     </div>
+                    <div class="row bottom0">
+                        <div class="col-md-1 col-xs-1 pad0">
+                            <p class="alignLeft">Show:</p>
+                        </div>
+                        <div class="col-md-2 col-xs-2">
+                            <label class="alignLeft">Base</label>
+                            <input type="checkbox">
+                        </div>
+                        <div class="col-md-2 col-xs-2">
+                            <label class="alignLeft">Extension</label>
+                            <input type="checkbox">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -107,152 +120,344 @@
 
     <form role="form">
 
-        <ul id="panelbar" style="margin-top:100px">
-            <li class="k-state-active">GRV-15 | Classic Greek Isles
-                        <table class="grid countReport">
-                            <colgroup>
-                                <col style="width:20px" />
-                                <col style="width:250px" />
-                                <col style="width:50px" />
-                                <col style="width:" />
-                                <col style="width:" />
-                                <col style="width:" />
-                                <col style="width:" />
-                                <col style="width:20px" />
-                                <col style="width:" />
-                                <col style="width:" />
-                                <col style="width:" />
-                                <col style="width:" />
-                                <col style="width:" />
-                                <col style="width:" />
-                                <col style="width:20px" />
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th data-field="check"></th>
-                                    <th data-field="tour">Tour</th>
-                                    <th data-field="leg"></th>
-                                    <th data-field="status">Status</th>
-                                    <th data-field="minimum"><div class="textCenter">Minimum</div></th>
-                                    <th data-field="allotment"><div class="textCenter">Allotment</div></th>
-                                    <th data-field="capacity"><div class="textCenter">Capacity</div></th>
-                                    <th data-field="soldIcon"></th>
-                                    <th data-field="sold"><div class="textCenter">Sold | LW</div></th>
-                                    <th data-field="waitList"><div class="textCenter">Wait List</div></th>
-                                    <th data-field="registered"><div class="textCenter">Registered</div></th>
-                                    <th data-field="tourDirector">Tour Director</th>
-                                    <th data-field="tasks">Tasks</th>
-                                    <th data-field="invoice">Invoice Date<br>Mailed Date</th>
-                                    <th data-field="invoiceIcon"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                
-<!-- departure 1 -->
-                                <tr>
-                                    <td><input class="checkbox" type="checkbox"></td>
-                                    <td>30-Sept to 12-Oct-15 (90 days out)</td>
-                                    <td>Base</td>
-                                    <td>Advertised</td>
-                                    <td><div class="textCenter">12</div></td>
-                                    <td><div class="textCenter">10 Twins<br>4 Singles</div></td>
-                                    <td><div class="textCenter">24</div></td>
-                                    <td><i class="fa fa-long-arrow-up green"></i></td>
-                                    <td><div class="textCenter">24 | 22</div></td>
-                                    <td><div class="textCenter">2</div></td>
-                                    <td><div class="textCenter">24</div></td>
-                                    <td>Lia Kondili</td>
-                                    <td><a>View</a></td>
-                                    <td>12-Jun-15<br>14-Jun-15</td>
-                                    <td><i class="fa fa-envelope-o green"></i></td>
-                                </tr>
-                                
-                                
-                                <tr>
-                                    <td></td>
-                                    <td>GRV-15 | Istanbul, Turkey</td>
-                                    <td>Post</td>
-                                    <td>Advertised</td>
-                                    <td><div class="textCenter">6</div></td>
-                                    <td><div class="textCenter">4 Twins<br>2 Singles</div></td>
-                                    <td><div class="textCenter">10</div></td>
-                                    <td><i class="fa fa-long-arrow-up green"></i></td>
-                                    <td><div class="textCenter">10 | 8</div></td>
-                                    <td><div class="textCenter">2</div></td>
-                                    <td></td>
-                                    <td>Lia Kondili</td>
-                                    <td><div class="textCenter"></div></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                
-<!-- /end departure 1 -->
-
-<!-- departure 2 -->
-                                <tr>
-                                    <td><input class="checkbox" type="checkbox"></td>
-                                    <td>30-Sept to 12-Oct-15 (90 days out)</td>
-                                    <td>Base</td>
-                                    <td>Advertised</td>
-                                    <td><div class="textCenter">12</div></td>
-                                    <td><div class="textCenter">10 Twins<br>4 Singles</div></td>
-                                    <td><div class="textCenter">24</div></td>
-                                    <td><i class="fa fa-long-arrow-up green"></i></td>
-                                    <td><div class="textCenter">24 | 22</div></td>
-                                    <td><div class="textCenter">2</div></td>
-                                    <td><div class="textCenter">24</div></td>
-                                    <td>Lia Kondili</td>
-                                    <td><a>View</a></td>
-                                    <td>12-Jun-15<br>14-Jun-15</td>
-                                    <td><i class="fa fa-envelope-o green"></i></td>
-                                </tr>
-                                
-                                
-                                <tr>
-                                    <td></td>
-                                    <td>GRV-15 | Istanbul, Turkey</td>
-                                    <td>Post</td>
-                                    <td>Advertised</td>
-                                    <td><div class="textCenter">6</div></td>
-                                    <td><div class="textCenter">4 Twins<br>2 Singles</div></td>
-                                    <td><div class="textCenter">10</div></td>
-                                    <td><i class="fa fa-long-arrow-up green"></i></td>
-                                    <td><div class="textCenter">10 | 8</div></td>
-                                    <td><div class="textCenter">2</div></td>
-                                    <td></td>
-                                    <td>Lia Kondili</td>
-                                    <td><div class="textCenter"></div></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                
-<!-- /end departure 1 -->
-
-                            </tbody>
-
-                        </table>
-
-                        <script>
-                            $(document).ready(function () {
-                                $(".grid").kendoGrid({
-                                    
-                                    sortable: true
-                                });
-                            });
-                        </script>
-            </li>
+    
+        <div class="container" style="margin-top:110px">
+            <div class="row">
+                <div class="col-xs-12 pad0">
+        <ul id="panelbar" class="countReport">
             
-            
-            
-            
-            
-            
-            <li>Tour <div><h1>Another Row</h1></div></li>
-            <li>Tour <div><h1>Another Row</h1></div></li>
-            <li>Tour <div><h1>Another Row</h1></div></li>
+            <li class="k-state-active">ABP-16 | European Tapestry<div class="grid5"></div></li>
+            <li>ADR-16 | Pearls of Dalmatia<div class="grid5"></div></li>
+            <li>ANT-16 | Antarctica Explorer<div class="grid5"></div></li>
+            <li>ANT-16 | Antarctica Explorer<div class="grid5"></div></li>
+            <li>ANT-16 | Antarctica Explorer<div class="grid5"></div></li>
+            <li>ANT-16 | Antarctica Explorer<div class="grid5"></div></li>
+            <li>ANT-16 | Antarctica Explorer<div class="grid5"></div></li>
+            <li>ANT-16 | Antarctica Explorer<div class="grid5"></div></li>
+            <li>ANT-16 | Antarctica Explorer<div class="grid5"></div></li>
+            <li>ANT-16 | Antarctica Explorer<div class="grid5"></div></li>
+            <li>ANT-16 | Antarctica Explorer<div class="grid5"></div></li>
+            <li>ANT-16 | Antarctica Explorer<div class="grid5"></div></li>
+            <li>ANT-16 | Antarctica Explorer<div class="grid5"></div></li>
+            <li>ANT-16 | Antarctica Explorer<div class="grid5"></div></li>
+            <li>ANT-16 | Antarctica Explorer<div class="grid5"></div></li>
+            <li>ANT-16 | Antarctica Explorer<div class="grid5"></div></li>
+            <li>ANT-16 | Antarctica Explorer<div class="grid5"></div></li>
+            <li>ANT-16 | Antarctica Explorer<div class="grid5"></div></li>
+            <li>ANT-16 | Antarctica Explorer<div class="grid5"></div></li>
         </ul>
-        
-        
+                </div>
+            </div>
+        </div>
+            
+            
+        <script>
+            $(document).ready(function() {
+                var element = $(".grid5").kendoGrid({
+//                    dataSource: {
+//                        pageSize: 6,
+//                        serverPaging: true,
+//                        serverSorting: true
+//                    },
+                    sortable: true,
+                    detailInit: detailInit,
+                    dataBound: function() {
+                        this.expandRow(this.tbody.find("tr.k-master-row").first());
+                    },
+                    columns: [
+                        {
+                            field: "Check",
+                            title: "&nbsp;",
+                            encoded: false,
+                            width: "20px"
+                        },
+                        {
+                            field: "Departure",
+//                            template: "<strong>#: Departure # </strong>",
+                            encoded: false,
+                            width: "250px"
+                        },
+//                        {
+//                            field: "Leg",
+//                            title: "&nbsp;",
+//                            width: ""
+//                        },
+                        {
+                            field: "Status",
+                            width: "70px"
+                        },
+                        {
+                            field: "Minimum",
+                            headerAttributes: {style: "text-align: center"},
+                            attributes: {"class": "textCenter"},
+                            width: ""
+                        },
+                        {
+                            field: "Allotment",
+                            encoded: false,
+                            width: ""
+                        },
+                        {
+                            field: "Capacity",
+                            headerAttributes: {style: "text-align: center"},
+                            attributes: {"class": "textCenter"},
+                            width: "70px"
+                        },
+                        {
+                            field: "Direction",
+                            title: "&nbsp;",
+                            headerAttributes: {style: "text-align: center"},
+                            attributes: {"class": "textCenter green"},
+                            encoded: false,
+                            width: "15px"
+                        },
+                        {
+                            field: "Sold",
+                            title: "Sold Total<br>Sold LW",
+                            headerAttributes: {style: "text-align: center"},
+                            attributes: {"class": "textCenter"},
+                            encoded: false,
+                            width: ""
+                        },
+                        {
+                            field: "WaitList",
+                            title: "Wait List",
+                            encoded: false,
+                            headerAttributes: {style: "text-align: center"},
+                            attributes: {"class": "textCenter"},
+                            width: "70px"
+                        },
+                        {
+                            field: "Registered",
+                            headerAttributes: {style: "text-align: center"},
+                            attributes: {"class": "textCenter"},
+                            width: ""
+                        },
+                        {
+                            field: "TourDirector",
+                            title: "Tour Director",
+                            width: ""
+                        },
+                        {
+                            field: "Tasks",
+                            encoded: false,
+                            width: "50px"
+                        },
+                        {
+                            field: "Invoice",
+                            encoded: false,
+                            title: "Invoice Date<br>Mailed Date"
+                        },
+                        {
+                            field: "Mailed",
+                            encoded: false,
+                            title: "&nbsp;",
+                            attributes: {"class": "green"},
+                            width: "30px"
+                        }
+                    ],
+                    dataSource: {
+                        data: [
+                            {
+                                Check: "<input class='checkbox' type='checkbox'>",
+                                Departure: "<b>30-Sept to 12-Oct-16</b> (90 Days Out)",
+//                                Leg: "Base",
+                                Status: "Advertised",
+                                Minimum: "12",
+                                Allotment: "10 Twins<br>4 Singles",
+                                Capacity: "24",
+                                Direction: "<i class='fa fa-long-arrow-up'></i>",
+                                Sold: "24<br>22",
+                                WaitList: "<a href='#'>2</a>",
+                                Registered: "24",
+                                TourDirector: "Lia Kondili",
+                                Tasks: "<a href='#'>View</a>",
+                                Invoice: "12-Jun-16<br>14-Jun-16",
+                                Mailed: "<i class='fa fa-send-o'></i>"
+                            },
+                            {
+                                Check: "<input class='checkbox' type='checkbox'>",
+                                Departure: "<b>30-Sept to 12-Oct-16</b> (90 Days Out)",
+//                                Leg: "Base",
+                                Status: "Advertised",
+                                Minimum: "12",
+                                Allotment: "10 Twins<br>4 Singles",
+                                Capacity: "24",
+                                Direction: "<i class='fa fa-long-arrow-up'></i>",
+                                Sold: "24<br>22",
+                                WaitList: "<a href='#'>2</a>",
+                                Registered: "24",
+                                TourDirector: "Lia Kondili",
+                                Tasks: "<a href='#'>View</a>",
+                                Invoice: "12-Jun-16<br>14-Jun-16",
+                                Mailed: "<i class='fa fa-send-o'></i>"
+                            },
+                            {
+                                Check: "<input class='checkbox' type='checkbox'>",
+                                Departure: "<b>30-Sept to 12-Oct-16</b> (90 Days Out)",
+//                                Leg: "Base",
+                                Status: "Advertised",
+                                Minimum: "12",
+                                Allotment: "10 Twins<br>4 Singles",
+                                Capacity: "24",
+                                Direction: "<i class='fa fa-long-arrow-up'></i>",
+                                Sold: "24<br>22",
+                                WaitList: "<a href='#'>2</a>",
+                                Registered: "24",
+                                TourDirector: "Lia Kondili",
+                                Tasks: "<a href='#'>View</a>",
+                                Invoice: "12-Jun-16<br>14-Jun-16",
+                                Mailed: "<i class='fa fa-send-o'></i>"
+                            },
+                            {
+                                Check: "<input class='checkbox' type='checkbox'>",
+                                Departure: "<b>30-Sept to 12-Oct-16</b> (90 Days Out)",
+//                                Leg: "Base",
+                                Status: "Advertised",
+                                Minimum: "12",
+                                Allotment: "10 Twins<br>4 Singles",
+                                Capacity: "24",
+                                Direction: "<i class='fa fa-long-arrow-up'></i>",
+                                Sold: "24<br>22",
+                                WaitList: "<a href='#'>2</a>",
+                                Registered: "24",
+                                TourDirector: "Lia Kondili",
+                                Tasks: "<a href='#'>View</a>",
+                                Invoice: "12-Jun-16<br>14-Jun-16",
+                                Mailed: "<i class='fa fa-send-o'></i>"
+                            }
+                        ]
+                    }
+                });
+            });
+
+            //                    EXTENSION SCRIPT
+
+            function detailInit(e) {
+                $("<div/>").appendTo(e.detailCell).kendoGrid({
+                    scrollable: false,
+                    columns: [
+
+                        {
+                            field: "Leg",
+                            title: "&nbsp;",
+                            attributes: {"class": "extension"},
+                            headerAttributes: {style: "display: none"},
+                            width: "62px"
+                        },
+                        {
+                            field: "Departure",
+                            attributes: {"class": "extension"},
+                            headerAttributes: {style: "display: none"},
+                            width: "200px"
+                        },
+                        {
+                            field: "Status",
+                            attributes: {"class": "extension"},
+                            headerAttributes: {style: "display: none"},
+                            width: "70px"
+                        },
+                        {
+                            field: "Minimum",
+                            attributes: {"class": "textCenter extension"},
+                            headerAttributes: {style: "display: none"},
+                            width: ""
+                        },
+                        {
+                            field: "Allotment",
+                            encoded: false,
+                            attributes: {"class": "extension"},
+                            headerAttributes: {style: "display: none"},
+                            width: ""
+                        },
+                        {
+                            field: "Capacity",
+                            attributes: {"class": "textCenter extension"},
+                            headerAttributes: {style: "display: none"},
+                            width: "70px"
+                        },
+                        {
+                            field: "Direction",
+                            encoded: false,
+                            attributes: {"class": "textCenter extension green"},
+                            headerAttributes: {style: "display: none"},
+                            width: "15px"
+                        },
+                        {
+                            field: "Sold",
+                            title: "Sold Total<br>Sold LW",
+                            encoded: false,
+                            attributes: {"class": "textCenter extension"},
+                            headerAttributes: {style: "display: none"},
+                            width: ""
+                        },
+                        {
+                            field: "WaitList",
+                            title: "Wait List",
+                            encoded: false,
+                            attributes: {"class": "textCenter extension"},
+                            headerAttributes: {style: "display: none"},
+                            width: "70px"
+                        },
+                        {
+                            field: "Registered",
+                            attributes: {"class": "textCenter extension"},
+                            headerAttributes: {style: "display: none"},
+                            width: ""
+                        },
+                        {
+                            field: "TourDirector",
+                            title: "Tour Director",
+                            attributes: {"class": "extension"},
+                            headerAttributes: {style: "display: none"},
+                            width: ""
+                        },
+                        {
+                            field: "Tasks",
+                            encoded: false,
+                            attributes: {"class": "extension"},
+                            headerAttributes: {style: "display: none"},
+                            width: "50px"
+                        },
+                        {
+                            field: "Invoice",
+                            encoded: false,
+                            title: "Invoice Date<br>Mailed Date",
+                            attributes: {"class": "extension"},
+                            headerAttributes: {style: "display: none"}
+                        },
+                        {
+                            field: "Mailed",
+                            encoded: false,
+                            title: "&nbsp;",
+                            attributes: {"class": "extension green"},
+                            headerAttributes: {style: "display: none"},
+                            width: "30px"
+                        }
+                    ],
+                    dataSource: {
+                        data: [
+                            {
+                                Departure: "GRV-15 | Istanbul, Turkey",
+                                Leg: "Post",
+                                Status: "Advertised",
+                                Minimum: "12",
+                                Allotment: "10 Twins<br>4 Singles",
+                                Capacity: "24",
+                                Direction: "<i class='fa fa-long-arrow-up'></i>",
+                                Sold: "24<br>22",
+                                WaitList: "<a href='#'>2</a>",
+                                Registered: "24",
+                                TourDirector: "Lia Kondili",
+                                Tasks: "<a href='#'>View</a>",
+                                Invoice: "12-Jun-15<br>14-Jun-15",
+                                Mailed: "<i class='fa fa-send-o'></i>"
+                            },
+                        ]
+                    }
+                });
+            }
+        </script>
         
         
 
@@ -409,24 +614,39 @@
 
 <!-- footer -->
 <div>
-    <div id="illusion"></div>
+    <div id="illusion">
+        <div class="container">
+        <div class="row textCenter">
+            <div class="col-xs-3">
+                <p>117 Total Tours</p>
+            </div>
+            <div class="col-xs-2">
+                <p>92 Active</p>
+            </div>
+            <div class="col-xs-2">
+                <p>14 Draft</p>
+            </div>
+            <div class="col-xs-2">
+                <p>8 Cancelled</p>
+            </div>
+            <div class="col-xs-3">
+                <p>3 Completed</p>
+            </div>
+        </div>
+        </div></div>
     <div id="footer" style="min-height: 56px">
         <div class="container">
-            <div class="row">
-                <div class="col-xs-2">
-                    <p>117 Total Tours</p>
-                </div>
-                <div class="col-xs-2">
-                    <p>92 Active</p>
-                </div>
-                <div class="col-xs-2">
-                    <p>14 Draft</p>
-                </div>
-                <div class="col-xs-2">
-                    <p>8 Cancelled</p>
-                </div>
-                <div class="col-xs-2">
-                    <p>3 Completed</p>
+            <div class="row textCenter">
+                <div class="col-xs-12">
+                    <span>
+                    <a href="#">Cancel Departure</a> |
+                    </span>
+                    <span>
+                    <a href="#">Edit Departure</a> |
+                    </span>
+                    <span>
+                    <a href="#">SIG Turnover</a>
+                    </span>
                 </div>
             </div>
         </div>

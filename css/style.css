@@ -20,6 +20,15 @@ input.form-control.textCenter.digits{border-radius: 3px}
 [placeholder]:focus::-moz-input-placeholder {transition: opacity 0.2s 0.2s ease; opacity: 0;}
 [placeholder]:focus::-ms-input-placeholder {transition: opacity 0.2s 0.2s ease; opacity: 0;}
 
+
+/*COUNT REPORT*/
+.countReport .k-grid td {padding-right: 0 !important; color: #54698d;}
+.countReport table {padding-right: 0 !important; color: #54698d;}
+.extension{background-color: lightcyan;}
+.countReport tr.k-master-row {border-bottom: none !important;}
+.k-detail-cell table{border-collapse: separate !important;}
+.countReport tr.k-master-row {border-top: solid 1px #afafaf;}
+
 /*KENDO TABLES*/
 .k-alt{background: #fff !important}
 tr{border-bottom: 1px solid #afafaf !important;}

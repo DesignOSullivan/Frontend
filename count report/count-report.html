@@ -24,14 +24,6 @@
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/font-awesome.css" rel="stylesheet">
 
-    <style>
-        /*html{height: 100%; overflow: hidden}
-        body{height: 100%}
-        form{height: 100%}
-        #tourGrid{height: 100%}
-        .k-grid{height: 100% !important}
-        .countReport tbody tr:last-child{height: 120px}*/
-    </style>
     
 </head>
 
@@ -97,16 +89,11 @@
                         </div>
                     </div>
                     <div class="row bottom0">
-                        <div class="col-md-1 col-xs-1 pad0">
-                            <p class="alignLeft">Show:</p>
+                        <div class="col-xs-11">
+                            <span><a><i class="fa fa-caret-down"></i> &nbsp; Show All Extensions</a> &nbsp; | &nbsp; <a><i class="fa fa-caret-right"></i> &nbsp; Hide All Extensions</a></span>
                         </div>
-                        <div class="col-md-2 col-xs-2">
-                            <label class="alignLeft">Base</label>
-                            <input type="checkbox">
-                        </div>
-                        <div class="col-md-2 col-xs-2">
-                            <label class="alignLeft">Extension</label>
-                            <input type="checkbox">
+                        <div class="col-xs-1">
+                            <a href="#" class="alignRight">Print</a>
                         </div>
                     </div>
                 </div>
@@ -154,11 +141,6 @@
         <script>
             $(document).ready(function() {
                 var element = $(".grid5").kendoGrid({
-//                    dataSource: {
-//                        pageSize: 6,
-//                        serverPaging: true,
-//                        serverSorting: true
-//                    },
                     sortable: true,
                     detailInit: detailInit,
                     dataBound: function() {
@@ -173,15 +155,9 @@
                         },
                         {
                             field: "Departure",
-//                            template: "<strong>#: Departure # </strong>",
                             encoded: false,
                             width: "250px"
                         },
-//                        {
-//                            field: "Leg",
-//                            title: "&nbsp;",
-//                            width: ""
-//                        },
                         {
                             field: "Status",
                             width: "70px"
@@ -261,7 +237,6 @@
                             {
                                 Check: "<input class='checkbox' type='checkbox'>",
                                 Departure: "<b>30-Sept to 12-Oct-16</b> (90 Days Out)",
-//                                Leg: "Base",
                                 Status: "Advertised",
                                 Minimum: "12",
                                 Allotment: "10 Twins<br>4 Singles",
@@ -278,7 +253,22 @@
                             {
                                 Check: "<input class='checkbox' type='checkbox'>",
                                 Departure: "<b>30-Sept to 12-Oct-16</b> (90 Days Out)",
-//                                Leg: "Base",
+                                Status: "Advertised",
+                                Minimum: "12",
+                                Allotment: "10 Twins<br>4 Singles",
+                                Capacity: "24",
+                                Direction: "<i class='fa fa-long-arrow-up'></i>",
+                                Sold: "24<br>22",
+                                WaitList: "<a href='#'>2</a>",
+                                Registered: "24",
+                                TourDirector: "Zanna Mouzaki",
+                                Tasks: "<a href='#'>View</a>",
+                                Invoice: "12-Jun-16<br>14-Jun-16",
+                                Mailed: "<i class='fa fa-send-o'></i>"
+                            },
+                            {
+                                Check: "<input class='checkbox' type='checkbox'>",
+                                Departure: "<b>30-Sept to 12-Oct-16</b> (90 Days Out)",
                                 Status: "Advertised",
                                 Minimum: "12",
                                 Allotment: "10 Twins<br>4 Singles",
@@ -295,24 +285,6 @@
                             {
                                 Check: "<input class='checkbox' type='checkbox'>",
                                 Departure: "<b>30-Sept to 12-Oct-16</b> (90 Days Out)",
-//                                Leg: "Base",
-                                Status: "Advertised",
-                                Minimum: "12",
-                                Allotment: "10 Twins<br>4 Singles",
-                                Capacity: "24",
-                                Direction: "<i class='fa fa-long-arrow-up'></i>",
-                                Sold: "24<br>22",
-                                WaitList: "<a href='#'>2</a>",
-                                Registered: "24",
-                                TourDirector: "Lia Kondili",
-                                Tasks: "<a href='#'>View</a>",
-                                Invoice: "12-Jun-16<br>14-Jun-16",
-                                Mailed: "<i class='fa fa-send-o'></i>"
-                            },
-                            {
-                                Check: "<input class='checkbox' type='checkbox'>",
-                                Departure: "<b>30-Sept to 12-Oct-16</b> (90 Days Out)",
-//                                Leg: "Base",
                                 Status: "Advertised",
                                 Minimum: "12",
                                 Allotment: "10 Twins<br>4 Singles",
@@ -438,7 +410,7 @@
                     dataSource: {
                         data: [
                             {
-                                Departure: "GRV-15 | Istanbul, Turkey",
+                                Departure: "ABE-16 | Paris—On Your Own",
                                 Leg: "Post",
                                 Status: "Advertised",
                                 Minimum: "12",
@@ -446,12 +418,12 @@
                                 Capacity: "24",
                                 Direction: "<i class='fa fa-long-arrow-up'></i>",
                                 Sold: "24<br>22",
-                                WaitList: "<a href='#'>2</a>",
-                                Registered: "24",
+                                WaitList: "",
+                                Registered: "",
                                 TourDirector: "Lia Kondili",
-                                Tasks: "<a href='#'>View</a>",
-                                Invoice: "12-Jun-15<br>14-Jun-15",
-                                Mailed: "<i class='fa fa-send-o'></i>"
+                                Tasks: "",
+                                Invoice: "",
+                                Mailed: ""
                             },
                         ]
                     }
@@ -581,12 +553,19 @@
             $(".checkbox").bind("change", function (e) {
                 $(e.target).closest("tr").toggleClass("k-state-selected");
             });
+            
 
             $("#panelbar").kendoPanelBar({
                 expandMode: "single"
             });
             
-      
+            $('.checkbox').change(function(){
+                if($(this).is(":checked")) {
+                    $('#bottomSection').removeClass("hider");
+                } else {
+                    $('#bottomSection').addClass("hider");
+                }
+            });
 
 
 
@@ -613,40 +592,40 @@
 
 
 <!-- footer -->
-<div>
-    <div id="illusion">
+    <div id="bottomSection" class="hider">
+    <div id="illusioner">
         <div class="container">
         <div class="row textCenter">
-            <div class="col-xs-3">
-                <p>117 Total Tours</p>
+            <div class="col-xs-2">
+                <p>7 Active Departures</p>
             </div>
             <div class="col-xs-2">
-                <p>92 Active</p>
+                <p>168 Capacity</p>
             </div>
             <div class="col-xs-2">
-                <p>14 Draft</p>
+                <p>64 Sold | 50 Last Week</p>
             </div>
             <div class="col-xs-2">
-                <p>8 Cancelled</p>
+                <p>6 Wait Listed</p>
             </div>
-            <div class="col-xs-3">
-                <p>3 Completed</p>
+            <div class="col-xs-2">
+                <p>12 Registered</p>
+            </div>
+            <div class="col-xs-2">
+                <p>38% Load Factor</p>
             </div>
         </div>
-        </div></div>
-    <div id="footer" style="min-height: 56px">
+        </div>
+        </div>
+    <div id="footerer" style="min-height: 56px">
         <div class="container">
             <div class="row textCenter">
                 <div class="col-xs-12">
-                    <span>
-                    <a href="#">Cancel Departure</a> |
-                    </span>
-                    <span>
-                    <a href="#">Edit Departure</a> |
-                    </span>
-                    <span>
-                    <a href="#">SIG Turnover</a>
-                    </span>
+                    
+                    <a class="btn btn-info btn-xs" href="#"><i class="fa fa-edit"></i> Edit Departure</a>
+                    <a class="btn btn-info btn-xs" href="#"><i class="fa fa-institution"></i> Sig Turnover</a>
+                    <a class="btn btn-danger btn-xs" href="#"><i class="fa fa-remove"></i> Cancel Departure</a>
+                    
                 </div>
             </div>
         </div>

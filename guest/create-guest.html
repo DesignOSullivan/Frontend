@@ -91,15 +91,296 @@
         <div id="includeReservationEdit"></div>
 
         <!-- Modal -->
-        <div id="includeInfoRequestModal"></div>
+<!--        <div id="includeInfoRequestModal"></div>-->
 
         <!-- Tabs -->
         <div id="includeGuestTabs"></div>
 
 
+        
+        
+        
+        
+        <!-- INFORMATION REQUEST MODAL -->
+        <div class="modal fade dark-modal" id="infoRequestModal" tabindex="-1" role="dialog" aria-labelledby="infoRequestModal">
+
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class=" modal-header">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-md-4 col-xs-6 borderRight">
+                                    <h3>Create<br> Information Request</h3>
+                                </div>
+
+                                <div class="col-md-7 col-xs-4">
+                                    <div class="clear bottom20"></div>
+                                    <label>
+                                        <input type="checkbox" id="email" value="Mail" class=""><span class="pad5">Mail</span></label>
+                                    <br>
+                                    <label>
+                                        <input type="checkbox" id="email" value="Mail" class=""><span class="pad5">Email</span></label>
+                                </div>
+                                <div class="textRight col-md-1">
+                                    <a data-dismiss="modal"><i class="fa fa-times exitIcon alignRight"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <div class="container pad0">
+                                        <div class="row">
+                                            <div class="form-group col-md-3">
+                                                <input class="form-control textCenter" id="mAirItineraryPreliminary" type="text" placeholder="0">
+                                            </div>
+                                            <div class="form-group col-md-9">
+                                                <div class="clear bottom10"></div>
+                                                <div class="input-group ">
+                                                    <p>Prliminary Itinerary - Preliminary</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container pad0">
+                                        <div class="row">
+                                            <div class="form-group col-md-3">
+                                                <input class="form-control textCenter" id="mAirItineraryPreliminary" type="text" placeholder="0">
+                                            </div>
+                                            <div class="form-group col-md-9">
+                                                <div class="clear bottom10"></div>
+                                                <div class="input-group ">
+                                                    <p>Prliminary Itinerary - Final</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container pad0">
+                                        <div class="row">
+                                            <div class="form-group col-md-3">
+                                                <input class="form-control textCenter" id="mAirItineraryPreliminary" type="text" placeholder="0">
+                                            </div>
+                                            <div class="form-group col-md-9">
+                                                <div class="clear bottom10"></div>
+                                                <div class="input-group ">
+                                                    <p>Day by Day</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container pad0">
+                                        <div class="row">
+                                            <div class="form-group col-md-3">
+                                                <input class="form-control textCenter" id="mAirItineraryPreliminary" type="text" placeholder="0">
+                                            </div>
+                                            <div class="form-group col-md-9">
+                                                <div class="clear bottom10"></div>
+                                                <div class="input-group ">
+                                                    <p>Final Travel Documents</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container pad0">
+                                        <div class="row">
+                                            <div class="form-group col-md-3">
+                                                <input class="form-control textCenter" id="mAirItineraryPreliminary" type="text" placeholder="0">
+                                            </div>
+                                            <div class="form-group col-md-9">
+                                                <div class="clear bottom10"></div>
+                                                <div class="input-group ">
+                                                    <p>General Information</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container pad0">
+                                        <div class="row">
+                                            <div class="form-group col-md-3">
+                                                <input class="form-control textCenter" id="mAirItineraryPreliminary" type="text" placeholder="0">
+                                            </div>
+                                            <div class="form-group col-md-9">
+                                                <div class="clear bottom10"></div>
+                                                <div class="input-group ">
+                                                    <p>Guest Information Form</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container pad0">
+                                        <div class="row">
+                                            <div class="form-group col-md-3">
+                                                <input class="form-control textCenter" id="mAirItineraryPreliminary" type="text" placeholder="0">
+                                            </div>
+                                            <div class="form-group col-md-9">
+                                                <div class="clear bottom10"></div>
+                                                <div class="input-group ">
+                                                    <p>Insurance Brochure</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container pad0">
+                                        <div class="row">
+                                            <div class="form-group col-md-3">
+                                                <input class="form-control textCenter" id="mAirItineraryPreliminary" type="text" placeholder="0">
+                                            </div>
+                                            <div class="form-group col-md-9">
+                                                <div class="clear bottom10"></div>
+                                                <div class="input-group ">
+                                                    <p>Invoice</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container pad0">
+                                        <div class="row">
+                                            <div class="form-group col-md-3">
+                                                <input class="form-control textCenter" id="mAirItineraryPreliminary" type="text" placeholder="0">
+                                            </div>
+                                            <div class="form-group col-md-9">
+                                                <div class="clear bottom10"></div>
+                                                <div class="input-group ">
+                                                    <p>Luggage Tags</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <div class="container pad0">
+                                        <div class="row">
+                                            <div class="form-group col-md-3">
+                                                <input class="form-control textCenter" id="mAirItineraryPreliminary" type="text" placeholder="0">
+                                            </div>
+                                            <div class="form-group col-md-9">
+                                                <div class="clear bottom10"></div>
+                                                <div class="input-group ">
+                                                    <p>Name Badge</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container pad0">
+                                        <div class="row">
+                                            <div class="form-group col-md-3">
+                                                <input class="form-control textCenter" id="mAirItineraryPreliminary" type="text" placeholder="0">
+                                            </div>
+                                            <div class="form-group col-md-9">
+                                                <div class="clear bottom10"></div>
+                                                <div class="input-group ">
+                                                    <p>Passport Verification Form</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container pad0">
+                                        <div class="row">
+                                            <div class="form-group col-md-3">
+                                                <input class="form-control textCenter" id="mAirItineraryPreliminary" type="text" placeholder="0">
+                                            </div>
+                                            <div class="form-group col-md-9">
+                                                <div class="clear bottom10"></div>
+                                                <div class="input-group ">
+                                                    <p>Practial Travel Tips</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container pad0">
+                                        <div class="row">
+                                            <div class="form-group col-md-3">
+                                                <input class="form-control textCenter" id="mAirItineraryPreliminary" type="text" placeholder="0">
+                                            </div>
+                                            <div class="form-group col-md-9">
+                                                <div class="clear bottom10"></div>
+                                                <div class="input-group ">
+                                                    <p>Reading List</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container pad0">
+                                        <div class="row">
+                                            <div class="form-group col-md-3">
+                                                <input class="form-control textCenter" id="mAirItineraryPreliminary" type="text" placeholder="0">
+                                            </div>
+                                            <div class="form-group col-md-9">
+                                                <div class="clear bottom10"></div>
+                                                <div class="input-group ">
+                                                    <p>Terms and Conditions</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container pad0">
+                                        <div class="row">
+                                            <div class="form-group col-md-3">
+                                                <input class="form-control textCenter" id="mAirItineraryPreliminary" type="text" placeholder="0">
+                                            </div>
+                                            <div class="form-group col-md-9">
+                                                <div class="clear bottom10"></div>
+                                                <div class="input-group ">
+                                                    <p>Tour Member Evaluation</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container pad0">
+                                        <div class="row">
+                                            <div class="form-group col-md-3">
+                                                <input class="form-control textCenter" id="mAirItineraryPreliminary" type="text" placeholder="0">
+                                            </div>
+                                            <div class="form-group col-md-9">
+                                                <div class="clear bottom10"></div>
+                                                <div class="input-group ">
+                                                    <p>Tour Member List</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container pad0">
+                                        <div class="row">
+                                            <div class="form-group col-md-3">
+                                                <input class="form-control textCenter" id="mAirItineraryPreliminary" type="text" placeholder="0">
+                                            </div>
+                                            <div class="form-group col-md-9">
+                                                <div class="clear bottom10"></div>
+                                                <div class="input-group ">
+                                                    <p>Visa Information</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- MODAL FOOTER -->
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-sm btn-info" id="createContact"><i class="fa fa-check-circle-o"></i> Submit </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
 
         
-        <!-- /base tour content -->
+        <!-- /base guest content -->
 
         <!-- Bottom Space -->
         <div id="bottomSpace" class="clear" style="margin-bottom: 120px;"></div>
@@ -115,7 +396,7 @@
                         </div>
                         <div class="col-md-8 col-xs-8 textCenter">
 
-                            <p id="remarksTrigger">Remarks</p>
+                            <a data-toggle="modal" data-target="#infoRequestModal" class="green"><i class="fa fa-plus-circle"></i> <i>Information Request Mockup</i></a> 
 
                         </div>
                         <div class="col-md-2 col-xs-2">
@@ -312,7 +593,7 @@
 
 
 
-
+    
 
 
 </body>

@@ -13,6 +13,7 @@ p, input.k-textbox,.k-list-container, input.k-textbox:hover{color: #54698d;}
 hr{border-top: 1px solid #ddd}
 textarea{border-radius: 3px !important}
 input.form-control.textCenter.digits{border-radius: 3px}
+:focus {outline: none !important;}
 
 
 [placeholder]input-placeholder {transition: opacity 0.2s 0.2s ease; opacity: 0;}
@@ -29,9 +30,11 @@ body.white{background-color: #fff}
 .countReport tr.k-master-row {border-bottom: none !important;}
 .k-detail-cell table{border-collapse: separate !important;}
 .countReport tr.k-master-row {border-top: solid 1px #afafaf;}
+.stats{margin-top: 10px !important}
 .hider{margin-bottom: -56px;}
 #bottomSection{position: fixed; width: 100%; bottom: 0; transition: all .5s ease}
 #bottomSection #footerer{width: 100%;padding-top: 15px; padding-bottom: 5px; border-top: 1px solid #ccc; z-index: 10 !important; background-color: #fff;}
+.dark-modal.waitListModal .modal-dialog  {width: 90%; margin-top: 7%}
 
 
 #bottomSection #illusioner{width: 100%; height: 25px; padding-top: 25px; padding-bottom: 30px; z-index: 8 !important; border: 0px !important; 
@@ -246,9 +249,9 @@ textarea.form-control {min-height: 60px;}
 .error-modal .modal-header label, .dark-modal .modal-header label span {color: #fff;}
 .error-modal .modal-header label span {color: #fff; text-transform: uppercase;}
 .error-modal .modal-content hr{border-top: 1px solid #ddd;}
-.error-modal .modal-dialog {width: 70%; margin-top: 7%}
+.error-modal .modal-dialog {width: 40%; margin-top: 7%}
 .error-modal .modal-content .modal-header h3 {color: #fff;text-transform: uppercase}
-.error-modal .modal-content .modal-body  h3 {margin-bottom: -15px; margin-top: 45px}
+.error-modal .modal-content .modal-body  h3 {margin-bottom: -15px; margin-top: 25px}
 .error-modal .modal-content h4 {text-transform: uppercase; text-decoration: underline}
 .error-modal .modal-content p {color: #fff; font-size: 12px}
 .error-modal .modal-footer {background:#fff; width:100%; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;}

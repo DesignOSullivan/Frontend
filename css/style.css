@@ -14,6 +14,7 @@ hr{border-top: 1px solid #ddd}
 textarea{border-radius: 3px !important}
 input.form-control.textCenter.digits{border-radius: 3px}
 :focus {outline: none !important;}
+input.checkbox {margin-top: 0;}
 
 
 [placeholder]input-placeholder {transition: opacity 0.2s 0.2s ease; opacity: 0;}
@@ -24,6 +25,7 @@ input.form-control.textCenter.digits{border-radius: 3px}
 
 /*COUNT REPORT*/
 body.white{background-color: #fff}
+body.white .container{width: 1280px}
 .countReport .k-grid td {padding-right: 0 !important; color: #54698d;}
 .countReport table {padding-right: 0 !important;}
 .extension{background-color: #D3F2FF;}
@@ -178,6 +180,8 @@ textarea.form-control {min-height: 60px;}
 
 
 
+/*BUTTON*/
+.btn-default.active{background-color: #3498db !important; border-color: #3498db !important; color: #fff !important;}
 
 .btn-default, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default{color:#555; background: #ecf0f1; border-color: #dce4ec;}
 .btn-default:active:hover, .btn-default.active:hover, .open > .dropdown-toggle.btn-default:hover, .btn-default:active:focus, .btn-default.active:focus, .open > .dropdown-toggle.btn-default:focus, .btn-default.focus:active, .btn-default.active.focus, .open > .dropdown-toggle.btn-default.focus{background: #dedede; color: #555;}
@@ -299,6 +303,7 @@ textarea.form-control {min-height: 60px;}
 .red{color: #ff0000 !important;}
 .pink{color: #fd5c63 !important;}
 .green{color: #09b56a !important;}
+.orange{color: #f0ad4e;}
 .blue{}
 .ltblue{}
 

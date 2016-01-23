@@ -89,12 +89,33 @@
                         </div>
                     </div>
                     <div class="row bottom0">
+                        <div class="col-xs-2" style="padding-left:0">
+                            <div id="mode-group" class="btn-group btn-group-justified btn-group-xs" data-toggle="buttons">
+                                <label class="btn btn-default active">
+                                    <input type="radio" name="mode" id="option1"> User
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="mode" id="option2"> All
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-2">
+                            <div id="mode-group" class="btn-group btn-group-justified btn-group-xs" data-toggle="buttons">
+                                <label class="btn btn-default">
+                                    <input type="radio" name="mode" id="option1"> Attention
+                                </label>
+                                <label class="btn btn-default active">
+                                    <input type="radio" name="mode" id="option2"> All
+                                </label>
+                            </div>
+                        </div>
+                        
                         <div class="col-xs-2">
                             <span><a id="expandTours"><i class="fa fa-caret-down"></i> &nbsp; Expand All Tours</a><a id="collapseTours" style="display:none;"><i class="fa fa-caret-right"></i> &nbsp; Collapse All Tours</a></span>
                         </div><div class="col-xs-4">
                         <span id="extensionToggle"><a id="expandExtensions"><i class="fa fa-caret-down"></i> &nbsp; Expand All Extensions</a><a id="collapseExtensions" style="display:none;"><i class="fa fa-caret-right"></i> &nbsp; Collapse All Extensions</a></span>
                         </div>
-                        <div class="col-xs-6">
+                        <div class="col-xs-1">
                             <a href="#" class="alignRight">Print</a>
                         </div>
                     </div>
@@ -593,7 +614,14 @@
                             field: "Check",
                             title: "&nbsp;",
                             encoded: false,
-                            attributes: {style: "margin-left: -10px"},
+//                            attributes: {style: "margin-left: -10px"},
+                            width: "20px"
+                        },
+                        {
+                            field: "Att",
+                            title: "&nbsp;",
+                            encoded: false,
+//                            attributes: {"class": "orange"},
                             width: "20px"
                         },
                         {
@@ -610,6 +638,7 @@
                             field: "Minimum",
                             headerAttributes: {style: "text-align: center"},
                             attributes: {"class": "textCenter"},
+                            encoded: false,
                             width: ""
                         },
                         {
@@ -634,9 +663,10 @@
                         {
                             field: "Sold",
                             title: "Sold Total<br>Sold LW",
+                            template: "<span> #: Sold#<br> #: SoldLW#</span>",
                             headerAttributes: {style: "text-align: center"},
                             attributes: {"class": "textCenter"},
-                            encoded: false,
+//                            encoded: false,
                             width: ""
                         },
                         {
@@ -645,6 +675,7 @@
                             template: "<a data-toggle='modal' data-target='.waitListModal'>#: WaitList#</a>",
                             headerAttributes: {style: "text-align: center"},
                             attributes: {"class": "textCenter"},
+                            encoded: false,
                             width: "70px"
                         },
                         {
@@ -660,9 +691,9 @@
                         },
                         {
                             field: "Tasks",
-                            template: "<a data-toggle='modal' data-target='.viewTasksModal'>View</a>",
+//                            template: "<a data-toggle='modal' data-target='.viewTasksModal'>View</a>",
                             encoded: false,
-                            width: "50px"
+                            width: "70px"
                         },
                         {
                             field: "Invoice",
@@ -681,66 +712,74 @@
                         data: [
                             {
                                 Check: "<input class='checkbox' type='checkbox'>",
+                                Att: "<i class='fa fa-warning orange'></i>",
                                 Departure: "<b>30-Jan to 12-Feb-16</b> (10 Days Out)",
                                 Status: "Advertised",
-                                Minimum: "12",
+                                Minimum: "<span class='orange bold'><i class='fa fa-warning'></i>12</span>",
                                 Allotment: "10 Twins<br>4 Singles",
                                 Capacity: "24",
                                 Direction: "<i class='fa fa-long-arrow-up green'></i>",
-                                Sold: "24<br>22",
+                                Sold: "24",
+                                SoldLW: "22",
                                 WaitList: "3",
                                 Registered: "",
                                 TourDirector: "Lia Kondili",
-//                                Tasks: "<a href='#'>View</a>",
+                                Tasks: "<a class='bold orange' data-toggle='modal' data-target='.viewTasksModal'><i class='fa fa-warning orange'></i>View</a>",
                                 Invoice: "31-Dec-15<br>02-Jan-16",
                                 Mailed: "<br><i class='fa fa-envelope-o'></i>"
                             },
                             {
                                 Check: "<input class='checkbox' type='checkbox'>",
+                                Att: "",
                                 Departure: "<b>21-Feb to 05-Mar-16</b> (32 Days Out)",
                                 Status: "Advertised",
                                 Minimum: "12",
                                 Allotment: "10 Twins<br>4 Singles",
                                 Capacity: "24",
                                 Direction: "<i class='fa fa-long-arrow-down red'></i>",
-                                Sold: "18<br>20",
+                                Sold: "18",
+                                SoldLW: "20",
                                 WaitList: "",
                                 Registered: "",
                                 TourDirector: "Zanna Mouzaki",
-//                                Tasks: "<a href='#'>View</a>",
-                                Invoice: "22-Jan-16",
+                                Tasks: "<a class='' data-toggle='modal' data-target='.viewTasksModal'>View</a>",
+                                Invoice: "22-Jan-16<br>&nbsp;",
                                 Mailed: ""
                             },
                             {
                                 Check: "<input class='checkbox' type='checkbox'>",
+                                Att: "<i class='fa fa-warning orange'></i>",
                                 Departure: "<b>18-Mar to 31-Mar-16</b> (58 Days Out)",
                                 Status: "Advertised",
-                                Minimum: "12",
+                                Minimum: "<span class='orange bold'><i class='fa fa-warning'></i>12</span>",
                                 Allotment: "10 Twins<br>4 Singles",
                                 Capacity: "24",
                                 Direction: "<i class='fa fa-long-arrow-up green'></i>",
-                                Sold: "23<br>21",
+                                Sold: "23",
+                                SoldLW: "21",
                                 WaitList: "2",
                                 Registered: "",
                                 TourDirector: "Lia Kondili",
-//                                Tasks: "<a href='#'>View</a>",
-                                Invoice: "17-Feb-16",
+                                Tasks: "<a class='' data-toggle='modal' data-target='.viewTasksModal'>View</a>",
+                                Invoice: "17-Feb-16<br>&nbsp;",
                                 Mailed: ""
                             },
                             {
                                 Check: "<input class='checkbox' type='checkbox'>",
+                                Att: "",
                                 Departure: "<b>06-Apr to 19-Apr-16</b> (77 Days Out)",
                                 Status: "Advertised",
                                 Minimum: "12",
                                 Allotment: "10 Twins<br>4 Singles",
                                 Capacity: "24",
                                 Direction: "<i class='fa fa-long-arrow-up green'></i>",
-                                Sold: "10<br>9",
+                                Sold: "10",
+                                SoldLW: "9",
                                 WaitList: "",
                                 Registered: "",
                                 TourDirector: "Lia Kondili",
-//                                Tasks: "<a href='#'>View</a>",
-                                Invoice: "07-Mar-16",
+                                Tasks: "<a class='' data-toggle='modal' data-target='.viewTasksModal'>View</a>",
+                                Invoice: "07-Mar-16<br>&nbsp;",
                                 Mailed: ""
                             }
                         ]

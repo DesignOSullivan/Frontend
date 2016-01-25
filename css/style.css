@@ -37,6 +37,7 @@ body.white .container{width: 1280px}
 #bottomSection{position: fixed; width: 100%; bottom: 0; transition: all .5s ease}
 #bottomSection #footerer{width: 100%;padding-top: 15px; padding-bottom: 5px; border-top: 1px solid #ccc; z-index: 10 !important; background-color: #fff;}
 .dark-modal.waitListModal .modal-dialog  {width: 90%; margin-top: 7%}
+.dark-modal.guestListModal .modal-dialog  {width: 90%; margin-top: 7%}
 /*table.panelBarCounts{width; 100% !important}*/
 .panelBarCounts td{font-size: 14px; padding: 0 10px;}
 .panelBarCounts tr{border: none !important;}

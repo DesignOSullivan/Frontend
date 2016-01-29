@@ -764,7 +764,7 @@
                                 Departure: "<b>30-Jan to 12-Feb-16</b> (10 Days Out)<br><i class='fa fa-university'></i> Smithsonian Journeys",
                                 Status: "Advertised",
                                 Minimum: "12",
-                                Allotment: "<a data-toggle='modal' data-target='.allotmentModal'>10 Twins<br>4 Singles</a>",
+                                Allotment: "<a data-toggle='modal' data-target='.AModal'>10 Twins<br>4 Singles</a>",
                                 Capacity: "24",
                                 Direction: "<i class='fa fa-long-arrow-up green'></i>",
                                 Sold: "<a data-toggle='modal' data-target='.guestListModal'>24</a>",
@@ -1766,6 +1766,7 @@
             </div>
         </div>
     </div>
+    </div>
 <!-- TD GRID SCRIPT -->
     <script>
         $(document).ready(function () {
@@ -1817,105 +1818,232 @@
                 }
             });
         });
-    </script> 
+    </script>   
         
+<!-- ALLOTMENT MODAL -->
+        <div class="modal fade dark-modal AModal" id="AModal" tabindex="-1" role="dialog" aria-labelledby="AModal">
 
-
-        <!-- GUEST LIST -->
-        <div class="modal fade dark-modal allotmentModal" id="allotmentModal" tabindex="-1" role="dialog" aria-labelledby="myModalInfo">
-
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class=" modal-header">
-                        <div class="container">
-                            <div class="row">
-
-                                <div class="col-md-3 col-xs-6 borderRight">
-                                    <h3>view<br> guest list</h3>
-                                </div>
-
-                                <div class="col-md-8 col-xs-4">
-                                    <div class="clear bottom25"></div>
-                                    <label>ABP-16 | European Tapestry<br>30-Jan to 12-Feb-2016</label>
-                                </div>
-                                <div class="textRight col-md-1">
-                                    <a data-dismiss="modal"><i class="fa fa-times exitIcon alignRight"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class=" modal-header">
                     <div class="container">
-                        <div class="modal-body">
-                            <div class="row">
-                                <div class="form-group col-md-12">
-                                    <div id="allotmentGrid"></div>
-                                </div>
+                        <div class="row">
+
+                            <div class="col-md-3 col-xs-6 borderRight">
+                                <h3>Tour Director<br> Scorecard</h3>
                             </div>
 
-
-
-
-
+                            <div class="col-md-8 col-xs-4">
+                                <div class="clear bottom30"></div>
+                                <label>Lia Kondili</label>
+                            </div>
+                            <div class="textRight col-md-1">
+                                <a data-dismiss="modal"><i class="fa fa-times exitIcon alignRight"></i></a>
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div class="container">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="form-group progressBar col-md-6">
+                                <h2>Accomodations</h2>
+                                
+                                <label for="#twinPB"><b>Twin</b> | 8/ 10</label>
+                                <div class="clear"></div>
+                                <div id="twinPB" class="bottom15" style="width:100%;"></div>
+                                
+                                <label for="#singlePB"><b>Single</b> | 2/ 4</label>
+                                <div class="clear"></div>
+                                <div id="singlePB" style="width:100%;"></div>
+                                
+                                
+                            </div>
+                            <div class="form-group progressBar col-md-6">
+                                <h2>Cruise | M/Y Harmony V</h2>
+                                
+                                
+                                <label for="#cabin1PB"><b>Cabin 1</b> | 2/ 10</label>
+                                <div class="clear"></div>
+                                <div id="cabin1PB" class="bottom15" style="width:100%;"></div>
+                                
+                                <label for="#cabin2PB"><b>Cabin 2</b> | 2/ 8</label>
+                                <div class="clear"></div>
+                                <div id="cabin2PB" class="bottom15" style="width:100%;"></div>
+                                
+                                <label for="#cabin3PB"><b>Cabin 3</b> | 2/ 6</label>
+                                <div class="clear"></div>
+                                <div id="cabin3PB" style="width:100%;"></div>
+                                
+                            </div>
+                                
+                                
+                                <script>
+                                    $("#twinPB").kendoProgressBar({
+                                        type: "chunk",
+                                        chunkCount: 10,
+                                        max: 10,
+                                        value: 8,
+                                    });
+                                    
+                                    $("#singlePB").kendoProgressBar({
+                                        type: "chunk",
+                                        chunkCount: 4,
+                                        max: 4,
+                                        value: 2,
+                                    });
+                                    
+                                    $("#cabin1PB").kendoProgressBar({
+                                        type: "chunk",
+                                        chunkCount: 10,
+                                        max: 10,
+                                        value: 10,
+                                    });
+
+                                    $("#cabin2PB").kendoProgressBar({
+                                        type: "chunk",
+                                        chunkCount: 8,
+                                        max: 8,
+                                        value: 6,
+                                    });
+
+                                    $("#cabin3PB").kendoProgressBar({
+                                        type: "chunk",
+                                        chunkCount: 6,
+                                        max: 6,
+                                        value: 2,
+                                    });
+                                    
+                                </script>
+                                
+                            
+                            
+<!--
+                            <div class="form-group progressBar col-md-6">
+                                <h2>Cruise</h2>
+                                
+                                <label for="#cabin1PB"><b>Cabin 1</b> | 8/ 10</label>
+                                <div class="clear"></div>
+                                <div id="canbin1PB" class="bottom15" style="width:100%;"></div>
+                                
+                                <label for="#cabin2PB"><b>Cabin 2</b> | 2/ 8</label>
+                                <div class="clear"></div>
+                                <div id="Cabin2PB" style="width:100%;"></div>
+                                
+                                <label for="#cabin3PB"><b>Cabin 3</b> | 2/ 6</label>
+                                <div class="clear"></div>
+                                <div id="Cabin3PB" style="width:100%;"></div>
+                                
+                                
+                                <script>
+                                    $("#cabin1PB").kendoProgressBar({
+                                        type: "chunk",
+                                        chunkCount: 10,
+                                        max: 10,
+                                        value: 4,
+                                    });
+                                    
+                                    $("#cabin2PB").kendoProgressBar({
+                                        type: "chunk",
+                                        chunkCount: 8,
+                                        max: 8,
+                                        value: 2,
+                                    });
+                                    
+                                    $("#cabin3PB").kendoProgressBar({
+                                        type: "chunk",
+                                        chunkCount: 6,
+                                        max: 6,
+                                        value: 2,
+                                    });
+                                    
+                                </script>
+-->
+                                
+                            </div>
+<!--
+                        <div class="row">
+                            <div class="clear bottom30"></div>
+                            <div class="form-group col-md-12 textCenter">
+                                <a href="#"><i class="fa fa-mail-forward"></i> Go To Tour Director Record</a>
+                            </div>
+                        </div>
+-->
 
 
-                    <!-- MODAL FOOTER -->
 
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+
+
                     </div>
+                </div>
+
+
+                <!-- MODAL FOOTER -->
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
-        <!-- GUEST LIST SCRIPT -->
-        <script>
-            $(document).ready(function () {
-                $("#allotmentGrid").kendoGrid({
-                    sortable: true,
-                    columns: [{
-                        field: "Guests",
-                        encoded: false,
-                        width: 225
-                    }, 
-                              {
-                                  field: "Status",
-                                  width: 125
-                              }, 
-                              {
-                                  field: "Extension",
-                                  width: 100,
-                                  template: "<p> #: ExtensionG1 # <br> #: ExtensionG2 # <p>"
-                              }, 
-                              {
-                                  field: "SIG",
-                                  title: "Special Interest Group",
-                                  width: 175
-                              }, 
-                              {
-                                  field: "DirectGroup",
-                                  title: "Direct Group",
-                                  //                    headerAttributes: {style: "text-align: center"},
-                                  //                    attributes: {"class": "textCenter"},
-                                  width: 175
-                              },
-                             ],
-                    dataSource: {
-                        data: [
-                            {
-                                Guests: "<b><a>Mr. Daniel O'Sullivan (1)</a><br><a>Mrs. Catherine O'Sullivan (3)</a></b>",
-                                Status: "Confirmed",
-                                ExtensionG1: "No",
-                                ExtensionG2: "Yes",
-                                SIG: "",
-                                DirectGroup: "Archetype SC Fly Shakers",
-                            },
-
-                        ]
-                    }
-                });
+    </div>
+    </div>
+<!-- TD GRID SCRIPT -->
+<!--
+    <script>
+        $(document).ready(function () {
+            $("#TDGrid").kendoGrid({
+                sortable: true,
+                columns: [
+                {
+                    field: "TourExcellence",
+                    title: "Tour Excellence",
+                    headerAttributes: {style: "text-align: center"},
+                    attributes: {"class": "textCenter"},
+                    encoded: false,
+//                    width: 175
+                },
+                {
+                    field: "TourDirectorExcellence",
+                    title: "Tour Director Excellence",
+                    headerAttributes: {style: "text-align: center"},
+                    attributes: {"class": "textCenter"},
+                    encoded: false,
+//                    width: 175
+                },
+                {
+                    field: "CancelledTours",
+                    title: "Cancelled Tours",
+                    headerAttributes: {style: "text-align: center"},
+                    attributes: {"class": "textCenter"},
+                    encoded: false,
+//                    width: 175
+                },
+                {
+                    field: "ToursLead",
+                    title: "Tours Lead",
+                    headerAttributes: {style: "text-align: center"},
+                    attributes: {"class": "textCenter"},
+                    encoded: false,
+//                    width: 175
+                },
+                         ],
+                dataSource: {
+                    data: [
+                        {
+                            TourExcellence: "<div class='scorecardLeft'><b>93%</b><p>Last Year</p></div> <div class='scorecardRight'><b>98%</b><p>Year to Date</p></div>",
+                            TourDirectorExcellence: "<div class='scorecardLeft'><b>96%</b><p>Last Year</p></div> <div class='scorecardRight'><b>99%</b><p>Year to Date</p></div>",
+                            CancelledTours: "<div class='scorecardLeft'><b>5</b><p>Last Year</p></div> <div class='scorecardRight'><b>4</b><p>Year to Date</p></div>",
+                            ToursLead: "<div class='scorecardLeft'><b>23</b><p>Last Year</p></div> <div class='scorecardRight'><b>8</b><p>Year to Date</p></div>",
+                        },
+                    ]
+                }
             });
-        </script>       
+        });
+    </script> 
+-->
+        
+    
+
 
 
 </body>

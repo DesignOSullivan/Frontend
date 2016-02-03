@@ -650,12 +650,18 @@
                 </div>
             </div>
         </div>
+
 <!--/ END TOUR PANEL BARS HTML-->
             
 <!--TOUR PANEL BARS SCRIPTS-->
         <script>
 //BASE TOUR SCRIPT
+          
+                
+            
             $(document).ready(function() {
+                
+                
                 var element = $(".grid5").kendoGrid({
                     sortable: true,
 //                    editable: true,
@@ -665,13 +671,16 @@
                         this.collapseRow(this.tbody.find("tr.k-master-row"));
 //                        
                     },
+//                    editable: "incell",
                     columns: [
+//                        { command: "edit"},
                         {
                             field: "Check",
                             title: "&nbsp;",
                             encoded: false,
 //                            attributes: {style: "margin-left: -10px"},
-                            width: "20px"
+                            width: "20px",
+                            editable: true
                         },
 //                        {
 //                            field: "Att",
@@ -766,6 +775,33 @@
                         }
                     ],
                     dataSource: {
+                        
+//                        schema: {
+//                            model: {
+//                                //                            id: "ProductID",
+//                                fields: {
+//                                    Check: { editable: false},
+//                                    Att: { editable: false},
+//                                    Departure: { editable: false},
+//                                    Status: { editable: false},
+//                                    Minimum: { type: "number", editable: true, encoded: false,},
+//                                    Allotment: { editable: false},
+//                                    Capacity: { editable: false},
+//                                    Direction: { editable: false},
+//                                    Sold: { editable: false},
+//                                    WaitList: { editable: false},
+//                                    Registered: { editable: false},
+//                                    TourDirector: { editable: false},
+//                                    Tasks: { editable: false},
+//                                    Invoice: { editable: false},
+//                                    Mailed: { editable: false},
+//                                }
+//                            }
+//                        },
+                        
+                        
+                        
+                        
                         data: [
                             {
                                 Check: "<input class='checkbox' type='checkbox'>",
@@ -773,7 +809,7 @@
                                 Departure: "<b>30-Jan to 12-Feb-16</b> (10 Days Out)<br><i class='fa fa-university'></i> Smithsonian Journeys",
                                 Status: "Advertised",
                                 Minimum: "12",
-                                Allotment: "<a data-toggle='modal' data-target='.AModal'>10 Twins<br>4 Singles</a>",
+                                Allotment: "<a data-toggle='modal' data-target='.allotmentModal'>10 Twins<br>4 Singles</a>",
                                 Capacity: "24",
                                 Direction: "<i class='fa fa-long-arrow-up green'></i>",
                                 Sold: "<a data-toggle='modal' data-target='.guestListModal'>24</a>",
@@ -1813,7 +1849,7 @@
     </script>   
         
 <!-- ALLOTMENT MODAL -->
-        <div class="modal fade dark-modal AModal" id="AModal" tabindex="-1" role="dialog" aria-labelledby="AModal">
+        <div class="modal fade dark-modal allotmentModal" id="allotmentModal" tabindex="-1" role="dialog" aria-labelledby="allotmentModal">
 
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -1821,11 +1857,11 @@
                     <div class="container">
                         <div class="row">
 
-                            <div class="col-md-3 col-xs-6 borderRight">
+                            <div class="col-md-4 col-xs-6 borderRight">
                                 <h3>View<br> Allotment</h3>
                             </div>
 
-                            <div class="col-md-8 col-xs-4">
+                            <div class="col-md-7 col-xs-4">
                                 <div class="clear bottom20"></div>
                                 <label><strong>ABP-16 | European Tapestry</strong><br>30-Jan to 12-Feb-16 &#40;90 Days Out&#41;</label>
                             </div>
@@ -1838,7 +1874,7 @@
                 <div class="container">
                     <div class="modal-body">
                         <div class="row">
-                            <div class="form-group progressBar col-md-6">
+                            <div class="form-group progressBar col-md-12">
                                 <h2>Accomodations</h2>
                                 
                                 <label for="#twinPB" class="width100"><b>Twin</b><span class="alignRight bottom0">8/ 10</span></label>
@@ -1851,7 +1887,7 @@
                                 
                                 
                             </div>
-                            <div class="form-group progressBar col-md-6">
+                            <div class="form-group progressBar col-md-12">
                                 <h2>Upgrades</h2>
                                 
                                 

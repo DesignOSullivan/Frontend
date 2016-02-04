@@ -35,7 +35,9 @@ body#home{margin-bottom: 0; padding-bottom: 0}
 
 #homeIcons{text-align: center}
 #homeIconsRow{padding:0 240px; margin: 30px 0}
-li{display: inline-block; list-style-type: none; margin: 5px}
+#home #homeIcons li {display: inline-block;}
+#home li {list-style-type: none;}
+#home  li .icon {margin: 5px}
 li .icon{height: 120px; width: 120px ; cursor: pointer; background-color: cadetblue}
 li .icon img{height: 100%; padding: 5px}
 li:nth-child(n+5) .icon{width: 80px; height: 80px}

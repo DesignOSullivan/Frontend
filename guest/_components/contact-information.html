@@ -1,3 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OUI</title>
+    <link rel="stylesheet" href="../../kendoui/styles/kendo.common-bootstrap.min.css">
+    <link rel="stylesheet" href="../../kendoui/styles/kendo.bootstrap.min.css">
+    <link href="../../css/bootstrap.css" rel="stylesheet">
+    <link href="../../css/toggle-me-softly.css" rel="stylesheet">
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/font-awesome.css" rel="stylesheet">
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/bootstrap-toggle.min.js"></script>
+    <script src="../../kendoui/js/kendo.all.min.js"></script>
+    <script src="guest-scripts.js"></script>
+
+
+</head>
+
 
 <!-- Contact Information -->
 <div class="container">
@@ -12,41 +35,111 @@
     <div class="row">
         <div class="col-md-7">
             <div class="container pad0">
-                <div class="row">
-                    <div class="form-group col-md-7 col-xs-8">
-                        <label for="phoneNumber">Phone Number</label>
-                        <input class="form-control" id="phoneNumber" type="text" placeholder="Phone Number">
-                    </div>
-                    <div class="form-group col-md-4 col-xs-4">
-                        <label for="phoneType">Type</label>
-                        <input class="form-control" id="phoneType">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-md-12">
-                        <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Phone Number</i></a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-md-7">
-                        <label for="emailInput">Email Address</label>
-                        <input class="form-control" id="emailInput" type="text" placeholder="Email Address">
-                    </div>
 
-                    <div class="form-group col-md-4">
-                        <div class="clear bottom25"></div>
-                        <div class="switch">
-                            <input id="email-promo-toggle" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
-                            <label for="email-promo-toggle"></label>
+
+
+                <div class="row" id="phoneContainer">
+                    <div class="phoneWrapper displayNone">
+                        <div class="form-group col-md-7 col-xs-8">
+                            <label for="phoneNumber"></label>
+                            <input class="form-control" id="phoneNumber" type="text" placeholder="Phone Number">
                         </div>
-                        <div class="switch-label">
-                            <label for="email-promo-toggle">Email Promotions</label>
+                        <div class="form-group col-md-4 col-xs-4">
+                            <label for="phoneType"></label>
+                            <input class="form-control" id="phoneType">
+                        </div>
+                        <div class="form-group col-md-1">
+                            <div class="clear bottom25"></div>
+                            <a class="alignLeft"><i class="fa fa-remove red remove"></i></a>
+                        </div>
+                    </div>
+                    <div class="phoneWrapper phoneWrapper1">
+                        <div class="form-group col-md-7 col-xs-8">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input class="form-control" id="phoneNumber1" type="text" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group col-md-4 col-xs-4">
+                            <label for="phoneType">Type</label>
+                            <input class="form-control" id="phoneType1">
                         </div>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add an Email Address</i></a>
+                        <a id="addPhone" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Phone Number</i></a>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="row" id="emailContainer">
+                    <div class="emailWrapper displayNone">
+                        <div class="form-group col-md-7">
+                            <label for="emailInput"></label>
+                            <input class="form-control" id="emailInput" type="text" placeholder="Email Address">
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <div class="clear bottom25"></div>
+                            <div class="switch">
+                                <input id="emailPromoToggle" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
+                                <label id="emailPromoToggleLabel" for="emailPromoToggle"></label>
+                            </div>
+                            <div class="switch-label">
+                                <label for="emailPromoToggle">Email Promotions</label>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-1">
+                            <div class="clear bottom25"></div>
+                            <a class="alignLeft"><i class="fa fa-remove red remove"></i></a>
+                        </div>
+                    </div>
+                    <div class="emailWrapper emailWrapper1">
+                        <div class="form-group col-md-7">
+                            <label for="emailInput">Email Address</label>
+                            <input class="form-control" id="emailInput" type="text" placeholder="Email Address">
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <div class="clear bottom25"></div>
+                            <div class="switch">
+                                <input id="emailPromoToggle1" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
+                                <label id="emailPromoToggleLabel1" for="emailPromoToggle1"></label>
+                            </div>
+                            <div class="switch-label">
+                                <label for="emailPromoToggle1">Email Promotions</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    $(document).ready(function () {
+
+                                /*ADD EXTRA EMAIL */
+                                $('#addEmail').click(function () {
+                                    var numEmailWrappers = $('.emailWrapper').length;
+                                    $('#emailContainer .emailWrapper:first').clone().appendTo('#emailContainer').removeClass('displayNone').addClass('emailWrapper' + numEmailWrappers);
+
+                                    
+                                    $('.emailWrapper' + numEmailWrappers + ' #emailPromoToggle').attr("id", "emailPromoToggle" + numEmailWrappers);
+
+                                    $('.emailWrapper' + numEmailWrappers + ' #emailPromoToggleLabel').attr("for", "emailPromoToggle" + numEmailWrappers);
+                                    
+                                });
+                    });
+                </script>
+
+
+
+
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <a id="addEmail" class="green"><i class="fa fa-plus-circle"></i> <i>Add an Email Address</i></a>
                     </div>
                 </div>
             </div>
@@ -83,25 +176,85 @@
     </div>
 </div>
 
-    <script>
-        $(document).ready(function() {
-            $("#phoneNumber").kendoMaskedTextBox({
-                mask: "(999) 000-0000"
-            });
-        });
-    </script>
-
 <script>
-    $(document).ready(function() {
-        $("#phoneType").kendoComboBox({
+    $(document).ready(function () {
+        $("#phoneNumber1").kendoMaskedTextBox({
+            mask: "(999) 000-0000"
+        });
+
+
+        $("#phoneType1").kendoComboBox({
             dataTextField: "text",
             dataValueField: "value",
             placeholder: "Select Type",
             dataSource: [
-                { text: "Home", value: "1" },
-                { text: "Mobile", value: "2" },
-                { text: "Work", value: "3" },
+                {
+                    text: "Home",
+                    value: "1"
+                },
+                {
+                    text: "Mobile",
+                    value: "2"
+                },
+                {
+                    text: "Work",
+                    value: "3"
+                },
             ]
         });
+
+
+        /*ADD EXTRA PHONE */
+        $('#addPhone').click(function () {
+            var numPhoneWrappers = $('.phoneWrapper').length;
+            $('#phoneContainer .phoneWrapper:first').clone().appendTo('#phoneContainer').removeClass('displayNone').addClass('phoneWrapper' + numPhoneWrappers);
+
+            $('.phoneWrapper' + numPhoneWrappers + ' #phoneNumber').attr("id", "phoneNumber" + numPhoneWrappers);
+
+            $('.phoneWrapper' + numPhoneWrappers + ' #phoneType').attr("id", "phoneType" + numPhoneWrappers);
+
+
+
+
+
+           
+            $("#phoneNumber" + numPhoneWrappers).kendoMaskedTextBox({
+                mask: "(999) 000-0000"
+            });
+
+            $("#phoneType" + numPhoneWrappers).kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select Type",
+                dataSource: [
+                    {
+                        text: "Home",
+                        value: "1"
+                    },
+                    {
+                        text: "Mobile",
+                        value: "2"
+                    },
+                    {
+                        text: "Work",
+                        value: "3"
+                    },
+                ]
+            });
+
+
+
+            return false;
+        });
+
+        $(document).on('click', '.remove', function () {
+            $(this).parents().eq(2).remove();
+        });
+
+
+
+
     });
 </script>
+
+</html>

@@ -1,3 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OUI</title>
+    <link rel="stylesheet" href="../../kendoui/styles/kendo.common-bootstrap.min.css">
+    <link rel="stylesheet" href="../../kendoui/styles/kendo.bootstrap.min.css">
+    <link href="../../css/bootstrap.css" rel="stylesheet">
+    <link href="../../css/toggle-me-softly.css" rel="stylesheet">
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/font-awesome.css" rel="stylesheet">
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/bootstrap-toggle.min.js"></script>
+    <script src="../../kendoui/js/kendo.all.min.js"></script>
+    <script src="guest-scripts.js"></script>
+
+
+</head>
+
+
 <!-- Tabs -->
 <div id="guestTabs">
     <div class="container pad0">
@@ -12,7 +36,7 @@
         <div class="row">
             <div class="col-md-12 center">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a data-toggle="tab" data-target="#passport-content" id="passportTab">Passport</a></li>
+                    <li class="active"><a data-toggle="tab" data-target="#passport-content" id="passportTab">Passport/ ID</a></li>
                     <li><a data-toggle="tab" data-target="#air-content" id="airTab">Air</a></li>
                     <li><a data-toggle="tab" data-target="#health-content" id="healthTab">Health</a></li>
                     <li><a data-toggle="tab" data-target="#emergency-content" id="emergencyTab">Emergency</a></li>
@@ -60,74 +84,140 @@
                 </div>
                 <div class="col-md-6">
                     <div class="container-fluid pad0">
-                        <div class="row">
-                            <div class="form-group col-md-6 col-xs-6">
-                                <label for="passportNumber">Passport #</label>
-                                <input class="form-control" id="passportNumber" type="text" placeholder="Passport #">
+                        <div id="passportContainer" class="row">
+
+                            <div class="IDWrapper displayNone">
+                                <div class="col-md-12">
+                                    <hr><a class="alignRight"><i class="fa fa-remove red remove"></i></a></div>
+                                <div class="form-group col-md-12 col-xs-6">
+                                    <label for="IDType">Type of ID</label>
+                                    <input id="IDType" class="form-control">
+                                </div>
+                                <div class="form-group col-md-12 col-xs-6">
+                                    <label for="IDName">Name on ID</label>
+                                    <input id="IDName" class="form-control" placeholder="Name">
+                                </div>
                             </div>
-                            <div class="form-group col-md-6 col-xs-6">
-                                <label for="redressNumbe">Redress #</label>
-                                <input class="form-control" id="redressNumber" type="text" placeholder="Redress #">
+
+                            <div class="passportWrapper displayNone">
+                                <div class="col-md-12">
+                                    <hr><a class="alignRight"><i class="fa fa-remove red remove"></i></a></div>
+                                <div class="form-group col-md-6 col-xs-6">
+                                    <label for="passportNumber">Passport #</label>
+                                    <input class="form-control" id="passportNumber" type="text" placeholder="Passport #">
+                                </div>
+                                <div class="form-group col-md-6 col-xs-6">
+                                    <label for="redressNumbe">Redress #</label>
+                                    <input class="form-control" id="redressNumber" type="text" placeholder="Redress #">
+                                </div>
+                                <div class="form-group col-md-12 col-xs-12">
+                                    <label for="pLastName">Last Name</label>
+                                    <input class="form-control" id="pLastName" type="text" placeholder="Last Name">
+                                </div>
+                                <div class="form-group col-md-6 col-xs-6">
+                                    <label for="pFirstName">First Name</label>
+                                    <input class="form-control" id="pFirstName" type="text" placeholder="First Name">
+                                </div>
+                                <div class="form-group col-md-6 col-xs-6">
+                                    <label for="pMiddleName">Middle Name</label>
+                                    <input class="form-control" id="pMiddleName" type="text" placeholder="Middle Name">
+                                </div>
+                                <div class="form-group col-md-12 col-xs-12">
+                                    <label for="pNationality">Nationality</label>
+                                    <input class="form-control" id="pNationality" type="text" placeholder="Nationality">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="pDateOfBirth">Date of Birth</label>
+                                    <input id="pDateOfBirth" class="form-control">
+                                </div>
+                                <div class="form-group col-md-6 col-xs-6">
+                                    <label for="pSex">Sex</label>
+                                    <input id="pSex" class="form-control">
+                                </div>
+                                <div class="form-group col-md-12 col-xs-12">
+                                    <label for="pPlaceOfBirth">Place of Birth</label>
+                                    <input class="form-control" id="pPlaceOfBirth" placeholder="Place of Birth">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="pDateOfIssue">Date of Issue</label>
+                                    <input id="pDateOfIssue" class="form-control">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="pDateOfExpiration">Date of Expiration</label>
+                                    <input class="form-control" id="pDateOfExpiration">
+                                </div>
+                                <div class="form-group col-md-12 col-xs-12">
+                                    <label for="pIssuingAuthority">Issuing Authority</label>
+                                    <input id="pIssuingAuthority" class="form-control">
+                                </div>
+                                <div class="form-group col-md-12 col-xs-12">
+                                    <label for="pOccupation">Occupation</label>
+                                    <input class="form-control" id="pOccupation" type="text" placeholder="Occupation">
+                                </div>
                             </div>
+
+                            <div class="passportWrapper passportWrapper1">
+                                <div class="form-group col-md-6 col-xs-6">
+                                    <label for="passportNumber">Passport #</label>
+                                    <input class="form-control" id="passportNumber" type="text" placeholder="Passport #">
+                                </div>
+                                <div class="form-group col-md-6 col-xs-6">
+                                    <label for="redressNumbe">Redress #</label>
+                                    <input class="form-control" id="redressNumber" type="text" placeholder="Redress #">
+                                </div>
+                                <div class="form-group col-md-12 col-xs-12">
+                                    <label for="pLastName">Last Name</label>
+                                    <input class="form-control" id="pLastName" type="text" placeholder="Last Name">
+                                </div>
+                                <div class="form-group col-md-6 col-xs-6">
+                                    <label for="pFirstName">First Name</label>
+                                    <input class="form-control" id="pFirstName" type="text" placeholder="First Name">
+                                </div>
+                                <div class="form-group col-md-6 col-xs-6">
+                                    <label for="pMiddleName">Middle Name</label>
+                                    <input class="form-control" id="pMiddleName" type="text" placeholder="Middle Name">
+                                </div>
+                                <div class="form-group col-md-12 col-xs-12">
+                                    <label for="pNationality">Nationality</label>
+                                    <input class="form-control" id="pNationality" type="text" placeholder="Nationality">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="pDateOfBirth1">Date of Birth</label>
+                                    <input id="pDateOfBirth1" class="form-control">
+                                </div>
+                                <div class="form-group col-md-6 col-xs-6">
+                                    <label for="pSex1">Sex</label>
+                                    <input id="pSex1" class="form-control">
+                                </div>
+                                <div class="form-group col-md-12 col-xs-12">
+                                    <label for="pPlaceOfBirth">Place of Birth</label>
+                                    <input class="form-control" id="pPlaceOfBirth" placeholder="Place of Birth">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="pDateOfIssue1">Date of Issue</label>
+                                    <input id="pDateOfIssue1" class="form-control">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="pDateOfExpiration1">Date of Expiration</label>
+                                    <input class="form-control" id="pDateOfExpiration1">
+                                </div>
+                                <div class="form-group col-md-12 col-xs-12">
+                                    <label for="pIssuingAuthority1">Issuing Authority</label>
+                                    <input id="pIssuingAuthority1" class="form-control">
+                                </div>
+                                <div class="form-group col-md-12 col-xs-12">
+                                    <label for="pOccupation">Occupation</label>
+                                    <input class="form-control" id="pOccupation" type="text" placeholder="Occupation">
+                                </div>
+                            </div>
+
                         </div>
                         <div class="row">
-                            <div class="form-group col-md-12 col-xs-12">
-                                <label for="pLastName">Last Name</label>
-                                <input class="form-control" id="pLastName" type="text" placeholder="Last Name">
+                            <div class="col-md-6">
+                                <a id="addPassport" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Passport</i></a>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-6 col-xs-6">
-                                <label for="pFirstName">First Name</label>
-                                <input class="form-control" id="pFirstName" type="text" placeholder="First Name">
-                            </div>
-                            <div class="form-group col-md-6 col-xs-6">
-                                <label for="pMiddleName">Middle Name</label>
-                                <input class="form-control" id="pMiddleName" type="text" placeholder="Middle Name">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-12 col-xs-12">
-                                <label for="pNationality">Nationality</label>
-                                <input class="form-control" id="pNationality" type="text" placeholder="Nationality">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="pDateOfBirth">Date of Birth</label>
-                                <input id="pDateOfBirth" class="form-control">
-                            </div>
-                            <div class="form-group col-md-6 col-xs-6">
-                                <label for="pSex">Sex</label>
-                                <input id="pSex" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-12 col-xs-12">
-                                <label for="pPlaceOfBirth">Place of Birth</label>
-                                <input class="form-control" id="pPlaceOfBirth" placeholder="Place of Birth">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="pDateOfIssue">Date of Issue</label>
-                                <input id="pDateOfIssue" class="form-control">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="pDateOfExpiration">Date of Expiration</label>
-                                <input class="form-control" id="pDateOfExpiration">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-12 col-xs-12">
-                                <label for="pIssuingAuthority">Issuing Authority</label>
-                                <input id="pIssuingAuthority" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-12 col-xs-12">
-                                <label for="pOccupation">Occupation</label>
-                                <input class="form-control" id="pOccupation" type="text" placeholder="Occupation">
+                            <div class="col-md-6">
+                                <a id="addID" class="green"><i class="fa fa-plus-circle"></i> <i>Add an ID</i></a>
                             </div>
                         </div>
                     </div>
@@ -147,29 +237,187 @@
     </div>
 
     <!--Passport Scripts-->
+    <script>
+        $(document).ready(function () {
+
+            $('#addID').click(function () {
+                var numIDWrappers = $('.IDWrapper').length;
+                $('#passportContainer .IDWrapper:first').clone().appendTo('#passportContainer').removeClass('displayNone').addClass('IDWrapper' + numIDWrappers);
+
+
+                $('.IDWrapper' + numIDWrappers + ' #IDType').attr("id", "IDType" + numIDWrappers);
+
+
+                $("#IDType" + numIDWrappers).kendoComboBox({
+                    dataTextField: "text",
+                    dataValueField: "value",
+                    placeholder: "Select ID Type",
+                    filter: "startswith",
+                    suggest: "true",
+                    dataSource: [
+                        {
+                            text: "Driver's licenses or other state photo identity card",
+                        },
+                        {
+                            text: "U.S. passport card",
+                        },
+                        {
+                            text: "DHS trusted traveler cards (Global Entry, NEXUS, SENTRI, FAST)",
+                        },
+                        {
+                            text: "U.S. military ID (active duty or retired military and their dependents, and DoD civilians)",
+                        },
+                        {
+                            text: "Permanent resident card",
+                        },
+                        {
+                            text: "Border crossing card",
+                        },
+                        {
+                            text: "Airline or airport-issued ID (if issued under a TSA-approved security plan)",
+                        },
+                        {
+                            text: "Federally recognized, tribal-issued photo ID",
+                        },
+                        {
+                            text: "HSPD-12 PIV card",
+                        },
+                        {
+                            text: "Canadian provincial driver's license or Indian and Northern Affairs Canada card",
+                        },
+                        {
+                            text: "Transportation worker identification credential",
+                        },
+                    ]
+                });
+                return false;
+            });
+
+        });
+    </script>
+
+
 
     <script>
-        $("#pDateOfBirth").kendoDatePicker({
-            format: "dd-MMM-yy",
-            start: "century",
-            placeholder: "test",
-            value: "Select Date"
-        });
-
-        $("#pDateOfIssue").kendoDatePicker({
-            format: "dd-MMM-yy",
-            start: "decade",
-            value: "Select Date"
-        });
-
-        $("#pDateOfExpiration").kendoDatePicker({
-            format: "dd-MMM-yy",
-            start: "decade",
-            value: "Select Date"
-        });
-
         $(document).ready(function () {
-            $("#pSex").kendoComboBox({
+
+            $('#addPassport').click(function () {
+                var numPassportWrappers = $('.passportWrapper').length;
+                $('#passportContainer .passportWrapper:first').clone().appendTo('#passportContainer').removeClass('displayNone').addClass('passportWrapper' + numPassportWrappers);
+
+                $('.passportWrapper' + numPassportWrappers + ' #pDateOfBirth').attr("id", "pDateOfBirth" + numPassportWrappers);
+
+                $('.passportWrapper' + numPassportWrappers + ' #pSex').attr("id", "pSex" + numPassportWrappers);
+
+                $('.passportWrapper' + numPassportWrappers + ' #pDateOfIssue').attr("id", "pDateOfIssue" + numPassportWrappers);
+
+                $('.passportWrapper' + numPassportWrappers + ' #pDateOfExpiration').attr("id", "pDateOfExpiration" + numPassportWrappers);
+
+                $('.passportWrapper' + numPassportWrappers + ' #pIssuingAuthority').attr("id", "pIssuingAuthority" + numPassportWrappers);
+
+                $("#pDateOfBirth" + numPassportWrappers).kendoDatePicker({
+                    format: "dd-MMM-yy",
+                    start: "century",
+                    placeholder: "test",
+                    value: "Select Date"
+                });
+
+                $("#pSex" + numPassportWrappers).kendoComboBox({
+                    dataTextField: "text",
+                    dataValueField: "value",
+                    placeholder: "Select Sex",
+                    filter: "startswith",
+                    suggest: "true",
+                    dataSource: [
+                        {
+                            text: "Male",
+                            value: "1"
+                        },
+                        {
+                            text: "Female",
+                            value: "2"
+                        },
+                        {
+                            text: "Other",
+                            value: "3"
+                        }
+                    ]
+                });
+
+                $("#pDateOfIssue" + numPassportWrappers).kendoDatePicker({
+                    format: "dd-MMM-yy",
+                    start: "decade",
+                    value: "Select Date"
+                });
+
+                $("#pDateOfExpiration" + numPassportWrappers).kendoDatePicker({
+                    format: "dd-MMM-yy",
+                    start: "decade",
+                    value: "Select Date"
+                });
+
+                $("#pIssuingAuthority" + numPassportWrappers).kendoComboBox({
+                    dataTextField: "text",
+                    dataValueField: "value",
+                    placeholder: "Select Issuing Authority",
+                    filter: "startswith",
+                    suggest: "true",
+                    dataSource: [
+                        {
+                            text: "Port of Miami",
+                            value: "1"
+                        },
+                        {
+                            text: "Other Issuing Authority",
+                            value: "1"
+                        },
+                        {
+                            text: "Other Issuing Authority",
+                            value: "2"
+                        }
+                    ]
+                });
+
+
+
+                return false;
+            });
+
+            $(document).on('click', '.remove', function () {
+                $(this).parents().eq(2).remove();
+            });
+
+        });
+    </script>
+
+
+
+
+
+    <script>
+        $(document).ready(function () {
+
+            $("#pDateOfBirth1").kendoDatePicker({
+                format: "dd-MMM-yy",
+                start: "century",
+                placeholder: "test",
+                value: "Select Date"
+            });
+
+            $("#pDateOfIssue1").kendoDatePicker({
+                format: "dd-MMM-yy",
+                start: "decade",
+                value: "Select Date"
+            });
+
+            $("#pDateOfExpiration1").kendoDatePicker({
+                format: "dd-MMM-yy",
+                start: "decade",
+                value: "Select Date"
+            });
+
+
+            $("#pSex1").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
                 placeholder: "Select Sex",
@@ -190,10 +438,8 @@
                     }
                 ]
             });
-        });
 
-        $(document).ready(function () {
-            $("#pIssuingAuthority").kendoComboBox({
+            $("#pIssuingAuthority1").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
                 placeholder: "Select Issuing Authority",
@@ -274,22 +520,83 @@
                 </div>
             </div>
             <div class="pad15">
-                <div class="row">
-                    <div class="form-group col-md-3">
-                        <label for="aAirline">Airline</label>
-                        <input class="form-control" id="aAirline">
+                <div class="row" id="flyerContainer">
+
+                    <div class="flyerWrapper clear displayNone">
+                        <div class="form-group col-md-3">
+                            <label for="aAirline"></label>
+                            <input class="form-control" id="aAirline">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="aFrequentFlyer"></label>
+                            <input class="form-control" id="aFrequentFlyer" placeholder="Frequent Flyer #">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div class="clear bottom30"></div>
+                            <a><i class="fa fa-remove red remove"></i></a>
+                        </div>
                     </div>
-                    <div class="form-group col-md-3">
-                        <label for="aFrequentFlyer">Frequent Flyer #</label>
-                        <input class="form-control" id="aFrequentFlyer" placeholder="Frequent Flyer #">
+
+                    <div class="flyerWrapper flyerWrapper1 clear">
+                        <div class="form-group col-md-3">
+                            <label for="aAirline1">Airline</label>
+                            <input class="form-control" id="aAirline1">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="aFrequentFlyer">Frequent Flyer #</label>
+                            <input class="form-control" id="aFrequentFlyer" placeholder="Frequent Flyer #">
+                        </div>
+                        <div class="col-md-6"></div>
                     </div>
+
                 </div>
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Frequent Flyer Program</i></a>
+                        <a id="addFlyer" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Frequent Flyer Program</i></a>
                     </div>
                 </div>
             </div>
+
+            <script>
+                $(document).ready(function () {
+
+                    $('#addFlyer').click(function () {
+                        var numFlyerWrappers = $('.flyerWrapper').length;
+                        $('#flyerContainer .flyerWrapper:first').clone().appendTo('#flyerContainer').removeClass('displayNone').addClass('flyerWrapper' + numFlyerWrappers);
+
+
+                        $('.flyerWrapper' + numFlyerWrappers + ' #aAirline').attr("id", "aAirline" + numFlyerWrappers);
+
+                        $("#aAirline" + numFlyerWrappers).kendoComboBox({
+                            dataTextField: "text",
+                            dataValueField: "value",
+                            placeholder: "Select Airline",
+                            filter: "startswith",
+                            suggest: "true",
+                            dataSource: [
+                                {
+                                    text: "American Airlines",
+                                    },
+                                {
+                                    text: "US Airways",
+                                    },
+                                {
+                                    text: "Spirit",
+                                    },
+                                {
+                                    text: "Delta",
+                                    }
+                                ]
+                        });
+
+
+                        return false;
+                    });
+
+
+                });
+            </script>
+
         </div>
     </div>
 
@@ -306,11 +613,9 @@
                 dataSource: [
                     {
                         text: "Myrtle Beach Int'l | MYR",
-                        value: "1"
                     },
                     {
                         text: "Logan Int'l | BOS",
-                        value: "3"
                     }
                 ]
             });
@@ -365,7 +670,7 @@
         });
 
         $(document).ready(function () {
-            $("#aAirline").kendoComboBox({
+            $("#aAirline1").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
                 placeholder: "Select Airline",
@@ -374,19 +679,15 @@
                 dataSource: [
                     {
                         text: "American Airlines",
-                        value: "1"
                     },
                     {
                         text: "US Airways",
-                        value: "1"
                     },
                     {
                         text: "Spirit",
-                        value: "1"
                     },
                     {
                         text: "Delta",
-                        value: "3"
                     }
                 ]
             });
@@ -710,77 +1011,286 @@
     <div id="emergency-content" class="tab-pane fade">
         <div class="container pad0">
             <div class="row">
-                <div class="form-group col-md-1">
-                    <label for="eTitle1">Title</label>
-                    <input class="form-control" id="eTitle">
-                </div>
-                <div class="form-group col-md-3">
-                    <label for="eFirstName">First Name</label>
-                    <input class="form-control" id="eFirstName" type="text" placeholder="First Name">
-                </div>
-                <div class="form-group col-md-1">
-                    <label for="eMiddleInit">MI</label>
-                    <input class="form-control" id="eMiddleInit" type="text" placeholder="MI">
-                </div>
+                <div class="col-md-12">
+                    <div id="contactContainer">
+                        <div class="contactWrapper displayNone">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <hr><a class="alignRight"><i class="fa fa-remove red remove3"></i></a></div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-1">
+                                    <label for="eTitle">Title</label>
+                                    <input class="form-control" id="eTitle">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="eFirstName">First Name</label>
+                                    <input class="form-control" id="eFirstName" type="text" placeholder="First Name">
+                                </div>
+                                <div class="form-group col-md-1">
+                                    <label for="eMiddleInit">MI</label>
+                                    <input class="form-control" id="eMiddleInit" type="text" placeholder="MI">
+                                </div>
 
 
-                <div class="form-group col-md-3">
-                    <label for="eLastName">Last Name</label>
-                    <input class="form-control" id="eLastName" type="text" placeholder="Last Name">
-                </div>
-                <div class="form-group col-md-1">
-                    <label for="eSuffix">Suffix</label>
-                    <Input class="form-control" id="eSuffix">
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-md-4 col-xs-8">
-                    <label for="phoneNumber">Phone Number</label>
-                    <input class="form-control" id="phoneNumber" type="text" placeholder="Phone Number">
-                </div>
-                <div class="form-group col-md-2 col-xs-3">
-                    <label for="ePhoneType">Type</label>
-                    <Input class="form-control" id="ePhoneType">
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-md-12">
-                    <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Phone Number</i></a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-md-6 col-xs-11">
-                    <label for="emailInput">Email</label>
-                    <input class="form-control" id="emailInput" type="text" placeholder="Email">
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-md-12">
-                    <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add an Email Address</i></a>
-                </div>
-            </div>
+                                <div class="form-group col-md-3">
+                                    <label for="eLastName">Last Name</label>
+                                    <input class="form-control" id="eLastName" type="text" placeholder="Last Name">
+                                </div>
+                                <div class="form-group col-md-1">
+                                    <label for="eSuffix">Suffix</label>
+                                    <Input class="form-control" id="eSuffix">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-4 col-xs-8">
+                                    <label for="ephoneNumber">Phone Number</label>
+                                    <input class="form-control" id="ephoneNumber" type="text" placeholder="Phone Number">
+                                </div>
+                                <div class="form-group col-md-2 col-xs-3">
+                                    <label for="ePhoneType">Type</label>
+                                    <Input class="form-control" id="ePhoneType">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Phone Number</i></a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6 col-xs-11">
+                                    <label for="emailInput">Email</label>
+                                    <input class="form-control" id="emailInput" type="text" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add an Email Address</i></a>
+                                </div>
+                            </div>
 
-            <div class="row">
-                <div class="form-group col-md-4">
-                    <label for="eRelationship">Relationship</label>
-                    <input class="form-control" id="eRelationship">
+                            <div class="row">
+                                <div class="form-group col-md-4">
+                                    <label for="eRelationship">Relationship</label>
+                                    <input class="form-control" id="eRelationship">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contactWrapper contactWrapper1">
+                            <div class="row">
+                                <div class="form-group col-md-1">
+                                    <label for="eTitle1">Title</label>
+                                    <input class="form-control" id="eTitle1">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="eFirstName">First Name</label>
+                                    <input class="form-control" id="eFirstName" type="text" placeholder="First Name">
+                                </div>
+                                <div class="form-group col-md-1">
+                                    <label for="eMiddleInit">MI</label>
+                                    <input class="form-control" id="eMiddleInit" type="text" placeholder="MI">
+                                </div>
+
+
+                                <div class="form-group col-md-3">
+                                    <label for="eLastName">Last Name</label>
+                                    <input class="form-control" id="eLastName" type="text" placeholder="Last Name">
+                                </div>
+                                <div class="form-group col-md-1">
+                                    <label for="eSuffix1">Suffix</label>
+                                    <Input class="form-control" id="eSuffix1">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-4 col-xs-8">
+                                    <label for="ephoneNumber1">Phone Number</label>
+                                    <input class="form-control" id="ephoneNumber1" type="text" placeholder="Phone Number">
+                                </div>
+                                <div class="form-group col-md-2 col-xs-3">
+                                    <label for="ePhoneType1">Type</label>
+                                    <Input class="form-control" id="ePhoneType1">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Phone Number</i></a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6 col-xs-11">
+                                    <label for="emailInput">Email</label>
+                                    <input class="form-control" id="emailInput" type="text" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add an Email Address</i></a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-4">
+                                    <label for="eRelationship1">Relationship</label>
+                                    <input class="form-control" id="eRelationship1">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </div>
         <div class="row">
             <div class=" form-group col-md-12">
                 <div class="clear bottom20"></div>
-                <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Contact</i></a>
+                <a id="addContact" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Contact</i></a>
             </div>
         </div>
     </div>
 
 
-    <!-- Air Scirpts -->
+    <!-- Emergency Scirpts -->
 
     <script>
         $(document).ready(function () {
-            $("#eTitle").kendoComboBox({
+            $('#addContact').click(function () {
+                var numContactWrappers = $('.contactWrapper').length;
+                $('#contactContainer .contactWrapper:first').clone().appendTo('#contactContainer').removeClass('displayNone').addClass('contactWrapper' + numContactWrappers);
+
+                $('.contactWrapper' + numContactWrappers + ' #eTitle').attr("id", "eTitle" + numContactWrappers);
+                
+                $('.contactWrapper' + numContactWrappers + ' #eSuffix').attr("id", "eSuffix" + numContactWrappers);
+                
+                $('.contactWrapper' + numContactWrappers + ' #ephoneNumber').attr("id", "ephoneNumber" + numContactWrappers);
+                
+                $('.contactWrapper' + numContactWrappers + ' #ePhoneType').attr("id", "ePhoneType" + numContactWrappers);
+                
+                $('.contactWrapper' + numContactWrappers + ' #eRelationship').attr("id", "eRelationship" + numContactWrappers);
+                
+                
+                $("#eTitle" + numContactWrappers).kendoComboBox({
+                    dataTextField: "text",
+                    dataValueField: "value",
+                    placeholder: "--",
+                    filter: "startswith",
+                    suggest: "true",
+                    dataSource: [
+                        {
+                            text: "Mr.",
+                            value: "1"
+                        },
+                        {
+                            text: "Mrs.",
+                            value: "3"
+                        },
+                        {
+                            text: "Ms.",
+                            value: "3"
+                        },
+                        {
+                            text: "Prof.",
+                            value: "3"
+                        },
+                        {
+                            text: "Dr.",
+                            value: "3"
+                        },
+                    ]
+                });
+                
+                $("#eSuffix" + numContactWrappers).kendoComboBox({
+                    dataTextField: "text",
+                    dataValueField: "value",
+                    placeholder: "--",
+                    filter: "startswith",
+                    suggest: "true",
+                    dataSource: [
+                        {
+                            text: "Sr.",
+                            value: "1"
+                        },
+                        {
+                            text: "Jr.",
+                            value: "3"
+                        },
+                        {
+                            text: "III",
+                            value: "3"
+                        },
+                    ]
+                });
+                
+                $("#ephoneNumber" + numContactWrappers).kendoMaskedTextBox({
+                    mask: "(999) 000-0000"
+                });
+                
+                
+                $("#ePhoneType" + numContactWrappers).kendoComboBox({
+                    dataTextField: "text",
+                    dataValueField: "value",
+                    placeholder: "Select Type",
+                    filter: "startswith",
+                    suggest: "true",
+                    dataSource: [
+                        {
+                            text: "Home",
+                            value: "1"
+                        },
+                        {
+                            text: "Mobile",
+                            value: "3"
+                        },
+                        {
+                            text: "Work",
+                            value: "3"
+                        },
+                        {
+                            text: "Fax",
+                            value: "3"
+                        },
+                    ]
+                });
+
+
+
+                $("#eRelationship" + numContactWrappers).kendoComboBox({
+                    dataTextField: "text",
+                    dataValueField: "value",
+                    placeholder: "Select Relationship",
+                    filter: "startswith",
+                    suggest: "true",
+                    dataSource: [
+                        {
+                            text: "Friend",
+                            value: "1"
+                        },
+                        {
+                            text: "Relative",
+                            value: "3"
+                        },
+                    ]
+                });
+                
+                
+                
+                return false;
+            });
+            
+            $(document).on('click', '.remove3', function () {
+                $(this).parents().eq(3).remove();
+            });
+
+
+        });
+    </script>
+
+
+
+    <script>
+        $(document).ready(function () {
+            $("#eTitle1").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
                 placeholder: "--",
@@ -809,10 +1319,9 @@
                     },
                 ]
             });
-        });
-
-        $(document).ready(function () {
-            $("#eSuffix").kendoComboBox({
+       
+      
+            $("#eSuffix1").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
                 placeholder: "--",
@@ -833,10 +1342,13 @@
                     },
                 ]
             });
-        });
+       
+            $("#ephoneNumber1").kendoMaskedTextBox({
+                mask: "(999) 000-0000"
+            });
 
-        $(document).ready(function () {
-            $("#ePhoneType").kendoComboBox({
+        
+            $("#ePhoneType1").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
                 placeholder: "Select Type",
@@ -861,10 +1373,10 @@
                     },
                 ]
             });
-        });
+        
 
-        $(document).ready(function () {
-            $("#eRelationship").kendoComboBox({
+        
+            $("#eRelationship1").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
                 placeholder: "Select Relationship",
@@ -884,7 +1396,7 @@
         });
     </script>
 
-    <!-- /End Air Scripts -->
+    <!-- /End Emergency Scripts -->
 
     <!-- SIG -->
     <div id="sig-content" class="tab-pane fade">
@@ -990,7 +1502,7 @@
                                 </div>
                             </div>
                         </div>
-                       <hr>
+                        <hr>
                     </div>
                     <div class="container pad0">
                         <div class="row">
@@ -1046,10 +1558,10 @@
                                 </div>
                             </div>
                         </div>
-                       
+
                     </div>
                 </div>
-                    <div class="col-md-12">
+                <div class="col-md-12">
                     <div class="row">
                         <div class="clear bottom15"></div>
                         <div id="creditTotal" class="col-md-12">
@@ -1061,11 +1573,11 @@
                             <div class="clear bottom15"></div>
                         </div>
                     </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 
 <script>
@@ -1153,3 +1665,5 @@
     });
 </script>
 <!-- /guestTabContent-->
+
+</html>

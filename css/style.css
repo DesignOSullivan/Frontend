@@ -140,8 +140,8 @@ input.k-textbox {height: 35px;}
 .row-panelbar th{padding: 0 100px 15px 0;}
 .row-panelbar td{margin-right:15px !important; vertical-align: top}
 .row-panelbar .form-control{width: 90%}
-li> span{font-size: 20px;}
-li .right{float:right; text-align:right;}
+.k-panelbar li> span{font-size: 20px;}
+.k-panelbar li .right{float:right; text-align:right;}
 
 td{padding: 10px; color: #54698d}
 .tdTable th{padding: 10px;}

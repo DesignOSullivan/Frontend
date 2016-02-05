@@ -49,40 +49,39 @@
             selectable: "multiple cell",
             allowCopy: true,
             editable: "popup",
-            selectable: "row",
+            selectable: false,
             sortable: "true",
             columns: [
                 {
                     field: "guests",
                     title: "Guests",
-                    width: "20%",
-                    template: "<div><b>#: guest1 # (#: trips1 #) </b></div><div><b>#: guest2 # (#: trips2 #)</b></div>"
+                    encoded: false,
+                    width: 250,
+//                    template: "<div><b>#= guest1 # (#: trips1 #) </b></div><div><b>#: guest2 # (#: trips2 #)</b></div><div> #:reservationNumber# </div>"
                 },
                 {
                     field: "tour",
                     title: "Tour",
-                    width: "25%",
+                    encoded: false,
+                    width: 300,
                     minScreenWidth: "480",
-                    template: "<div><b> #: tourCode # | #: tour # </b><div><div> #: startDate # to #:endDate# </div><div> #:reservationNumber# </div>"
-                },
-                {
-                    field: "daysOut",
-                    title: "Days Out",
-                    width: "10%",
-                    minScreenWidth: "960",
-                    attributes: {
-                        style: "text-align: center;"
-                    },
-                    headerAttributes: {
-                        style: "text-align: center;"
-                    }
-
+                    template: "<div><b> #: tourCode # | #: tour # </b><div><div> #: startDate # to #:endDate# (#:daysOut# Days Out) </div>"
                 },
                 {
                     field: "status",
                     title: "Status",
-                    width: "10%",
+                    width: 100,
                     minScreenWidth: "960",
+                },
+                {
+                    field: "Extension",
+                    width: 100,
+                    template: "<p> #: ExtensionG1 # <br> #: ExtensionG2 # <p>"
+                },
+                {
+                    field: "SIG",
+                    title: "Special Interest Group",
+                    width: 150
                 },
                 {
                     field: "alert",
@@ -100,8 +99,10 @@
                     },
                 },
                 {
-                    command: ["Information Request"],
-                    width: 170,
+                    field: "infoRequest",
+                    title: "&nbsp;",
+                    encoded: false,
+//                    width: 170,
                     attributes: {
                         style: "text-align: right;"
                     },
@@ -109,17 +110,19 @@
             ],
             dataSource: [
                 {
-                    guest1: "Mr. Daniel O'Sullivan",
-                    trips1: "0",
-                    guest2: "Mrs. Catherine O'Sullivan",
-                    trips2: "0",
+                    guests: "<b><a href='#'>Mr. Daniel O'Sullivan (1)</a><br><a href='#'>Mrs. Catherine O'Sullivan (3)</a></b><br><a href='#'>R-434564324</a>",
                     tourCode: "CSR-16",
                     tour: "Costa Rica's Natural Heritage",
                     startDate: "08-Feb",
                     endDate: "17-feb-16",
                     reservationNumber: "R-634554",
-                    daysOut: 115,
+                    daysOut: 10,
+                    ExtensionG1: "Yes",
+                    ExtensionG2: "Yes",
                     status: "Confirmed",
+                    SIG: "Archetype SC",
+                    SIG: "Archetype SC",
+                    infoRequest: "<a data-toggle='modal' data-target='.infoRequestModal' class='btn btn-xs btn-default'>Information Request</a>",
                 },
 
             ]
@@ -147,35 +150,44 @@
     <!-- PAST RESERVATIONS SCRIPTS -->
     <script>
         $("#guestPastReservationsGrid").kendoGrid({
-            selectable: "multiple cell",
-            allowCopy: true,
-            editable: "popup",
-            selectable: "row",
+            selectable: false,
             sortable: "true",
-            resizable: "true",
+//            resizable: "true",
             columns: [
                 {
                     field: "guests",
                     title: "Guests",
-                    width: "20%",
-                    template: "<div><b>#: guest1 # (#: trips1 #) </b></div><div><b>#: guest2 # (#: trips2 #)</b></div>"
+                    encoded: false,
+                    width: 250,
                 },
                 {
                     field: "tour",
                     title: "Tour",
-                    width: "25%",
+                    width: 300,
                     minScreenWidth: "480",
-                    template: "<div><b> #: tourCode # | #: tour # </b><div><div> #: startDate # to #:endDate# </div><div> #:reservationNumber# </div>"
+                    template: "<div><b> #: tourCode # | #: tour # </b><div><div> #: startDate # to #:endDate# </div>"
                 },
                 {
                     field: "status",
                     title: "Status",
-                    width: "10%",
+                    width: 100,
                     minScreenWidth: "960",
                 },
                 {
-                    command: ["Information Request"],
-                    width: "170px",
+                    field: "Extension",
+                    width: 100,
+                    template: "<p> #: ExtensionG1 # <br> #: ExtensionG2 # <p>"
+                },
+                {
+                    field: "SIG",
+                    title: "Special Interest Group",
+                    width: 150
+                },
+                {
+                    field: "infoRequest",
+                    title: "&nbsp;",
+//                    width: 170,
+                    encoded: false,
                     attributes: {
                         style: "text-align: right;"
                     },
@@ -183,32 +195,30 @@
             ],
             dataSource: [
                 {
-                    guest1: "Mr. Daniel O'Sullivan",
-                    trips1: "3",
-                    guest2: "Mr. Catherine O'Sullivan",
-                    trips2: "3",
-                    tourCode: "TNZ-13",
+                    guests: "<b><a href='#'>Mr. Daniel O'Sullivan (1)</a><br><a href='#'>Mrs. Catherine O'Sullivan (3)</a></b><br><a href='#'>R-434564324</a>",
+                    tourCode: "TNZ-14",
                     tour: "Tanzania Adventure",
                     startDate: "08-Feb",
                     endDate: "04-Nov-14",
-                    reservationNumber: "R-573478",
                     status: "Completed",
-                    agent: "Matt McCourry",
-                    alert: "Yes"
+                    ExtensionG1: "Yes",
+                    ExtensionG2: "Yes",
+                    SIG: "Archetype SC",
+                    alert: "Yes",
+                    infoRequest: "<a data-toggle='modal' data-target='.infoRequestModal' class='btn btn-xs btn-default'>Information Request</a>"
                 },
                 {
-                    guest1: "Mr. Daniel O'Sullivan",
-                    trips1: "3",
-                    guest2: "Mr. Catherine O'Sullivan",
-                    trips2: "3",
+                    guests: "<b><a href='#'>Mr. Daniel O'Sullivan (1)</a><br><a href='#'>Mrs. Catherine O'Sullivan (3)</a></b><br><a href='#'>R-434564324</a>",
                     tourCode: "GRV-13",
                     tour: "Classic Greek Isles",
                     startDate: "06-July",
                     endDate: "18-July-13",
-                    reservationNumber: "R-573498",
                     status: "Completed",
-                    agent: "Matt McCourry",
+                    ExtensionG1: "Yes",
+                    ExtensionG2: "Yes",
+                    SIG: "Archetype SC",
                     alert: "Yes",
+                    infoRequest: "<a data-toggle='modal' data-target='.infoRequestModal' class='btn btn-xs btn-default'>Information Request</a>"
                 },
             ]
         });

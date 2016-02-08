@@ -1160,16 +1160,16 @@
                 $('#contactContainer .contactWrapper:first').clone().appendTo('#contactContainer').removeClass('displayNone').addClass('contactWrapper' + numContactWrappers);
 
                 $('.contactWrapper' + numContactWrappers + ' #eTitle').attr("id", "eTitle" + numContactWrappers);
-                
+
                 $('.contactWrapper' + numContactWrappers + ' #eSuffix').attr("id", "eSuffix" + numContactWrappers);
-                
+
                 $('.contactWrapper' + numContactWrappers + ' #ephoneNumber').attr("id", "ephoneNumber" + numContactWrappers);
-                
+
                 $('.contactWrapper' + numContactWrappers + ' #ePhoneType').attr("id", "ePhoneType" + numContactWrappers);
-                
+
                 $('.contactWrapper' + numContactWrappers + ' #eRelationship').attr("id", "eRelationship" + numContactWrappers);
-                
-                
+
+
                 $("#eTitle" + numContactWrappers).kendoComboBox({
                     dataTextField: "text",
                     dataValueField: "value",
@@ -1199,7 +1199,7 @@
                         },
                     ]
                 });
-                
+
                 $("#eSuffix" + numContactWrappers).kendoComboBox({
                     dataTextField: "text",
                     dataValueField: "value",
@@ -1221,12 +1221,12 @@
                         },
                     ]
                 });
-                
+
                 $("#ephoneNumber" + numContactWrappers).kendoMaskedTextBox({
                     mask: "(999) 000-0000"
                 });
-                
-                
+
+
                 $("#ePhoneType" + numContactWrappers).kendoComboBox({
                     dataTextField: "text",
                     dataValueField: "value",
@@ -1272,12 +1272,12 @@
                         },
                     ]
                 });
-                
-                
-                
+
+
+
                 return false;
             });
-            
+
             $(document).on('click', '.remove3', function () {
                 $(this).parents().eq(3).remove();
             });
@@ -1319,8 +1319,8 @@
                     },
                 ]
             });
-       
-      
+
+
             $("#eSuffix1").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
@@ -1342,12 +1342,12 @@
                     },
                 ]
             });
-       
+
             $("#ephoneNumber1").kendoMaskedTextBox({
                 mask: "(999) 000-0000"
             });
 
-        
+
             $("#ePhoneType1").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
@@ -1373,9 +1373,9 @@
                     },
                 ]
             });
-        
 
-        
+
+
             $("#eRelationship1").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
@@ -1402,37 +1402,86 @@
     <div id="sig-content" class="tab-pane fade">
         <div class="container pad0">
             <div class="row">
-                <div class="form-group col-md-3">
-                    <div class="clear noLabel"></div>
-                    <b>The University of Texas</b>
-                    <p>The Texas Exes | The Flying Longhorns</p>
+                <div id="SIGContainer" class="col-md-12">
+                <div class="SIGWrapper displayNone">
+                    
+                        <div class="col-md-12">
+                            <hr><a class="alignRight"><i class="fa fa-remove red remove"></i></a></div>
+                    
+                    <div class="form-group col-md-3">
+                        <div class="clear noLabel"></div>
+                        <b>The University of Texas</b>
+                        <p>The Texas Exes | The Flying Longhorns</p>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="sAffiliation">Affiliation</label>
+                        <input class="form-control" id="sAffiliation">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="sClassYear">Class Year</label>
+                        <input class="form-control" id="sClassYear">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <div class="clear bottom30"></div>
+                        <label for="sHost">Host</label>
+                        <input id="sHost" type="checkbox">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <div class="clear bottom30"></div>
+                        <label for="sHostCompanion">Host Companion</label>
+                        <input id="sHost" type="checkbox">
+                    </div>
                 </div>
-                <div class="form-group col-md-3">
-                    <label for="sAffiliation">Affiliation</label>
-                    <input class="form-control" id="sAffiliation">
+                <div class="SIGWrapper SIGWrapper1">
+                    <div class="form-group col-md-3">
+                        <div class="clear noLabel"></div>
+                        <b>The University of Texas</b>
+                        <p>The Texas Exes | The Flying Longhorns</p>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="sAffiliation">Affiliation</label>
+                        <input class="form-control" id="sAffiliation">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="sClassYear">Class Year</label>
+                        <input class="form-control" id="sClassYear">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <div class="clear bottom30"></div>
+                        <label for="sHost">Host</label>
+                        <input id="sHost" type="checkbox">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <div class="clear bottom30"></div>
+                        <label for="sHostCompanion">Host Companion</label>
+                        <input id="sHost" type="checkbox">
+                    </div>
                 </div>
-                <div class="form-group col-md-2">
-                    <label for="sClassYear">Class Year</label>
-                    <input class="form-control" id="sClassYear">
-                </div>
-                <div class="form-group col-md-1">
-                    <div class="clear bottom30"></div>
-                    <label for="sHost">Host</label>
-                    <input id="sHost" type="checkbox">
-                </div>
-                <div class="form-group col-md-2">
-                    <div class="clear bottom30"></div>
-                    <label for="sHostCompanion">Host Companion</label>
-                    <input id="sHost" type="checkbox">
+
                 </div>
             </div>
             <div class="row">
                 <div class=" form-group col-md-12">
-                    <a href="#add-sig" class="green"><i class="fa fa-plus-circle"></i> <i>Add a SIG</i></a>
+                    <a id="addSIG" class="green"><i class="fa fa-plus-circle"></i> <i>Add a SIG</i></a>
                 </div>
             </div>
         </div>
     </div>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#addSIG').click(function () {
+                var numSIGWrappers = $('.SIGWrapper').length;
+                $('#SIGContainer .SIGWrapper:first').clone().appendTo('#SIGContainer').removeClass('displayNone').addClass('SIGWrapper' + numSIGWrappers);
+
+                $('.contactWrapper' + numContactWrappers + ' #eTitle').attr("id", "eTitle" + numContactWrappers);
+
+                return false;
+            });
+        });
+    </script>
+
 
     <script>
         $(document).ready(function () {

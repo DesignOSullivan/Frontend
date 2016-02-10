@@ -40,27 +40,39 @@
 
                 <div class="row" id="phoneContainer">
                     <div class="phoneWrapper displayNone">
-                        <div class="form-group col-md-7 col-xs-8">
+                        <div class="row">
+                        <div class="phoneNumberColumn form-group col-md-7 col-xs-8">
                             <label for="phoneNumber"></label>
-                            <input class="form-control" id="phoneNumber" type="text" placeholder="Phone Number">
+                            <input class="form-control" id="phoneNumber" type="text" placeholder="(___) ___-____">
+                        </div>
+                        <div class="extNumberColumn form-group col-md-2 col-xs-8 displayNone">
+                            <label for="extNumber"></label>
+                            <input class="form-control" id="extNumber" type="text" placeholder="000">
                         </div>
                         <div class="form-group col-md-4 col-xs-4">
                             <label for="phoneType"></label>
-                            <input class="form-control" id="phoneType">
+                            <input class="phoneType form-control" id="phoneType">
                         </div>
-                        <div class="form-group col-md-1">
+                        <div class="form-group col-md-1 removeX">
                             <div class="clear bottom25"></div>
                             <a class="alignLeft"><i class="fa fa-remove red remove"></i></a>
                         </div>
+                        </div>
                     </div>
                     <div class="phoneWrapper phoneWrapper1">
-                        <div class="form-group col-md-7 col-xs-8">
-                            <label for="phoneNumber">Phone Number</label>
-                            <input class="form-control" id="phoneNumber1" type="text" placeholder="Phone Number">
+                        <div class="row">
+                        <div class="phoneNumberColumn form-group col-md-7 col-xs-8">
+                            <label for="phoneNumber1">Phone Number</label>
+                            <input class="form-control" id="phoneNumber1" type="text" placeholder="(___) ___-____">
+                        </div>
+                        <div class="extNumberColumn form-group col-md-2 col-xs-8 displayNone">
+                            <label for="extNumber1">Ext.</label>
+                            <input class="form-control" id="extNumber1" type="text" placeholder="000">
                         </div>
                         <div class="form-group col-md-4 col-xs-4">
-                            <label for="phoneType">Type</label>
-                            <input class="form-control" id="phoneType1">
+                            <label for="phoneType1">Type</label>
+                            <input class="phoneType form-control" id="phoneType1">
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -70,10 +82,6 @@
                         <a id="addPhone" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Phone Number</i></a>
                     </div>
                 </div>
-
-
-
-
 
 
                 <div class="row" id="emailContainer">
@@ -93,7 +101,7 @@
                                 <label for="emailPromoToggle">Email Promotions</label>
                             </div>
                         </div>
-                        <div class="form-group col-md-1">
+                        <div class="form-group col-md-1 removeX">
                             <div class="clear bottom25"></div>
                             <a class="alignLeft"><i class="fa fa-remove red remove"></i></a>
                         </div>
@@ -120,17 +128,18 @@
                 <script>
                     $(document).ready(function () {
 
-                                /*ADD EXTRA EMAIL */
-                                $('#addEmail').click(function () {
-                                    var numEmailWrappers = $('.emailWrapper').length;
-                                    $('#emailContainer .emailWrapper:first').clone().appendTo('#emailContainer').removeClass('displayNone').addClass('emailWrapper' + numEmailWrappers);
+                        /*ADD EXTRA EMAIL */
+                        $('#addEmail').click(function () {
+                            var numEmailWrappers = $('.emailWrapper').length;
+                            $('#emailContainer .emailWrapper:first').clone().appendTo('#emailContainer').removeClass('displayNone').addClass('emailWrapper' + numEmailWrappers);
 
-                                    
-                                    $('.emailWrapper' + numEmailWrappers + ' #emailPromoToggle').attr("id", "emailPromoToggle" + numEmailWrappers);
 
-                                    $('.emailWrapper' + numEmailWrappers + ' #emailPromoToggleLabel').attr("for", "emailPromoToggle" + numEmailWrappers);
-                                    
-                                });
+                            $('.emailWrapper' + numEmailWrappers + ' #emailPromoToggle').attr("id", "emailPromoToggle" + numEmailWrappers);
+
+                            $('.emailWrapper' + numEmailWrappers + ' #emailPromoToggleLabel').attr("for", "emailPromoToggle" + numEmailWrappers);
+
+                            
+                        });
                     });
                 </script>
 
@@ -190,19 +199,29 @@
             dataSource: [
                 {
                     text: "Home",
-                    value: "1"
                 },
                 {
                     text: "Mobile",
-                    value: "2"
                 },
                 {
                     text: "Work",
-                    value: "3"
                 },
             ]
         });
 
+        $("input.phoneType").change(function(){
+            var val = $(this).val();
+            if (val == 'Work'){
+                $(this).parent().parent().prev().removeClass("displayNone");
+                $(this).parent().parent().prev().prev().removeClass("col-md-7").addClass("col-md-5");
+            }
+            else {
+                $(this).parent().parent().prev().addClass("displayNone");
+                $(this).parent().parent().prev().prev().removeClass("col-md-5").addClass("col-md-7");
+            }
+        });
+
+        
 
         /*ADD EXTRA PHONE */
         $('#addPhone').click(function () {
@@ -213,11 +232,19 @@
 
             $('.phoneWrapper' + numPhoneWrappers + ' #phoneType').attr("id", "phoneType" + numPhoneWrappers);
 
+            $("input.phoneType").change(function(){
+                var val = $(this).val();
+                if (val == 'Work'){
+                    $(this).parent().parent().prev().removeClass("displayNone");
+                    $(this).parent().parent().prev().prev().removeClass("col-md-7").addClass("col-md-5");
+                }
+                else {
+                    $(this).parent().parent().prev().addClass("displayNone");
+                    $(this).parent().parent().prev().prev().removeClass("col-md-5").addClass("col-md-7");
+                }
+            });
 
 
-
-
-           
             $("#phoneNumber" + numPhoneWrappers).kendoMaskedTextBox({
                 mask: "(999) 000-0000"
             });
@@ -229,15 +256,12 @@
                 dataSource: [
                     {
                         text: "Home",
-                        value: "1"
                     },
                     {
                         text: "Mobile",
-                        value: "2"
                     },
                     {
                         text: "Work",
-                        value: "3"
                     },
                 ]
             });
@@ -250,6 +274,8 @@
         $(document).on('click', '.remove', function () {
             $(this).parents().eq(2).remove();
         });
+
+
 
 
 

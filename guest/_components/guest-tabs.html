@@ -41,7 +41,7 @@
                     <li><a data-toggle="tab" data-target="#health-content" id="healthTab">Health</a></li>
                     <li><a data-toggle="tab" data-target="#emergency-content" id="emergencyTab">Emergency</a></li>
                     <li><a data-toggle="tab" data-target="#sig-content" id="sigTab">SIG</a></li>
-                    <li><a data-toggle="tab" data-target="#travel-credit-content" id="travelerTab">Traveler Credit</a></li>
+                    <!--                    <li><a data-toggle="tab" data-target="#travel-credit-content" id="travelerTab">Traveler Credit</a></li>-->
                 </ul>
             </div>
         </div>
@@ -73,33 +73,29 @@
     <div id="passport-content" class="tab-pane fade in active">
         <div class="container pad0">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="container-fluid pad0">
-                        <div class="row">
-                            <div class="form-group col-md-8 col-xs-8">
-                                <i>As it appears on your passport</i>
+                <div class="col-md-12 textCenter">
+                                <i>Enter information as it appears on the passport/ ID</i>
+                </div>
+            </div>
+            <div class="row">
+                <div id="passportContainer" class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-3">
+                        <h3>Passport</h3>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="clear bottom20"></div>
+                            <div class="switch">
+                                <input id="dualCitizenToggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                                <label for="dualCitizenToggle"></label>
+                            </div>
+                            <div class="switch-label">
+                                <label for="dualCitizenToggle">Dual Citizenship</label>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="container-fluid pad0">
-                        <div id="passportContainer" class="row">
-
-                            <div class="IDWrapper displayNone">
-                                <div class="col-md-12">
-                                    <hr><a class="alignRight"><i class="fa fa-remove red remove"></i></a></div>
-                                <div class="form-group col-md-12 col-xs-6">
-                                    <label for="IDType">Type of ID</label>
-                                    <input id="IDType" class="form-control">
-                                </div>
-                                <div class="form-group col-md-12 col-xs-6">
-                                    <label for="IDName">Name on ID</label>
-                                    <input id="IDName" class="form-control" placeholder="Name">
-                                </div>
-                            </div>
-
                             <div class="passportWrapper displayNone">
+                                <div class="row">
                                 <div class="col-md-12">
                                     <hr><a class="alignRight"><i class="fa fa-remove red remove"></i></a></div>
                                 <div class="form-group col-md-6 col-xs-6">
@@ -155,8 +151,10 @@
                                     <input class="form-control" id="pOccupation" type="text" placeholder="Occupation">
                                 </div>
                             </div>
+                </div>
 
                             <div class="passportWrapper passportWrapper1">
+                                <div class="row">
                                 <div class="form-group col-md-6 col-xs-6">
                                     <label for="passportNumber">Passport #</label>
                                     <input class="form-control" id="passportNumber" type="text" placeholder="Passport #">
@@ -210,31 +208,61 @@
                                     <input class="form-control" id="pOccupation" type="text" placeholder="Occupation">
                                 </div>
                             </div>
-
+                </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <a id="addPassport" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Passport</i></a>
-                            </div>
-                            <div class="col-md-6">
+                <div id="IDContainer" class="col-md-6" style="padding-left: 30px">
+                    <div class="row">
+                        <div class="col-md-12">
+                    <h3>ID</h3>
+                        </div>
+                    </div>
+                    <div class="row IDWrapper displayNone">
+                        <div class="col-md-12">
+                            <hr><a class="alignRight"><i class="fa fa-remove red remove"></i></a></div>
+                        <div class="form-group col-md-12 col-xs-6">
+                            <label for="IDType">Type of ID</label>
+                            <input id="IDType" class="form-control">
+                        </div>
+                        <div class="form-group col-md-12 col-xs-6">
+                            <label for="IDName">Name on ID</label>
+                            <input id="IDName" class="form-control" placeholder="Name">
+                        </div>
+                        <div class="form-group col-md-6 col-xs-6">
+                            <label for="IDSex">Sex</label>
+                            <input id="IDSex" class="form-control" placeholder="Sex">
+                        </div>
+                        <div class="form-group col-md-6 col-xs-6">
+                            <label for="IDNumber">ID Number</label>
+                            <input id="IDNumber" class="form-control" placeholder="ID Number">
+                        </div>
+                    </div>
+                    <div class="row IDWrapper IDWrapper1">
+                        <div class="form-group col-md-12 col-xs-6">
+                            <label for="IDType1">Type of ID</label>
+                            <input id="IDType1" class="form-control">
+                        </div>
+                        <div class="form-group col-md-12 col-xs-6">
+                            <label for="IDName1">Name on ID</label>
+                            <input id="IDName1" class="form-control" placeholder="(Name)">
+                        </div>
+                        <div class="form-group col-md-6 col-xs-6">
+                            <label for="IDSex1">Sex</label>
+                            <input id="IDSex1" class="form-control" placeholder="Sex">
+                        </div>
+                        <div class="form-group col-md-6 col-xs-6">
+                            <label for="IDNumber1">ID Number</label>
+                            <input id="IDNumber1" class="form-control" placeholder="(ID Number)">
+                        </div>
+                    </div>
+                </div>
+                        <div class="row" style="padding-left: 30px">
+                            <div class="col-md-6 alignRight">
                                 <a id="addID" class="green"><i class="fa fa-plus-circle"></i> <i>Add an ID</i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="clear bottom30 hidden-xs"></div>
-                    <div class="switch">
-                        <input id="dualCitizenToggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
-                        <label for="dualCitizenToggle"></label>
-                    </div>
-                    <div class="switch-label">
-                        <label for="dualCitizenToggle">Dual Citizenship</label>
-                    </div>
-                </div>
             </div>
-        </div>
-    </div>
 
     <!--Passport Scripts-->
     <script>
@@ -242,11 +270,34 @@
 
             $('#addID').click(function () {
                 var numIDWrappers = $('.IDWrapper').length;
-                $('#passportContainer .IDWrapper:first').clone().appendTo('#passportContainer').removeClass('displayNone').addClass('IDWrapper' + numIDWrappers);
+                $('#IDContainer .IDWrapper:first').clone().appendTo('#IDContainer').removeClass('displayNone').addClass('IDWrapper' + numIDWrappers);
 
 
                 $('.IDWrapper' + numIDWrappers + ' #IDType').attr("id", "IDType" + numIDWrappers);
+                
+                $('.IDWrapper' + numIDWrappers + ' #IDSex').attr("id", "IDSex" + numIDWrappers);
 
+                $("#IDSex" + numIDWrappers).kendoComboBox({
+                    dataTextField: "text",
+                    dataValueField: "value",
+                    placeholder: "Select Sex",
+                    filter: "startswith",
+                    suggest: "true",
+                    dataSource: [
+                        {
+                            text: "Male",
+                            value: "1"
+                        },
+                        {
+                            text: "Female",
+                            value: "2"
+                        },
+                        {
+                            text: "Other",
+                            value: "3"
+                        }
+                    ]
+                });
 
                 $("#IDType" + numIDWrappers).kendoComboBox({
                     dataTextField: "text",
@@ -300,6 +351,156 @@
 
     <script>
         $(document).ready(function () {
+            
+            $('#dualCitizenToggle').change(function(){
+                if ($('#dualCitizenToggle').is(':checked')) {
+                    var numPassportWrappers = $('.passportWrapper').length;
+                    $('#passportContainer .passportWrapper:first').clone().appendTo('#passportContainer').removeClass('displayNone').addClass('passportWrapper' + numPassportWrappers);
+
+                    $('.passportWrapper' + numPassportWrappers + ' #pDateOfBirth').attr("id", "pDateOfBirth" + numPassportWrappers);
+
+                    $('.passportWrapper' + numPassportWrappers + ' #pSex').attr("id", "pSex" + numPassportWrappers);
+
+                    $('.passportWrapper' + numPassportWrappers + ' #pDateOfIssue').attr("id", "pDateOfIssue" + numPassportWrappers);
+
+                    $('.passportWrapper' + numPassportWrappers + ' #pDateOfExpiration').attr("id", "pDateOfExpiration" + numPassportWrappers);
+
+                    $('.passportWrapper' + numPassportWrappers + ' #pIssuingAuthority').attr("id", "pIssuingAuthority" + numPassportWrappers);
+
+                    $("#pDateOfBirth" + numPassportWrappers).kendoDatePicker({
+                        format: "dd-MMM-yy",
+                        start: "century",
+                        placeholder: "test",
+                        value: "Select Date"
+                    });
+
+                    $("#pSex" + numPassportWrappers).kendoComboBox({
+                        dataTextField: "text",
+                        dataValueField: "value",
+                        placeholder: "Select Sex",
+                        filter: "startswith",
+                        suggest: "true",
+                        dataSource: [
+                            {
+                                text: "Male",
+                                value: "1"
+                            },
+                            {
+                                text: "Female",
+                                value: "2"
+                            },
+                            {
+                                text: "Other",
+                                value: "3"
+                            }
+                        ]
+                    });
+
+                    $("#pDateOfIssue" + numPassportWrappers).kendoDatePicker({
+                        format: "dd-MMM-yy",
+                        start: "decade",
+                        value: "Select Date"
+                    });
+
+                    $("#pDateOfExpiration" + numPassportWrappers).kendoDatePicker({
+                        format: "dd-MMM-yy",
+                        start: "decade",
+                        value: "Select Date"
+                    });
+
+                    $("#pIssuingAuthority" + numPassportWrappers).kendoComboBox({
+                        dataTextField: "text",
+                        dataValueField: "value",
+                        placeholder: "Select Issuing Authority",
+                        filter: "startswith",
+                        suggest: "true",
+                        dataSource: [
+                            {
+                                text: "Port of Miami",
+                                value: "1"
+                            },
+                            {
+                                text: "Other Issuing Authority",
+                                value: "1"
+                            },
+                            {
+                                text: "Other Issuing Authority",
+                                value: "2"
+                            }
+                        ]
+                    });
+                }
+                else { 
+                    $("passportWrapper2").remove();
+                }
+
+
+            });
+            
+            $("#IDSex1").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "(Select Sex)",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "Male",
+                        value: "1"
+                    },
+                    {
+                        text: "Female",
+                        value: "2"
+                    },
+                    {
+                        text: "Other",
+                        value: "3"
+                    }
+                ]
+            });
+
+            $("#IDType1").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "(Select ID Type)",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "Driver's licenses or other state photo identity card",
+                    },
+                    {
+                        text: "U.S. passport card",
+                    },
+                    {
+                        text: "DHS trusted traveler cards (Global Entry, NEXUS, SENTRI, FAST)",
+                    },
+                    {
+                        text: "U.S. military ID (active duty or retired military and their dependents, and DoD civilians)",
+                    },
+                    {
+                        text: "Permanent resident card",
+                    },
+                    {
+                        text: "Border crossing card",
+                    },
+                    {
+                        text: "Airline or airport-issued ID (if issued under a TSA-approved security plan)",
+                    },
+                    {
+                        text: "Federally recognized, tribal-issued photo ID",
+                    },
+                    {
+                        text: "HSPD-12 PIV card",
+                    },
+                    {
+                        text: "Canadian provincial driver's license or Indian and Northern Affairs Canada card",
+                    },
+                    {
+                        text: "Transportation worker identification credential",
+                    },
+                ]
+            });
 
             $('#addPassport').click(function () {
                 var numPassportWrappers = $('.passportWrapper').length;
@@ -531,7 +732,7 @@
                             <label for="aFrequentFlyer"></label>
                             <input class="form-control" id="aFrequentFlyer" placeholder="Frequent Flyer #">
                         </div>
-                        <div class="form-group col-md-6">
+                        <div class="form-group col-md-6 removeX">
                             <div class="clear bottom30"></div>
                             <a><i class="fa fa-remove red remove"></i></a>
                         </div>
@@ -1401,68 +1602,78 @@
     <!-- SIG -->
     <div id="sig-content" class="tab-pane fade">
         <div class="container pad0">
+            <div id="firstSIGText" class="row">
+                <div class="col-md-12">
+                    <label>
+                        <p><span id="guestNameNewSIG">[Guest Name]</span> is not affiliated with any special interest groups</p>
+                    </label>
+                </div>
+            </div>
+            <div id="firstSIGButton" class="row">
+                <div class="form-group col-md-12">
+                    <a id="addSIGFirst" class="btn btn-xs btn-info"><i class="fa fa-university"></i> Add a SIG</a>
+                </div>
+            </div>
             <div class="row">
                 <div id="SIGContainer" class="col-md-12">
-                <div class="SIGWrapper displayNone">
-                    
+                    <div class="SIGWrapper displayNone">
+
                         <div class="col-md-12">
                             <hr><a class="alignRight"><i class="fa fa-remove red remove"></i></a></div>
-                    
-                    <div class="form-group col-md-3">
-                        <div class="clear noLabel"></div>
-                        <b>The University of Texas</b>
-                        <p>The Texas Exes | The Flying Longhorns</p>
+
+                        <div class="form-group col-md-3">
+                            <label for="sSIG">Special Interest Group</label>
+                            <input class="form-control" id="sSIG">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="sAffiliation">Affiliation</label>
+                            <input class="form-control" id="sAffiliation">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="sClassYear">Class Year</label>
+                            <input class="form-control" id="sClassYear">
+                        </div>
+                        <div class="form-group col-md-1">
+                            <div class="clear bottom30"></div>
+                            <label for="sHost">Host</label>
+                            <input id="sHost" type="checkbox">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <div class="clear bottom30"></div>
+                            <label for="sHostCompanion">Host Companion</label>
+                            <input id="sHost" type="checkbox">
+                        </div>
                     </div>
-                    <div class="form-group col-md-3">
-                        <label for="sAffiliation">Affiliation</label>
-                        <input class="form-control" id="sAffiliation">
+                    <div class="SIGWrapper SIGWrapper1 displayNone">
+                        <div class="form-group col-md-3">
+                            <label for="sSIG1">Special Interest Group</label>
+                            <input class="form-control" id="sSIG1">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="sAffiliation1">Affiliation</label>
+                            <input class="form-control" id="sAffiliation1">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="sClassYear1">Class Year</label>
+                            <input class="form-control" id="sClassYear1">
+                        </div>
+                        <div class="form-group col-md-1">
+                            <div class="clear bottom30"></div>
+                            <label for="sHost">Host</label>
+                            <input id="sHost" type="checkbox">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <div class="clear bottom30"></div>
+                            <label for="sHostCompanion">Host Companion</label>
+                            <input id="sHost" type="checkbox">
+                        </div>
                     </div>
-                    <div class="form-group col-md-2">
-                        <label for="sClassYear">Class Year</label>
-                        <input class="form-control" id="sClassYear">
-                    </div>
-                    <div class="form-group col-md-1">
-                        <div class="clear bottom30"></div>
-                        <label for="sHost">Host</label>
-                        <input id="sHost" type="checkbox">
-                    </div>
-                    <div class="form-group col-md-2">
-                        <div class="clear bottom30"></div>
-                        <label for="sHostCompanion">Host Companion</label>
-                        <input id="sHost" type="checkbox">
-                    </div>
-                </div>
-                <div class="SIGWrapper SIGWrapper1">
-                    <div class="form-group col-md-3">
-                        <div class="clear noLabel"></div>
-                        <b>The University of Texas</b>
-                        <p>The Texas Exes | The Flying Longhorns</p>
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="sAffiliation">Affiliation</label>
-                        <input class="form-control" id="sAffiliation">
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label for="sClassYear">Class Year</label>
-                        <input class="form-control" id="sClassYear">
-                    </div>
-                    <div class="form-group col-md-1">
-                        <div class="clear bottom30"></div>
-                        <label for="sHost">Host</label>
-                        <input id="sHost" type="checkbox">
-                    </div>
-                    <div class="form-group col-md-2">
-                        <div class="clear bottom30"></div>
-                        <label for="sHostCompanion">Host Companion</label>
-                        <input id="sHost" type="checkbox">
-                    </div>
-                </div>
 
                 </div>
             </div>
             <div class="row">
                 <div class=" form-group col-md-12">
-                    <a id="addSIG" class="green"><i class="fa fa-plus-circle"></i> <i>Add a SIG</i></a>
+                    <a id="addSIG" class="green displayNone"><i class="fa fa-plus-circle"></i> <i>Add a SIG</i></a>
                 </div>
             </div>
         </div>
@@ -1471,11 +1682,70 @@
 
     <script>
         $(document).ready(function () {
+            $('#addSIGFirst').click(function () {
+                $('#addSIG, .SIGWrapper1').removeClass('displayNone');
+                $('#firstSIGText, #firstSIGButton').addClass('displayNone');
+
+                return false;
+            });
+
+
+
             $('#addSIG').click(function () {
                 var numSIGWrappers = $('.SIGWrapper').length;
                 $('#SIGContainer .SIGWrapper:first').clone().appendTo('#SIGContainer').removeClass('displayNone').addClass('SIGWrapper' + numSIGWrappers);
 
-                $('.contactWrapper' + numContactWrappers + ' #eTitle').attr("id", "eTitle" + numContactWrappers);
+                $('.SIGWrapper' + numSIGWrappers + ' #sSIG').attr("id", "sSIG" + numSIGWrappers);
+                $('.SIGWrapper' + numSIGWrappers + ' #sAffiliation').attr("id", "sAffiliation" + numSIGWrappers);
+                $('.SIGWrapper' + numSIGWrappers + ' #sClassYear').attr("id", "sClassYear" + numSIGWrappers);
+
+                $("#sSIG" + numSIGWrappers).kendoComboBox({
+                    dataTextField: "text",
+                    dataValueField: "value",
+                    placeholder: "Select SIG",
+                    filter: "startswith",
+                    suggest: "true",
+                    dataSource: [
+                        {
+                            text: "Archetype SC",
+                        },
+                        {
+                            text: "Smithsonian Journeys",
+                        },
+                        {
+                            text: "University of South Carolina",
+                        },
+                    ]
+                });
+
+                $("#sAffiliation" + numSIGWrappers).kendoComboBox({
+                    dataTextField: "text",
+                    dataValueField: "value",
+                    placeholder: "Select Affiliation",
+                    filter: "startswith",
+                    suggest: "true",
+                    dataSource: [
+                        {
+                            text: "Alumn",
+                        },
+                        {
+                            text: "Faculty",
+                        },
+                        {
+                            text: "Spouce",
+                        },
+                    ]
+                });
+
+
+                $("#sClassYear" + numSIGWrappers).kendoDatePicker({
+                    format: "yyyy",
+                    start: "century",
+                    value: "Select Date",
+                    depth: "decade"
+                });
+
+
 
                 return false;
             });
@@ -1485,7 +1755,26 @@
 
     <script>
         $(document).ready(function () {
-            $("#sAffiliation").kendoComboBox({
+            $("#sSIG1").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select SIG",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "Archetype SC",
+                    },
+                    {
+                        text: "Smithsonian Journeys",
+                    },
+                    {
+                        text: "University of South Carolina",
+                    },
+                        ]
+            });
+
+            $("#sAffiliation1").kendoComboBox({
                 dataTextField: "text",
                 dataValueField: "value",
                 placeholder: "Select Affiliation",
@@ -1494,25 +1783,23 @@
                 dataSource: [
                     {
                         text: "Alumn",
-                        value: "1"
                     },
                     {
                         text: "Faculty",
-                        value: "3"
                     },
                     {
                         text: "Spouce",
-                        value: "3"
                     },
                         ]
             });
-        });
 
-        $("#sClassYear").kendoDatePicker({
-            format: "yyyy",
-            start: "century",
-            value: "Select Date",
-            depth: "decade"
+
+            $("#sClassYear1").kendoDatePicker({
+                format: "yyyy",
+                start: "century",
+                value: "Select Date",
+                depth: "decade"
+            });
         });
     </script>
 

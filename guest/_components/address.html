@@ -40,6 +40,24 @@
             <div class="col-md-8">
                 <div class="container-fluid pad0">
                     <div class="row">
+                        <div class="form-group col-md-12">
+                        <label for="departureDate">Seasonality</label>
+                        
+                        <div class="row">
+                            <div class="col-md-2">
+                                <input class="form-control" id="seasonalDateStart">
+                            </div>
+                            <div class="col-md-1 textCenter">
+                                <div class="clear bottom10"></div>
+                                <p>—</p>
+                            </div>
+                            <div class="col-md-2">
+                                <input class="form-control" id="seasonalDateEnd">
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="form-group col-md-6">
                             <label for="address">Address</label>
                             <input class="form-control" id="address" type="text" placeholder="Address">
@@ -73,16 +91,6 @@
                             <input class="form-control countries" id="countries1">
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="clear bottom30 hidden-xs"></div>
-                <div class="switch">
-                    <input id="mailPromoToggle1" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
-                    <label id="mailPromoToggleLabel1" for="mailPromoToggle1"></label>
-                </div>
-                <div class="switch-label">
-                    <label for="mailPromoToggle1">Mail Promotions</label>
                 </div>
             </div>
         </div>
@@ -144,7 +152,7 @@
     <div class="container-fluid pad0">
         <div class="row">
             <div class="form-group col-md-12">
-                <a id="addAddress" class="green"><i class="fa fa-plus-circle"></i> <i>Add an Address</i></a>
+                <a id="addAddress" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Seasonal Address</i></a>
             </div>
         </div>
     </div>
@@ -155,6 +163,7 @@
         
         
         
+        
         /*ADD EXTRA ADDRESS */
         $('#addAddress').click(function () {
             var numAddressWrappers = $('.addressWrapper').length;
@@ -162,9 +171,19 @@
             
             $('#addressContainer .addressWrapper' + numAddressWrappers + ' .countries').removeClass('countries').addClass('countries' + numAddressWrappers);
             
-            $('.addressWrapper' + numAddressWrappers + ' #mailPromoToggle1').attr("id", "mailPromoToggle" + numAddressWrappers);
+            $('.addressWrapper' + numAddressWrappers + ' #seasonalDateStart').attr("id", "seasonalDateStart" + numAddressWrappers);
             
-            $('.addressWrapper' + numAddressWrappers + ' #mailPromoToggleLabel1' ).attr("for", "mailPromoToggle" + numAddressWrappers);
+            $('.addressWrapper' + numAddressWrappers + ' #seasonalDateEnd' ).attr("id", "seasonalDateEnd" + numAddressWrappers);
+            
+            $("#seasonalDateStart" + numAddressWrappers).kendoDatePicker({
+                format: "dd-MMM-yy",
+                placeholder: "Select World Region",
+            });
+
+            $("#seasonalDateEnd" + numAddressWrappers).kendoDatePicker({
+                format: "dd-MMM-yy",
+                placeholder: "Select World Region",
+            });
             
             var countries = [
                 "Albania",

@@ -63,7 +63,7 @@
             <div class="col-md-12">
                 <div class="container">
                     <div class="row bottom10">
-                        <div class="col-md-2 col-xs-3" style="padding-left:0">
+                        <div class="col-md-3 col-xs-3" style="padding-left:0">
                             <label for="tourCode">Tour</label>
                             <input class="form-control" id="tourCode">
                         </div>
@@ -76,11 +76,22 @@
                             <input class="form-control" id="status">
                         </div>
                         <div class="col-md-2 col-xs-3">
-                            <label for="departureDate">Departure Date</label>
-                            <input class="form-control" id="departureDate">
+                            <label for="departureDate">Departure Range</label>
+                            <div class="row">
+                                <div class="col-md-5" style="padding: 0 0 0 10px;">
+                            <input class="form-control" id="departureDateStart">
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="clear bottom10"></div>
+                                <p>—</p>
+                                </div>
+                                <div class="col-md-5" style="padding: 0 10px 0 0;">
+                            <input class="form-control" id="departureDateEnd">
+                            </div>
+                            </div>
                         </div>
-                        <div class="col-md-2 col-xs-3">
-                            <label for="daysToDeparture">Days to Departure</label>
+                        <div class="col-md-1 col-xs-3">
+                            <label for="daysToDeparture">Days Out</label>
                             <input class="form-control" id="daysToDeparture">
                         </div>
                         <div class="col-md-2 col-xs-3">
@@ -89,7 +100,7 @@
                         </div>
                     </div>
                     <div class="row bottom0">
-                        <div class="col-xs-2" style="padding:0 10px 0 0">
+                        <div class="col-xs-3" style="padding:0 10px 0 0">
                             <div id="mode-group" class="btn-group btn-group-justified btn-group-xs" data-toggle="buttons">
                                 <label class="btn btn-default">
                                     <input type="radio" name="mode" id="option1"> <i class="fa fa-warning"></i> Min. Alert
@@ -101,15 +112,17 @@
                         </div>
                         
                         <div class="col-xs-2">
-                            <span><a id="expandTours" class="blue"><i class="fa fa-caret-down"></i> &nbsp; Expand All Tours</a><a id="collapseTours" class="blue" style="display:none;"><i class="fa fa-caret-right"></i> &nbsp; Collapse All Tours</a></span>
+                            <span><a id="expandTours" class="blue"><i class="fa fa-caret-down"></i> &nbsp; Expand All Tours</a><a id="collapseTours" class="blue displayNone"><i class="fa fa-caret-right"></i> &nbsp; Collapse All Tours</a></span>
                         </div>
                         <div class="col-xs-2">
-                        <span id="extensionToggle"><a id="expandExtensions" class="blue"><i class="fa fa-caret-down"></i> &nbsp; Expand All Extensions</a><a id="collapseExtensions" class="blue" style="display:none;"><i class="fa fa-caret-right"></i> &nbsp; Collapse All Extensions</a></span>
+                        <span id="extensionToggle" class="displayNone"><a id="expandExtensions" class="blue"><i class="fa fa-caret-down"></i> &nbsp; Expand All Extensions</a><a id="collapseExtensions" class="blue displayNone"><i class="fa fa-caret-right"></i> &nbsp; Collapse All Extensions</a></span>
                         </div>
                         <div class="col-xs-2">
-                        <a id="expandExtensions" class="blue"><a class="blue"><i class="fa fa-print"></i> &nbsp; Print</a>
                         </div>
-                        <div class="col-xs-4">
+                        <div class="col-xs-1">
+                            <a id="print" onclick="window.print(); return false;" class="blue"><i class="fa fa-print"></i> &nbsp; Print</a>
+                        </div>
+                        <div class="col-xs-2">
                             <a href="#" class="alignRight blue"><i class="fa fa-save"></i> Save Filter State</a>
                         </div>
                     </div>
@@ -138,10 +151,10 @@
                             <td style="width:" class="alignRight bottom0">
                                 <table class="departureStats">
                                     <tr>
-                                        <td data-toggle="tooltip" data-placement="top" title="Departure with minimum requirement not met inside booking rules"><span>&nbsp;1</span> <i class="fa fa-warning"></i></td>
-                                        <td data-toggle="tooltip" data-placement="top" title="Deparutres with less than 25% capacity sold outside booking rules"><span>22</span> <img class="pieExpanded" src="/images/circle-25.png"><img class="pieCollapsed" src="/images/circle-dark-25.png"></td>
-                                        <td data-toggle="tooltip" data-placement="top" title="Deparutres with more than 80% capacity sold outside booking rules"><span>&nbsp;7</span> <img class="pieExpanded" src="/images/circle-75.png"><img class="pieCollapsed" src="/images/circle-dark-75.png"></td>
-                                        <td data-toggle="tooltip" data-placement="top" title="Sold out departures outside booking rules"><span>&nbsp;3</span> <img class="pieExpanded" src="/images/circle-100.png"><img class="pieCollapsed" src="/images/circle-dark-100.png"></td>
+                                        <td data-toggle="tooltip" data-placement="top" title="Departure with minimum requirement not met inside 110 Days Out"><span>&nbsp;2</span> <i class="fa fa-warning"></i></td>
+                                        <td data-toggle="tooltip" data-placement="top" title="Departures with less than 25% capacity sold outside 110 Days Out"><span>22</span> <img class="pieExpanded" src="/images/circle-25.png"><img class="pieCollapsed" src="/images/circle-dark-25.png"></td>
+                                        <td data-toggle="tooltip" data-placement="top" title="Departures with more than 80% capacity sold outside 110 Days Out"><span>&nbsp;7</span> <img class="pieExpanded" src="/images/circle-75.png"><img class="pieCollapsed" src="/images/circle-dark-75.png"></td>
+                                        <td data-toggle="tooltip" data-placement="top" title="Sold out departures outside 110 Days Out"><span>&nbsp;3</span> <img class="pieExpanded" src="/images/circle-100.png"><img class="pieCollapsed" src="/images/circle-dark-100.png"></td>
                                 </tr>
                                     <script>$(function () {
     $('[data-toggle="tooltip"]').tooltip()
@@ -155,7 +168,7 @@
                 <div class="container">
                     <div class="row pad15 stats">
                         <div class="col-xs-12">
-                            <p>4 Active Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
+                            <p>4 Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
                         </div>
                     </div>
                 </div>
@@ -182,7 +195,7 @@
                 <div class="container">
                     <div class="row pad15 stats">
                         <div class="col-xs-12">
-                            <p>4 Active Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
+                            <p>4 Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
                         </div>
                     </div>
                 </div>
@@ -209,7 +222,7 @@
                 <div class="container">
                     <div class="row pad15 stats">
                         <div class="col-xs-12">
-                            <p>4 Active Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
+                            <p>4 Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
                         </div>
                     </div>
                 </div>
@@ -236,7 +249,7 @@
                 <div class="container">
                     <div class="row pad15 stats">
                         <div class="col-xs-12">
-                            <p>4 Active Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
+                            <p>4 Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
                         </div>
                     </div>
                 </div>
@@ -263,7 +276,7 @@
                 <div class="container">
                     <div class="row pad15 stats">
                         <div class="col-xs-12">
-                            <p>4 Active Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
+                            <p>4 Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
                         </div>
                     </div>
                 </div>
@@ -290,7 +303,7 @@
                 <div class="container">
                     <div class="row pad15 stats">
                         <div class="col-xs-12">
-                            <p>4 Active Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
+                            <p>4 Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
                         </div>
                     </div>
                 </div>
@@ -317,7 +330,7 @@
                 <div class="container">
                     <div class="row pad15 stats">
                         <div class="col-xs-12">
-                            <p>4 Active Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
+                            <p>4 Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
                         </div>
                     </div>
                 </div>
@@ -344,7 +357,7 @@
                 <div class="container">
                     <div class="row pad15 stats">
                         <div class="col-xs-12">
-                            <p>4 Active Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
+                            <p>4 Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
                         </div>
                     </div>
                 </div>
@@ -371,7 +384,7 @@
                 <div class="container">
                     <div class="row pad15 stats">
                         <div class="col-xs-12">
-                            <p>4 Active Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
+                            <p>4 Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
                         </div>
                     </div>
                 </div>
@@ -398,7 +411,7 @@
                 <div class="container">
                     <div class="row pad15 stats">
                         <div class="col-xs-12">
-                            <p>4 Active Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
+                            <p>4 Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
                         </div>
                     </div>
                 </div>
@@ -425,7 +438,7 @@
                 <div class="container">
                     <div class="row pad15 stats">
                         <div class="col-xs-12">
-                            <p>4 Active Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
+                            <p>4 Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
                         </div>
                     </div>
                 </div>
@@ -452,7 +465,7 @@
                 <div class="container">
                     <div class="row pad15 stats">
                         <div class="col-xs-12">
-                            <p>4 Active Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
+                            <p>4 Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
                         </div>
                     </div>
                 </div>
@@ -479,7 +492,7 @@
                 <div class="container">
                     <div class="row pad15 stats">
                         <div class="col-xs-12">
-                            <p>4 Active Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
+                            <p>4 Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
                         </div>
                     </div>
                 </div>
@@ -506,7 +519,7 @@
                 <div class="container">
                     <div class="row pad15 stats">
                         <div class="col-xs-12">
-                            <p>4 Active Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
+                            <p>4 Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
                         </div>
                     </div>
                 </div>
@@ -533,7 +546,7 @@
                 <div class="container">
                     <div class="row pad15 stats">
                         <div class="col-xs-12">
-                            <p>4 Active Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
+                            <p>4 Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
                         </div>
                     </div>
                 </div>
@@ -560,7 +573,7 @@
                 <div class="container">
                     <div class="row pad15 stats">
                         <div class="col-xs-12">
-                            <p>4 Active Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
+                            <p>4 Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
                         </div>
                     </div>
                 </div>
@@ -587,7 +600,7 @@
                 <div class="container">
                     <div class="row pad15 stats">
                         <div class="col-xs-12">
-                            <p>4 Active Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
+                            <p>4 Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
                         </div>
                     </div>
                 </div>
@@ -614,7 +627,7 @@
                 <div class="container">
                     <div class="row pad15 stats">
                         <div class="col-xs-12">
-                            <p>4 Active Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
+                            <p>4 Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
                         </div>
                     </div>
                 </div>
@@ -641,7 +654,7 @@
                 <div class="container">
                     <div class="row pad15 stats">
                         <div class="col-xs-12">
-                            <p>4 Active Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
+                            <p>4 Departures</p><p>|</p><p>96 Capacity</p><p>|</p><p>75 Sold - 72 LW</p><p>|</p><p>5 Wait Listed</p> <p>|</p><p>78% Load Factor</p>
                         </div>
                     </div>
                 </div>
@@ -697,7 +710,7 @@
                         },
                         {
                             field: "Status",
-                            width: "70px"
+                            width: "80px"
                         },
                         {
                             field: "Minimum",
@@ -766,13 +779,6 @@
                             encoded: false,
                             title: "Invoice Date<br>Mailed Date"
                         },
-                        {
-                            field: "Mailed",
-                            encoded: false,
-                            title: "&nbsp;",
-                            attributes: {"class": "green"},
-                            width: "30px"
-                        }
                     ],
                     dataSource: {
                         
@@ -806,74 +812,121 @@
                             {
                                 Check: "<input class='checkbox' type='checkbox'>",
                                 Att: "<i class='fa fa-warning orange'></i>",
-                                Departure: "<b>30-Jan to 12-Feb-16</b> (10 Days Out)<br><i class='fa fa-university'></i> Smithsonian Journeys",
+                                Departure: "<b>30-Jan to 12-Feb-16</b><br><i class='fa fa-university'></i> Texas Exes",
+                                Status: "Advertised",
+                                Minimum: "12",
+                                Allotment: "<a data-toggle='modal' data-target='.allotmentModal'>10 Twins<br>4 Singles</a>",
+                                Capacity: "24",
+                                Direction: "",
+                                Sold: "<a data-toggle='modal' data-target='.guestListModal'>24</a>",
+                                SoldLW: "24",
+                                WaitList: "",
+                                Registered: "",
+                                TourDirector: "<a class='' data-toggle='modal' data-target='.viewTDModal'>Lia Kondili</a>",
+                                Tasks: "<a data-toggle='modal' data-target='.viewTasksModal'>View</a>",
+                                Invoice: "31-Dec-15<br>02-Jan-16",
+                            },
+                            {
+                                Check: "<input class='checkbox' type='checkbox'>",
+                                Att: "",
+                                Departure: "<b>21-Feb to 05-Mar-16</b> (12 Days Out)",
                                 Status: "Advertised",
                                 Minimum: "12",
                                 Allotment: "<a data-toggle='modal' data-target='.allotmentModal'>10 Twins<br>4 Singles</a>",
                                 Capacity: "24",
                                 Direction: "<i class='fa fa-long-arrow-up green'></i>",
-                                Sold: "<a data-toggle='modal' data-target='.guestListModal'>24</a>",
-                                SoldLW: "22",
+                                Sold: "<a data-toggle='modal' data-target='.guestListModal'>18</a>",
+                                SoldLW: "17",
                                 WaitList: "3",
                                 Registered: "",
                                 TourDirector: "<a class='' data-toggle='modal' data-target='.viewTDModal'>Lia Kondili</a>",
-                                Tasks: "<a data-toggle='modal' data-target='.viewTasksModal'>View</a>",
-                                Invoice: "31-Dec-15<br>02-Jan-16",
-                                Mailed: "<br><i class='fa fa-envelope-o'></i>"
+                                Tasks: "<a class='' data-toggle='modal' data-target='.viewTasksModal'>View</a>",
+                                Invoice: "22-Jan-16<br>23-Jan-16",
                             },
                             {
                                 Check: "<input class='checkbox' type='checkbox'>",
                                 Att: "",
-                                Departure: "<b>21-Feb to 05-Mar-16</b> (32 Days Out)",
+                                Departure: "<b>18-Mar to 31-Mar-16</b> (38 Days Out)",
                                 Status: "Advertised",
-                                Minimum: "12",
-                                Allotment: "10 Twins<br>4 Singles",
+                                Minimum: "<span class='orange bold'><i class='fa fa-warning'></i>12</span>",
+                                Allotment: "<a data-toggle='modal' data-target='.allotmentModal'>10 Twins<br>4 Singles</a>",
                                 Capacity: "24",
                                 Direction: "<i class='fa fa-long-arrow-down red'></i>",
-                                Sold: "<a data-toggle='modal' data-target='.guestListModal'>21</a>",
-                                SoldLW: "23",
+                                Sold: "<a data-toggle='modal' data-target='.guestListModal'>8</a>",
+                                SoldLW: "12",
+                                WaitList: "",
+                                Registered: "",
+                                TourDirector: "",
+                                Tasks: "<a class='' data-toggle='modal' data-target='.viewTasksModal'>View</a>",
+                                Invoice: "17-Feb-16<br>&nbsp;",
+                            },
+                            {
+                                Check: "<input class='checkbox' type='checkbox'>",
+                                Att: "",
+                                Departure: "<b>06-Apr to 19-Apr-16</b> (57 Days Out)",
+                                Status: "Cancelled",
+                                Minimum: "12",
+                                Allotment: "<a data-toggle='modal' data-target='.allotmentModal'>10 Twins<br>4 Singles</a>",
+                                Capacity: "24",
+                                Direction: "",
+                                Sold: "<a data-toggle='modal' data-target='.guestListModal'>0</a>",
+                                SoldLW: "0",
                                 WaitList: "",
                                 Registered: "",
                                 TourDirector: "<a class='' data-toggle='modal' data-target='.viewTDModal'>Zanna Mouzaki</a>",
                                 Tasks: "<a class='' data-toggle='modal' data-target='.viewTasksModal'>View</a>",
-                                Invoice: "22-Jan-16<br>&nbsp;",
-                                Mailed: ""
+                                Invoice: "07-Mar-16<br>&nbsp;",
                             },
                             {
                                 Check: "<input class='checkbox' type='checkbox'>",
                                 Att: "<i class='fa fa-warning orange'></i>",
-                                Departure: "<b>18-Mar to 31-Mar-16</b> (58 Days Out)",
+                                Departure: "<b>25-Apr to 19-May-16</b> (76 Days Out)<br><i class='fa fa-university'></i> Smithsonian Journeys",
                                 Status: "Advertised",
-                                Minimum: "12",
-                                Allotment: "10 Twins<br>4 Singles",
+                                Minimum: "<span class='orange bold'><i class='fa fa-warning'></i>26</span>",
+                                Allotment: "<a data-toggle='modal' data-target='.allotmentModal'>10 Twins<br>4 Singles</a>",
                                 Capacity: "24",
                                 Direction: "<i class='fa fa-long-arrow-up green'></i>",
-                                Sold: "<a data-toggle='modal' data-target='.guestListModal'>18</a>",
-                                SoldLW: "20",
+                                Sold: "<a data-toggle='modal' data-target='.guestListModal'>20</a>",
+                                SoldLW: "18",
                                 WaitList: "2",
                                 Registered: "",
                                 TourDirector: "<a class='' data-toggle='modal' data-target='.viewTDModal'>Lia Kondili</a>",
                                 Tasks: "<a class='' data-toggle='modal' data-target='.viewTasksModal'>View</a>",
-                                Invoice: "17-Feb-16<br>&nbsp;",
-                                Mailed: ""
+                                Invoice: "26-Mar-16<br>&nbsp;",
                             },
                             {
                                 Check: "<input class='checkbox' type='checkbox'>",
-                                Att: "",
-                                Departure: "<b>06-Apr to 19-Apr-16</b> (77 Days Out)<br><i class='fa fa-university'></i> Texas Exes",
-                                Status: "Advertised",
-                                Minimum: "<span class='orange bold'><i class='fa fa-warning'></i>12</span>",
-                                Allotment: "10 Twins<br>4 Singles",
+                                Att: "<i class='fa fa-warning orange'></i>",
+                                Departure: "<b>14-May to 27-May-16</b> (95 Days Out)",
+                                Status: "Cancelled",
+                                Minimum: "12",
+                                Allotment: "<a data-toggle='modal' data-target='.allotmentModal'>10 Twins<br>4 Singles</a>",
                                 Capacity: "24",
-                                Direction: "<i class='fa fa-long-arrow-up green'></i>",
-                                Sold: "<a data-toggle='modal' data-target='.guestListModal'>10</a>",
-                                SoldLW: "9",
+                                Direction: "<i class='fa fa-long-arrow-down red'></i>",
+                                Sold: "<a data-toggle='modal' data-target='.guestListModal'>2</a>",
+                                SoldLW: "20",
                                 WaitList: "",
                                 Registered: "",
                                 TourDirector: "<a class='' data-toggle='modal' data-target='.viewTDModal'>Lia Kondili</a>",
                                 Tasks: "<a class='' data-toggle='modal' data-target='.viewTasksModal'>View</a>",
-                                Invoice: "07-Mar-16<br>&nbsp;",
-                                Mailed: ""
+                                Invoice: "14-Apr-16<br>&nbsp;",
+                            },
+                            {
+                                Check: "<input class='checkbox' type='checkbox'>",
+                                Att: "",
+                                Departure: "<b>02-Jun to 15-Jun-16</b> (114 Days Out)",
+                                Status: "Unadvertised",
+                                Minimum: "12",
+                                Allotment: "<a data-toggle='modal' data-target='.allotmentModal'>10 Twins<br>4 Singles</a>",
+                                Capacity: "24",
+                                Direction: "",
+                                Sold: "<a data-toggle='modal' data-target='.guestListModal'>0</a>",
+                                SoldLW: "0",
+                                WaitList: "",
+                                Registered: "",
+                                TourDirector: "",
+                                Tasks: "<a class='' data-toggle='modal' data-target='.viewTasksModal'>View</a>",
+                                Invoice: "03-May-16<br>&nbsp;",
                             }
                         ]
                     }
@@ -904,7 +957,7 @@
                             field: "Status",
                             attributes: {"class": "extension"},
                             headerAttributes: {style: "display: none"},
-                            width: "70px"
+                            width: "80px"
                         },
                         {
                             field: "Minimum",
@@ -1014,83 +1067,116 @@
     <script>
 //COUNT REPORT SCRIPTS
         $(document).ready(function () {
-
+            
+            
+                $(".grid5 td:contains('Texas')").parent().addClass("opacity05");
+            
+            
+//            function () {
+//                $(".grid5 td:contains('Completed')").parents().eq(1).css("opacity", ".5");
+//            };
+            
+//            $(".grid5 td:contains('Completed')").parent.css("background-color", "red");
+            
             var codes = [
-                "",
-                "ABP-16",
-                "ADR-16",
-                "ANT-16",
-                "BAL-16",
-                "BHU-16",
-                "BZZ-16",
-                "CCY-16",
-                "COL-16",
-                "CRP-16",
-                "CSR-16",
-                "DEE-16",
-                "EGY-16",
-                "FRN-16",
-                "FRS-16",
-                "GER-16",
-                "GSW-16",
-                "GRV-16",
-                "ICE-16",
-                "ILA-16",
-                "IND-16",
-                "INJ-16",
-                "IRE-16",
-                "ISR-16",
-                "ITY-16",
-                "JOR-16",
-                "JPN-16",
-                "KTN-16",
-                "MON-16",
-                "MRC-16",
-                "MYN-16",
-                "NAU-16",
-                "NIT-16",
-                "PAP-16",
-                "PEF-16",
-                "PEG-16",
-                "PER-16",
-                "PSP-16",
-                "SAF-16",
-                "SAT-16",
-                "SCA-16",
-                "SCT-16",
-                "SIT-16",
-                "TNZ-16",
-                "TUR-16",
-                "VIE-16",
-                "WOC-16",
+//                "",
+                "ABP-16 | European Tapestry",
+                "ADR-16 | Pearls of Dalmatia",
+                "ANT-16 | Antarctica Explorer",
+                "BAL-16 | St. Petersburg & the Baltic Capitals",
+                "BHU-16 | Himalayan Kingdoms: Nepal & Bhutan",
+                "BZZ-16 | Africa's Wildlife",
+                "CCY-16 | Classic China & the Yangtze ",
+                "COL-16 | Colombia Rediscovered",
+                "CRP-16 | Panama Canal Cruise",
+                "CSR-16 | Costa Rica's Natural Heritage",
+                "DEE-16 | Discovering Eastern Europe",
+                "EGY-16 | Egypt & the Eternal Nile",
+                "FRN-16 | Provincial French Countryside",
+                "FRS-16 | Southern France: Languedoc & Provence",
+                "GER-16 | Classic Germany",
+                "GSW-16 | Journey Through Britain",
+                "GRV-16 | Classic Greek Isles",
+                "ICE-16 | Exploring Iceland",
+                "ILA-16 | Italian Landscapes: Tuscany & Umbria",
+                "IND-16 | Mystical India",
+                "INJ-16 | India: Splendors of the South",
+                "IRE-16 | Enchanting Ireland",
+                "ISR-16 | Israel: Timeless Wonders",
+                "ITY-16 | Portrait of Italy",
+                "JOR-16 | Treasures of Jordan",
+                "JPN-16 | Insider's Japan",
+                "KTN-16 | Classic Safari: Kenya & Tanzania",
+                "MON-16 | Mongolian Adventure",
+                "MRC-16 | Moroccan Discovery",
+                "MYN-16 | Mysteries of Myanmar",
+                "NAU-16 | Exploring Australia & New Zealand",
+                "NIT-16 | Northern Italy",
+                "PAP-16 | Paradores & Pousadas",
+                "PEF-16 | Patagonian Frontiers",
+                "PEG-16 | Machu Picchu to the Galapagos",
+                "PER-16 | Treasures of Peru",
+                "PSP-16 | Across Northern Spain and Portugal",
+                "SAF-16 | Southern Africa Odyssey",
+                "SAT-16 | South American Tapestry",
+                "SCA-16 | Norwegian Splendor",
+                "SCT-16 | Scotland: Highlands and Islands",
+                "SIT-16 | Southern Italy & Sicily",
+                "TNZ-16 | Tanzania Adventure",
+                "TUR-16 | Legendary Turkey",
+                "VIE-16 | Journey through Vietnam",
+                "WOC-16 | China, Tibet & the Yangtze River",
             ];
+
+
+
+            var sig = [
+                "",
+                "Archetype SC",
+                "Smithsonian Journeys",
+                "University of Southern California",
+                "University of Texas",
+                "Yale",
+            ];
+
+
 
             var status = [
                 "",
                 "Active",
+                "Inactive",
                 "Cancelled",
-                "Complete",
+                "Completed",
                 "Draft",
             ];
             
-            var regions = [
+            var daysOut = [
                 "",
-                "Africa & the Middle East",
-                "Asia & the Far East",
-                "Australia & the South Pacific",
-                "Europe",
-                "The Americas",
+                "0",
+                "30",
+                "90",
+                "110",
+                "150",
+            ];
+            
+            var user = [
+                "",
+                "Ainsley Wolfe",
+                "Jan Hobbs-Bailey",
+                "Lisa Howlett",
+                "Manuella Rix",
             ];
 
-            $("#tourCode").kendoComboBox({
+            $("#tourCode").kendoMultiSelect({
                 dataSource: codes,
-                filter: "startswith",
+                autoClose: false,
+                filter: "contains",
                 placeholder: "Select Tour",
             });
 
             $("#SIG").kendoComboBox({
-                dataSource: status,
-                filter: "startswith",
+                dataSource: sig,
+                filter: "contains",
                 placeholder: "Select SIG",
             });
 
@@ -1100,21 +1186,29 @@
                 placeholder: "Select Status",
             });
 
-            $("#departureDate").kendoDatePicker({
-                dataSource: regions,
-                filter: "startswith",
+            $("#departureDateStart").kendoDatePicker({
+                start: "year",
+                depth: "year",
+                format: "MM/ yy",
+                placeholder: "Select World Region",
+            });
+
+            $("#departureDateEnd").kendoDatePicker({
+                start: "year",
+                depth: "year",
+                format: "MM/ yy",
                 placeholder: "Select World Region",
             });
 
             $("#daysToDeparture").kendoComboBox({
-                dataSource: regions,
+                dataSource: daysOut,
                 filter: "startswith",
-                placeholder: "Select Number of Days",
+                placeholder: "Days",
             });
 
             $("#user").kendoComboBox({
-                dataSource: regions,
-                filter: "startswith",
+                dataSource: user,
+                filter: "contains",
                 placeholder: "Select User",
             });
             
@@ -1135,34 +1229,41 @@
                 }
             });
             
-            
-            $( "#collapseTours" ).click(function() {
-                $("#panelbar").data("kendoPanelBar").collapse($("li.k-state-active"));
-                $('#collapseTours').css('display','none');  
-                $('#expandTours').css('display','inline');
-                $('#extensionToggle').css('display','none');
+            $('li, #collapseTours, #expandTours').click(function expandExtensionToggle(){
+                setTimeout(function(){if($('li').hasClass("k-state-active")) {
+                    $('#extensionToggle').removeClass("displayNone");
+                } else {
+                    $('#extensionToggle').addClass("displayNone");
+                }},.5 );
             });
             
             
+            $( "#collapseTours" ).click(function() {
+                $("#panelbar").data("kendoPanelBar").collapse($("li.k-state-active"));
+                $('#collapseTours').addClass("displayNone");  
+                $('#expandTours').removeClass("displayNone");
+            });
+            
+            $("#panelbar").data("kendoPanelBar").collapse($("li.k-state-active"));
+            
             $( "#expandTours" ).click(function() {
                 $("#panelbar").data("kendoPanelBar").expand($("li[aria-expanded='false']"));
-                $('#expandTours').css('display','none');  
-                $('#collapseTours').css('display','inline');
-                $('#extensionToggle').css('display','inline');
+                $('#expandTours').addClass("displayNone");  
+                $('#collapseTours').removeClass("displayNone");
             });
             
             
             $('#expandExtensions').click(function() {
                 $('.k-detail-row').css('display','table-row');  
-                $('#expandExtensions').css('display','none');  
-                $('#collapseExtensions').css('display','inline');  
+                $('#expandExtensions').addClass("displayNone");
+                $('#collapseExtensions').removeClass("displayNone");
             });
             
 
             $('#collapseExtensions').click(function() {
                 $('.k-detail-row').css('display','none');
-                $('#collapseExtensions').css('display','none');  
-                $('#expandExtensions').css('display','inline'); 
+                $('#collapseExtensions').addClass("displayNone"); 
+                $('#expandExtensions').removeClass("displayNone");
             });
             
             
@@ -1193,7 +1294,7 @@
         <div class="container">
             <div class="row pad15 stats">
                 <div class="col-xs-12">
-                    <p>76 Active Departures</p><p>|</p><p>1,824 Capacity</p><p>|</p><p>1,425 Sold - 1,368 LW</p><p>|</p><p>16 Wait Listed</p> <p>|</p><p>12 Registered</p> <p>|</p><p>78% Load Factor</p>
+                    <p>76 Departures</p><p>|</p><p>1,824 Capacity</p><p>|</p><p>1,425 Sold - 1,368 LW</p><p>|</p><p>16 Wait Listed</p> <p>|</p><p>12 Registered</p> <p>|</p><p>78% Load Factor</p>
                 </div>
             </div>
         </div>
@@ -1639,7 +1740,7 @@
                             DirectGroup: "Archetype SC Fly Shakers",
                         },
                         {
-                            Guests: "<b><a href='#'>Mr. Daniel O'Sullivan (1)</a></b><br><a href='#'>R-434564324</a>",
+                            Guests: "<b><a href='#'>Mr. John Pate</a></b><br><a href='#'>R-434564324</a>",
                             Status: "Pending",
                             ExtensionG1: "No",
                             ExtensionG2: "",
@@ -1647,7 +1748,7 @@
                             DirectGroup: "",
                         },
                         {
-                            Guests: "<b><a href='#'>Mr. Daniel O'Sullivan (1)</a><br><a href='#'>Mrs. Catherine O'Sullivan (3)</a></b><br><a href='#'>R-434564324</a>",
+                            Guests: "<b><a href='#'>Mr. Steve Fleishaker (21)</a><br><a href='#'>Mrs. Edna Fleishaker (23)</a></b><br><a href='#'>R-434564324</a>",
                             Status: "Courtesy Hold",
                             ExtensionG1: "No",
                             ExtensionG2: "Yes",
@@ -1655,7 +1756,7 @@
                             DirectGroup: "Archetype SC Fly Shakers",
                         },
                         {
-                            Guests: "<b><a href='#'>Mr. Daniel O'Sullivan (1)</a><br><a href='#'>Mrs. Catherine O'Sullivan (3)</a></b><br><a href='#'>R-434564324</a>",
+                            Guests: "<b><a href='#'>Mr. Patrick Nord (2)</a><br><a href='#'>Mrs. Jaqueline Kennedy (2)</a></b><br><a href='#'>R-434564324</a>",
                             Status: "Confirmed",
                             ExtensionG1: "No",
                             ExtensionG2: "No",
@@ -1663,7 +1764,7 @@
                             DirectGroup: "",
                         },
                         {
-                            Guests: "<b><a href='#'>Mr. Daniel O'Sullivan (1)</a><br><a href='#'>Mrs. Catherine O'Sullivan (3)</a></b><br><a href='#'>R-434564324</a>",
+                            Guests: "<b><a href='#'>Mr. Robert Smith (2)</a><br><a href='#'>Mrs. Renee Smith</a></b><br><a href='#'>R-434564324</a>",
                             Status: "Confirmed",
                             ExtensionG1: "No",
                             ExtensionG2: "No",
@@ -1671,7 +1772,7 @@
                             DirectGroup: "",
                         },
                         {
-                            Guests: "<b><a href='#'>Mr. Daniel O'Sullivan (1)</a><br><a href='#'>Mrs. Catherine O'Sullivan (3)</a></b><br><a href='#'>R-434564324</a>",
+                            Guests: "<b><a href='#'>Mr. Isaac Hunnicutt (4)</a><br><a href='#'>Mr. Alexander Diaz (4)</a></b><br><a href='#'>R-434564324</a>",
                             Status: "Confirmed",
                             ExtensionG1: "No",
                             ExtensionG2: "No",
@@ -1679,7 +1780,7 @@
                             DirectGroup: "",
                         },
                         {
-                            Guests: "<b><a href='#'>Mr. Daniel O'Sullivan (1)</a><br><a href='#'>Mrs. Catherine O'Sullivan (3)</a></b><br><a href='#'>R-434564324</a>",
+                            Guests: "<b><a href='#'>Mr. Joseph Bonanno</a><br><a href='#'>Mrs. April Bonanno</a></b><br><a href='#'>R-434564324</a>",
                             Status: "Confirmed",
                             ExtensionG1: "No",
                             ExtensionG2: "No",
@@ -1687,7 +1788,7 @@
                             DirectGroup: "",
                         },
                         {
-                            Guests: "<b><a href='#'>Mr. Daniel O'Sullivan (1)</a><br><a href='#'>Mrs. Catherine O'Sullivan (3)</a></b><br><a href='#'>R-434564324</a>",
+                            Guests: "<b><a href='#'>Mr. Nick Ferry (6)</a><br><a href='#'>Mrs. China Ferry (13)</a></b><br><a href='#'>R-434564324</a>",
                             Status: "Confirmed",
                             ExtensionG1: "No",
                             ExtensionG2: "No",
@@ -1695,7 +1796,7 @@
                             DirectGroup: "",
                         },
                         {
-                            Guests: "<b><a href='#'>Mrs. Catherine O'Sullivan (3)</a></b><br><a href='#'>R-434564324</a>",
+                            Guests: "<b><a href='#'>Mrs. Rashy Roberts (14)</a></b><br><a href='#'>R-434564324</a>",
                             Status: "Confirmed",
                             ExtensionG1: "No",
                             ExtensionG2: "",
@@ -1703,7 +1804,7 @@
                             DirectGroup: "",
                         },
                         {
-                            Guests: "<b><a href='#'>Mr. Daniel O'Sullivan (1)</a><br><a href='#'>Mrs. Catherine O'Sullivan (3)</a></b><br><a href='#'>R-434564324</a>",
+                            Guests: "<b><a href='#'>Mr. Justin Costin</a><br><a href='#'>Mrs. Hillary Costin</a></b><br><a href='#'>R-434564324</a>",
                             Status: "Confirmed",
                             ExtensionG1: "No",
                             ExtensionG2: "No",
@@ -1711,7 +1812,7 @@
                             DirectGroup: "",
                         },
                         {
-                            Guests: "<b><a href='#'>Mr. Daniel O'Sullivan (1)</a><br><a href='#'>Mrs. Catherine O'Sullivan (3)</a></b><br><a href='#'>R-434564324</a>",
+                            Guests: "<b><a href='#'>Mr. Gene Areno (1)</a><br><a href='#'>Mrs. Jennifer Areno (1)</a></b><br><a href='#'>R-434564324</a>",
                             Status: "Confirmed",
                             ExtensionG1: "No",
                             ExtensionG2: "No",
@@ -1719,7 +1820,7 @@
                             DirectGroup: "",
                         },
                         {
-                            Guests: "<b><a href='#'>Mr. Daniel O'Sullivan (1)</a><br><a href='#'>Mrs. Catherine O'Sullivan (3)</a></b><br><a href='#'>R-434564324</a>",
+                            Guests: "<b><a href='#'>Mr. Joe Barber (1)</a><br><a href='#'>Mrs. Tiffany Barber (3)</a></b><br><a href='#'>R-434564324</a>",
                             Status: "Confirmed",
                             ExtensionG1: "No",
                             ExtensionG2: "No",
@@ -1727,7 +1828,7 @@
                             DirectGroup: "Archetype SC Fly Shakers",
                         },
                         {
-                            Guests: "<b><a href='#'>Mr. Daniel O'Sullivan (1)</a><br><a href='#'>Mrs. Catherine O'Sullivan (3)</a></b><br><a href='#'>R-434564324</a>",
+                            Guests: "<b><a href='#'>Mr. Chuck Farman (1)</a><br><a href='#'>Mrs. Beth Farman (2)</a></b><br><a href='#'>R-434564324</a>",
                             Status: "Confirmed",
                             ExtensionG1: "No",
                             ExtensionG2: "No",

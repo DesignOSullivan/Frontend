@@ -17,6 +17,7 @@
     <script src="../js/bootstrap-toggle.min.js"></script>
     <script src="../kendoui/js/kendo.all.min.js"></script>
     <script src="guest-scripts.js"></script>
+    <script src="../js/global-scripts.js"></script>
 
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/toggle-me-softly.css" rel="stylesheet">
@@ -24,6 +25,7 @@
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/font-awesome.css" rel="stylesheet">
 
+    
 
     <!-- grab all the component modules we need for this page -->
     <script>
@@ -37,7 +39,7 @@
             $("#includeGuestTabs").load("_components/guest-tabs.html");
         });
     </script>
-
+    
 </head>
 
 <body>
@@ -72,6 +74,7 @@
 
     <form role="form">
 
+        
   <div class="clear bottom15"></div>
 
 
@@ -97,7 +100,7 @@
         <div id="includeGuestTabs"></div>
 
 
-        
+
         
         
         
@@ -548,9 +551,9 @@
 
 
 
-
     <script>
         $(document).ready(function () {
+            
             
             
             $('#flyoutNavTrigger').click(function() {
@@ -585,12 +588,10 @@
 
             });	
             
-            $("#remarkType").kendoComboBox({
+            $("#remarkType").kendoDropDownList({
                 dataTextField: "text",
                 dataValueField: "value",
-                placeholder: "Select Type",
-                filter: "startswith",
-                suggest: "true",
+                optionLabel   : "Select Type",
                 dataSource: [
                     {
                         text: "Guest Note",

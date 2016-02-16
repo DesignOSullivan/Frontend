@@ -24,24 +24,26 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-3"></div>
+        <div class="col-md-1"></div>
         <div class="col-md-3 textCenter" style=" margin-right: 15px; margin-left: -15px;">
             <button href="" data-toggle="modal" data-target="#agencyCreateModal" class="btn btn-info btn-lg"><i class="fa fa-group"></i> &nbsp;Create Travel Agency</button>
         </div>
         <div class="col-md-3 textCenter" style=" margin-left: 15px;">
             <button href="" data-toggle="modal" data-target="#agentCreateModal" class="btn btn-info btn-lg"><i class="fa fa-user"></i> &nbsp;Create Travel Agent</button>
         </div>
-        <div class="col-md-3"></div>
+        <div class="col-md-3 textCenter" style=" margin-left: 15px;">
+            <button href="" data-toggle="modal" data-target="#agentCreateModal2" class="btn btn-info btn-lg"><i class="fa fa-user"></i> &nbsp;Create Travel Agent2</button>
+        </div>
+        <div class="col-md-1"></div>
     </div>
 </div>
 
 
 <!-- CREATE AGENT MODAL -->
-<div class="modal fade dark-modal" id="agentCreateModal" tabindex="-1" role="dialog" aria-labelledby="myModalInfo">
+<div class="modal fade dark-modal agentModal" id="agentCreateModal2" tabindex="-1" role="dialog" aria-labelledby="myModalInfo">
 
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <a data-dismiss="modal"><i class="fa fa-times exitIcon alignRight"></i></a>
             <div class=" modal-header">
                 <div class="container">
                     <div class="row">
@@ -55,6 +57,183 @@
                             <label><span>Travel Agency:</span> Travel Bob Travel Agency</label>
                             <br>
                             <label><span>IATA/ CLIA:</span> 847364859</label>
+                        </div>
+                        <div class="textRight col-md-1">
+                            <a data-dismiss="modal"><i class="fa fa-times exitIcon alignRight"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="form-group col-md-2">
+                            <label for="title2">Title</label>
+                            <input class="form-control" id="title2" placeholder="(--)">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="firstName2">First Name</label>
+                            <input class="form-control" id="firstName2" type="text" placeholder="First Name">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="lastName">Last Name</label>
+                            <input class="form-control" id="lastName2" type="text" placeholder="Last Name">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="suffix22">Suffix</label>
+                            <input class="form-control" id="suffix2" placeholder="(--)">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 pad0">
+                                        <h3>Address</h3>
+                                        <hr>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label for="address2">Address</label>
+                                            <input class="form-control" id="address2" type="text" placeholder="Address">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="address22">Address 2</label>
+                                            <input class="form-control" id="address22" type="text" placeholder="(Address 2)">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-4">
+                                            <label for="zip2">Zip Code</label>
+                                            <input class="form-control" id="zip2" type="text" placeholder="Zip">
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label for="plus42">Plus 4</label>
+                                            <input class="form-control" id="plus42" type="text" placeholder="(+4)" disabled>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="city2">City</label>
+                                            <input class="form-control" id="city2" type="text" placeholder="City" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label for="state2">State</label>
+                                            <input class="form-control" id="state2" disabled>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="countries2">Country</label>
+                                            <input class="form-control" id="countries2">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="switch">
+                                                <input id="mailPromoToggle2" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
+                                                <label for="mailPromoToggle2"></label>
+                                            </div>
+                                            <div class="switch-label">
+                                                <label for="mailPromoToggle2">Mail Promotions</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                   
+
+
+                    <div class="col-md-6">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 pad0">
+                                    <h3>Contatct Information</h3>
+                                    <hr>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-6 col-xs-8">
+                                        <label for="phoneNumber2">Phone Number</label>
+                                        <input class="form-control" id="phoneNumber2" placeholder="___ ___-____">
+                                    </div>
+                                    <div class="form-group col-md-4 col-xs-4">
+                                        <label for="phoneType2">Type</label>
+                                        <input class="form-control dropdown" id="phoneType2">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-12">
+                                        <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Phone Number</i></a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-5">
+                                        <label for="emailInput">Email Address</label>
+                                        <input class="form-control" id="emailInput" type="text" placeholder="(Email Address)">
+                                    </div>
+                                    <div class="form-group col-md-5">
+                                        <div class="clear bottom25"></div>
+                                        <div class="switch">
+                                            <input id="email-promo-toggle2" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
+                                            <label for="email-promo-toggle2"></label>
+                                        </div>
+                                        <div class="switch-label">
+                                            <label for="email-promo-toggle2">Email Promotions</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-12">
+                                        <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add an Email Address</i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- MODAL FOOTER -->
+
+            <div class="modal-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-sm btn-default alignLeft" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-sm btn-info" id="createAgent2"><i class="fa fa-check-circle-o"></i> Submit </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CREATE AGENT MODAL -->
+<div class="modal fade dark-modal agentModal" id="agentCreateModal" tabindex="-1" role="dialog" aria-labelledby="myModalInfo">
+
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class=" modal-header">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-4 col-xs-8 borderRight">
+                            <h3>Create<br> Travel Agent</h3>
+                        </div>
+
+                        <div class="col-md-7 col-xs-4">
+                            <div class="clear bottom20"></div>
+                            <label><span>Travel Agency:</span> Travel Bob Travel Agency</label>
+                            <br>
+                            <label><span>IATA/ CLIA:</span> 847364859</label>
+                        </div>
+                        <div class="textRight col-md-1">
+                            <a data-dismiss="modal"><i class="fa fa-times exitIcon alignRight"></i></a>
                         </div>
                     </div>
                 </div>
@@ -137,11 +316,11 @@
                     <div class="row">
                         <div class="form-group col-md-6 col-xs-8">
                             <label for="phoneNumber">Phone Number</label>
-                            <input class="form-control" id="phoneNumber" placeholder="Phone Number">
+                            <input class="form-control" id="phoneNumber" placeholder="___ ___-____">
                         </div>
                         <div class="form-group col-md-4 col-xs-4">
                             <label for="phoneType">Type</label>
-                            <input class="form-control" id="phoneType">
+                            <input class="form-control dropdown" id="phoneType">
                         </div>
                     </div>
                     <div class="row">
@@ -194,6 +373,9 @@
 
 <!-- AGENT SCRIPTS -->
 <script>
+   
+        
+        
     //AGENT CREATE BUTTON
     $("#createAgent").on('click', function () {
         window.location = "travel-agent.html";
@@ -201,12 +383,33 @@
 
     //AGENT TITLE
     $(document).ready(function () {
-        $("#title").kendoComboBox({
+        
+        $(document).on("ready", function (){
+            $(".k-dropdown span.k-input:contains('Select')").addClass("placeHolder");
+        });
+        
+        
+        $("input.dropdown").on("change", function (){
+            $(this).siblings("span").children(":contains('Select')").addClass("placeHolder");
+            $(this).siblings("span").children().not(":contains('Select')").removeClass("placeHolder");
+        });
+        
+        
+        
+        $("input").on("focus", function () {
+            $(this).select();
+        });
+        
+        $("#title").kendoDropDownList({
             dataTextField: "text",
             dataValueField: "value",
-            filter: "startswith",
             suggest: "true",
+            optionLabel   : "(--)",
             dataSource: [
+                {
+                    text: "",
+                    value: "0"
+                    },
                 {
                     text: "Mr.",
                     value: "1"
@@ -229,14 +432,44 @@
                     }
                 ]
         });
-    });
 
-    //AGENT SUFFIX
-    $(document).ready(function () {
-        $("#suffix").kendoComboBox({
+    //AGENT TITLE
+        $("#title2").kendoDropDownList({
             dataTextField: "text",
             dataValueField: "value",
-            filter: "startswith",
+            suggest: "true",
+            dataSource: [
+                {
+                    text: "",
+                    value: "0"
+                    },
+                {
+                    text: "Mr.",
+                    value: "1"
+                    },
+                {
+                    text: "Mrs.",
+                    value: "2"
+                    },
+                {
+                    text: "Ms.",
+                    value: "3"
+                    },
+                {
+                    text: "Prof.",
+                    value: "3"
+                    },
+                {
+                    text: "Dr.",
+                    value: "3"
+                    }
+                ]
+        });
+
+    //AGENT SUFFIX
+        $("#suffix").kendoDropDownList({
+            dataTextField: "text",
+            dataValueField: "value",
             suggest: "true",
             dataSource: [
                 {
@@ -257,10 +490,45 @@
                     },
                 ]
         });
-    });
+
+    //AGENT SUFFIX
+        $("#suffix2").kendoDropDownList({
+            dataTextField: "text",
+            dataValueField: "value",
+            suggest: "true",
+            change : function (e) {
+                if (this.value() && this.selectedIndex == -1) {    
+                    this._filterSource({
+                        value: "",
+                        field: this.options.dataTextField,
+                        operator: "contains"
+                    });
+                    this.select(0);
+                    this.classList.add("foo");
+                    
+                }
+            },
+            dataSource: [
+                {
+                    text: "",
+                    value: "1"
+                    },
+                {
+                    text: "Sr.",
+                    value: "2"
+                    },
+                {
+                    text: "Jr.",
+                    value: "3"
+                    },
+                {
+                    text: "III",
+                    value: "4"
+                    },
+                ]
+        });
 
     //COUNTRY LIST
-    $(document).ready(function () {
         var countries = [
                 "Albania",
                 "Andorra",
@@ -311,19 +579,25 @@
                 "Turkey",
                 "Ukraine",
                 "United Kingdom",
+                "United States",
                 "Vatican City"
             ];
 
-        //AGENT COUNTRY COMBO BOX
-        $("#countries").kendoComboBox({
+        //AGENT COUNTRY
+        $("#countries").kendoDropDownList({
             dataSource: countries,
-            filter: "startswith",
+            value: "United States",
             placeholder: "Select Country",
         });
-    });
+
+        //AGENT COUNTRY
+        $("#countries2").kendoDropDownList({
+            dataSource: countries,
+            value: "United States",
+            placeholder: "Select Country",
+        });
 
     //STSATE LIST
-    $(document).ready(function () {
         var state = [
                 "Alabama",
                 "Alaska",
@@ -378,27 +652,66 @@
             ];
 
         //create AutoComplete UI component
-        $("#state").kendoComboBox({
+        $("#state").kendoDropDownList({
             dataSource: state,
-            filter: "startswith",
             placeholder: "Select State",
         });
-    });
+
+        //create AutoComplete UI component
+        $("#state2").kendoDropDownList({
+            dataSource: state,
+            placeholder: "Select State",
+        });
 
     //AGENT PHONE NUMBER MASK
-    $(document).ready(function () {
         $("#phoneNumber").kendoMaskedTextBox({
             mask: "(999) 000-0000"
         });
-    });
+
+    //AGENT PHONE NUMBER MASK
+        $("#phoneNumber2").kendoMaskedTextBox({
+            mask: "(999) 000-0000"
+        });
 
     //AGENT PHONE TYPE
-    $(document).ready(function () {
-        $("#phoneType").kendoComboBox({
+        $("#phoneType").kendoDropDownList({
             dataTextField: "text",
             dataValueField: "value",
             placeholder: "Select Type",
             dataSource: [
+                {
+                    text: "Select Type",
+                    value: "0"
+                    },
+                {
+                    text: "Home",
+                    value: "1"
+                    },
+                {
+                    text: "Mobile",
+                    value: "2"
+                    },
+                {
+                    text: "Work",
+                    value: "3"
+                    },
+                {
+                    text: "Fax",
+                    value: "3"
+                    },
+                ]
+        });
+
+    //AGENT PHONE TYPE
+        $("#phoneType2").kendoDropDownList({
+            dataTextField: "text",
+            dataValueField: "value",
+            placeholder: "Select Type",
+            dataSource: [
+                {
+                    text: "Select Type",
+                    value: "0"
+                    },
                 {
                     text: "Home",
                     value: "1"
@@ -428,11 +741,10 @@
 
 
 <!-- CREATE AGENCY MODAL -->
-<div class="modal fade dark-modal" id="agencyCreateModal" tabindex="-1" role="dialog" aria-labelledby="myModalInfo">
+<div class="modal fade dark-modal agentModal" id="agencyCreateModal" tabindex="-1" role="dialog" aria-labelledby="myModalInfo">
 
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <a data-dismiss="modal"><i class="fa fa-times exitIcon alignRight"></i></a>
             <div class="modal-header">
                 <div class="container">
                     <div class="row">
@@ -446,6 +758,9 @@
                             <label><span>Travel Agency:</span> Travel Bob Travel Agency</label>
                             <br>
                             <label><span>IATA/ CLIA:</span> 847364859</label>
+                        </div>
+                        <div class="textRight col-md-1">
+                            <a data-dismiss="modal"><i class="fa fa-times exitIcon alignRight"></i></a>
                         </div>
                     </div>
                 </div>
@@ -468,12 +783,6 @@
                     <hr>
 
                     <div class="container-fluid pad0">
-                        <div class="row">
-                            <div class="col-md-12 form-group">
-                                <label for="attention">Attention</label>
-                                <input class="form-control" id="attention" placeholder="(Attention)">
-                            </div>
-                        </div>
                     </div>
                     <div id="addressBlock" class="row">
                         <div class="col-md-12">
@@ -509,7 +818,7 @@
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="agencyCountries">Country</label>
-                                        <input class="form-control" id="agencyCountries">
+                                        <input class="form-control dropdown" id="agencyCountries">
                                     </div>
                                 </div>
                             </div>
@@ -522,12 +831,12 @@
                     <div class="row">
                         <div class="form-group col-md-7 col-xs-8">
                             <label for="agencyPhoneNumber">Phone Number</label>
-                            <input class="form-control" id="agencyPhoneNumber" placeholder="Phone Number">
+                            <input class="form-control" id="agencyPhoneNumber" placeholder="___ ___-____">
                         </div>
 
                         <div class="form-group col-md-4 col-xs-4">
                             <label for="agencyPhoneType">Type</label>
-                            <input class="form-control" id="agencyPhoneType">
+                            <input class="form-control dropdown" id="agencyPhoneType">
                         </div>
                     </div>
 
@@ -569,11 +878,10 @@
 </div>
 
 <!-- CREATE AGENT FROM AGENCY NAVIGATION MODAL -->
-<div class="modal fade dark-modal" id="agentCreateFromAgencyModal" tabindex="-1" role="dialog" aria-labelledby="myModalInfo">
+<div class="modal fade dark-modal agentModal" id="agentCreateFromAgencyModal" tabindex="-1" role="dialog" aria-labelledby="myModalInfo">
 
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <a data-dismiss="modal"><i class="fa fa-times exitIcon alignRight"></i></a>
             <div class="modal-header">
                 <div class="container">
                     <div class="row">
@@ -586,6 +894,9 @@
                             <label>Travel Agency: Travel Bob Travel Agency</label>
                             <br>
                             <label>IATA/ CLIA: 847364859</label>
+                        </div>
+                        <div class="textRight col-md-1">
+                            <a data-dismiss="modal"><i class="fa fa-times exitIcon alignRight"></i></a>
                         </div>
                     </div>
                 </div>
@@ -615,7 +926,7 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -627,7 +938,8 @@
         window.location = "travel-agency.html";
     });
 
-
+    
+    
     //AGENCY COUNTRY LIST
     $(document).ready(function () {
         var countries = [
@@ -680,20 +992,19 @@
                 "Turkey",
                 "Ukraine",
                 "United Kingdom",
+                "United States",
                 "Vatican City"
             ];
 
-        //AGENCY COUNTRY COMBO BOX
-        $("#agencyCountries").kendoComboBox({
+        //AGENCY COUNTRY
+        $("#agencyCountries").kendoDropDownList({
             dataSource: countries,
-            filter: "startswith",
+            value: "United States",
             placeholder: "Select Country",
         });
-    });
 
 
     //AGENCY STATE LIST
-    $(document).ready(function () {
         var state = [
                 "Alabama",
                 "Alaska",
@@ -747,28 +1058,27 @@
                 "Wyoming"
             ];
 
-        //AGENCY STATE COMBO BOX
-        $("#agencyState").kendoComboBox({
+        //AGENCY STATE
+        $("#agencyState").kendoDropDownList({
             dataSource: state,
-            filter: "startswith",
             placeholder: "Select State",
         });
-    });
 
     //AGENCY PHONE MASK
-    $(document).ready(function () {
         $("#agencyPhoneNumber").kendoMaskedTextBox({
-            mask: "(999) 000-0000"
+            mask: "999 000-0000"
         });
-    });
 
     //AGENCY PHONE TYPE
-    $(document).ready(function () {
-        $("#agencyPhoneType").kendoComboBox({
+        $("#agencyPhoneType").kendoDropDownList({
             dataTextField: "text",
             dataValueField: "value",
             placeholder: "Select Type",
             dataSource: [
+                {
+                    text: "Select Type",
+                    value: "0"
+                    },
                 {
                     text: "Home",
                     value: "1"

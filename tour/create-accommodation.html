@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OUI</title>
+    <link rel="stylesheet" href="../../kendoui/styles/kendo.common-bootstrap.min.css">
+    <link rel="stylesheet" href="../../kendoui/styles/kendo.bootstrap.min.css">
+    <link href="../../css/bootstrap.css" rel="stylesheet">
+    <link href="../../css/toggle-me-softly.css" rel="stylesheet">
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/font-awesome.css" rel="stylesheet">
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/bootstrap-toggle.min.js"></script>
+    <script src="../../kendoui/js/kendo.all.min.js"></script>
+    <script src="guest-scripts.js"></script>
+
+
+
+</head>
+<!--BUTTON TO FIRE MODAL-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-3 textCenter" style=" margin-left: 15px;">
+            <a id="launchButton" href="" data-toggle="modal" data-target="#accommodationModal" class="btn btn-info btn-lg"><i class="fa fa-user"></i> &nbsp;Create Travel Agent2</a>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
+<!--END FIRE BUTTON-->
+
+<!-- CREATE ACCOMMODATION MODAL -->
+<div class="modal fade dark-modal " id="accommodationModal" tabindex="-1" role="dialog" aria-labelledby="myModalInfo">
+
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class=" modal-header">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-4 col-xs-8 borderRight">
+                            <h3>Create<br> accommodation</h3>
+                        </div>
+
+                        <div class="col-md-7 col-xs-4">
+                            <div class="clear bottom30"></div>
+                            <label>Accommodation Name</label>
+                        </div>
+                        <div class="textRight col-md-1">
+                            <a data-dismiss="modal"><i class="fa fa-times exitIcon alignRight"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="">Accommodation Name</label>
+                            <input class="form-control" id="" placeholder="Accommodation Name">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="website">Website</label>
+                            <input class="form-control lowercase" id="website" type="text" placeholder="(http://www.website.com)">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label for="">Description</label>
+                            <textarea class="form-control" id="" placeholder="Enter Description"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6" style="padding-right: 30px">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 pad0">
+                                        <h3>Address</h3>
+                                        <hr>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label for="address2">Address</label>
+                                            <input class="form-control" id="address2" type="text" placeholder="Address">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="address22">Address 2</label>
+                                            <input class="form-control" id="address22" type="text" placeholder="(Address 2)">
+                                        </div>
+                                    </div>
+                                    <div id="address3" class="row">
+                                        <div class="form-group col-md-12">
+                                            <label for="address3">Address 3</label>
+                                            <input class="form-control" id="address3" type="text" placeholder="(Address 3)">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-4">
+                                            <label for="zip2">Zip Code</label>
+                                            <input class="form-control" id="zip2" type="text" placeholder="Zip">
+                                        </div>
+                                        <div id="plus4Row" class="form-group col-md-2 displayNone">
+                                            <label for="plus4">Plus 4</label>
+                                            <input class="form-control" id="plus4" type="text" placeholder="(+4)" disabled>
+                                        </div>
+                                        <div id="cityCol" class="form-group col-md-8">
+                                            <label for="city">City</label>
+                                            <input class="form-control" id="city" type="text" placeholder="City">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label for="state2">State</label>
+                                            <input class="form-control" id="state2" disabled>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="countries2">Country</label>
+                                            <input class="form-control" id="countries2">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="switch">
+                                                <input id="fedexToggle1" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
+                                                <label for="fedexToggle1"></label>
+                                            </div>
+                                            <div class="switch-label">
+                                                <label for="fedexToggle1">Accepts FedEx Deliveries</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            $("#countries2").on("change", function () {
+                                if ($(this).val() == 'United States') {
+                                    $("#address3").addClass("displayNone");
+                                    $("#plus4Row").removeClass("displayNone");
+                                    $("#cityCol").removeClass("col-md-8").addClass("col-md-6");
+                                    $("#city").prop("disabled", true);
+                                    $("#phoneNumber2").kendoMaskedTextBox({
+                                        mask: "999 000-0000"
+                                    });
+                                    
+
+                                } else {
+                                    $("#address3").removeClass("displayNone");
+                                    $("#plus4Row").addClass("displayNone");
+                                    $("#cityCol").removeClass("col-md-6").addClass("col-md-8");
+                                    $("#city").prop("disabled", false);
+                                    $("#phoneNumber2").kendoMaskedTextBox({
+                                        mask: ""
+                                    });
+                                }
+                            });
+                        </script>
+
+
+                        <div class="col-md-6" style="padding-left: 30px">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 pad0">
+                                        <h3>Contatct Information</h3>
+                                        <hr>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-6 col-xs-8">
+                                            <label for="phoneNumber2">Phone Number</label>
+                                            <input class="form-control" id="phoneNumber2" placeholder="___ ___-____">
+                                        </div>
+                                        <div class="form-group col-md-4 col-xs-4">
+                                            <label for="phoneType2">Type</label>
+                                            <input class="form-control dropdown" id="phoneType2">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-12">
+                                            <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Phone Number</i></a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-10">
+                                            <label for="emailInput">Email Address</label>
+                                            <input class="form-control" id="emailInput" type="text" placeholder="(Email Address)">
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-12">
+                                            <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add an Email Address</i></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <!--
+                        <div class="col-md-6" style="padding-right: 30px">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 pad0">
+                                        <h3>Allotment</h3>
+                                        <hr>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-3">
+                                            <label for="single">Single</label>
+                                            <input class="form-control" id="single" type="text" placeholder="0">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label for="twin">Twin</label>
+                                            <input class="form-control" id="twin" type="text" placeholder="0">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label for="double">Double</label>
+                                            <input class="form-control" id="double" type="text" placeholder="0">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label for="queen">Queen</label>
+                                            <input class="form-control" id="queen" type="text" placeholder="0">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+-->
+
+
+
+                        <div class="col-md-6" style="padding-left: 30px">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 pad0">
+                                        <h3>Pricing</h3>
+                                        <hr>
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="form-group col-md-3">
+                                            <label for="price">Sell Price</label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">$</span>
+                                                <input class="form-control" id="price" type="text" placeholder="--">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="startDate">Start Date</label>
+                                            <input class="form-control" id="startDate">
+                                        </div>
+                                        <div class="col-md-1">
+                                            <div class="clear bottom30"></div>
+                                            <p>—</p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="endDate">End Date</label>
+                                            <input class="form-control" id="endDate">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 pad0">
+                                        <h3>Upgrades</h3>
+                                        <hr>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-12">
+                                            <label for="roomName">Room Name</label>
+                                            <input class="form-control" id="roomName" type="text" placeholder="Enter Room Name">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-12">
+                                            <label for="roomDescription">Room Description</label>
+                                            <textarea class="form-control" id="roomDescription" type="text" placeholder="Enter Room Description"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-12">
+                                            <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add an Upgrade</i></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row">
+
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+
+
+            <!-- MODAL FOOTER -->
+
+            <div class="modal-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-sm btn-default alignLeft" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-sm btn-info" id="createAgent2"><i class="fa fa-check-circle-o"></i> Submit </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- AGENT SCRIPTS -->
+<script>
+    //AGENT TITLE
+    $(document).ready(function () {
+
+        //        AUTOMATICALLY LAUNCH MODAL
+        $("#launchButton").click();
+        //        LAUNCH END
+
+        $(document).on("ready", function () {
+            $(".k-dropdown span.k-input:contains('Select')").addClass("placeHolder");
+        });
+
+
+        $("input.dropdown").on("change", function () {
+            $(this).siblings("span").children(":contains('Select')").addClass("placeHolder");
+            $(this).siblings("span").children().not(":contains('Select')").removeClass("placeHolder");
+        });
+
+
+
+        $("input").on("focus", function () {
+            $(this).select();
+        });
+
+
+        //AGENT SUFFIX
+        $("#suffix2").kendoDropDownList({
+            dataTextField: "text",
+            dataValueField: "value",
+            suggest: "true",
+            change: function (e) {
+                if (this.value() && this.selectedIndex == -1) {
+                    this._filterSource({
+                        value: "",
+                        field: this.options.dataTextField,
+                        operator: "contains"
+                    });
+                    this.select(0);
+                    this.classList.add("foo");
+
+                }
+            },
+            dataSource: [
+                {
+                    text: "",
+                    value: "1"
+                    },
+                {
+                    text: "Sr.",
+                    value: "2"
+                    },
+                {
+                    text: "Jr.",
+                    value: "3"
+                    },
+                {
+                    text: "III",
+                    value: "4"
+                    },
+                ]
+        });
+
+        //COUNTRY LIST
+        var countries = [
+                "Albania",
+                "Andorra",
+                "Armenia",
+                "Austria",
+                "Azerbaijan",
+                "Belarus",
+                "Belgium",
+                "Bosnia & Herzegovina",
+                "Bulgaria",
+                "Croatia",
+                "Cyprus",
+                "Czech Republic",
+                "Denmark",
+                "Estonia",
+                "Finland",
+                "France",
+                "Georgia",
+                "Germany",
+                "Greece",
+                "Hungary",
+                "Iceland",
+                "Ireland",
+                "Italy",
+                "Kosovo",
+                "Latvia",
+                "Liechtenstein",
+                "Lithuania",
+                "Luxembourg",
+                "Macedonia",
+                "Malta",
+                "Moldova",
+                "Monaco",
+                "Montenegro",
+                "Netherlands",
+                "Norway",
+                "Poland",
+                "Portugal",
+                "Romania",
+                "Russia",
+                "San Marino",
+                "Serbia",
+                "Slovakia",
+                "Slovenia",
+                "Spain",
+                "Sweden",
+                "Switzerland",
+                "Turkey",
+                "Ukraine",
+                "United Kingdom",
+                "United States",
+                "Vatican City"
+            ];
+
+        //AGENT COUNTRY
+        $("#countries2").kendoDropDownList({
+            dataSource: countries,
+            optionLabel: "Select Country",
+            placeholder: "Select Country",
+        });
+
+        //STSATE LIST
+        var state = [
+                "Alabama",
+                "Alaska",
+                "Arizona",
+                "Arkansas",
+                "California",
+                "Colorado",
+                "Connecticut",
+                "Delaware",
+                "Florida",
+                "Georgia",
+                "Hawaii",
+                "Idaho",
+                "Illinois",
+                "Indiana",
+                "Iowa",
+                "Kansas",
+                "Kentucky",
+                "Louisiana",
+                "Maine",
+                "Maryland",
+                "Massachusetts",
+                "Michigan",
+                "Minnesota",
+                "Mississippi",
+                "Missouri",
+                "Montana",
+                "Nebraska",
+                "Nevada",
+                "New Hampshire",
+                "New Jersey",
+                "New Mexico",
+                "New York",
+                "North Carolina",
+                "North Dakota",
+                "Ohio",
+                "Oklahoma",
+                "Oregon",
+                "Pennsylvania",
+                "Rhode Island",
+                "South Carolina",
+                "South Dakota",
+                "Tennessee",
+                "Texas",
+                "Utah",
+                "Vermont",
+                "Virginia",
+                "Washington",
+                "West Virginia",
+                "Wisconsin",
+                "Wyoming"
+            ];
+
+
+        //create AutoComplete UI component
+        $("#state2").kendoDropDownList({
+            dataSource: state,
+            optionLabel: "Select State",
+        });
+
+
+        //AGENT PHONE NUMBER MASK
+        $("#phoneNumber2").kendoMaskedTextBox({
+            mask: "(999) 000-0000"
+        });
+
+
+        //AGENT PHONE NUMBER MASK
+        $("#startDate").kendoDatePicker({});
+
+
+        //AGENT PHONE NUMBER MASK
+        $("#endDate").kendoDatePicker({});
+
+        //AGENT PHONE TYPE
+        $("#phoneType2").kendoDropDownList({
+            dataTextField: "text",
+            dataValueField: "value",
+            optionLabel: "Select Type",
+            dataSource: [
+                {
+                    text: "Home",
+                    value: "1"
+                    },
+                {
+                    text: "Mobile",
+                    value: "2"
+                    },
+                {
+                    text: "Work",
+                    value: "3"
+                    },
+                {
+                    text: "Fax",
+                    value: "3"
+                    },
+                ]
+        });
+
+
+    });
+</script>
+
+
+
+
+
+
+
+<!-- CREATE AGENT FROM AGENCY NAVIGATION MODAL -->
+<div class="modal fade dark-modal agentModal" id="agentCreateFromAgencyModal" tabindex="-1" role="dialog" aria-labelledby="myModalInfo">
+
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-xs-8 borderRight">
+                            <h3>Create<br> Travel Agency</h3>
+                        </div>
+
+                        <div class="col-md-7 col-xs-4">
+                            <div class="clear bottom20"></div>
+                            <label>Travel Agency: Travel Bob Travel Agency</label>
+                            <br>
+                            <label>IATA/ CLIA: 847364859</label>
+                        </div>
+                        <div class="textRight col-md-1">
+                            <a data-dismiss="modal"><i class="fa fa-times exitIcon alignRight"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="form-group col-md-12 textCenter">
+                            <h1><i style="font-size: 72px;" class="fa fa-check-circle-o"></i><br> Agency Created Successfully</h1>
+                        </div>
+                        <div class="clear bottom30"></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- MODAL FOOTER -->
+
+            <div class="modal-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button id="cancel" type="button" class="btn btn-default alignLeft" data-dismiss="modal">Close</button>
+                            <button id="createAgency" type="button" class="btn btn-default " data-dismiss="modal"><i class="fa fa-eye"></i> View Agency</button>
+                            <button href="" data-dismiss="modal" data-toggle="modal" data-target="#agentCreateModal" class="btn btn-success"><i class="fa fa-user"></i> &nbsp;Add a Travel Agent</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    //AGENCY CREATE BUTTON
+    $("#createAgency").on('click', function () {
+        window.location = "travel-agency.html";
+    });
+</script>
+
+</html>

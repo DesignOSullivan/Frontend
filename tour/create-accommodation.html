@@ -26,7 +26,7 @@
     <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-3 textCenter" style=" margin-left: 15px;">
-            <a id="launchButton" href="" data-toggle="modal" data-target="#accommodationModal" class="btn btn-info btn-lg"><i class="fa fa-user"></i> &nbsp;Create Travel Agent2</a>
+            <a id="launchButton" href="" data-toggle="modal" data-target="#accommodationModal" class="btn btn-info btn-lg"><i class="fa fa-user"></i> &nbsp;Create Accommodation</a>
         </div>
         <div class="col-md-4"></div>
     </div>
@@ -71,10 +71,12 @@
                     </div>
                     <div class="row">
                         <div class="form-group col-md-12">
-                            <label for="">Description</label>
-                            <textarea class="form-control" id="" placeholder="Enter Description"></textarea>
+                            <label for="">Description | <span class="chars"></span></label>
+                            <textarea class="form-control" id="" placeholder="Enter Description" maxlength="255"></textarea>
                         </div>
                     </div>
+
+
                     <div class="row">
                         <div class="col-md-6" style="padding-right: 30px">
                             <div class="container">
@@ -124,7 +126,7 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-12 form-group">
                                             <div class="switch">
                                                 <input id="fedexToggle1" class="cmn-toggle cmn-toggle-round" type="checkbox" checked>
                                                 <label for="fedexToggle1"></label>
@@ -134,10 +136,47 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-12">
+                                            <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add an Address</i></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                         <script>
+                            $(document).on("ready", function () {
+
+                                $("[data-role='dropdownlist']").on("change", function () {
+
+                                    if ($(this).val() == '') {
+                                        $(this).siblings(".k-dropdown-wrap").children(".k-input").addClass("placeHolder");
+                                    }
+                                    else{
+                                        $(this).siblings(".k-dropdown-wrap").children(".k-input").removeClass("placeHolder");
+                                    }
+
+                                });
+                            });
+                        </script>
+
+                        <script>
+                            var maxLength = 255;
+                            $(document).on("ready", function () {
+                                $('.chars').text(maxLength + " Remaining");
+
+
+                                $('textarea').on("keyup", function () {
+                                    var length = $(this).val().length;
+                                    var length = maxLength - length;
+                                    $(this).parent().find('.chars').text(length + " Remaining");
+                                });
+
+                            });
+
+
+
                             $("#countries2").on("change", function () {
                                 if ($(this).val() == 'United States') {
                                     $("#address3").addClass("displayNone");
@@ -147,16 +186,20 @@
                                     $("#phoneNumber2").kendoMaskedTextBox({
                                         mask: "999 000-0000"
                                     });
-                                    
+                                    $("#phoneNumber2").attr("placeholder", "___ ___-___")
+
 
                                 } else {
                                     $("#address3").removeClass("displayNone");
                                     $("#plus4Row").addClass("displayNone");
                                     $("#cityCol").removeClass("col-md-6").addClass("col-md-8");
                                     $("#city").prop("disabled", false);
+                                    $("#phoneNumber2").data("kendoMaskedTextBox").destroy();
                                     $("#phoneNumber2").kendoMaskedTextBox({
-                                        mask: ""
+                                        mask: "###############################",
+                                        promptChar: " "
                                     });
+                                    $("#phoneNumber2").attr("placeholder", "Enter Int'l Phone Number");
                                 }
                             });
                         </script>
@@ -170,9 +213,15 @@
                                         <hr>
                                     </div>
                                     <div class="row">
+                                        <div class="form-group col-md-10">
+                                            <label for="contactName">Contact Name</label>
+                                            <input class="form-control" id="contactName" placeholder="Enter Name of Contact">
+                                        </div>
+                                    </div>
+                                    <div class="row">
                                         <div class="form-group col-md-6 col-xs-8">
                                             <label for="phoneNumber2">Phone Number</label>
-                                            <input class="form-control" id="phoneNumber2" placeholder="___ ___-____">
+                                            <input class="form-control" id="phoneNumber2" placeholder="Enter Int'l Phone Number">
                                         </div>
                                         <div class="form-group col-md-4 col-xs-4">
                                             <label for="phoneType2">Type</label>
@@ -286,8 +335,8 @@
                                     </div>
                                     <div class="row">
                                         <div class="form-group col-md-12">
-                                            <label for="roomDescription">Room Description</label>
-                                            <textarea class="form-control" id="roomDescription" type="text" placeholder="Enter Room Description"></textarea>
+                                            <label for="roomDescription">Room Description | <span class="chars"></span></label>
+                                            <textarea class="form-control" id="roomDescription" type="text" placeholder="Enter Room Description" maxlength="255"></textarea>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -521,7 +570,8 @@
 
         //AGENT PHONE NUMBER MASK
         $("#phoneNumber2").kendoMaskedTextBox({
-            mask: "(999) 000-0000"
+            mask: "###############################",
+            promptChar: " "
         });
 
 

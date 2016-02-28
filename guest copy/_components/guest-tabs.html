@@ -1,0 +1,1996 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OUI</title>
+    <link rel="stylesheet" href="../../kendoui/styles/kendo.common-bootstrap.min.css">
+    <link rel="stylesheet" href="../../kendoui/styles/kendo.bootstrap.min.css">
+    <link href="../../css/bootstrap.css" rel="stylesheet">
+    <link href="../../css/toggle-me-softly.css" rel="stylesheet">
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/font-awesome.css" rel="stylesheet">
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/bootstrap-toggle.min.js"></script>
+    <script src="../../kendoui/js/kendo.all.min.js"></script>
+    <script src="guest-scripts.js"></script>
+
+
+</head>
+
+
+<!-- Tabs -->
+<div id="guestTabs">
+    <div class="container pad0">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="clear bottom15">
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 center">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" data-target="#passport-content" id="passportTab">Passport/ ID</a></li>
+                    <li><a data-toggle="tab" data-target="#air-content" id="airTab">Air</a></li>
+                    <li><a data-toggle="tab" data-target="#health-content" id="healthTab">Health</a></li>
+                    <li><a data-toggle="tab" data-target="#emergency-content" id="emergencyTab">Emergency</a></li>
+                    <li><a data-toggle="tab" data-target="#sig-content" id="sigTab">SIG</a></li>
+                    <!--                    <li><a data-toggle="tab" data-target="#travel-credit-content" id="travelerTab">Traveler Credit</a></li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script>
+    $('#passportTab').click(function () {
+        $('#bottomSpace').css('margin-bottom', 220);
+    });
+
+    $('#healthTab, #sigTab, #airTab, #emergencyTab, #travelerTab').click(function () {
+        $('#bottomSpace').css('margin-bottom', 520);
+    });
+</script>
+
+
+
+<!-- Tab Content-->
+<div id="guestTabContent" class="tab-content container container-border">
+
+    <!-- Passport Tab -->
+    <div id="passport-content" class="tab-pane fade in active">
+        <div class="container pad0">
+            <div class="row">
+                <div class="col-md-12 textCenter">
+                                <i>Enter information as it appears on the passport/ ID</i>
+                </div>
+            </div>
+            <div class="row">
+                <div id="passportContainer" class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-3">
+                        <h3>Passport</h3>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="clear bottom20"></div>
+                            <div class="switch">
+                                <input id="dualCitizenToggle" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                                <label for="dualCitizenToggle"></label>
+                            </div>
+                            <div class="switch-label">
+                                <label for="dualCitizenToggle">Dual Citizenship</label>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="passportWrapper displayNone">
+                                <div class="row">
+                                <div class="col-md-12">
+                                    <hr><a class="alignRight"><i class="fa fa-remove red remove"></i></a></div>
+                                <div class="form-group col-md-6 col-xs-6">
+                                    <label for="passportNumber">Passport #</label>
+                                    <input class="form-control" id="passportNumber" type="text" placeholder="Passport #">
+                                </div>
+                                <div class="form-group col-md-6 col-xs-6">
+                                    <label for="redressNumbe">Redress #</label>
+                                    <input class="form-control" id="redressNumber" type="text" placeholder="Redress #">
+                                </div>
+                                <div class="form-group col-md-12 col-xs-12">
+                                    <label for="pLastName">Last Name</label>
+                                    <input class="form-control" id="pLastName" type="text" placeholder="Last Name">
+                                </div>
+                                <div class="form-group col-md-6 col-xs-6">
+                                    <label for="pFirstName">First Name</label>
+                                    <input class="form-control" id="pFirstName" type="text" placeholder="First Name">
+                                </div>
+                                <div class="form-group col-md-6 col-xs-6">
+                                    <label for="pMiddleName">Middle Name</label>
+                                    <input class="form-control" id="pMiddleName" type="text" placeholder="Middle Name">
+                                </div>
+                                <div class="form-group col-md-12 col-xs-12">
+                                    <label for="pNationality">Nationality</label>
+                                    <input class="form-control" id="pNationality" type="text" placeholder="Nationality">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="pDateOfBirth">Date of Birth</label>
+                                    <input id="pDateOfBirth" class="form-control">
+                                </div>
+                                <div class="form-group col-md-6 col-xs-6">
+                                    <label for="pSex">Sex</label>
+                                    <input id="pSex" class="form-control">
+                                </div>
+                                <div class="form-group col-md-12 col-xs-12">
+                                    <label for="pPlaceOfBirth">Place of Birth</label>
+                                    <input class="form-control" id="pPlaceOfBirth" placeholder="Place of Birth">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="pDateOfIssue">Date of Issue</label>
+                                    <input id="pDateOfIssue" class="form-control">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="pDateOfExpiration">Date of Expiration</label>
+                                    <input class="form-control" id="pDateOfExpiration">
+                                </div>
+                                <div class="form-group col-md-12 col-xs-12">
+                                    <label for="pIssuingAuthority">Issuing Authority</label>
+                                    <input id="pIssuingAuthority" class="form-control">
+                                </div>
+                                <div class="form-group col-md-12 col-xs-12">
+                                    <label for="pOccupation">Occupation</label>
+                                    <input class="form-control" id="pOccupation" type="text" placeholder="Occupation">
+                                </div>
+                            </div>
+                </div>
+
+                            <div class="passportWrapper passportWrapper1">
+                                <div class="row">
+                                <div class="form-group col-md-6 col-xs-6">
+                                    <label for="passportNumber">Passport #</label>
+                                    <input class="form-control" id="passportNumber" type="text" placeholder="Passport #">
+                                </div>
+                                <div class="form-group col-md-6 col-xs-6">
+                                    <label for="redressNumbe">Redress #</label>
+                                    <input class="form-control" id="redressNumber" type="text" placeholder="Redress #">
+                                </div>
+                                <div class="form-group col-md-12 col-xs-12">
+                                    <label for="pLastName">Last Name</label>
+                                    <input class="form-control" id="pLastName" type="text" placeholder="Last Name">
+                                </div>
+                                <div class="form-group col-md-6 col-xs-6">
+                                    <label for="pFirstName">First Name</label>
+                                    <input class="form-control" id="pFirstName" type="text" placeholder="First Name">
+                                </div>
+                                <div class="form-group col-md-6 col-xs-6">
+                                    <label for="pMiddleName">Middle Name</label>
+                                    <input class="form-control" id="pMiddleName" type="text" placeholder="Middle Name">
+                                </div>
+                                <div class="form-group col-md-12 col-xs-12">
+                                    <label for="pNationality">Nationality</label>
+                                    <input class="form-control" id="pNationality" type="text" placeholder="Nationality">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="pDateOfBirth1">Date of Birth</label>
+                                    <input id="pDateOfBirth1" class="form-control">
+                                </div>
+                                <div class="form-group col-md-6 col-xs-6">
+                                    <label for="pSex1">Sex</label>
+                                    <input id="pSex1" class="form-control">
+                                </div>
+                                <div class="form-group col-md-12 col-xs-12">
+                                    <label for="pPlaceOfBirth">Place of Birth</label>
+                                    <input class="form-control" id="pPlaceOfBirth" placeholder="Place of Birth">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="pDateOfIssue1">Date of Issue</label>
+                                    <input id="pDateOfIssue1" class="form-control">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="pDateOfExpiration1">Date of Expiration</label>
+                                    <input class="form-control" id="pDateOfExpiration1">
+                                </div>
+                                <div class="form-group col-md-12 col-xs-12">
+                                    <label for="pIssuingAuthority1">Issuing Authority</label>
+                                    <input id="pIssuingAuthority1" class="form-control">
+                                </div>
+                                <div class="form-group col-md-12 col-xs-12">
+                                    <label for="pOccupation">Occupation</label>
+                                    <input class="form-control" id="pOccupation" type="text" placeholder="Occupation">
+                                </div>
+                            </div>
+                </div>
+                        </div>
+                <div id="IDContainer" class="col-md-6" style="padding-left: 30px">
+                    <div class="row">
+                        <div class="col-md-12">
+                    <h3>ID</h3>
+                        </div>
+                    </div>
+                    <div class="row IDWrapper displayNone">
+                        <div class="col-md-12">
+                            <hr><a class="alignRight"><i class="fa fa-remove red remove"></i></a></div>
+                        <div class="form-group col-md-12 col-xs-6">
+                            <label for="IDType">Type of ID</label>
+                            <input id="IDType" class="form-control">
+                        </div>
+                        <div class="form-group col-md-12 col-xs-6">
+                            <label for="IDName">Name on ID</label>
+                            <input id="IDName" class="form-control" placeholder="Name">
+                        </div>
+                        <div class="form-group col-md-6 col-xs-6">
+                            <label for="IDSex">Sex</label>
+                            <input id="IDSex" class="form-control" placeholder="Sex">
+                        </div>
+                        <div class="form-group col-md-6 col-xs-6">
+                            <label for="IDNumber">ID Number</label>
+                            <input id="IDNumber" class="form-control" placeholder="ID Number">
+                        </div>
+                    </div>
+                    <div class="row IDWrapper IDWrapper1">
+                        <div class="form-group col-md-12 col-xs-6">
+                            <label for="IDType1">Type of ID</label>
+                            <input id="IDType1" class="form-control">
+                        </div>
+                        <div class="form-group col-md-12 col-xs-6">
+                            <label for="IDName1">Name on ID</label>
+                            <input id="IDName1" class="form-control" placeholder="(Name)">
+                        </div>
+                        <div class="form-group col-md-6 col-xs-6">
+                            <label for="IDSex1">Sex</label>
+                            <input id="IDSex1" class="form-control" placeholder="Sex">
+                        </div>
+                        <div class="form-group col-md-6 col-xs-6">
+                            <label for="IDNumber1">ID Number</label>
+                            <input id="IDNumber1" class="form-control" placeholder="(ID Number)">
+                        </div>
+                    </div>
+                </div>
+                        <div class="row" style="padding-left: 30px">
+                            <div class="col-md-6 alignRight">
+                                <a id="addID" class="green"><i class="fa fa-plus-circle"></i> <i>Add an ID</i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <!--Passport Scripts-->
+    <script>
+        $(document).ready(function () {
+
+            $('#addID').click(function () {
+                var numIDWrappers = $('.IDWrapper').length;
+                $('#IDContainer .IDWrapper:first').clone().appendTo('#IDContainer').removeClass('displayNone').addClass('IDWrapper' + numIDWrappers);
+
+
+                $('.IDWrapper' + numIDWrappers + ' #IDType').attr("id", "IDType" + numIDWrappers);
+                
+                $('.IDWrapper' + numIDWrappers + ' #IDSex').attr("id", "IDSex" + numIDWrappers);
+
+                $("#IDSex" + numIDWrappers).kendoComboBox({
+                    dataTextField: "text",
+                    dataValueField: "value",
+                    placeholder: "Select Sex",
+                    filter: "startswith",
+                    suggest: "true",
+                    dataSource: [
+                        {
+                            text: "Male",
+                            value: "1"
+                        },
+                        {
+                            text: "Female",
+                            value: "2"
+                        },
+                        {
+                            text: "Other",
+                            value: "3"
+                        }
+                    ]
+                });
+
+                $("#IDType" + numIDWrappers).kendoComboBox({
+                    dataTextField: "text",
+                    dataValueField: "value",
+                    placeholder: "Select ID Type",
+                    filter: "startswith",
+                    suggest: "true",
+                    dataSource: [
+                        {
+                            text: "Driver's licenses or other state photo identity card",
+                        },
+                        {
+                            text: "U.S. passport card",
+                        },
+                        {
+                            text: "DHS trusted traveler cards (Global Entry, NEXUS, SENTRI, FAST)",
+                        },
+                        {
+                            text: "U.S. military ID (active duty or retired military and their dependents, and DoD civilians)",
+                        },
+                        {
+                            text: "Permanent resident card",
+                        },
+                        {
+                            text: "Border crossing card",
+                        },
+                        {
+                            text: "Airline or airport-issued ID (if issued under a TSA-approved security plan)",
+                        },
+                        {
+                            text: "Federally recognized, tribal-issued photo ID",
+                        },
+                        {
+                            text: "HSPD-12 PIV card",
+                        },
+                        {
+                            text: "Canadian provincial driver's license or Indian and Northern Affairs Canada card",
+                        },
+                        {
+                            text: "Transportation worker identification credential",
+                        },
+                    ]
+                });
+                return false;
+            });
+
+        });
+    </script>
+
+
+
+    <script>
+        $(document).ready(function () {
+            
+            $('#dualCitizenToggle').change(function(){
+                if ($('#dualCitizenToggle').is(':checked')) {
+                    var numPassportWrappers = $('.passportWrapper').length;
+                    $('#passportContainer .passportWrapper:first').clone().appendTo('#passportContainer').removeClass('displayNone').addClass('passportWrapper' + numPassportWrappers);
+
+                    $('.passportWrapper' + numPassportWrappers + ' #pDateOfBirth').attr("id", "pDateOfBirth" + numPassportWrappers);
+
+                    $('.passportWrapper' + numPassportWrappers + ' #pSex').attr("id", "pSex" + numPassportWrappers);
+
+                    $('.passportWrapper' + numPassportWrappers + ' #pDateOfIssue').attr("id", "pDateOfIssue" + numPassportWrappers);
+
+                    $('.passportWrapper' + numPassportWrappers + ' #pDateOfExpiration').attr("id", "pDateOfExpiration" + numPassportWrappers);
+
+                    $('.passportWrapper' + numPassportWrappers + ' #pIssuingAuthority').attr("id", "pIssuingAuthority" + numPassportWrappers);
+
+                    $("#pDateOfBirth" + numPassportWrappers).kendoDatePicker({
+                        format: "dd-MMM-yy",
+                        start: "century",
+                        placeholder: "test",
+                        value: "Select Date"
+                    });
+
+                    $("#pSex" + numPassportWrappers).kendoComboBox({
+                        dataTextField: "text",
+                        dataValueField: "value",
+                        placeholder: "Select Sex",
+                        filter: "startswith",
+                        suggest: "true",
+                        dataSource: [
+                            {
+                                text: "Male",
+                                value: "1"
+                            },
+                            {
+                                text: "Female",
+                                value: "2"
+                            },
+                            {
+                                text: "Other",
+                                value: "3"
+                            }
+                        ]
+                    });
+
+                    $("#pDateOfIssue" + numPassportWrappers).kendoDatePicker({
+                        format: "dd-MMM-yy",
+                        start: "decade",
+                        value: "Select Date"
+                    });
+
+                    $("#pDateOfExpiration" + numPassportWrappers).kendoDatePicker({
+                        format: "dd-MMM-yy",
+                        start: "decade",
+                        value: "Select Date"
+                    });
+
+                    $("#pIssuingAuthority" + numPassportWrappers).kendoComboBox({
+                        dataTextField: "text",
+                        dataValueField: "value",
+                        placeholder: "Select Issuing Authority",
+                        filter: "startswith",
+                        suggest: "true",
+                        dataSource: [
+                            {
+                                text: "Port of Miami",
+                            },
+                            {
+                                text: "United States Department of State",
+                            },
+                            {
+                                text: "Other Issuing Authority",
+                            }
+                        ]
+                    });
+                }
+                else { 
+                    $("passportWrapper2").remove();
+                }
+
+
+            });
+            
+            $("#IDSex1").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "(Select Sex)",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "Male",
+                        value: "1"
+                    },
+                    {
+                        text: "Female",
+                        value: "2"
+                    },
+                    {
+                        text: "Other",
+                        value: "3"
+                    }
+                ]
+            });
+
+            $("#IDType1").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "(Select ID Type)",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "Driver's licenses or other state photo identity card",
+                    },
+                    {
+                        text: "U.S. passport card",
+                    },
+                    {
+                        text: "DHS trusted traveler cards (Global Entry, NEXUS, SENTRI, FAST)",
+                    },
+                    {
+                        text: "U.S. military ID (active duty or retired military and their dependents, and DoD civilians)",
+                    },
+                    {
+                        text: "Permanent resident card",
+                    },
+                    {
+                        text: "Border crossing card",
+                    },
+                    {
+                        text: "Airline or airport-issued ID (if issued under a TSA-approved security plan)",
+                    },
+                    {
+                        text: "Federally recognized, tribal-issued photo ID",
+                    },
+                    {
+                        text: "HSPD-12 PIV card",
+                    },
+                    {
+                        text: "Canadian provincial driver's license or Indian and Northern Affairs Canada card",
+                    },
+                    {
+                        text: "Transportation worker identification credential",
+                    },
+                ]
+            });
+
+            $('#addPassport').click(function () {
+                var numPassportWrappers = $('.passportWrapper').length;
+                $('#passportContainer .passportWrapper:first').clone().appendTo('#passportContainer').removeClass('displayNone').addClass('passportWrapper' + numPassportWrappers);
+
+                $('.passportWrapper' + numPassportWrappers + ' #pDateOfBirth').attr("id", "pDateOfBirth" + numPassportWrappers);
+
+                $('.passportWrapper' + numPassportWrappers + ' #pSex').attr("id", "pSex" + numPassportWrappers);
+
+                $('.passportWrapper' + numPassportWrappers + ' #pDateOfIssue').attr("id", "pDateOfIssue" + numPassportWrappers);
+
+                $('.passportWrapper' + numPassportWrappers + ' #pDateOfExpiration').attr("id", "pDateOfExpiration" + numPassportWrappers);
+
+                $('.passportWrapper' + numPassportWrappers + ' #pIssuingAuthority').attr("id", "pIssuingAuthority" + numPassportWrappers);
+
+                $("#pDateOfBirth" + numPassportWrappers).kendoDatePicker({
+                    format: "dd-MMM-yy",
+                    start: "century",
+                    placeholder: "test",
+                    value: "Select Date"
+                });
+
+                $("#pSex" + numPassportWrappers).kendoComboBox({
+                    dataTextField: "text",
+                    dataValueField: "value",
+                    placeholder: "Select Sex",
+                    filter: "startswith",
+                    suggest: "true",
+                    dataSource: [
+                        {
+                            text: "Male",
+                            value: "1"
+                        },
+                        {
+                            text: "Female",
+                            value: "2"
+                        },
+                        {
+                            text: "Other",
+                            value: "3"
+                        }
+                    ]
+                });
+
+                $("#pDateOfIssue" + numPassportWrappers).kendoDatePicker({
+                    format: "dd-MMM-yy",
+                    start: "decade",
+                    value: "Select Date"
+                });
+
+                $("#pDateOfExpiration" + numPassportWrappers).kendoDatePicker({
+                    format: "dd-MMM-yy",
+                    start: "decade",
+                    value: "Select Date"
+                });
+
+                $("#pIssuingAuthority" + numPassportWrappers).kendoComboBox({
+                    dataTextField: "text",
+                    dataValueField: "value",
+                    placeholder: "Select Issuing Authority",
+                    filter: "startswith",
+                    suggest: "true",
+                    dataSource: [
+                        {
+                            text: "Port of Miami",
+                        },
+                        {
+                            text: "United States Department of State",
+                        },
+                        {
+                            text: "Other Issuing Authority",
+                        }
+                    ]
+                });
+
+
+
+                return false;
+            });
+
+            $(document).on('click', '.remove', function () {
+                $(this).parents().eq(2).remove();
+            });
+
+        });
+    </script>
+
+
+
+
+
+    <script>
+        $(document).ready(function () {
+
+            $("#pDateOfBirth1").kendoDatePicker({
+                format: "dd-MMM-yy",
+                start: "century",
+                placeholder: "test",
+                value: "Select Date"
+            });
+
+            $("#pDateOfIssue1").kendoDatePicker({
+                format: "dd-MMM-yy",
+                start: "decade",
+                value: "Select Date"
+            });
+
+            $("#pDateOfExpiration1").kendoDatePicker({
+                format: "dd-MMM-yy",
+                start: "decade",
+                value: "Select Date"
+            });
+
+
+            $("#pSex1").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select Sex",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "Male",
+                        value: "1"
+                    },
+                    {
+                        text: "Female",
+                        value: "2"
+                    },
+                    {
+                        text: "Other",
+                        value: "3"
+                    }
+                ]
+            });
+
+            $("#pIssuingAuthority1").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select Issuing Authority",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "Port of Miami",
+                    },
+                    {
+                        text: "United States Department of State",
+                    },
+                    {
+                        text: "Other Issuing Authority",
+                    }
+                ]
+            });
+        });
+    </script>
+
+
+
+    <!--/end passport scripts-->
+
+
+
+    <!-- Air Tab -->
+    <div id="air-content" class="tab-pane fade">
+        <div class="container pad0">
+            <div class="row">
+                <div class="col-md-12">
+                    <label><b>Flyer Information</b></label>
+                </div>
+            </div>
+            <div class="pad15">
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <label for="aKnownTraveler">Known Traveler #</label>
+                        <input class="form-control" id="aKnownTraveler" placeholder="Known Traveler #">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="aGlobalEntry">Global Entry</label>
+                        <input class="form-control" id="aGlobalEntry" placeholder="Global Entry #">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <label><b>Preferences</b></label>
+                </div>
+            </div>
+            <div class="pad15">
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <label for="aAirportCity">Airport City</label>
+                        <input class="form-control" id="aAirportCity" placeholder="Airport City">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="aAirport">Airport</label>
+                        <input class="form-control" id="aAirport">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="aSeating">Seating</label>
+                        <input class="form-control" id="aSeating">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="aMeal">Meal</label>
+                        <input class="form-control" id="aMeal">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <label><b>Frequent Flyer</b></label>
+                </div>
+            </div>
+            <div class="pad15">
+                <div class="row" id="flyerContainer">
+
+                    <div class="flyerWrapper clear displayNone">
+                        <div class="form-group col-md-3">
+                            <label for="aAirline"></label>
+                            <input class="form-control" id="aAirline">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="aFrequentFlyer"></label>
+                            <input class="form-control" id="aFrequentFlyer" placeholder="Frequent Flyer #">
+                        </div>
+                        <div class="form-group col-md-6 removeX">
+                            <div class="clear bottom30"></div>
+                            <a><i class="fa fa-remove red remove"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="flyerWrapper flyerWrapper1 clear">
+                        <div class="form-group col-md-3">
+                            <label for="aAirline1">Airline</label>
+                            <input class="form-control" id="aAirline1">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="aFrequentFlyer">Frequent Flyer #</label>
+                            <input class="form-control" id="aFrequentFlyer" placeholder="Frequent Flyer #">
+                        </div>
+                        <div class="col-md-6"></div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <a id="addFlyer" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Frequent Flyer Program</i></a>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                $(document).ready(function () {
+
+                    $('#addFlyer').click(function () {
+                        var numFlyerWrappers = $('.flyerWrapper').length;
+                        $('#flyerContainer .flyerWrapper:first').clone().appendTo('#flyerContainer').removeClass('displayNone').addClass('flyerWrapper' + numFlyerWrappers);
+
+
+                        $('.flyerWrapper' + numFlyerWrappers + ' #aAirline').attr("id", "aAirline" + numFlyerWrappers);
+
+                        $("#aAirline" + numFlyerWrappers).kendoComboBox({
+                            dataTextField: "text",
+                            dataValueField: "value",
+                            placeholder: "Select Airline",
+                            filter: "startswith",
+                            suggest: "true",
+                            dataSource: [
+                                {
+                                    text: "American Airlines",
+                                    },
+                                {
+                                    text: "US Airways",
+                                    },
+                                {
+                                    text: "Spirit",
+                                    },
+                                {
+                                    text: "Delta",
+                                    }
+                                ]
+                        });
+
+
+                        return false;
+                    });
+
+
+                });
+            </script>
+
+        </div>
+    </div>
+
+    <!-- Air Scirpts -->
+
+    <script>
+        $(document).ready(function () {
+            $("#aAirport").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select Airport",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "Myrtle Beach Int'l | MYR",
+                    },
+                    {
+                        text: "Logan Int'l | BOS",
+                    }
+                ]
+            });
+        });
+
+        $(document).ready(function () {
+            $("#aSeating").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select Seat Type",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "Aisle",
+                        value: "1"
+                    },
+                    {
+                        text: "Window",
+                        value: "1"
+                    },
+                    {
+                        text: "Two Side",
+                        value: "3"
+                    }
+                ]
+            });
+        });
+
+        $(document).ready(function () {
+            $("#aMeal").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select Meal Type",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "Kosher",
+                        value: "1"
+                    },
+                    {
+                        text: "Veagan",
+                        value: "1"
+                    },
+                    {
+                        text: "Vegitarian",
+                        value: "3"
+                    }
+                ]
+            });
+        });
+
+        $(document).ready(function () {
+            $("#aAirline1").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select Airline",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "American Airlines",
+                    },
+                    {
+                        text: "US Airways",
+                    },
+                    {
+                        text: "Spirit",
+                    },
+                    {
+                        text: "Delta",
+                    }
+                ]
+            });
+        });
+    </script>
+
+    <!-- /End Air Scripts -->
+
+
+
+    <!-- Health Tab -->
+    <div id="health-content" class="tab-pane fade">
+        <div class="container pad0">
+            <div class="row">
+                <div class="form-group col-md-6 col-xs-12">
+                    <label for="hHealthConcerns">Health Concerns</label>
+                    <select class="form-control" id="hHealthConcerns"></select>
+                </div>
+                <div class="form-group col-md-6 col-xs-12">
+                    <label for="hPhysicalLimitations">Physical Limitations</label>
+                    <select class="form-control" id="hPhysicalLimitations"></select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6 col-xs-12">
+                    <label for="hAllergies">Allergies</label>
+                    <select class="form-control" id="hAllergies"></select>
+                </div>
+                <div class="form-group col-md-6 col-xs-12">
+                    <label for="hMealConsiderations">Meal Considerations</label>
+                    <select class="form-control" id="hMealConsiderations"></select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Health Scirpts -->
+
+    <script>
+        $(document).ready(function () {
+            $("#hHealthConcerns").kendoMultiSelect({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select Health Concern",
+                filter: "startswith",
+                suggest: "true",
+                autoClose: false,
+                dataSource: [
+                    {
+                        text: "Asthma",
+                        value: "1"
+                    },
+                    {
+                        text: "Diabetes Type I (Needs Access to Refrigerator)",
+                        value: "3"
+                    },
+                    {
+                        text: "Diabetes Type II (Managed With Oral Meds)",
+                        value: "3"
+                    },
+                    {
+                        text: "Hearing: Wears Hearing Aid",
+                        value: "3"
+                    },
+                    {
+                        text: "Hearing Impaired",
+                        value: "3"
+                    },
+                    {
+                        text: "Heart: Irregular Heartbeat (AFib)",
+                        value: "3"
+                    },
+                    {
+                        text: "Heart: Pace Maker",
+                        value: "3"
+                    },
+                    {
+                        text: "High Blood Pressure (Hypertension)",
+                        value: "3"
+                    },
+                    {
+                        text: "Sleep Apnea (Travels With CPAP Machine)",
+                        value: "3"
+                    },
+                    {
+                        text: "Other: See Guest Form)",
+                        value: "3"
+                    },
+                    {
+                        text: "None Advised",
+                        value: "3"
+                    }
+                ]
+            });
+        });
+
+        $(document).ready(function () {
+            $("#hAllergies").kendoMultiSelect({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select Allergy",
+                filter: "startswith",
+                suggest: "true",
+                autoClose: false,
+                dataSource: [
+                    {
+                        text: "Down Feathers",
+                        value: "1"
+                    },
+                    {
+                        text: "Drug: Morphine",
+                        value: "1"
+                    },
+                    {
+                        text: "Drug: Penicillin",
+                        value: "1"
+                    },
+                    {
+                        text: "Drug: Sulfa",
+                        value: "1"
+                    },
+                    {
+                        text: "Eggs",
+                        value: "1"
+                    },
+                    {
+                        text: "Fish",
+                        value: "1"
+                    },
+                    {
+                        text: "Gluten Intolerant",
+                        value: "1"
+                    },
+                    {
+                        text: "Gluten Sensitive",
+                        value: "1"
+                    },
+                    {
+                        text: "Hay Fever",
+                        value: "1"
+                    },
+                    {
+                        text: "Lactose Intolerant",
+                        value: "1"
+                    },
+                    {
+                        text: "Lactose Sensitive",
+                        value: "1"
+                    },
+                    {
+                        text: "Peanut",
+                        value: "1"
+                    },
+                    {
+                        text: "Seafood",
+                        value: "1"
+                    },
+                    {
+                        text: "Shellfish: Crustaceans",
+                        value: "1"
+                    },
+                    {
+                        text: "Shellfish: Mollusks",
+                        value: "1"
+                    },
+                    {
+                        text: "Tree Nuts",
+                        value: "1"
+                    },
+                    {
+                        text: "Other: See Guest Form",
+                        value: "1"
+                    },
+                    {
+                        text: "None Advised",
+                        value: "1"
+                    },
+                ]
+            });
+        });
+
+        $(document).ready(function () {
+            $("#hPhysicalLimitations").kendoMultiSelect({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select Physical Limitation",
+                filter: "startswith",
+                suggest: "true",
+                autoClose: false,
+                dataSource: [
+                    {
+                        text: "Arthritis",
+                        value: "1"
+                    },
+                    {
+                        text: "Arthritis: Knees",
+                        value: "1"
+                    },
+                    {
+                        text: "Back Pain",
+                        value: "1"
+                    },
+                    {
+                        text: "Difficulty Climbing Stairs",
+                        value: "1"
+                    },
+                    {
+                        text: "Difficulty Walking Long Distances",
+                        value: "1"
+                    },
+                    {
+                        text: "Heavy Lifting Restriction",
+                        value: "1"
+                    },
+                    {
+                        text: "Hip Replacement",
+                        value: "1"
+                    },
+                    {
+                        text: "Knee Replacement",
+                        value: "1"
+                    },
+                    {
+                        text: "Prosthetic Leg",
+                        value: "1"
+                    },
+                    {
+                        text: "Shoulder Injury",
+                        value: "1"
+                    },
+                    {
+                        text: "Slow Walker",
+                        value: "1"
+                    },
+                    {
+                        text: "Uses Cane to Walk Long Distances (or on Uneven Terrain)",
+                        value: "1"
+                    },
+                    {
+                        text: "Other: See Guest Form",
+                        value: "1"
+                    },
+                    {
+                        text: "None Advised",
+                        value: "1"
+                    },
+                ]
+            });
+        });
+
+        $(document).ready(function () {
+            $("#hMealConsiderations").kendoMultiSelect({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select Meal Consideration",
+                filter: "startswith",
+                suggest: "true",
+                autoClose: false,
+                dataSource: [
+                    {
+                        text: "Low Sodium, Low Fat",
+                        value: "1"
+                    },
+                    {
+                        text: "No Pork",
+                        value: "1"
+                    },
+                    {
+                        text: "No Red Meats",
+                        value: "1"
+                    },
+                    {
+                        text: "No Seafood",
+                        value: "1"
+                    },
+                    {
+                        text: "No Shellfish",
+                        value: "1"
+                    },
+                    {
+                        text: "Prefers Dairy Free",
+                        value: "1"
+                    },
+                    {
+                        text: "Prefers Gluten Free",
+                        value: "1"
+                    },
+                    {
+                        text: "Prefers Vegetarian",
+                        value: "1"
+                    },
+                    {
+                        text: "Vegan (No Animal Products Whatsoever)",
+                        value: "1"
+                    },
+                    {
+                        text: "Vegetarian",
+                        value: "1"
+                    },
+                    {
+                        text: "Vegetarian and Fish",
+                        value: "1"
+                    },
+                    {
+                        text: "Other: See Guest Form",
+                        value: "1"
+                    },
+                    {
+                        text: "None Advised",
+                        value: "1"
+                    },
+                ]
+            });
+        });
+    </script>
+
+    <!-- /End Health Scripts -->
+
+
+    <!-- Emergency Tab -->
+    <div id="emergency-content" class="tab-pane fade">
+        <div class="container pad0">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="contactContainer">
+                        <div class="contactWrapper displayNone">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <hr><a class="alignRight"><i class="fa fa-remove red remove3"></i></a></div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-1">
+                                    <label for="eTitle">Title</label>
+                                    <input class="form-control" id="eTitle">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="eFirstName">First Name</label>
+                                    <input class="form-control" id="eFirstName" type="text" placeholder="First Name">
+                                </div>
+                                <div class="form-group col-md-1">
+                                    <label for="eMiddleInit">MI</label>
+                                    <input class="form-control" id="eMiddleInit" type="text" placeholder="MI">
+                                </div>
+
+
+                                <div class="form-group col-md-3">
+                                    <label for="eLastName">Last Name</label>
+                                    <input class="form-control" id="eLastName" type="text" placeholder="Last Name">
+                                </div>
+                                <div class="form-group col-md-1">
+                                    <label for="eSuffix">Suffix</label>
+                                    <Input class="form-control" id="eSuffix">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-4 col-xs-8">
+                                    <label for="ephoneNumber">Phone Number</label>
+                                    <input class="form-control" id="ephoneNumber" type="text" placeholder="Phone Number">
+                                </div>
+                                <div class="form-group col-md-2 col-xs-3">
+                                    <label for="ePhoneType">Type</label>
+                                    <Input class="form-control" id="ePhoneType">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Phone Number</i></a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6 col-xs-11">
+                                    <label for="emailInput">Email</label>
+                                    <input class="form-control" id="emailInput" type="text" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add an Email Address</i></a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-4">
+                                    <label for="eRelationship">Relationship</label>
+                                    <input class="form-control" id="eRelationship">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contactWrapper contactWrapper1">
+                            <div class="row">
+                                <div class="form-group col-md-1">
+                                    <label for="eTitle1">Title</label>
+                                    <input class="form-control" id="eTitle1">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="eFirstName">First Name</label>
+                                    <input class="form-control" id="eFirstName" type="text" placeholder="First Name">
+                                </div>
+                                <div class="form-group col-md-1">
+                                    <label for="eMiddleInit">MI</label>
+                                    <input class="form-control" id="eMiddleInit" type="text" placeholder="MI">
+                                </div>
+
+
+                                <div class="form-group col-md-3">
+                                    <label for="eLastName">Last Name</label>
+                                    <input class="form-control" id="eLastName" type="text" placeholder="Last Name">
+                                </div>
+                                <div class="form-group col-md-1">
+                                    <label for="eSuffix1">Suffix</label>
+                                    <Input class="form-control" id="eSuffix1">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-4 col-xs-8">
+                                    <label for="ephoneNumber1">Phone Number</label>
+                                    <input class="form-control" id="ephoneNumber1" type="text" placeholder="Phone Number">
+                                </div>
+                                <div class="form-group col-md-2 col-xs-3">
+                                    <label for="ePhoneType1">Type</label>
+                                    <Input class="form-control" id="ePhoneType1">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Phone Number</i></a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6 col-xs-11">
+                                    <label for="emailInput">Email</label>
+                                    <input class="form-control" id="emailInput" type="text" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <a href="#add-tour-address" class="green"><i class="fa fa-plus-circle"></i> <i>Add an Email Address</i></a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-4">
+                                    <label for="eRelationship1">Relationship</label>
+                                    <input class="form-control" id="eRelationship1">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class=" form-group col-md-12">
+                <div class="clear bottom20"></div>
+                <a id="addContact" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Contact</i></a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Emergency Scirpts -->
+
+    <script>
+        $(document).ready(function () {
+            $('#addContact').click(function () {
+                var numContactWrappers = $('.contactWrapper').length;
+                $('#contactContainer .contactWrapper:first').clone().appendTo('#contactContainer').removeClass('displayNone').addClass('contactWrapper' + numContactWrappers);
+
+                $('.contactWrapper' + numContactWrappers + ' #eTitle').attr("id", "eTitle" + numContactWrappers);
+
+                $('.contactWrapper' + numContactWrappers + ' #eSuffix').attr("id", "eSuffix" + numContactWrappers);
+
+                $('.contactWrapper' + numContactWrappers + ' #ephoneNumber').attr("id", "ephoneNumber" + numContactWrappers);
+
+                $('.contactWrapper' + numContactWrappers + ' #ePhoneType').attr("id", "ePhoneType" + numContactWrappers);
+
+                $('.contactWrapper' + numContactWrappers + ' #eRelationship').attr("id", "eRelationship" + numContactWrappers);
+
+
+                $("#eTitle" + numContactWrappers).kendoComboBox({
+                    dataTextField: "text",
+                    dataValueField: "value",
+                    placeholder: "--",
+                    filter: "startswith",
+                    suggest: "true",
+                    dataSource: [
+                        {
+                            text: "Mr.",
+                            value: "1"
+                        },
+                        {
+                            text: "Mrs.",
+                            value: "3"
+                        },
+                        {
+                            text: "Ms.",
+                            value: "3"
+                        },
+                        {
+                            text: "Prof.",
+                            value: "3"
+                        },
+                        {
+                            text: "Dr.",
+                            value: "3"
+                        },
+                    ]
+                });
+
+                $("#eSuffix" + numContactWrappers).kendoComboBox({
+                    dataTextField: "text",
+                    dataValueField: "value",
+                    placeholder: "--",
+                    filter: "startswith",
+                    suggest: "true",
+                    dataSource: [
+                        {
+                            text: "Sr.",
+                            value: "1"
+                        },
+                        {
+                            text: "Jr.",
+                            value: "3"
+                        },
+                        {
+                            text: "III",
+                            value: "3"
+                        },
+                    ]
+                });
+
+                $("#ephoneNumber" + numContactWrappers).kendoMaskedTextBox({
+                    mask: "(999) 000-0000"
+                });
+
+
+                $("#ePhoneType" + numContactWrappers).kendoComboBox({
+                    dataTextField: "text",
+                    dataValueField: "value",
+                    placeholder: "Select Type",
+                    filter: "startswith",
+                    suggest: "true",
+                    dataSource: [
+                        {
+                            text: "Home",
+                            value: "1"
+                        },
+                        {
+                            text: "Mobile",
+                            value: "3"
+                        },
+                        {
+                            text: "Work",
+                            value: "3"
+                        },
+                        {
+                            text: "Fax",
+                            value: "3"
+                        },
+                    ]
+                });
+
+
+
+                $("#eRelationship" + numContactWrappers).kendoComboBox({
+                    dataTextField: "text",
+                    dataValueField: "value",
+                    placeholder: "Select Relationship",
+                    filter: "startswith",
+                    suggest: "true",
+                    dataSource: [
+                        {
+                            text: "Friend",
+                            value: "1"
+                        },
+                        {
+                            text: "Relative",
+                            value: "3"
+                        },
+                    ]
+                });
+
+
+
+                return false;
+            });
+
+            $(document).on('click', '.remove3', function () {
+                $(this).parents().eq(3).remove();
+            });
+
+
+        });
+    </script>
+
+
+
+    <script>
+        $(document).ready(function () {
+            $("#eTitle1").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "--",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "Mr.",
+                        value: "1"
+                    },
+                    {
+                        text: "Mrs.",
+                        value: "3"
+                    },
+                    {
+                        text: "Ms.",
+                        value: "3"
+                    },
+                    {
+                        text: "Prof.",
+                        value: "3"
+                    },
+                    {
+                        text: "Dr.",
+                        value: "3"
+                    },
+                ]
+            });
+
+
+            $("#eSuffix1").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "--",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "Sr.",
+                        value: "1"
+                    },
+                    {
+                        text: "Jr.",
+                        value: "3"
+                    },
+                    {
+                        text: "III",
+                        value: "3"
+                    },
+                ]
+            });
+
+            $("#ephoneNumber1").kendoMaskedTextBox({
+                mask: "(999) 000-0000"
+            });
+
+
+            $("#ePhoneType1").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select Type",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "Home",
+                        value: "1"
+                    },
+                    {
+                        text: "Mobile",
+                        value: "3"
+                    },
+                    {
+                        text: "Work",
+                        value: "3"
+                    },
+                    {
+                        text: "Fax",
+                        value: "3"
+                    },
+                ]
+            });
+
+
+
+            $("#eRelationship1").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select Relationship",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "Friend",
+                        value: "1"
+                    },
+                    {
+                        text: "Relative",
+                        value: "3"
+                    },
+                ]
+            });
+        });
+    </script>
+
+    <!-- /End Emergency Scripts -->
+
+    <!-- SIG -->
+    <div id="sig-content" class="tab-pane fade">
+        <div class="container pad0">
+            <div id="firstSIGText" class="row">
+                <div class="col-md-12">
+                    <label>
+                        <p><span id="guestNameNewSIG">[Guest Name]</span> is not affiliated with any special interest groups</p>
+                    </label>
+                </div>
+            </div>
+            <div id="firstSIGButton" class="row">
+                <div class="form-group col-md-12">
+                    <a id="addSIGFirst" class="btn btn-xs btn-info"><i class="fa fa-university"></i> Add a SIG</a>
+                </div>
+            </div>
+            <div class="row">
+                <div id="SIGContainer" class="col-md-12">
+                    <div class="SIGWrapper displayNone">
+
+                        <div class="col-md-12">
+                            <hr><a class="alignRight"><i class="fa fa-remove red remove"></i></a></div>
+
+                        <div class="form-group col-md-3">
+                            <label for="sSIG">Special Interest Group</label>
+                            <input class="form-control" id="sSIG">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="sAffiliation">Affiliation</label>
+                            <input class="form-control" id="sAffiliation">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="sClassYear">Class Year</label>
+                            <input class="form-control" id="sClassYear">
+                        </div>
+                        <div class="form-group col-md-1">
+                            <div class="clear bottom30"></div>
+                            <label for="sHost">Host</label>
+                            <input id="sHost" type="checkbox">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <div class="clear bottom30"></div>
+                            <label for="sHostCompanion">Host Companion</label>
+                            <input id="sHost" type="checkbox">
+                        </div>
+                    </div>
+                    <div class="SIGWrapper SIGWrapper1 displayNone">
+                        <div class="form-group col-md-3">
+                            <label for="sSIG1">Special Interest Group</label>
+                            <input class="form-control" id="sSIG1">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="sAffiliation1">Affiliation</label>
+                            <input class="form-control" id="sAffiliation1">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="sClassYear1">Class Year</label>
+                            <input class="form-control" id="sClassYear1">
+                        </div>
+                        <div class="form-group col-md-1">
+                            <div class="clear bottom30"></div>
+                            <label for="sHost">Host</label>
+                            <input id="sHost" type="checkbox">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <div class="clear bottom30"></div>
+                            <label for="sHostCompanion">Host Companion</label>
+                            <input id="sHost" type="checkbox">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class=" form-group col-md-12">
+                    <a id="addSIG" class="green displayNone"><i class="fa fa-plus-circle"></i> <i>Add a SIG</i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#addSIGFirst').click(function () {
+                $('#addSIG, .SIGWrapper1').removeClass('displayNone');
+                $('#firstSIGText, #firstSIGButton').addClass('displayNone');
+
+                return false;
+            });
+
+
+
+            $('#addSIG').click(function () {
+                var numSIGWrappers = $('.SIGWrapper').length;
+                $('#SIGContainer .SIGWrapper:first').clone().appendTo('#SIGContainer').removeClass('displayNone').addClass('SIGWrapper' + numSIGWrappers);
+
+                $('.SIGWrapper' + numSIGWrappers + ' #sSIG').attr("id", "sSIG" + numSIGWrappers);
+                $('.SIGWrapper' + numSIGWrappers + ' #sAffiliation').attr("id", "sAffiliation" + numSIGWrappers);
+                $('.SIGWrapper' + numSIGWrappers + ' #sClassYear').attr("id", "sClassYear" + numSIGWrappers);
+
+                $("#sSIG" + numSIGWrappers).kendoComboBox({
+                    dataTextField: "text",
+                    dataValueField: "value",
+                    placeholder: "Select SIG",
+                    filter: "startswith",
+                    suggest: "true",
+                    dataSource: [
+                        {
+                            text: "Archetype SC",
+                        },
+                        {
+                            text: "Smithsonian Journeys",
+                        },
+                        {
+                            text: "University of South Carolina",
+                        },
+                    ]
+                });
+
+                $("#sAffiliation" + numSIGWrappers).kendoComboBox({
+                    dataTextField: "text",
+                    dataValueField: "value",
+                    placeholder: "Select Affiliation",
+                    filter: "startswith",
+                    suggest: "true",
+                    dataSource: [
+                        {
+                            text: "Alumn",
+                        },
+                        {
+                            text: "Faculty",
+                        },
+                        {
+                            text: "Spouce",
+                        },
+                    ]
+                });
+
+
+                $("#sClassYear" + numSIGWrappers).kendoDatePicker({
+                    format: "yyyy",
+                    start: "century",
+                    value: "Select Date",
+                    depth: "decade"
+                });
+
+
+
+                return false;
+            });
+        });
+    </script>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#sSIG1").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select SIG",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "Archetype SC",
+                    },
+                    {
+                        text: "Smithsonian Journeys",
+                    },
+                    {
+                        text: "University of South Carolina",
+                    },
+                        ]
+            });
+
+            $("#sAffiliation1").kendoComboBox({
+                dataTextField: "text",
+                dataValueField: "value",
+                placeholder: "Select Affiliation",
+                filter: "startswith",
+                suggest: "true",
+                dataSource: [
+                    {
+                        text: "Alumn",
+                    },
+                    {
+                        text: "Faculty",
+                    },
+                    {
+                        text: "Spouce",
+                    },
+                        ]
+            });
+
+
+            $("#sClassYear1").kendoDatePicker({
+                format: "yyyy",
+                start: "century",
+                value: "Select Date",
+                depth: "decade"
+            });
+        });
+    </script>
+
+
+
+
+    <!-- Travel Credit -->
+    <div id="travel-credit-content" class="tab-pane fade">
+        <div class="container pad0">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="container pad0">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4>Past Traveler Credit</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="container pad15">
+                                    <div class="row">
+                                        <div class="form-group col-md-2">
+                                            <label for="tAmount">Amount</label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">$</span>
+                                                <input class="form-control textRight" id="tAmount" type="text" placeholder="0">
+                                            </div>
+                                        </div>
+                                        <div class="form-group noLabel col-md-3">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Completed Direct Trips</span>
+                                                <input class="form-control textCenter" id="tAmount" type="text" placeholder="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="container pad0">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="clear bottom15"></div>
+                                <h4>Future Credit</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="container pad15">
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label for="tReservation">Reservation</label>
+                                            <input class="form-control" id="tReservation">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-2">
+                                            <label for="tAmount">Amount</label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">$</span>
+                                                <input class="form-control textRight" id="tAmount" type="text" placeholder="0">
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label for="tIssueDate">Issue Date</label>
+                                            <div class="input-group">
+                                                <input class="form-control" id="tIssueDate">
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label for="tExpirationDate">Expiration Date</label>
+                                            <div class="input-group">
+                                                <input class="form-control" id="tExpirationDate">
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label for="tIssuer">Issuer</label>
+                                            <input id="tIssuer" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label for="tReason">Reason</label>
+                                            <input id="tReason" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-12">
+                                            <div class="clear bottom10"></div>
+                                            <a href="#add-future-credit" class="green"><i class="fa fa-plus-circle"></i> <i>Add a Future Credit</i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="clear bottom15"></div>
+                        <div id="creditTotal" class="col-md-12">
+                            <div class="clear bottom15"></div>
+                            <div class="textCenter">
+                                <label>Credit Total</label>
+                                <h2>$0</h2>
+                            </div>
+                            <div class="clear bottom15"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $("#tReservation").kendoComboBox({
+            dataTextField: "text",
+            dataValueField: "value",
+            placeholder: "Select Reservation",
+            filter: "startswith",
+            suggest: "true",
+            dataSource: [
+                {
+                    text: "GRV-15 | Classic Greek Isles",
+                    value: "1"
+                },
+                {
+                    text: "ANT-14 | Antarctica Explorer",
+                    value: "3"
+                },
+                {
+                    text: "GRV-13 | Classic Greek Isles",
+                    value: "3"
+                },
+                    ]
+        });
+    });
+
+    $(document).ready(function () {
+        $("#tIssuer").kendoComboBox({
+            dataTextField: "text",
+            dataValueField: "value",
+            placeholder: "Select Issuer",
+            filter: "startswith",
+            suggest: "true",
+            dataSource: [
+                {
+                    text: "Elizabeth Bougie",
+                    value: "1"
+                },
+                {
+                    text: "Daniel O'Sullivan",
+                    value: "3"
+                },
+                {
+                    text: "Steve Fleishaker",
+                    value: "3"
+                },
+                    ]
+        });
+    });
+
+    $(document).ready(function () {
+        $("#tReason").kendoComboBox({
+            dataTextField: "text",
+            dataValueField: "value",
+            placeholder: "Select Reason",
+            filter: "startswith",
+            suggest: "true",
+            dataSource: [
+                {
+                    text: "Good Will Credit",
+                    value: "1"
+                },
+                {
+                    text: "Another Reason",
+                    value: "3"
+                },
+                {
+                    text: "Another Reason",
+                    value: "3"
+                },
+                    ]
+        });
+    });
+
+    $("#tIssueDate").kendoDatePicker({
+        format: "dd-MMM-yy",
+        value: "Select Date",
+    });
+
+    $("#tExpirationDate").kendoDatePicker({
+        format: "dd-MMM-yy",
+        value: "Select Date",
+        start: "decade"
+    });
+</script>
+<!-- /guestTabContent-->
+
+</html>

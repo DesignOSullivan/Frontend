@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>OUI</title>
+        <link rel="stylesheet" href="../../kendoui/styles/kendo.common-bootstrap.min.css">
+        <link rel="stylesheet" href="../../kendoui/styles/kendo.bootstrap.min.css">
+        <link href="../../css/bootstrap.css" rel="stylesheet">
+        <link href="../../css/toggle-me-softly.css" rel="stylesheet">
+        <link href="../../css/style.css" rel="stylesheet">
+        <link href="../../css/font-awesome.css" rel="stylesheet">
+        <script src="../../js/jquery.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/bootstrap-toggle.min.js"></script>
+        <script src="../../kendoui/js/kendo.all.min.js"></script>
+        <script src="guest-scripts.js"></script>
+
+
+    </head>
+    <!-- UPCOMING RESERVATIONS -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a name="agents"></a>
+                <h3> Upcoming Reservations </h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container container-border">
+        <div class="row">
+            <div class="form-group col-md-12">
+                <div class="maxHeight200" id="guestUpcomingReservationsGrid"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-info btn-xs bottom0"><i class="fa fa-globe"></i> New Reservation</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- UPCOMING RESERVATIONS SCRIPTS -->
+    <script>
+        $("#guestUpcomingReservationsGrid").kendoGrid({
+            selectable: "multiple cell",
+            allowCopy: true,
+            editable: "popup",
+            selectable: false,
+            sortable: "true",
+            columns: [
+                {
+                    field: "guests",
+                    title: "Guests",
+                    encoded: false,
+                    width: 250,
+//                    template: "<div><b>#= guest1 # (#: trips1 #) </b></div><div><b>#: guest2 # (#: trips2 #)</b></div><div> #:reservationNumber# </div>"
+                },
+                {
+                    field: "tour",
+                    title: "Tour",
+                    encoded: false,
+                    width: 300,
+                    minScreenWidth: "480",
+                    template: "<div><b> #: tourCode # | #: tour # </b><div><div> #: startDate # to #:endDate# (#:daysOut# Days Out) </div>"
+                },
+                {
+                    field: "status",
+                    title: "Status",
+                    width: 100,
+                    minScreenWidth: "960",
+                },
+                {
+                    field: "Extension",
+                    width: 100,
+                    template: "<p> #: ExtensionG1 # <br> #: ExtensionG2 # <p>"
+                },
+                {
+                    field: "SIG",
+                    title: "Special Interest Group",
+                    width: 150
+                },
+                {
+                    field: "alert",
+                    title: "Alert",
+                    minScreenWidth: "480",
+                    width: 50,
+                    encoded: false,
+                    template: "<i class='fa fa-warning'></i>",
+
+                    headerAttributes: {style: "text-align: center;"},
+                    attributes: {
+                        style: "text-align: center; color: orange",
+
+
+                    },
+                },
+                {
+                    field: "infoRequest",
+                    title: "&nbsp;",
+                    encoded: false,
+//                    width: 170,
+                    attributes: {
+                        style: "text-align: right;"
+                    },
+                }
+            ],
+            dataSource: [
+                {
+                    guests: "<b><a href='#'>Mr. Daniel O'Sullivan (1)</a><br><a href='#'>Mrs. Catherine O'Sullivan (3)</a></b><br><a href='#'>R-434564324</a>",
+                    tourCode: "CSR-16",
+                    tour: "Costa Rica's Natural Heritage",
+                    startDate: "08-Feb",
+                    endDate: "17-feb-16",
+                    reservationNumber: "R-634554",
+                    daysOut: 10,
+                    ExtensionG1: "Yes",
+                    ExtensionG2: "Yes",
+                    status: "Confirmed",
+                    SIG: "Archetype SC",
+                    SIG: "Archetype SC",
+                    infoRequest: "<a data-toggle='modal' data-target='.infoRequestModal' class='btn btn-xs btn-default'>Information Request</a>",
+                },
+
+            ]
+        });
+    </script>
+
+    <!-- PAST RESERVATIONS -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a name="agents"></a>
+                <h3> Past Reservations </h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container container-border">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="maxHeight200" id="guestPastReservationsGrid"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAST RESERVATIONS SCRIPTS -->
+    <script>
+        $("#guestPastReservationsGrid").kendoGrid({
+            selectable: false,
+            sortable: "true",
+//            resizable: "true",
+            columns: [
+                {
+                    field: "guests",
+                    title: "Guests",
+                    encoded: false,
+                    width: 250,
+                },
+                {
+                    field: "tour",
+                    title: "Tour",
+                    width: 300,
+                    minScreenWidth: "480",
+                    template: "<div><b> #: tourCode # | #: tour # </b><div><div> #: startDate # to #:endDate# </div>"
+                },
+                {
+                    field: "status",
+                    title: "Status",
+                    width: 100,
+                    minScreenWidth: "960",
+                },
+                {
+                    field: "Extension",
+                    width: 100,
+                    template: "<p> #: ExtensionG1 # <br> #: ExtensionG2 # <p>"
+                },
+                {
+                    field: "SIG",
+                    title: "Special Interest Group",
+                    width: 150
+                },
+                {
+                    field: "infoRequest",
+                    title: "&nbsp;",
+//                    width: 170,
+                    encoded: false,
+                    attributes: {
+                        style: "text-align: right;"
+                    },
+                }
+            ],
+            dataSource: [
+                {
+                    guests: "<b><a href='#'>Mr. Daniel O'Sullivan (1)</a><br><a href='#'>Mrs. Catherine O'Sullivan (3)</a></b><br><a href='#'>R-434564324</a>",
+                    tourCode: "TNZ-14",
+                    tour: "Tanzania Adventure",
+                    startDate: "08-Feb",
+                    endDate: "04-Nov-14",
+                    status: "Completed",
+                    ExtensionG1: "Yes",
+                    ExtensionG2: "Yes",
+                    SIG: "Archetype SC",
+                    alert: "Yes",
+                    infoRequest: "<a data-toggle='modal' data-target='.infoRequestModal' class='btn btn-xs btn-default'>Information Request</a>"
+                },
+                {
+                    guests: "<b><a href='#'>Mr. Daniel O'Sullivan (1)</a><br><a href='#'>Mrs. Catherine O'Sullivan (3)</a></b><br><a href='#'>R-434564324</a>",
+                    tourCode: "GRV-13",
+                    tour: "Classic Greek Isles",
+                    startDate: "06-July",
+                    endDate: "18-July-13",
+                    status: "Completed",
+                    ExtensionG1: "Yes",
+                    ExtensionG2: "Yes",
+                    SIG: "Archetype SC",
+                    alert: "Yes",
+                    infoRequest: "<a data-toggle='modal' data-target='.infoRequestModal' class='btn btn-xs btn-default'>Information Request</a>"
+                },
+            ]
+        });
+
+
+    </script>
+
+
+</html>
+
+
+
